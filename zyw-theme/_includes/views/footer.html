@@ -1,0 +1,17 @@
+<footer class="site-footer bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-2 px-2 h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="w-full px-4 md:px-6">
+    <div class="site-footer-inner flex flex-col md:flex-row items-center justify-between gap-4">
+      {%- assign currentYear = 'now' | date: "%Y" -%}
+      {%- assign copyright = site.copyright
+          | replace: '{currentYear}', currentYear
+          | replace: '{author}', site.author
+          | replace: '(c)', '&copy;'
+          | replace: '(p)', '℗'
+          | replace: '(cleft)', '<span class="inline-block rotate-180">&copy;</span>'
+      -%}
+      <div class="text-sm text-gray-600 dark:text-gray-400">{{ copyright }}</div>
+    </div>
+  </div>
+</footer>

@@ -1,6 +1,8 @@
-_site
-.sass-cache
 .jekyll-cache
 .jekyll-metadata
-vendor
+.sass-cache
 Gemfile.lock
+_site
+ghpages
+theme
+vendor

@@ -1,0 +1,68 @@
+{%- include functions.html func='log' level='debug' msg='Get hero value' -%}
+{% assign name = 'hero' %}
+{%- include functions.html func='get_value' -%}
+{% assign hero = return %}
+
+{%- if hero.first -%}
+  {%- include functions.html func='log' level='debug' msg='Get hero_image value' -%}
+  {% assign name = 'hero.image' %}
+  {%- include functions.html func='get_value' -%}
+  {% assign hero_image = return | relative_url %}
+{%- else -%}
+  {% assign hero_image = hero | relative_url %}
+{%- endif -%}
+
+{%- include functions.html func='log' level='debug' msg='Get hero_background value' -%}
+{% assign name = 'hero.background' %}
+{%- include functions.html func='get_value' -%}
+{% assign hero_background = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get hero_opacity value' -%}
+{% assign name = 'hero.opacity' %}
+{%- include functions.html func='get_value' -%}
+{% assign hero_opacity = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get hero_height value' -%}
+{% assign name = 'hero.height' %}
+{%- include functions.html func='get_value' -%}
+{% assign hero_height = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get hero_min_height value' -%}
+{% assign name = 'hero.min_height' %}
+{%- include functions.html func='get_value' -%}
+{% assign hero_min_height = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get hero_heading_style value' -%}
+{% assign name = 'hero.heading_style' %}
+{%- include functions.html func='get_value' -%}
+{% assign hero_heading_style = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get hero_subheading_style value' -%}
+{% assign name = 'hero.subheading_style' %}
+{%- include functions.html func='get_value' -%}
+{% assign hero_subheading_style = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get hero_video value' -%}
+{% assign name = 'hero.video' %}
+{%- include functions.html func='get_value' -%}
+{% assign hero_video = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get hero_loop value' -%}
+{% assign name = 'hero.loop' %}
+{%- include functions.html func='get_value' default=true -%}
+{% assign hero_loop = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get hero_volume value' -%}
+{% assign name = 'hero.volume' %}
+{%- include functions.html func='get_value' default=0 -%}
+{% assign hero_volume = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get hero_start_at value' -%}
+{% assign name = 'hero.start_at' %}
+{%- include functions.html func='get_value' default=0 -%}
+{% assign hero_start_at = return %}
+
+{% if hero_image or hero_video %}
+  {% assign has_hero = true %}
+{% endif %}
+

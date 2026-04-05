@@ -1,0 +1,95 @@
+{%- include functions.html func='log' level='debug' msg='Get hero_html value' -%}
+{% assign name = 'hero_html' %}
+{%- include functions.html func='get_value' -%}
+{% assign hero_html = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get heading value' -%}
+{% assign name = 'heading' %}
+{%- include functions.html func='get_value' -%}
+{% assign heading = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get subheading value' -%}
+{% assign name = 'subheading' %}
+{%- include functions.html func='get_value' -%}
+{% assign subheading = return %}
+
+{%- include functions.html func='get_hero' -%}
+
+{%- if has_hero -%}
+  {%- assign resolved_hero_height = hero_height | default: 'min(52vh, 640px)' -%}
+  {%- assign resolved_hero_min_height = hero_min_height | default: '320px' -%}
+  {%- assign resolved_hero_opacity = hero_opacity | default: 1.0 -%}
+  <section class="page-hero relative mb-0 overflow-hidden text-white" style="{% if hero_background %}background: {{ hero_background }};{% endif %} height: {{ resolved_hero_height }}; min-height: {{ resolved_hero_min_height }};">
+    <div class="page-hero-img absolute inset-0">
+      {%- if hero_video -%}
+        <video
+          class="h-full w-full object-cover"
+          autoplay=""
+          poster="{{ hero_image }}"
+          preload="metadata"
+          playsinline
+          style="opacity: {{ resolved_hero_opacity }};"
+        >
+          <source src="{{ hero_video }}">
+        </video>
+        <script>
+          (function() {
+            var video = document.querySelector('.page-hero .page-hero-img > video');
+            if (!video) {
+              return;
+            }
+
+            var videoPlay = function() {
+              video.play().catch(function() {
+                video.muted = true;
+                video.play();
+              });
+            };
+
+            video.onloadstart = function() {
+              video.currentTime = {{ hero_start_at }};
+              video.volume = {{ hero_volume }};
+              video.muted = (video.volume == 0);
+              videoPlay();
+            };
+
+            video.onended = function() {
+              video.currentTime = {{ hero_start_at }};
+              video.volume = 0;
+            {%- if hero_loop -%}
+              video.play();
+            {%- endif -%}
+            };
+          })();
+        </script>
+      {%- else -%}
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url({{ hero_image }}); opacity: {{ resolved_hero_opacity }};"></div>
+        <img class="hidden" src="{{ hero_image }}" alt="" loading="eager">
+      {%- endif -%}
+    </div>
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="wrapper relative z-10 mx-auto flex h-full w-full max-w-content items-center px-4 md:px-8">
+      <div class="page-hero-inner w-full py-10">
+
+        {%- if hero_html -%}
+
+        {%- assign hero_html = 'views/' | append: hero_html -%}
+        {%- include {{ hero_html }} -%}
+
+        {%- else -%}
+
+          <div class="page-hero-default max-w-3xl">
+            <h1 class="page-hero-heading text-4xl font-bold tracking-tight drop-shadow-sm md:text-6xl"{% if hero_heading_style %} style="{{ hero_heading_style }}"{% endif %}>
+              {{ heading | default: page.title | escape }}
+            </h1>
+            <h2 class="page-hero-subheading mt-4 text-lg font-light text-white/90 md:text-2xl"{% if hero_subheading_style %} style="{{ hero_subheading_style }}"{% endif %}>
+              {{ subheading | default: page.subtitle | escape }}
+            </h2>
+          </div>
+
+        {%- endif -%}
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
