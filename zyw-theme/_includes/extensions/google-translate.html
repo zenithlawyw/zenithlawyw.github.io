@@ -1,0 +1,180 @@
+{% if include.translate_langs %}
+  {% assign translate_langs = include.translate_langs %}
+{% endif %}
+
+{% if include.lang %}
+  {% assign lang = include.lang %}
+{% endif %}
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<div id="google-translate-control" class="relative inline-block text-left">
+  <button
+    id="google-translate-toggle"
+    type="button"
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    class="inline-flex items-center gap-2 rounded border border-white/40 px-2 py-1 text-sm text-inherit bg-white/10 hover:bg-white/20 dark:bg-black/20 dark:hover:bg-black/30 transition-colors"
+  >
+    <span aria-hidden="true">&#127760;</span>
+    <span id="google-translate-current" class="hidden sm:inline">Translate</span>
+    <svg class="h-3 w-3 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </button>
+
+  <ul
+    id="google-translate-menu"
+    role="listbox"
+    class="hidden absolute right-0 top-full mt-2 min-w-[130px] list-none m-0 p-1 rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-lg z-[200]"
+  >
+    {% for item in translate_langs %}
+      <li class="m-0 p-0">
+        <a
+          href="#"
+          class="google-translate-option flex items-center gap-2 rounded px-2 py-1.5 text-sm text-gray-700 dark:text-gray-200 no-underline hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-lang="{{ item.lang }}"
+          data-label="{{ item.text }}"
+          role="option"
+        >
+          {% if item.img %}
+            <img src="{{ item.img }}" title="{{ item.text }}" alt="{{ item.text }}" class="h-4 w-4 object-contain">
+          {% endif %}
+          <span>{{ item.text }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<style>
+  .skiptranslate {
+    display: none !important;
+    border: none;
+    box-shadow: 0 0;
+  }
+
+  body {
+    top: 0 !important;
+  }
+</style>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: '{{ lang }}',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function clearSelectedLanguage() {
+    var selected = document.querySelector('#google-translate-menu .is-selected');
+    if (!selected) return;
+
+    selected.classList.remove('is-selected', 'font-semibold', 'bg-gray-100', 'dark:bg-gray-800');
+    selected.setAttribute('aria-selected', 'false');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langControl = document.getElementById('google-translate-control');
+  var langToggle = document.getElementById('google-translate-toggle');
+  var langMenu = document.getElementById('google-translate-menu');
+  var langCurrent = document.getElementById('google-translate-current');
+  var langArrow = langToggle ? langToggle.querySelector('svg') : null;
+  if (!googleCombo || !langControl || !langToggle || !langMenu || !langCurrent || !langArrow) {
+    return;
+  }
+
+  function closeLanguageMenu() {
+    langMenu.classList.add('hidden');
+    langArrow.classList.remove('rotate-180');
+    langToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function setSelectedOption(option, updateLabel) {
+    clearSelectedLanguage();
+    option.classList.add('is-selected', 'font-semibold', 'bg-gray-100', 'dark:bg-gray-800');
+    option.setAttribute('aria-selected', 'true');
+    if (updateLabel) {
+      var label = option.getAttribute('data-label') || option.textContent.trim();
+      langCurrent.textContent = label;
+    }
+  }
+
+  langToggle.addEventListener('click', function(event) {
+    event.preventDefault();
+    var isHidden = langMenu.classList.toggle('hidden');
+    langArrow.classList.toggle('rotate-180', !isHidden);
+    langToggle.setAttribute('aria-expanded', String(!isHidden));
+  });
+
+  langMenu.addEventListener('click', function(event) {
+    var target = event.target.closest('.google-translate-option');
+    if (!target) return;
+
+    event.preventDefault();
+    var lang = target.getAttribute('data-lang');
+    if (!lang) return;
+
+    if (googleCombo.value == lang) {
+      restoreLang();
+    } else {
+      googleCombo.value = lang;
+      triggerHtmlEvent(googleCombo, 'change');
+    }
+
+    setSelectedOption(target, true);
+    closeLanguageMenu();
+  });
+
+  document.addEventListener('click', function(event) {
+    if (!langControl.contains(event.target)) {
+      closeLanguageMenu();
+    }
+  });
+
+  var defaultOption = langMenu.querySelector('.google-translate-option[data-lang="{{ lang }}"]') || langMenu.querySelector('.google-translate-option');
+  if (defaultOption) {
+    setSelectedOption(defaultOption, true);
+  }
+}
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
