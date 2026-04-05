@@ -39,16 +39,14 @@ translate_langs:
     text: 日本語
   - lang: ko
     text: 한국인
-  - lang: fr
-    text: Français
   - lang: de
     text: Deutsch
   - lang: fr
-    text: France
+    text: Français
   - lang: it
     text: Italiano
   - lang: es
-    text: Spagnolo
+    text: Español
 
 translate_reserved_words:
   - 2026 Zenith Law
