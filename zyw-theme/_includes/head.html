@@ -2,13 +2,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
+  <meta
+    name="google-translate-customization"
+    content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"
+  >
   {%- seo -%}
   <link rel="icon" href="{{ site.favicon }}">
   <link rel="canonical" href="{{ site.url }}">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css"
+  >
   <script>
-    (function() {
+    (function () {
       var documentElement = document.documentElement;
 
       function readThemeData() {
@@ -40,7 +46,11 @@
       }
 
       var themeData = readThemeData();
-      if (!themeData || themeData.nightShift === undefined || themeData.nightShift === null) {
+      if (
+        !themeData ||
+        themeData.nightShift === undefined ||
+        themeData.nightShift === null
+      ) {
         return;
       }
 
@@ -53,6 +63,11 @@
   <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
-  {%- include extensions/google-analytics.html -%}
+    {%- include extensions/google-analytics.html -%}
   {%- endif -%}
+  {%- include extensions/highlight.html -%}
+  {%- if page.math != false and site.math != false -%}
+    {%- include extensions/mathjax.html -%}
+  {%- endif -%}
+  {%- include custom-head.html -%}
 </head>

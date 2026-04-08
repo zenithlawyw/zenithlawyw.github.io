@@ -7,7 +7,16 @@
   {%- include functions.html func='log' level='debug' msg='Get hero_image value' -%}
   {% assign name = 'hero.image' %}
   {%- include functions.html func='get_value' -%}
-  {% assign hero_image = return | relative_url %}
+  {% assign hero_image = return %}
+  {%- unless hero_image -%}
+    {%- include functions.html func='log' level='debug' msg='Fallback to image value' -%}
+    {% assign name = 'image' %}
+    {%- include functions.html func='get_value' -%}
+    {% assign hero_image = return %}
+  {%- endunless -%}
+  {% if hero_image -%}
+    {%- assign hero_image = hero_image | relative_url -%}
+  {%- endif %}
 {%- else -%}
   {% assign hero_image = hero | relative_url %}
 {%- endif -%}
@@ -65,4 +74,3 @@
 {% if hero_image or hero_video %}
   {% assign has_hero = true %}
 {% endif %}
-

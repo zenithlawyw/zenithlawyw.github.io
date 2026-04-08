@@ -1,4 +1,3 @@
-
 {%- include functions.html func='get_hero' -%}
 
 {%- include functions.html func='log' level='debug' msg='Get header_transparent value' -%}
@@ -7,28 +6,36 @@
 {%- assign header_transparent = return -%}
 
 <script language="javascript">
-<!--//
-  (function() {
-    var documentElement = document.documentElement;
-    var y = window.pageYOffset || documentElement.scrollTop || 0;
-    var initialScrollStatus = (y <= 0) ? 'top' : 'up';
+  <!--//
+    (function() {
+      var documentElement = document.documentElement;
+      var y = window.pageYOffset || documentElement.scrollTop || 0;
+      var initialScrollStatus = (y <= 0) ? 'top' : 'up';
 
-    documentElement.setAttribute('data-scroll-status', initialScrollStatus);
-  })();
-//-->
+      documentElement.setAttribute('data-scroll-status', initialScrollStatus);
+    })();
+  //-->
 </script>
 
-<header class="site-header fixed inset-x-0 top-0 z-[1000] w-full border-b border-transparent bg-transparent text-gray-900 transition-transform duration-300 dark:text-gray-100 {% if has_hero and header_transparent %}site-header-transparent{% endif %}" role="banner">
-
+<header
+  class="site-header fixed inset-x-0 top-0 z-[1000] w-full bg-transparent text-gray-900 transition-transform duration-300 dark:text-gray-100 {% if has_hero and header_transparent %}site-header-transparent{% endif %}"
+  role="banner"
+>
   <div class="w-full px-4 md:px-6">
     <div class="site-header-inner relative flex h-16 w-full items-center justify-between gap-4">
-      {%- assign nav_pages = site.pages | where: "dir", "/nav/" | map: "path" -%}
+      {%- assign nav_pages = site.pages
+        | where: 'dir', '/nav/'
+        | map: 'path'
+      -%}
       {%- if nav_pages.size > 0 -%}
         {%- assign default_paths = nav_pages -%}
       {%- elsif nav_pages.size == 0 -%}
-        {%- assign default_paths = nil -%}
+        {%- assign default_paths = null -%}
       {%- else -%}
-        {%- assign default_paths = site.pages | where: "dir", "/" | map: "path" -%}
+        {%- assign default_paths = site.pages
+          | where: 'dir', '/'
+          | map: 'path'
+        -%}
       {%- endif -%}
       {%- assign page_paths = site.nav_pages | default: default_paths -%}
 
@@ -38,17 +45,27 @@
 
       {%- if page_paths -%}
         <nav class="site-nav relative flex items-center h-16 flex-1 min-w-0">
-          <input type="checkbox" id="nav-trigger" class="nav-trigger hidden" />
-          
+          <input type="checkbox" id="nav-trigger" class="nav-trigger hidden">
+
           <!-- Navigation menu -->
-          <div class="trigger absolute left-0 right-0 top-16 z-20 hidden w-full flex-1 min-w-0 flex-col items-start gap-2 border-b border-gray-200 bg-white px-4 pb-4 pt-2 shadow-md dark:border-gray-800 dark:bg-gray-950 md:static md:z-auto md:flex md:h-16 md:w-auto md:flex-nowrap md:flex-row md:items-center md:border-0 md:bg-transparent md:px-0 md:pb-0 md:pt-0 md:pr-56 md:shadow-none md:dark:bg-transparent" id="site-nav-menu">
-            
+          <div
+            class="trigger absolute left-0 right-0 top-16 z-20 hidden w-full flex-1 min-w-0 flex-col items-start gap-2 border-b border-gray-200 bg-white px-4 pb-4 pt-2 shadow-md dark:border-gray-800 dark:bg-gray-950 md:static md:z-auto md:flex md:h-16 md:w-auto md:flex-nowrap md:flex-row md:items-center md:border-0 md:bg-transparent md:px-0 md:pb-0 md:pt-0 md:pr-56 md:shadow-none md:dark:bg-transparent"
+            id="site-nav-menu"
+          >
             <!-- Centered navigation items -->
             <div class="nav-menu-items order-first mx-0 flex min-w-0 flex-col px-0 md:mx-auto md:order-first md:flex-row md:px-2">
               {%- for path in page_paths -%}
-                {%- assign my_page = site.pages | where: "path", path | first -%}
+                {%- assign my_page = site.pages
+                  | where: 'path', path
+                  | first
+                -%}
                 {%- if my_page.title -%}
-                <a class="page-link nav-item nav-menu-item flex md:inline-flex items-center w-full md:w-auto h-auto md:h-full px-4 md:px-2 py-3 md:py-0 no-underline hover:text-brand-primary transition-colors" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape | capitalize }}</a>
+                  <a
+                    class="page-link nav-item nav-menu-item flex md:inline-flex items-center w-full md:w-auto h-auto md:h-full px-4 md:px-2 py-3 md:py-0 no-underline hover:text-brand-primary transition-colors"
+                    href="{{ my_page.url | relative_url }}"
+                  >
+                    {{- my_page.title | escape | capitalize -}}
+                  </a>
                 {%- endif -%}
               {%- endfor -%}
             </div>
@@ -77,13 +94,20 @@
           </span>
 
           {%- if page_paths -%}
-          <button type="button" id="menu-toggle" class="menu-toggle-button inline-flex h-full flex-shrink-0 cursor-pointer items-center justify-center bg-transparent p-0 text-inherit" aria-controls="site-nav-menu" aria-expanded="false" aria-label="Toggle menu">
-            <span class="menu-icon inline-flex items-center justify-center">
-              <svg viewBox="0 0 18 15" width="18px" height="15px">
-                <path class="fill-current" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-              </svg>
-            </span>
-          </button>
+            <button
+              type="button"
+              id="menu-toggle"
+              class="menu-toggle-button inline-flex h-full flex-shrink-0 cursor-pointer items-center justify-center bg-transparent p-0 text-inherit"
+              aria-controls="site-nav-menu"
+              aria-expanded="false"
+              aria-label="Toggle menu"
+            >
+              <span class="menu-icon inline-flex items-center justify-center">
+                <svg viewBox="0 0 18 15" width="18px" height="15px">
+                  <path class="fill-current" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+                </svg>
+              </span>
+            </button>
           {%- endif -%}
         </div>
       </nav>
@@ -97,7 +121,12 @@
       return getScrollPos().y;
     }
 
-    return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    return (
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0
+    );
   }
 
   function initMobileMenuClose() {
@@ -136,7 +165,7 @@
       syncMenuState();
     }
 
-    menuButton.addEventListener('click', function(e) {
+    menuButton.addEventListener('click', function (e) {
       e.preventDefault();
       navTrigger.checked = !navTrigger.checked;
       syncMenuState();
@@ -144,7 +173,7 @@
 
     navTrigger.addEventListener('change', syncMenuState);
 
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
       if (navTrigger.checked) {
         if (!trigger.contains(e.target) && !menuButton.contains(e.target)) {
           closeMenu();
@@ -152,14 +181,14 @@
       }
     });
 
-    trigger.addEventListener('click', function(e) {
+    trigger.addEventListener('click', function (e) {
       var link = e.target.closest('a[href]');
       if (link) {
         closeMenu();
       }
     });
 
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
         closeMenu();
       }
@@ -180,68 +209,120 @@
     }
 
     var navTrigger = document.getElementById('nav-trigger');
-    var transparentEnabled = true;
-    var textTargets = Array.prototype.slice.call(document.querySelectorAll('.site-header .site-brand-inner, .site-header .page-link, .site-header .menu-toggle-button, .site-header [data-theme-toggle] label'));
-    var separators = Array.prototype.slice.call(document.querySelectorAll('.nav-separator'));
-    var contrastColor = 'rgba(255, 255, 255, 0.96)';
-    var contrastShadow = '0 1px 2px rgba(0, 0, 0, 0.45)';
+    var transparentEnabled = headerElement.classList.contains(
+      'site-header-transparent'
+    );
+    var textTargets = Array.prototype.slice.call(
+      document.querySelectorAll(
+        '.site-header .site-brand-inner, .site-header .page-link, .site-header .menu-toggle-button, .site-header [data-theme-toggle] label'
+      )
+    );
+    var separators = Array.prototype.slice.call(
+      document.querySelectorAll('.nav-separator')
+    );
+    var transparentTextColor = 'rgba(255, 255, 255, 0.98)';
+    var transparentSeparatorColor = 'rgba(255, 255, 255, 0.82)';
+    var transparentTextShadow =
+      '0 1px 2px rgba(0, 0, 0, 0.5), 0 0 12px rgba(0, 0, 0, 0.28)';
 
     if (transparentEnabled) {
       documentElement.setAttribute('data-header-transparent', '');
+    } else {
+      documentElement.removeAttribute('data-header-transparent');
     }
 
-    function applyTextColor(color) {
-      textTargets.forEach(function(el) {
+    function applyTextColor(color, shadow, separatorColor) {
+      textTargets.forEach(function (el) {
         el.style.color = color;
-        el.style.textShadow = color ? contrastShadow : '';
+        el.style.textShadow = shadow || '';
       });
 
-      separators.forEach(function(el) {
-        el.style.color = color ? 'rgba(255, 255, 255, 0.72)' : '';
-        el.style.textShadow = color ? contrastShadow : '';
+      separators.forEach(function (el) {
+        el.style.color = separatorColor || color;
+        el.style.textShadow = shadow || '';
       });
     }
 
     function applyHeaderState(scrollStatus) {
       var isMenuOpen = !!(navTrigger && navTrigger.checked);
-      var shouldBeTransparent = transparentEnabled;
-      var shouldHideOnScroll = scrollStatus === 'down' && getHeaderScrollY() > 80 && !isMenuOpen;
+      var shouldBeTransparent =
+        transparentEnabled && scrollStatus === 'top' && !isMenuOpen;
+      var shouldHideOnScroll =
+        scrollStatus === 'down' && getHeaderScrollY() > 80 && !isMenuOpen;
 
       headerElement.classList.toggle('-translate-y-full', shouldHideOnScroll);
 
       if (shouldBeTransparent) {
-        headerElement.classList.add('bg-transparent', 'shadow-none', 'border-transparent');
-        headerElement.classList.remove('bg-white/95', 'supports-[backdrop-filter]:bg-white/80', 'dark:bg-gray-950/95', 'dark:supports-[backdrop-filter]:bg-gray-950/80', 'backdrop-blur', 'shadow-sm', 'border-gray-200/80', 'dark:border-gray-800/80');
-        applyTextColor(contrastColor);
+        headerElement.classList.remove(
+          'bg-white/95',
+          'supports-[backdrop-filter]:bg-white/80',
+          'dark:bg-gray-950/95',
+          'dark:supports-[backdrop-filter]:bg-gray-950/80',
+          'backdrop-blur',
+          'shadow-sm',
+          'border-gray-200/80',
+          'dark:border-gray-800/80'
+        );
+        headerElement.classList.add(
+          'bg-transparent',
+          'shadow-none',
+          'bg-gradient-to-b',
+          'from-black/65',
+          'via-black/35',
+          'to-transparent'
+        );
+        applyTextColor(
+          transparentTextColor,
+          transparentTextShadow,
+          transparentSeparatorColor
+        );
       } else {
-        headerElement.classList.remove('bg-transparent', 'shadow-none', 'border-transparent');
-        headerElement.classList.add('bg-white/95', 'supports-[backdrop-filter]:bg-white/80', 'dark:bg-gray-950/95', 'dark:supports-[backdrop-filter]:bg-gray-950/80', 'backdrop-blur', 'shadow-sm', 'border-gray-200/80', 'dark:border-gray-800/80');
-        applyTextColor('');
+        headerElement.classList.remove(
+          'bg-transparent',
+          'shadow-none',
+          'bg-gradient-to-b',
+          'from-black/65',
+          'via-black/35',
+          'to-transparent'
+        );
+        headerElement.classList.add(
+          'bg-white/95',
+          'supports-[backdrop-filter]:bg-white/80',
+          'dark:bg-gray-950/95',
+          'dark:supports-[backdrop-filter]:bg-gray-950/80',
+          'backdrop-blur',
+          'shadow-sm'
+        );
+        applyTextColor('', '', '');
       }
     }
 
     function storeScrollData() {
       var y = getHeaderScrollY();
 
-      var scrollStatus = "";
+      var scrollStatus = '';
 
       if (y <= 0) {
-        scrollStatus = "top";
-      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
-        scrollStatus = "bottom";
+        scrollStatus = 'top';
+      } else if (window.innerHeight + y >= document.body.offsetHeight) {
+        scrollStatus = 'bottom';
       } else {
-        var isScrollDown = (y - lastScrollY > 0) ? true : false;
-        scrollStatus = isScrollDown ? "down" : "up";
+        var isScrollDown = y - lastScrollY > 0 ? true : false;
+        scrollStatus = isScrollDown ? 'down' : 'up';
       }
 
       lastScrollY = y;
-      documentElement.setAttribute("data-scroll-status", scrollStatus);
+      documentElement.setAttribute('data-scroll-status', scrollStatus);
       applyHeaderState(scrollStatus);
     }
 
-    window.addEventListener('scroll', function() {
-      storeScrollData();
-    }, { passive: true });
+    window.addEventListener(
+      'scroll',
+      function () {
+        storeScrollData();
+      },
+      { passive: true }
+    );
 
     document.addEventListener('nav-menu-state', storeScrollData);
     document.addEventListener('theme-changed', storeScrollData);

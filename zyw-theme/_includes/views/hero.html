@@ -16,10 +16,15 @@
 {%- include functions.html func='get_hero' -%}
 
 {%- if has_hero -%}
-  {%- assign resolved_hero_height = hero_height | default: 'min(52vh, 640px)' -%}
+  {%- assign resolved_hero_height = hero_height
+    | default: 'min(52vh, 640px)'
+  -%}
   {%- assign resolved_hero_min_height = hero_min_height | default: '320px' -%}
   {%- assign resolved_hero_opacity = hero_opacity | default: 1.0 -%}
-  <section class="page-hero relative mb-0 overflow-hidden text-white" style="{% if hero_background %}background: {{ hero_background }};{% endif %} height: {{ resolved_hero_height }}; min-height: {{ resolved_hero_min_height }};">
+  <section
+    class="page-hero relative mb-0 overflow-hidden text-white"
+    style="{% if hero_background %}background: {{ hero_background }};{% endif %} height: {{ resolved_hero_height }}; min-height: {{ resolved_hero_min_height }};"
+  >
     <div class="page-hero-img absolute inset-0">
       {%- if hero_video -%}
         <video
@@ -63,33 +68,41 @@
           })();
         </script>
       {%- else -%}
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url({{ hero_image }}); opacity: {{ resolved_hero_opacity }};"></div>
+        <div
+          class="absolute inset-0 bg-cover bg-center"
+          style="background-image: url({{ hero_image }}); opacity: {{ resolved_hero_opacity }};"
+        ></div>
         <img class="hidden" src="{{ hero_image }}" alt="" loading="eager">
       {%- endif -%}
     </div>
     <div class="absolute inset-0 bg-black/40"></div>
     <div class="wrapper relative z-10 mx-auto flex h-full w-full max-w-content items-center px-4 md:px-8">
       <div class="page-hero-inner w-full py-10">
-
         {%- if hero_html -%}
-
-        {%- assign hero_html = 'views/' | append: hero_html -%}
-        {%- include {{ hero_html }} -%}
+          {%- assign hero_html = 'views/' | append: hero_html -%}
+          {%- include {{ hero_html }} -%}
 
         {%- else -%}
-
           <div class="page-hero-default max-w-3xl">
-            <h1 class="page-hero-heading text-4xl font-bold tracking-tight drop-shadow-sm md:text-6xl"{% if hero_heading_style %} style="{{ hero_heading_style }}"{% endif %}>
+            <h1
+              class="page-hero-heading text-4xl font-bold tracking-tight drop-shadow-sm md:text-6xl"
+              {% if hero_heading_style %}
+                style="{{ hero_heading_style }}"
+              {% endif %}
+            >
               {{ heading | default: page.title | escape }}
             </h1>
-            <h2 class="page-hero-subheading mt-4 text-lg font-light text-white/90 md:text-2xl"{% if hero_subheading_style %} style="{{ hero_subheading_style }}"{% endif %}>
+            <h2
+              class="page-hero-subheading mt-4 text-lg font-light text-white/90 md:text-2xl"
+              {% if hero_subheading_style %}
+                style="{{ hero_subheading_style }}"
+              {% endif %}
+            >
               {{ subheading | default: page.subtitle | escape }}
             </h2>
           </div>
-
         {%- endif -%}
       </div>
     </div>
   </section>
 {%- endif -%}
-

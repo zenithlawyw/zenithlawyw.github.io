@@ -13,18 +13,19 @@
   {%- include functions/log.html level=include.level msg=include.msg -%}
 {%- else -%}
   {%- assign include_path = 'functions/' | append: include_path -%}
-  {%- include {{ include_path }} params=params-%}
+  {%- include {{ include_path }} params=params -%}
 {%- endif -%}
 
-{%- if return == nil -%}
+{%- if return == null -%}
   {%- assign return = include.default -%}
 {%- endif -%}
 
 {%- if func != 'log' -%}
-  {%- assign msg = '[function]['
+  {%-
+    assign msg = '[function]['
     | append: {{func}}
     | append: '] '
     | append: {{return}}
-    -%}
+  -%}
   {%- include functions.html func='log' level='info' -%}
 {%- endif -%}

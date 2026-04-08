@@ -1,0 +1,115 @@
+---
+layout: section
+hero:
+hero_html: post-header.html
+hidden: []
+---
+<div class="post">
+  <section>
+    {%- assign name = 'hero' -%}
+    {%- include functions.html func='get_value' -%}
+    {%- assign hero = return -%}
+
+    {%- assign name = 'hidden' -%}
+    {%- include functions.html func='get_value' -%}
+    {%- assign hidden = return -%}
+
+    {%- assign result = hidden | where_exp: 'item', "item == 'header'" -%}
+    {%- if result.size > 0 -%}
+      <div class="post-theme-toggle mb-6 flex justify-end">
+        {%- include extensions/theme-toggle.html -%}
+      </div>
+    {%- endif -%}
+    {%- if hero == null and result.size == 0 -%}
+      {%- include views/post-header.html -%}
+    {%- endif -%}
+
+    {% if page.intro %}
+      <section
+        class="mb-10 rounded-3xl border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-gray-50 via-white to-sky-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 p-6 shadow-sm md:p-10"
+        aria-labelledby="post-intro"
+      >
+        <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-6 md:grid-cols-12 md:gap-10">
+          {% if page.intro_image %}
+            <figure class="md:col-span-7">
+              <div class="overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm">
+                <img
+                  src="{{ page.intro_image }}"
+                  alt="{{ page.title }}"
+                  class="h-full w-full object-cover"
+                  loading="eager"
+                >
+              </div>
+            </figure>
+          {% endif %}
+          <div class="{% if page.intro_image %}md:col-span-5{% else %}md:col-span-12{% endif %}">
+            <p
+              id="post-intro"
+              class="text-2xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-gray-100 md:text-4xl"
+            >
+              {{ page.intro }}
+            </p>
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
+    {%- include views/article.html -%}
+
+    {%- assign post_author = page.author | default: site.author -%}
+    {%- if post_author -%}
+      {%- assign author = site.authors
+        | where: 'short_name', post_author
+        | first
+      -%}
+      {%- unless author -%}
+        {%- assign author = site.authors
+          | where: 'name', post_author
+          | first
+        -%}
+      {%- endunless -%}
+      {%- if author -%}
+        {%- include views/author-media.html -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- assign result = hidden | where_exp: 'item', "item == 'navigator'" -%}
+    {%- if result.size > 0 -%}
+      <div class="post-nav grid grid-cols-2 gap-4 mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+        {%- if page.previous -%}
+          <a
+            class="previous p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-left text-gray-900 dark:text-gray-100"
+            href="{{ page.previous.url | relative_url }}"
+            title="{{ page.previous.title | escape }}"
+          >
+            <div class="text-xs text-gray-700 dark:text-gray-300 mb-2">
+              ← Previous
+            </div>
+            <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">
+              {{ page.previous.title | escape }}
+            </div>
+          </a>
+        {%- else -%}
+          <span></span>
+        {%- endif -%}
+
+        {%- if page.next -%}
+          <a
+            class="next p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-right text-gray-900 dark:text-gray-100"
+            href="{{ page.next.url | relative_url }}"
+            title="{{ page.next.title | escape }}"
+          >
+            <div class="text-xs text-gray-700 dark:text-gray-300 mb-2">
+              Next →
+            </div>
+            <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">
+              {{ page.next.title | escape }}
+            </div>
+          </a>
+        {%- else -%}
+          <span></span>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </section>
+</div>

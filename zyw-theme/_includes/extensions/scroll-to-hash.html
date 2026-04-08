@@ -1,47 +1,47 @@
 <script language="javascript">
-<!--//
-  function onClick(event) {
-    if (event.target.tagName.toLowerCase() == 'a') {
-      scrollToHash(event.target.getAttribute('href'));
-    }
-  }
-
-  function onLoad() {
-    if (window.location.hash) {
-      scrollToHash(window.location.hash);
-    }
-  }
-
-  function scrollToHash(hashValue) {
-    hashValue = hashValue.replace(/^.*#h-/, '');
-    hashValue = decodeURIComponent(hashValue);
-    var element = document.getElementById(hashValue);
-
-    if (!element) {
-      return;
+  <!--//
+    function onClick(event) {
+      if (event.target.tagName.toLowerCase() == 'a') {
+        scrollToHash(event.target.getAttribute('href'));
+      }
     }
 
-    var header = document.querySelector('header.site-header');
-    var headerRect = header.getBoundingClientRect();
-    var headerTop = Math.floor(headerRect.top);
-    var headerHeight = Math.floor(headerRect.height);
-    var scrollPos = getScrollPos();
-    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
-
-    if (offsetY == scrollPos.y) {
-      return;
+    function onLoad() {
+      if (window.location.hash) {
+        scrollToHash(window.location.hash);
+      }
     }
 
-    if (headerTop == 0  && offsetY > scrollPos.y) {
-      offsetY += headerHeight + 2;
-    } else if (headerTop < 0  && offsetY < scrollPos.y) {
-      offsetY -= headerHeight - 2;
+    function scrollToHash(hashValue) {
+      hashValue = hashValue.replace(/^.*#h-/, '');
+      hashValue = decodeURIComponent(hashValue);
+      var element = document.getElementById(hashValue);
+
+      if (!element) {
+        return;
+      }
+
+      var header = document.querySelector('header.site-header');
+      var headerRect = header.getBoundingClientRect();
+      var headerTop = Math.floor(headerRect.top);
+      var headerHeight = Math.floor(headerRect.height);
+      var scrollPos = getScrollPos();
+      var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+      if (offsetY == scrollPos.y) {
+        return;
+      }
+
+      if (headerTop == 0  && offsetY > scrollPos.y) {
+        offsetY += headerHeight + 2;
+      } else if (headerTop < 0  && offsetY < scrollPos.y) {
+        offsetY -= headerHeight - 2;
+      }
+
+      smoothScrollTo(offsetY);
     }
 
-    smoothScrollTo(offsetY);
-  }
-
-  window.addEventListener('load', onLoad);
-  window.addEventListener('click', onClick);
-//-->
+    window.addEventListener('load', onLoad);
+    window.addEventListener('click', onClick);
+  //-->
 </script>

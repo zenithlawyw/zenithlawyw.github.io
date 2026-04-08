@@ -4,5 +4,6 @@
 Gemfile.lock
 _site
 ghpages
+node_modules
 theme
 vendor

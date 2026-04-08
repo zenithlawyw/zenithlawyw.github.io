@@ -1,0 +1,46 @@
+<aside
+  class="mt-8 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm md:p-8"
+  aria-label="About the author"
+>
+  <div class="flex flex-col gap-5 sm:flex-row sm:items-start">
+    <div class="shrink-0">
+      <a
+        href="{{ author.url | relative_url }}"
+        class="inline-flex rounded-full ring-offset-2 dark:ring-offset-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary"
+      >
+        <div
+          class="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border-2 border-gray-200 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400"
+          aria-hidden="true"
+        >
+          {% if author.avatar %}
+            <img
+              src="{{ author.avatar | relative_url }}"
+              alt="{{ author.name }}"
+              class="h-full w-full object-cover"
+            >
+          {% else %}
+            <span class="text-lg font-bold">{{ author.name | slice: 0 }}</span>
+          {% endif %}
+        </div>
+      </a>
+    </div>
+    <div class="min-w-0 flex-1">
+      <a
+        href="{{ author.url | relative_url }}"
+        class="inline-block rounded-md text-lg font-bold text-gray-900 dark:text-gray-100 no-underline transition-colors hover:text-brand-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+      >
+        {{ author.name }}
+      </a>
+      {% if author.position %}
+        <p class="mt-0.5 text-sm font-medium text-gray-500 dark:text-gray-400">
+          {{ author.position }}
+        </p>
+      {% endif %}
+      {% if author.description %}
+        <p class="mt-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+          {{ author.description }}
+        </p>
+      {% endif %}
+    </div>
+  </div>
+</aside>

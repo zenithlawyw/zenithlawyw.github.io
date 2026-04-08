@@ -4,61 +4,66 @@
   aria-label="Back to top"
   class="fixed right-6 md:right-10 bottom-10 z-10 inline-flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full shadow-[0_2px_15px_rgba(0,0,0,0.15)] transition-all duration-300 select-none opacity-0 translate-y-2 pointer-events-none focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-primary"
 >
-  <svg class="h-4 w-4 md:h-5 md:w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <svg
+    class="h-4 w-4 md:h-5 md:w-5"
+    viewBox="0 0 24 24"
+    fill="none"
+    aria-hidden="true"
+  >
     <path d="M12 5L6 11M12 5L18 11M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
 </button>
 <script language="javascript">
-<!--//
-  (function () {
-    const clickToTop = document.getElementById('click-to-top');
-    const documentElement = document.documentElement;
+  <!--//
+    (function () {
+      const clickToTop = document.getElementById('click-to-top');
+      const documentElement = document.documentElement;
 
-    if (!clickToTop) {
-      return;
-    }
+      if (!clickToTop) {
+        return;
+      }
 
-    function onClick() {
-      window.smoothScrollTo(0);
-    }
+      function onClick() {
+        window.smoothScrollTo(0);
+      }
 
-    function onScroll() {
-      const shouldShow = window.scrollY > 100;
-      clickToTop.classList.toggle('opacity-100', shouldShow);
-      clickToTop.classList.toggle('translate-y-0', shouldShow);
-      clickToTop.classList.toggle('pointer-events-auto', shouldShow);
+      function onScroll() {
+        const shouldShow = window.scrollY > 100;
+        clickToTop.classList.toggle('opacity-100', shouldShow);
+        clickToTop.classList.toggle('translate-y-0', shouldShow);
+        clickToTop.classList.toggle('pointer-events-auto', shouldShow);
 
-      clickToTop.classList.toggle('opacity-0', !shouldShow);
-      clickToTop.classList.toggle('translate-y-2', !shouldShow);
-      clickToTop.classList.toggle('pointer-events-none', !shouldShow);
-    }
+        clickToTop.classList.toggle('opacity-0', !shouldShow);
+        clickToTop.classList.toggle('translate-y-2', !shouldShow);
+        clickToTop.classList.toggle('pointer-events-none', !shouldShow);
+      }
 
-    function onThemeChanged() {
-      const isDark = documentElement.getAttribute('data-theme') === 'dark';
-      clickToTop.style.backgroundColor = isDark ? '#34323d' : '#ffffff';
-      clickToTop.style.color = isDark ? '#f5f5f5' : '#353535';
-    }
+      function onThemeChanged() {
+        const isDark = documentElement.getAttribute('data-theme') === 'dark';
+        clickToTop.style.backgroundColor = isDark ? '#34323d' : '#ffffff';
+        clickToTop.style.color = isDark ? '#f5f5f5' : '#353535';
+      }
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-    document.addEventListener('theme-changed', onThemeChanged);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      document.addEventListener('theme-changed', onThemeChanged);
 
-    const themeObserver = new MutationObserver(function(mutationList) {
-      mutationList.forEach(function(mutation) {
-        if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
-          onThemeChanged();
-        }
+      const themeObserver = new MutationObserver(function(mutationList) {
+        mutationList.forEach(function(mutation) {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+            onThemeChanged();
+          }
+        });
       });
-    });
 
-    themeObserver.observe(documentElement, {
-      attributes: true,
-      attributeFilter: ['data-theme']
-    });
+      themeObserver.observe(documentElement, {
+        attributes: true,
+        attributeFilter: ['data-theme']
+      });
 
-    onThemeChanged();
-    onScroll();
+      onThemeChanged();
+      onScroll();
 
-    clickToTop.addEventListener('click', onClick);
-  })();
-//-->
+      clickToTop.addEventListener('click', onClick);
+    })();
+  //-->
 </script>

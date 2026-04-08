@@ -2,12 +2,30 @@
   <label
     class="inline-flex items-center gap-2 rounded-full bg-black/10 dark:bg-white/10 px-3 py-1.5 text-xs font-semibold text-gray-800 dark:text-gray-100 cursor-pointer select-none transition-colors hover:bg-black/20 dark:hover:bg-white/20 shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
   >
-    <input type="checkbox" class="theme-switch-input sr-only" aria-label="Toggle dark mode">
-    <svg class="theme-icon-light h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+    <input
+      type="checkbox"
+      class="theme-switch-input sr-only"
+      aria-label="Toggle dark mode"
+    >
+    <svg
+      class="theme-icon-light h-4 w-4"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      aria-hidden="true"
+    >
       <path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.36 6.36-1.41-1.41M7.05 7.05 5.64 5.64m12.72 0-1.41 1.41M7.05 16.95l-1.41 1.41"></path>
       <circle cx="12" cy="12" r="4"></circle>
     </svg>
-    <svg class="theme-icon-dark hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+    <svg
+      class="theme-icon-dark hidden h-4 w-4"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      aria-hidden="true"
+    >
       <path d="M21 12.79A9 9 0 1 1 11.21 3c0 .43.05.86.15 1.27a7 7 0 0 0 8.37 8.37c.41.1.84.15 1.27.15z"></path>
     </svg>
     <span class="theme-mode-text">Light</span>
@@ -19,217 +37,217 @@
 {%- assign night_mode = return -%}
 
 <script language="javascript">
-<!--//
-  (function() {
-    var html = document.documentElement;
-    var toggleRoot = document.currentScript ? document.currentScript.previousElementSibling : null;
+  <!--//
+    (function() {
+      var html = document.documentElement;
+      var toggleRoot = document.currentScript ? document.currentScript.previousElementSibling : null;
 
-    function getToggleElements(root) {
-      if (!root || root.getAttribute('data-theme-toggle') === null) {
-        return { input: null, modeText: null, lightIcon: null, darkIcon: null };
-      }
-
-      return {
-        input: root.querySelector('.theme-switch-input'),
-        modeText: root.querySelector('.theme-mode-text'),
-        lightIcon: root.querySelector('.theme-icon-light'),
-        darkIcon: root.querySelector('.theme-icon-dark')
-      };
-    }
-
-    function bindToggleUI(root) {
-      var elements = getToggleElements(root);
-      if (!elements.input || root.getAttribute('data-theme-toggle-bound') === '1') {
-        return;
-      }
-
-      elements.input.checked = !!window.__zywThemeManager.getNightShift();
-      if (elements.modeText) {
-        elements.modeText.textContent = elements.input.checked ? 'Dark' : 'Light';
-      }
-
-      elements.input.addEventListener('change', function(event) {
-        window.__zywThemeManager.setTheme(event.target.checked);
-      });
-
-      root.setAttribute('data-theme-toggle-bound', '1');
-    }
-
-    if (!window.__zywThemeManager) {
-      var nightModeOption = ('{{ night_mode }}' || 'auto').toLowerCase();
-      var storage = getStorage();
-      var themeData = loadThemeData();
-
-      function getStorage() {
-        var hasLocalStorage = false;
-        var hasSessionStorage = false;
-
-        try {
-          var localKey = '__theme_storage_test__';
-          localStorage.setItem(localKey, '1');
-          localStorage.removeItem(localKey);
-          hasLocalStorage = true;
-        } catch (e) {
-          hasLocalStorage = false;
-        }
-
-        try {
-          var sessionKey = '__theme_storage_test__';
-          sessionStorage.setItem(sessionKey, '1');
-          sessionStorage.removeItem(sessionKey);
-          hasSessionStorage = true;
-        } catch (e) {
-          hasSessionStorage = false;
-        }
-
-        if (hasLocalStorage) {
-          return localStorage;
-        }
-
-        if (hasSessionStorage) {
-          return sessionStorage;
+      function getToggleElements(root) {
+        if (!root || root.getAttribute('data-theme-toggle') === null) {
+          return { input: null, modeText: null, lightIcon: null, darkIcon: null };
         }
 
         return {
-          setItem: function() {},
-          getItem: function() {
-            return null;
-          }
+          input: root.querySelector('.theme-switch-input'),
+          modeText: root.querySelector('.theme-mode-text'),
+          lightIcon: root.querySelector('.theme-icon-light'),
+          darkIcon: root.querySelector('.theme-icon-dark')
         };
       }
 
-      function saveThemeData(data) {
-        storage.setItem('theme', JSON.stringify(data));
+      function bindToggleUI(root) {
+        var elements = getToggleElements(root);
+        if (!elements.input || root.getAttribute('data-theme-toggle-bound') === '1') {
+          return;
+        }
+
+        elements.input.checked = !!window.__zywThemeManager.getNightShift();
+        if (elements.modeText) {
+          elements.modeText.textContent = elements.input.checked ? 'Dark' : 'Light';
+        }
+
+        elements.input.addEventListener('change', function(event) {
+          window.__zywThemeManager.setTheme(event.target.checked);
+        });
+
+        root.setAttribute('data-theme-toggle-bound', '1');
       }
 
-      function loadThemeData() {
-        var data = storage.getItem('theme');
-        try {
-          data = JSON.parse(data ? data : '{}');
-        } catch(e) {
-          data = { nightShift: undefined, autoToggleAt: 0 };
-        }
+      if (!window.__zywThemeManager) {
+        var nightModeOption = ('{{ night_mode }}' || 'auto').toLowerCase();
+        var storage = getStorage();
+        var themeData = loadThemeData();
 
-        if (!data || typeof data !== 'object') {
-          data = { nightShift: undefined, autoToggleAt: 0 };
-        }
+        function getStorage() {
+          var hasLocalStorage = false;
+          var hasSessionStorage = false;
 
-        if (typeof data.autoToggleAt !== 'number') {
-          data.autoToggleAt = 0;
-        }
-
-        if (data.nightShift !== undefined && data.nightShift !== null) {
-          data.nightShift = !!data.nightShift;
-        }
-
-        return data;
-      }
-
-      function syncToggleLabels(isDark) {
-        var roots = document.querySelectorAll('[data-theme-toggle]');
-        roots.forEach(function(root) {
-          var elements = getToggleElements(root);
-          if (elements.input) {
-            elements.input.checked = isDark;
+          try {
+            var localKey = '__theme_storage_test__';
+            localStorage.setItem(localKey, '1');
+            localStorage.removeItem(localKey);
+            hasLocalStorage = true;
+          } catch (e) {
+            hasLocalStorage = false;
           }
 
-          if (elements.modeText) {
-            elements.modeText.textContent = isDark ? 'Dark' : 'Light';
+          try {
+            var sessionKey = '__theme_storage_test__';
+            sessionStorage.setItem(sessionKey, '1');
+            sessionStorage.removeItem(sessionKey);
+            hasSessionStorage = true;
+          } catch (e) {
+            hasSessionStorage = false;
           }
 
-          if (elements.lightIcon) {
-            elements.lightIcon.classList.toggle('hidden', isDark);
+          if (hasLocalStorage) {
+            return localStorage;
           }
 
-          if (elements.darkIcon) {
-            elements.darkIcon.classList.toggle('hidden', !isDark);
+          if (hasSessionStorage) {
+            return sessionStorage;
           }
+
+          return {
+            setItem: function() {},
+            getItem: function() {
+              return null;
+            }
+          };
+        }
+
+        function saveThemeData(data) {
+          storage.setItem('theme', JSON.stringify(data));
+        }
+
+        function loadThemeData() {
+          var data = storage.getItem('theme');
+          try {
+            data = JSON.parse(data ? data : '{}');
+          } catch(e) {
+            data = { nightShift: undefined, autoToggleAt: 0 };
+          }
+
+          if (!data || typeof data !== 'object') {
+            data = { nightShift: undefined, autoToggleAt: 0 };
+          }
+
+          if (typeof data.autoToggleAt !== 'number') {
+            data.autoToggleAt = 0;
+          }
+
+          if (data.nightShift !== undefined && data.nightShift !== null) {
+            data.nightShift = !!data.nightShift;
+          }
+
+          return data;
+        }
+
+        function syncToggleLabels(isDark) {
+          var roots = document.querySelectorAll('[data-theme-toggle]');
+          roots.forEach(function(root) {
+            var elements = getToggleElements(root);
+            if (elements.input) {
+              elements.input.checked = isDark;
+            }
+
+            if (elements.modeText) {
+              elements.modeText.textContent = isDark ? 'Dark' : 'Light';
+            }
+
+            if (elements.lightIcon) {
+              elements.lightIcon.classList.toggle('hidden', isDark);
+            }
+
+            if (elements.darkIcon) {
+              elements.darkIcon.classList.toggle('hidden', !isDark);
+            }
+          });
+        }
+
+        function applyTheme(nightShift) {
+          var isDark = !!nightShift;
+          html.dataset.theme = isDark ? 'dark' : 'light';
+          html.classList.toggle('dark', isDark);
+          syncToggleLabels(isDark);
+        }
+
+        function setTheme(nightShift) {
+          themeData.nightShift = !!nightShift;
+          saveThemeData(themeData);
+          applyTheme(themeData.nightShift);
+          document.dispatchEvent(new Event('theme-changed'));
+        }
+
+        function autoThemeToggle() {
+          // Next time point of theme toggle
+          var now = new Date();
+          var toggleAt = new Date();
+          var hours = now.getHours();
+          var nightShift = hours >= 19 || hours <=7;
+
+          if (nightShift) {
+            if (hours > 7) {
+              toggleAt.setDate(toggleAt.getDate() + 1);
+            }
+            toggleAt.setHours(7);
+          } else {
+            toggleAt.setHours(19);
+          }
+
+          toggleAt.setMinutes(0);
+          toggleAt.setSeconds(0);
+          toggleAt.setMilliseconds(0)
+
+          var delay = toggleAt.getTime() - now.getTime();
+
+          // auto toggle theme mode
+          setTimeout(function() {
+            setTheme(!nightShift);
+          }, delay);
+
+          return {
+            nightShift: nightShift,
+            toggleAt: toggleAt.getTime()
+          };
+        }
+
+        window.__zywThemeManager = {
+          setTheme: setTheme,
+          getNightShift: function() {
+            return !!themeData.nightShift;
+          },
+          applyTheme: applyTheme
+        };
+
+        if (nightModeOption == 'auto') {
+          var data = autoThemeToggle();
+
+          // Toggle theme by local setting
+          if (data.toggleAt > themeData.autoToggleAt) {
+            themeData.autoToggleAt = data.toggleAt;
+            setTheme(data.nightShift);
+          } else if (themeData.nightShift === undefined || themeData.nightShift === null) {
+            setTheme(data.nightShift);
+          } else {
+            setTheme(themeData.nightShift);
+          }
+        } else if (nightModeOption == 'manual') {
+          setTheme(themeData.nightShift);
+        } else {
+          var nightShift = themeData.nightShift;
+          if (nightShift === undefined) {
+            nightShift = nightModeOption === 'on';
+          }
+          setTheme(nightShift);
+        }
+
+        document.addEventListener('theme-changed', function() {
+          syncToggleLabels(!!themeData.nightShift);
         });
       }
 
-      function applyTheme(nightShift) {
-        var isDark = !!nightShift;
-        html.dataset.theme = isDark ? 'dark' : 'light';
-        html.classList.toggle('dark', isDark);
-        syncToggleLabels(isDark);
-      }
-
-      function setTheme(nightShift) {
-        themeData.nightShift = !!nightShift;
-        saveThemeData(themeData);
-        applyTheme(themeData.nightShift);
-        document.dispatchEvent(new Event('theme-changed'));
-      }
-
-      function autoThemeToggle() {
-        // Next time point of theme toggle
-        var now = new Date();
-        var toggleAt = new Date();
-        var hours = now.getHours();
-        var nightShift = hours >= 19 || hours <=7;
-
-        if (nightShift) {
-          if (hours > 7) {
-            toggleAt.setDate(toggleAt.getDate() + 1);
-          }
-          toggleAt.setHours(7);
-        } else {
-          toggleAt.setHours(19);
-        }
-
-        toggleAt.setMinutes(0);
-        toggleAt.setSeconds(0);
-        toggleAt.setMilliseconds(0)
-
-        var delay = toggleAt.getTime() - now.getTime();
-
-        // auto toggle theme mode
-        setTimeout(function() {
-          setTheme(!nightShift);
-        }, delay);
-
-        return {
-          nightShift: nightShift,
-          toggleAt: toggleAt.getTime()
-        };
-      }
-
-      window.__zywThemeManager = {
-        setTheme: setTheme,
-        getNightShift: function() {
-          return !!themeData.nightShift;
-        },
-        applyTheme: applyTheme
-      };
-
-      if (nightModeOption == 'auto') {
-        var data = autoThemeToggle();
-
-        // Toggle theme by local setting
-        if (data.toggleAt > themeData.autoToggleAt) {
-          themeData.autoToggleAt = data.toggleAt;
-          setTheme(data.nightShift);
-        } else if (themeData.nightShift === undefined || themeData.nightShift === null) {
-          setTheme(data.nightShift);
-        } else {
-          setTheme(themeData.nightShift);
-        }
-      } else if (nightModeOption == 'manual') {
-        setTheme(themeData.nightShift);
-      } else {
-        var nightShift = themeData.nightShift;
-        if (nightShift === undefined) {
-          nightShift = nightModeOption === 'on';
-        }
-        setTheme(nightShift);
-      }
-
-      document.addEventListener('theme-changed', function() {
-        syncToggleLabels(!!themeData.nightShift);
-      });
-    }
-
-    bindToggleUI(toggleRoot);
-  })();
-//-->
+      bindToggleUI(toggleRoot);
+    })();
+  //-->
 </script>
