@@ -1,9 +1,9 @@
+**/Gemfile.lock
+**/node_modules
 .jekyll-cache
 .jekyll-metadata
 .sass-cache
-Gemfile.lock
 _site
 ghpages
-node_modules
 theme
 vendor
