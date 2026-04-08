@@ -1,0 +1,256 @@
+<link
+  rel="stylesheet"
+  href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"
+>
+<script
+  language="javascript"
+  src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+></script>
+<script
+  charset="UTF-8"
+  src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"
+  async
+></script>
+
+{%- assign name = 'code_badge.enabled' -%}
+{%- include functions.html func='get_value' default='true' -%}
+{%- assign badge_enabled = return -%}
+
+{%- assign name = 'code_badge.color' -%}
+{%- include functions.html func='get_value' default='#fff' -%}
+{%- assign badge_color = return -%}
+
+{%- assign name = 'code_badge.background_color' -%}
+{%- include functions.html func='get_value' default='#ff4e00' -%}
+{%- assign badge_background_color = return -%}
+
+{%- assign name = 'code_badge.text_transform' -%}
+{%- include functions.html func='get_value' default='uppercase' -%}
+{%- assign badge_text_transform = return -%}
+
+<script>
+  function handleElement(e) {
+    var outer = e.parentElement.parentElement.parentElement;
+    var lang = e.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = e.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    e.setAttribute('class', 'hljs ' + lang);
+    e.parentNode.setAttribute('data-lang', lang);
+
+    var pre = e.parentElement;
+
+    /* Caption bar — reads data-caption and data-caption-position from wrapper div */
+    var wrapper =
+      pre.closest('.highlighter-rouge') || pre.closest('figure.highlight');
+    if (wrapper) {
+      var caption = wrapper.getAttribute('data-caption');
+      if (caption) {
+        var position = (
+          wrapper.getAttribute('data-caption-position') || 'top'
+        ).toLowerCase();
+        wrapper.classList.add('has-caption');
+        wrapper.classList.add('caption-' + position);
+        var bar = document.createElement('div');
+        bar.className = 'code-caption';
+        bar.textContent = caption;
+        if (position === 'bottom') {
+          wrapper.appendChild(bar);
+        } else {
+          wrapper.insertBefore(bar, wrapper.firstChild);
+        }
+      }
+    }
+
+    var enabled = ('{{ badge_enabled }}' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      pre.classList.add('badge');
+    }
+
+    /* Copy button */
+    var copyBtn = document.createElement('button');
+    copyBtn.className = 'code-copy-btn';
+    copyBtn.setAttribute('type', 'button');
+    copyBtn.setAttribute('aria-label', 'Copy code to clipboard');
+    copyBtn.innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+    copyBtn.addEventListener('click', function () {
+      var code = e.innerText;
+      navigator.clipboard.writeText(code).then(function () {
+        copyBtn.innerHTML =
+          '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+        copyBtn.classList.add('copied');
+        setTimeout(function () {
+          copyBtn.innerHTML =
+            '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      });
+    });
+    pre.appendChild(copyBtn);
+
+    hljs.highlightBlock(e);
+  }
+
+  function onLoad() {
+    var els = document.querySelectorAll('pre code');
+
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      handleElement(el);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', onLoad);
+</script>
+
+<style>
+  /* Pre block layout: constrain width and centre */
+  .post-content .highlighter-rouge,
+  .post-content figure.highlight {
+    max-width: 48rem;     /* ~768px */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .post-content pre {
+    position: relative;
+    overflow-x: auto;
+  }
+
+  /* code language badge — pinned to top-left inside pre */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: {{badge_color}};
+    background-color: {{badge_background_color}};
+    padding: 0 .5em;
+    border-radius: 0 4px 0 0;
+    text-transform: {{badge_text_transform}};
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.7rem;
+    line-height: 1.6;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Copy button */
+  .code-copy-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    margin: 6px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(128, 128, 128, 0.15);
+    color: #6b7280;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s, background 0.2s, color 0.2s;
+    z-index: 2;
+  }
+  pre:hover .code-copy-btn {
+    opacity: 1;
+  }
+  .code-copy-btn:hover {
+    background: rgba(128, 128, 128, 0.3);
+    color: #374151;
+  }
+  .code-copy-btn.copied {
+    color: #10b981;
+  }
+
+  /* Dark mode adjustments */
+  html.dark .code-copy-btn {
+    color: #9ca3af;
+  }
+  html.dark .code-copy-btn:hover {
+    background: rgba(156, 163, 175, 0.25);
+    color: #e5e7eb;
+  }
+  html.dark .code-copy-btn.copied {
+    color: #34d399;
+  }
+
+  /* Code caption bar */
+  .has-caption {
+    display: flex;
+    flex-direction: column;
+  }
+  .code-caption {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.4em 0.75em;
+    margin: 0;
+    font-size: 0.8rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    color: #d1d5db;
+    background: #1e293b;
+  }
+  .code-caption::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z'/%3E%3Cpolyline points='13 2 13 9 20 9'/%3E%3C/svg%3E") no-repeat center / contain;
+  }
+
+  /* Caption on top (default) */
+  .caption-top > .code-caption {
+    border-bottom: 1px solid #334155;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .caption-top > .highlight > pre,
+  .caption-top > pre {
+    border-radius: 0 0 0.5rem 0.5rem !important;
+    margin-top: 0 !important;
+  }
+
+  /* Caption on bottom */
+  .caption-bottom > .code-caption {
+    border-top: 1px solid #334155;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+  .caption-bottom > .highlight > pre,
+  .caption-bottom > pre {
+    border-radius: 0.5rem 0.5rem 0 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  html.dark .code-caption {
+    background: #0f172a;
+    color: #94a3b8;
+  }
+  html.dark .caption-top > .code-caption {
+    border-bottom-color: #1e293b;
+  }
+  html.dark .caption-bottom > .code-caption {
+    border-top-color: #1e293b;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>

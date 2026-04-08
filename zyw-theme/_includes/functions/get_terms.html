@@ -1,0 +1,47 @@
+{% assign collection_type = include.type
+  | default: include.params.type
+  | default: 'categories'
+%}
+{% assign split_mark = '<|>' %}
+{% assign values = '' %}
+
+{% case collection_type %}
+  {% when 'dates' %}
+    {% assign filter = include.filter
+      | default: include.params.filter
+      | default: '%Y'
+    %}
+    {% for post in site.posts %}
+      {% assign value = post.date | date: filter %}
+      {% assign values = values | append: split_mark | append: value %}
+    {% endfor %}
+
+    {% assign return = values
+      | remove_first: split_mark
+      | split: split_mark
+      | sort: self
+      | uniq
+    %}
+  {% when 'tags' %}
+    {% for tag in site.tags %}
+      {% assign value = tag | first %}
+      {% assign values = values | append: split_mark | append: value %}
+    {% endfor %}
+
+    {% assign return = values
+      | remove_first: split_mark
+      | split: split_mark
+      | sort: self
+    %}
+  {% else %}
+    {% for category in site.categories %}
+      {% assign value = category | first %}
+      {% assign values = values | append: split_mark | append: value %}
+    {% endfor %}
+
+    {% assign return = values
+      | remove_first: split_mark
+      | split: split_mark
+      | sort: self
+    %}
+{% endcase %}

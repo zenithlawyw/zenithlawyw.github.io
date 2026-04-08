@@ -1,0 +1,32 @@
+{
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "printWidth": 80,
+  "plugins": ["@shopify/prettier-plugin-liquid"],
+  "overrides": [
+    {
+      "files": [
+        "docs/*.html",
+        "docs/_includes/*.html",
+        "docs/_layouts/*.html",
+        "zyw-theme/_includes/**/*.html",
+        "zyw-theme/_layouts/*.html"
+      ],
+      "options": {
+        "parser": "liquid-html"
+      }
+    },
+    {
+      "files": ["**/*.md"],
+      "options": {
+        "parser": "markdown"
+      }
+    },
+    {
+      "files": ["**/*.{yaml,yml}"],
+      "options": {
+        "parser": "yaml"
+      }
+    }
+  ]
+}
