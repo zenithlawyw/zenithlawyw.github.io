@@ -11,7 +11,10 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "docs:build": "make -C docs build",
+    "docs:serve": "make -C docs serve",
+    "docs:dev": "make -C docs build && make -C docs serve"
   },
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "^1.10.2",
