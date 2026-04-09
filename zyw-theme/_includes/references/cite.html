@@ -1,0 +1,87 @@
+{%- assign cite_key_raw = include.key | default: include.id -%}
+{%- if cite_key_raw -%}
+  {%- assign cite_key = cite_key_raw | append: '' -%}
+  {%- assign site_refs_style = site.references.style
+    | default: site.references_style
+  -%}
+  {%- assign refs_style = include.style
+    | default: page.references_style
+    | default: site_refs_style
+    | default: 'ieee'
+    | downcase
+  -%}
+  {%- assign refs_list = include.references | default: page.references -%}
+  {%- assign refs_data_file = include.data_file
+    | default: page.references_data_file
+    | default: 'references'
+  -%}
+  {%- assign refs_data = site.data[refs_data_file] -%}
+  {%- assign entry = refs_data[cite_key] -%}
+
+  {%- assign mode = include.mode | default: 'parenthetical' -%}
+  {%- assign cite_anchor = include.anchor_id | default: cite_key | slugify -%}
+  {%- assign cite_index = null -%}
+
+  {%- if refs_list -%}
+    {%- for ref in refs_list -%}
+      {%- assign ref_key = ref.key | default: ref.id | default: ref -%}
+      {%- assign ref_key_str = ref_key | append: '' -%}
+      {%- if ref_key_str == cite_key -%}
+        {%- assign cite_index = forloop.index -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+
+  {%- if cite_index == null and entry and entry.number -%}
+    {%- assign cite_index = entry.number -%}
+  {%- endif -%}
+
+  {%- assign short_author = cite_key -%}
+  {%- assign cite_year = 'n.d.' -%}
+
+  {%- if entry -%}
+    {%- assign short_author = entry.short_author
+      | default: entry.author
+      | default: entry.authors
+      | default: cite_key
+    -%}
+    {%- assign cite_year = entry.year | default: 'n.d.' -%}
+  {%- endif -%}
+
+  {%- assign computed_label = '' -%}
+  {%- if refs_style == 'ieee' -%}
+    {%- if cite_index -%}
+      {%- assign computed_label = '[' | append: cite_index | append: ']' -%}
+    {%- elsif entry and entry.number -%}
+      {%- assign computed_label = '[' | append: entry.number | append: ']' -%}
+    {%- else -%}
+      {%- assign computed_label = '[?]' -%}
+    {%- endif -%}
+  {%- elsif refs_style == 'harvard' -%}
+    {%- if mode == 'textual' -%}
+      {%- capture computed_label -%}{{ short_author }} ({{ cite_year }}){%- endcapture -%}
+    {%- elsif mode == 'narrative' -%}
+      {%- capture computed_label -%}{{ short_author }} {{ cite_year }}{%- endcapture -%}
+    {%- else -%}
+      {%- capture computed_label -%}({{ short_author }} {{ cite_year }}){%- endcapture -%}
+    {%- endif -%}
+  {%- else -%}
+    {%- if mode == 'textual' -%}
+      {%- capture computed_label -%}{{ short_author }} ({{ cite_year }}){%- endcapture -%}
+    {%- elsif mode == 'narrative' -%}
+      {%- capture computed_label -%}{{ short_author }}, {{ cite_year }}{%- endcapture -%}
+    {%- else -%}
+      {%- capture computed_label -%}({{ short_author }}, {{ cite_year }}){%- endcapture -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- assign label = include.label | default: computed_label | strip -%}
+  {%- assign cite_class = include.class
+    | default: 'reference-cite text-sky-700 underline decoration-sky-300 underline-offset-2 hover:text-sky-800 dark:text-sky-300 dark:hover:text-sky-200'
+  -%}
+
+  {{ include.prefix -}}
+  <a class="{{ cite_class }}" href="#{{ cite_anchor | escape }}">{{ label }}</a>
+  {{- include.suffix }}
+{%- endif -%}

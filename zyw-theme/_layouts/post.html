@@ -54,62 +54,74 @@ hidden: []
       </section>
     {% endif %}
 
-    {%- include views/article.html -%}
+    <div class="post-layout mx-auto grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-10">
+      <aside class="post-menu-wrap order-1 sticky top-20 z-30 mb-8 max-h-[42vh] overflow-y-auto rounded-2xl lg:order-2 lg:mb-0 lg:w-[280px] lg:max-h-[calc(100vh-6rem)]">
+        {%- include sidebar/article-menu.html -%}
+      </aside>
 
-    {%- assign post_author = page.author | default: site.author -%}
-    {%- if post_author -%}
-      {%- assign author = site.authors
-        | where: 'short_name', post_author
-        | first
-      -%}
-      {%- unless author -%}
-        {%- assign author = site.authors
-          | where: 'name', post_author
-          | first
-        -%}
-      {%- endunless -%}
-      {%- if author -%}
-        {%- include views/author-media.html -%}
-      {%- endif -%}
-    {%- endif -%}
+      <div class="post-main order-2 min-w-0 lg:order-1">
+        {%- include views/article.html -%}
 
-    {%- assign result = hidden | where_exp: 'item', "item == 'navigator'" -%}
-    {%- if result.size > 0 -%}
-      <div class="post-nav grid grid-cols-2 gap-4 mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
-        {%- if page.previous -%}
-          <a
-            class="previous p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-left text-gray-900 dark:text-gray-100"
-            href="{{ page.previous.url | relative_url }}"
-            title="{{ page.previous.title | escape }}"
-          >
-            <div class="text-xs text-gray-700 dark:text-gray-300 mb-2">
-              ← Previous
-            </div>
-            <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">
-              {{ page.previous.title | escape }}
-            </div>
-          </a>
-        {%- else -%}
-          <span></span>
+        {%- include references/list.html -%}
+
+        {%- assign post_author = page.author | default: site.author -%}
+        {%- if post_author -%}
+          {%- assign author = site.authors
+            | where: 'short_name', post_author
+            | first
+          -%}
+          {%- unless author -%}
+            {%- assign author = site.authors
+              | where: 'name', post_author
+              | first
+            -%}
+          {%- endunless -%}
+          {%- if author -%}
+            {%- include views/author-media.html -%}
+          {%- endif -%}
         {%- endif -%}
 
-        {%- if page.next -%}
-          <a
-            class="next p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-right text-gray-900 dark:text-gray-100"
-            href="{{ page.next.url | relative_url }}"
-            title="{{ page.next.title | escape }}"
-          >
-            <div class="text-xs text-gray-700 dark:text-gray-300 mb-2">
-              Next →
-            </div>
-            <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">
-              {{ page.next.title | escape }}
-            </div>
-          </a>
-        {%- else -%}
-          <span></span>
+        {%- assign result = hidden
+          | where_exp: 'item', "item == 'navigator'"
+        -%}
+        {%- if result.size > 0 -%}
+          <div class="post-nav grid grid-cols-2 gap-4 mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+            {%- if page.previous -%}
+              <a
+                class="previous p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-left text-gray-900 dark:text-gray-100"
+                href="{{ page.previous.url | relative_url }}"
+                title="{{ page.previous.title | escape }}"
+              >
+                <div class="text-xs text-gray-700 dark:text-gray-300 mb-2">
+                  ← Previous
+                </div>
+                <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                  {{ page.previous.title | escape }}
+                </div>
+              </a>
+            {%- else -%}
+              <span></span>
+            {%- endif -%}
+
+            {%- if page.next -%}
+              <a
+                class="next p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-right text-gray-900 dark:text-gray-100"
+                href="{{ page.next.url | relative_url }}"
+                title="{{ page.next.title | escape }}"
+              >
+                <div class="text-xs text-gray-700 dark:text-gray-300 mb-2">
+                  Next →
+                </div>
+                <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                  {{ page.next.title | escape }}
+                </div>
+              </a>
+            {%- else -%}
+              <span></span>
+            {%- endif -%}
+          </div>
         {%- endif -%}
       </div>
-    {%- endif -%}
+    </div>
   </section>
 </div>

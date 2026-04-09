@@ -1,0 +1,224 @@
+{%- assign item = include.item -%}
+{%- assign site_refs_style = site.references.style
+  | default: site.references_style
+-%}
+{%- assign refs_style = include.style
+  | default: page.references_style
+  | default: site_refs_style
+  | default: 'ieee'
+  | downcase
+-%}
+{%- assign has_structured_fields = false -%}
+{%- if item.text
+  or item.authors
+  or item.title
+  or item.journal
+  or item.book
+  or item.publisher
+  or item.url
+  or item.doi
+  or item.arXiv
+  or item.arxiv
+  or item.note
+  or item.year
+-%}
+  {%- assign has_structured_fields = true -%}
+{%- endif -%}
+
+<li
+  id="{{ include.anchor_id | escape }}"
+  class="reference-item text-gray-800 dark:text-gray-200"
+>
+  {%- if refs_style == 'ieee' -%}
+    <span class="mr-2 font-semibold text-gray-900 dark:text-gray-100"
+      >[{{ include.index }}]</span
+    >
+    {%- if item.ieee -%}
+      {%- assign text_html = item.ieee | markdownify -%}
+      {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
+      {%- if item.note -%}{{ item.note }}{%- endif -%}
+    {%- elsif item.text -%}
+      {%- assign text_html = item.text | markdownify -%}
+      {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
+      {%- if item.note -%}{{ item.note }}{%- endif -%}
+    {%- else -%}
+      {%- if item.authors -%}{{ item.authors }},{%- endif -%}
+      {%- if item.title -%}"{{ item.title }}",{%- endif -%}
+      {%- if item.journal -%}
+        <em>{{ item.journal }}</em>,
+      {%- elsif item.book -%}
+        <em>{{ item.book }}</em>,
+      {%- endif -%}
+      {%- if item.volume -%}vol. {{ item.volume }},{%- endif -%}
+      {%- if item.issue -%}no. {{ item.issue }},{%- endif -%}
+      {%- if item.pages -%}
+        pp. {{ item.pages }},
+      {%- elsif item.first_page -%}
+        pp. {{ item.first_page -}}
+        {%- if item.last_page %}-{{ item.last_page }}{% endif %},
+      {%- endif -%}
+      {%- if item.publisher -%}{{ item.publisher }},{%- endif -%}
+      {%- if item.year -%}{{ item.year }}.{%- endif -%}
+      {%- if item.doi -%}
+        doi:
+        <a
+          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          href="https://doi.org/{{ item.doi }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{- item.doi -}}</a
+        >.
+      {%- endif -%}
+      {%- if item.url -%}
+        [Online]. Available:
+        <a
+          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          href="{{ item.url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{- item.url -}}</a
+        >.
+      {%- endif -%}
+      {%- if item.accessed -%}Accessed: {{ item.accessed }}.{%- endif -%}
+      {%- if item.note -%}{{ item.note }}{%- endif -%}
+    {%- endif -%}
+  {%- elsif refs_style == 'harvard' -%}
+    {%- if item.harvard -%}
+      {%- assign text_html = item.harvard | markdownify -%}
+      {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
+    {%- elsif has_structured_fields -%}
+      {%- if item.authors -%}
+        <span class="ref-authors">{{ item.authors }}</span>
+      {%- endif -%}
+      {%- if item.year -%}{{ item.year }}.{%- endif -%}
+      {%- if item.title -%}"{{ item.title }}".{%- endif -%}
+      {%- if item.journal -%}
+        <em>{{ item.journal }}</em>
+        {%- if item.volume %}, {{ item.volume }}{% endif -%}
+        {%- if item.issue %}({{ item.issue }}){% endif -%}
+        {%- if item.pages -%}
+          , pp. {{ item.pages -}}
+        {%- elsif item.first_page -%}
+          , pp. {{ item.first_page -}}
+          {%- if item.last_page %}-{{ item.last_page }}{% endif -%}
+        {%- endif -%}
+        .
+      {%- endif -%}
+      {%- if item.publisher -%}{{ item.publisher }}.{%- endif -%}
+      {%- if item.url -%}
+        Available at:
+        <a
+          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          href="{{ item.url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{- item.url -}}</a
+        >.
+      {%- endif -%}
+      {%- if item.doi -%}
+        doi:
+        <a
+          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          href="https://doi.org/{{ item.doi }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{- item.doi -}}</a
+        >.
+      {%- endif -%}
+      {%- if item.accessed -%}Accessed {{ item.accessed }}.{%- endif -%}
+    {%- else -%}
+      {%- assign text_html = item | markdownify -%}
+      {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
+    {%- endif -%}
+  {%- else -%}
+    {%- if item.apa -%}
+      {%- assign text_html = item.apa | markdownify -%}
+      {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
+    {%- elsif has_structured_fields -%}
+      {%- if item.authors -%}
+        <span class="ref-authors">{{ item.authors }}</span>
+      {%- endif -%}
+      {%- if item.year -%}({{ item.year }}).{%- endif -%}
+      {%- if item.title -%}{{ item.title }}.{%- endif -%}
+
+      {%- if item.book -%}
+        <em>{{ item.book }}</em>
+        {%- if item.edition %} ({{ item.edition }} ed.){% endif %}.
+      {%- endif -%}
+
+      {%- if item.publisher -%}
+        {{ item.publisher }}.
+      {%- endif -%}
+
+      {%- if item.journal -%}
+        <em>{{ item.journal }}</em>
+        {%- if item.volume -%}
+          , <em>{{ item.volume }}</em>
+        {%- endif -%}
+        {%- if item.issue %}({{ item.issue }}){% endif -%}
+        {%- if item.pages -%}
+          , {{ item.pages -}}
+        {%- elsif item.first_page -%}
+          , {{ item.first_page -}}
+          {%- if item.last_page %}-{{ item.last_page }}{% endif -%}
+        {%- endif -%}
+        .
+      {%- endif -%}
+
+      {%- if item.url -%}
+        <a
+          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          href="{{ item.url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{- item.url -}}</a
+        >.
+      {%- endif -%}
+
+      {%- if item.doi -%}
+        doi:<a
+          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          href="https://doi.org/{{ item.doi }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{- item.doi -}}</a
+        >.
+      {%- endif -%}
+
+      {%- if item.arXiv -%}
+        arXiv:<a
+          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          href="https://arxiv.org/abs/{{ item.arXiv }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{- item.arXiv -}}</a
+        >.
+      {%- endif -%}
+
+      {%- if item.arxiv -%}
+        arXiv:<a
+          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          href="https://arxiv.org/abs/{{ item.arxiv }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{- item.arxiv -}}</a
+        >.
+      {%- endif -%}
+
+      {%- if item.note -%}
+        {{ item.note }}
+      {%- endif -%}
+    {%- else -%}
+      {%- assign text_html = item | markdownify -%}
+      {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
+    {%- endif -%}
+  {%- endif -%}
+</li>

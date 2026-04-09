@@ -1,0 +1,90 @@
+{%- assign refs_enabled = include.enabled
+  | default: page.references_enabled
+  | default: true
+-%}
+{%- assign refs_disabled = false -%}
+{%- if refs_enabled == false
+  or refs_enabled == 'false'
+  or refs_enabled == 0
+  or refs_enabled == '0'
+-%}
+  {%- assign refs_disabled = true -%}
+{%- endif -%}
+
+{%- unless refs_disabled -%}
+  {%- assign refs = include.references | default: page.references -%}
+  {%- assign refs_count = refs | size -%}
+
+  {%- if refs_count > 0 -%}
+    {%- assign site_refs_style = site.references.style
+      | default: site.references_style
+    -%}
+    {%- assign refs_style = include.style
+      | default: page.references_style
+      | default: site_refs_style
+      | default: 'ieee'
+      | downcase
+    -%}
+    {%- assign refs_title = include.title
+      | default: page.references_title
+      | default: 'References'
+    -%}
+    {%- assign refs_heading_id = include.heading_id
+      | default: page.references_heading_id
+      | default: 'references'
+    -%}
+    {%- assign refs_data_file = include.data_file
+      | default: page.references_data_file
+      | default: 'references'
+    -%}
+    {%- assign refs_data = site.data[refs_data_file] -%}
+
+    <section
+      id="{{ refs_heading_id | escape }}"
+      class="post-references mt-12 rounded-2xl border border-gray-200 bg-white/90 p-6 shadow-sm dark:border-gray-700 dark:bg-gray-900/70 md:p-8"
+      aria-labelledby="{{ refs_heading_id | escape }}-title"
+    >
+      <h2
+        id="{{ refs_heading_id | escape }}-title"
+        class="mt-0 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100"
+      >
+        {{ refs_title }}
+      </h2>
+
+      <ol
+        class="mb-0 mt-5 space-y-4 text-sm leading-relaxed md:text-base{% if refs_style != 'ieee' %} pl-5{% endif %}"
+        {% if refs_style == 'ieee' %}
+          style="list-style: none; padding-left: 0;"
+        {% endif %}
+      >
+        {%- for ref in refs -%}
+          {%- assign ref_key = ref.key | default: ref.id | default: ref -%}
+          {%- assign ref_key_str = ref_key | append: '' -%}
+
+          {%- assign ref_item = ref -%}
+          {%- if refs_data and refs_data[ref_key_str] -%}
+            {%- assign ref_item = refs_data[ref_key_str] -%}
+          {%- endif -%}
+
+          {%- assign ref_anchor_id = ref.anchor_id
+            | default: ref.id
+            | default: ref_key_str
+            | slugify
+          -%}
+          {%- if ref_anchor_id == '' -%}
+            {%- assign ref_anchor_id = 'ref-' | append: forloop.index -%}
+          {%- endif -%}
+
+          {%-
+            include references/item.html
+            item=ref_item
+            key=ref_key_str
+            anchor_id=ref_anchor_id
+            index=forloop.index
+            style=refs_style
+          -%}
+        {%- endfor -%}
+      </ol>
+    </section>
+  {%- endif -%}
+{%- endunless -%}
