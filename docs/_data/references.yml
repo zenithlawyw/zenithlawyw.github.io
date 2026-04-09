@@ -1,0 +1,41 @@
+axios-2026-ref1:
+  short_author: Axios
+  year: "2026"
+  ieee: 'Axios, "North Korean hackers implicated in major supply chain attack," Axios, 31 March 2026. [Online]. Available: [https://www.axios.com/2026/03/31/north-korean-hackers-implicated-in-major-supply-chain-attack](https://www.axios.com/2026/03/31/north-korean-hackers-implicated-in-major-supply-chain-attack). Accessed: 9 April 2026.'
+
+axios-2026-ref2:
+  short_author: Inman and Hernandez
+  year: "2026"
+  ieee: 'R. Inman and A. Hernandez, "UNC1069 targets cryptocurrency sector with new tooling and AI-enabled social engineering," Google Cloud Blog, 9 February 2026. [Online]. Available: [https://cloud.google.com/blog/topics/threat-intelligence/unc1069-targets-cryptocurrency-ai-social-engineering](https://cloud.google.com/blog/topics/threat-intelligence/unc1069-targets-cryptocurrency-ai-social-engineering). Accessed: 9 April 2026.'
+
+axios-2026-ref3:
+  short_author: Sophos CTU
+  year: "2026"
+  ieee: 'Sophos Counter Threat Unit Research Team, "Axios npm package compromised to deploy malware," Sophos Blog, 31 March 2026. [Online]. Available: [https://www.sophos.com/en-us/blog/axios-npm-package-compromised-to-deploy-malware](https://www.sophos.com/en-us/blog/axios-npm-package-compromised-to-deploy-malware). Accessed: 9 April 2026.'
+
+axios-2026-ref4:
+  short_author: Microsoft Threat Intelligence
+  year: "2026"
+  ieee: 'Microsoft Threat Intelligence, "Mitigating the Axios npm supply chain compromise," Microsoft Security Blog, 1 April 2026. [Online]. Available: [https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/). Accessed: 9 April 2026.'
+
+axios-2026-ref5:
+  short_author: Axios maintainer
+  year: "2026"
+  ieee: 'Axios maintainer, "Post-mortem response on credential compromise social engineering pattern," GitHub Issue #10636, comment 4180237789, April 2026. [Online]. Available: [https://github.com/axios/axios/issues/10636#issuecomment-4180237789](https://github.com/axios/axios/issues/10636#issuecomment-4180237789). Accessed: 9 April 2026.'
+  note: "Note: access may vary by session."
+
+axios-2026-ref6:
+  short_author: SOCRadar
+  year: "2026"
+  ieee: 'SOCRadar, "Axios npm supply chain attack 2026: CISO guide," SOCRadar Blog, 2026. [Online]. Available: [https://socradar.io/blog/axios-npm-supply-chain-attack-2026-ciso-guide/](https://socradar.io/blog/axios-npm-supply-chain-attack-2026-ciso-guide/). Accessed: 9 April 2026.'
+  note: "Note: page inaccessible at time of prior draft validation."
+
+axios-2026-ref7:
+  short_author: SLSA
+  year: "n.d."
+  ieee: 'SLSA, "Provenance requirement for SLSA level recommendation.", SLSA v1.2. [Online]. Available: [https://slsa.dev/spec/v1.2/provenance](https://slsa.dev/spec/v1.2/provenance). Accessed: 9 April 2026.'
+
+axios-2026-ref8:
+  short_author: Austin et al.
+  year: "2026"
+  ieee: 'L. Austin et al., "North Korea-Nexus Threat Actor Compromises Widely Used Axios NPM Package in Supply Chain Attack," Google Cloud Blog, 31 March 2026. [Online]. Available: [https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package). Accessed: 9 April 2026.'
