@@ -63,7 +63,7 @@
   {%- endif -%}
 
   {%- if page.tags.size > 0 -%}
-    <div class="post-tags flex flex-wrap gap-x-3 gap-y-2 pr-[150px]">
+    <div class="post-tags flex flex-wrap gap-x-3 gap-y-2">
       {%- for tag in page.tags -%}
         {%- assign tag_slug = tag | slugify -%}
         <a
