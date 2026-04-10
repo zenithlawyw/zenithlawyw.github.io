@@ -19,9 +19,9 @@ axios-2026-ref4:
   ieee: 'Microsoft Threat Intelligence, "Mitigating the Axios npm supply chain compromise," Microsoft Security Blog, 1 April 2026. [Online]. Available: [https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/). Accessed: 9 April 2026.'
 
 axios-2026-ref5:
-  short_author: Axios maintainer
+  short_author: Saayman
   year: "2026"
-  ieee: 'Axios maintainer, "Post-mortem response on credential compromise social engineering pattern," GitHub Issue #10636, comment 4180237789, April 2026. [Online]. Available: [https://github.com/axios/axios/issues/10636#issuecomment-4180237789](https://github.com/axios/axios/issues/10636#issuecomment-4180237789). Accessed: 9 April 2026.'
+  ieee: 'J. Saayman, "Post Mortem: axios npm supply chain compromise," GitHub Issue #10636, comment 4180237789, April 2026. [Online]. Available: [https://github.com/axios/axios/issues/10636#issuecomment-4180237789](https://github.com/axios/axios/issues/10636#issuecomment-4180237789). Accessed: 9 April 2026.'
   note: "Note: access may vary by session."
 
 axios-2026-ref6:
@@ -33,9 +33,84 @@ axios-2026-ref6:
 axios-2026-ref7:
   short_author: SLSA
   year: "n.d."
-  ieee: 'SLSA, "Provenance requirement for SLSA level recommendation.", SLSA v1.2. [Online]. Available: [https://slsa.dev/spec/v1.2/provenance](https://slsa.dev/spec/v1.2/provenance). Accessed: 9 April 2026.'
+  ieee: 'SLSA, "Provenance," SLSA v1.2. [Online]. Available: [https://slsa.dev/spec/v1.2/provenance](https://slsa.dev/spec/v1.2/provenance). Accessed: 9 April 2026.'
 
 axios-2026-ref8:
-  short_author: Austin et al.
+  short_author: Larsen et al.
   year: "2026"
-  ieee: 'L. Austin et al., "North Korea-Nexus Threat Actor Compromises Widely Used Axios NPM Package in Supply Chain Attack," Google Cloud Blog, 31 March 2026. [Online]. Available: [https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package). Accessed: 9 April 2026.'
+  ieee: 'A. Larsen et al., "North Korea-Nexus Threat Actor Compromises Widely Used Axios NPM Package in Supply Chain Attack," Google Cloud Blog, 31 March 2026. [Online]. Available: [https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package). Accessed: 9 April 2026.'
+
+ds-2026-ref1:
+  short_author: Alibaba Clouder
+  year: "2019"
+  ieee: 'Alibaba Clouder, "Alibaba now exclusive provider of Salesforce CRM in Greater China," Alibaba Cloud Community Blog, 25 July 2019. [Online]. Available: [https://www.alibabacloud.com/blog/alibaba-now-exclusive-provider-of-salesforce-crm-in-greater-china_595141](https://www.alibabacloud.com/blog/alibaba-now-exclusive-provider-of-salesforce-crm-in-greater-china_595141). Accessed: 10 April 2026.'
+
+ds-2026-ref2:
+  short_author: Microsoft APAC
+  year: "2014"
+  ieee: 'Microsoft News Center APAC, "Microsoft Azure now generally available in China," Microsoft APAC News Center, 27 March 2014. [Online]. Available: [https://news.microsoft.com/apac/2014/03/27/azuregainchina/](https://news.microsoft.com/apac/2014/03/27/azuregainchina/). Accessed: 10 April 2026.'
+
+ds-2026-ref3:
+  short_author: Muhammad
+  year: "2025"
+  ieee: 'I. Muhammad, "Unity 6 pulled from China in favour of localised engine," PocketGamer.biz, 17 April 2025. [Online]. Available: [https://www.pocketgamer.biz/unity-6-pulled-from-china-in-favour-of-localised-engine/](https://www.pocketgamer.biz/unity-6-pulled-from-china-in-favour-of-localised-engine/). Accessed: 10 April 2026.'
+
+ds-2026-ref4:
+  short_author: Liu
+  year: "2026"
+  ieee: 'S. Liu, "Unity assets from China won’t be available soon," Siliconera, 3 March 2026. [Online]. Available: [https://www.siliconera.com/unity-assets-from-china-wont-be-available-soon/](https://www.siliconera.com/unity-assets-from-china-wont-be-available-soon/). Accessed: 10 April 2026.'
+
+ds-2026-ref5:
+  short_author: Murdock
+  year: "2026"
+  ieee: 'S. Murdock, "Access to Canvas in China," Florida State University Canvas Support, 8 April 2026. [Online]. Available: [https://support.canvas.fsu.edu/kb/article/1157-access-to-canvas-in-china/](https://support.canvas.fsu.edu/kb/article/1157-access-to-canvas-in-china/). Accessed: 10 April 2026.'
+
+ds-2026-ref6:
+  short_author: Atlassian
+  year: "2026"
+  ieee: 'Atlassian, "Supported countries for sending SMS and voice calls," Atlassian Support, 2026. [Online]. Available: [https://support.atlassian.com/opsgenie/docs/supported-countries-for-sending-sms-and-voice-calls/](https://support.atlassian.com/opsgenie/docs/supported-countries-for-sending-sms-and-voice-calls/). Accessed: 10 April 2026.'
+
+ds-2026-ref7:
+  short_author: CBR Staff Writer
+  year: "2019"
+  ieee: 'CBR Staff Writer, "Salesforce turns to Alibaba for Chinese foothold," TechMonitor, 25 July 2019. [Online]. Available: [https://www.techmonitor.ai/hardware/cloud/salesforce-alibaba-partnership](https://www.techmonitor.ai/hardware/cloud/salesforce-alibaba-partnership). Accessed: 10 April 2026.'
+
+ds-2026-ref8:
+  short_author: Orme
+  year: "2019"
+  ieee: 'J. Orme, "Salesforce partners with Alibaba to penetrate Asia’s booming cloud market," Techerati, 25 July 2019. [Online]. Available: [https://www.techerati.com/news-hub/salesforce-partners-with-alibaba-to-penetrate-asias-booming-cloud-market/](https://www.techerati.com/news-hub/salesforce-partners-with-alibaba-to-penetrate-asias-booming-cloud-market/). Accessed: 10 April 2026.'
+
+ds-2026-ref9:
+  short_author: Ok_Opposite_791
+  year: "2024"
+  ieee: 'Ok_Opposite_791, "GitLab can no longer service Mainland China, Macao, and Hong Kong," Reddit r/gitlab, 21 December 2024. [Online]. Available: [https://www.reddit.com/r/gitlab/comments/1hj6ern/gitlab_can_no_longer_service_mainland_china_macao/](https://www.reddit.com/r/gitlab/comments/1hj6ern/gitlab_can_no_longer_service_mainland_china_macao/). Accessed: 10 April 2026.'
+
+ds-2026-ref10:
+  short_author: CRN Asia Freelancer
+  year: "2025"
+  ieee: 'CRN Asia Freelancer, "Anthropic tightens AI access rules, targeting Chinese-controlled companies globally," CRN Asia, 10 September 2025. [Online]. Available: [https://www.crnasia.com/news/2025/artificial-intelligence/anthropic-tightens-ai-access-rules](https://www.crnasia.com/news/2025/artificial-intelligence/anthropic-tightens-ai-access-rules). Accessed: 10 April 2026.'
+
+ds-2026-ref11:
+  short_author: Qin’en and Yeung
+  year: "2024"
+  ieee: 'Q. Qin’en and L. H. Yeung, "OpenAI cuts off access to users in China, Hong Kong and Macau," Radio Free Asia, 10 July 2024. [Online]. Available: [https://www.rfa.org/english/news/china/openai-07102024145316.html](https://www.rfa.org/english/news/china/openai-07102024145316.html). Accessed: 10 April 2026.'
+
+ds-2026-ref12:
+  short_author: grapeot and Claude Opus 4.6
+  year: "2026"
+  ieee: 'grapeot and Claude Opus 4.6, "Slack’s removal of China-region workspaces: What actually deserves your attention," yage.ai, 2 April 2026. [Online]. Available: [https://yage.ai/share/slack-china-workspace-exit-en-20260402.html](https://yage.ai/share/slack-china-workspace-exit-en-20260402.html). Accessed: 10 April 2026.'
+
+ds-2026-ref13:
+  short_author: Francis
+  year: "2025"
+  ieee: 'B. Francis, "Removal of Unity 6 from China ‘not tied’ to tariffs, says Unity," GameDeveloper.com, 17 April 2025. [Online]. Available: [https://www.gamedeveloper.com/business/removal-of-unity-6-from-china-not-tied-to-tariffs-says-unity](https://www.gamedeveloper.com/business/removal-of-unity-6-from-china-not-tied-to-tariffs-says-unity). Accessed: 10 April 2026.'
+
+ds-2026-ref14:
+  short_author: Cornell IT
+  year: "2025"
+  ieee: 'Cornell University IT, "Adobe restricts access to Acrobat Sign in China on June 30, 2025," IT@Cornell News, 30 June 2025. [Online]. Available: [https://it.cornell.edu/news/adobe-restricts-access-acrobat-sign-china-june-30-2025](https://it.cornell.edu/news/adobe-restricts-access-acrobat-sign-china-june-30-2025). Accessed: 10 April 2026.'
+
+ds-2026-ref15:
+  short_author: MingcongBai
+  year: "2025"
+  ieee: 'MingcongBai, "Access to this site has been restricted #156515," GitHub Community Discussions, 13 April 2025. [Online]. Available: [https://github.com/orgs/community/discussions/156515](https://github.com/orgs/community/discussions/156515). Accessed: 10 April 2026.'
