@@ -39,6 +39,12 @@ theme: zyw-theme
 sitemap: true
 lang: "en"
 
+references:
+  compact_breakpoint: 900
+  mobile_url_label_min: 18
+  mobile_url_label_max: 52
+  build_url_label_max: 0
+
 markdown: kramdown
 highlighter: rouge
 kramdown:

@@ -1,4 +1,10 @@
 {%- assign item = include.item -%}
+{%- assign refs_url_label_max = site.references.build_url_label_max
+  | default: 0
+  | plus: 0
+-%}
+{%- assign refs_doi_label_max = site.references.doi_label_max | default: 36 -%}
+{%- assign refs_arxiv_label_max = site.references.arxiv_label_max | default: 28 -%}
 {%- assign site_refs_style = site.references.style
   | default: site.references_style
 -%}
@@ -23,6 +29,34 @@
   or item.year
 -%}
   {%- assign has_structured_fields = true -%}
+{%- endif -%}
+
+{%- assign doi_href = item.doi | prepend: 'https://doi.org/' -%}
+{%- assign doi_label = item.doi -%}
+{%- assign doi_label_trim = refs_doi_label_max | minus: 3 -%}
+{%- if item.doi and item.doi.size > refs_doi_label_max -%}
+  {%- assign doi_label = item.doi | slice: 0, doi_label_trim | append: '...' -%}
+{%- endif -%}
+
+{%- assign url_label = item.url -%}
+{%- if item.url -%}
+  {%- assign url_label_trim = refs_url_label_max | minus: 3 -%}
+  {%- if refs_url_label_max > 0 and url_label.size > refs_url_label_max -%}
+    {%- assign url_label = item.url
+      | remove: 'https://'
+      | remove: 'http://'
+      | remove: 'www.'
+    -%}
+    {%- assign url_label = url_label | slice: 0, url_label_trim | append: '...' -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign arxiv_value = item.arXiv | default: item.arxiv -%}
+{%- assign arxiv_href = arxiv_value | prepend: 'https://arxiv.org/abs/' -%}
+{%- assign arxiv_label = arxiv_value -%}
+{%- assign arxiv_label_trim = refs_arxiv_label_max | minus: 3 -%}
+{%- if arxiv_value and arxiv_value.size > refs_arxiv_label_max -%}
+  {%- assign arxiv_label = arxiv_value | slice: 0, arxiv_label_trim | append: '...' -%}
 {%- endif -%}
 
 <li
@@ -63,11 +97,12 @@
         doi:
         <a
           class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
-          href="https://doi.org/{{ item.doi }}"
+          href="{{ doi_href }}"
+          title="{{ item.doi }}"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {{- item.doi -}}</a
+          {{- doi_label -}}</a
         >.
       {%- endif -%}
       {%- if item.url -%}
@@ -75,10 +110,11 @@
         <a
           class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
           href="{{ item.url }}"
+          title="{{ item.url }}"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {{- item.url -}}</a
+          {{- url_label -}}</a
         >.
       {%- endif -%}
       {%- if item.accessed -%}Accessed: {{ item.accessed }}.{%- endif -%}
@@ -112,21 +148,23 @@
         <a
           class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
           href="{{ item.url }}"
+          title="{{ item.url }}"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {{- item.url -}}</a
+          {{- url_label -}}</a
         >.
       {%- endif -%}
       {%- if item.doi -%}
         doi:
         <a
           class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
-          href="https://doi.org/{{ item.doi }}"
+          href="{{ doi_href }}"
+          title="{{ item.doi }}"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {{- item.doi -}}</a
+          {{- doi_label -}}</a
         >.
       {%- endif -%}
       {%- if item.accessed -%}Accessed {{ item.accessed }}.{%- endif -%}
@@ -173,43 +211,47 @@
         <a
           class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
           href="{{ item.url }}"
+          title="{{ item.url }}"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {{- item.url -}}</a
+          {{- url_label -}}</a
         >.
       {%- endif -%}
 
       {%- if item.doi -%}
         doi:<a
           class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
-          href="https://doi.org/{{ item.doi }}"
+          href="{{ doi_href }}"
+          title="{{ item.doi }}"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {{- item.doi -}}</a
+          {{- doi_label -}}</a
         >.
       {%- endif -%}
 
       {%- if item.arXiv -%}
         arXiv:<a
           class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
-          href="https://arxiv.org/abs/{{ item.arXiv }}"
+          href="{{ arxiv_href }}"
+          title="{{ item.arXiv }}"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {{- item.arXiv -}}</a
+          {{- arxiv_label -}}</a
         >.
       {%- endif -%}
 
       {%- if item.arxiv -%}
         arXiv:<a
           class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
-          href="https://arxiv.org/abs/{{ item.arxiv }}"
+          href="{{ arxiv_href }}"
+          title="{{ item.arxiv }}"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {{- item.arxiv -}}</a
+          {{- arxiv_label -}}</a
         >.
       {%- endif -%}
 

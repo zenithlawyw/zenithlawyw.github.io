@@ -2545,6 +2545,15 @@ video {
 .\[\&_code\]\:\[overflow-wrap\:anywhere\] code {
   overflow-wrap: anywhere;
 }
+.\[\&_li_code\]\:whitespace-normal li code {
+  white-space: normal;
+}
+.\[\&_li_code\]\:break-all li code {
+  word-break: break-all;
+}
+.\[\&_pre_code\]\:whitespace-pre pre code {
+  white-space: pre;
+}
 .\[\&_table\]\:w-full table {
   width: 100%;
 }
@@ -2554,7 +2563,21 @@ video {
 .\[\&_table\]\:table-fixed table {
   table-layout: fixed;
 }
-.\[\&_td\]\:break-words td,
+.\[\&_td\]\:break-words td {
+  overflow-wrap: break-word;
+}
+.\[\&_td_code\]\:whitespace-normal td code {
+  white-space: normal;
+}
+.\[\&_td_code\]\:break-all td code {
+  word-break: break-all;
+}
 .\[\&_th\]\:break-words th {
   overflow-wrap: break-word;
+}
+.\[\&_th_code\]\:whitespace-normal th code {
+  white-space: normal;
+}
+.\[\&_th_code\]\:break-all th code {
+  word-break: break-all;
 }
