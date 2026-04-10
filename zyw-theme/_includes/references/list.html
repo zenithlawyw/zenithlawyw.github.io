@@ -194,10 +194,14 @@
               link.hasAttribute('title') &&
               !link.hasAttribute('data-original-title')
             ) {
-              link.setAttribute('data-original-title', link.getAttribute('title'));
+              link.setAttribute(
+                'data-original-title',
+                link.getAttribute('title')
+              );
             }
 
-            var originalLabel = link.getAttribute('data-original-label') || href;
+            var originalLabel =
+              link.getAttribute('data-original-label') || href;
 
             if (!isNarrow) {
               link.textContent = originalLabel;

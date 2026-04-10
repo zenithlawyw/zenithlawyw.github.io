@@ -34,8 +34,9 @@
       var menu = document.getElementById('post-menu');
       var menuContent = document.getElementById('post-menu-content');
       var article = document.querySelector('.post-content');
+      var menuWrap = menu ? menu.closest('.post-menu-wrap') : null;
 
-      if (!menu || !menuContent || !article) {
+      if (!menu || !menuContent || !article || !menuWrap) {
         return;
       }
 
@@ -55,6 +56,27 @@
       var menuToggleLabel = document.getElementById('post-menu-toggle-label');
       var menuToggleIcon = document.getElementById('post-menu-toggle-icon');
       var header = document.querySelector('header.site-header');
+      var configuredStickyGap = Number(
+        '{{ site.post_menu.sticky_gap | default: 12 }}'
+      );
+
+      if (!isFinite(configuredStickyGap)) {
+        configuredStickyGap = 12;
+      }
+
+      function updateStickyOffset() {
+        var fallbackTop = 80;
+        var gap = configuredStickyGap;
+        var minTop = 12;
+        var computedTop = fallbackTop;
+
+        if (header) {
+          var headerRect = header.getBoundingClientRect();
+          computedTop = Math.max(minTop, Math.floor(headerRect.bottom + gap));
+        }
+
+        menuWrap.style.top = computedTop + 'px';
+      }
 
       function slugify(text) {
         return (text || '')
@@ -249,12 +271,14 @@
 
         scrollTicking = true;
         window.requestAnimationFrame(function () {
+          updateStickyOffset();
           updateActive();
           scrollTicking = false;
         });
       }
 
       doMenuCollapse(-1);
+      updateStickyOffset();
       updateActive();
       syncMenuExpansion();
 
@@ -284,9 +308,14 @@
           wasDesktop = nowDesktop;
         }
 
+        updateStickyOffset();
         syncMenuExpansion();
         updateActive();
       });
+
+      document.addEventListener('nav-menu-state', updateStickyOffset);
+      document.addEventListener('theme-changed', updateStickyOffset);
+      window.addEventListener('pageshow', updateStickyOffset);
     }
 
     if (document.readyState === 'loading') {
