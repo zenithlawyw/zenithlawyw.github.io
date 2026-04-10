@@ -1,6 +1,6 @@
 <div
   id="post-menu"
-  class="w-full rounded-2xl border border-gray-200 bg-white/95 p-4 text-gray-900 shadow-sm backdrop-blur dark:border-gray-700 dark:bg-gray-900/90 dark:text-gray-100"
+  class="isolate w-full rounded-2xl border border-gray-200 bg-white/95 p-4 text-gray-900 shadow-sm dark:border-gray-700 dark:bg-gray-900/90 dark:text-gray-100"
 >
   <div class="flex items-center justify-between gap-2">
     <div class="text-lg font-semibold text-gray-900 dark:text-gray-100">
@@ -25,7 +25,11 @@
       </svg>
     </button>
   </div>
-  <div id="post-menu-content" class="hidden"></div>
+  <div
+    id="post-menu-content"
+    class="max-h-0 overflow-hidden opacity-0 pointer-events-none transition-all duration-200"
+    aria-hidden="true"
+  ></div>
 </div>
 
 <script>
@@ -106,7 +110,12 @@
       }
 
       function syncMenuExpansion() {
-        menuContent.classList.toggle('hidden', isCollapsed);
+        menuContent.classList.toggle('max-h-0', isCollapsed);
+        menuContent.classList.toggle('opacity-0', isCollapsed);
+        menuContent.classList.toggle('pointer-events-none', isCollapsed);
+        menuContent.classList.toggle('max-h-[160rem]', !isCollapsed);
+        menuContent.classList.toggle('opacity-100', !isCollapsed);
+        menuContent.setAttribute('aria-hidden', isCollapsed ? 'true' : 'false');
 
         if (menuToggleButton) {
           menuToggleButton.setAttribute(
