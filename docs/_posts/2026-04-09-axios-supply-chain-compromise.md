@@ -5,9 +5,9 @@ author: Zenith Law
 description: "An analysis of the 2026 axios npm compromise with a verified timeline, attribution crosswalk, and ten actionable lessons for software, platform, and security teams."
 permalink: /axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience
 intro: "On 30 and 31 March 2026, malicious axios package versions on npm introduced a counterfeit dependency that executed install-time malware delivery across macOS, Windows, and Linux. This revision maps each material claim to explicit sources and separates evidence from inference."
-image: /assets/images/cybersecurity.gif
+image: /assets/images/axios-npm-supply-chain-compromise.png
 hero:
-  image: /assets/images/cybersecurity.gif
+  image: /assets/images/axios-npm-supply-chain-compromise.png
 keywords: "axios npm supply chain compromise, software supply chain security, npm postinstall malware, UNC1069, Sapphire Sleet, secure dependency management"
 catchwords: "supply chain security, dependency provenance, incident response, social engineering, trusted publishing"
 references_enabled: true
@@ -144,7 +144,7 @@ Public takedown speed reduced further spread, yet did not reverse completed exec
 
 The event illustrates a structural issue in ecosystem trust. Credentials can remain valid while behavior turns malicious {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}. Better interpretability requires post-publication controls that can quarantine suspicious versions before production adoption.
 
-**<ins>Actionable recommendation</ins>**: Operate a private dependency mirror with quarantine promotion rules and behavioral scanning before release to production consumers. Provenance frameworks such as the Supply-chain Levels for Software Artifacts (SLSA) can support this model, but this article does not include an authoritative SLSA source in the reference set {% include references/cite.html key="axios-2026-ref7" %}.
+**<ins>Actionable recommendation</ins>**: Operate a private dependency mirror with quarantine promotion rules and behavioral scanning before release to production consumers. Provenance frameworks such as the Supply-chain Levels for Software Artifacts (SLSA) can support this model {% include references/cite.html key="axios-2026-ref7" %}.
 
 ---
 
@@ -186,7 +186,7 @@ Attackers published malicious axios versions on npm that introduced `plain-crypt
 
 ### **Who is responsible for the attack?**
 
-Microsoft attributes the activity to Sapphire Sleet, Sophos maps related activity to NICKEL GLADSTONE, and Mandiant tracks overlapping tradecraft under UNC1069 {% include references/cite.html key="axios-2026-ref2" %}, {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}. You may also use the scripts ([axios-supply-chain-screening](https://github.com/zenithlawyw/axios-supply-chain-screening)) for performing fast triage.
+Microsoft attributes the activity to Sapphire Sleet, Sophos maps related activity to NICKEL GLADSTONE, and Mandiant tracks overlapping tradecraft under UNC1069 {% include references/cite.html key="axios-2026-ref2" %}, {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.
 
 ### **How do I know if my environment is affected?**
 
