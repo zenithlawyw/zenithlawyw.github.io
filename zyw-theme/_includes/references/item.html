@@ -4,7 +4,9 @@
   | plus: 0
 -%}
 {%- assign refs_doi_label_max = site.references.doi_label_max | default: 36 -%}
-{%- assign refs_arxiv_label_max = site.references.arxiv_label_max | default: 28 -%}
+{%- assign refs_arxiv_label_max = site.references.arxiv_label_max
+  | default: 28
+-%}
 {%- assign site_refs_style = site.references.style
   | default: site.references_style
 -%}
@@ -47,7 +49,10 @@
       | remove: 'http://'
       | remove: 'www.'
     -%}
-    {%- assign url_label = url_label | slice: 0, url_label_trim | append: '...' -%}
+    {%- assign url_label = url_label
+      | slice: 0, url_label_trim
+      | append: '...'
+    -%}
   {%- endif -%}
 {%- endif -%}
 
@@ -56,7 +61,10 @@
 {%- assign arxiv_label = arxiv_value -%}
 {%- assign arxiv_label_trim = refs_arxiv_label_max | minus: 3 -%}
 {%- if arxiv_value and arxiv_value.size > refs_arxiv_label_max -%}
-  {%- assign arxiv_label = arxiv_value | slice: 0, arxiv_label_trim | append: '...' -%}
+  {%- assign arxiv_label = arxiv_value
+    | slice: 0, arxiv_label_trim
+    | append: '...'
+  -%}
 {%- endif -%}
 
 <li

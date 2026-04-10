@@ -4,7 +4,7 @@ hero:
 hero_html: post-header.html
 hidden: []
 ---
-<div class="post overflow-x-hidden">
+<div class="post">
   <section>
     {%- assign name = 'hero' -%}
     {%- include functions.html func='get_value' -%}
@@ -59,7 +59,7 @@ hidden: []
         {%- include sidebar/article-menu.html -%}
       </aside>
 
-      <div class="post-main order-2 min-w-0 lg:order-1">
+      <div class="post-main order-2 min-w-0 overflow-x-hidden lg:order-1">
         {%- include views/article.html -%}
 
         {%- include references/list.html -%}

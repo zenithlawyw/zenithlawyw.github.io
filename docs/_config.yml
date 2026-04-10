@@ -45,6 +45,9 @@ references:
   mobile_url_label_max: 52
   build_url_label_max: 0
 
+post_menu:
+  sticky_gap: 12
+
 markdown: kramdown
 highlighter: rouge
 kramdown:
