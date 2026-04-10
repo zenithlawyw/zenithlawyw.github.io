@@ -103,61 +103,61 @@ The linked yage.ai draft offers coherent synthesis scaffolding and explicit unce
 
 Global-default cloud design fails when legal domains impose divergent control requirements. Azure through 21Vianet and Salesforce through Alibaba show that regional entry can require structural operating redesign {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}. Explainability improves when architecture artifacts make legal boundary, data boundary, and operator boundary explicit.
 
-Actionable recommendation: define jurisdiction-aware reference architectures with mandatory controls for data placement, key custody path, and operator responsibility matrix before workload onboarding begins.
+**<ins>Actionable recommendation</ins>**: define jurisdiction-aware reference architectures with mandatory controls for data placement, key custody path, and operator responsibility matrix before workload onboarding begins.
 
 ### 2. Partnership Models Shift Accountability Maps
 
 Localization partnerships can preserve market access while fragmenting accountability for availability, incident response, and compliance attestation {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}. Interpretability depends on clear control mapping across legal entity, infrastructure operator, and customer-facing support responsibility.
 
-Actionable recommendation: maintain a living responsibility crosswalk that aligns contractual clauses, technical controls, and escalation paths for every partner-operated region.
+**<ins>Actionable recommendation</ins>**: maintain a living responsibility crosswalk that aligns contractual clauses, technical controls, and escalation paths for every partner-operated region.
 
 ### 3. Data Residency Must Be Engineered, Not Declared
 
 The corpus repeatedly links service viability to data localization and transfer-control obligations {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}, {% include references/cite.html key="ds-2026-ref14" %}. Trustworthiness increases when data lineage, replication policy, and egress authorization remain auditable across regions.
 
-Actionable recommendation: implement policy-driven data routing with immutable lineage logs and periodic legal-control reconciliation against jurisdiction-specific obligations.
+**<ins>Actionable recommendation</ins>**: implement policy-driven data routing with immutable lineage logs and periodic legal-control reconciliation against jurisdiction-specific obligations.
 
 ### 4. Product-Line Forking Requires Release Governance Discipline
 
 Unity records show region-specific engine divergence and ecosystem partitioning between global and China-specific channels {% include references/cite.html key="ds-2026-ref3" %}, {% include references/cite.html key="ds-2026-ref4" %}, {% include references/cite.html key="ds-2026-ref13" %}. Explainability for downstream teams requires explicit disclosure of parity gaps, deprecations, and compatibility limits.
 
-Actionable recommendation: run dual release trains with a formal divergence register and regression tests that detect behavior drift between region branches.
+**<ins>Actionable recommendation</ins>**: run dual release trains with a formal divergence register and regression tests that detect behavior drift between region branches.
 
 ### 5. Ecosystem Dependencies Can Fail Before Core Platform Access Fails
 
 Asset-store restrictions show that ecosystem dependencies may fail earlier than core engine access {% include references/cite.html key="ds-2026-ref4" %}. Interpretability improves when dependency inventories include legal availability tags, support lifecycle windows, and region-level distribution status.
 
-Actionable recommendation: add geo-availability and compliance attributes to software bill of materials workflows and block deployment when critical dependencies lack lawful regional distribution.
+**<ins>Actionable recommendation</ins>**: add geo-availability and compliance attributes to software bill of materials workflows and block deployment when critical dependencies lack lawful regional distribution.
 
 ### 6. Communication Infrastructure Carries Hidden Regulatory Friction
 
 Opsgenie support matrices and China-specific SMS caveats show that alert pathways can degrade under telecom and policy constraints {% include references/cite.html key="ds-2026-ref6" %}. Trustworthiness in incident response depends on tested channel diversity, not contractual entitlement alone.
 
-Actionable recommendation: design alerting with jurisdiction-scoped channel redundancy and quarterly failover drills that simulate provider-level SMS or voice interruption.
+**<ins>Actionable recommendation</ins>**: design alerting with jurisdiction-scoped channel redundancy and quarterly failover drills that simulate provider-level SMS or voice interruption.
 
 ### 7. User-Visible Access Continuity Requires Multi-Channel Notice Design
 
 Slack-related synthesis and incident narratives indicate that email-only notification can fail users during regional exits, especially when lockout precedes data export recovery {% include references/cite.html key="ds-2026-ref12" %}. Explainability requires transparent, user-verifiable communication inside the product interface.
 
-Actionable recommendation: enforce deprecation protocols that combine in-product notices, signed email notices, account-level timeline dashboards, and export checkpoints before suspension windows.
+**<ins>Actionable recommendation</ins>**: enforce deprecation protocols that combine in-product notices, signed email notices, account-level timeline dashboards, and export checkpoints before suspension windows.
 
 ### 8. AI Access Governance Now Extends Beyond Geolocation
 
 Anthropic reporting points to ownership-structure screening, while OpenAI reporting emphasizes location-based access blocking {% include references/cite.html key="ds-2026-ref10" %}, {% include references/cite.html key="ds-2026-ref11" %}. Interpretability now requires identity architecture that can evaluate legal control structure, billing region, and policy eligibility together.
 
-Actionable recommendation: build model-provider abstraction layers with preflight compliance checks and tested model-switch procedures for sudden policy denial events.
+**<ins>Actionable recommendation</ins>**: build model-provider abstraction layers with preflight compliance checks and tested model-switch procedures for sudden policy denial events.
 
 ### 9. Community Threads Function as Early Warning Sensors, Not Final Truth
 
 GitLab and GitHub community threads capture rapid field signals, including user-observed access patterns and quoted notices {% include references/cite.html key="ds-2026-ref9" %}, {% include references/cite.html key="ds-2026-ref15" %}. Trustworthiness requires a disciplined validation ladder that separates signal intake from formal confirmation.
 
-Actionable recommendation: integrate community-source monitoring into risk intelligence pipelines with mandatory corroboration gates before executive or customer communication.
+**<ins>Actionable recommendation</ins>**: integrate community-source monitoring into risk intelligence pipelines with mandatory corroboration gates before executive or customer communication.
 
 ### 10. Governance Maturity Depends on Region-Specific Trust Contracts
 
 The corpus shows persistent fragmentation pressure across cloud, collaboration, AI, and communication tooling {% include references/cite.html key="ds-2026-ref1" %}-{% include references/cite.html key="ds-2026-ref15" %}. Explainability, interpretability, and trustworthiness converge only when each region has explicit trust contracts that tie legal posture to technical safeguards, operational transparency, and user recourse.
 
-Actionable recommendation: publish region-specific trust playbooks that define service guarantees, data rights, migration rights, and incident response commitments in language mapped to technical enforcement controls.
+**<ins>Actionable recommendation</ins>**: publish region-specific trust playbooks that define service guarantees, data rights, migration rights, and incident response commitments in language mapped to technical enforcement controls.
 
 ## Frequently Asked Questions
 
