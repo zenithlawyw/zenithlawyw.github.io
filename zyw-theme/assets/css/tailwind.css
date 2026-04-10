@@ -945,6 +945,9 @@ video {
 .top-full {
   top: 100%;
 }
+.isolate {
+  isolation: isolate;
+}
 .z-10 {
   z-index: 10;
 }
@@ -1131,6 +1134,12 @@ video {
 }
 .h-full {
   height: 100%;
+}
+.max-h-0 {
+  max-height: 0;
+}
+.max-h-\[160rem\] {
+  max-height: 160rem;
 }
 .max-h-\[42vh\] {
   max-height: 42vh;
