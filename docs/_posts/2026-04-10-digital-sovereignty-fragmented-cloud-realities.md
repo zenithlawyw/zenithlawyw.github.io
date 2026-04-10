@@ -69,7 +69,7 @@ Follow-on reporting within the same partnership cycle moved from announcement la
 
 From 2025 to 2026, this fragmentation accelerated in developer tooling. Unity coverage reported withdrawal of Unity 6 access in mainland China, Hong Kong, and Macau, paired with a localized engine path for that market {% include references/cite.html key="ds-2026-ref3" %}, {% include references/cite.html key="ds-2026-ref13" %}. Siliconera reported Asset Store separation and purchase constraints after the regional cutoff {% include references/cite.html key="ds-2026-ref4" %}. The technical implication is direct. Ecosystem continuity may fail before core runtime continuity fails.
 
-Service asymmetry appears outside game tooling as well. Cornell IT documented Adobe Acrobat Sign restrictions for mainland China IPs from June 30, 2025, while explicitly excluding Hong Kong from that specific change notice {% include references/cite.html key="ds-2026-ref14" %}. Operational guidance then moved to handwritten signature contingency pathways.
+Service asymmetry appears outside game tooling as well. Cornell IT documented Adobe Acrobat Sign restrictions for mainland China IPs from 30 June 2025, while explicitly excluding Hong Kong from that specific change notice {% include references/cite.html key="ds-2026-ref14" %}. Operational guidance then moved to handwritten signature contingency pathways.
 
 Atlassian documentation for Opsgenie showed country-tiered SMS and voice support and included a China-specific warning on telecom-level SMS delivery blocking {% include references/cite.html key="ds-2026-ref6" %}. The design inference is precise. Alert-channel assumptions cannot remain globally uniform.
 
