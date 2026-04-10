@@ -14,6 +14,15 @@
 {%- unless refs_disabled -%}
   {%- assign refs = include.references | default: page.references -%}
   {%- assign refs_count = refs | size -%}
+  {%- assign refs_compact_breakpoint = site.references.compact_breakpoint
+    | default: 900
+  -%}
+  {%- assign refs_url_label_min = site.references.mobile_url_label_min
+    | default: 18
+  -%}
+  {%- assign refs_url_label_max = site.references.mobile_url_label_max
+    | default: 52
+  -%}
 
   {%- if refs_count > 0 -%}
     {%- assign site_refs_style = site.references.style
@@ -41,7 +50,10 @@
 
     <section
       id="{{ refs_heading_id | escape }}"
-      class="post-references mt-12 rounded-2xl border border-gray-200 bg-white/90 p-6 shadow-sm dark:border-gray-700 dark:bg-gray-900/70 md:p-8 [overflow-wrap:anywhere] break-words [&_a]:[overflow-wrap:anywhere] [&_a]:break-words [&_code]:[overflow-wrap:anywhere] [&_code]:break-words"
+      class="post-references mt-12 rounded-2xl border border-gray-200 bg-white/90 p-6 shadow-sm dark:border-gray-700 dark:bg-gray-900/70 md:p-8 [overflow-wrap:anywhere] break-words [&_a]:[overflow-wrap:anywhere] [&_a]:break-words [&_code]:[overflow-wrap:anywhere] [&_code]:break-words [&_li_code]:whitespace-normal [&_li_code]:break-all"
+      data-compact-breakpoint="{{ refs_compact_breakpoint }}"
+      data-url-label-min="{{ refs_url_label_min }}"
+      data-url-label-max="{{ refs_url_label_max }}"
       aria-labelledby="{{ refs_heading_id | escape }}-title"
     >
       <h2
@@ -86,5 +98,156 @@
         {%- endfor -%}
       </ol>
     </section>
+
+    <script>
+      (function () {
+        function compactUrlLabel(url, maxLength) {
+          var cleaned = (url || '')
+            .replace(/^https?:\/\//i, '')
+            .replace(/^www\./i, '');
+
+          if (cleaned.length <= maxLength) {
+            return cleaned;
+          }
+
+          return cleaned.slice(0, maxLength - 3) + '...';
+        }
+
+        function shouldCompact(link) {
+          var text = (link.textContent || '').trim();
+          var href = link.getAttribute('href') || '';
+          if (!/^https?:\/\//i.test(href)) {
+            return false;
+          }
+
+          var normalizedHref = href
+            .replace(/^https?:\/\//i, '')
+            .replace(/^www\./i, '');
+
+          return (
+            /^https?:\/\//i.test(text) ||
+            text === href ||
+            text === normalizedHref
+          );
+        }
+
+        function clamp(value, min, max) {
+          return Math.min(max, Math.max(min, value));
+        }
+
+        function applyCompactReferenceUrls() {
+          var refsSection = document.querySelector('.post-references');
+          if (!refsSection) {
+            return;
+          }
+
+          var compactBreakpoint = parseInt(
+            refsSection.getAttribute('data-compact-breakpoint') || '900',
+            10
+          );
+          var minLength = parseInt(
+            refsSection.getAttribute('data-url-label-min') || '18',
+            10
+          );
+          var maxLength = parseInt(
+            refsSection.getAttribute('data-url-label-max') || '52',
+            10
+          );
+
+          if (!compactBreakpoint || compactBreakpoint < 320) {
+            compactBreakpoint = 900;
+          }
+          if (!minLength || minLength < 8) {
+            minLength = 18;
+          }
+          if (!maxLength || maxLength < 8) {
+            maxLength = 52;
+          }
+
+          var viewportWidth =
+            window.innerWidth ||
+            document.documentElement.clientWidth ||
+            compactBreakpoint;
+          var isNarrow = viewportWidth <= compactBreakpoint;
+          var estimatedChars = Math.floor((viewportWidth - 96) / 8);
+          var dynamicMaxLength = clamp(estimatedChars, minLength, maxLength);
+
+          var links = refsSection.querySelectorAll('a[href]');
+          for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            if (!shouldCompact(link)) {
+              continue;
+            }
+
+            var href = link.getAttribute('href') || '';
+            if (!href) {
+              continue;
+            }
+
+            if (!link.hasAttribute('data-original-label')) {
+              link.setAttribute(
+                'data-original-label',
+                (link.textContent || '').trim()
+              );
+            }
+            if (
+              link.hasAttribute('title') &&
+              !link.hasAttribute('data-original-title')
+            ) {
+              link.setAttribute('data-original-title', link.getAttribute('title'));
+            }
+
+            var originalLabel = link.getAttribute('data-original-label') || href;
+
+            if (!isNarrow) {
+              link.textContent = originalLabel;
+              if (link.hasAttribute('data-original-title')) {
+                link.setAttribute(
+                  'title',
+                  link.getAttribute('data-original-title') || ''
+                );
+              } else {
+                link.removeAttribute('title');
+              }
+              continue;
+            }
+
+            link.textContent = compactUrlLabel(href, dynamicMaxLength);
+            link.setAttribute('title', href);
+          }
+        }
+
+        var resizeTicking = false;
+        function onResizeOrOrientationChange() {
+          if (resizeTicking) {
+            return;
+          }
+
+          resizeTicking = true;
+          window.requestAnimationFrame(function () {
+            applyCompactReferenceUrls();
+            resizeTicking = false;
+          });
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener(
+            'DOMContentLoaded',
+            applyCompactReferenceUrls
+          );
+        } else {
+          applyCompactReferenceUrls();
+        }
+
+        window.addEventListener('resize', onResizeOrOrientationChange, {
+          passive: true,
+        });
+        window.addEventListener(
+          'orientationchange',
+          onResizeOrOrientationChange,
+          { passive: true }
+        );
+      })();
+    </script>
   {%- endif -%}
 {%- endunless -%}
