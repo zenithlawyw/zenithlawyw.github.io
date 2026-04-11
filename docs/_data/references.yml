@@ -114,3 +114,48 @@ ds-2026-ref15:
   short_author: MingcongBai
   year: "2025"
   ieee: 'MingcongBai, "Access to this site has been restricted #156515," GitHub Community Discussions, 13 April 2025. [Online]. Available: [https://github.com/orgs/community/discussions/156515](https://github.com/orgs/community/discussions/156515). Accessed: 10 April 2026.'
+
+llm-2026-ref1:
+  short_author: AI Search
+  year: "n.d."
+  ieee: 'AI Search, "You don''t understand AI until you watch this," YouTube. [Online]. Available: [https://www.youtube.com/watch?v=1aM1KYvl4Dw](https://www.youtube.com/watch?v=1aM1KYvl4Dw). Accessed: 11 April 2026.'
+
+llm-2026-ref2:
+  short_author: Ewald
+  year: "n.d."
+  ieee: 'J. Ewald, "Introduction to large language models," Google Cloud Tech, YouTube. [Online]. Available: [https://www.youtube.com/watch?v=zizonToFXDs](https://www.youtube.com/watch?v=zizonToFXDs). Accessed: 11 April 2026.'
+
+llm-2026-ref3:
+  short_author: Keen
+  year: "n.d."
+  ieee: 'M. Keen, "How Large Language Models Work," IBM Technology, YouTube. [Online]. Available: [https://www.youtube.com/watch?v=5sLYAQS9sWQ](https://www.youtube.com/watch?v=5sLYAQS9sWQ). Accessed: 11 April 2026.'
+
+llm-2026-ref4:
+  short_author: Karpathy
+  year: "n.d."
+  ieee: 'A. Karpathy, "[1hr Talk] Intro to Large Language Models," YouTube. [Online]. Available: [https://www.youtube.com/watch?v=zjkBMFhNj_g](https://www.youtube.com/watch?v=zjkBMFhNj_g). Accessed: 11 April 2026.'
+
+llm-2026-ref5:
+  short_author: Sanderson
+  year: "n.d."
+  ieee: 'G. Sanderson, "Large Language Models explained briefly," 3Blue1Brown, YouTube. [Online]. Available: [https://www.youtube.com/watch?v=LPZh9BOjkQs](https://www.youtube.com/watch?v=LPZh9BOjkQs). Accessed: 11 April 2026.'
+
+llm-2026-ref6:
+  short_author: Amini
+  year: "n.d."
+  ieee: 'A. Amini, "MIT 6.S191 (Liquid AI): Large Language Models," YouTube. [Online]. Available: [https://www.youtube.com/watch?v=_HfdncCbMOE](https://www.youtube.com/watch?v=_HfdncCbMOE). Accessed: 11 April 2026.'
+
+llm-2026-ref7:
+  short_author: Dubois
+  year: "n.d."
+  ieee: 'Y. Dubois, "Stanford CS229 Machine Learning Building Large Language Models (LLMs)," Stanford Online, YouTube. [Online]. Available: [https://www.youtube.com/watch?v=9vM4p9NN0Ts](https://www.youtube.com/watch?v=9vM4p9NN0Ts). Accessed: 11 April 2026.'
+
+llm-2026-ref8:
+  short_author: Starmer
+  year: "n.d."
+  ieee: 'J. Starmer, "Transformer Neural Networks, ChatGPT''s foundation, Clearly Explained!!!," StatQuest with Josh Starmer, YouTube. [Online]. Available: [https://www.youtube.com/watch?v=zxQyTK8quyY](https://www.youtube.com/watch?v=zxQyTK8quyY). Accessed: 11 April 2026.'
+
+llm-2026-ref9:
+  short_author: Kilcher
+  year: "n.d."
+  ieee: 'Y. Kilcher, "Attention is All You Need," YouTube. [Online]. Available: [https://www.youtube.com/watch?v=iDulhoQ2pro](https://www.youtube.com/watch?v=iDulhoQ2pro). Accessed: 11 April 2026.'
