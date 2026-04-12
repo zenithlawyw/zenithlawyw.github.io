@@ -30,6 +30,21 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Generate SEO auto data
+        working-directory: ./docs
+        run: ruby scripts/generate_seo_auto.rb
+
+      - name: Validate SEO auto data
+        working-directory: ./docs
+        run: |
+          set -euo pipefail
+          test -f _data/seo_auto.yml || { echo "ERROR: _data/seo_auto.yml is missing"; exit 1; }
+          test -s _data/seo_auto.yml || { echo "ERROR: _data/seo_auto.yml is empty"; exit 1; }
+          grep -q '^keywords:' _data/seo_auto.yml || { echo "ERROR: keywords section missing in _data/seo_auto.yml"; exit 1; }
+          grep -q '^posts:' _data/seo_auto.yml || { echo "ERROR: posts section missing in _data/seo_auto.yml"; exit 1; }
+          grep -q '^- ' _data/seo_auto.yml || { echo "ERROR: _data/seo_auto.yml contains no generated list items"; exit 1; }
+          echo "SEO auto data validation passed"
+
       - name: Build with Jekyll
         working-directory: ./docs
         run: bundle exec jekyll build --destination ./_site

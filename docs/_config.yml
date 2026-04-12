@@ -99,3 +99,133 @@ translate_reserved_words:
   - Zenith Law
 
 nav_pages:
+
+seo:
+  robots: "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" # Default crawler directives for all bots.
+  googlebot: "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" # Google-specific crawler directives override.
+  bingbot: "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" # Bing-specific crawler directives override.
+  referrer_policy: "strict-origin-when-cross-origin" # Browser referrer sharing policy.
+  twitter_card: "summary_large_image" # Default Twitter/X card type for sharing.
+  og_locale: "en_GB" # Primary Open Graph locale.
+  og_alternate_locales: # Additional Open Graph locales for alternate audiences.
+    - "en_US"
+  organization_type: "ProfessionalService" # Schema.org @type for the publisher entity.
+  publisher_name: "Zenith Law" # Publisher name used in JSON-LD.
+  publisher_logo: "/assets/images/zenithlaw.png" # Publisher logo used in JSON-LD and social cards.
+  default_image: "/assets/images/zenithlaw.png" # Fallback OG/Twitter image when page.image is absent.
+  service_type: "Technology Strategy and Engineering Advisory" # Service label for ProfessionalService schema.
+  area_served: # Regions/countries served for service schema.
+    - "United Kingdom"
+    - "Global"
+  price_range: "$$$" # Optional relative pricing band for service schema.
+
+  # Primary SEO vocabulary (single words and concise technical terms).
+  keywords: # Core short SEO terms describing brand and specialties.
+    - "Zenith Law"
+    - "technology strategy"
+    - "software engineering"
+    - "platform engineering"
+    - "data engineering"
+    - "data architecture"
+    - "data governance"
+    - "data lineage"
+    - "metadata management"
+    - "data quality"
+    - "cybersecurity"
+    - "cloud security"
+    - "digital sovereignty"
+    - "AI governance"
+    - "responsible AI"
+    - "large language models"
+    - "LLM reliability"
+    - "observability"
+    - "DevSecOps"
+    - "MLOps"
+    - "DataOps"
+    - "Azure"
+    - "AWS"
+    - "GCP"
+    - "Digital Ocean"
+    - "Cloudflare"
+    - "Terraform"
+    - "Kubernetes"
+    - "Apache Spark"
+    - "Jekyll"
+
+  # High-intent key phrases aligned to article and service intent.
+  key_phrases: # Multi-word, intent-driven phrases for semantic relevance.
+    - "secure software supply chain"
+    - "resilient cloud architecture"
+    - "cybersecurity and data governance"
+    - "AI risk and compliance"
+    - "LLM deployment in regulated industries"
+    - "digital sovereignty engineering strategy"
+    - "metadata and lineage best practices"
+    - "platform reliability engineering"
+    - "defensible AI implementation"
+    - "cloud modernization with governance"
+    - "Azure infrastructure as code"
+    - "Spark data pipeline engineering"
+    - "incident-informed architecture lessons"
+    - "software assurance and provenance"
+
+  # Catchword-style discoverability terms for broad matching.
+  catchwords: # Broad topical catchwords for discoverability expansion.
+    - "trust"
+    - "resilience"
+    - "compliance"
+    - "assurance"
+    - "provenance"
+    - "integrity"
+    - "governance"
+    - "security"
+    - "privacy"
+    - "technology"
+    - "ethics"
+    - "it"
+    - "cloud"
+    - "consultant"
+    - "transparency"
+    - "accountability"
+    - "data science"
+    - "data analysis"
+    - "operational excellence"
+    - "training"
+    - "trainer"
+    - "research"
+    - "researcher"
+    - "engineer"
+    - "engineering"
+    - "strategy"
+    - "strategist"
+    - "thought leadership"
+    - "insights"
+    - "best practices"
+    - "coach"
+
+  # Entity understanding for AEO/GEO and structured data.
+  knows_about: # Topic/entity list for structured-data knowledge signals.
+    - "Large Language Models"
+    - "Transformer architecture"
+    - "AI safety"
+    - "AI alignment"
+    - "Cybersecurity"
+    - "Supply chain security"
+    - "Digital sovereignty"
+    - "Cloud engineering"
+    - "Data engineering"
+    - "Data governance"
+    - "Azure architecture"
+    - "Terraform"
+    - "Apache Spark"
+
+  # Brand/entity profiles for knowledge graph alignment.
+  same_as: # Official profile URLs for entity reconciliation in knowledge graphs.
+    - "https://github.com/zenithlawyw"
+    - "https://x.com/zenithlawyw"
+    - "https://www.linkedin.com/in/zenith-law"
+
+  # Optional hreflang map. Add/remove as translated routes become available.
+  alternate_urls: # Hreflang URL map for language/region alternates.
+    - lang: "en"
+      url: "https://zenithlaw.com/"

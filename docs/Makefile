@@ -1,4 +1,4 @@
-.PHONY: help bootstrap install start stop restart build clean serve
+.PHONY: help bootstrap install start stop restart build clean serve seo-auto
 
 # Variables
 BUNDLE := bundle exec
@@ -35,6 +35,7 @@ help:
 	@echo "  stop         - Stop Jekyll dev server"
 	@echo "  restart      - Restart Jekyll dev server"
 	@echo "  build        - Build static site"
+	@echo "  seo-auto     - Generate auto SEO/AEO/GEO vocabulary from posts"
 	@echo "  serve        - Start server and watch for changes (foreground)"
 	@echo "  clean        - Remove generated _site directory"
 	@echo "  help         - Show this help message"
@@ -73,12 +74,17 @@ stop:
 restart: stop start
 	@echo "✓ Server restarted"
 
-build:
+seo-auto:
+	@echo "Generating automatic SEO vocabulary and post Q&A profile..."
+	ruby scripts/generate_seo_auto.rb
+	@echo "✓ SEO auto data updated (_data/seo_auto.yml)"
+
+build: seo-auto
 	@echo "Building Jekyll site..."
 	$(JEKYLL) build
 	@echo "✓ Build complete (output in _site/)"
 
-serve:
+serve: seo-auto
 	@RUN_PORT=`$(FIND_FREE_PORT)`; \
 	RUN_LR_PORT=`$(FIND_FREE_LIVERELOAD_PORT)`; \
 	echo "Starting Jekyll dev server (foreground) on http://$(HOST):$$RUN_PORT..."; \

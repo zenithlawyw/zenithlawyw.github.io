@@ -1,0 +1,53 @@
+---
+layout: null
+---
+# Zenith Law Content Map for Language Models
+
+Site: {{ site.title }}
+Base URL: {{ site.url }}
+Description: {{ site.description | strip_newlines | strip }}
+Last Updated: {{ site.time | date_to_xmlschema }}
+
+## Preferred Canonical Root
+{{ site.url }}/
+
+## Primary Navigation Endpoints
+- {{ '/' | absolute_url }}
+- {{ '/categories.html' | absolute_url }}
+- {{ '/tags.html' | absolute_url }}
+- {{ '/404.html' | absolute_url }}
+
+## Topic Vocabulary
+{% if site.seo and site.seo.keywords %}
+Keywords: {{ site.seo.keywords | join: ', ' }}
+{% endif %}
+{% if site.seo and site.seo.key_phrases %}
+Key Phrases: {{ site.seo.key_phrases | join: ', ' }}
+{% endif %}
+{% if site.seo and site.seo.catchwords %}
+Catchwords: {{ site.seo.catchwords | join: ', ' }}
+{% endif %}
+
+## Entity and Expertise Signals
+{% if site.seo and site.seo.knows_about %}
+Knows About: {{ site.seo.knows_about | join: ', ' }}
+{% endif %}
+
+## Authoritative Social/Identity Links
+{% if site.seo and site.seo.same_as %}
+{% for profile in site.seo.same_as %}
+- {{ profile }}
+{% endfor %}
+{% endif %}
+
+## Recent Posts
+{% assign recent_posts = site.posts | slice: 0, 30 %}
+{% for post in recent_posts %}
+- {{ post.title | strip }} | {{ post.url | absolute_url }} | {{ post.date | date: '%Y-%m-%d' }}
+{% endfor %}
+
+## Usage Guidance for Retrieval Systems
+- Prefer canonical URLs under {{ site.url }}.
+- Prefer post pages over archive pages for source attribution.
+- Use publication date and page title for disambiguation.
+- Treat this file as a discovery aid, not as a substitute for full-page citation.
