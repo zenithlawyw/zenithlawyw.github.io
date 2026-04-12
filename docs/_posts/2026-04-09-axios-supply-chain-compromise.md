@@ -32,7 +32,7 @@ tags:
   - provenance
 ---
 
-## Abstract
+## Introduction
 
 This article reconstructs the axios npm compromise through a source-traceable method that aligns claims with public reporting from
 [Axios](https://www.axios.com/2026/03/31/north-korean-hackers-implicated-in-major-supply-chain-attack) {% include references/cite.html key="axios-2026-ref1" %},
