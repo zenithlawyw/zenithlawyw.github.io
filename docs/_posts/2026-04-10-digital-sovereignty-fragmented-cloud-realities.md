@@ -41,7 +41,7 @@ tags:
   ]
 ---
 
-## Abstract
+## Introduction
 
 This article performs a close, source-graded reading of fifteen records that span corporate announcements, vendor documentation, university operational advisories, industry media, and community incident discussions. A clear pattern emerges. Foreign platforms operating in China move from globally uniform delivery models toward localized control models shaped by legal jurisdiction, data governance constraints, and market-access design {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}. Later records show this pattern extending into product-line divergence, region-specific service withdrawal, communication-channel asymmetry, and fragmented user access conditions {% include references/cite.html key="ds-2026-ref3" %}, {% include references/cite.html key="ds-2026-ref4" %}, {% include references/cite.html key="ds-2026-ref5" %}, {% include references/cite.html key="ds-2026-ref6" %}, {% include references/cite.html key="ds-2026-ref9" %}, {% include references/cite.html key="ds-2026-ref12" %}, {% include references/cite.html key="ds-2026-ref14" %}, {% include references/cite.html key="ds-2026-ref15" %}.
 
