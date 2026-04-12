@@ -89,15 +89,15 @@ Across these sources, speakers and authors repeatedly return to model constructi
 
 **Selected source-grounded insights from educational videos:**
 
-- **AI Search (Ref. 1):** emphasizes practical prompt framing and failure-aware usage over model mystique.
-- **Google Cloud Tech (Ref. 2):** explains tokenization and inference flow in implementation-oriented terms useful for production teams.
-- **IBM Technology (Ref. 3):** highlights the engineering advantage of parallel attention compared with recurrent pipelines.
-- **Karpathy intro talk (Ref. 4):** frames LLM behavior through next-token prediction mechanics and distributional generalization.
-- **3Blue1Brown (Ref. 5):** builds geometric intuition for embeddings and why vector relations influence generation behavior.
-- **MIT 6.S191 (Ref. 6):** clearly separates pretraining, fine-tuning, and alignment stages in the modern model lifecycle.
-- **Stanford CS229 (Ref. 7):** connects objective functions to observed model strengths and failure modes.
-- **StatQuest (Ref. 8):** offers stepwise explanations of transformer blocks that reduce conceptual ambiguity for non-specialists.
-- **Yannic Kilcher (Ref. 9):** provides detailed walkthroughs of transformer mechanics and original-paper design rationale.
+- **AI Search {% include references/cite.html key="llm-2026-ref1" %}:** emphasizes practical prompt framing and failure-aware usage over model mystique.
+- **Google Cloud Tech {% include references/cite.html key="llm-2026-ref2" %}:** explains tokenization and inference flow in implementation-oriented terms useful for production teams.
+- **IBM Technology {% include references/cite.html key="llm-2026-ref3" %}:** highlights the engineering advantage of parallel attention compared with recurrent pipelines.
+- **Karpathy intro talk {% include references/cite.html key="llm-2026-ref4" %}:** frames LLM behavior through next-token prediction mechanics and distributional generalization.
+- **3Blue1Brown {% include references/cite.html key="llm-2026-ref5" %}:** builds geometric intuition for embeddings and why vector relations influence generation behavior.
+- **MIT 6.S191 {% include references/cite.html key="llm-2026-ref6" %}:** clearly separates pretraining, fine-tuning, and alignment stages in the modern model lifecycle.
+- **Stanford CS229 {% include references/cite.html key="llm-2026-ref7" %}:** connects objective functions to observed model strengths and failure modes.
+- **StatQuest {% include references/cite.html key="llm-2026-ref8" %}:** offers stepwise explanations of transformer blocks that reduce conceptual ambiguity for non-specialists.
+- **Yannic Kilcher {% include references/cite.html key="llm-2026-ref9" %}:** provides detailed walkthroughs of transformer mechanics and original-paper design rationale.
 
 ## The Evolutionary Arc: From Attention to the Present Frontier
 
