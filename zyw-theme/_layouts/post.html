@@ -4,8 +4,216 @@ hero:
 hero_html: post-header.html
 hidden: []
 ---
+<style>
+  .page-hero .post-header {
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+
+  .page-hero .post-header .post-meta {
+    color: rgba(255, 255, 255, 0.94);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+  }
+
+  .page-hero .post-header .post-meta .fa,
+  .page-hero .post-header .post-meta time,
+  .page-hero .post-header .post-meta .post-author,
+  .page-hero .post-header .post-meta .post-reading-time {
+    color: inherit;
+  }
+
+  .page-hero .post-header .post-author::before,
+  .page-hero .post-header .post-reading-time::before {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .page-hero .post-header .post-tags .post-tag {
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+    border-radius: 9999px;
+    padding: 0.15rem 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    /* Opaque fallback first for browsers without backdrop-filter support. */
+    background: rgba(17, 24, 39, 0.6);
+    background: rgba(17, 24, 39, 0.35);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+
+  .page-hero .post-header .post-tags .post-tag:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.72);
+    background: rgba(17, 24, 39, 0.55);
+    text-decoration: none;
+  }
+
+  .post-print-header,
+  .post-print-footer {
+    display: none;
+  }
+
+  .post-print-url {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  @supports not ((-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px))) {
+    .page-hero .post-header .post-tags .post-tag {
+      background: rgba(17, 24, 39, 0.75);
+    }
+  }
+
+  @media print {
+    :root {
+      --print-margin-x: 18mm;
+      --print-margin-top: 16mm;
+      --print-margin-bottom: 22mm;
+    }
+
+    @page {
+      size: auto;
+      margin: var(--print-margin-top) var(--print-margin-x) var(--print-margin-bottom);
+    }
+
+    html,
+    body {
+      background: #fff !important;
+      color: #111827 !important;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+      forced-color-adjust: none;
+    }
+
+    .site-header,
+    .site-footer,
+    .page-hero,
+    #click-to-top,
+    .post-theme-toggle,
+    .post-menu-wrap,
+    .post-nav,
+    .post-print-actions,
+    aside[aria-label='About the author'] {
+      display: none !important;
+    }
+
+    .page-content {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    .post > section {
+      padding-bottom: 14mm;
+    }
+
+    .wrapper {
+      max-width: 100% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .post-layout {
+      display: block !important;
+      gap: 0 !important;
+    }
+
+    .post-main {
+      overflow: visible !important;
+      padding-bottom: 8mm;
+      min-width: 0;
+    }
+
+    .post-print-header {
+      display: block;
+      border-bottom: 1px solid #d1d5db;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .post-print-header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      line-height: 1.25;
+      color: #111827;
+    }
+
+    .post-print-header .post-print-meta,
+    .post-print-header .post-print-url {
+      margin-top: 0.35rem;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .post-print-header .post-print-url {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      hyphens: auto;
+    }
+
+    .post-print-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-top: 1px solid #d1d5db;
+      padding: 0.45rem var(--print-margin-x) 0.15rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+      background: #fff;
+    }
+
+    /* Fallback for print engines that mishandle fixed footers. */
+    @supports not (position: fixed) {
+      .post-print-footer {
+        position: static;
+        margin-top: 1.2rem;
+      }
+    }
+
+    .post-print-page::after {
+      content: counter(page);
+    }
+
+    .post a[href^='http']::after {
+      content: ' (' attr(href) ')';
+      font-size: 0.8em;
+      color: #6b7280;
+    }
+  }
+</style>
 <div class="post">
   <section>
+    {%- assign date_format = site.zyw.date_format | default: '%-d %B %Y' -%}
+    {%- assign print_author = page.author | default: site.author -%}
+    {%- assign current_year = 'now' | date: '%Y' -%}
+    {%- assign print_copyright = site.copyright
+      | default: '(c) {currentYear} {author}'
+      | replace: '{currentYear}', current_year
+      | replace: '{author}', site.author
+      | replace: '(c)', '©'
+      | replace: '(p)', '℗'
+      | replace: '(cleft)', '©'
+      | strip_html
+    -%}
+    {%- assign print_url = page.url | absolute_url -%}
+    {%- assign publication_base = site.url | default: '' -%}
+    {%- assign is_local_print_url = false -%}
+    {%- if print_url contains 'localhost' or print_url contains '127.0.0.1' -%}
+      {%- assign is_local_print_url = true -%}
+    {%- endif -%}
+    {%- if is_local_print_url and publication_base != '' -%}
+      {%- assign publication_base_is_local = false -%}
+      {%- if publication_base contains 'localhost' or publication_base contains '127.0.0.1' -%}
+        {%- assign publication_base_is_local = true -%}
+      {%- endif -%}
+      {%- unless publication_base_is_local -%}
+        {%- assign print_url = publication_base | append: page.url -%}
+      {%- endunless -%}
+    {%- endif -%}
+
     {%- assign name = 'hero' -%}
     {%- include functions.html func='get_value' -%}
     {%- assign hero = return -%}
@@ -23,6 +231,45 @@ hidden: []
     {%- if hero == null and result.size == 0 -%}
       {%- include views/post-header.html -%}
     {%- endif -%}
+
+    <div class="post-print-actions mb-6 flex justify-end">
+      <button
+        type="button"
+        class="inline-flex items-center gap-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white/90 dark:bg-gray-900/90 px-4 py-2 text-sm font-semibold text-gray-700 dark:text-gray-200 shadow-sm transition-colors hover:border-brand-primary hover:text-brand-primary"
+        onclick="printArticle()"
+        aria-label="Print this article"
+        title="Print this article"
+      >
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          class="h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M6 9V3h12v6"></path>
+          <path d="M6 18h12v3H6z"></path>
+          <rect x="3" y="9" width="18" height="9" rx="2"></rect>
+          <path d="M17 13h.01"></path>
+        </svg>
+        <span>Print</span>
+        <span class="sr-only">this article</span>
+      </button>
+    </div>
+
+    <header class="post-print-header" aria-hidden="true">
+      <h1>{{ page.title | escape }}</h1>
+      <p class="post-print-meta">
+        Published {{ page.date | date: date_format }}
+        {% if print_author %}
+          | {{ print_author | escape }}
+        {% endif %}
+      </p>
+      <p class="post-print-url">{{ print_url }}</p>
+    </header>
 
     {% if page.intro %}
       <section
@@ -123,5 +370,18 @@ hidden: []
         {%- endif -%}
       </div>
     </div>
+
+    <footer class="post-print-footer" aria-hidden="true">
+      <span>{{ print_copyright }}</span>
+      <span>
+        {{ print_url }} | Page <span class="post-print-page"></span>
+      </span>
+    </footer>
   </section>
 </div>
+
+<script>
+  function printArticle() {
+    window.print();
+  }
+</script>
