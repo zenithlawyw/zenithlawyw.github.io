@@ -56,7 +56,9 @@ hidden: []
     word-break: break-word;
   }
 
-  @supports not ((-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px))) {
+  @supports not (
+    (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px))
+  ) {
     .page-hero .post-header .post-tags .post-tag {
       background: rgba(17, 24, 39, 0.75);
     }
@@ -71,7 +73,8 @@ hidden: []
 
     @page {
       size: auto;
-      margin: var(--print-margin-top) var(--print-margin-x) var(--print-margin-bottom);
+      margin: var(--print-margin-top) var(--print-margin-x)
+        var(--print-margin-bottom);
     }
 
     html,
@@ -206,7 +209,9 @@ hidden: []
     {%- endif -%}
     {%- if is_local_print_url and publication_base != '' -%}
       {%- assign publication_base_is_local = false -%}
-      {%- if publication_base contains 'localhost' or publication_base contains '127.0.0.1' -%}
+      {%- if publication_base contains 'localhost'
+        or publication_base contains '127.0.0.1'
+      -%}
         {%- assign publication_base_is_local = true -%}
       {%- endif -%}
       {%- unless publication_base_is_local -%}
