@@ -1,0 +1,208 @@
+{%- assign seo_cfg = site.seo | default: null -%}
+{%- assign seo_auto = site.data.seo_auto | default: null -%}
+{%- assign page_title = page.title | default: site.title -%}
+{%- assign page_desc = page.description
+  | default: page.intro
+  | default: site.description
+-%}
+{%- assign canonical_url = page.url | absolute_url -%}
+{%- assign page_lang = page.lang | default: site.lang | default: 'en' -%}
+{%- assign publisher_name = seo_cfg.publisher_name | default: site.title -%}
+{%- assign publisher_logo = seo_cfg.publisher_logo
+  | default: site.favicon
+  | absolute_url
+-%}
+{%- assign page_image = page.image
+  | default: seo_cfg.default_image
+  | absolute_url
+-%}
+{%- assign page_slug_key = page.slug | default: '' -%}
+{%- assign auto_post_terms = null -%}
+{%- if seo_auto
+  and page_slug_key != ''
+  and seo_auto.posts
+  and seo_auto.posts[page_slug_key]
+-%}
+  {%- assign auto_post_terms = seo_auto.posts[page_slug_key] -%}
+{%- endif -%}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ site.title | jsonify }},
+    "url": {{ site.url | jsonify }},
+    "inLanguage": {{ page_lang | jsonify }},
+    "description": {{ site.description | strip | strip_newlines | jsonify }}{% if seo_cfg and seo_cfg.keywords %},
+    "keywords": {{ seo_cfg.keywords | join: ', ' | jsonify }}{% endif %}{% if seo_cfg and seo_cfg.same_as %},
+    "sameAs": [{% for profile in seo_cfg.same_as %}{{ profile | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %}{% if seo_auto and seo_auto.key_phrases and seo_auto.key_phrases.size > 0 %},
+    "about": [{% for phrase in seo_auto.key_phrases limit: 20 %}{"@type":"Thing","name":{{ phrase | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %},
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {{ site.url | append: '/?q=%7Bsearch_term_string%7D' | jsonify }},
+      "query-input": "required name=search_term_string"
+    }
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "{% if seo_cfg and seo_cfg.organization_type %}{{ seo_cfg.organization_type }}{% else %}Person{% endif %}",
+    "@id": {{ site.url | append: '#publisher' | jsonify }},
+    "name": {{ publisher_name | jsonify }},
+    "url": {{ site.url | jsonify }},
+    "email": {{ site.email | jsonify }},
+    "description": {{ site.description | strip | strip_newlines | jsonify }},
+    "logo": {{ publisher_logo | jsonify }}{% if seo_cfg and seo_cfg.same_as %},
+    "sameAs": [{% for profile in seo_cfg.same_as %}{{ profile | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %}{% if seo_cfg and seo_cfg.knows_about %},
+    "knowsAbout": [{% for topic in seo_cfg.knows_about %}{{ topic | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %}{% if seo_cfg and seo_cfg.service_type %},
+    "serviceType": {{ seo_cfg.service_type | jsonify }}{% endif %}{% if seo_cfg and seo_cfg.area_served %},
+    "areaServed": [{% for area in seo_cfg.area_served %}{{ area | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %}{% if seo_cfg and seo_cfg.price_range %},
+    "priceRange": {{ seo_cfg.price_range | jsonify }}{% endif %}
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": {{ page_title | jsonify }},
+    "url": {{ canonical_url | jsonify }},
+    "inLanguage": {{ page_lang | jsonify }},
+    "description": {{ page_desc | strip | strip_newlines | jsonify }},
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": {{ page_image | jsonify }}
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": {{ site.title | jsonify }},
+      "url": {{ site.url | jsonify }}
+    }{% if seo_cfg and seo_cfg.knows_about %},
+    "about": [{% for topic in seo_cfg.knows_about %}{"@type":"Thing","name":{{ topic | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}{% if seo_auto and seo_auto.key_phrases and seo_auto.key_phrases.size > 0 %},{% for phrase in seo_auto.key_phrases limit: 12 %}{"@type":"Thing","name":{{ phrase | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}{% endif %}]{% endif %}
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": {{ site.url | append: '/' | jsonify }}
+      }{%- assign path_parts = page.url | split: '/' -%}
+      {%- assign crumb_url = site.url -%}
+      {%- assign crumb_position = 1 -%}
+      {%- for part in path_parts -%}
+        {%- if part != '' -%}
+          {%- assign crumb_position = crumb_position | plus: 1 -%}
+          {%- assign crumb_url = crumb_url | append: '/' | append: part -%}
+          ,{
+            "@type": "ListItem",
+            "position": {{ crumb_position }},
+            "name": {{ part | replace: '.html', '' | replace: '-', ' ' | capitalize | jsonify }},
+            "item": {{ crumb_url | jsonify }}
+          }
+        {%- endif -%}
+      {%- endfor -%}
+    ]
+  }
+</script>
+
+{%- if page.layout == 'post' -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": {{ page_title | jsonify }},
+      "description": {{ page_desc | strip | strip_newlines | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": {{ canonical_url | jsonify }}
+      },
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+      "author": {
+        "@type": "Person",
+        "name": {{ page.author | default: site.author | jsonify }}
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": {{ publisher_name | jsonify }},
+        "@id": {{ site.url | append: '#publisher' | jsonify }},
+        "logo": {
+          "@type": "ImageObject",
+          "url": {{ publisher_logo | jsonify }}
+        }
+      }{% if page.image or seo_cfg.default_image %},
+      "image": {{ page.image | default: seo_cfg.default_image | absolute_url | jsonify }}{% endif %}{% if page.tags %},
+      "keywords": {{ page.tags | join: ', ' | jsonify }}{% elsif auto_post_terms and auto_post_terms.keywords %},
+      "keywords": {{ auto_post_terms.keywords | join: ', ' | jsonify }}{% endif %}
+    }
+  </script>
+{%- endif -%}
+
+{%- assign list_layouts = 'homepage,articles,categories,tags,author'
+  | split: ','
+-%}
+{%- assign should_emit_item_list = false -%}
+{%- for layout_name in list_layouts -%}
+  {%- if page.layout == layout_name -%}
+    {%- assign should_emit_item_list = true -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if should_emit_item_list -%}
+  {%- assign latest_posts = site.posts
+    | sort: 'date'
+    | reverse
+    | slice: 0, 12
+  -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": {{ page_title | jsonify }},
+      "numberOfItems": {{ latest_posts | size }},
+      "itemListElement": [
+        {%- for post in latest_posts -%}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "url": {{ post.url | absolute_url | jsonify }},
+          "name": {{ post.title | jsonify }}
+        }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+{%- endif -%}
+
+{%- assign faq_items = page.faq -%}
+{%- if (faq_items == nil or faq_items.size == 0) and auto_post_terms and auto_post_terms.questions and auto_post_terms.questions.size > 0 -%}
+  {%- assign faq_items = auto_post_terms.questions -%}
+{%- endif -%}
+{%- if faq_items and faq_items.size > 0 -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- for item in faq_items limit: 8 -%}
+        {
+          "@type": "Question",
+          "name": {{ item.question | strip_newlines | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ item.answer | markdownify | strip_newlines | strip | jsonify }}
+          }
+        }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+{%- endif -%}

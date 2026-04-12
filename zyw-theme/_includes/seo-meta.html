@@ -1,0 +1,280 @@
+{%- assign seo_cfg = site.seo | default: null -%}
+{%- assign seo_auto = site.data.seo_auto | default: null -%}
+{%- assign page_title = page.title | default: site.title -%}
+{%- assign page_desc = page.description
+  | default: page.intro
+  | default: site.description
+-%}
+{%- assign page_author = page.author | default: site.author -%}
+{%- assign page_lang = page.lang | default: site.lang | default: 'en' -%}
+{%- assign canonical_url = page.url | absolute_url -%}
+{%- assign page_image = page.image | default: seo_cfg.default_image -%}
+{%- assign page_slug_key = page.slug | default: '' -%}
+{%- assign auto_post_terms = null -%}
+{%- if seo_auto
+  and page_slug_key != ''
+  and seo_auto.posts
+  and seo_auto.posts[page_slug_key]
+-%}
+  {%- assign auto_post_terms = seo_auto.posts[page_slug_key] -%}
+{%- endif -%}
+
+{%- capture site_keywords_csv -%}
+  {%- if seo_cfg and seo_cfg.keywords -%}
+    {{ seo_cfg.keywords | join: ', ' }}
+  {%- endif -%}
+{%- endcapture -%}
+{%- capture site_key_phrases_csv -%}
+  {%- if seo_cfg and seo_cfg.key_phrases -%}
+    {{ seo_cfg.key_phrases | join: ', ' }}
+  {%- endif -%}
+{%- endcapture -%}
+{%- capture site_catchwords_csv -%}
+  {%- if seo_cfg and seo_cfg.catchwords -%}
+    {{ seo_cfg.catchwords | join: ', ' }}
+  {%- endif -%}
+{%- endcapture -%}
+{%- capture site_auto_keywords_csv -%}
+  {%- if seo_auto and seo_auto.keywords -%}
+    {{ seo_auto.keywords | join: ', ' }}
+  {%- endif -%}
+{%- endcapture -%}
+{%- capture site_auto_key_phrases_csv -%}
+  {%- if seo_auto and seo_auto.key_phrases -%}
+    {{ seo_auto.key_phrases | join: ', ' }}
+  {%- endif -%}
+{%- endcapture -%}
+{%- capture site_auto_catchwords_csv -%}
+  {%- if seo_auto and seo_auto.catchwords -%}
+    {{ seo_auto.catchwords | join: ', ' }}
+  {%- endif -%}
+{%- endcapture -%}
+{%- capture site_auto_catchphrases_csv -%}
+  {%- if seo_auto and seo_auto.catchphrases -%}
+    {{ seo_auto.catchphrases | join: ', ' }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture page_keywords_csv -%}
+  {%- if page.keywords -%}
+    {%- if page.keywords.first -%}
+      {{ page.keywords | join: ', ' }}
+    {%- else -%}
+      {{ page.keywords }}
+    {%- endif -%}
+  {%- elsif page.tags -%}
+    {{ page.tags | join: ', ' }}
+  {%- endif -%}
+{%- endcapture -%}
+{%- capture page_auto_keywords_csv -%}
+  {%- if auto_post_terms and auto_post_terms.keywords -%}
+    {{ auto_post_terms.keywords | join: ', ' }}
+  {%- endif -%}
+{%- endcapture -%}
+{%- capture page_auto_key_phrases_csv -%}
+  {%- if auto_post_terms and auto_post_terms.key_phrases -%}
+    {{ auto_post_terms.key_phrases | join: ', ' }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- assign merged_keywords_raw = site_keywords_csv
+  | append: ','
+  | append: site_key_phrases_csv
+  | append: ','
+  | append: site_catchwords_csv
+  | append: ','
+  | append: site_auto_keywords_csv
+  | append: ','
+  | append: site_auto_key_phrases_csv
+  | append: ','
+  | append: site_auto_catchwords_csv
+  | append: ','
+  | append: site_auto_catchphrases_csv
+  | append: ','
+  | append: page_keywords_csv
+  | append: ','
+  | append: page_auto_keywords_csv
+  | append: ','
+  | append: page_auto_key_phrases_csv
+  | strip
+  | strip_newlines
+-%}
+{%- assign merged_keywords = '' -%}
+{%- assign keyword_parts = merged_keywords_raw | split: ',' -%}
+{%- assign emitted_count = 0 -%}
+{%- for part in keyword_parts -%}
+  {%- assign clean_part = part | strip -%}
+  {%- assign clean_key = clean_part | downcase -%}
+  {%- assign already_emitted = false -%}
+  {%- if merged_keywords != '' and clean_part != '' -%}
+    {%- assign merged_with_guards = ', '
+      | append: merged_keywords
+      | append: ', '
+    -%}
+    {%- assign key_with_guards = ', ' | append: clean_part | append: ', ' -%}
+    {%- if merged_with_guards contains key_with_guards -%}
+      {%- assign already_emitted = true -%}
+    {%- endif -%}
+  {%- endif -%}
+  {%- if clean_part != ''
+    and already_emitted == false
+    and emitted_count < 120
+  -%}
+    {%- if merged_keywords != '' -%}
+      {%- assign merged_keywords = merged_keywords | append: ', ' -%}
+    {%- endif -%}
+    {%- assign merged_keywords = merged_keywords | append: clean_part -%}
+    {%- assign emitted_count = emitted_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign robots_directive = page.robots
+  | default: seo_cfg.robots
+  | default: 'index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1'
+-%}
+{%- assign googlebot_directive = page.googlebot
+  | default: seo_cfg.googlebot
+  | default: robots_directive
+-%}
+{%- assign bingbot_directive = page.bingbot
+  | default: seo_cfg.bingbot
+  | default: robots_directive
+-%}
+{%- assign is_404_page = false -%}
+{%- if page.url == '/404.html' or page.layout == '404' -%}
+  {%- assign is_404_page = true -%}
+{%- endif -%}
+{%- if is_404_page -%}
+  {%- assign robots_directive = 'noindex,nofollow,noarchive' -%}
+  {%- assign googlebot_directive = 'noindex,nofollow,noarchive' -%}
+  {%- assign bingbot_directive = 'noindex,nofollow,noarchive' -%}
+{%- endif -%}
+
+{%- if page_desc and page_desc != '' -%}
+  <meta
+    name="description"
+    content="{{ page_desc | strip | strip_newlines | escape }}"
+  >
+{%- endif -%}
+{%- if merged_keywords != '' -%}
+  <meta name="keywords" content="{{ merged_keywords | escape }}">
+  <meta name="news_keywords" content="{{ merged_keywords | escape }}">
+{%- endif -%}
+<meta name="author" content="{{ page_author | escape }}">
+<meta name="robots" content="{{ robots_directive | escape }}">
+<meta name="googlebot" content="{{ googlebot_directive | escape }}">
+<meta name="bingbot" content="{{ bingbot_directive | escape }}">
+<meta
+  name="referrer"
+  content="{{ seo_cfg.referrer_policy | default: 'strict-origin-when-cross-origin' | escape }}"
+>
+
+{%- if page.tags and page.tags.size > 0 -%}
+  {%- for tag in page.tags -%}
+    <meta property="article:tag" content="{{ tag | escape }}">
+  {%- endfor -%}
+{%- endif -%}
+{%- if page.categories and page.categories.size > 0 -%}
+  <meta
+    property="article:section"
+    content="{{ page.categories | first | escape }}"
+  >
+{%- endif -%}
+
+<meta
+  property="og:type"
+  content="{% if page.layout == 'post' %}article{% else %}website{% endif %}"
+>
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:title" content="{{ page_title | escape }}">
+{%- if page_desc and page_desc != '' -%}
+  <meta
+    property="og:description"
+    content="{{ page_desc | strip | strip_newlines | escape }}"
+  >
+{%- endif -%}
+<meta property="og:url" content="{{ canonical_url }}">
+<meta
+  property="og:locale"
+  content="{{ seo_cfg.og_locale | default: 'en_GB' | escape }}"
+>
+{%- if seo_cfg and seo_cfg.og_alternate_locales -%}
+  {%- for locale in seo_cfg.og_alternate_locales -%}
+    <meta property="og:locale:alternate" content="{{ locale | escape }}">
+  {%- endfor -%}
+{%- endif -%}
+{%- if page.image -%}
+  <meta property="og:image" content="{{ page.image | absolute_url }}">
+  <meta
+    property="og:image:alt"
+    content="{{ page.image_alt | default: page_title | escape }}"
+  >
+{%- elsif seo_cfg and seo_cfg.default_image -%}
+  <meta
+    property="og:image"
+    content="{{ seo_cfg.default_image | absolute_url }}"
+  >
+  <meta property="og:image:alt" content="{{ page_title | escape }}">
+{%- endif -%}
+
+<meta
+  name="twitter:card"
+  content="{{ seo_cfg.twitter_card | default: 'summary_large_image' | escape }}"
+>
+{%- if site.twitter_username -%}
+  <meta name="twitter:site" content="@{{ site.twitter_username | escape }}">
+{%- endif -%}
+<meta name="twitter:title" content="{{ page_title | escape }}">
+{%- if page_desc and page_desc != '' -%}
+  <meta
+    name="twitter:description"
+    content="{{ page_desc | strip | strip_newlines | escape }}"
+  >
+{%- endif -%}
+{%- if page.image -%}
+  <meta name="twitter:image" content="{{ page.image | absolute_url }}">
+  <meta
+    name="twitter:image:alt"
+    content="{{ page.image_alt | default: page_title | escape }}"
+  >
+{%- elsif seo_cfg and seo_cfg.default_image -%}
+  <meta
+    name="twitter:image"
+    content="{{ seo_cfg.default_image | absolute_url }}"
+  >
+  <meta name="twitter:image:alt" content="{{ page_title | escape }}">
+{%- endif -%}
+
+{%- if page.layout == 'post' -%}
+  <meta
+    property="article:published_time"
+    content="{{ page.date | date_to_xmlschema }}"
+  >
+  <meta
+    property="article:modified_time"
+    content="{{ page.last_modified_at | default: page.date | date_to_xmlschema }}"
+  >
+  <meta property="article:author" content="{{ page_author | escape }}">
+{%- endif -%}
+
+{%- if seo_cfg and seo_cfg.alternate_urls -%}
+  {%- for item in seo_cfg.alternate_urls -%}
+    <link
+      rel="alternate"
+      hreflang="{{ item.lang | escape }}"
+      href="{{ item.url | escape }}"
+    >
+  {%- endfor -%}
+{%- endif -%}
+{%- if seo_cfg and seo_cfg.same_as -%}
+  {%- for profile in seo_cfg.same_as -%}
+    <link rel="me" href="{{ profile | escape }}">
+  {%- endfor -%}
+{%- endif -%}
+<link rel="alternate" hreflang="x-default" href="{{ site.url | append: '/' }}">
+<link
+  rel="alternate"
+  type="text/markdown"
+  href="{{ '/llms.txt' | absolute_url }}"
+  title="LLMs content map"
+>

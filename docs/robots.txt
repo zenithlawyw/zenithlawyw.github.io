@@ -1,0 +1,12 @@
+---
+layout: null
+---
+User-agent: *
+Allow: /
+
+# Block noisy crawler paths that are not useful for indexing.
+Disallow: /vendor/
+Disallow: /.bundle/
+Disallow: /node_modules/
+
+Sitemap: {{ '/sitemap.xml' | absolute_url }}
