@@ -16,6 +16,7 @@
   | default: 'ieee'
   | downcase
 -%}
+{%- assign refs_link_class = 'underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300' -%}
 {%- assign has_structured_fields = false -%}
 {%- if item.text
   or item.authors
@@ -32,6 +33,56 @@
 -%}
   {%- assign has_structured_fields = true -%}
 {%- endif -%}
+
+{%- assign note_text = item.note | default: '' -%}
+{%- capture note_html -%}
+  {%- if note_text != '' -%}
+    {%- assign note_words = note_text | split: ' ' -%}
+    {%- for note_word in note_words -%}
+      {%- assign token = note_word -%}
+      {%- assign token_prefix = '' -%}
+      {%- assign token_suffix = '' -%}
+      {%- assign token_first_char = token | slice: 0, 1 -%}
+      {%- if token_first_char == '(' -%}
+        {%- assign token_prefix = '(' -%}
+        {%- assign token = token | remove_first: '(' -%}
+      {%- endif -%}
+
+      {%- assign token_last_char = token | slice: -1, 1 -%}
+      {%- if token_last_char == '.'
+        or token_last_char == ','
+        or token_last_char == ';'
+        or token_last_char == ')'
+      -%}
+        {%- assign token_suffix = token_last_char -%}
+        {%- assign token_trim_size = token | size | minus: 1 -%}
+        {%- assign token = token | slice: 0, token_trim_size -%}
+      {%- endif -%}
+
+      {%- assign token_http = token | slice: 0, 7 -%}
+      {%- assign token_https = token | slice: 0, 8 -%}
+      {%- assign token_www = token | slice: 0, 4 -%}
+      {%- if token_https == 'https://' or token_http == 'http://' or token_www == 'www.' -%}
+        {%- assign token_href = token -%}
+        {%- if token_www == 'www.' -%}
+          {%- assign token_href = 'https://' | append: token -%}
+        {%- endif -%}
+        {{ token_prefix }}
+        <a
+          href="{{ token_href | escape }}"
+          title="{{ token_href | escape }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ token | escape }}</a
+        >{{ token_suffix }}
+      {%- else -%}
+        {{ note_word }}
+      {%- endif -%}
+      {% unless forloop.last %}{{ ' ' }}{% endunless %}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endcapture -%}
 
 {%- assign doi_href = item.doi | prepend: 'https://doi.org/' -%}
 {%- assign doi_label = item.doi -%}
@@ -78,11 +129,11 @@
     {%- if item.ieee -%}
       {%- assign text_html = item.ieee | markdownify -%}
       {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
-      {%- if item.note -%}{{ item.note }}{%- endif -%}
+      {%- if note_html != '' -%}{{ note_html }}{%- endif -%}
     {%- elsif item.text -%}
       {%- assign text_html = item.text | markdownify -%}
       {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
-      {%- if item.note -%}{{ item.note }}{%- endif -%}
+      {%- if note_html != '' -%}{{ note_html }}{%- endif -%}
     {%- else -%}
       {%- if item.authors -%}{{ item.authors }},{%- endif -%}
       {%- if item.title -%}"{{ item.title }}",{%- endif -%}
@@ -104,7 +155,7 @@
       {%- if item.doi -%}
         doi:
         <a
-          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          class="{{ refs_link_class }}"
           href="{{ doi_href }}"
           title="{{ item.doi }}"
           target="_blank"
@@ -116,7 +167,7 @@
       {%- if item.url -%}
         [Online]. Available:
         <a
-          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          class="{{ refs_link_class }}"
           href="{{ item.url }}"
           title="{{ item.url }}"
           target="_blank"
@@ -126,7 +177,7 @@
         >.
       {%- endif -%}
       {%- if item.accessed -%}Accessed: {{ item.accessed }}.{%- endif -%}
-      {%- if item.note -%}{{ item.note }}{%- endif -%}
+      {%- if note_html != '' -%}{{ note_html }}{%- endif -%}
     {%- endif -%}
   {%- elsif refs_style == 'harvard' -%}
     {%- if item.harvard -%}
@@ -154,7 +205,7 @@
       {%- if item.url -%}
         Available at:
         <a
-          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          class="{{ refs_link_class }}"
           href="{{ item.url }}"
           title="{{ item.url }}"
           target="_blank"
@@ -166,7 +217,7 @@
       {%- if item.doi -%}
         doi:
         <a
-          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          class="{{ refs_link_class }}"
           href="{{ doi_href }}"
           title="{{ item.doi }}"
           target="_blank"
@@ -217,7 +268,7 @@
 
       {%- if item.url -%}
         <a
-          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          class="{{ refs_link_class }}"
           href="{{ item.url }}"
           title="{{ item.url }}"
           target="_blank"
@@ -229,7 +280,7 @@
 
       {%- if item.doi -%}
         doi:<a
-          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          class="{{ refs_link_class }}"
           href="{{ doi_href }}"
           title="{{ item.doi }}"
           target="_blank"
@@ -241,7 +292,7 @@
 
       {%- if item.arXiv -%}
         arXiv:<a
-          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          class="{{ refs_link_class }}"
           href="{{ arxiv_href }}"
           title="{{ item.arXiv }}"
           target="_blank"
@@ -253,7 +304,7 @@
 
       {%- if item.arxiv -%}
         arXiv:<a
-          class="underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300"
+          class="{{ refs_link_class }}"
           href="{{ arxiv_href }}"
           title="{{ item.arxiv }}"
           target="_blank"
@@ -263,8 +314,8 @@
         >.
       {%- endif -%}
 
-      {%- if item.note -%}
-        {{ item.note }}
+      {%- if note_html != '' -%}
+        {{ note_html }}
       {%- endif -%}
     {%- else -%}
       {%- assign text_html = item | markdownify -%}
