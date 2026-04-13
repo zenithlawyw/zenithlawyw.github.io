@@ -109,6 +109,17 @@ seo:
   og_locale: "en_GB" # Primary Open Graph locale.
   og_alternate_locales: # Additional Open Graph locales for alternate audiences.
     - "en_US"
+    - "en_GB"
+    - "en"
+    - "zh_HK"
+    - "zh_TW"
+    - "zh_CN"
+    - "ja"
+    - "ko"
+    - "de"
+    - "fr"
+    - "it"
+    - "es"
   organization_type: "ProfessionalService" # Schema.org @type for the publisher entity.
   publisher_name: "Zenith Law" # Publisher name used in JSON-LD.
   publisher_logo: "/assets/images/zenithlaw.png" # Publisher logo used in JSON-LD and social cards.
@@ -116,6 +127,7 @@ seo:
   service_type: "Technology Strategy and Engineering Advisory" # Service label for ProfessionalService schema.
   area_served: # Regions/countries served for service schema.
     - "United Kingdom"
+    - "Hong Kong"
     - "Global"
   price_range: "$$$" # Optional relative pricing band for service schema.
 
