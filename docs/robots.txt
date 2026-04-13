@@ -9,4 +9,7 @@ Disallow: /vendor/
 Disallow: /.bundle/
 Disallow: /node_modules/
 
+# Avoid crawling parameterized duplicates (e.g., UTM/query variants).
+Disallow: /*?*
+
 Sitemap: {{ '/sitemap.xml' | absolute_url }}
