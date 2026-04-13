@@ -229,3 +229,18 @@ llm-2026-ref23:
   short_author: GOV.UK
   year: "2025"
   ieee: 'GOV.UK, "Guidance: Data Use and Access Act 2025: plans for commencement", [https://www.gov.uk/guidance/data-use-and-access-act-2025-plans-for-commencement](https://www.gov.uk/guidance/data-use-and-access-act-2025-plans-for-commencement). Accessed: 12 April 2026.'
+
+prov-2026-ref1:
+  short_author: Karuna et al.
+  year: "2024"
+  ieee: 'G. Karuna, G. B. Santhi, M. Al-Farouni, G. V. Reddy, A. Shukla, and C. P. Patnaik, "Enhancing Financial Data Traceability Using Graph Neural Networks for Provenance Methods," in Proc. 2024 Int. Conf. IoT, Communication and Automation Technology (ICICAT), IEEE, 2024, pp. 1334-1339, doi: 10.1109/ICICAT62666.2024.10923449.'
+
+prov-2026-ref2:
+  short_author: Pina et al.
+  year: "2023"
+  ieee: 'D. Pina, A. Chapman, D. de Oliveira, and M. Mattoso, "Deep Learning Provenance Data Integration: a Practical Approach," in Companion Proc. ACM Web Conf. 2023 (WWW ''23 Companion), Austin, TX, USA, ACM, 2023, pp. 1542-1550, doi: 10.1145/3543873.3587561.'
+
+prov-2026-ref3:
+  short_author: Souza et al.
+  year: "2019"
+  ieee: 'R. Souza, L. Azevedo, V. Lourenço, E. Soares, R. Thiago, R. Brandão, D. Civitarese, E. Vital Brazil, M. Moreno, P. Valduriez, M. Mattoso, R. Cerqueira, and M. A. S. Netto, "Provenance Data in the Machine Learning Lifecycle in Computational Science and Engineering," in Proc. 14th WORKS Workshop, co-located with SC 2019, Denver, CO, 2019, arXiv:1910.04223.'

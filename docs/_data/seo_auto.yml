@@ -1,141 +1,143 @@
 ---
-generated_at: "2026-04-13T05:27:45Z"
+generated_at: "2026-04-13T20:26:11Z"
 keywords:
-  - model
-  - actionable
   - data
+  - model
+  - provenance
+  - evidence
   - governance
+  - actionable
+  - paper
   - recommendation
+  - source
+  - design
   - engineering
   - legal
-  - behavior
   - access
+  - behavior
   - teams
-  - attention
-  - controls
-  - risk
-  - design
-  - policy
-  - evidence
-  - models
-  - source
   - training
+  - evaluation
+  - use
+  - attention
+  - context
+  - controls
+  - practical
+  - risk
+  - models
+  - policy
+  - specific
+  - constraints
+  - deployment
+  - one
+  - production
   - alignment
   - dependency
-  - deployment
+  - execution
+  - graph
   - incident
-  - specific
+  - practice
+  - rather
+  - requires
+  - review
+  - sources
+  - synthesis
   - systems
   - axios
-  - constraints
-  - practical
-  - control
-  - execution
-  - practice
+  - explicit
   - quality
-  - requires
   - time
-  - use
-  - compliance
-  - context
-  - knowledge
-  - sources
   - analysis
   - architecture
+  - compliance
+  - control
+  - reports
+  - claim
+  - domain
+  - knowledge
+  - lessons
+  - reporting
+  - works
+  - claims
   - cloud
-  - evaluation
-  - explicit
   - federated
   - language
-  - reporting
-  - lessons
-  - package
-  - response
+  - level
+  - operational
+  - papers
+  - prov
+  - reported
   - technical
   - ten
+  - communication
+  - community
+  - inference
+  - learning
+  - lifecycle
+  - package
+  - response
+  - scholarly
+  - souza
+  - support
+  - text
   - trust
+  - user
   - brown
   - china
-  - communication
+  - cross
   - explainability
   - including
   - interpretability
   - objective
-  - one
   - platform
+  - preprocessing
   - prompt
-  - security
-  - support
-  - synthesis
-  - user
-  - community
-  - inference
-  - level
-  - operational
-  - production
-  - rather
-  - region
-  - reports
   - require
+  - research
+  - security
+  - three
+  - verified
+  - based
+  - benchmark
+  - decisions
+  - failure
+  - interpretation
+  - lineage
+  - records
+  - region
+  - report
+  - single
   - survey
-  - cross
+  - verification
   - distillation
+  - ecosystem
+  - first
+  - framing
   - generation
   - high
+  - method
   - multi
+  - non
   - operating
   - patterns
-  - remain
-  - research
-  - scholarly
-  - compromise
-  - educational
-  - failure
-  - framing
-  - interpretation
-  - learning
-  - llm
-  - method
-  - need
-  - prompts
-  - records
-  - scaling
-  - transformer
-  - trustworthiness
-  - versions
-  - chain
-  - checks
-  - claims
-  - client
-  - credential
-  - delivery
-  - detection
-  - fine
-  - first
-  - frontier
-  - microsoft
-  - non
-  - npm
-  - output
-  - pretraining
-  - publication
-  - reported
-  - social
+  - pina
 key_phrases:
   - actionable recommendation
   - incident response
+  - scholarly works
   - social engineering
   - stanford cs229
   - cloud tech
   - federated foundation
+  - fine tuning
   - google cloud
   - google cloud tech
   - mit s191
   - supply chain
   - teams need
-  - fine tuning
   - language models
-  - scholarly works
+  - logistic regression
+  - three papers
   - yannic kilcher
   - actionable lessons
   - axios npm
@@ -148,21 +150,36 @@ key_phrases:
   - large language
   - large language models
   - lessons engineering
+  - logistic regression random
   - recurring themes
   - region specific
+  - regression random
   - ten actionable
   - ten actionable lessons
+  - verified finding
+  - asked questions
   - cluster links
   - evidence base
+  - evidence grade
   - evolutionary arc
   - explainability improves
   - explainability interpretability
+  - failure modes
   - federated foundation models
+  - frequently asked
+  - frequently asked questions
   - hong kong
+  - inferred synthesis
   - interpretability trustworthiness
   - knowledge distillation
+  - neural networks
   - nine educational
+  - oil gas
+  - provenance data
+  - source set
+  - ten lessons
   - tuning alignment
+  - use cases
   - access controls
   - actionable lessons engineering
   - actionable recommendation enforce
@@ -170,7 +187,6 @@ key_phrases:
   - alignment research
   - alignment stages
   - andrej karpathy
-  - asked questions
   - attention mechanics
   - augmented generation
   - axios npm supply
@@ -180,8 +196,11 @@ key_phrases:
   - china hong kong
   - china specific
   - close reading
+  - confidence intervals
   - credential theft
   - cross border
+  - data lineage
+  - data preprocessing
   - data protection
   - data residency
   - dates policy
@@ -195,161 +214,143 @@ key_phrases:
   - executed install time
   - explainability interpretability trustworthiness
   - extends beyond
-  - failure modes
   - fake news
   - fake news detection
   - federated foundation model
   - file path
   - fine tuning alignment
   - foundation model
-  - frequently asked
-  - frequently asked questions
   - globally uniform
+  - gpu evaluation
+  - graph based
+  - graph neural
+  - graph neural networks
   - high impact
   - hong kong macau
   - improves architecture
   - inference time
   - interpretability requires
   - kong macau
+  - learning lifecycle
   - lectures nine
   - legal risk
   - lessons engineering governance
+  - machine learning
   - mainland china
   - maintainer mortem
   - malicious axios
   - microsoft sophos
   - mit s191 stanford
-  - news detection
-  - nickel gladstone
-  - nine scholarly
-  - nine scholarly works
-  - non systematic
-  - npm compromise
-  - npm supply
-  - npm supply chain
-  - objective functions
-  - official institutional
-  - parallel attention
-  - practice example
-  - practitioner survey
-  - present frontier
-  - recommendation enforce
-  - recommendation maintain
-  - records show
-  - retrieval augmented
-  - retrieval augmented generation
-  - s191 stanford
-  - s191 stanford cs229
-  - sapphire sleet
-  - scaling alignment
+  - mlflow openlineage
 catchwords:
   - model
-  - actionable
+  - provenance
+  - evidence
   - governance
+  - actionable
+  - paper
   - recommendation
+  - source
+  - design
   - engineering
   - legal
-  - behavior
   - access
+  - behavior
   - teams
-  - attention
-  - controls
-  - design
-  - policy
-  - evidence
-  - models
-  - source
   - training
+  - evaluation
+  - attention
+  - context
+  - controls
+  - practical
+  - models
+  - policy
+  - specific
+  - constraints
+  - deployment
+  - production
   - alignment
   - dependency
-  - deployment
+  - execution
+  - graph
   - incident
-  - specific
+  - practice
+  - rather
+  - requires
+  - review
+  - sources
+  - synthesis
   - systems
   - axios
-  - constraints
-  - practical
-  - control
-  - execution
-  - practice
+  - explicit
   - quality
-  - requires
-  - compliance
-  - context
-  - knowledge
-  - sources
   - analysis
   - architecture
+  - compliance
+  - control
+  - reports
+  - claim
+  - domain
+  - knowledge
+  - lessons
+  - reporting
+  - works
+  - claims
   - cloud
-  - evaluation
-  - explicit
   - federated
   - language
-  - reporting
-  - lessons
+  - level
+  - operational
+  - papers
+  - reported
+  - technical
+  - communication
+  - community
+  - inference
+  - learning
+  - lifecycle
   - package
   - response
-  - technical
+  - scholarly
+  - souza
+  - support
   - trust
   - brown
   - china
-  - communication
+  - cross
   - explainability
   - including
   - interpretability
   - objective
   - platform
+  - preprocessing
   - prompt
-  - security
-  - support
-  - synthesis
-  - community
-  - inference
-  - level
-  - operational
-  - production
-  - rather
-  - region
-  - reports
   - require
+  - research
+  - security
+  - three
+  - verified
+  - based
+  - benchmark
+  - decisions
+  - failure
+  - interpretation
+  - lineage
+  - records
+  - region
+  - report
+  - single
   - survey
-  - cross
+  - verification
   - distillation
+  - ecosystem
+  - first
+  - framing
   - generation
+  - method
   - multi
   - operating
   - patterns
-  - remain
-  - research
-  - scholarly
-  - compromise
-  - educational
-  - failure
-  - framing
-  - interpretation
-  - learning
-  - method
-  - prompts
-  - records
-  - scaling
-  - transformer
-  - trustworthiness
-  - versions
-  - chain
-  - checks
-  - claims
-  - client
-  - credential
-  - delivery
-  - detection
-  - first
-  - frontier
-  - microsoft
-  - output
-  - pretraining
-  - publication
-  - reported
-  - social
 catchphrases:
   - frequently asked questions
   - 2 partnership models shift accountability maps
@@ -357,6 +358,14 @@ catchphrases:
   - 4 semantic versioning convenience systematically enables supply chain propagation
   - 6 communication infrastructure carries hidden regulatory friction
   - 7 user visible access continuity requires multi channel notice design
+  - karuna et al
+  - karuna et al 2024
+  - persona driven requirements
+  - pina et al
+  - pina et al 2023
+  - souza et al
+  - souza et al 2019
+  - thematic analysis
 posts:
   axios-supply-chain-compromise:
     url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
@@ -535,3 +544,66 @@ posts:
         answer: Start with a minimal governance baseline. Define approved use cases. Define prompt versioning rules. Define output verification requirements. Define escalation procedures for harmful or ungrounded responses. This sequence converts theory into immediate control coverage {% include references/cite.html key="llm-2026-ref2" %}, {% include references/cite.html key="llm-2026-ref4" %}, {% include references/cite.html key="llm-2026-ref7" %}, {% include references/cite.html key="llm-2026-ref12" %}.
       - question: How should researchers and educators reuse these materials responsibly?
         answer: Use short quotations only when wording precision matters. Prefer paraphrase for interpretation. Maintain explicit attribution. Preserve links to original context. Where applicable under UK law, assess whether CDPA 1988 ss. 29 (research/private study) and 31A (text and data analysis for non-commercial research) conditions are genuinely satisfied before reuse. This applies equally to video content and to published scholarly works.
+  data-provenance-ml-lifecycle-traceability-graph-methods:
+    url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
+    keywords:
+      - provenance
+      - paper
+      - data
+      - evidence
+      - graph
+      - prov
+      - claim
+      - souza
+      - papers
+      - preprocessing
+      - three
+      - pina
+      - review
+      - domain
+      - evaluation
+      - karuna
+      - model
+      - source
+      - verified
+      - context
+      - one
+      - production
+      - representation
+      - use
+      - data provenance
+      - machine learning
+      - traceability
+      - graph neural networks
+      - reproducibility
+      - ai governance
+    key_phrases:
+      - three papers
+      - verified finding
+      - evidence grade
+      - provenance data
+      - paper reported
+      - unverified detail
+      - source set
+      - paper reports
+      - w3c prov
+      - verified findings
+      - data preprocessing
+      - preprocessing provenance
+      - use graph
+      - graph based
+      - graph neural
+      - prov proposed
+    questions:
+      - question: What does this article claim, and what does it not claim?
+        answer: It claims scoped guidance from three papers. It does not claim field-wide representativeness or comparative superiority over the broader lineage tooling ecosystem.
+      - question: Is the reported 91.3% GCN figure a universal result?
+        answer: No. It is a paper-reported result in one evaluation context {% include references/cite.html key="prov-2026-ref1" %}. This review does not treat it as a universal benchmark.
+      - question: Why keep discussing preprocessing provenance?
+        answer: 'Because both relevance and complexity show up there: Pina et al. identify integration gaps at that stage {% include references/cite.html key="prov-2026-ref2" %}, and Souza et al. identify curation as difficult {% include references/cite.html key="prov-2026-ref3" %}.'
+      - question: Is PROV-ML already a standard?
+        answer: In this evidence set, PROV-ML is best described as a proposed representation with promising applied evidence in a specific domain context {% include references/cite.html key="prov-2026-ref3" %}.
+      - question: Should teams deploy provenance tooling immediately after reading this article?
+        answer: Use this article as orientation, not as a deployment checklist. Before adoption decisions, compare against your own stack, load profile, compliance obligations, and failure modes.
+      - question: What is the best next step for readers who want to go deeper?
+        answer: Run a broader review that includes MLflow, OpenLineage, Pachyderm, and DVC literature, then test candidate approaches against your production constraints and governance requirements.
