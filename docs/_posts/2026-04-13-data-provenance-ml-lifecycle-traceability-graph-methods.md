@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Data Provenance in the Machine Learning Lifecycle: A Critical Review of Three Scholarly Works"
+title: "Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons"
 author: Zenith Law
-description: "A source-graded critical review of three scholarly works on ML provenance, with explicit verification boundaries, methodological caveats, and scoped practical implications."
+description: "Graph neural networks, PROV-ML, and data lineage in machine learning. Evidence-graded review with ten practical governance lessons for ML practitioners."
 permalink: /data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons
-intro: "This article reviews three scholarly works on ML provenance with explicit evidence grading and verification limits. It does not claim comprehensive field coverage; rather, it evaluates what these specific papers do and do not establish."
+intro: "Data provenance in machine learning tracks where training data came from, how it was transformed, and which model versions resulted. Three scholarly papers evaluate this with graph neural networks, integration prototypes, and the PROV-ML standard. This review grades each approach, states evidence limits, and derives ten practical lessons for ML practitioners."
 image: /assets/images/data-provenance-ml-lifecycle-traceability-graph-methods.png
 hero:
   image: /assets/images/data-provenance-ml-lifecycle-traceability-graph-methods.png
-keywords: "data provenance, machine learning lifecycle, graph neural networks, traceability, PROV-ML, deep learning provenance, model selection, reproducibility, W3C PROV, computational science"
-catchwords: "data provenance, ml lifecycle, traceability, graph methods, reproducibility, model governance"
+keywords: "data provenance, data provenance machine learning, data lineage vs provenance, graph neural networks traceability, ML traceability, PROV-ML, W3C PROV, deep learning provenance, GNN traceability, ML reproducibility, data governance ML, provenance tools machine learning"
+catchwords: "data provenance, data lineage, ml lifecycle, traceability, graph methods, reproducibility, model governance, PROV-ML, GNN traceability, W3C PROV"
 references_enabled: true
 references_style: ieee
 references_data_file: references
@@ -188,7 +188,21 @@ A strong synthesis is not only accumulation of supportive findings. It also look
 
 ## Frequently Asked Questions
 
-### What does this article claim, and what does it not claim?
+### What is data provenance in machine learning?
+
+Data provenance in machine learning is the record of where training data originated, how it was cleaned and transformed, which model versions it produced, and which individuals or systems were responsible at each stage. Provenance answers the question "why does this model behave this way?" by tracing outputs back to input data and pipeline decisions. All three papers in this review treat provenance as a lifecycle-design requirement rather than a logging afterthought.
+
+### What is the difference between data provenance and data lineage?
+
+Data provenance and data lineage both trace data through a pipeline, but they differ in focus. Lineage records where data moved, which inputs fed which outputs. Provenance adds agent information: who or what performed each transformation, under what conditions, for what purpose, and with what authorization. The [W3C PROV](https://www.w3.org/TR/prov-overview/) standard formalizes this distinction using the entity-activity-agent model that Souza et al. extend in PROV-ML {% include references/cite.html key="prov-2026-ref3" %}.
+
+### What tools are used for data provenance in machine learning?
+
+Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier {% include references/cite.html key="prov-2026-ref1" %}, Pina et al. integrate separate lifecycle tools using DNNProv and Chapman et al.'s preprocessing capture {% include references/cite.html key="prov-2026-ref2" %}, and Souza et al. extend ProvLake with the PROV-ML vocabulary {% include references/cite.html key="prov-2026-ref3" %}. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem.
+
+### How does PROV-ML extend W3C PROV for machine learning?
+
+PROV-ML, proposed by Souza et al., extends the base [W3C PROV](https://www.w3.org/TR/prov-overview/) model with [W3C ML Schema](https://www.w3.org/TR/ml-schema/) vocabulary to capture ML-specific concepts: hyperparameters, training runs, dataset versions, and evaluation metrics. It maps four user personas (domain scientists, computational engineers, ML engineers, and provenance specialists) to provenance query patterns. The PROV-ML design was evaluated in an oil and gas seismic classification pipeline using 48 GPUs through the ProvLake system. Whether it generalizes beyond that domain is an open question the paper does not demonstrate {% include references/cite.html key="prov-2026-ref3" %}.
 
 It claims scoped guidance from three papers. It does not claim field-wide representativeness or comparative superiority over the broader lineage tooling ecosystem.
 

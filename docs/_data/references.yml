@@ -244,3 +244,43 @@ prov-2026-ref3:
   short_author: Souza et al.
   year: "2019"
   ieee: 'R. Souza, L. Azevedo, V. Lourenço, E. Soares, R. Thiago, R. Brandão, D. Civitarese, E. Vital Brazil, M. Moreno, P. Valduriez, M. Mattoso, R. Cerqueira, and M. A. S. Netto, "Provenance Data in the Machine Learning Lifecycle in Computational Science and Engineering," in Proc. 14th WORKS Workshop, co-located with SC 2019, Denver, CO, 2019, arXiv:1910.04223.'
+
+deadlock-2026-ref1:
+  short_author: Coffman et al.
+  year: "1971"
+  ieee: 'E. G. Coffman, M. J. Elphick, and A. Shoshani, "System Deadlocks," ACM Computing Surveys, vol. 3, no. 2, pp. 67-78, 1971. doi: 10.1145/356586.356588.'
+
+deadlock-2026-ref2:
+  short_author: Dijkstra
+  year: "1965"
+  ieee: 'E. W. Dijkstra, "Een algorithme ter voorkoming van de dodelijke omarming" (EWD-108), c. 1965. E.W. Dijkstra Archive, University of Texas at Austin. [https://www.cs.utexas.edu/users/EWD/ewd01xx/EWD108.PDF](https://www.cs.utexas.edu/users/EWD/ewd01xx/EWD108.PDF). Accessed: 14 April 2026.'
+
+deadlock-2026-ref3:
+  short_author: Dijkstra
+  year: "1965"
+  ieee: 'E. W. Dijkstra, "Cooperating Sequential Processes" (EWD-123), Technische Hogeschool Eindhoven, 1965. [https://www.cs.utexas.edu/users/EWD/transcriptions/EWD01xx/EWD123.html](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD01xx/EWD123.html). Accessed: 14 April 2026.'
+
+deadlock-2026-ref4:
+  short_author: Dijkstra
+  year: "1965"
+  ieee: 'E. W. Dijkstra, "Solution of a Problem in Concurrent Programming Control," Communications of the ACM, vol. 8, no. 9, p. 569, 1965. doi: 10.1145/365559.365617.'
+
+deadlock-2026-ref5:
+  short_author: Dijkstra
+  year: "1968"
+  ieee: 'E. W. Dijkstra, "The Structure of the THE-Multiprogramming System," Communications of the ACM, vol. 11, no. 5, pp. 341-346, 1968. doi: 10.1145/363095.363143.'
+
+deadlock-2026-ref6:
+  short_author: Silberschatz et al.
+  year: "2013"
+  ieee: 'A. Silberschatz, P. B. Galvin, and G. Gagne, Operating System Concepts, 9th ed. Wiley, 2013. ISBN: 9781118063330.'
+
+deadlock-2026-ref7:
+  short_author: SLSA
+  year: "2023"
+  ieee: 'SLSA, "About SLSA: Supply-chain Levels for Software Artifacts," 2023. [https://slsa.dev/spec/v1.0/about](https://slsa.dev/spec/v1.0/about). Accessed: 14 April 2026.'
+
+deadlock-2026-ref8:
+  short_author: Tanenbaum and Bos
+  year: "2015"
+  ieee: 'A. S. Tanenbaum and H. Bos, Modern Operating Systems, 4th ed. Pearson, 2015. ISBN: 9780133591620.'

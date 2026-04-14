@@ -1,8 +1,10 @@
 **/Gemfile.lock
 **/node_modules
+.env*
 .jekyll-cache
 .jekyll-metadata
 .sass-cache
+.venv
 _site
 ghpages
 theme

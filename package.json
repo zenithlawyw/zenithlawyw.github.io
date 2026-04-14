@@ -12,9 +12,12 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --write .",
+    "docs:seo": "make -C docs seo-auto",
+    "docs:prebuild": "make -C docs prebuild",
     "docs:build": "make -C docs build",
+    "docs:publish": "make -C docs publish",
     "docs:serve": "make -C docs serve",
-    "docs:dev": "make -C docs build && make -C docs serve"
+    "docs:dev": "make -C docs prebuild && make -C docs serve"
   },
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "^1.10.2",

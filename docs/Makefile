@@ -1,4 +1,4 @@
-.PHONY: help bootstrap install start stop restart build clean serve seo-auto
+.PHONY: help bootstrap install start stop restart prebuild build publish clean serve seo-auto
 
 # Variables
 BUNDLE := bundle exec
@@ -34,7 +34,9 @@ help:
 	@echo "  start        - Start Jekyll dev server"
 	@echo "  stop         - Stop Jekyll dev server"
 	@echo "  restart      - Restart Jekyll dev server"
+	@echo "  prebuild     - Run content generation scripts before build/publish"
 	@echo "  build        - Build static site"
+	@echo "  publish      - Run full publish pipeline (prebuild + production build)"
 	@echo "  seo-auto     - Generate auto SEO/AEO/GEO vocabulary from posts"
 	@echo "  serve        - Start server and watch for changes (foreground)"
 	@echo "  clean        - Remove generated _site directory"
@@ -79,12 +81,20 @@ seo-auto:
 	ruby scripts/generate_seo_auto.rb
 	@echo "✓ SEO auto data updated (_data/seo_auto.yml)"
 
-build: seo-auto
+prebuild: seo-auto
+	@echo "✓ Prebuild scripts complete"
+
+build: prebuild
 	@echo "Building Jekyll site..."
 	$(JEKYLL) build
 	@echo "✓ Build complete (output in _site/)"
 
-serve: seo-auto
+publish: prebuild
+	@echo "Publishing build (production settings)..."
+	JEKYLL_ENV=production $(JEKYLL) build
+	@echo "✓ Publish build complete (output in _site/)"
+
+serve: prebuild
 	@RUN_PORT=`$(FIND_FREE_PORT)`; \
 	RUN_LR_PORT=`$(FIND_FREE_LIVERELOAD_PORT)`; \
 	echo "Starting Jekyll dev server (foreground) on http://$(HOST):$$RUN_PORT..."; \
