@@ -7,13 +7,9 @@
   {%- assign refs_enabled = true -%}
 {%- elsif include.enabled == false or include.enabled == 'false' -%}
   {%- assign refs_enabled = false -%}
-{%- elsif page.references_enabled == false
-  or page.references_enabled == 'false'
--%}
+{%- elsif page.references_enabled == false or page.references_enabled == 'false' -%}
   {%- assign refs_enabled = false -%}
-{%- elsif page.references_enabled == true
-  or page.references_enabled == 'true'
--%}
+{%- elsif page.references_enabled == true or page.references_enabled == 'true' -%}
   {%- assign refs_enabled = true -%}
 {%- else -%}
   {%- assign refs_enabled = true -%}

@@ -50,7 +50,7 @@ tags:
 
 ## Introduction
 
-Operating systems textbooks dedicate chapters to a simple question: when can concurrent processes waiting for resources lock each other in permanent obstruction? The answer is the [Coffman conditions](<https://en.wikipedia.org/wiki/Deadlock_(computer_science)#Conditions>), four necessary and sufficient conditions for [deadlock](<https://en.wikipedia.org/wiki/Deadlock_(computer_science)>): mutual exclusion, hold and wait, no preemption, and circular wait. When all four hold simultaneously, a deadlock becomes theoretically inevitable. The insight scales beyond the kernel. In 2026, three large scale incidents in software supply chains, cloud platform operations, and AI deployment show that the same structural principles that cause OS level deadlock recur at every scale.
+Operating systems textbooks dedicate chapters to a simple question: when can concurrent processes waiting for resources lock each other in permanent obstruction? The answer is the [Coffman conditions](https://en.wikipedia.org/wiki/Deadlock_(computer_science)#Conditions), four necessary and sufficient conditions for [deadlock](https://en.wikipedia.org/wiki/Deadlock_(computer_science)): mutual exclusion, hold and wait, no preemption, and circular wait. When all four hold simultaneously, a deadlock becomes theoretically inevitable. The insight scales beyond the kernel. In 2026, three large scale incidents in software supply chains, cloud platform operations, and AI deployment show that the same structural principles that cause OS level deadlock recur at every scale.
 
 On 30 to 31 March 2026, malicious axios package versions propagated through npm's dependency resolution workflow because a maintainer credential was compromised. A detailed reconstruction of this incident appears in the companion article on the [Axios npm supply-chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience). The incident cascades through hold-and-wait behavior: each build held a lock on developer identity while waiting for upstream package access. On 25 July 2019 and across the intervening years, SaaS platforms withdrew localized versions in jurisdictions like China, creating a platform-fragmentation pattern where service bifurcation introduced circular dependencies that no single vendor could resolve autonomously. The structural dimensions of this fragmentation are examined in the article on [digital sovereignty and fragmented cloud realities](/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons). More recently, LLM deployment in distributed systems exhibits similar contention: concurrent inference requests compete for token-generation slots, and resource starvation under priority-flat scheduling leaves lower-priority jobs indefinitely suspended. The architectural evolution that produced these scheduling challenges is traced in the companion article on [large language models in practice](/large-language-models-practice-from-transformer-to-present-frontier).
 
@@ -70,7 +70,7 @@ Mutual exclusion is not optional. Without it, concurrent modification leads to d
 
 ### Semaphores: Counter-Based Access Control
 
-A [semaphore](<https://en.wikipedia.org/wiki/Semaphore_(programming)>) generalizes mutual exclusion from one resource to N identical copies. [Edsger Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) invented the semaphore construct in 1962-1963 while developing the [THE multiprogramming system](https://en.wikipedia.org/wiki/THE_multiprogramming_system) at Eindhoven. A semaphore initialized to N allows up to N concurrent acquisitions. The first N threads pass. The (N+1)th thread waits. A (N+1)th thread waiting indefinitely reveals [starvation](https://en.wikipedia.org/wiki/Resource_starvation), a failure state where a thread is denied access indefinitely even though the resource becomes available repeatedly.
+A [semaphore](https://en.wikipedia.org/wiki/Semaphore_(programming)) generalizes mutual exclusion from one resource to N identical copies. [Edsger Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) invented the semaphore construct in 1962-1963 while developing the [THE multiprogramming system](https://en.wikipedia.org/wiki/THE_multiprogramming_system) at Eindhoven. A semaphore initialized to N allows up to N concurrent acquisitions. The first N threads pass. The (N+1)th thread waits. A (N+1)th thread waiting indefinitely reveals [starvation](https://en.wikipedia.org/wiki/Resource_starvation), a failure state where a thread is denied access indefinitely even though the resource becomes available repeatedly.
 
 Tanenbaum and Bos (2015) stress that modern operating systems coordinate locks, schedulers, and memory managers across multicore processors and virtualized workloads. The deadlock model remains the same, but the operational impact grows because one blocked path can cascade across many execution contexts.
 
@@ -78,7 +78,7 @@ In supply chains, think of maintainer credentials as semaphores with N=1. In 202
 
 ### The Four Coffman Conditions: Structure of Deadlock
 
-[Edward G. Coffman, Jr.](https://en.wikipedia.org/wiki/Edward_G._Coffman,_Jr.), Michael J. Elphick, and Arie Shoshani formalized the four necessary and sufficient conditions for deadlock in their 1971 paper "System Deadlocks" (_ACM Computing Surveys_, 3(2), pp. 67-78). The conditions, now known as the [Coffman conditions](<https://en.wikipedia.org/wiki/Deadlock_(computer_science)#Conditions>), require all four to hold simultaneously:
+[Edward G. Coffman, Jr.](https://en.wikipedia.org/wiki/Edward_G._Coffman,_Jr.), Michael J. Elphick, and Arie Shoshani formalized the four necessary and sufficient conditions for deadlock in their 1971 paper "System Deadlocks" (*ACM Computing Surveys*, 3(2), pp. 67-78). The conditions, now known as the [Coffman conditions](https://en.wikipedia.org/wiki/Deadlock_(computer_science)#Conditions), require all four to hold simultaneously:
 
 1. **Mutual Exclusion:** Resources cannot be simultaneously held by multiple threads.
 2. **Hold and Wait:** A thread holding one resource can request another without releasing the first.
@@ -93,7 +93,7 @@ The axios npm compromise of March 2026 exhibits all four Coffman conditions in a
 
 ### Timeline and Mechanics
 
-Between 30 and 31 March 2026, malicious versions of axios (1.14.1 and 0.30.4) appeared on npm and propagated through automatic dependency resolution. The attack chain combined social engineering to compromise a maintainer account, then used that credential to inject a counterfeit dependency (`plain-crypto-js@4.2.1`) into axios source repositories. During installation, the injected dependency executed obfuscated code that staged payloads to macOS, Windows, and Linux platforms and communicated with C2 infrastructure at `sfrclak[.]com:8000`.
+Between 30 and 31 March 2026, malicious versions of axios (1.14.1 and 0.30.4) appeared on npm and propagated through automatic dependency resolution. The attack chain combined social engineering to compromise a maintainer account, then used that credential to inject a counterfeit dependency (`plain-crypto-js@4.2.1`) into axios source repositories. During installation, the injected dependency executed obfuscated code that staged payloads to macOS, Windows, and Linux platforms and communicated with C2 infrastructure at `sfrclak[.]com`:8000.
 
 The incident pattern reveals hold-and-wait behavior. A developer building a project holds (owns) the right to use their development environment. That developer then waits for npm to return the requested packages. During that wait, if the package registry has been compromised, the developer's environment is now exposed to malicious execution. Because developers cannot easily revoke their own build-environment access (no preemption), and because multiple developers wait for the same package (circular dependency chains in complex projects), a condition forms in which one compromised credential propagates through the entire coordination system.
 
@@ -213,7 +213,7 @@ LLM systems: Track request wait time in the inference queue. After waiting for t
 
 ### Lesson 5: Use Mutex and Semaphore Abstractions Correctly
 
-A mutex enforces exactly one access. A semaphore with N permits up to N concurrent accesses. Misusing these primitives causes contention where none was necessary.
+A mutex enforces exactly-one access. A semaphore with N permits up to N concurrent accesses. Misusing these primitives causes contention where none was necessary.
 
 Supply chains: Treat package-version credentials as semaphores, not mutexes. Multiple build systems should be able to read the same package version concurrently. Only publication requires mutual exclusion. Current npm design satisfies this. Problems arise when the semaphore count is set too low (e.g., publishing is rejected if any older version is still in resolution).
 
@@ -309,7 +309,7 @@ The synthesis is qualitative by design and does not claim incident-impact quanti
 
 ## Closing Discussion: Toward Resilience-Aware Design
 
-More than five decades after Coffman, Elphick, and Shoshani formalized the conditions for deadlock, and building on Dijkstra's foundational work on [semaphores](<https://en.wikipedia.org/wiki/Semaphore_(programming)>), the [Banker's algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm), and the [dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem), the same structural patterns recur in systems that programmers and infrastructure teams do not think of as "concurrent." A supply chain developer does not initially conceive of package publication as a mutual exclusion problem. A cloud platform architect does not frame regional partnerships as a resource allocation puzzle. An LLM inference system engineer may not initially map token slots to semaphore theory.
+More than five decades after Coffman, Elphick, and Shoshani formalized the conditions for deadlock, and building on Dijkstra's foundational work on [semaphores](https://en.wikipedia.org/wiki/Semaphore_(programming)), the [Banker's algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm), and the [dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem), the same structural patterns recur in systems that programmers and infrastructure teams do not think of as "concurrent." A supply chain developer does not initially conceive of package publication as a mutual exclusion problem. A cloud platform architect does not frame regional partnerships as a resource allocation puzzle. An LLM inference system engineer may not initially map token slots to semaphore theory.
 
 Yet each domain benefits from acknowledging this structure explicitly. Deadlock is not a phenomenon that only happens in low-level threading code. It is a structural pattern that emerges whenever resources are finite, threads compete for them, and acquisition order is not globally constrained. The corollary is powerful: the mitigation strategies that operating-systems researchers developed for the kernel apply with fidelity to arbitrarily higher levels of abstraction.
 
@@ -383,5 +383,5 @@ Token slots in LLM inference are mutual-exclusion resources: exactly one inferen
 
 ---
 
-_Publication: 14 April 2026_
-_License: Educational and research use. Substantive reuse requires attribution._
+*Publication: 14 April 2026*
+*License: Educational and research use. Substantive reuse requires attribution.*

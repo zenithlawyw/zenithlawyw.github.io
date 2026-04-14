@@ -66,9 +66,6 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include extensions/google-analytics.html -%}
   {%- endif -%}
-  {%- if site.google_analytics or site.link_tracking -%}
-    {%- include extensions/link-tracking.html -%}
-  {%- endif -%}
   {%- include extensions/highlight.html -%}
   {%- if page.math != false and site.math != false -%}
     {%- include extensions/mathjax.html -%}
