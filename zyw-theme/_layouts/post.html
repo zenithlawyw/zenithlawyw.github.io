@@ -270,10 +270,13 @@ hidden: []
           | {{ print_author | escape }}
         {% endif %}
       </p>
-      <p class="post-print-url"
+      <p
+        class="post-print-url"
         data-canonical-path="{{ page.url }}"
         data-production-origin="{{ site.url }}"
-      >{{ print_url }}</p>
+      >
+        {{ print_url }}
+      </p>
     </header>
 
     {% if page.intro %}
@@ -380,10 +383,13 @@ hidden: []
 
     <footer class="post-print-footer" aria-hidden="true">
       <span>{{ print_copyright }}</span>
-      <span class="post-print-footer-url"
+      <span
+        class="post-print-footer-url"
         data-canonical-path="{{ page.url }}"
         data-production-origin="{{ site.url }}"
-      >{{ print_url }}</span>
+      >
+        {{- print_url -}}
+      </span>
     </footer>
   </section>
 </div>
@@ -397,15 +403,11 @@ hidden: []
       for (var i = 0; i < urlEls.length; i++) {
         var el = urlEls[i];
         var text = (el.textContent || '').trim();
-        if (
-          !/localhost|127\.0\.0\.1/i.test(text)
-        ) {
+        if (!/localhost|127\.0\.0\.1/i.test(text)) {
           continue;
         }
-        var canonicalPath =
-          el.getAttribute('data-canonical-path') || '';
-        var productionOrigin =
-          el.getAttribute('data-production-origin') || '';
+        var canonicalPath = el.getAttribute('data-canonical-path') || '';
+        var productionOrigin = el.getAttribute('data-production-origin') || '';
         if (
           productionOrigin &&
           !/localhost|127\.0\.0\.1/i.test(productionOrigin)
