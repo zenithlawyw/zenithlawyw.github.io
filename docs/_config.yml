@@ -22,6 +22,30 @@ description: >-
 google_analytics: G-P49RPF7579
 enableDNT: "false"
 
+# ── Link tracking ─────────────────────────────────────────────────────────────
+# Configure once here; zyw-theme renders the settings into every page at build
+# time via _includes/extensions/link-tracking.html.
+#
+# outbound_utm:     UTM query parameters auto-appended to every outbound <a>
+#                   href so destination sites (and GA4 itself) receive full
+#                   attribution. Parameters already present are never overwritten.
+# ga4_events:       Fire gtag() / dataLayer events for link clicks (default: true).
+# track_internal:   Also fire events for same-origin clicks (default: false).
+# exclude_patterns: Array of regex strings; matched hrefs are skipped entirely.
+link_tracking:
+  outbound_utm:
+    source: "zenithlaw.com"
+    medium: "referral"
+    campaign: "post-link"
+    content: ""
+    term: ""
+  ga4_events: true
+  track_internal: false
+  exclude_patterns:
+    - "^mailto:"
+    - "^tel:"
+    - "^javascript:"
+
 hero:
   height: "100vh"
 
