@@ -2,14 +2,14 @@
 layout: post
 title: "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on Trust, Provenance, and Resilient Engineering"
 author: Zenith Law
-description: "An analysis of the 2026 axios npm compromise with a verified timeline, attribution crosswalk, and ten actionable lessons for software, platform, and security teams."
+description: "How malicious axios npm versions propagated via a compromised credential in 2026. Timeline, attribution, IOCs, and ten engineering lessons for supply chain defense."
 permalink: /axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience
-intro: "On 30 and 31 March 2026, malicious axios package versions on npm introduced a counterfeit dependency that executed install-time malware delivery across macOS, Windows, and Linux. This revision maps each material claim to explicit sources and separates evidence from inference."
+intro: "On 30-31 March 2026, malicious axios npm versions 1.14.1 and 0.30.4 injected a counterfeit dependency that executed install-time malware across macOS, Windows, and Linux. Every material claim is mapped to verified sources. Evidence is separated from inference throughout, and ten engineering lessons extract concrete supply chain defense controls."
 image: /assets/images/axios-npm-supply-chain-compromise.png
 hero:
   image: /assets/images/axios-npm-supply-chain-compromise.png
-keywords: "axios npm supply chain compromise, software supply chain security, npm postinstall malware, UNC1069, Sapphire Sleet, secure dependency management"
-catchwords: "supply chain security, dependency provenance, incident response, social engineering, trusted publishing"
+keywords: "axios npm supply chain attack, npm supply chain compromise, malicious npm package, software supply chain security, supply chain attack prevention, npm postinstall malware, UNC1069, Sapphire Sleet, NICKEL GLADSTONE, secure dependency management, SBOM supply chain, npm credential compromise"
+catchwords: "supply chain security, npm compromise, dependency provenance, incident response, social engineering, trusted publishing, SBOM, credential theft, malware analysis, package manager security"
 references_enabled: true
 references_style: ieee
 references_data_file: references
@@ -180,26 +180,34 @@ The following indicators originate from Microsoft Threat Intelligence and Sophos
 
 ## Frequently Asked Questions
 
-### **What is the axios npm supply chain attack?**
+### What is the axios npm supply chain attack?
 
 Attackers published malicious axios versions on npm that introduced `plain-crypto-js@4.2.1`, which executed install-time malware delivery across multiple operating systems {% include references/cite.html key="axios-2026-ref1" %}, {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.
 
-### **Who is responsible for the attack?**
+### Who is responsible for the attack?
 
 Microsoft attributes the activity to Sapphire Sleet, Sophos maps related activity to NICKEL GLADSTONE, and Mandiant tracks overlapping tradecraft under UNC1069 {% include references/cite.html key="axios-2026-ref2" %}, {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.
 
-### **How do I know if my environment is affected?**
+### How do I know if my environment is affected?
 
 Investigate systems that resolved or installed affected axios versions during the exposure window and hunt for reported indicators, including `sfrclak[.]com` and platform payload artifacts {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.
 
-### **What immediate steps should I take?**
+### What immediate steps should I take?
 
 Quarantine affected hosts, rotate exposed credentials, inspect CI logs for vulnerable installs, and remediate by replacing compromised dependencies with known-good versions {% include references/cite.html key="axios-2026-ref1" %}, {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.
 
-### **How was the maintainer's account compromised?**
+### How was the maintainer's account compromised?
 
 Public reports did not conclusively publish every credential theft detail at first disclosure {% include references/cite.html key="axios-2026-ref1" %}. Mandiant tradecraft reporting plus the maintainer post-mortem context supports social engineering as a credible precursor pattern {% include references/cite.html key="axios-2026-ref2" %}, {% include references/cite.html key="axios-2026-ref5" %}.
 
-### **Does removing the malicious package versions remediate the compromise?**
+### Does removing the malicious package versions remediate the compromise?
 
 No. Package removal does not guarantee host recovery after payload execution. Incident response must include endpoint validation, persistence checks, and credential hygiene measures {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.
+
+### What is a software supply chain attack?
+
+A software supply chain attack targets the delivery infrastructure for code rather than the end application directly. Attackers compromise a package registry, maintainer credential, build tool, or dependency repository. Downstream consumers who install or update a package unknowingly receive and execute malicious code. The axios npm event is a confirmed example: a compromised maintainer credential allowed injection of malicious versions into npm's distribution system, propagating to every project that resolved the affected version range {% include references/cite.html key="axios-2026-ref1" %}, {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.
+
+### How do I check whether my npm project used a compromised package?
+
+Review your lockfile (`package-lock.json` or `yarn.lock`) for axios version 1.14.1 or 0.30.4, or for `plain-crypto-js@4.2.1`. Check your CI run logs for installations during the 30-31 March 2026 exposure window. Hunt for IOC domains (`sfrclak[.]com`) and platform-specific payload paths (`/Library/Caches/com.apple.act.mond` on macOS, `C:\ProgramData\wt.exe` on Windows, `/tmp/ld.py` on Linux) in EDR telemetry. The full IOC list appears in the Indicators of Compromise table in this article {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.

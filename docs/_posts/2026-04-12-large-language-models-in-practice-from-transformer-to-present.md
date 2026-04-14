@@ -2,14 +2,14 @@
 layout: post
 title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
 author: Zenith Law
-description: "A revised synthesis of nine educational lectures and nine scholarly works on large language models, tracing an evolutionary arc from the Attention Is All You Need paper to current frontier directions, and converting recurring themes into ten actionable lessons for engineering, governance, and trustworthy deployment."
+description: "LLMs explained: from the 2017 Transformer through GPT-3, alignment, and knowledge distillation. Ten engineering lessons for governance and trustworthy AI deployment."
 permalink: /large-language-models-practice-from-transformer-to-present-frontier
 intro: "This article synthesizes insights from nine educational videos and nine scholarly works on large language models. It traces the evolution from the 2017 Transformer paper through GPT-3, alignment research, knowledge distillation, federated learning, and what recent literature describes as frontier directions beyond monolithic LLM pipelines, then turns recurring themes into ten actionable lessons for engineering, governance, and responsible AI practice."
 image: /assets/images/large-language-models-in-practice-from-transformer-to-present.png
 hero:
   image: /assets/images/large-language-models-in-practice-from-transformer-to-present.png
-keywords: "large language models, transformer, attention, prompt engineering, fine tuning, alignment, hallucination, AI governance, explainability, interpretability, trustworthiness, federated learning, knowledge distillation"
-catchwords: "llm engineering, responsible ai, model governance, technical leadership"
+keywords: "large language models, LLMs explained, how LLMs work, transformer architecture, attention mechanism, prompt engineering, fine tuning LLM, alignment, LLM hallucination, AI governance, explainability, federated learning, knowledge distillation, GPT-3"
+catchwords: "llm engineering, llm deployment, responsible ai, model governance, technical leadership, transformer architecture, prompt engineering, hallucination LLM, federated learning, knowledge distillation"
 references_enabled: true
 references_style: ieee
 references_data_file: references
@@ -255,6 +255,26 @@ In copyright terms, UK readers should treat Section 9(3) CDPA 1988 as relevant b
 This synthesis is intentionally practice-oriented and non-systematic, and therefore sensitive to publication lag and selection effects. Because the 2025-2026 period has seen rapid advances in multimodal systems, agentic orchestration, and evaluation protocols, some frontier claims included here may be revised or superseded by newer empirical studies and benchmark evidence {% include references/cite.html key="llm-2026-ref17" %}, {% include references/cite.html key="llm-2026-ref18" %}.
 
 ## Frequently Asked Questions
+
+### What is a large language model?
+
+A large language model (LLM) is a neural network trained to predict the next token in a sequence of text. "Large" refers to the parameter count (hundreds of billions for frontier models) and the scale of training data (internet-scale corpora). The key architectural insight, introduced by [Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762) in "Attention Is All You Need," is that self-attention replaces sequential recurrence, allowing parallel computation across all positions in a sequence. This parallelism is what made billion-parameter pretraining tractable {% include references/cite.html key="llm-2026-ref10" %}.
+
+### How does the Transformer attention mechanism work?
+
+The [Transformer](https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the model's dimensional space {% include references/cite.html key="llm-2026-ref10" %}.
+
+### What is hallucination in LLMs and how do you prevent it?
+
+Hallucination occurs when an LLM generates plausible-sounding text that is factually wrong, internally inconsistent, or unsupported by any source. The root cause is that LLMs are trained to predict likely next tokens, not to assert truth. Prevention strategies include retrieval-augmented generation (grounding responses in retrieved source documents), contradiction checks against known facts, citation gates that require the model to specify a source for each factual claim, and multi-resolution evaluation that tests factuality separately from fluency. Hallucination is identified as a primary failure mode in both Brown et al. and the synthesis in this article {% include references/cite.html key="llm-2026-ref11" %}, {% include references/cite.html key="llm-2026-ref12" %}.
+
+### What is the difference between fine-tuning and prompt engineering in LLMs?
+
+Fine-tuning updates model weights on a curated dataset, adapting the model's internal representations and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in Yang et al.'s practitioner survey {% include references/cite.html key="llm-2026-ref16" %}.
+
+### What is alignment in large language models?
+
+Alignment is the process of training or constraining an LLM so its outputs are helpful, honest, and harmless relative to intended use. The main techniques include supervised fine-tuning (SFT) on curated question-answer pairs, reinforcement learning from human feedback (RLHF) where human raters score responses and a reward model is trained on those preferences, and constitutional AI methods where the model critiques its own outputs against stated principles. Alignment does not eliminate all failure modes; recent aligned models report improved refusal behavior on specific benchmark suites, not universal reliability. Claims about alignment effectiveness should be evaluated within the reported evaluation setup rather than generalized {% include references/cite.html key="llm-2026-ref12" %}.
 
 ### What central message unifies all sources in this revised collection?
 

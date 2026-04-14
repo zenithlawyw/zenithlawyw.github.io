@@ -1,7 +1,19 @@
-{%- assign refs_enabled = include.enabled
-  | default: page.references_enabled
-  | default: true
--%}
+{%- comment -%}
+  Liquid's default filter treats false as falsy and falls through,
+  so "false | default: true" returns true. Resolve the boolean
+  manually to honour explicit false values in frontmatter.
+{%- endcomment -%}
+{%- if include.enabled == true or include.enabled == 'true' -%}
+  {%- assign refs_enabled = true -%}
+{%- elsif include.enabled == false or include.enabled == 'false' -%}
+  {%- assign refs_enabled = false -%}
+{%- elsif page.references_enabled == false or page.references_enabled == 'false' -%}
+  {%- assign refs_enabled = false -%}
+{%- elsif page.references_enabled == true or page.references_enabled == 'true' -%}
+  {%- assign refs_enabled = true -%}
+{%- else -%}
+  {%- assign refs_enabled = true -%}
+{%- endif -%}
 {%- assign refs_disabled = false -%}
 {%- if refs_enabled == false
   or refs_enabled == 'false'

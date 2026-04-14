@@ -157,27 +157,24 @@ hidden: []
       align-items: center;
       gap: 1rem;
       flex-wrap: wrap;
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      position: static;
       border-top: 1px solid #d1d5db;
-      padding: 0.45rem var(--print-margin-x) 0.15rem;
+      padding: 0.45rem 0 0.15rem;
+      margin-top: 1.2rem;
       font-size: 0.8rem;
       color: #6b7280;
       background: #fff;
+      page-break-inside: avoid;
+      break-inside: avoid;
     }
 
-    /* Fallback for print engines that mishandle fixed footers. */
-    @supports not (position: fixed) {
-      .post-print-footer {
-        position: static;
-        margin-top: 1.2rem;
+    /* Page numbers via CSS Paged Media margin boxes (Chrome 130+, partial Firefox). */
+    @page {
+      @bottom-center {
+        content: 'Page ' counter(page);
+        font-size: 0.7rem;
+        color: #9ca3af;
       }
-    }
-
-    .post-print-page::after {
-      content: counter(page);
     }
 
     .post a[href^='http']::after {
@@ -273,7 +270,10 @@ hidden: []
           | {{ print_author | escape }}
         {% endif %}
       </p>
-      <p class="post-print-url">{{ print_url }}</p>
+      <p class="post-print-url"
+        data-canonical-path="{{ page.url }}"
+        data-production-origin="{{ site.url }}"
+      >{{ print_url }}</p>
     </header>
 
     {% if page.intro %}
@@ -315,6 +315,8 @@ hidden: []
         {%- include views/article.html -%}
 
         {%- include references/list.html -%}
+
+        {%- include views/related-reading.html -%}
 
         {%- assign post_author = page.author | default: site.author -%}
         {%- if post_author -%}
@@ -378,15 +380,58 @@ hidden: []
 
     <footer class="post-print-footer" aria-hidden="true">
       <span>{{ print_copyright }}</span>
-      <span>
-        {{ print_url }} | Page <span class="post-print-page"></span>
-      </span>
+      <span class="post-print-footer-url"
+        data-canonical-path="{{ page.url }}"
+        data-production-origin="{{ site.url }}"
+      >{{ print_url }}</span>
     </footer>
   </section>
 </div>
 
 <script>
-  function printArticle() {
-    window.print();
-  }
+  (function () {
+    function sanitisePrintUrls() {
+      var urlEls = document.querySelectorAll(
+        '.post-print-footer-url, .post-print-url'
+      );
+      for (var i = 0; i < urlEls.length; i++) {
+        var el = urlEls[i];
+        var text = (el.textContent || '').trim();
+        if (
+          !/localhost|127\.0\.0\.1/i.test(text)
+        ) {
+          continue;
+        }
+        var canonicalPath =
+          el.getAttribute('data-canonical-path') || '';
+        var productionOrigin =
+          el.getAttribute('data-production-origin') || '';
+        if (
+          productionOrigin &&
+          !/localhost|127\.0\.0\.1/i.test(productionOrigin)
+        ) {
+          el.textContent = productionOrigin + canonicalPath;
+        } else if (canonicalPath) {
+          el.textContent = canonicalPath;
+        }
+      }
+    }
+
+    function printArticle() {
+      sanitisePrintUrls();
+      window.print();
+    }
+
+    /* Expose to onclick handler. */
+    window.printArticle = printArticle;
+
+    /* Also sanitise when the browser triggers print via Cmd/Ctrl+P. */
+    if (window.matchMedia) {
+      window.matchMedia('print').addEventListener('change', function (mql) {
+        if (mql.matches) {
+          sanitisePrintUrls();
+        }
+      });
+    }
+  })();
 </script>

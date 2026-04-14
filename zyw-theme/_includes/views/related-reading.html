@@ -1,0 +1,46 @@
+{%- assign related = page.related_posts -%}
+{%- if related and related.size > 0 -%}
+  <section
+    class="mt-10 rounded-2xl border border-sky-200 bg-gradient-to-br from-sky-50 to-white p-6 shadow-sm dark:border-sky-900/60 dark:from-gray-900 dark:to-gray-800"
+    aria-labelledby="related-reading-title"
+  >
+    <h2 id="related-reading-title" class="mt-0 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+      Continue Reading in This Series
+    </h2>
+    <p class="mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+      These linked articles extend the same evidence trail and improve navigability for readers and search systems.
+    </p>
+
+    <ol class="mt-4 space-y-3">
+      {%- for item in related -%}
+        {%- assign related_url = item.url | relative_url -%}
+        <li class="rounded-xl border border-gray-200 bg-white/85 p-4 dark:border-gray-700 dark:bg-gray-900/70">
+          <a
+            href="{{ related_url }}"
+            class="text-base font-semibold text-sky-700 hover:text-sky-800 hover:underline dark:text-sky-300 dark:hover:text-sky-200"
+          >
+            {{ item.title | escape }}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ol>
+  </section>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Related Articles",
+      "itemListElement": [
+        {%- for item in related -%}
+          {
+            "@type": "ListItem",
+            "position": {{ forloop.index }},
+            "name": {{ item.title | jsonify }},
+            "url": {{ item.url | absolute_url | jsonify }}
+          }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+{%- endif -%}
