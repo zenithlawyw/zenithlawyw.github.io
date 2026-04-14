@@ -1,5 +1,6 @@
 **/Gemfile.lock
 **/node_modules
+*.zip
 .env*
 .jekyll-cache
 .jekyll-metadata
