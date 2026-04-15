@@ -2,7 +2,7 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="w-full px-4 md:px-6">
-    <div class="site-footer-inner flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="site-footer-inner flex flex-col md:flex-row justify-between gap-3 py-2">
       {%- assign currentYear = 'now' | date: '%Y' -%}
       {%- assign copyright = site.copyright
         | replace: '{currentYear}', currentYear
@@ -12,9 +12,36 @@
         | replace: '(cleft)',
           '<span class="inline-block rotate-180">&copy;</span>'
       -%}
-      <div class="text-sm text-gray-600 dark:text-gray-400">
+
+      {%- assign legal_links = site.footer.legal_links | default: empty -%}
+      {%- assign legal_separator = site.footer.legal_links_separator
+        | default: ' | '
+      -%}
+
+      <div class="order-first text-center text-sm text-gray-600 dark:text-gray-400 md:order-last md:text-left">
         {{ copyright }}
       </div>
+
+      {%- if legal_links.size > 0 -%}
+        <nav
+          aria-label="Footer legal navigation"
+          class="order-last text-center text-sm text-gray-600 dark:text-gray-400 md:order-first md:text-right"
+        >
+          {%- for item in legal_links -%}
+            <a
+              href="{{ item.url | relative_url }}"
+              class="font-medium text-sky-700 hover:text-sky-900 dark:text-sky-300 dark:hover:text-sky-200"
+            >
+              {{ item.label }}
+            </a>
+            {%- unless forloop.last -%}
+              <span aria-hidden="true" class="inline-block px-1">
+                {{- legal_separator -}}
+              </span>
+            {%- endunless -%}
+          {%- endfor -%}
+        </nav>
+      {%- endif -%}
     </div>
   </div>
 </footer>

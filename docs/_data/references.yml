@@ -273,7 +273,7 @@ deadlock-2026-ref5:
 deadlock-2026-ref6:
   short_author: Silberschatz et al.
   year: "2013"
-  ieee: 'A. Silberschatz, P. B. Galvin, and G. Gagne, Operating System Concepts, 9th ed. Wiley, 2013. ISBN: 9781118063330.'
+  ieee: "A. Silberschatz, P. B. Galvin, and G. Gagne, Operating System Concepts, 9th ed. Wiley, 2013. ISBN: 9781118063330."
 
 deadlock-2026-ref7:
   short_author: SLSA
@@ -283,4 +283,4 @@ deadlock-2026-ref7:
 deadlock-2026-ref8:
   short_author: Tanenbaum and Bos
   year: "2015"
-  ieee: 'A. S. Tanenbaum and H. Bos, Modern Operating Systems, 4th ed. Pearson, 2015. ISBN: 9780133591620.'
+  ieee: "A. S. Tanenbaum and H. Bos, Modern Operating Systems, 4th ed. Pearson, 2015. ISBN: 9780133591620."

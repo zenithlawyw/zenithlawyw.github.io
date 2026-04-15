@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<section class="mx-auto max-w-4xl py-8">
+  {%- assign legal_last_updated = page.last_updated
+    | default: page.last_modified_at
+    | default: page.date
+    | default: site.time
+  -%}
+  {%- assign legal_date_format = page.last_updated_format
+    | default: site.zyw.date_format
+    | default: '%-d %B %Y'
+  -%}
+  <article class="rounded-3xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-8 shadow-sm md:p-10 prose dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-p:text-gray-800 dark:prose-p:text-gray-200 prose-li:text-gray-800 dark:prose-li:text-gray-200 prose-strong:text-gray-900 dark:prose-strong:text-gray-100 prose-a:text-blue-700 dark:prose-a:text-blue-400 max-w-none">
+    {%- if page.show_last_updated != false -%}
+      <p class="not-prose mt-0 mb-6 text-sm text-gray-600 dark:text-gray-400">
+        <strong>Last updated:</strong>
+        {{ legal_last_updated | date: legal_date_format }}.
+      </p>
+    {%- endif -%}
+    {{ content }}
+  </article>
+</section>

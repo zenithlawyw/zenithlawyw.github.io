@@ -11,6 +11,9 @@
       <main class="page-content flex-1 py-16 pt-20" aria-label="Content">
         <div class="wrapper w-full mx-auto px-4 md:px-8">
           {{ content }}
+          <div class="mt-12">
+            {%- include extensions/legal-compliance-notice.html -%}
+          </div>
         </div>
       </main>
     {% endunless %}
