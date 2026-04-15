@@ -1,20 +1,24 @@
 {%- assign related = page.related_posts -%}
 {%- if related and related.size > 0 -%}
   <section
-    class="mt-10 rounded-2xl border border-sky-200 bg-gradient-to-br from-sky-50 to-white p-6 shadow-sm dark:border-sky-900/60 dark:from-gray-900 dark:to-gray-800"
+    class="mt-12 p-0"
     aria-labelledby="related-reading-title"
   >
-    <h2 id="related-reading-title" class="mt-0 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+    <h2
+      id="related-reading-title"
+      class="mt-0 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100"
+    >
       Continue Reading in This Series
     </h2>
     <p class="mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-      These linked articles extend the same evidence trail and improve navigability for readers and search systems.
+      These linked articles extend the same evidence trail and improve
+      navigability for readers and search systems.
     </p>
 
-    <ol class="mt-4 space-y-3">
+    <ol class="mt-4 divide-y divide-gray-200 dark:divide-gray-700">
       {%- for item in related -%}
         {%- assign related_url = item.url | relative_url -%}
-        <li class="rounded-xl border border-gray-200 bg-white/85 p-4 dark:border-gray-700 dark:bg-gray-900/70">
+        <li class="py-3 first:pt-0 last:pb-0">
           <a
             href="{{ related_url }}"
             class="text-base font-semibold text-sky-700 hover:text-sky-800 hover:underline dark:text-sky-300 dark:hover:text-sky-200"

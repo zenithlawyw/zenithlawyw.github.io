@@ -2,7 +2,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://zenithlaw.com" # production hostname for absolute links, canonical tags, and print URLs
 favicon: "/favicon.ico" # the favicon for your site
 title: Zenith Law
-email: zenith@zenithlaw.com
+email: hello@zenithlaw.com
 author: Zenith Law
 twitter_username: zenithlawyw
 github_username: zenithlawyw
@@ -51,6 +51,31 @@ references:
 
 post_menu:
   sticky_gap: 12
+
+footer:
+  legal_links:
+    - label: Legal
+      url: /legal/
+    - label: Privacy & Cookies
+      url: /legal/privacy-cookies-data-protection/
+    - label: Terms of Use
+      url: /legal/terms-of-use/
+    - label: Disclaimer
+      url: /legal/disclaimer/
+  legal_links_separator: " | "
+
+legal_compliance_notice:
+  enabled: true
+  title: "Legal and Compliance Notice"
+  body: "This content is provided for educational and informational purposes only. It is not legal, regulated professional, tax, audit, investment, or other jurisdiction-specific advice."
+  links_intro: "For full details on scope boundaries, privacy and data protection practices, applicable jurisdictions, and legal terms, please refer to our"
+  links:
+    - label: "Legal Notices"
+      url: /legal/
+    - label: "Privacy, Cookies and Data Protection"
+      url: /legal/privacy-cookies-data-protection/
+    - label: "Disclaimer"
+      url: /legal/disclaimer/
 
 markdown: kramdown
 highlighter: rouge

@@ -262,7 +262,7 @@ A large language model (LLM) is a neural network trained to predict the next tok
 
 ### How does the Transformer attention mechanism work?
 
-The [Transformer](https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the model's dimensional space {% include references/cite.html key="llm-2026-ref10" %}.
+The [Transformer](<https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)>) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the model's dimensional space {% include references/cite.html key="llm-2026-ref10" %}.
 
 ### What is hallucination in LLMs and how do you prevent it?
 
