@@ -13,6 +13,8 @@ Last Updated: {{ site.time | date_to_xmlschema }}
 
 ## Primary Navigation Endpoints
 - {{ '/' | absolute_url }}
+- {{ '/glossary/' | absolute_url }}
+- {{ '/faq/' | absolute_url }}
 - {{ '/categories.html' | absolute_url }}
 - {{ '/tags.html' | absolute_url }}
 - {{ '/404.html' | absolute_url }}
