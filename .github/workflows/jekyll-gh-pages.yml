@@ -34,6 +34,10 @@ jobs:
         working-directory: ./docs
         run: ruby scripts/generate_seo_auto.rb
 
+      - name: Generate glossary auto data
+        working-directory: ./docs
+        run: ruby scripts/generate_glossary_auto.rb
+
       - name: Validate SEO auto data
         working-directory: ./docs
         run: |
@@ -41,9 +45,22 @@ jobs:
           test -f _data/seo_auto.yml || { echo "ERROR: _data/seo_auto.yml is missing"; exit 1; }
           test -s _data/seo_auto.yml || { echo "ERROR: _data/seo_auto.yml is empty"; exit 1; }
           grep -q '^keywords:' _data/seo_auto.yml || { echo "ERROR: keywords section missing in _data/seo_auto.yml"; exit 1; }
+          grep -q '^search_words:' _data/seo_auto.yml || { echo "ERROR: search_words section missing in _data/seo_auto.yml"; exit 1; }
           grep -q '^posts:' _data/seo_auto.yml || { echo "ERROR: posts section missing in _data/seo_auto.yml"; exit 1; }
+          grep -q '^pages:' _data/seo_auto.yml || { echo "ERROR: pages section missing in _data/seo_auto.yml"; exit 1; }
+          grep -q '^global_questions:' _data/seo_auto.yml || { echo "ERROR: global_questions section missing in _data/seo_auto.yml"; exit 1; }
           grep -q '^- ' _data/seo_auto.yml || { echo "ERROR: _data/seo_auto.yml contains no generated list items"; exit 1; }
           echo "SEO auto data validation passed"
+
+      - name: Validate glossary auto data
+        working-directory: ./docs
+        run: |
+          set -euo pipefail
+          test -f _data/glossary_auto.yml || { echo "ERROR: _data/glossary_auto.yml is missing"; exit 1; }
+          test -s _data/glossary_auto.yml || { echo "ERROR: _data/glossary_auto.yml is empty"; exit 1; }
+          grep -q '^total_candidates:' _data/glossary_auto.yml || { echo "ERROR: total_candidates missing in _data/glossary_auto.yml"; exit 1; }
+          grep -q '^candidates:' _data/glossary_auto.yml || { echo "ERROR: candidates section missing in _data/glossary_auto.yml"; exit 1; }
+          echo "Glossary auto data validation passed"
 
       - name: Build publish pipeline (Makefile)
         run: make -C docs publish

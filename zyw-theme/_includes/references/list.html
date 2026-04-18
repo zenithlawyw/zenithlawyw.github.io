@@ -80,10 +80,7 @@
       </h2>
 
       <ol
-        class="mb-0 mt-5 space-y-4 text-sm leading-relaxed md:text-base{% if refs_style != 'ieee' %} pl-5{% endif %}"
-        {% if refs_style == 'ieee' %}
-          style="list-style: none; padding-left: 0;"
-        {% endif %}
+        class="mb-0 mt-5 space-y-4 text-sm leading-relaxed md:text-base{% if refs_style != 'ieee' %} pl-5{% else %} list-none pl-0{% endif %}"
       >
         {%- for ref in refs -%}
           {%- assign ref_key = ref.key | default: ref.id | default: ref -%}
@@ -116,6 +113,7 @@
     </section>
 
     <script>
+      <!--//
       (function () {
         function compactUrlLabel(url, maxLength) {
           var cleaned = (url || '')
@@ -268,6 +266,7 @@
           { passive: true }
         );
       })();
+      //-->
     </script>
   {%- endif -%}
 {%- endunless -%}

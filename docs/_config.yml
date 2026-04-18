@@ -124,6 +124,14 @@ translate_reserved_words:
   - Zenith Law
 
 nav_pages:
+  - glossary.md
+  - faq.md
+
+glossary:
+  moderation:
+    enabled: true
+    show_unapproved: false
+    show_notice: false
 
 seo:
   robots: "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" # Default crawler directives for all bots.
