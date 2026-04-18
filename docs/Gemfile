@@ -4,6 +4,7 @@ gem "github-pages", "~> 232", group: :jekyll_plugins
 gem "zyw-theme", "~> 0.1.0", path: "../zyw-theme"
 gem "wdm", "~> 0.1", :platforms => [:windows]
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+gem "faraday-retry", "~> 2.2"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"

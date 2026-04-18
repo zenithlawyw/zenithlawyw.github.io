@@ -17,13 +17,35 @@
   | absolute_url
 -%}
 {%- assign page_slug_key = page.slug | default: '' -%}
+{%- if page_slug_key == '' -%}
+  {%- assign url_parts = page.url | split: '/' | reverse -%}
+  {%- for part in url_parts -%}
+    {%- if page_slug_key == '' and part != '' and part != 'index.html' -%}
+      {%- assign page_slug_key = part | replace: '.html', '' -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
 {%- assign auto_post_terms = null -%}
+{%- assign auto_page_terms = null -%}
+{%- assign auto_terms = null -%}
 {%- if seo_auto
   and page_slug_key != ''
   and seo_auto.posts
   and seo_auto.posts[page_slug_key]
 -%}
   {%- assign auto_post_terms = seo_auto.posts[page_slug_key] -%}
+{%- endif -%}
+{%- if seo_auto
+  and page_slug_key != ''
+  and seo_auto.pages
+  and seo_auto.pages[page_slug_key]
+-%}
+  {%- assign auto_page_terms = seo_auto.pages[page_slug_key] -%}
+{%- endif -%}
+{%- if auto_post_terms -%}
+  {%- assign auto_terms = auto_post_terms -%}
+{%- elsif auto_page_terms -%}
+  {%- assign auto_terms = auto_page_terms -%}
 {%- endif -%}
 
 <script type="application/ld+json">
@@ -183,8 +205,8 @@
 {%- endif -%}
 
 {%- assign faq_items = page.faq -%}
-{%- if (faq_items == nil or faq_items.size == 0) and auto_post_terms and auto_post_terms.questions and auto_post_terms.questions.size > 0 -%}
-  {%- assign faq_items = auto_post_terms.questions -%}
+{%- if (faq_items == nil or faq_items.size == 0) and auto_terms and auto_terms.questions and auto_terms.questions.size > 0 -%}
+  {%- assign faq_items = auto_terms.questions -%}
 {%- endif -%}
 {%- if faq_items and faq_items.size > 0 -%}
   <script type="application/ld+json">

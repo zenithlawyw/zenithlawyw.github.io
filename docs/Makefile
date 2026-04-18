@@ -1,4 +1,4 @@
-.PHONY: help bootstrap install start stop restart prebuild build publish clean serve seo-auto
+.PHONY: help bootstrap install start stop restart prebuild build publish clean serve seo-auto glossary-auto taxonomy-auto
 
 # Variables
 BUNDLE := bundle exec
@@ -37,7 +37,9 @@ help:
 	@echo "  prebuild     - Run content generation scripts before build/publish"
 	@echo "  build        - Build static site"
 	@echo "  publish      - Run full publish pipeline (prebuild + production build)"
-	@echo "  seo-auto     - Generate auto SEO/AEO/GEO vocabulary from posts"
+	@echo "  seo-auto     - Generate auto SEO/AEO/GEO vocabulary and FAQ extraction"
+	@echo "  glossary-auto - Generate auto glossary terminology candidates"
+	@echo "  taxonomy-auto - Run all automated taxonomy extractors"
 	@echo "  serve        - Start server and watch for changes (foreground)"
 	@echo "  clean        - Remove generated _site directory"
 	@echo "  help         - Show this help message"
@@ -77,11 +79,19 @@ restart: stop start
 	@echo "✓ Server restarted"
 
 seo-auto:
-	@echo "Generating automatic SEO vocabulary and post Q&A profile..."
+	@echo "Generating automatic SEO/AEO/GEO vocabulary and FAQ extraction..."
 	ruby scripts/generate_seo_auto.rb
 	@echo "✓ SEO auto data updated (_data/seo_auto.yml)"
 
-prebuild: seo-auto
+glossary-auto:
+	@echo "Generating automatic glossary terminology candidates..."
+	ruby scripts/generate_glossary_auto.rb
+	@echo "✓ Glossary auto data updated (_data/glossary_auto.yml)"
+
+taxonomy-auto: seo-auto glossary-auto
+	@echo "✓ Taxonomy extractors complete"
+
+prebuild: taxonomy-auto
 	@echo "✓ Prebuild scripts complete"
 
 build: prebuild

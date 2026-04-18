@@ -28,6 +28,7 @@ theme
 
 # Scripts
 scripts
+!docs/scripts
 
 # Temp files
 *.log

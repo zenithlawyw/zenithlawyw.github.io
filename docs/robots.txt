@@ -4,6 +4,27 @@ layout: null
 User-agent: *
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 # Block noisy crawler paths that are not useful for indexing.
 Disallow: /vendor/
 Disallow: /.bundle/
@@ -12,4 +33,5 @@ Disallow: /node_modules/
 # Avoid crawling parameterized duplicates (e.g., UTM/query variants).
 Disallow: /*?*
 
+Host: zenithlaw.com
 Sitemap: {{ '/sitemap.xml' | absolute_url }}
