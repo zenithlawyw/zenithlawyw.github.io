@@ -1,13 +1,36 @@
-**/Gemfile.lock
-**/node_modules
-*.zip
+# Environment variables
 .env*
+
+# GitHub Pages
+ghpages
+_site
+vendor
+
+# Jekyll / Ruby
+**/Gemfile.lock
 .jekyll-cache
 .jekyll-metadata
-.sass-cache
-.venv
-_site
-ghpages
 theme
-vendor
+
+# macOS
+.DS_Store
+
+# Markdown
+*.md
+!docs/*.md
+!zyw-theme/*.md
+
+# Node.js / npm
+**/node_modules
+
+# Python
+.venv
+
+# Scripts
+scripts
+
+# Temp files
+*.log
+*.tmp
+*.zip
 resources
