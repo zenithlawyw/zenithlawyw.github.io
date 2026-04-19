@@ -82,6 +82,6 @@
   -%}
 
   {{ include.prefix -}}
-  <a class="{{ cite_class }}" href="#{{ cite_anchor | escape }}">{{ label }}</a>
+  <a class="{{ cite_class }}" href="#{{ cite_anchor | escape }}" data-cite-modal="true" data-cite-anchor="{{ cite_anchor | escape }}" data-cite-label="{{ label | escape }}" data-cite-title="{{ label | escape }}" aria-haspopup="dialog" aria-expanded="false">{{ label }}</a>
   {{- include.suffix }}
 {%- endif -%}

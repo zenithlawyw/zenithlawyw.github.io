@@ -70,6 +70,7 @@
       data-compact-breakpoint="{{ refs_compact_breakpoint }}"
       data-url-label-min="{{ refs_url_label_min }}"
       data-url-label-max="{{ refs_url_label_max }}"
+      data-reference-heading-id="{{ refs_heading_id | escape }}"
       aria-labelledby="{{ refs_heading_id | escape }}-title"
     >
       <h2
@@ -112,9 +113,535 @@
       </ol>
     </section>
 
+    <div
+      id="citation-modal"
+      class="pointer-events-none fixed inset-0 z-[120] hidden"
+      aria-hidden="true"
+    >
+      <div
+        class="pointer-events-auto fixed w-[calc(100vw-2rem)] overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl dark:border-gray-700 dark:bg-gray-900"
+        style="max-width: 760px; left: 1rem; top: 1rem;"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="citation-modal-title"
+        data-cite-modal-drag-handle="true"
+      >
+        <div id="citation-modal-content" class="max-h-[65vh] overflow-auto px-4 py-4 text-sm leading-relaxed text-gray-800 dark:text-gray-200 md:px-5"></div>
+        <div class="flex items-center justify-between gap-4 border-t border-gray-200 px-4 py-3 dark:border-gray-700 md:px-5">
+          <a
+            href="#{{ refs_heading_id | escape }}"
+            id="citation-modal-jump"
+            class="text-sm font-medium text-sky-700 underline decoration-sky-300 underline-offset-2 hover:text-sky-800 dark:text-sky-300 dark:hover:text-sky-200"
+          >
+            Go to reference section
+          </a>
+          <button
+            type="button"
+            class="rounded-md border border-gray-300 px-3 py-1.5 text-xs font-semibold text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800"
+            data-cite-modal-close="secondary"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script>
       <!--//
       (function () {
+        var activeCitationTrigger = null;
+        var isModalDragging = false;
+        var modalDragOffsetX = 0;
+        var modalDragOffsetY = 0;
+        var modalPositionedByUser = false;
+
+        function getCitationModal() {
+          return document.getElementById('citation-modal');
+        }
+
+        function getCitationModalPanel() {
+          var modal = getCitationModal();
+          return modal ? modal.querySelector('[role="dialog"]') : null;
+        }
+
+        function isCitationModalOpen() {
+          var modal = getCitationModal();
+          return !!modal && modal.getAttribute('aria-hidden') === 'false';
+        }
+
+        function setModalVisibility(modal, visible) {
+          if (!modal) {
+            return;
+          }
+
+          if (visible) {
+            modal.classList.remove('hidden');
+            modal.setAttribute('aria-hidden', 'false');
+            return;
+          }
+
+          modal.classList.add('hidden');
+          modal.setAttribute('aria-hidden', 'true');
+        }
+
+        function parseHashFromHref(href) {
+          if (!href) {
+            return '';
+          }
+
+          var hashIndex = href.indexOf('#');
+          if (hashIndex < 0) {
+            return '';
+          }
+
+          return href.slice(hashIndex + 1);
+        }
+
+        function computeModalMaxWidth(trigger, modalPanel) {
+          if (!trigger || !modalPanel) {
+            return;
+          }
+
+          var viewportWidth =
+            window.innerWidth || document.documentElement.clientWidth || 1024;
+          var hardLimit = Math.max(320, viewportWidth - 32);
+
+          var paragraph = trigger.closest('p, li, blockquote, td, dd, dt, h1, h2, h3, h4, h5, h6');
+          var paragraphWidth = 0;
+          if (paragraph) {
+            paragraphWidth = Math.floor(paragraph.getBoundingClientRect().width);
+          }
+
+          var resolvedMax = hardLimit;
+          if (paragraphWidth > 0) {
+            resolvedMax = Math.min(hardLimit, paragraphWidth);
+          }
+
+          function isElementVisible(el) {
+            if (!el) {
+              return false;
+            }
+
+            var style = window.getComputedStyle(el);
+            if (
+              style.display === 'none' ||
+              style.visibility === 'hidden' ||
+              style.opacity === '0'
+            ) {
+              return false;
+            }
+
+            var rect = el.getBoundingClientRect();
+            return rect.width > 0 && rect.height > 0;
+          }
+
+          function collectObstructionRects() {
+            var selectors = [
+              '.post-menu-wrap',
+              '.article-menu',
+              '.table-of-contents',
+              '[data-overlay-panel="true"]',
+              '[data-modal-overlay="true"]',
+              '[data-drawer="open"]'
+            ];
+            var rects = [];
+
+            for (var s = 0; s < selectors.length; s++) {
+              var nodes = document.querySelectorAll(selectors[s]);
+              for (var n = 0; n < nodes.length; n++) {
+                var node = nodes[n];
+                if (node === modalPanel || node.contains(modalPanel)) {
+                  continue;
+                }
+                if (!isElementVisible(node)) {
+                  continue;
+                }
+                rects.push(node.getBoundingClientRect());
+              }
+            }
+
+            return rects;
+          }
+
+          var triggerRect = trigger.getBoundingClientRect();
+          var startLeft = triggerRect.left;
+          var safeGap = 12;
+          var obstructions = collectObstructionRects();
+          var rightBoundary = viewportWidth - 16;
+
+          for (var i = 0; i < obstructions.length; i++) {
+            var rect = obstructions[i];
+            var verticallyRelevant =
+              rect.bottom > (triggerRect.top - 24) &&
+              rect.top < (triggerRect.bottom + 320);
+
+            if (!verticallyRelevant) {
+              continue;
+            }
+
+            if (rect.left > startLeft) {
+              rightBoundary = Math.min(rightBoundary, rect.left - safeGap);
+            }
+          }
+
+          var contextualLimit = rightBoundary - startLeft;
+          if (contextualLimit > 0) {
+            resolvedMax = Math.min(resolvedMax, contextualLimit);
+          }
+
+          modalPanel.style.maxWidth = Math.max(300, resolvedMax) + 'px';
+        }
+
+        function positionModalUnderCitation(trigger, modalPanel) {
+          if (!trigger || !modalPanel) {
+            return;
+          }
+
+          var viewportWidth =
+            window.innerWidth || document.documentElement.clientWidth || 1024;
+          var viewportHeight =
+            window.innerHeight || document.documentElement.clientHeight || 768;
+
+          var triggerRect = trigger.getBoundingClientRect();
+          var panelRect = modalPanel.getBoundingClientRect();
+          var gap = 8;
+
+          var nextLeft = triggerRect.left;
+          var nextTop = triggerRect.bottom + gap;
+
+          var maxLeft = Math.max(8, viewportWidth - panelRect.width - 8);
+          var maxTop = Math.max(8, viewportHeight - panelRect.height - 8);
+
+          if (nextLeft > maxLeft) {
+            nextLeft = maxLeft;
+          }
+          if (nextLeft < 8) {
+            nextLeft = 8;
+          }
+
+          if (nextTop > maxTop) {
+            nextTop = Math.max(8, triggerRect.top - panelRect.height - gap);
+          }
+          if (nextTop < 8) {
+            nextTop = 8;
+          }
+
+          modalPanel.style.left = Math.round(nextLeft) + 'px';
+          modalPanel.style.top = Math.round(nextTop) + 'px';
+        }
+
+        function openCitationModal(trigger) {
+          if (!trigger) {
+            return;
+          }
+
+          var modal = getCitationModal();
+          var modalContent = document.getElementById('citation-modal-content');
+          var modalJump = document.getElementById('citation-modal-jump');
+          var modalPanel = getCitationModalPanel();
+
+          if (!modal || !modalContent || !modalJump || !modalPanel) {
+            return;
+          }
+
+          var targetHash =
+            trigger.getAttribute('data-cite-anchor') ||
+            parseHashFromHref(trigger.getAttribute('href'));
+
+          if (!targetHash) {
+            return;
+          }
+
+          var refNode = document.getElementById(targetHash);
+          if (!refNode) {
+            return;
+          }
+
+          var contentNode = refNode.cloneNode(true);
+          var indexLabel = contentNode.querySelector('span');
+          if (indexLabel && /\[\d+\]/.test((indexLabel.textContent || '').trim())) {
+            indexLabel.remove();
+          }
+
+          var titleText =
+            trigger.getAttribute('data-cite-label') ||
+            trigger.getAttribute('data-cite-title') ||
+            'Citation';
+          titleText = titleText.replace(/^Reference\s+/i, '').trim();
+
+          var bodyHtml = contentNode.innerHTML;
+          var labelHtml =
+            '<span id="citation-modal-title" class="font-semibold text-gray-900 dark:text-gray-100">' +
+            titleText +
+            '</span>';
+          modalContent.innerHTML = labelHtml + ' ' + bodyHtml.replace(/^\s+/, '');
+
+          modalJump.setAttribute('href', '#' + targetHash);
+          modalJump.textContent = 'Go to reference ' + (trigger.getAttribute('data-cite-label') || 'entry');
+
+          computeModalMaxWidth(trigger, modalPanel);
+          if (!modalPositionedByUser) {
+            positionModalUnderCitation(trigger, modalPanel);
+          }
+
+          activeCitationTrigger = trigger;
+          trigger.setAttribute('aria-expanded', 'true');
+          setModalVisibility(modal, true);
+        }
+
+        function closeCitationModal() {
+          var modal = getCitationModal();
+          if (!modal) {
+            return;
+          }
+
+          setModalVisibility(modal, false);
+          isModalDragging = false;
+          modalPositionedByUser = false;
+
+          if (activeCitationTrigger) {
+            activeCitationTrigger.setAttribute('aria-expanded', 'false');
+            activeCitationTrigger.focus();
+            activeCitationTrigger = null;
+          }
+        }
+
+        function setupCitationModalDrag() {
+          var modal = getCitationModal();
+          var modalPanel = getCitationModalPanel();
+          if (!modal || !modalPanel) {
+            return;
+          }
+
+          var dragHandle = modalPanel.querySelector('[data-cite-modal-drag-handle="true"]');
+          if (!dragHandle) {
+            return;
+          }
+
+          dragHandle.addEventListener('mousedown', function (event) {
+            if (event.button !== 0) {
+              return;
+            }
+
+            if (event.target.closest('button,a,input,textarea,select,label')) {
+              return;
+            }
+
+            var panelRect = modalPanel.getBoundingClientRect();
+            isModalDragging = true;
+            modalPositionedByUser = true;
+            modalDragOffsetX = event.clientX - panelRect.left;
+            modalDragOffsetY = event.clientY - panelRect.top;
+
+            event.preventDefault();
+          });
+
+          document.addEventListener('mousemove', function (event) {
+            if (!isModalDragging || !isCitationModalOpen()) {
+              return;
+            }
+
+            var viewportWidth =
+              window.innerWidth || document.documentElement.clientWidth || 1024;
+            var viewportHeight =
+              window.innerHeight || document.documentElement.clientHeight || 768;
+            var panelRect = modalPanel.getBoundingClientRect();
+
+            var nextLeft = event.clientX - modalDragOffsetX;
+            var nextTop = event.clientY - modalDragOffsetY;
+
+            var maxLeft = Math.max(8, viewportWidth - panelRect.width - 8);
+            var maxTop = Math.max(8, viewportHeight - panelRect.height - 8);
+
+            if (nextLeft < 8) {
+              nextLeft = 8;
+            }
+            if (nextLeft > maxLeft) {
+              nextLeft = maxLeft;
+            }
+            if (nextTop < 8) {
+              nextTop = 8;
+            }
+            if (nextTop > maxTop) {
+              nextTop = maxTop;
+            }
+
+            modalPanel.style.left = Math.round(nextLeft) + 'px';
+            modalPanel.style.top = Math.round(nextTop) + 'px';
+          });
+
+          document.addEventListener('mouseup', function () {
+            isModalDragging = false;
+          });
+        }
+
+        function closeModalWhenOutOfViewport() {
+          if (!isCitationModalOpen()) {
+            return;
+          }
+
+          var modalPanel = getCitationModalPanel();
+          if (!modalPanel || !activeCitationTrigger) {
+            closeCitationModal();
+            return;
+          }
+
+          var viewportWidth =
+            window.innerWidth || document.documentElement.clientWidth || 1024;
+          var viewportHeight =
+            window.innerHeight || document.documentElement.clientHeight || 768;
+
+          var triggerRect = activeCitationTrigger.getBoundingClientRect();
+          var panelRect = modalPanel.getBoundingClientRect();
+
+          var triggerOut =
+            triggerRect.bottom < 0 ||
+            triggerRect.top > viewportHeight ||
+            triggerRect.right < 0 ||
+            triggerRect.left > viewportWidth;
+
+          var panelOut =
+            panelRect.bottom < 0 ||
+            panelRect.top > viewportHeight ||
+            panelRect.right < 0 ||
+            panelRect.left > viewportWidth;
+
+          if (triggerOut || panelOut) {
+            closeCitationModal();
+            return;
+          }
+
+          if (!modalPositionedByUser) {
+            positionModalUnderCitation(activeCitationTrigger, modalPanel);
+          }
+        }
+
+        function getVisibleElementHeight(selectorList) {
+          var maxHeight = 0;
+          for (var i = 0; i < selectorList.length; i++) {
+            var nodes = document.querySelectorAll(selectorList[i]);
+            for (var n = 0; n < nodes.length; n++) {
+              var node = nodes[n];
+              if (!node) {
+                continue;
+              }
+
+              var style = window.getComputedStyle(node);
+              if (
+                style.display === 'none' ||
+                style.visibility === 'hidden' ||
+                style.opacity === '0'
+              ) {
+                continue;
+              }
+
+              var rect = node.getBoundingClientRect();
+              if (rect.height <= 0 || rect.bottom <= 0) {
+                continue;
+              }
+
+              var candidate = Math.min(rect.height, Math.max(0, rect.bottom));
+              if (candidate > maxHeight) {
+                maxHeight = candidate;
+              }
+            }
+          }
+
+          return Math.round(maxHeight);
+        }
+
+        function scrollToReferenceAnchorWithOffset(anchorId) {
+          if (!anchorId) {
+            return;
+          }
+
+          var target = document.getElementById(anchorId);
+          if (!target) {
+            return;
+          }
+
+          var viewportWidth =
+            window.innerWidth || document.documentElement.clientWidth || 1024;
+          var isNarrowViewport = viewportWidth <= 1024;
+
+          var headerHeight = getVisibleElementHeight([
+            'header.site-header',
+            '.site-header',
+            '[data-site-header="true"]',
+            '.navbar',
+            'nav.sticky',
+            '.sticky.top-0'
+          ]);
+
+          var tocHeight = isNarrowViewport
+            ? getVisibleElementHeight([
+                '.post-menu-wrap',
+                '.article-menu',
+                '.table-of-contents'
+              ])
+            : 0;
+
+          var extraGap = 12;
+          var offset = headerHeight + tocHeight + extraGap;
+          var top =
+            target.getBoundingClientRect().top +
+            (window.pageYOffset || window.scrollY || 0) -
+            offset;
+
+          window.scrollTo({
+            top: Math.max(0, Math.round(top)),
+            behavior: 'smooth'
+          });
+        }
+
+        function setupCitationModalInteractions() {
+          var modal = getCitationModal();
+          if (!modal || modal.getAttribute('data-cite-modal-ready') === 'true') {
+            return;
+          }
+
+          setupCitationModalDrag();
+
+          document.addEventListener('click', function (event) {
+            var citeLink = event.target.closest('a[data-cite-modal="true"]');
+            if (citeLink) {
+              event.preventDefault();
+              openCitationModal(citeLink);
+              return;
+            }
+
+            if (event.target.closest('[data-cite-modal-close]')) {
+              event.preventDefault();
+              closeCitationModal();
+              return;
+            }
+
+            var jumpLink = event.target.closest('#citation-modal-jump');
+            if (jumpLink) {
+              event.preventDefault();
+              var jumpTarget = parseHashFromHref(jumpLink.getAttribute('href'));
+              closeCitationModal();
+              scrollToReferenceAnchorWithOffset(jumpTarget);
+              return;
+            }
+
+            if (isCitationModalOpen()) {
+              var modalPanel = getCitationModalPanel();
+              if (modalPanel && !event.target.closest('[role="dialog"]')) {
+                closeCitationModal();
+              }
+            }
+          });
+
+          document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
+              closeCitationModal();
+            }
+          });
+
+          modal.setAttribute('data-cite-modal-ready', 'true');
+        }
+
         function compactUrlLabel(url, maxLength) {
           var cleaned = (url || '')
             .replace(/^https?:\/\//i, '')
@@ -251,10 +778,14 @@
         if (document.readyState === 'loading') {
           document.addEventListener(
             'DOMContentLoaded',
-            applyCompactReferenceUrls
+            function () {
+              applyCompactReferenceUrls();
+              setupCitationModalInteractions();
+            }
           );
         } else {
           applyCompactReferenceUrls();
+          setupCitationModalInteractions();
         }
 
         window.addEventListener('resize', onResizeOrOrientationChange, {
@@ -265,6 +796,9 @@
           onResizeOrOrientationChange,
           { passive: true }
         );
+        window.addEventListener('scroll', closeModalWhenOutOfViewport, {
+          passive: true,
+        });
       })();
       //-->
     </script>
