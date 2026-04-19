@@ -44,6 +44,42 @@ GENERIC_QUESTION_PATTERNS = [
 
 CONTENT_EXTENSIONS = %w[md markdown html].freeze
 
+# Taxonomy-first weighting for SEO/GEO/AEO keyword inference.
+# Categories and tags are curated topical intent labels, so they should outweigh
+# descriptive prose fields that are noisier and more verbose.
+SIGNAL_FIELD_WEIGHTS = {
+  title: 3,
+  categories: 5,
+  tags: 5,
+  intro: 2,
+  description: 2,
+  headings: 2,
+  keywords: 1,
+  catchwords: 1
+}.freeze
+
+SIGNAL_WEIGHT_RATIONALE = {
+  'categories_tags' => 'Highest weight because these fields encode editor-curated topical intent and improve stable retrieval anchors for SEO/GEO/AEO.',
+  'title' => 'High but lower than taxonomy because titles can include stylistic language not intended as retrieval anchors.',
+  'intro_description_headings' => 'Medium weight for context enrichment without dominating keyword extraction.',
+  'keywords_catchwords' => 'Low weight to avoid over-amplifying manually supplied or potentially noisy token lists.'
+}.freeze
+
+def validate_signal_weights!
+  category_weight = SIGNAL_FIELD_WEIGHTS[:categories]
+  tag_weight = SIGNAL_FIELD_WEIGHTS[:tags]
+  baseline_fields = %i[title intro description headings keywords catchwords]
+
+  baseline_fields.each do |field|
+    weight = SIGNAL_FIELD_WEIGHTS[field]
+    next if category_weight > weight && tag_weight > weight
+
+    raise "Signal weight profile invalid: categories/tags must be greater than #{field}"
+  end
+end
+
+validate_signal_weights!
+
 
 def normalize_stop_term(term)
   value = term.to_s.downcase.strip
@@ -178,16 +214,23 @@ def build_signal_text(fields)
   catchwords = Array(fields[:catchwords]).map(&:to_s)
   headings = Array(fields[:headings]).map(&:to_s)
 
-  # Weight high-signal fields more than taxonomy labels.
+  # Apply explicit field weights so curated taxonomy labels dominate.
   segments = []
-  3.times { segments << title }
-  2.times { segments << intro }
-  2.times { segments << description }
-  segments << headings.join(' ')
-  segments << keywords.join(' ')
-  segments << catchwords.join(' ')
-  segments << tags.join(' ')
-  segments << categories.join(' ')
+
+  {
+    title: title,
+    categories: categories.join(' '),
+    tags: tags.join(' '),
+    intro: intro,
+    description: description,
+    headings: headings.join(' '),
+    keywords: keywords.join(' '),
+    catchwords: catchwords.join(' ')
+  }.each do |field, text|
+    next if text.strip.empty?
+
+    SIGNAL_FIELD_WEIGHTS.fetch(field, 1).times { segments << text }
+  end
 
   segments.join("\n")
 end
@@ -599,6 +642,8 @@ all_questions = dedupe_and_rank_questions(all_questions, 250)
 
 payload = {
   'generated_at' => Time.now.utc.iso8601,
+  'signal_weights' => SIGNAL_FIELD_WEIGHTS.transform_keys(&:to_s),
+  'signal_weight_rationale' => SIGNAL_WEIGHT_RATIONALE,
   'keywords' => global_keywords,
   'key_phrases' => global_key_phrases,
   'catchwords' => global_catchwords,
