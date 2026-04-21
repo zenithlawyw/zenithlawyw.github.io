@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {%- include head.html -%}
-  <body class="min-h-screen flex flex-col bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased">
+  <body class="flex min-h-screen flex-col bg-white text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100">
     {%- include views/header.html -%}
     {%- include views/hero.html -%}
     {%- include extensions/scroll-to-hash.html -%}
@@ -9,7 +9,7 @@
     {% assign stripped = content | strip_newlines | strip %}
     {% unless stripped == null or stripped == '' %}
       <main class="page-content flex-1 py-16 pt-20" aria-label="Content">
-        <div class="wrapper w-full mx-auto px-4 md:px-8">
+        <div class="wrapper mx-auto w-full px-4 md:px-8">
           {{ content }}
           <div class="mt-12">
             {%- include extensions/legal-compliance-notice.html -%}

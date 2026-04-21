@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-04-19T21:15:34Z"
+generated_at: "2026-04-21T07:33:02Z"
 signal_weights:
   title: 3
   categories: 5
@@ -15,94 +15,79 @@ signal_weight_rationale:
   intro_description_headings: Medium weight for context enrichment without dominating keyword extraction.
   keywords_catchwords: Low weight to avoid over-amplifying manually supplied or potentially noisy token lists.
 keywords:
-  - data
   - engineering
-  - learning
+  - data
   - governance
-  - machine
   - supply
   - chain
-  - svm
   - provenance
   - lessons
   - cloud
   - deadlock
   - questions
+  - learning
   - platform
-  - llm
-  - practical
   - china
+  - llm
   - security
-  - model
-  - support
-  - artificial
-  - intelligence
+  - machine
   - resource
   - starvation
   - fragmentation
   - glossary
   - legal
   - npm
-  - statistical
   - conditions
   - digital
-  - asked
-  - frequently
+  - models
   - systems
-  - vector
   - access
   - coffman
   - graph
   - language
   - large
-  - practice
   - transformer
   - trust
-  - tuning
+  - asked
   - attack
-  - benchmark
-  - design
+  - frequently
   - operating
   - sovereignty
   - axios
   - compliance
   - compromise
-  - evaluation
   - incident
-  - introduction
+  - practice
   - scheduling
+  - design
   - faq
   - privacy
-  - theory
   - traceability
-  - boundary
   - circular
   - credential
-  - critical
   - cybersecurity
-  - evidence
-  - lineage
-  - reading
   - cookies
   - law
   - management
   - protection
   - residency
-  - risk
-  - algorithms
+  - theory
+  - artificial
   - contention
-  - core
+  - critical
   - definitions
+  - evidence
   - inference
-  - insights
-  - limits
+  - intelligence
+  - introduction
+  - lineage
   - links
   - networks
   - neural
   - policy
   - priority
   - prov-ml
-  - review
+  - reading
   - scope
   - social
   - teams
@@ -111,91 +96,98 @@ keywords:
   - answers
   - disclaimer
   - frontier
-  - guide
   - notices
   - prompt
+  - risk
   - saas
-  - apply
   - blocked
-  - classification
+  - boundary
   - concurrency
   - difference
   - distillation
-  - first
+  - evaluation
   - implement
   - jurisdiction
   - knowledge
+  - limits
   - llms
   - localization
   - package
-  - rbf
+  - practical
   - resilient
   - response
+  - review
   - seo
   - services
-  - supervised
   - technical
   - timeline
   - treat
-  - understanding
   - versions
   - a-z
   - attention
   - azure
-  - concepts
   - gpt-3
   - malicious
   - prevention
   - reproducibility
   - resilience
-  - strengths
   - trustworthy
   - aeo
   - aging
+  - apply
   - architecture
   - best
-  - beyond
   - collection
   - compromised
   - control
   - cross-jurisdiction
-  - decisions
-  - deeper
   - dependencies
-  - early
-  - evolution
   - external
   - federated
-  - findings
   - geo
   - hallucination
   - hub
-  - kernel
   - liability
-  - limitations
-  - literature
-  - margin
+  - methods
+  - mutex
+  - notice
+  - personal
+  - preprocessing
+  - prevent
+  - recovery
+  - reference
+  - reliance
+  - restrictions
+  - semaphore
+  - surface
+  - token
+  - tooling
+  - verification
+  - applied
+  - published
+  - requirements
+  - responsible
+  - thread
+  - unc1069
+  - abstractions
+  - acceptable
+  - accountability
+  - actionable
+  - ai-assisted
+  - allocation
 key_phrases:
   - supply chain
-  - machine learning
-  - artificial intelligence
   - data provenance
-  - statistical learning
+  - machine learning
   - engineering governance
-  - asked questions
-  - frequently asked
-  - frequently asked questions
-  - support vector
-  - support vector machine
-  - vector machine
-  - artificial intelligence artificial
   - coffman conditions
-  - intelligence artificial
-  - intelligence artificial intelligence
   - large language
+  - asked questions
   - chain security
   - data provenance machine
   - engineering lessons
+  - frequently asked
+  - frequently asked questions
   - provenance machine
   - provenance machine learning
   - supply chain security
@@ -207,6 +199,7 @@ key_phrases:
   - data protection
   - data residency
   - supply chain attack
+  - artificial intelligence
   - governance data
   - graph neural
   - graph neural networks
@@ -222,25 +215,23 @@ key_phrases:
   - privacy cookies data
   - prompt engineering
   - traceability graph
-  - algorithms practical
-  - algorithms practical insights
+  - artificial intelligence artificial
   - axios npm supply
   - deadlock resource
   - deadlock resource contention
   - incident response
+  - intelligence artificial
+  - intelligence artificial intelligence
   - learning traceability
   - learning traceability graph
   - llm inference
   - machine learning traceability
-  - practical insights
   - trust provenance
   - cloud fragmentation
   - cookies data protection
   - governance digital
   - legal notices
   - platform fragmentation
-  - tuning support
-  - tuning support vector
   - china cloud
   - cloud platform
   - critical evaluation
@@ -251,7 +242,6 @@ key_phrases:
   - graph methods
   - knowledge distillation
   - lessons engineering
-  - model tuning
   - mutex semaphore
   - priority aging
   - seo geo
@@ -261,8 +251,6 @@ key_phrases:
   - applied supply
   - chain security cloud
   - chain security social
-  - classification model
-  - classification model tuning
   - cloud compliance
   - cloud compliance platform
   - cloud fragmentation scheduling
@@ -298,17 +286,10 @@ key_phrases:
   - governance lessons
   - incident response trust
   - language models transformer
-  - learning classification
-  - learning classification model
   - legal policy
-  - machine learning classification
-  - machine machine
-  - machine machine learning
-  - machine svm
   - management deadlock
   - management governance
   - management governance data
-  - model tuning support
   - models transformer
   - models transformer prompt
   - networks reproducibility
@@ -316,11 +297,28 @@ key_phrases:
   - neural networks reproducibility
   - operating systems design
   - platform engineering risk
+  - prompt engineering governance
+  - reproducibility governance
+  - reproducibility governance data
+  - resilience thread
+  - resilience thread management
+  - resource contention concurrency
+  - response trust
+  - response trust provenance
+  - risk management
+  - risk management governance
+  - scheduling starvation
+  - scheduling starvation resilience
+  - security cloud
+  - security cloud fragmentation
+  - security social
+  - security social engineering
+  - seo geo aeo
+  - social engineering incident
+  - sovereignty cloud compliance
 catchwords:
   - engineering
-  - learning
   - governance
-  - machine
   - supply
   - chain
   - provenance
@@ -328,75 +326,65 @@ catchwords:
   - cloud
   - deadlock
   - questions
+  - learning
   - platform
-  - practical
   - china
   - security
-  - model
-  - support
-  - artificial
-  - intelligence
+  - machine
   - resource
   - starvation
   - fragmentation
   - glossary
   - legal
-  - statistical
   - conditions
   - digital
-  - asked
-  - frequently
+  - models
   - systems
-  - vector
   - access
   - coffman
   - graph
   - language
   - large
-  - practice
   - transformer
   - trust
-  - tuning
+  - asked
   - attack
-  - benchmark
-  - design
+  - frequently
   - operating
   - sovereignty
   - axios
   - compliance
   - compromise
-  - evaluation
   - incident
-  - introduction
+  - practice
   - scheduling
+  - design
   - privacy
-  - theory
   - traceability
-  - boundary
   - circular
   - credential
-  - critical
   - cybersecurity
-  - evidence
-  - lineage
-  - reading
   - cookies
   - management
   - protection
   - residency
-  - algorithms
+  - theory
+  - artificial
   - contention
+  - critical
   - definitions
+  - evidence
   - inference
-  - insights
-  - limits
+  - intelligence
+  - introduction
+  - lineage
   - links
   - networks
   - neural
   - policy
   - priority
   - prov-ml
-  - review
+  - reading
   - scope
   - social
   - teams
@@ -405,204 +393,200 @@ catchwords:
   - answers
   - disclaimer
   - frontier
-  - guide
   - notices
   - prompt
-  - apply
   - blocked
-  - classification
+  - boundary
   - concurrency
   - difference
   - distillation
-  - first
+  - evaluation
   - implement
   - jurisdiction
   - knowledge
+  - limits
   - localization
   - package
+  - practical
   - resilient
   - response
+  - review
   - services
-  - supervised
   - technical
   - timeline
   - treat
-  - understanding
   - versions
   - attention
   - azure
-  - concepts
   - gpt-3
   - malicious
   - prevention
   - reproducibility
   - resilience
-  - strengths
   - trustworthy
   - aging
+  - apply
   - architecture
-  - beyond
   - collection
   - compromised
   - control
   - cross-jurisdiction
-  - decisions
-  - deeper
   - dependencies
-  - early
-  - evolution
   - external
   - federated
-  - findings
   - hallucination
-  - kernel
   - liability
-  - limitations
-  - literature
-  - margin
+  - methods
+  - mutex
+  - notice
+  - personal
+  - preprocessing
+  - prevent
+  - recovery
+  - reference
+  - reliance
+  - restrictions
+  - semaphore
+  - surface
+  - token
+  - tooling
+  - verification
+  - applied
+  - published
+  - requirements
+  - responsible
+  - thread
+  - unc1069
+  - abstractions
+  - acceptable
+  - accountability
+  - actionable
+  - ai-assisted
+  - allocation
 catchphrases:
   - frequently asked questions
-  - 2 algorithmic evolution beyond basic c-svm
   - 2 partnership models shift accountability maps
-  - 4 handle class imbalance deliberately
   - 4 semantic versioning convenience systematically enables supply chain propagation
   - 6 communication infrastructure carries hidden regulatory friction
   - acceptable conduct
   - automated candidate moderation
-  - class distribution
-  - confusion flow shift svm vs rf
-  - core intuition maximum margin
   - current website-specific practices
   - engagement boundary
   - faq overview
   - glossary overview
-  - hyperparameter stability signal
   - intellectual property
   - jurisdiction map
   - jurisdiction note
   - legal notices
   - liability allocation
   - liability boundary
-  - literature-to-benchmark synthesis
   - official reference points
-  - pca geometry reading
   - persona-driven requirements
-  - practical tuning workflow evidence-driven
-  - robustness evaluation
-  - selected hyperparameters
   - semaphores counter-based access control
   - thematic analysis
 search_words:
-  - data
   - engineering
-  - learning
+  - data
   - governance
-  - machine
   - supply
   - chain
-  - svm
   - provenance
   - lessons
   - cloud
   - deadlock
   - questions
+  - learning
   - platform
-  - llm
-  - practical
   - china
+  - llm
   - security
-  - model
-  - support
-  - artificial
-  - intelligence
+  - machine
   - resource
   - starvation
   - fragmentation
   - glossary
   - legal
   - npm
-  - statistical
   - conditions
   - digital
-  - asked
-  - frequently
+  - models
   - systems
-  - vector
   - access
   - coffman
   - graph
   - language
   - large
-  - practice
   - transformer
   - trust
-  - tuning
+  - asked
   - attack
-  - benchmark
-  - design
+  - frequently
   - operating
   - sovereignty
   - axios
   - compliance
   - compromise
-  - evaluation
   - incident
-  - introduction
+  - practice
   - scheduling
+  - design
   - faq
   - privacy
-  - theory
   - traceability
-  - boundary
   - circular
   - credential
-  - critical
   - cybersecurity
-  - evidence
-  - lineage
-  - reading
   - cookies
   - law
   - management
   - protection
   - residency
-  - risk
-  - algorithms
+  - theory
+  - artificial
   - contention
-  - core
+  - critical
   - definitions
+  - evidence
   - inference
-  - insights
-  - limits
+  - intelligence
+  - introduction
+  - lineage
   - links
   - networks
   - neural
   - policy
   - priority
   - prov-ml
-  - review
+  - reading
   - scope
   - social
+  - teams
+  - alignment
+  - analysis
+  - answers
+  - disclaimer
+  - frontier
+  - notices
+  - prompt
+  - risk
+  - saas
+  - blocked
+  - boundary
+  - concurrency
+  - difference
+  - distillation
   - supply chain
-  - machine learning
-  - artificial intelligence
   - data provenance
-  - statistical learning
+  - machine learning
   - engineering governance
-  - asked questions
-  - frequently asked
-  - frequently asked questions
-  - support vector
-  - support vector machine
-  - vector machine
-  - artificial intelligence artificial
   - coffman conditions
-  - intelligence artificial
-  - intelligence artificial intelligence
   - large language
+  - asked questions
   - chain security
   - data provenance machine
   - engineering lessons
+  - frequently asked
+  - frequently asked questions
   - provenance machine
   - provenance machine learning
   - supply chain security
@@ -614,6 +598,7 @@ search_words:
   - data protection
   - data residency
   - supply chain attack
+  - artificial intelligence
   - governance data
   - graph neural
   - graph neural networks
@@ -629,63 +614,58 @@ search_words:
   - privacy cookies data
   - prompt engineering
   - traceability graph
-  - algorithms practical
-  - algorithms practical insights
+  - artificial intelligence artificial
   - axios npm supply
   - deadlock resource
   - deadlock resource contention
   - incident response
+  - intelligence artificial
+  - intelligence artificial intelligence
   - learning traceability
   - learning traceability graph
   - llm inference
   - machine learning traceability
-  - practical insights
   - trust provenance
   - cloud fragmentation
   - cookies data protection
   - governance digital
   - legal notices
   - platform fragmentation
-  - tuning support
-  - tuning support vector
   - china cloud
   - cloud platform
   - critical evaluation
   - data lineage
   - deadlock theory
+  - digital sovereignty cloud
+  - faq hub
+  - graph methods
+  - knowledge distillation
+  - lessons engineering
+  - mutex semaphore
+  - priority aging
+  - seo geo
+  - sovereignty cloud
 global_questions:
   - question: How should teams use community incident reports without spreading errors?
     answer: Treat community reports as intake signals. Require independent corroboration through status pages, policy documents, support records, or contractual notices before escalation. This method preserves speed without sacrificing evidence quality.
   - question: What is the best next step for readers who want to go deeper?
     answer: Run a broader review that includes MLflow, OpenLineage, Pachyderm, and DVC literature, then test candidate approaches against your production constraints and governance requirements.
-  - question: How do I choose between linear SVM and RBF SVM?
-    answer: Start with linear SVM. Move to RBF when validation error suggests nonlinear boundaries and linear regularization cannot recover performance ().
   - question: How do I know if my environment is affected?
     answer: Investigate systems that resolved or installed affected axios versions during the exposure window and hunt for reported indicators, including `sfrclak[.]com` and platform payload artifacts.
   - question: How was the maintainer's account compromised?
     answer: Public reports did not conclusively publish every credential theft detail at first disclosure. Mandiant tradecraft reporting plus the maintainer post-mortem context supports social engineering as a credible precursor pattern.
   - question: What central message unifies all sources in this revised collection?
     answer: LLM reliability is an engineering and governance problem, not a presentation problem. Output quality begins with probabilistic sequence modeling and improves through architecture, training stages, and disciplined prompting. Reliable use requires governance controls that address error modes directly and that keep pace with the evolutionary arc from scaling to alignment to efficiency to federated deployment.
-  - question: What do the PCA plots really tell me about SVM behavior?
-    answer: They show broad separability between static and dynamic activity regimes, but persistent overlap within walking-related subclasses. That combination explains why SVM can look strong overall while still producing specific, repeated confusion flows.
-  - question: What does gamma do in RBF SVM?
-    answer: Gamma controls how local each training point's influence is. Larger gamma makes very local boundaries. Smaller gamma makes smoother global boundaries (for definition; for parameter guidance).
   - question: What does success look like for a sovereign-aware cloud strategy?
     answer: Success appears when regional legal constraints, technical controls, communication guarantees, and migration rights remain aligned and auditable over time. Teams can then maintain continuity through policy change without emergency redesign -.
-  - question: What does the C parameter do in SVM?
-    answer: C sets the penalty for margin violations. A larger C reduces violations but can overfit. A smaller C allows more violations and often generalizes better on noisy data (for theory; for implementation guidance).
   - question: What immediate steps should I take?
     answer: Quarantine affected hosts, rotate exposed credentials, inspect CI logs for vulnerable installs, and remediate by replacing compromised dependencies with known-good versions.
-  - question: What is a Support Vector Machine in simple terms?
-    answer: A Support Vector Machine is a classifier that separates classes by choosing the boundary with the largest margin from the nearest training points. Those nearest points are the support vectors ().
   - question: What is the axios npm supply chain attack?
     answer: Attackers published malicious axios versions on npm that introduced `plain-crypto-js@4.2.1`, which executed install-time malware delivery across multiple operating systems.
   - question: What practical control should enterprises implement first?
     answer: Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority aligns with observed access and notification disruptions in the corpus.
   - question: What should an enterprise implement first after reading this analysis?
     answer: Start with a minimal governance baseline. Define approved use cases. Define prompt versioning rules. Define output verification requirements. Define escalation procedures for harmful or ungrounded responses. This sequence converts theory into immediate control coverage.
-  - question: Why can SVM score well overall but still fail on specific classes?
-    answer: Because multiclass accuracy can mask structured confusion pairs. In the attached HAR run, SVM is strong globally but shows notable confusion between SITTING and STANDING, and between stair-related dynamic classes.
   - question: Why keep discussing preprocessing provenance?
     answer: "Because both relevance and complexity show up there: Pina et al. identify integration gaps at that stage, and Souza et al. identify curation as difficult."
   - question: Does removing the malicious package versions remediate the compromise?
@@ -720,14 +700,8 @@ global_questions:
     answer: "The [Transformer](<https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)>) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the model's dimensional space."
   - question: How should researchers and educators reuse these materials responsibly?
     answer: Use short quotations only when wording precision matters. Prefer paraphrase for interpretation. Maintain explicit attribution. Preserve links to original context. Where applicable under UK law, assess whether CDPA 1988 ss. 29 (research/private study) and 31A (text and data analysis for non-commercial research) conditions are genuinely satisfied before reuse. This applies equally to video content and to published scholarly works.
-  - question: Is SVM supervised or unsupervised?
-    answer: SVM is primarily a supervised learning family for classification and regression. One-class SVM is commonly used for novelty detection, which is related to unsupervised support estimation rather than general-purpose clustering (;).
-  - question: Is hyperparameter tuning risk different between SVM and RF here?
-    answer: Yes. SVM accuracy changes more across kernel settings and C values, while RF performance is comparatively flat across tested mtry values. That makes SVM more sensitive to tuning drift in ongoing operations.
   - question: Is the reported 91.3% GCN figure a universal result?
     answer: No. It is a paper-reported result in one evaluation context. This review does not treat it as a universal benchmark.
-  - question: Should I replace SVM with Random Forest when RF wins one benchmark?
-    answer: Not automatically. Re-run evaluation with the same leakage controls, class-level diagnostics, and operational constraints for your own dataset. Use the benchmark gap as a signal to investigate, not as a universal replacement rule.
   - question: Should teams deploy provenance tooling immediately after reading this article?
     answer: Use this article as orientation, not as a deployment checklist. Before adoption decisions, compare against your own stack, load profile, compliance obligations, and failure modes.
   - question: What are the four Coffman conditions for deadlock?
@@ -750,16 +724,10 @@ global_questions:
     answer: "Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier, Pina et al. integrate separate lifecycle tools using DNNProv and Chapman et al.'s preprocessing capture, and Souza et al. extend ProvLake with the PROV-ML vocabulary. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem."
   - question: Which sources best support deep technical understanding?
     answer: The strongest technical depth appears in Vaswani et al., Brown et al., and the Stanford, MIT, StatQuest, and Yannic Kilcher materials, because they explain objective functions, attention mechanics, and scaling behavior with explicit procedural detail. Yang et al.'s distillation survey and Ren et al.'s federated foundation model survey add the deployment and compression dimensions.
-  - question: When should I avoid SVM?
-    answer: Consider alternatives to SVM when your dataset is extremely large without an efficient approximation strategy, or when you need native probabilistic outputs at high throughput without extra calibration cost (for linear-scale methods; complexity notes).
-  - question: Which errors should I monitor first in production?
-    answer: "Start with pairwise transitions that dominated offline confusion matrices in this run: STANDING-SITTING and cross-stair versus walking swaps. These flows carry most of the practical classification risk."
   - question: Which sources best support practical implementation teams?
     answer: Google Cloud Tech and AI Search provide direct implementation value for teams that need prompt design guidance and user-facing framing for model behavior. Yang et al.'s practitioner survey on ChatGPT and beyond adds empirical guidance on when to use LLMs versus fine-tuned models for specific NLP tasks.
   - question: Who is responsible for the attack?
     answer: Microsoft attributes the activity to Sapphire Sleet, Sophos maps related activity to NICKEL GLADSTONE, and Mandiant tracks overlapping tradecraft under UNC1069.
-  - question: Why SVM Still Matters?
-    answer: Despite lower aggregate scores than RF in this benchmark, SVM still delivers strong discrimination on several classes and remains operationally useful in constrained settings. 1. It can work well in high-dimensional spaces. 2. It can be sample-efficient on some smaller datasets, depending on feature quality and class overlap.
   - question: Why is ChatGPT blocked in China?
     answer: OpenAI has blocked API and web access for users in mainland China, Hong Kong, and Macau. The block was widely reported in July 2024. Anthropic has applied additional ownership-structure screening beyond geography. Both decisions reflect a combination of US export-control considerations, OpenAI's own usage policies, and the regulatory environment in China. Engineering teams cannot rely on direct OpenAI or Anthropic model access for China-deployed applications and must plan for approved domestic alternatives or allowlisted API routes.
   - question: Is Azure available in China, and how does it differ from global Azure?
@@ -767,136 +735,6 @@ global_questions:
   - question: Where to look next?
     answer: "- Privacy, cookies, data handling, and Hong Kong PICS-style notice: [Privacy, Cookies and Data Protection]() - Site access, acceptable use, intellectual property, and service boundaries: [Terms of Use]() - Overview of the full legal notice set: [Legal Notices]()"
 posts:
-  statistical-learning:
-    title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
-    url: "/statistical-learning-key-concepts-algorithms-practical-insights"
-    keywords:
-      - learning
-      - statistical
-      - algorithms
-      - insights
-      - practical
-      - concepts
-      - artificial
-      - intelligence
-      - applications
-      - common
-      - machine
-      - understanding
-      - data
-      - accessible
-      - apply
-      - breaks
-      - classification
-      - clustering
-      - complex
-      - core
-      - covering
-      - deepen
-      - differs
-      - down
-      - effectively
-      - field
-      - framework
-      - guide
-      - introduction
-      - landscape
-      - modeling
-      - navigate
-      - patterns
-      - powerful
-      - real-world
-      - artificial intelligence
-      - statistical learning
-      - what is statistical learning
-      - statistical learning algorithms
-      - practical insights for statistical learning
-    key_phrases:
-      - statistical learning
-      - algorithms practical
-      - practical insights
-      - algorithms practical insights
-      - artificial intelligence
-      - learning statistical learning
-      - common algorithms practical
-      - concepts common algorithms
-      - intelligence artificial intelligence
-      - artificial intelligence artificial
-      - learning statistical
-      - machine learning
-      - common algorithms
-      - concepts common
-      - intelligence artificial
-      - practical insights statistical
-      - concepts algorithms practical
-      - learning concepts algorithms
-      - statistical learning concepts
-      - insights statistical learning
-      - statistical learning statistical
-      - learning concepts
-      - insights statistical
-      - concepts algorithms
-    catchwords:
-      - learning
-      - statistical
-      - algorithms
-      - insights
-      - practical
-      - concepts
-      - artificial
-      - intelligence
-      - applications
-      - common
-      - machine
-      - understanding
-      - accessible
-      - apply
-      - breaks
-      - classification
-      - clustering
-      - complex
-      - covering
-      - deepen
-      - differs
-      - effectively
-      - field
-      - framework
-      - guide
-      - introduction
-      - landscape
-      - modeling
-    search_words:
-      - learning
-      - statistical
-      - algorithms
-      - insights
-      - practical
-      - concepts
-      - artificial
-      - intelligence
-      - applications
-      - common
-      - machine
-      - understanding
-      - data
-      - accessible
-      - apply
-      - breaks
-      - classification
-      - clustering
-      - statistical learning
-      - algorithms practical
-      - practical insights
-      - algorithms practical insights
-      - artificial intelligence
-      - learning statistical learning
-      - common algorithms practical
-      - concepts common algorithms
-      - intelligence artificial intelligence
-      - artificial intelligence artificial
-      - learning statistical
-      - machine learning
-    questions: []
   axios-supply-chain-compromise:
     title: "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on Trust, Provenance, and Resilient Engineering"
     url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
@@ -1631,160 +1469,6 @@ posts:
         answer: Priority aging is a scheduling technique in which a waiting thread's effective priority increases incrementally over time, ensuring low-priority requests are eventually scheduled even when higher-priority requests arrive continuously. It prevents indefinite starvation while preserving responsiveness for high-priority work. Applied to LLM inference queues, priority aging ensures that batch offline jobs are not permanently blocked by interactive user requests, which is the scenario described in the [LLM Inference and Token Schedulers](#llm-inference-and-token-schedulers-priority-starvation) section.
       - question: What is the difference between deadlock and starvation?
         answer: "Deadlock is a cycle in which no involved thread can make progress: every waiting thread holds a resource that another waiting thread needs, so the entire set is permanently blocked. Starvation is a state in which one specific thread is indefinitely denied access while other threads do make progress. Round-robin and first-come-first-serve scheduling prevent starvation; resource ordering, atomic acquisition, and the [Banker's algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm) prevent deadlock. Both pathologies appear in LLM inference queues and software supply chains."
-  support-vector-machine-practical-guide-kernels-margin-tuning:
-    title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
-    url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
-    keywords:
-      - svm
-      - machine
-      - support
-      - vector
-      - tuning
-      - benchmark
-      - model
-      - learning
-      - practical
-      - rbf
-      - guide
-      - strengths
-      - classification
-      - core
-      - kernel
-      - margin
-      - supervised
-      - artificial
-      - evaluation
-      - intelligence
-      - linear
-      - robustness
-      - tune
-      - weaknesses
-      - boundary
-      - choose
-      - class
-      - consolidation
-      - decision
-      - evolution
-      - failure
-      - findings
-      - first
-      - gamma
-      - hyperparameter
-      - support vector machine
-      - machine learning
-      - model tuning
-      - artificial intelligence
-      - what is support vector machine
-    key_phrases:
-      - support vector
-      - vector machine
-      - support vector machine
-      - tuning support vector
-      - tuning support
-      - model tuning
-      - machine learning
-      - machine machine learning
-      - machine learning classification
-      - artificial intelligence
-      - svm svm
-      - learning classification model
-      - machine machine
-      - classification model tuning
-      - learning classification
-      - classification model
-      - model tuning support
-      - machine svm
-      - vector machine svm
-      - vector machine machine
-      - intelligence artificial intelligence
-      - gamma rbf
-      - rbf svm
-      - artificial intelligence artificial
-    catchwords:
-      - machine
-      - support
-      - vector
-      - tuning
-      - benchmark
-      - model
-      - learning
-      - practical
-      - guide
-      - strengths
-      - classification
-      - kernel
-      - margin
-      - supervised
-      - artificial
-      - evaluation
-      - intelligence
-      - linear
-      - robustness
-      - weaknesses
-      - boundary
-      - choose
-      - class
-      - consolidation
-      - decision
-      - evolution
-      - failure
-      - findings
-    search_words:
-      - svm
-      - machine
-      - support
-      - vector
-      - tuning
-      - benchmark
-      - model
-      - learning
-      - practical
-      - rbf
-      - guide
-      - strengths
-      - classification
-      - core
-      - kernel
-      - margin
-      - supervised
-      - artificial
-      - support vector
-      - vector machine
-      - support vector machine
-      - tuning support vector
-      - tuning support
-      - model tuning
-      - machine learning
-      - machine machine learning
-      - machine learning classification
-      - artificial intelligence
-      - svm svm
-      - learning classification model
-    questions:
-      - question: How do I choose between linear SVM and RBF SVM?
-        answer: Start with linear SVM. Move to RBF when validation error suggests nonlinear boundaries and linear regularization cannot recover performance ().
-      - question: What do the PCA plots really tell me about SVM behavior?
-        answer: They show broad separability between static and dynamic activity regimes, but persistent overlap within walking-related subclasses. That combination explains why SVM can look strong overall while still producing specific, repeated confusion flows.
-      - question: What does gamma do in RBF SVM?
-        answer: Gamma controls how local each training point's influence is. Larger gamma makes very local boundaries. Smaller gamma makes smoother global boundaries (for definition; for parameter guidance).
-      - question: What does the C parameter do in SVM?
-        answer: C sets the penalty for margin violations. A larger C reduces violations but can overfit. A smaller C allows more violations and often generalizes better on noisy data (for theory; for implementation guidance).
-      - question: What is a Support Vector Machine in simple terms?
-        answer: A Support Vector Machine is a classifier that separates classes by choosing the boundary with the largest margin from the nearest training points. Those nearest points are the support vectors ().
-      - question: Why can SVM score well overall but still fail on specific classes?
-        answer: Because multiclass accuracy can mask structured confusion pairs. In the attached HAR run, SVM is strong globally but shows notable confusion between SITTING and STANDING, and between stair-related dynamic classes.
-      - question: Is SVM supervised or unsupervised?
-        answer: SVM is primarily a supervised learning family for classification and regression. One-class SVM is commonly used for novelty detection, which is related to unsupervised support estimation rather than general-purpose clustering (;).
-      - question: Is hyperparameter tuning risk different between SVM and RF here?
-        answer: Yes. SVM accuracy changes more across kernel settings and C values, while RF performance is comparatively flat across tested mtry values. That makes SVM more sensitive to tuning drift in ongoing operations.
-      - question: Should I replace SVM with Random Forest when RF wins one benchmark?
-        answer: Not automatically. Re-run evaluation with the same leakage controls, class-level diagnostics, and operational constraints for your own dataset. Use the benchmark gap as a signal to investigate, not as a universal replacement rule.
-      - question: When should I avoid SVM?
-        answer: Consider alternatives to SVM when your dataset is extremely large without an efficient approximation strategy, or when you need native probabilistic outputs at high throughput without extra calibration cost (for linear-scale methods; complexity notes).
-      - question: Which errors should I monitor first in production?
-        answer: "Start with pairwise transitions that dominated offline confusion matrices in this run: STANDING-SITTING and cross-stair versus walking swaps. These flows carry most of the practical classification risk."
-      - question: Why SVM Still Matters?
-        answer: Despite lower aggregate scores than RF in this benchmark, SVM still delivers strong discrimination on several classes and remains operationally useful in constrained settings. 1. It can work well in high-dimensional spaces. 2. It can be sample-efficient on some smaller datasets, depending on feature quality and class overlap.
 pages:
   zenith-law:
     title: ""

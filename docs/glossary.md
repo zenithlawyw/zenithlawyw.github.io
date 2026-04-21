@@ -83,6 +83,7 @@ intro: "Glossary of cross-domain terms for engineering, governance, legal, polic
 {% endif %}
 {% endfor %}
 {% if has_terms %}
+
 <h2 id="letter-{{ letter }}" class="mb-3 mt-7 scroll-mt-24 border-t border-gray-200 pt-2 text-2xl font-semibold tracking-tight text-gray-900 dark:border-gray-700 dark:text-gray-100">{{ letter }}</h2>
 <div class="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-4">
 {% assign rendered_terms = '|' %}
@@ -120,6 +121,7 @@ Related:
 
 {% if glossary_auto_candidates and glossary_auto_candidates.size > 0 %}
 {% if glossary_moderation_enabled and glossary_show_unapproved and glossary_auto_unapproved and glossary_auto_unapproved.size > 0 %}
+
 <h2 class="mb-3 mt-8 scroll-mt-24 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">Candidate Terms For Editorial Review</h2>
 
     <p class="my-3 leading-7">

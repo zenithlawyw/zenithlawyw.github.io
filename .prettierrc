@@ -2,7 +2,7 @@
   "singleQuote": false,
   "trailingComma": "es5",
   "printWidth": 80,
-  "plugins": ["@shopify/prettier-plugin-liquid"],
+  "plugins": ["@shopify/prettier-plugin-liquid", "prettier-plugin-tailwindcss"],
   "overrides": [
     {
       "files": [

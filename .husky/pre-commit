@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+npm run docs:seo
+npm run docs:glossary
+npm run docs:taxonomy
+npm run docs:build
+npm run format

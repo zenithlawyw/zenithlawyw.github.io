@@ -3,10 +3,10 @@ layout: section
 ---
 <div class="author-profile mb-12">
   <!-- Author header card -->
-  <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-8 shadow-sm md:p-10">
+  <div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm md:p-10 dark:border-gray-700 dark:bg-gray-900">
     <div class="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
       <div class="shrink-0">
-        <div class="flex h-24 w-24 items-center justify-center overflow-hidden rounded-full border-2 border-gray-200 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400">
+        <div class="flex h-24 w-24 items-center justify-center overflow-hidden rounded-full border-2 border-gray-200 bg-gray-100 text-gray-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400">
           {% if page.avatar %}
             <img
               src="{{ page.avatar | relative_url }}"
@@ -19,7 +19,7 @@ layout: section
         </div>
       </div>
       <div class="min-w-0 flex-1 text-center sm:text-left">
-        <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 m-0">
+        <h1 class="m-0 text-3xl font-bold text-gray-900 dark:text-gray-100">
           {{ page.name }}
         </h1>
         {% if page.position %}
@@ -33,11 +33,11 @@ layout: section
           </p>
         {% endif %}
         {% if page.links %}
-          <div class="mt-4 flex flex-wrap gap-3 justify-center sm:justify-start">
+          <div class="mt-4 flex flex-wrap justify-center gap-3 sm:justify-start">
             {% for link in page.links %}
               <a
                 href="{{ link.url }}"
-                class="inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-600 dark:text-gray-300 no-underline transition-colors hover:border-blue-400 hover:text-blue-600 dark:hover:border-blue-500 dark:hover:text-blue-400"
+                class="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-600 no-underline transition-colors hover:border-blue-400 hover:text-blue-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:border-blue-500 dark:hover:text-blue-400"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -53,7 +53,7 @@ layout: section
   <!-- Author bio content -->
   {% assign stripped = content | strip_newlines | strip %}
   {% unless stripped == null or stripped == '' %}
-    <div class="mt-8 prose dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-p:text-gray-800 dark:prose-p:text-gray-200 prose-li:text-gray-800 dark:prose-li:text-gray-200 prose-strong:text-gray-900 dark:prose-strong:text-gray-100 max-w-none">
+    <div class="prose dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-p:text-gray-800 dark:prose-p:text-gray-200 prose-li:text-gray-800 dark:prose-li:text-gray-200 prose-strong:text-gray-900 dark:prose-strong:text-gray-100 mt-8 max-w-none">
       {{ content }}
     </div>
   {% endunless %}
@@ -66,25 +66,25 @@ layout: section
 
   {%- if author_posts.size > 0 -%}
     <div class="mt-12">
-      <div class="flex items-center gap-3 mb-6 pb-3 border-b border-gray-200 dark:border-gray-700">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100 m-0">
+      <div class="mb-6 flex items-center gap-3 border-b border-gray-200 pb-3 dark:border-gray-700">
+        <h2 class="m-0 text-2xl font-bold text-gray-900 dark:text-gray-100">
           Posts by {{ page.name }}
         </h2>
-        <span class="inline-flex items-center justify-center rounded-full bg-gray-900 dark:bg-gray-100 px-2.5 py-0.5 text-xs font-bold text-white dark:text-gray-900">
+        <span class="inline-flex items-center justify-center rounded-full bg-gray-900 px-2.5 py-0.5 text-xs font-bold text-white dark:bg-gray-100 dark:text-gray-900">
           {{- author_posts.size -}}
         </span>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
         {%- assign date_format = site.zyw.date_format | default: '%-d %B %Y' -%}
         {%- for post in author_posts -%}
-          <div class="flex flex-col rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm">
+          <div class="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900">
             {% if post.image %}
               <div class="overflow-hidden">
                 <img
                   src="{{ post.image }}"
                   alt="{{ post.title | escape }}"
-                  class="w-full aspect-video object-cover"
+                  class="aspect-video w-full object-cover"
                   loading="lazy"
                 >
               </div>
@@ -92,20 +92,20 @@ layout: section
             <div class="flex-1 p-5">
               <a
                 href="{{ post.url | relative_url }}"
-                class="block text-lg font-bold text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors no-underline"
+                class="block text-lg font-bold text-gray-900 no-underline transition-colors hover:text-blue-600 dark:text-gray-100 dark:hover:text-blue-400"
               >
                 {{ post.title | escape }}
               </a>
               <p class="mt-1.5 text-sm text-gray-500 dark:text-gray-400">
                 {{ post.date | date: date_format }}
               </p>
-              <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed line-clamp-2">
+              <p class="mt-2 line-clamp-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
                 {{ post.excerpt | strip_html | truncate: 120 }}
               </p>
               {%- if post.tags.size > 0 -%}
                 <div class="mt-3 flex flex-wrap gap-1.5">
                   {%- for tag in post.tags -%}
-                    <span class="inline-block rounded-full bg-gray-100 dark:bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-500 dark:text-gray-400"
+                    <span class="inline-block rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-800 dark:text-gray-400"
                       >#{{ tag -}}
                     </span>
                   {%- endfor -%}
