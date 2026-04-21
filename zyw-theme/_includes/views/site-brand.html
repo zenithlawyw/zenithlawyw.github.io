@@ -1,13 +1,13 @@
 <a
-  class="site-brand-inner inline-flex items-center h-16 no-underline hover:underline text-inherit transition-colors duration-100"
+  class="site-brand-inner inline-flex h-16 items-center text-inherit no-underline transition-colors duration-100 hover:underline"
   rel="author"
   href="{{ "/" | relative_url }}"
 >
   <img
-    class="site-favicon inline-block h-10 mr-2"
+    class="site-favicon mr-2 inline-block h-10"
     title="{{ site.title | escape }}"
     src="{{ site.favicon }}"
     onerror="this.style.display='none'"
   >
-  <span class="font-semibold -tracking-px">{{ site.title | escape }}</span>
+  <span class="-tracking-px font-semibold">{{ site.title | escape }}</span>
 </a>

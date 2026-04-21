@@ -17,8 +17,8 @@ theme
 
 # Markdown
 *.md
-!docs/*.md
-!zyw-theme/*.md
+!docs/**/*.md
+!zyw-theme/**/*.md
 
 # Node.js / npm
 **/node_modules

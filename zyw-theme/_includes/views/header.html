@@ -39,7 +39,7 @@
       {%- endif -%}
       {%- assign page_paths = site.nav_pages | default: default_paths -%}
 
-      <span class="site-brand flex items-center flex-shrink-0">
+      <span class="site-brand flex flex-shrink-0 items-center">
         {%- include views/site-brand.html -%}
       </span>
 
@@ -49,11 +49,11 @@
 
           <!-- Navigation menu -->
           <div
-            class="trigger fixed inset-x-0 top-16 z-20 hidden max-h-[calc(100vh-4rem)] w-full overflow-y-auto flex-col items-stretch gap-1 border-t border-gray-200 bg-white px-3 pb-4 pt-3 shadow-2xl dark:border-gray-800 dark:bg-gray-950 md:static md:inset-auto md:z-auto md:ml-auto md:mr-0 md:flex md:h-16 md:max-h-none md:w-auto md:overflow-visible md:flex-none md:flex-nowrap md:flex-row md:items-center md:justify-end md:border-0 md:bg-transparent md:px-0 md:pb-0 md:pt-0 md:pr-2 md:shadow-none md:dark:bg-transparent"
+            class="trigger fixed inset-x-0 top-16 z-20 hidden max-h-[calc(100vh-4rem)] w-full flex-col items-stretch gap-1 overflow-y-auto border-t border-gray-200 bg-white px-3 pt-3 pb-4 shadow-2xl md:static md:inset-auto md:z-auto md:mr-0 md:ml-auto md:flex md:h-16 md:max-h-none md:w-auto md:flex-none md:flex-row md:flex-nowrap md:items-center md:justify-end md:overflow-visible md:border-0 md:bg-transparent md:px-0 md:pt-0 md:pr-2 md:pb-0 md:shadow-none dark:border-gray-800 dark:bg-gray-950 md:dark:bg-transparent"
             id="site-nav-menu"
           >
             <!-- Centered navigation items -->
-            <div class="nav-menu-items order-first mx-0 flex min-w-0 flex-col items-stretch px-0 md:ml-auto md:mr-0 md:order-first md:w-auto md:flex-none md:flex-row md:items-center md:justify-end md:gap-1 md:px-2">
+            <div class="nav-menu-items order-first mx-0 flex min-w-0 flex-col items-stretch px-0 md:order-first md:mr-0 md:ml-auto md:w-auto md:flex-none md:flex-row md:items-center md:justify-end md:gap-1 md:px-2">
               {%- for path in page_paths -%}
                 {%- assign my_page = site.pages
                   | where: 'path', path
@@ -66,7 +66,7 @@
                 -%}
                 {%- if nav_label != '' -%}
                   <a
-                    class="page-link nav-item nav-menu-item flex w-full items-center justify-start rounded-md px-3 py-2 text-left no-underline transition-colors hover:bg-gray-200 hover:text-gray-900 hover:underline dark:hover:bg-gray-800 dark:hover:text-white md:inline-flex md:h-full md:w-auto md:justify-center md:rounded-none md:bg-transparent md:px-2 md:py-0"
+                    class="page-link nav-item nav-menu-item flex w-full items-center justify-start rounded-md px-3 py-2 text-left no-underline transition-colors hover:bg-gray-200 hover:text-gray-900 hover:underline md:inline-flex md:h-full md:w-auto md:justify-center md:rounded-none md:bg-transparent md:px-2 md:py-0 dark:hover:bg-gray-800 dark:hover:text-white"
                     href="{{ my_page.url | relative_url }}"
                   >
                     {{- nav_label | escape -}}
@@ -94,7 +94,7 @@
             </span>
           {%- endif -%}
 
-          <span class="mobile-theme-toggle-wrapper inline-flex items-center justify-center h-full">
+          <span class="mobile-theme-toggle-wrapper inline-flex h-full items-center justify-center">
             {%- include extensions/theme-toggle.html -%}
           </span>
 
