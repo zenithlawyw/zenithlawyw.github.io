@@ -124,6 +124,7 @@ translate_reserved_words:
   - Zenith Law
 
 nav_pages:
+  - literature.md
   - glossary.md
   - faq.md
 
@@ -132,6 +133,35 @@ glossary:
     enabled: true
     show_unapproved: false
     show_notice: false
+
+literature:
+  default_profile: data-provenance
+  profiles:
+    data-provenance:
+      label: Data Science and Provenance
+      keywords:
+        - data science
+        - provenance
+        - traceability
+      lookbackDays: 365
+    llm-governance:
+      label: LLM Governance and Safety
+      keywords:
+        - large language model
+        - governance
+        - safety
+      lookbackDays: 365
+    supply-chain-security:
+      label: Software Supply Chain Security
+      keywords:
+        - software supply chain
+        - provenance
+        - integrity
+      lookbackDays: 730
+    custom:
+      label: Custom
+      keywords: []
+      lookbackDays: 365
 
 seo:
   robots: "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" # Default crawler directives for all bots.

@@ -5,6 +5,10 @@ module.exports = {
     "./_includes/**/*.html",
     "./_layouts/**/*.html",
     "./assets/js/**/*.js",
+    "../docs/**/*.{html,md}",
+    "!../docs/_site/**",
+    "!../docs/vendor/**",
+    "!../docs/node_modules/**",
   ],
   theme: {
     extend: {

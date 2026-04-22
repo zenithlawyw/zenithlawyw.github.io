@@ -66,7 +66,7 @@
 
     <section
       id="{{ refs_heading_id | escape }}"
-      class="post-references mt-12 rounded-2xl border border-gray-200 bg-white/90 p-6 [overflow-wrap:anywhere] break-words shadow-sm md:p-8 dark:border-gray-700 dark:bg-gray-900/70 [&_a]:[overflow-wrap:anywhere] [&_a]:break-words [&_code]:[overflow-wrap:anywhere] [&_code]:break-words [&_li_code]:break-all [&_li_code]:whitespace-normal"
+      class="post-references mt-12 break-words rounded-2xl border border-gray-200 bg-white/90 p-6 shadow-sm [overflow-wrap:anywhere] dark:border-gray-700 dark:bg-gray-900/70 md:p-8 [&_a]:break-words [&_a]:[overflow-wrap:anywhere] [&_code]:break-words [&_code]:[overflow-wrap:anywhere] [&_li_code]:whitespace-normal [&_li_code]:break-all"
       data-compact-breakpoint="{{ refs_compact_breakpoint }}"
       data-url-label-min="{{ refs_url_label_min }}"
       data-url-label-max="{{ refs_url_label_max }}"
@@ -81,7 +81,7 @@
       </h2>
 
       <ol
-        class="mt-5 mb-0 space-y-4 text-sm leading-relaxed md:text-base{% if refs_style != 'ieee' %} pl-5{% else %} list-none pl-0{% endif %}"
+        class="mb-0 mt-5 space-y-4 text-sm leading-relaxed md:text-base{% if refs_style != 'ieee' %} pl-5{% else %} list-none pl-0{% endif %}"
       >
         {%- for ref in refs -%}
           {%- assign ref_key = ref.key | default: ref.id | default: ref -%}
@@ -128,9 +128,9 @@
       >
         <div
           id="citation-modal-content"
-          class="max-h-[65vh] overflow-auto px-4 py-4 text-sm leading-relaxed text-gray-800 md:px-5 dark:text-gray-200"
+          class="max-h-[65vh] overflow-auto px-4 py-4 text-sm leading-relaxed text-gray-800 dark:text-gray-200 md:px-5"
         ></div>
-        <div class="flex items-center justify-between gap-4 border-t border-gray-200 px-4 py-3 md:px-5 dark:border-gray-700">
+        <div class="flex items-center justify-between gap-4 border-t border-gray-200 px-4 py-3 dark:border-gray-700 md:px-5">
           <a
             href="#{{ refs_heading_id | escape }}"
             id="citation-modal-jump"

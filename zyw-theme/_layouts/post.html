@@ -237,7 +237,7 @@ hidden: []
     <div class="post-print-actions mb-6 flex justify-end">
       <button
         type="button"
-        class="hover:border-brand-primary hover:text-brand-primary inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white/90 px-4 py-2 text-sm font-semibold text-gray-700 shadow-sm transition-colors dark:border-gray-700 dark:bg-gray-900/90 dark:text-gray-200"
+        class="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white/90 px-4 py-2 text-sm font-semibold text-gray-700 shadow-sm transition-colors hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:bg-gray-900/90 dark:text-gray-200"
         onclick="printArticle()"
         aria-label="Print this article"
         title="Print this article"
@@ -281,7 +281,7 @@ hidden: []
 
     {% if page.intro %}
       <section
-        class="mb-10 rounded-3xl border border-gray-200 bg-gradient-to-br from-gray-50 via-white to-sky-50 p-6 shadow-sm md:p-10 dark:border-gray-700 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800"
+        class="mb-10 rounded-3xl border border-gray-200 bg-gradient-to-br from-gray-50 via-white to-sky-50 p-6 shadow-sm dark:border-gray-700 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 md:p-10"
         aria-labelledby="post-intro"
       >
         <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-6 md:grid-cols-12 md:gap-10">
@@ -300,7 +300,7 @@ hidden: []
           <div class="{% if page.intro_image %}md:col-span-5{% else %}md:col-span-12{% endif %}">
             <p
               id="post-intro"
-              class="text-2xl leading-tight font-extrabold tracking-tight text-gray-900 md:text-4xl dark:text-gray-100"
+              class="text-2xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-gray-100 md:text-4xl"
             >
               {{ page.intro }}
             </p>

@@ -18,14 +18,14 @@
         | default: ' | '
       -%}
 
-      <div class="order-first text-center text-sm text-gray-600 md:order-last md:text-left dark:text-gray-400">
+      <div class="order-first text-center text-sm text-gray-600 dark:text-gray-400 md:order-last md:text-left">
         {{ copyright }}
       </div>
 
       {%- if legal_links.size > 0 -%}
         <nav
           aria-label="Footer legal navigation"
-          class="order-last text-center text-sm text-gray-600 md:order-first md:text-right dark:text-gray-400"
+          class="order-last text-center text-sm text-gray-600 dark:text-gray-400 md:order-first md:text-right"
         >
           {%- for item in legal_links -%}
             <a
