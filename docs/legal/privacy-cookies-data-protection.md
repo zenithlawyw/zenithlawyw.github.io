@@ -11,25 +11,29 @@ This page combines the website privacy notice, cookie notice, data protection po
 
 ## Scope and role
 
-This notice applies to personal data processed through this website, including when you browse pages, use site features, click outbound links, submit correspondence, or otherwise communicate with the site operator. It does not govern third-party websites or platforms that you access after leaving this site.
+This notice applies to personal data processed through this website. This includes browsing pages, using site features, clicking outbound links, submitting correspondence, or communicating with the site operator. This policy does not govern third party websites or platforms accessed after leaving this site.
 
-For privacy-law purposes, the site operator acts as the controller, or the closest equivalent concept used under applicable law, in relation to website-originated personal data handled for the operator's own publishing, analytics, security, and correspondence purposes.
+Under privacy laws, the site operator acts as the data controller for website publishing, security, correspondence, and first-party analytics. Vendors processing data solely based on the operator’s instructions serve as processors. However, any third-party vendor that determines its own processing purposes acts as an independent controller, subject to its own privacy policy.
 
 ## Jurisdiction map
 
-- **United Kingdom, including Scotland:** where UK data protection law applies, this notice is intended to support transparency under the UK GDPR and the Data Protection Act 2018 framework, together with applicable PECR-style cookie and online tracking rules.
-- **European Union and EEA:** where EU law applies, this notice is intended to support transparency under the EU GDPR and related ePrivacy requirements as implemented locally.
-- **Hong Kong:** the sections on collection purpose, classes of transferees, retention, and access or correction rights are intended to function as a Personal Information Collection Statement and transparency notice under the Personal Data (Privacy) Ordinance.
+- **Australia:** Where Australian law applies, this notice aligns with the Privacy Act framework and Australian Consumer Law mandatory protections.
+- **Canada:** This notice operates consistently with PIPEDA and provincial privacy requirements. This includes Quebec civil law privacy protections where applicable.
+- **European Union and EEA:** Where EU law applies, this notice supports transparency under the EU GDPR and local ePrivacy implementation rules.
+- **Hong Kong:** Sections regarding collection purpose, transferee classes, retention, and access or correction function as a PDPO transparency statement in PICS style.
+- **Mainland China:** Where PRC law applies, personal information handling and cross border transfer are subject to the PIPL and related mandatory rules.
+- **Other jurisdictions:** Additional mandatory rights and obligations may apply based on residence, location of processing, or the nature of interaction. Those mandatory rules prevail where they conflict with this notice.
 - **Singapore:** where the Personal Data Protection Act 2012 applies, this notice is intended to describe the collection, use, disclosure, and care of personal data at a baseline level.
-- **United States and other jurisdictions:** local federal, state, sectoral, or consumer laws may create additional rights, notices, or obligations depending on residence, context, and the nature of interaction.
+- **United Kingdom:** Where UK law applies, this notice supports transparency under the UK GDPR, the Data Protection Act 2018, and applicable PECR rules. This includes Scotland where relevant.
+- **United States:** Privacy obligations vary by state and sector. Where applicable, state rights including California privacy rights are handled according to mandatory local law.
 
-## Jurisdiction and dispute-resolution note
+## Jurisdiction and dispute resolution note
 
-This notice and the wider website legal framework are drafted for cross-border use. For baseline contractual interpretation, the site operator intends the laws of England and Wales to govern the website terms where that choice is legally permitted. Disputes connected with this notice or website use are intended to fall within the non-exclusive jurisdiction of the courts of England and Wales, so that urgent local relief or mandatory local procedures can still be used where required.
+This notice and the wider website legal framework are drafted for cross border use. For baseline contractual interpretation, the site operator intends the laws of England and Wales to govern the website terms where that choice is legally permitted. Disputes connected with this notice or website use are intended to fall within the non exclusive jurisdiction of the courts of England and Wales so that urgent local relief or mandatory local procedures can still be used where required.
 
-Nothing in this section is intended to remove or restrict rights that cannot be excluded under mandatory consumer, data protection, privacy, or unfair-terms law in the place where a user is habitually resident or where mandatory law otherwise applies. If such mandatory law conflicts with this baseline allocation, the mandatory rule prevails to that extent.
+Nothing in this section is intended to remove or restrict rights that cannot be excluded under mandatory consumer, data protection, privacy, or unfair terms law in the place where a user is habitually resident or where mandatory law otherwise applies. If such mandatory law conflicts with this baseline allocation, the mandatory rule prevails to that extent.
 
-Where a contract-specific document separately includes a valid arbitration clause, that clause may govern dispute process for that specific contract only. Public-web visitors should assume court-based resolution applies unless a separately agreed written contract states otherwise.
+Where a contract specific document separately includes a valid arbitration clause, that clause may govern dispute process for that specific contract only. Public web visitors should assume court based resolution applies unless a separately agreed written contract states otherwise.
 
 ## Personal data we may collect
 

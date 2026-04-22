@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {%- include head.html -%}
+  <body class="flex min-h-screen flex-col bg-white text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100">
+    {%- include views/header.html -%}
+    {%- include views/hero.html -%}
+    {%- include extensions/scroll-to-hash.html -%}
+    {%- include extensions/click-to-top.html -%}
+
+    {% assign stripped = content | strip_newlines | strip %}
+    {% unless stripped == null or stripped == '' %}
+      <main class="page-content flex-1 py-16 pt-20" aria-label="Content">
+        <div class="wrapper mx-auto w-full px-4 md:px-8">
+          <article
+            class="post h-entry"
+            itemscope
+            itemtype="http://schema.org/WebPage"
+          >
+            <div
+              class="post-content e-content prose mb-8 max-w-none [overflow-wrap:anywhere] dark:prose-invert prose-headings:text-gray-900 prose-p:text-gray-800 prose-li:text-gray-800 dark:prose-headings:text-gray-100 dark:prose-p:text-gray-200 dark:prose-li:text-gray-200"
+              itemprop="articleBody"
+            >
+              {{ content }}
+            </div>
+          </article>
+
+          <div class="mt-12">
+            {%- include extensions/legal-compliance-notice.html -%}
+          </div>
+        </div>
+      </main>
+    {% endunless %}
+
+    {%- include views/footer.html -%}
+  </body>
+</html>

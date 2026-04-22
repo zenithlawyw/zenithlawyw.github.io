@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-04-21T07:33:03Z"
-total_candidates: 470
+generated_at: "2026-04-22T20:43:55Z"
+total_candidates: 490
 candidates:
   - term: Incident Response
     status: approved
@@ -1578,6 +1578,18 @@ candidates:
       - title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
     related_pages: []
+  - term: Papers Preprints
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Research Literature Explorer: Keyword-Filtered Papers and Preprints"
+        url: "/literature/"
   - term: Personal Data
     status: candidate
     confidence: 7
@@ -2196,6 +2208,18 @@ candidates:
       - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
         url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
     related_pages: []
+  - term: Arxiv Openalex
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Knowledge Space: Discover Research Papers and Preprints Live"
+        url: "/literature/"
   - term: Asked
     status: candidate
     confidence: 6
@@ -2978,6 +3002,18 @@ candidates:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
     related_pages: []
+  - term: Knowledge Space
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Knowledge Space: Discover Research Papers and Preprints Live"
+        url: "/literature/"
   - term: Language Model
     status: candidate
     confidence: 6
@@ -3128,6 +3164,18 @@ candidates:
         url: "/legal/disclaimer/"
       - title: Terms of Use
         url: "/legal/terms-of-use/"
+  - term: Literature Explorer
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Research Literature Explorer: Keyword-Filtered Papers and Preprints"
+        url: "/literature/"
   - term: Machine Learning Classification
     status: candidate
     confidence: 6
@@ -3358,6 +3406,18 @@ candidates:
       - title: "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on Trust, Provenance, and Resilient Engineering"
         url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
     related_pages: []
+  - term: Openalex Crossref
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Knowledge Space: Discover Research Papers and Preprints Live"
+        url: "/literature/"
   - term: Operator
     status: candidate
     confidence: 6
@@ -3388,6 +3448,42 @@ candidates:
       - title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
     related_pages: []
+  - term: Papers Preprints Live
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Knowledge Space: Discover Research Papers and Preprints Live"
+        url: "/literature/"
+  - term: Papers Scholarly
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Knowledge Space: Discover Research Papers and Scholarly Literature"
+        url: "/literature/"
+  - term: Papers Scholarly Literature
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Knowledge Space: Discover Research Papers and Scholarly Literature"
+        url: "/literature/"
   - term: Permitted Applicable
     status: candidate
     confidence: 6
@@ -3482,6 +3578,18 @@ candidates:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
     related_pages: []
+  - term: Preprints Live
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Knowledge Space: Discover Research Papers and Preprints Live"
+        url: "/literature/"
   - term: Prevention Recovery
     status: candidate
     confidence: 6
@@ -3750,6 +3858,18 @@ candidates:
       - title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
+  - term: Scholarly Literature
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Knowledge Space: Discover Research Papers and Scholarly Literature"
+        url: "/literature/"
   - term: Scope
     status: candidate
     confidence: 6
@@ -3764,6 +3884,22 @@ candidates:
         url: "/legal/disclaimer/"
       - title: Privacy, Cookies and Data Protection
         url: "/legal/privacy-cookies-data-protection/"
+  - term: Search
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/_authors/zenith-law.html"
+      - title: "FAQ Hub: Questions and Answers Across Published Pages"
+        url: "/faq/"
+      - title: "Knowledge Space: Discover Research Papers and Preprints Live"
+        url: "/literature/"
   - term: Security
     status: candidate
     confidence: 6
@@ -4156,6 +4292,18 @@ candidates:
         url: "/legal/privacy-cookies-data-protection/"
       - title: Terms of Use
         url: "/legal/terms-of-use/"
+  - term: API Fetching Paginated
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Research Literature Explorer: Keyword-Filtered Papers and Preprints"
+        url: "/literature/"
   - term: Algorithms
     status: candidate
     confidence: 5
@@ -4716,6 +4864,20 @@ candidates:
     related_pages:
       - title: "FAQ Hub: Questions and Answers Across Published Pages"
         url: "/faq/"
+  - term: Focus
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/_authors/zenith-law.html"
+      - title: "Research Literature Explorer: Keyword-Filtered Papers and Preprints"
+        url: "/literature/"
   - term: Four
     status: candidate
     confidence: 5
@@ -5022,6 +5184,30 @@ candidates:
     related_pages:
       - title: ""
         url: "/_authors/zenith-law.html"
+  - term: Literature
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Research Literature Explorer: Keyword-Filtered Papers and Preprints"
+        url: "/literature/"
+  - term: Live API Fetching
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Research Literature Explorer: Keyword-Filtered Papers and Preprints"
+        url: "/literature/"
   - term: Llms
     status: candidate
     confidence: 5
@@ -5206,6 +5392,20 @@ candidates:
       - title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
     related_pages: []
+  - term: Overview
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "FAQ Hub: Questions and Answers Across Published Pages"
+        url: "/faq/"
+      - title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
+        url: "/glossary/"
   - term: Paper
     status: candidate
     confidence: 5
@@ -5218,6 +5418,18 @@ candidates:
       - title: "Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Papers
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Research Literature Explorer: Keyword-Filtered Papers and Preprints"
+        url: "/literature/"
   - term: Patterns
     status: candidate
     confidence: 5
@@ -5304,6 +5516,18 @@ candidates:
       - title: "Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Profiles Live API
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Research Literature Explorer: Keyword-Filtered Papers and Preprints"
+        url: "/literature/"
   - term: Prompt
     status: candidate
     confidence: 5
@@ -5488,6 +5712,32 @@ candidates:
       - title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
     related_pages: []
+  - term: Scholarly
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Knowledge Space: Discover Research Papers and Scholarly Literature"
+        url: "/literature/"
+  - term: Science
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/_authors/zenith-law.html"
+      - title: "Knowledge Space: Discover Research Papers and Preprints Live"
+        url: "/literature/"
   - term: Services
     status: candidate
     confidence: 5

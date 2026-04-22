@@ -5,13 +5,19 @@
   "plugins": ["@shopify/prettier-plugin-liquid", "prettier-plugin-tailwindcss"],
   "overrides": [
     {
-      "files": [
-        "docs/*.html",
-        "docs/_includes/*.html",
-        "docs/_layouts/*.html",
-        "zyw-theme/_includes/**/*.html",
-        "zyw-theme/_layouts/*.html"
-      ],
+      "files": "zyw-theme/**/*",
+      "options": {
+        "tailwindConfig": "./zyw-theme/tailwind.config.js"
+      }
+    },
+    {
+      "files": ["docs/*.html", "docs/_includes/*.html", "docs/_layouts/*.html"],
+      "options": {
+        "parser": "liquid-html"
+      }
+    },
+    {
+      "files": ["zyw-theme/_includes/**/*.html", "zyw-theme/_layouts/*.html"],
       "options": {
         "parser": "liquid-html"
       }

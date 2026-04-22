@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-04-21T07:33:02Z"
+generated_at: "2026-04-22T20:43:54Z"
 signal_weights:
   title: 3
   categories: 5
@@ -15,8 +15,8 @@ signal_weight_rationale:
   intro_description_headings: Medium weight for context enrichment without dominating keyword extraction.
   keywords_catchwords: Low weight to avoid over-amplifying manually supplied or potentially noisy token lists.
 keywords:
-  - engineering
   - data
+  - engineering
   - governance
   - supply
   - chain
@@ -27,18 +27,20 @@ keywords:
   - questions
   - learning
   - platform
-  - china
   - llm
   - security
+  - china
+  - legal
   - machine
   - resource
   - starvation
   - fragmentation
   - glossary
-  - legal
   - npm
   - conditions
   - digital
+  - asked
+  - frequently
   - models
   - systems
   - access
@@ -48,10 +50,10 @@ keywords:
   - large
   - transformer
   - trust
-  - asked
   - attack
-  - frequently
+  - knowledge
   - operating
+  - papers
   - sovereignty
   - axios
   - compliance
@@ -66,6 +68,7 @@ keywords:
   - circular
   - credential
   - cybersecurity
+  - search
   - cookies
   - law
   - management
@@ -82,6 +85,7 @@ keywords:
   - introduction
   - lineage
   - links
+  - literature
   - networks
   - neural
   - policy
@@ -100,6 +104,7 @@ keywords:
   - prompt
   - risk
   - saas
+  - scholarly
   - blocked
   - boundary
   - concurrency
@@ -108,7 +113,6 @@ keywords:
   - evaluation
   - implement
   - jurisdiction
-  - knowledge
   - limits
   - llms
   - localization
@@ -131,6 +135,7 @@ keywords:
   - prevention
   - reproducibility
   - resilience
+  - science
   - trustworthy
   - aeo
   - aging
@@ -141,9 +146,12 @@ keywords:
   - compromised
   - control
   - cross-jurisdiction
+  - crossref
   - dependencies
+  - domain
   - external
   - federated
+  - focus
   - geo
   - hallucination
   - hub
@@ -151,6 +159,8 @@ keywords:
   - methods
   - mutex
   - notice
+  - open
+  - openalex
   - personal
   - preprocessing
   - prevent
@@ -164,33 +174,23 @@ keywords:
   - tooling
   - verification
   - applied
-  - published
-  - requirements
-  - responsible
-  - thread
-  - unc1069
-  - abstractions
-  - acceptable
-  - accountability
-  - actionable
-  - ai-assisted
-  - allocation
+  - discover
 key_phrases:
   - supply chain
   - data provenance
-  - machine learning
   - engineering governance
-  - coffman conditions
-  - large language
+  - machine learning
   - asked questions
-  - chain security
-  - data provenance machine
-  - engineering lessons
   - frequently asked
   - frequently asked questions
+  - chain security
+  - coffman conditions
+  - large language
+  - supply chain security
+  - data provenance machine
+  - engineering lessons
   - provenance machine
   - provenance machine learning
-  - supply chain security
   - digital sovereignty
   - language models
   - large language models
@@ -285,6 +285,7 @@ key_phrases:
   - governance legal
   - governance lessons
   - incident response trust
+  - knowledge space
   - language models transformer
   - legal policy
   - management deadlock
@@ -295,7 +296,10 @@ key_phrases:
   - networks reproducibility
   - networks reproducibility governance
   - neural networks reproducibility
+  - openalex crossref
   - operating systems design
+  - papers scholarly
+  - papers scholarly literature
   - platform engineering risk
   - prompt engineering governance
   - reproducibility governance
@@ -309,13 +313,9 @@ key_phrases:
   - risk management governance
   - scheduling starvation
   - scheduling starvation resilience
+  - scholarly literature
   - security cloud
   - security cloud fragmentation
-  - security social
-  - security social engineering
-  - seo geo aeo
-  - social engineering incident
-  - sovereignty cloud compliance
 catchwords:
   - engineering
   - governance
@@ -328,16 +328,18 @@ catchwords:
   - questions
   - learning
   - platform
-  - china
   - security
+  - china
+  - legal
   - machine
   - resource
   - starvation
   - fragmentation
   - glossary
-  - legal
   - conditions
   - digital
+  - asked
+  - frequently
   - models
   - systems
   - access
@@ -347,10 +349,10 @@ catchwords:
   - large
   - transformer
   - trust
-  - asked
   - attack
-  - frequently
+  - knowledge
   - operating
+  - papers
   - sovereignty
   - axios
   - compliance
@@ -364,6 +366,7 @@ catchwords:
   - circular
   - credential
   - cybersecurity
+  - search
   - cookies
   - management
   - protection
@@ -379,6 +382,7 @@ catchwords:
   - introduction
   - lineage
   - links
+  - literature
   - networks
   - neural
   - policy
@@ -395,6 +399,7 @@ catchwords:
   - frontier
   - notices
   - prompt
+  - scholarly
   - blocked
   - boundary
   - concurrency
@@ -403,7 +408,6 @@ catchwords:
   - evaluation
   - implement
   - jurisdiction
-  - knowledge
   - limits
   - localization
   - package
@@ -423,6 +427,7 @@ catchwords:
   - prevention
   - reproducibility
   - resilience
+  - science
   - trustworthy
   - aging
   - apply
@@ -431,14 +436,18 @@ catchwords:
   - compromised
   - control
   - cross-jurisdiction
+  - crossref
   - dependencies
+  - domain
   - external
   - federated
+  - focus
   - hallucination
   - liability
   - methods
   - mutex
   - notice
+  - openalex
   - personal
   - preprocessing
   - prevent
@@ -452,17 +461,7 @@ catchwords:
   - tooling
   - verification
   - applied
-  - published
-  - requirements
-  - responsible
-  - thread
-  - unc1069
-  - abstractions
-  - acceptable
-  - accountability
-  - actionable
-  - ai-assisted
-  - allocation
+  - discover
 catchphrases:
   - frequently asked questions
   - 2 partnership models shift accountability maps
@@ -485,8 +484,8 @@ catchphrases:
   - semaphores counter-based access control
   - thematic analysis
 search_words:
-  - engineering
   - data
+  - engineering
   - governance
   - supply
   - chain
@@ -497,18 +496,20 @@ search_words:
   - questions
   - learning
   - platform
-  - china
   - llm
   - security
+  - china
+  - legal
   - machine
   - resource
   - starvation
   - fragmentation
   - glossary
-  - legal
   - npm
   - conditions
   - digital
+  - asked
+  - frequently
   - models
   - systems
   - access
@@ -518,10 +519,10 @@ search_words:
   - large
   - transformer
   - trust
-  - asked
   - attack
-  - frequently
+  - knowledge
   - operating
+  - papers
   - sovereignty
   - axios
   - compliance
@@ -536,6 +537,7 @@ search_words:
   - circular
   - credential
   - cybersecurity
+  - search
   - cookies
   - law
   - management
@@ -552,6 +554,7 @@ search_words:
   - introduction
   - lineage
   - links
+  - literature
   - networks
   - neural
   - policy
@@ -570,26 +573,22 @@ search_words:
   - prompt
   - risk
   - saas
-  - blocked
-  - boundary
-  - concurrency
-  - difference
-  - distillation
+  - scholarly
   - supply chain
   - data provenance
-  - machine learning
   - engineering governance
-  - coffman conditions
-  - large language
+  - machine learning
   - asked questions
-  - chain security
-  - data provenance machine
-  - engineering lessons
   - frequently asked
   - frequently asked questions
+  - chain security
+  - coffman conditions
+  - large language
+  - supply chain security
+  - data provenance machine
+  - engineering lessons
   - provenance machine
   - provenance machine learning
-  - supply chain security
   - digital sovereignty
   - language models
   - large language models
@@ -650,8 +649,12 @@ global_questions:
     answer: Treat community reports as intake signals. Require independent corroboration through status pages, policy documents, support records, or contractual notices before escalation. This method preserves speed without sacrificing evidence quality.
   - question: What is the best next step for readers who want to go deeper?
     answer: Run a broader review that includes MLflow, OpenLineage, Pachyderm, and DVC literature, then test candidate approaches against your production constraints and governance requirements.
+  - question: How are keywords matched against papers?
+    answer: Matching runs against each record's title and abstract. "All keywords must match" narrows results to items where every keyword appears; "Any keyword may match" broadens results to items containing at least one keyword. Switching modes is the fastest way to widen a narrow search.
   - question: How do I know if my environment is affected?
     answer: Investigate systems that resolved or installed affected axios versions during the exposure window and hunt for reported indicators, including `sfrclak[.]com` and platform payload artifacts.
+  - question: How does Knowledge Space work?
+    answer: Select a research focus domain or enter your own keywords, choose your sources, and click Search Literature. Knowledge Space fetches recent papers and preprints in real time from the APIs you selected, filters by your keywords and match mode, and returns paginated results ready to explore.
   - question: How was the maintainer's account compromised?
     answer: Public reports did not conclusively publish every credential theft detail at first disclosure. Mandiant tradecraft reporting plus the maintainer post-mortem context supports social engineering as a credible precursor pattern.
   - question: What central message unifies all sources in this revised collection?
@@ -666,6 +669,8 @@ global_questions:
     answer: Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority aligns with observed access and notification disruptions in the corpus.
   - question: What should an enterprise implement first after reading this analysis?
     answer: Start with a minimal governance baseline. Define approved use cases. Define prompt versioning rules. Define output verification requirements. Define escalation procedures for harmful or ungrounded responses. This sequence converts theory into immediate control coverage.
+  - question: Why do result counts vary by source?
+    answer: API coverage, indexing frequency, metadata completeness, and availability differ across providers. OpenAlex and Crossref emphasize broad scholarly metadata, and publication typing may vary by source. Combining both sources usually yields broader and more resilient discovery coverage than relying on one source alone.
   - question: Why keep discussing preprocessing provenance?
     answer: "Because both relevance and complexity show up there: Pina et al. identify integration gaps at that stage, and Souza et al. identify curation as difficult."
   - question: Does removing the malicious package versions remediate the compromise?
@@ -700,8 +705,12 @@ global_questions:
     answer: "The [Transformer](<https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)>) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the model's dimensional space."
   - question: How should researchers and educators reuse these materials responsibly?
     answer: Use short quotations only when wording precision matters. Prefer paraphrase for interpretation. Maintain explicit attribution. Preserve links to original context. Where applicable under UK law, assess whether CDPA 1988 ss. 29 (research/private study) and 31A (text and data analysis for non-commercial research) conditions are genuinely satisfied before reuse. This applies equally to video content and to published scholarly works.
+  - question: Is any data stored when I search?
+    answer: No. Fetched literature records are not stored in application-level persistent storage. Normal operational logs from hosting, edge, or analytics services may still apply independently under their own policies.
   - question: Is the reported 91.3% GCN figure a universal result?
     answer: No. It is a paper-reported result in one evaluation context. This review does not treat it as a universal benchmark.
+  - question: Is this legal advice or a professional recommendation?
+    answer: No. Knowledge Space is an informational research-discovery tool only, not legal advice or a professional recommendation. For jurisdiction-specific legal or compliance decisions, consult qualified counsel in the relevant jurisdiction. Mandatory local consumer and data protection rights remain fully unaffected.
   - question: Should teams deploy provenance tooling immediately after reading this article?
     answer: Use this article as orientation, not as a deployment checklist. Before adoption decisions, compare against your own stack, load profile, compliance obligations, and failure modes.
   - question: What are the four Coffman conditions for deadlock?
@@ -726,6 +735,8 @@ global_questions:
     answer: The strongest technical depth appears in Vaswani et al., Brown et al., and the Stanford, MIT, StatQuest, and Yannic Kilcher materials, because they explain objective functions, attention mechanics, and scaling behavior with explicit procedural detail. Yang et al.'s distillation survey and Ren et al.'s federated foundation model survey add the deployment and compression dimensions.
   - question: Which sources best support practical implementation teams?
     answer: Google Cloud Tech and AI Search provide direct implementation value for teams that need prompt design guidance and user-facing framing for model behavior. Yang et al.'s practitioner survey on ChatGPT and beyond adds empirical guidance on when to use LLMs versus fine-tuned models for specific NLP tasks.
+  - question: Which sources does this tool search?
+    answer: "The tool queries two open academic APIs: OpenAlex (a broad scholarly works index covering journals and conference papers) and Crossref (a DOI registration and metadata service). Each brings distinct coverage and indexing depth, so combining them typically yields a fuller picture."
   - question: Who is responsible for the attack?
     answer: Microsoft attributes the activity to Sapphire Sleet, Sophos maps related activity to NICKEL GLADSTONE, and Mandiant tracks overlapping tradecraft under UNC1069.
   - question: Why is ChatGPT blocked in China?
@@ -1983,7 +1994,7 @@ pages:
       - contact
       - cookie
       - current
-      - dispute-resolution
+      - dispute
       - legal
       - map
       - note
@@ -1995,31 +2006,31 @@ pages:
       - practice
       - practices
       - reference
+      - resolution
       - retention
       - rights
       - role
-      - scope
     key_phrases:
       - data protection
       - privacy cookies
       - cookies data
       - cookies data protection
       - privacy cookies data
-      - personal data
       - hong kong
-      - pics-style statement website
-      - practice rights children
-      - protection practice rights
-      - data protection practice
-      - security data protection
-      - data protection scope
-      - protection scope role
-      - scope role jurisdiction
-      - role jurisdiction map
+      - personal data
+      - map jurisdiction dispute
       - jurisdiction map jurisdiction
-      - map jurisdiction dispute-resolution
-      - jurisdiction dispute-resolution note
-      - retention security data
+      - role jurisdiction map
+      - jurisdiction dispute resolution
+      - scope role jurisdiction
+      - protection scope role
+      - dispute resolution note
+      - data protection scope
+      - security data protection
+      - data protection practice
+      - protection practice rights
+      - practice rights children
+      - pics-style statement website
       - kong pics-style statement
       - hong kong pics-style
       - summary hong kong
@@ -2041,7 +2052,7 @@ pages:
       - contact
       - cookie
       - current
-      - dispute-resolution
+      - dispute
       - legal
       - official
       - online
@@ -2051,8 +2062,8 @@ pages:
       - practice
       - practices
       - reference
+      - resolution
       - retention
-      - rights
     search_words:
       - data
       - protection
@@ -2077,13 +2088,13 @@ pages:
       - cookies data
       - cookies data protection
       - privacy cookies data
-      - personal data
       - hong kong
-      - pics-style statement website
-      - practice rights children
-      - protection practice rights
-      - data protection practice
-      - security data protection
+      - personal data
+      - map jurisdiction dispute
+      - jurisdiction map jurisdiction
+      - role jurisdiction map
+      - jurisdiction dispute resolution
+      - scope role jurisdiction
     questions:
       - question: How we use personal data?
         answer: "Personal data may be used to: - operate, secure, maintain, and improve the website; - understand readership, traffic sources, and content performance"
@@ -2201,6 +2212,148 @@ pages:
       - acceptable conduct intellectual
       - conduct intellectual property
     questions: []
+  literature:
+    title: "Knowledge Space: Discover Research Papers and Scholarly Literature"
+    url: "/literature/"
+    keywords:
+      - papers
+      - literature
+      - search
+      - knowledge
+      - crossref
+      - data
+      - openalex
+      - discover
+      - live
+      - scholarly
+      - science
+      - space
+      - domain
+      - focus
+      - governance
+      - keyword
+      - open
+      - academic
+      - engineering
+      - preprints
+      - advice
+      - area
+      - asked
+      - configurable
+      - counts
+      - discovery
+      - drawn
+      - explore
+      - fetches
+      - filters
+      - frequently
+      - legal
+      - matched
+      - persistence
+      - professional
+      - research paper discovery
+      - live literature search
+      - how to find research papers online
+      - academic paper aggregator
+      - open knowledge explorer
+    key_phrases:
+      - knowledge space
+      - openalex crossref
+      - papers scholarly
+      - scholarly literature
+      - papers scholarly literature
+      - papers data
+      - engineering governance
+      - discover papers scholarly
+      - papers preprints
+      - space discover papers
+      - knowledge space discover
+      - literature knowledge
+      - discover papers
+      - space discover
+      - live keyword domain
+      - literature live keyword
+      - scholarly literature live
+      - explore papers scholarly
+      - advice professional recommendation
+      - crossref data persistence
+      - openalex crossref data
+      - drawn openalex crossref
+      - domain drawn openalex
+      - focus domain drawn
+    catchwords:
+      - papers
+      - literature
+      - search
+      - knowledge
+      - crossref
+      - openalex
+      - discover
+      - scholarly
+      - science
+      - space
+      - domain
+      - focus
+      - governance
+      - keyword
+      - academic
+      - engineering
+      - preprints
+      - advice
+      - asked
+      - configurable
+      - counts
+      - discovery
+      - drawn
+      - explore
+      - fetches
+      - filters
+      - frequently
+      - legal
+    search_words:
+      - papers
+      - literature
+      - search
+      - knowledge
+      - crossref
+      - data
+      - openalex
+      - discover
+      - live
+      - scholarly
+      - science
+      - space
+      - domain
+      - focus
+      - governance
+      - keyword
+      - open
+      - academic
+      - knowledge space
+      - openalex crossref
+      - papers scholarly
+      - scholarly literature
+      - papers scholarly literature
+      - papers data
+      - engineering governance
+      - discover papers scholarly
+      - papers preprints
+      - space discover papers
+      - knowledge space discover
+      - literature knowledge
+    questions:
+      - question: How are keywords matched against papers?
+        answer: Matching runs against each record's title and abstract. "All keywords must match" narrows results to items where every keyword appears; "Any keyword may match" broadens results to items containing at least one keyword. Switching modes is the fastest way to widen a narrow search.
+      - question: How does Knowledge Space work?
+        answer: Select a research focus domain or enter your own keywords, choose your sources, and click Search Literature. Knowledge Space fetches recent papers and preprints in real time from the APIs you selected, filters by your keywords and match mode, and returns paginated results ready to explore.
+      - question: Why do result counts vary by source?
+        answer: API coverage, indexing frequency, metadata completeness, and availability differ across providers. OpenAlex and Crossref emphasize broad scholarly metadata, and publication typing may vary by source. Combining both sources usually yields broader and more resilient discovery coverage than relying on one source alone.
+      - question: Is any data stored when I search?
+        answer: No. Fetched literature records are not stored in application-level persistent storage. Normal operational logs from hosting, edge, or analytics services may still apply independently under their own policies.
+      - question: Is this legal advice or a professional recommendation?
+        answer: No. Knowledge Space is an informational research-discovery tool only, not legal advice or a professional recommendation. For jurisdiction-specific legal or compliance decisions, consult qualified counsel in the relevant jurisdiction. Mandatory local consumer and data protection rights remain fully unaffected.
+      - question: Which sources does this tool search?
+        answer: "The tool queries two open academic APIs: OpenAlex (a broad scholarly works index covering journals and conference papers) and Crossref (a DOI registration and metadata service). Each brings distinct coverage and indexing depth, so combining them typically yields a fuller picture."
   "404":
     title: "404"
     url: "/404"
