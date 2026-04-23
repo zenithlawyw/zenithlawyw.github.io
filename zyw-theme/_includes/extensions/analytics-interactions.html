@@ -1,8 +1,12 @@
 <!-- Global interaction events for GA4/GTM -->
+{%- assign consent_events = site.consent_management.events -%}
 <script>
   <!--//
   (function () {
-    var eventConfig = {{ site.consent_management.events | default: '{}' | jsonify }} || {};
+    var eventConfig = {{ consent_events | jsonify }};
+    if (!eventConfig || typeof eventConfig !== 'object') {
+      eventConfig = {};
+    }
     var trackPageViewEnabled = eventConfig.track_page_view !== false;
     var trackLinkClicks = eventConfig.track_link_clicks !== false;
     var trackScrollDepthEnabled = eventConfig.track_scroll_depth !== false;

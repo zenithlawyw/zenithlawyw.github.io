@@ -1,7 +1,23 @@
 #!/usr/bin/env sh
 
-npm run docs:seo
-npm run docs:glossary
+set -e
+
+# Capture currently staged files so formatter updates are re-staged automatically.
+STAGED_FILES="$(git diff --cached --name-only --diff-filter=ACMR)"
+
+# taxonomy already runs seo + glossary generators.
 npm run docs:taxonomy
 npm run docs:build
 npm run format
+
+# Auto-stage generated data artifacts from pre-commit generators.
+git add docs/_data/seo_auto.yml docs/_data/glossary_auto.yml
+
+# Re-stage formatter changes only for files that were already staged.
+if [ -n "$STAGED_FILES" ]; then
+	echo "$STAGED_FILES" | while IFS= read -r file; do
+		if [ -n "$file" ] && [ -f "$file" ]; then
+			git add "$file"
+		fi
+	done
+fi
