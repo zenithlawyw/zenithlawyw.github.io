@@ -1,0 +1,155 @@
+<!-- Global interaction events for GA4/GTM -->
+<script>
+  <!--//
+  (function () {
+    var eventConfig = {{ site.consent_management.events | default: '{}' | jsonify }} || {};
+    var trackPageViewEnabled = eventConfig.track_page_view !== false;
+    var trackLinkClicks = eventConfig.track_link_clicks !== false;
+    var trackScrollDepthEnabled = eventConfig.track_scroll_depth !== false;
+    var trackFormSubmits = eventConfig.track_form_submits !== false;
+    var scrollMilestones = [25, 50, 75, 100];
+    var firedScroll = {};
+
+    function hasAnalyticsConsent() {
+      if (
+        window.ZYWConsentManager &&
+        typeof window.ZYWConsentManager.hasConsent === 'function'
+      ) {
+        return window.ZYWConsentManager.hasConsent('analytics');
+      }
+
+      return !!(window.__ZYWConsentState && window.__ZYWConsentState.analytics);
+    }
+
+    function emitEvent(eventName, params) {
+      if (!hasAnalyticsConsent()) {
+        return;
+      }
+
+      var payload = params || {};
+
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', eventName, payload);
+      }
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(
+        Object.assign(
+          {
+            event: eventName,
+          },
+          payload
+        )
+      );
+    }
+
+    function getPagePath() {
+      return window.location.pathname + window.location.search;
+    }
+
+    function emitPageViewEvent() {
+      if (!trackPageViewEnabled) {
+        return;
+      }
+
+      emitEvent('page_view_custom', {
+        page_path: getPagePath(),
+        page_title: document.title || '',
+      });
+    }
+
+    function trackLinkClick(event) {
+      if (!trackLinkClicks) {
+        return;
+      }
+
+      var link = event.target.closest('a[href]');
+      if (!link) {
+        return;
+      }
+
+      var href = link.getAttribute('href') || '';
+      if (!href || href.indexOf('#') === 0) {
+        return;
+      }
+
+      var targetUrl;
+      try {
+        targetUrl = new URL(link.href, window.location.href);
+      } catch (error) {
+        return;
+      }
+
+      var sameHost = targetUrl.hostname === window.location.hostname;
+      var eventType = sameHost ? 'internal_link_click' : 'outbound_link_click';
+
+      emitEvent(eventType, {
+        link_url: targetUrl.href,
+        link_host: targetUrl.hostname,
+        link_text: (link.textContent || '').trim().slice(0, 120),
+        page_path: getPagePath(),
+      });
+    }
+
+    function trackScrollDepth() {
+      if (!trackScrollDepthEnabled) {
+        return;
+      }
+
+      if (!document.body) {
+        return;
+      }
+
+      var doc = document.documentElement;
+      var scrollTop = window.pageYOffset || doc.scrollTop || 0;
+      var maxScrollable = Math.max((doc.scrollHeight || 0) - window.innerHeight, 1);
+      var percentage = Math.round((scrollTop / maxScrollable) * 100);
+
+      scrollMilestones.forEach(function (milestone) {
+        if (percentage >= milestone && !firedScroll[milestone]) {
+          firedScroll[milestone] = true;
+          emitEvent('scroll_depth', {
+            scroll_percent: milestone,
+            page_path: getPagePath(),
+          });
+        }
+      });
+    }
+
+    function trackFormSubmit(event) {
+      if (!trackFormSubmits) {
+        return;
+      }
+
+      var form = event.target;
+      if (!form || form.tagName !== 'FORM') {
+        return;
+      }
+
+      emitEvent('form_submit', {
+        form_id: form.id || '',
+        form_name: form.getAttribute('name') || '',
+        form_action: form.getAttribute('action') || '',
+        page_path: getPagePath(),
+      });
+    }
+
+    function initTrackingBindings() {
+      document.addEventListener('click', trackLinkClick, true);
+      document.addEventListener('submit', trackFormSubmit, true);
+      window.addEventListener('scroll', trackScrollDepth, { passive: true });
+      emitPageViewEvent();
+      trackScrollDepth();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initTrackingBindings);
+    } else {
+      initTrackingBindings();
+    }
+
+    window.ZYWAnalytics = window.ZYWAnalytics || {};
+    window.ZYWAnalytics.trackEvent = emitEvent;
+  })();
+  //-->
+</script>

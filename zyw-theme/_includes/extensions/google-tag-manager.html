@@ -1,9 +1,13 @@
-<!-- Google tag (gtag.js) with consent-aware loading -->
+<!-- Google Tag Manager (consent-aware) -->
 <script>
   <!--//
   (function () {
-    var measurementId = '{{ site.google_analytics }}';
-    var gaLoaded = false;
+    var containerId = '{{ site.gtm_container_id | default: "" }}'.trim();
+    if (!containerId) {
+      return;
+    }
+
+    var gtmLoaded = false;
 
     function isDoNotTrackEnabled() {
       var doNotTrack =
@@ -32,41 +36,43 @@
       wait_for_update: 500,
     });
 
-    function loadGaScript() {
-      if (gaLoaded || isDoNotTrackEnabled()) {
+    function loadGtmScript() {
+      if (gtmLoaded || isDoNotTrackEnabled()) {
         return;
       }
 
-      gaLoaded = true;
-      var tag = document.createElement('script');
-      tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
-      tag.async = true;
-      document.head.appendChild(tag);
-
-      window.gtag('js', new Date());
-      window.gtag('config', measurementId, {
-        anonymize_ip: true,
+      gtmLoaded = true;
+      window.dataLayer.push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js',
       });
+
+      var firstScript = document.getElementsByTagName('script')[0];
+      var scriptTag = document.createElement('script');
+      scriptTag.async = true;
+      scriptTag.src = 'https://www.googletagmanager.com/gtm.js?id=' + containerId;
+      firstScript.parentNode.insertBefore(scriptTag, firstScript);
     }
 
-    function syncGaWithConsent(state) {
+    function syncGtmWithConsent(state) {
       if (isDoNotTrackEnabled()) {
         return;
       }
 
       var hasAnalyticsConsent = !!(state && state.analytics);
+      var hasFunctionalConsent = !!(state && state.functional);
+
       window.gtag('consent', 'update', {
         ad_storage: 'denied',
         ad_user_data: 'denied',
         ad_personalization: 'denied',
         analytics_storage: hasAnalyticsConsent ? 'granted' : 'denied',
-        functionality_storage:
-          state && state.functional ? 'granted' : 'denied',
+        functionality_storage: hasFunctionalConsent ? 'granted' : 'denied',
         security_storage: 'granted',
       });
 
       if (hasAnalyticsConsent) {
-        loadGaScript();
+        loadGtmScript();
       }
     }
 
@@ -81,9 +87,10 @@
       return window.__ZYWConsentState || null;
     }
 
-    syncGaWithConsent(getCurrentConsentState());
+    syncGtmWithConsent(getCurrentConsentState());
+
     document.addEventListener('zyw:consent-changed', function (event) {
-      syncGaWithConsent(event.detail || null);
+      syncGtmWithConsent(event.detail || null);
     });
   })();
   //-->

@@ -1,13 +1,13 @@
 ---
 layout: legal
 title: Privacy, Cookies and Data Protection
-description: Combined privacy notice, cookie notice, data protection policy summary, and Hong Kong PICS-style statement for the website.
+description: Combined privacy notice, cookie notice, data protection policy summary, and Hong Kong Personal Information Collection Statement (PICS)-style statement for the website.
 permalink: /legal/privacy-cookies-data-protection/
 ---
 
 # Privacy, Cookies and Data Protection
 
-This page combines the website privacy notice, cookie notice, data protection policy and practice summary, and a Hong Kong style personal information collection statement. It is written for a public website with an international audience and should be read together with the [Disclaimer]({{ '/legal/disclaimer/' | relative_url }}) and the [Terms of Use]({{ '/legal/terms-of-use/' | relative_url }}).
+This page combines the website privacy notice, cookie notice, data protection policy and practice summary, and a Hong Kong style Personal Information Collection Statement (PICS). It is written for a public website with an international audience and should be read together with the [Disclaimer]({{ '/legal/disclaimer/' | relative_url }}) and the [Terms of Use]({{ '/legal/terms-of-use/' | relative_url }}).
 
 ## Scope and role
 
@@ -18,22 +18,22 @@ Under privacy laws, the site operator acts as the data controller for website pu
 ## Jurisdiction map
 
 - **Australia:** Where Australian law applies, this notice aligns with the Privacy Act framework and Australian Consumer Law mandatory protections.
-- **Canada:** This notice operates consistently with PIPEDA and provincial privacy requirements. This includes Quebec civil law privacy protections where applicable.
-- **European Union and EEA:** Where EU law applies, this notice supports transparency under the EU GDPR and local ePrivacy implementation rules.
-- **Hong Kong:** Sections regarding collection purpose, transferee classes, retention, and access or correction function as a PDPO transparency statement in PICS style.
-- **Mainland China:** Where PRC law applies, personal information handling and cross border transfer are subject to the PIPL and related mandatory rules.
+- **Canada:** This notice operates consistently with the Personal Information Protection and Electronic Documents Act (PIPEDA) and provincial privacy requirements. This includes Quebec civil law privacy protections where applicable.
+- **European Union and European Economic Area (EEA):** Where EU law applies, this notice supports transparency under the General Data Protection Regulation (GDPR), formally Regulation (EU) 2016/679, and local ePrivacy implementation rules.
+- **Hong Kong:** Sections regarding collection purpose, transferee classes, retention, and access or correction function as a Personal Data (Privacy) Ordinance (PDPO) transparency statement in Personal Information Collection Statement (PICS) style.
+- **Mainland China:** Where People's Republic of China (PRC) law applies, personal information handling and cross border transfer are subject to the Personal Information Protection Law (PIPL) and related mandatory rules.
 - **Other jurisdictions:** Additional mandatory rights and obligations may apply based on residence, location of processing, or the nature of interaction. Those mandatory rules prevail where they conflict with this notice.
-- **Singapore:** where the Personal Data Protection Act 2012 applies, this notice is intended to describe the collection, use, disclosure, and care of personal data at a baseline level.
-- **United Kingdom:** Where UK law applies, this notice supports transparency under the UK GDPR, the Data Protection Act 2018, and applicable PECR rules. This includes Scotland where relevant.
+- **Singapore:** Where the Personal Data Protection Act 2012 applies, this notice is intended to describe the collection, use, disclosure, and care of personal data at a baseline level.
+- **United Kingdom:** Where UK law applies, this notice supports transparency under the United Kingdom General Data Protection Regulation (UK GDPR), the Data Protection Act 2018, and applicable Privacy and Electronic Communications Regulations (PECR) rules. This includes Scotland where relevant.
 - **United States:** Privacy obligations vary by state and sector. Where applicable, state rights including California privacy rights are handled according to mandatory local law.
 
-## Jurisdiction and dispute resolution note
+## Jurisdiction and dispute-resolution note
 
-This notice and the wider website legal framework are drafted for cross border use. For baseline contractual interpretation, the site operator intends the laws of England and Wales to govern the website terms where that choice is legally permitted. Disputes connected with this notice or website use are intended to fall within the non exclusive jurisdiction of the courts of England and Wales so that urgent local relief or mandatory local procedures can still be used where required.
+This notice and the wider website legal framework are drafted for cross-border use. For baseline contractual interpretation, the site operator intends the laws of England and Wales to govern the website terms where that choice is legally permitted. Disputes connected with this notice or website use are intended to fall within the non-exclusive jurisdiction of the courts of England and Wales so that urgent local relief or mandatory local procedures can still be used where required.
 
 Nothing in this section is intended to remove or restrict rights that cannot be excluded under mandatory consumer, data protection, privacy, or unfair terms law in the place where a user is habitually resident or where mandatory law otherwise applies. If such mandatory law conflicts with this baseline allocation, the mandatory rule prevails to that extent.
 
-Where a contract specific document separately includes a valid arbitration clause, that clause may govern dispute process for that specific contract only. Public web visitors should assume court based resolution applies unless a separately agreed written contract states otherwise.
+Where a contract-specific document separately includes a valid arbitration clause, that clause may govern dispute process for that specific contract only. Public web visitors should assume court-based resolution applies unless a separately agreed written contract states otherwise.
 
 ## Personal data we may collect
 
@@ -69,18 +69,42 @@ This website may use cookies or similar technologies directly or through third-p
 
 Cookies and similar technologies may be session-based or persistent. Some are first-party. Others may be set or read by third-party services such as Google services used for analytics or translation-related functionality.
 
-If your jurisdiction requires consent for non-essential cookies or similar tracking, your continued use of such features should be read subject to the consent controls that apply in that jurisdiction. You can usually control cookies through browser settings, extension controls, device settings, or relevant third-party privacy controls. Blocking some technologies may reduce site functionality.
+As a cross-jurisdiction baseline, this site uses a consent-first model for optional categories. Essential storage remains active for security and core operation. Functional and analytics categories remain off until enabled. You can also control cookies through browser settings, extension controls, device settings, or relevant third-party privacy controls. Blocking some technologies may reduce site functionality.
+
+## Cookie preferences and consent management
+
+This site provides a cookie and consent notice with a preferences panel. The panel supports category-level choices for:
+
+- essential storage (always active);
+- functional tools (for example translation-related preferences);
+- analytics (for example Google Analytics 4 (GA4), Google Tag Manager (GTM) event triggers, Google tag-based usage measurement, and optional self-hosted/open-source adapters).
+
+You can reopen these controls at any time using the **Cookie Preferences** link in the site footer, or by selecting [Cookie Preferences]({{ '/legal/privacy-cookies-data-protection/#cookie-preferences-and-consent-management' | relative_url }}) where supported.
+
+Where consent is required by law, optional categories are not activated until consent is recorded. Where consent is not required for certain processing under local law, this site still keeps optional categories disabled by default as a cross-jurisdiction baseline unless and until the user opts in.
 
 ## Current website-specific practices
 
 At the date of this notice, the site may use or expose the following classes of functionality:
 
-- Google Analytics or Google tag-based usage measurement (in production environments);
+- Google Analytics 4 (GA4) and/or Google Tag Manager (GTM), configured so optional analytics tags are blocked by default and activated only after user opt-in, with any consent-state signaling limited to legally permitted, non-advertising purposes;
+- Google tag-based usage measurement for interaction events where configured (for example page views, internal and outbound link clicks, scroll-depth milestones, and form submissions). Event measurement is limited to interaction metadata and does not intentionally capture form field content;
 - outbound link tracking events for analytics and backlink attribution;
 - local or session storage for theme preferences;
-- Google Translate or similar translation-related preferences where enabled.
+- Google Translate or similar translation-related preferences where enabled;
+- optional adapters for self-hosted/open-source analytics stacks (for example Matomo, Umami, or Plausible-compatible deployments) where configured.
 
 Configuration may change. Material changes will be reflected in an updated notice.
+
+## Controller, processor, and service-provider role mapping for consent and analytics
+
+For cookie and analytics operations, role boundaries are applied as follows:
+
+- **Controller (site operator):** decides whether optional analytics/functional categories are available, sets the lawful-use posture, configures retention intent, and determines which providers are enabled.
+- **Processor or service provider (where contractually applicable):** hosts or processes analytics/telemetry data according to documented instructions and contract terms.
+- **Independent controller (where provider decides purposes):** third-party platforms may process data under their own policies and legal obligations when they determine independent purposes.
+
+This role mapping is functional and context-dependent. A provider may act as processor/service provider for one workflow and as independent controller for another, depending on contract and technical configuration.
 
 ## Legal bases where UK GDPR or EU GDPR applies
 
@@ -104,7 +128,7 @@ If you are a data subject in Hong Kong and you provide personal data directly, t
 - failure to provide data that is reasonably necessary for a specific request may limit the ability to respond or deliver that request;
 - you may request access to, or correction of, personal data held about you, subject to applicable law and lawful exemptions.
 
-This section is intended to support DPP1-style transparency, not to displace any more specific notice that may be given for a particular service, event, or engagement.
+This section is intended to support Data Protection Principle 1 (DPP1)-style transparency, not to displace any more specific notice that may be given for a particular service, event, or engagement.
 
 ## Data sharing and transfers
 
@@ -138,7 +162,7 @@ For privacy or personal-data requests, use the contact details published on this
 
 The following public sources are relevant starting points for readers who want the official legal or regulatory background:
 
-- [ICO UK GDPR guidance and resources](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/)
+- [Information Commissioner's Office (ICO) UK GDPR guidance and resources](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/)
 - [Regulation (EU) 2016/679 on EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng)
-- [Hong Kong PCPD overview of the PDPO](https://www.pcpd.org.hk/english/data_privacy_law/ordinance_at_a_Glance/ordinance.html)
-- [Singapore PDPC overview of the PDPA](https://www.pdpc.gov.sg/overview-of-pdpa/the-legislation/personal-data-protection-act)
+- [Hong Kong Office of the Privacy Commissioner for Personal Data (PCPD) overview of the Personal Data (Privacy) Ordinance (PDPO)](https://www.pcpd.org.hk/english/data_privacy_law/ordinance_at_a_Glance/ordinance.html)
+- [Singapore Personal Data Protection Commission (PDPC) overview of the Personal Data Protection Act (PDPA)](https://www.pdpc.gov.sg/overview-of-pdpa/the-legislation/personal-data-protection-act)

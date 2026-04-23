@@ -40,6 +40,16 @@
               </span>
             {%- endunless -%}
           {%- endfor -%}
+          <span aria-hidden="true" class="inline-block px-1">
+            {{- legal_separator -}}
+          </span>
+          <a
+            href="{{ '/legal/privacy-cookies-data-protection/#cookie-preferences-and-consent-management' | relative_url }}"
+            data-open-consent-preferences
+            class="font-medium text-sky-700 hover:text-sky-900 dark:text-sky-300 dark:hover:text-sky-200"
+          >
+            Cookie Preferences
+          </a>
         </nav>
       {%- endif -%}
     </div>

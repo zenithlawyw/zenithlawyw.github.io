@@ -34,7 +34,7 @@ This website provides general information only. It does not provide legal advice
 
 ## External services and third-party links
 
-The site may include or rely on third-party tools, embedded services, analytics, translation features, hosting providers, content delivery networks, or links to external resources. Those services are governed by their own terms, privacy practices, and availability conditions. The site operator is not responsible for third-party content or service continuity.
+The site may include or rely on third-party tools, embedded services, analytics, translation features, hosting providers, content delivery networks, or links to external resources. Those services are governed by their own terms, privacy practices, and availability conditions. Where a third-party provider determines its own processing purposes, that provider acts as an independent controller under its own legal terms. The site operator is not responsible for third-party content or service continuity.
 
 ## Availability and changes
 
@@ -52,7 +52,11 @@ To the fullest extent permitted by applicable law, the site operator excludes li
 
 This website is made available internationally. It is not represented as appropriate for every jurisdiction or regulatory context. Mandatory laws that apply to you, especially consumer protection, privacy, data protection, accessibility, sanctions, and online-tracking rules, may supplement or limit how these terms operate. If local law gives you non-excludable rights, these terms should be read subject to those rights.
 
-Because the site is publicly accessible across jurisdictions, these Terms do not attempt to state a universal exclusive forum or a single governing law for every scenario. If a dispute arises in relation to a signed client engagement, the governing-law and forum terms in that engagement document control instead.
+For public website use, and only where legally permitted, the site operator intends the laws of England and Wales as the baseline governing-law position, with non-exclusive jurisdiction in the courts of England and Wales. This baseline does not prevent mandatory local rights, urgent local relief, or forum rules that cannot be displaced by contract.
+
+Because the site is publicly accessible across jurisdictions, these Terms do not attempt to state a universal exclusive forum for every scenario. If a dispute arises in relation to a signed client engagement, the governing-law and forum terms in that engagement document control instead.
+
+Where a contract-specific document separately includes a valid arbitration clause, that clause may govern dispute process for that specific contract only.
 
 ## Changes to these terms
 
@@ -63,3 +67,5 @@ These terms may be updated from time to time. The current version is the version
 - [Privacy, Cookies and Data Protection]({{ '/legal/privacy-cookies-data-protection/' | relative_url }})
 - [Disclaimer]({{ '/legal/disclaimer/' | relative_url }})
 - [Legal Notices]({{ '/legal/' | relative_url }})
+
+For role mapping on controller, processor, service-provider, and independent-controller boundaries in analytics and consent workflows, see [Privacy, Cookies and Data Protection]({{ '/legal/privacy-cookies-data-protection/' | relative_url }}).

@@ -20,7 +20,33 @@ description: >-
   lineage, data quality, and AI/ML-ready platform abstractions.
 
 google_analytics: G-P49RPF7579
+gtm_container_id: ""
 enableDNT: "false"
+consent_management:
+  enabled: true
+  version: "2026-04-23"
+  storage_key: "zyw_cookie_consent_v1"
+  functional_default: false
+  analytics_default: false
+  privacy_policy_url: "/legal/privacy-cookies-data-protection/"
+  analytics_platforms:
+    matomo:
+      enabled: false
+      url: ""
+      site_id: ""
+    umami:
+      enabled: false
+      script_url: ""
+      website_id: ""
+    plausible:
+      enabled: false
+      script_url: "https://plausible.io/js/script.js"
+      domain: "zenithlaw.com"
+  events:
+    track_page_view: true
+    track_link_clicks: true
+    track_scroll_depth: true
+    track_form_submits: true
 
 hero:
   height: "100vh"
