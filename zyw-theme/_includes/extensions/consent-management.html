@@ -1,0 +1,517 @@
+{%- assign consent_config = site.consent_management -%}
+{%- if consent_config and consent_config.enabled != false -%}
+  <script>
+    <!--//
+    (function () {
+      var config = {{ site.consent_management | jsonify }} || {};
+      var storageKey = config.storage_key || 'zyw_cookie_consent';
+      var consentVersion = String(config.version || '1');
+      var categories = ['necessary', 'functional', 'analytics'];
+      var providerRegistry = {};
+      var currentState = null;
+      var uiBound = false;
+
+      function canUseStorage() {
+        try {
+          var probe = '__zyw_consent_probe__';
+          localStorage.setItem(probe, probe);
+          localStorage.removeItem(probe);
+          return true;
+        } catch (error) {
+          return false;
+        }
+      }
+
+      function createDefaultState() {
+        return {
+          version: consentVersion,
+          necessary: true,
+          functional: !!config.functional_default,
+          analytics: !!config.analytics_default,
+          updatedAt: new Date().toISOString(),
+        };
+      }
+
+      function normalizeState(candidate) {
+        if (!candidate || typeof candidate !== 'object') {
+          return null;
+        }
+
+        if (String(candidate.version || '') !== consentVersion) {
+          return null;
+        }
+
+        return {
+          version: consentVersion,
+          necessary: true,
+          functional: !!candidate.functional,
+          analytics: !!candidate.analytics,
+          updatedAt: candidate.updatedAt || new Date().toISOString(),
+        };
+      }
+
+      function loadState() {
+        if (!canUseStorage()) {
+          return null;
+        }
+
+        try {
+          var raw = localStorage.getItem(storageKey);
+          if (!raw) {
+            return null;
+          }
+          return normalizeState(JSON.parse(raw));
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function persistState(state) {
+        if (!canUseStorage()) {
+          return;
+        }
+
+        try {
+          localStorage.setItem(storageKey, JSON.stringify(state));
+        } catch (error) {
+          // Ignore storage write failures.
+        }
+      }
+
+      function hasConsent(category, state) {
+        if (category === 'necessary') {
+          return true;
+        }
+
+        return !!(state && state[category]);
+      }
+
+      function updateGtagConsent(state) {
+        if (typeof window.gtag !== 'function') {
+          return;
+        }
+
+        var consentMode = {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          functionality_storage: state.functional ? 'granted' : 'denied',
+          analytics_storage: state.analytics ? 'granted' : 'denied',
+          security_storage: 'granted',
+        };
+
+        window.gtag('consent', 'update', consentMode);
+      }
+
+      function applyDeferredScripts(state) {
+        var scripts = document.querySelectorAll(
+          'script[type="text/plain"][data-consent-purpose]'
+        );
+
+        scripts.forEach(function (scriptNode) {
+          if (scriptNode.dataset.consentLoaded === 'true') {
+            return;
+          }
+
+          var category = scriptNode.getAttribute('data-consent-purpose');
+          if (!hasConsent(category, state)) {
+            return;
+          }
+
+          var executable = document.createElement('script');
+          var scriptSource = scriptNode.getAttribute('data-consent-src');
+
+          if (scriptSource) {
+            executable.src = scriptSource;
+          } else {
+            executable.text = scriptNode.textContent || '';
+          }
+
+          if (scriptNode.hasAttribute('async')) {
+            executable.async = true;
+          }
+
+          if (scriptNode.hasAttribute('defer')) {
+            executable.defer = true;
+          }
+
+          var crossOrigin = scriptNode.getAttribute('crossorigin');
+          if (crossOrigin) {
+            executable.crossOrigin = crossOrigin;
+          }
+
+          var referrerPolicy = scriptNode.getAttribute('referrerpolicy');
+          if (referrerPolicy) {
+            executable.referrerPolicy = referrerPolicy;
+          }
+
+          scriptNode.dataset.consentLoaded = 'true';
+          scriptNode.parentNode.insertBefore(executable, scriptNode.nextSibling);
+        });
+      }
+
+      function notifyProviders(state) {
+        Object.keys(providerRegistry).forEach(function (name) {
+          try {
+            providerRegistry[name](state);
+          } catch (error) {
+            // Keep consent flow resilient even if one provider fails.
+          }
+        });
+      }
+
+      function dispatchConsentEvent(state) {
+        try {
+          document.dispatchEvent(
+            new CustomEvent('zyw:consent-changed', { detail: state })
+          );
+        } catch (error) {
+          // Older browser fallback
+          var event = document.createEvent('CustomEvent');
+          event.initCustomEvent('zyw:consent-changed', true, true, state);
+          document.dispatchEvent(event);
+        }
+      }
+
+      function applyConsentState(state) {
+        currentState = state;
+        window.__ZYWConsentState = state;
+
+        updateGtagConsent(state);
+        applyDeferredScripts(state);
+        notifyProviders(state);
+        dispatchConsentEvent(state);
+      }
+
+      function setConsentState(nextState, persist) {
+        var normalized = normalizeState(nextState);
+        if (!normalized) {
+          normalized = createDefaultState();
+        }
+
+        normalized.updatedAt = new Date().toISOString();
+
+        if (persist !== false) {
+          persistState(normalized);
+        }
+
+        applyConsentState(normalized);
+      }
+
+      function mergeConsentState(patch, persist) {
+        var baseState = currentState || createDefaultState();
+        setConsentState(
+          {
+            version: consentVersion,
+            necessary: true,
+            functional: !!patch.functional,
+            analytics: !!patch.analytics,
+            updatedAt: baseState.updatedAt,
+          },
+          persist
+        );
+      }
+
+      function toggleDialogVisibility(dialog, show) {
+        if (!dialog) {
+          return;
+        }
+
+        dialog.classList.toggle('hidden', !show);
+        dialog.setAttribute('aria-hidden', show ? 'false' : 'true');
+      }
+
+      function registerBuiltInAnalyticsProviders() {
+        var platforms = (config.analytics_platforms || {});
+        var loaded = {
+          matomo: false,
+          umami: false,
+          plausible: false,
+        };
+
+        if (platforms.matomo && platforms.matomo.enabled) {
+          providerRegistry.matomo = function (state) {
+            if (!state.analytics || loaded.matomo) {
+              return;
+            }
+
+            var trackerUrl = String(platforms.matomo.url || '').replace(/\/$/, '');
+            var siteId = String(platforms.matomo.site_id || '').trim();
+            if (!trackerUrl || !siteId) {
+              return;
+            }
+
+            loaded.matomo = true;
+            var queue = (window._paq = window._paq || []);
+            queue.push(['trackPageView']);
+            queue.push(['enableLinkTracking']);
+            queue.push(['setTrackerUrl', trackerUrl + '/matomo.php']);
+            queue.push(['setSiteId', siteId]);
+
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = trackerUrl + '/matomo.js';
+            document.head.appendChild(script);
+          };
+        }
+
+        if (platforms.umami && platforms.umami.enabled) {
+          providerRegistry.umami = function (state) {
+            if (!state.analytics || loaded.umami) {
+              return;
+            }
+
+            var scriptUrl = String(platforms.umami.script_url || '').trim();
+            var websiteId = String(platforms.umami.website_id || '').trim();
+            if (!scriptUrl || !websiteId) {
+              return;
+            }
+
+            loaded.umami = true;
+            var script = document.createElement('script');
+            script.defer = true;
+            script.src = scriptUrl;
+            script.setAttribute('data-website-id', websiteId);
+            document.head.appendChild(script);
+          };
+        }
+
+        if (platforms.plausible && platforms.plausible.enabled) {
+          providerRegistry.plausible = function (state) {
+            if (!state.analytics || loaded.plausible) {
+              return;
+            }
+
+            var scriptUrl = String(platforms.plausible.script_url || '').trim();
+            var domain = String(platforms.plausible.domain || '').trim();
+            if (!scriptUrl || !domain) {
+              return;
+            }
+
+            loaded.plausible = true;
+            var script = document.createElement('script');
+            script.defer = true;
+            script.src = scriptUrl;
+            script.setAttribute('data-domain', domain);
+            document.head.appendChild(script);
+          };
+        }
+      }
+
+      function bindConsentUi() {
+        if (uiBound || !document.body) {
+          return;
+        }
+        uiBound = true;
+
+        var privacyUrl =
+          config.privacy_policy_url || '/legal/privacy-cookies-data-protection/';
+
+        var container = document.createElement('div');
+        container.id = 'zyw-consent-root';
+        container.innerHTML =
+          '<style>' +
+          '.zyw-consent-banner,.zyw-consent-dialog{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}' +
+          '.zyw-consent-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:1200;background:#ffffff;color:#0f172a;border:1px solid #cbd5e1;border-radius:.9rem;padding:1rem;box-shadow:0 12px 32px rgba(15,23,42,.16)}' +
+          '.zyw-consent-banner.hidden,.zyw-consent-dialog.hidden{display:none}' +
+          '.zyw-consent-title{margin:0 0 .35rem;font-size:1rem;font-weight:700;color:#0f172a}' +
+          '.zyw-consent-text{margin:0 0 .75rem;font-size:.9rem;line-height:1.45}' +
+          '.zyw-consent-link{color:#0369a1}' +
+          '.zyw-consent-actions{display:flex;gap:.5rem;flex-wrap:wrap}' +
+          '.zyw-consent-btn{border:1px solid transparent;border-radius:.6rem;padding:.45rem .75rem;font-size:.85rem;font-weight:600;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}' +
+          '.zyw-consent-btn-primary{background:#0f172a;color:#f8fafc;border-color:#0f172a}' +
+          '.zyw-consent-btn-primary:hover{background:#1e293b;border-color:#1e293b}' +
+          '.zyw-consent-btn-outline{background:transparent;color:#0f172a;border-color:#94a3b8}' +
+          '.zyw-consent-btn-outline:hover{background:#f1f5f9}' +
+          '.zyw-consent-btn-muted{background:#e2e8f0;color:#0f172a;border-color:#cbd5e1}' +
+          '.zyw-consent-btn-muted:hover{background:#cbd5e1}' +
+          '.zyw-consent-dialog{position:fixed;inset:0;z-index:1300;background:rgba(15,23,42,.45);display:flex;align-items:center;justify-content:center;padding:1rem}' +
+          '.zyw-consent-panel{width:min(42rem,100%);max-height:85vh;overflow:auto;background:#ffffff;color:#0f172a;border-radius:1rem;padding:1.1rem;border:1px solid #cbd5e1}' +
+          '.zyw-consent-panel h2{margin:.1rem 0 .55rem;font-size:1.2rem}' +
+          '.zyw-consent-panel p{margin:.35rem 0 .8rem;font-size:.92rem;line-height:1.5}' +
+          '.zyw-consent-option{display:flex;justify-content:space-between;gap:1rem;align-items:flex-start;border:1px solid #e2e8f0;border-radius:.7rem;padding:.75rem;margin:.6rem 0}' +
+          '.zyw-consent-option strong{display:block;margin-bottom:.15rem}' +
+          '.zyw-consent-option small{color:#334155;display:block}' +
+          '.zyw-consent-option input{margin-top:.2rem}' +
+          '.zyw-consent-footer{display:flex;gap:.5rem;justify-content:flex-end;flex-wrap:wrap;margin-top:.8rem}' +
+          'html.dark .zyw-consent-banner,html[data-theme="dark"] .zyw-consent-banner{background:#0f172a;color:#e2e8f0;border-color:rgba(148,163,184,.35);box-shadow:0 12px 40px rgba(2,6,23,.45)}' +
+          'html.dark .zyw-consent-title,html[data-theme="dark"] .zyw-consent-title{color:#f8fafc}' +
+          'html.dark .zyw-consent-link,html[data-theme="dark"] .zyw-consent-link{color:#7dd3fc}' +
+          'html.dark .zyw-consent-btn-primary,html[data-theme="dark"] .zyw-consent-btn-primary{background:#e2e8f0;color:#0f172a;border-color:#cbd5e1}' +
+          'html.dark .zyw-consent-btn-primary:hover,html[data-theme="dark"] .zyw-consent-btn-primary:hover{background:#f8fafc;border-color:#f8fafc}' +
+          'html.dark .zyw-consent-btn-outline,html[data-theme="dark"] .zyw-consent-btn-outline{color:#e2e8f0;border-color:rgba(148,163,184,.45)}' +
+          'html.dark .zyw-consent-btn-outline:hover,html[data-theme="dark"] .zyw-consent-btn-outline:hover{background:#1e293b}' +
+          'html.dark .zyw-consent-btn-muted,html[data-theme="dark"] .zyw-consent-btn-muted{background:#1e293b;color:#e2e8f0;border-color:#334155}' +
+          'html.dark .zyw-consent-btn-muted:hover,html[data-theme="dark"] .zyw-consent-btn-muted:hover{background:#334155}' +
+          'html.dark .zyw-consent-dialog,html[data-theme="dark"] .zyw-consent-dialog{background:rgba(2,6,23,.72)}' +
+          'html.dark .zyw-consent-panel,html[data-theme="dark"] .zyw-consent-panel{background:#0f172a;color:#e2e8f0;border-color:#334155}' +
+          'html.dark .zyw-consent-option,html[data-theme="dark"] .zyw-consent-option{border-color:#334155}' +
+          'html.dark .zyw-consent-option small,html[data-theme="dark"] .zyw-consent-option small{color:#cbd5e1}' +
+          '</style>' +
+          '<div id="zyw-consent-banner" class="zyw-consent-banner hidden" role="dialog" aria-live="polite" aria-label="Cookie and consent notice">' +
+          '<h2 class="zyw-consent-title">We value your privacy</h2>' +
+          '<p class="zyw-consent-text">We use essential storage for core site functions and optional tools for analytics and translation features. You can change this anytime. See our <a class="zyw-consent-link" href="' +
+          privacyUrl +
+          '">Privacy, Cookies and Data Protection</a> page.</p>' +
+          '<div class="zyw-consent-actions">' +
+          '<button type="button" class="zyw-consent-btn zyw-consent-btn-primary" data-consent-action="accept-all">Accept all</button>' +
+          '<button type="button" class="zyw-consent-btn zyw-consent-btn-outline" data-consent-action="reject-optional">Reject optional</button>' +
+          '<button type="button" class="zyw-consent-btn zyw-consent-btn-muted" data-consent-action="open-preferences">Manage preferences</button>' +
+          '</div>' +
+          '</div>' +
+          '<div id="zyw-consent-dialog" class="zyw-consent-dialog hidden" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Manage cookie preferences">' +
+          '<div class="zyw-consent-panel">' +
+          '<h2>Manage cookie preferences</h2>' +
+          '<p>Essential storage is always on because it supports security and core functionality. Optional categories are off until you enable them.</p>' +
+          '<label class="zyw-consent-option"><span><strong>Essential</strong><small>Required for site operation and security.</small></span><input type="checkbox" checked disabled></label>' +
+          '<label class="zyw-consent-option"><span><strong>Functional tools</strong><small>Optional features like language and translation preferences.</small></span><input id="zyw-consent-functional" type="checkbox"></label>' +
+          '<label class="zyw-consent-option"><span><strong>Analytics</strong><small>Traffic and interaction measurement (Google Analytics 4 (GA4) and optional self-hosted/open-source analytics adapters).</small></span><input id="zyw-consent-analytics" type="checkbox"></label>' +
+          '<div class="zyw-consent-footer">' +
+          '<button type="button" class="zyw-consent-btn zyw-consent-btn-outline" data-consent-action="close-preferences">Cancel</button>' +
+          '<button type="button" class="zyw-consent-btn zyw-consent-btn-muted" data-consent-action="save-preferences">Save preferences</button>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
+
+        document.body.appendChild(container);
+
+        var banner = document.getElementById('zyw-consent-banner');
+        var dialog = document.getElementById('zyw-consent-dialog');
+        var functionalInput = document.getElementById('zyw-consent-functional');
+        var analyticsInput = document.getElementById('zyw-consent-analytics');
+
+        function syncInputs() {
+          if (!currentState) {
+            return;
+          }
+          functionalInput.checked = !!currentState.functional;
+          analyticsInput.checked = !!currentState.analytics;
+        }
+
+        function openPreferences() {
+          syncInputs();
+          toggleDialogVisibility(dialog, true);
+        }
+
+        function closePreferences() {
+          toggleDialogVisibility(dialog, false);
+        }
+
+        function showBannerIfNeeded() {
+          var hasStoredConsent = !!loadState();
+          banner.classList.toggle('hidden', hasStoredConsent);
+        }
+
+        document.addEventListener('click', function (event) {
+          var trigger = event.target.closest('[data-open-consent-preferences]');
+          if (trigger) {
+            event.preventDefault();
+            openPreferences();
+            return;
+          }
+
+          var actionElement = event.target.closest('[data-consent-action]');
+          if (!actionElement) {
+            return;
+          }
+
+          var action = actionElement.getAttribute('data-consent-action');
+
+          if (action === 'accept-all') {
+            mergeConsentState({ functional: true, analytics: true }, true);
+            banner.classList.add('hidden');
+            closePreferences();
+            return;
+          }
+
+          if (action === 'reject-optional') {
+            mergeConsentState({ functional: false, analytics: false }, true);
+            banner.classList.add('hidden');
+            closePreferences();
+            return;
+          }
+
+          if (action === 'open-preferences') {
+            openPreferences();
+            return;
+          }
+
+          if (action === 'close-preferences') {
+            closePreferences();
+            return;
+          }
+
+          if (action === 'save-preferences') {
+            mergeConsentState(
+              {
+                functional: !!functionalInput.checked,
+                analytics: !!analyticsInput.checked,
+              },
+              true
+            );
+            banner.classList.add('hidden');
+            closePreferences();
+          }
+        });
+
+        dialog.addEventListener('click', function (event) {
+          if (event.target === dialog) {
+            closePreferences();
+          }
+        });
+
+        window.ZYWConsentManager.openPreferences = openPreferences;
+        window.ZYWConsentManager.closePreferences = closePreferences;
+        showBannerIfNeeded();
+      }
+
+      window.ZYWConsentManager = {
+        getConsentState: function () {
+          return currentState;
+        },
+        hasConsent: function (category) {
+          return hasConsent(category, currentState || createDefaultState());
+        },
+        setConsentState: function (state) {
+          setConsentState(state, true);
+        },
+        updateConsent: function (patch) {
+          mergeConsentState(patch || {}, true);
+        },
+        registerProvider: function (name, handler) {
+          if (!name || typeof handler !== 'function') {
+            return;
+          }
+
+          providerRegistry[name] = handler;
+          if (currentState) {
+            try {
+              handler(currentState);
+            } catch (error) {
+              // Ignore provider initialization failures.
+            }
+          }
+        },
+        applyCurrentConsent: function () {
+          applyConsentState(currentState || createDefaultState());
+        },
+      };
+
+      registerBuiltInAnalyticsProviders();
+
+      var storedState = loadState();
+      if (storedState) {
+        applyConsentState(storedState);
+      } else {
+        applyConsentState(createDefaultState());
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bindConsentUi);
+      } else {
+        bindConsentUi();
+      }
+    })();
+    //-->
+  </script>
+{%- endif -%}

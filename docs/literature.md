@@ -7,16 +7,20 @@ image: /assets/images/knowledge-space-research-discovery.png
 description: "Explore recent research papers and scholarly literature live by keyword, domain, and focus area. Fetches from OpenAlex and Crossref with configurable filters."
 keywords: "research paper discovery, live literature search, how to find research papers online, academic paper aggregator, open knowledge explorer, OpenAlex works search, Crossref academic search, data science literature, LLM governance research papers, data provenance papers, preprint tracker, supply chain security research, free academic paper search"
 catchwords: "discovery, literature, knowledge, research, papers, preprints, open science, collaboration, AI, engineering, governance, provenance, OpenAlex, Crossref, science"
-intro: "Discover live research papers and preprints across science, engineering, and AI governance by keyword and focus domain, drawn from OpenAlex and Crossref, with no data persistence."
+intro: "Discover live research papers and preprints across science, engineering, and AI governance by keyword and focus domain, drawn from OpenAlex and Crossref, with no persistence of fetched literature records."
 ---
 
 ## Your Window Into Open Research
 
-Knowledge Space connects you directly to recent research papers and preprints across science, engineering, AI, and governance, fetched live from trusted open academic APIs the moment you search. Choose a preconfigured focus domain, enter your own keywords, select your sources, and explore paginated results instantly. No account required and no records stored application-side.
+Knowledge Space connects you directly to recent research papers and preprints across science, engineering, AI, and governance, fetched live from trusted open academic APIs the moment you search. Choose a preconfigured focus domain, enter your own keywords, select your sources, and explore paginated results instantly. No account required. Fetched literature records are not stored in application-level persistent storage; limited browser-side session state may be used for security and rate protection.
 
 This is a collaborative discovery layer built for practitioners, researchers, and curious minds. Coverage and metadata quality reflect each provider's indexing cadence: results from OpenAlex and Crossref naturally complement each other, offering a richer cross-sectional view of the research landscape than any single source provides alone.
 
-Informational and educational use only, not legal advice. Legal obligations vary by jurisdiction and mandatory local statutory, consumer, and data protection rights remain unaffected. The site operator governs first-party site operations; hosting and analytics vendors act as processors or service providers; external literature APIs independently control their own datasets, licensing terms, and processing activities.
+Cookie and consent controls apply to this page. Literature search functionality remains available whether or not optional analytics is enabled. Analytics events for interactions are only sent after analytics consent is granted via Cookie Preferences.
+
+Informational and educational use only, not legal advice. Legal obligations vary by jurisdiction and mandatory local statutory, consumer, and data protection rights remain unaffected. The site operator governs first-party site operations. Hosting and analytics vendors may act as processors or service providers where they process data on the operator's instructions, or as independent controllers where they determine their own purposes. External literature APIs independently control their own datasets, licensing terms, and processing activities.
+
+Review full data-handling details in [Privacy, Cookies and Data Protection]({{ '/legal/privacy-cookies-data-protection/' | relative_url }}).
 
 {% include views/literature-search.html %}
 
@@ -36,7 +40,15 @@ Matching runs against each record's title and abstract. "All keywords must match
 
 ### Is any data stored when I search?
 
-No. Fetched literature records are not stored in application-level persistent storage. Normal operational logs from hosting, edge, or analytics services may still apply independently under their own policies.
+Fetched literature records are not stored in application-level persistent storage. Limited browser-side session state may be used for security and rate protection during your session. Normal operational logs from hosting, edge, or analytics services may still apply independently under their own policies.
+
+### Will search still work if I reject analytics cookies?
+
+Yes. Search and result browsing remain available. Rejecting analytics only stops optional GA4 or GTM usage measurement events for page interactions and search activity.
+
+### How do I change cookie preferences later?
+
+Use the **Cookie Preferences** control in the site footer or open [Cookie Preferences]({{ '/legal/privacy-cookies-data-protection/#cookie-preferences-and-consent-management' | relative_url }}) from the legal page.
 
 ### Why do result counts vary by source?
 

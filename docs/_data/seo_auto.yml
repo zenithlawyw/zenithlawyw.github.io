@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-04-22T20:43:54Z"
+generated_at: '2026-04-23T15:47:27Z'
 signal_weights:
   title: 3
   categories: 5
@@ -15,2347 +15,2354 @@ signal_weight_rationale:
   intro_description_headings: Medium weight for context enrichment without dominating keyword extraction.
   keywords_catchwords: Low weight to avoid over-amplifying manually supplied or potentially noisy token lists.
 keywords:
-  - data
-  - engineering
-  - governance
-  - supply
-  - chain
-  - provenance
-  - lessons
-  - cloud
-  - deadlock
-  - questions
-  - learning
-  - platform
-  - llm
-  - security
-  - china
-  - legal
-  - machine
-  - resource
-  - starvation
-  - fragmentation
-  - glossary
-  - npm
-  - conditions
-  - digital
-  - asked
-  - frequently
-  - models
-  - systems
-  - access
-  - coffman
-  - graph
-  - language
-  - large
-  - transformer
-  - trust
-  - attack
-  - knowledge
-  - operating
-  - papers
-  - sovereignty
-  - axios
-  - compliance
-  - compromise
-  - incident
-  - practice
-  - scheduling
-  - design
-  - faq
-  - privacy
-  - traceability
-  - circular
-  - credential
-  - cybersecurity
-  - search
-  - cookies
-  - law
-  - management
-  - protection
-  - residency
-  - theory
-  - artificial
-  - contention
-  - critical
-  - definitions
-  - evidence
-  - inference
-  - intelligence
-  - introduction
-  - lineage
-  - links
-  - literature
-  - networks
-  - neural
-  - policy
-  - priority
-  - prov-ml
-  - reading
-  - scope
-  - social
-  - teams
-  - alignment
-  - analysis
-  - answers
-  - disclaimer
-  - frontier
-  - notices
-  - prompt
-  - risk
-  - saas
-  - scholarly
-  - blocked
-  - boundary
-  - concurrency
-  - difference
-  - distillation
-  - evaluation
-  - implement
-  - jurisdiction
-  - limits
-  - llms
-  - localization
-  - package
-  - practical
-  - resilient
-  - response
-  - review
-  - seo
-  - services
-  - technical
-  - timeline
-  - treat
-  - versions
-  - a-z
-  - attention
-  - azure
-  - gpt-3
-  - malicious
-  - prevention
-  - reproducibility
-  - resilience
-  - science
-  - trustworthy
-  - aeo
-  - aging
-  - apply
-  - architecture
-  - best
-  - collection
-  - compromised
-  - control
-  - cross-jurisdiction
-  - crossref
-  - dependencies
-  - domain
-  - external
-  - federated
-  - focus
-  - geo
-  - hallucination
-  - hub
-  - liability
-  - methods
-  - mutex
-  - notice
-  - open
-  - openalex
-  - personal
-  - preprocessing
-  - prevent
-  - recovery
-  - reference
-  - reliance
-  - restrictions
-  - semaphore
-  - surface
-  - token
-  - tooling
-  - verification
-  - applied
-  - discover
+- engineering
+- data
+- governance
+- supply
+- chain
+- provenance
+- lessons
+- cloud
+- deadlock
+- questions
+- learning
+- platform
+- llm
+- security
+- china
+- legal
+- machine
+- resource
+- starvation
+- fragmentation
+- glossary
+- npm
+- conditions
+- digital
+- asked
+- frequently
+- models
+- systems
+- access
+- coffman
+- graph
+- language
+- large
+- transformer
+- trust
+- attack
+- knowledge
+- operating
+- papers
+- sovereignty
+- axios
+- compliance
+- compromise
+- incident
+- practice
+- scheduling
+- search
+- cookies
+- design
+- faq
+- management
+- privacy
+- traceability
+- circular
+- credential
+- cybersecurity
+- literature
+- law
+- protection
+- residency
+- theory
+- artificial
+- contention
+- critical
+- definitions
+- evidence
+- inference
+- intelligence
+- introduction
+- lineage
+- links
+- networks
+- neural
+- policy
+- priority
+- prov-ml
+- reading
+- scope
+- social
+- teams
+- alignment
+- analysis
+- answers
+- disclaimer
+- frontier
+- notices
+- prompt
+- risk
+- saas
+- scholarly
+- blocked
+- boundary
+- collection
+- concurrency
+- difference
+- distillation
+- evaluation
+- implement
+- jurisdiction
+- limits
+- llms
+- localization
+- package
+- personal
+- practical
+- resilient
+- response
+- review
+- seo
+- services
+- technical
+- timeline
+- treat
+- versions
+- a-z
+- attention
+- azure
+- gpt-3
+- malicious
+- prevention
+- reproducibility
+- resilience
+- science
+- trustworthy
+- work
+- aeo
+- aging
+- apply
+- architecture
+- best
+- compromised
+- control
+- cookie
+- cross-jurisdiction
+- crossref
+- dependencies
+- domain
+- external
+- federated
+- focus
+- geo
+- hallucination
+- hub
+- liability
+- methods
+- mutex
+- notice
+- open
+- openalex
+- preprocessing
+- prevent
+- recovery
+- reference
+- reliance
+- restrictions
+- semaphore
+- statement
+- surface
+- token
+- tooling
 key_phrases:
-  - supply chain
-  - data provenance
-  - engineering governance
-  - machine learning
-  - asked questions
-  - frequently asked
-  - frequently asked questions
-  - chain security
-  - coffman conditions
-  - large language
-  - supply chain security
-  - data provenance machine
-  - engineering lessons
-  - provenance machine
-  - provenance machine learning
-  - digital sovereignty
-  - language models
-  - large language models
-  - axios npm
-  - chain attack
-  - data protection
-  - data residency
-  - supply chain attack
-  - artificial intelligence
-  - governance data
-  - graph neural
-  - graph neural networks
-  - neural networks
-  - operating systems
-  - platform engineering
-  - resource contention
-  - social engineering
-  - cookies data
-  - npm supply
-  - npm supply chain
-  - privacy cookies
-  - privacy cookies data
-  - prompt engineering
-  - traceability graph
-  - artificial intelligence artificial
-  - axios npm supply
-  - deadlock resource
-  - deadlock resource contention
-  - incident response
-  - intelligence artificial
-  - intelligence artificial intelligence
-  - learning traceability
-  - learning traceability graph
-  - llm inference
-  - machine learning traceability
-  - trust provenance
-  - cloud fragmentation
-  - cookies data protection
-  - governance digital
-  - legal notices
-  - platform fragmentation
-  - china cloud
-  - cloud platform
-  - critical evaluation
-  - data lineage
-  - deadlock theory
-  - digital sovereignty cloud
-  - faq hub
-  - graph methods
-  - knowledge distillation
-  - lessons engineering
-  - mutex semaphore
-  - priority aging
-  - seo geo
-  - sovereignty cloud
-  - a-z definitions
-  - a-z definitions engineering
-  - applied supply
-  - chain security cloud
-  - chain security social
-  - cloud compliance
-  - cloud compliance platform
-  - cloud fragmentation scheduling
-  - compliance platform
-  - compliance platform engineering
-  - concurrency supply
-  - concurrency supply chain
-  - contention concurrency
-  - contention concurrency supply
-  - cybersecurity platform
-  - cybersecurity platform engineering
-  - deadlock deadlock
-  - definitions engineering
-  - definitions engineering governance
-  - design cybersecurity
-  - design cybersecurity platform
-  - digital governance
-  - digital governance digital
-  - engineering governance law
-  - engineering incident
-  - engineering incident response
-  - engineering risk
-  - engineering risk management
-  - fragmentation scheduling
-  - fragmentation scheduling starvation
-  - geo aeo
-  - glossary a-z
-  - glossary a-z definitions
-  - governance data provenance
-  - governance data residency
-  - governance law
-  - governance legal
-  - governance lessons
-  - incident response trust
-  - knowledge space
-  - language models transformer
-  - legal policy
-  - management deadlock
-  - management governance
-  - management governance data
-  - models transformer
-  - models transformer prompt
-  - networks reproducibility
-  - networks reproducibility governance
-  - neural networks reproducibility
-  - openalex crossref
-  - operating systems design
-  - papers scholarly
-  - papers scholarly literature
-  - platform engineering risk
-  - prompt engineering governance
-  - reproducibility governance
-  - reproducibility governance data
-  - resilience thread
-  - resilience thread management
-  - resource contention concurrency
-  - response trust
-  - response trust provenance
-  - risk management
-  - risk management governance
-  - scheduling starvation
-  - scheduling starvation resilience
-  - scholarly literature
-  - security cloud
-  - security cloud fragmentation
+- supply chain
+- data provenance
+- engineering governance
+- machine learning
+- asked questions
+- frequently asked
+- frequently asked questions
+- chain security
+- coffman conditions
+- large language
+- supply chain security
+- data provenance machine
+- engineering lessons
+- provenance machine
+- provenance machine learning
+- digital sovereignty
+- language models
+- large language models
+- axios npm
+- chain attack
+- data protection
+- data residency
+- supply chain attack
+- artificial intelligence
+- governance data
+- graph neural
+- graph neural networks
+- neural networks
+- operating systems
+- platform engineering
+- resource contention
+- social engineering
+- cookies data
+- npm supply
+- npm supply chain
+- privacy cookies
+- privacy cookies data
+- prompt engineering
+- traceability graph
+- artificial intelligence artificial
+- axios npm supply
+- deadlock resource
+- deadlock resource contention
+- incident response
+- intelligence artificial
+- intelligence artificial intelligence
+- learning traceability
+- learning traceability graph
+- llm inference
+- machine learning traceability
+- trust provenance
+- cloud fragmentation
+- cookies data protection
+- governance digital
+- legal notices
+- platform fragmentation
+- china cloud
+- cloud platform
+- critical evaluation
+- data lineage
+- deadlock theory
+- digital sovereignty cloud
+- faq hub
+- graph methods
+- knowledge distillation
+- lessons engineering
+- mutex semaphore
+- priority aging
+- seo geo
+- sovereignty cloud
+- a-z definitions
+- a-z definitions engineering
+- applied supply
+- chain security cloud
+- chain security social
+- cloud compliance
+- cloud compliance platform
+- cloud fragmentation scheduling
+- compliance platform
+- compliance platform engineering
+- concurrency supply
+- concurrency supply chain
+- contention concurrency
+- contention concurrency supply
+- cybersecurity platform
+- cybersecurity platform engineering
+- deadlock deadlock
+- definitions engineering
+- definitions engineering governance
+- design cybersecurity
+- design cybersecurity platform
+- digital governance
+- digital governance digital
+- engineering governance law
+- engineering incident
+- engineering incident response
+- engineering risk
+- engineering risk management
+- fragmentation scheduling
+- fragmentation scheduling starvation
+- geo aeo
+- glossary a-z
+- glossary a-z definitions
+- governance data provenance
+- governance data residency
+- governance law
+- governance legal
+- governance lessons
+- incident response trust
+- knowledge space
+- language models transformer
+- legal policy
+- management deadlock
+- management governance
+- management governance data
+- models transformer
+- models transformer prompt
+- networks reproducibility
+- networks reproducibility governance
+- neural networks reproducibility
+- openalex crossref
+- operating systems design
+- papers scholarly
+- papers scholarly literature
+- platform engineering risk
+- prompt engineering governance
+- reproducibility governance
+- reproducibility governance data
+- resilience thread
+- resilience thread management
+- resource contention concurrency
+- response trust
+- response trust provenance
+- risk management
+- risk management governance
+- scheduling starvation
+- scheduling starvation resilience
+- scholarly literature
+- security cloud
+- security cloud fragmentation
 catchwords:
-  - engineering
-  - governance
-  - supply
-  - chain
-  - provenance
-  - lessons
-  - cloud
-  - deadlock
-  - questions
-  - learning
-  - platform
-  - security
-  - china
-  - legal
-  - machine
-  - resource
-  - starvation
-  - fragmentation
-  - glossary
-  - conditions
-  - digital
-  - asked
-  - frequently
-  - models
-  - systems
-  - access
-  - coffman
-  - graph
-  - language
-  - large
-  - transformer
-  - trust
-  - attack
-  - knowledge
-  - operating
-  - papers
-  - sovereignty
-  - axios
-  - compliance
-  - compromise
-  - incident
-  - practice
-  - scheduling
-  - design
-  - privacy
-  - traceability
-  - circular
-  - credential
-  - cybersecurity
-  - search
-  - cookies
-  - management
-  - protection
-  - residency
-  - theory
-  - artificial
-  - contention
-  - critical
-  - definitions
-  - evidence
-  - inference
-  - intelligence
-  - introduction
-  - lineage
-  - links
-  - literature
-  - networks
-  - neural
-  - policy
-  - priority
-  - prov-ml
-  - reading
-  - scope
-  - social
-  - teams
-  - alignment
-  - analysis
-  - answers
-  - disclaimer
-  - frontier
-  - notices
-  - prompt
-  - scholarly
-  - blocked
-  - boundary
-  - concurrency
-  - difference
-  - distillation
-  - evaluation
-  - implement
-  - jurisdiction
-  - limits
-  - localization
-  - package
-  - practical
-  - resilient
-  - response
-  - review
-  - services
-  - technical
-  - timeline
-  - treat
-  - versions
-  - attention
-  - azure
-  - gpt-3
-  - malicious
-  - prevention
-  - reproducibility
-  - resilience
-  - science
-  - trustworthy
-  - aging
-  - apply
-  - architecture
-  - collection
-  - compromised
-  - control
-  - cross-jurisdiction
-  - crossref
-  - dependencies
-  - domain
-  - external
-  - federated
-  - focus
-  - hallucination
-  - liability
-  - methods
-  - mutex
-  - notice
-  - openalex
-  - personal
-  - preprocessing
-  - prevent
-  - recovery
-  - reference
-  - reliance
-  - restrictions
-  - semaphore
-  - surface
-  - token
-  - tooling
-  - verification
-  - applied
-  - discover
+- engineering
+- governance
+- supply
+- chain
+- provenance
+- lessons
+- cloud
+- deadlock
+- questions
+- learning
+- platform
+- security
+- china
+- legal
+- machine
+- resource
+- starvation
+- fragmentation
+- glossary
+- conditions
+- digital
+- asked
+- frequently
+- models
+- systems
+- access
+- coffman
+- graph
+- language
+- large
+- transformer
+- trust
+- attack
+- knowledge
+- operating
+- papers
+- sovereignty
+- axios
+- compliance
+- compromise
+- incident
+- practice
+- scheduling
+- search
+- cookies
+- design
+- management
+- privacy
+- traceability
+- circular
+- credential
+- cybersecurity
+- literature
+- protection
+- residency
+- theory
+- artificial
+- contention
+- critical
+- definitions
+- evidence
+- inference
+- intelligence
+- introduction
+- lineage
+- links
+- networks
+- neural
+- policy
+- priority
+- prov-ml
+- reading
+- scope
+- social
+- teams
+- alignment
+- analysis
+- answers
+- disclaimer
+- frontier
+- notices
+- prompt
+- scholarly
+- blocked
+- boundary
+- collection
+- concurrency
+- difference
+- distillation
+- evaluation
+- implement
+- jurisdiction
+- limits
+- localization
+- package
+- personal
+- practical
+- resilient
+- response
+- review
+- services
+- technical
+- timeline
+- treat
+- versions
+- attention
+- azure
+- gpt-3
+- malicious
+- prevention
+- reproducibility
+- resilience
+- science
+- trustworthy
+- aging
+- apply
+- architecture
+- compromised
+- control
+- cookie
+- cross-jurisdiction
+- crossref
+- dependencies
+- domain
+- external
+- federated
+- focus
+- hallucination
+- liability
+- methods
+- mutex
+- notice
+- openalex
+- preprocessing
+- prevent
+- recovery
+- reference
+- reliance
+- restrictions
+- semaphore
+- statement
+- surface
+- token
+- tooling
 catchphrases:
-  - frequently asked questions
-  - 2 partnership models shift accountability maps
-  - 4 semantic versioning convenience systematically enables supply chain propagation
-  - 6 communication infrastructure carries hidden regulatory friction
-  - acceptable conduct
-  - automated candidate moderation
-  - current website-specific practices
-  - engagement boundary
-  - faq overview
-  - glossary overview
-  - intellectual property
-  - jurisdiction map
-  - jurisdiction note
-  - legal notices
-  - liability allocation
-  - liability boundary
-  - official reference points
-  - persona-driven requirements
-  - semaphores counter-based access control
-  - thematic analysis
+- frequently asked questions
+- 2 partnership models shift accountability maps
+- 4 semantic versioning convenience systematically enables supply chain propagation
+- 6 communication infrastructure carries hidden regulatory friction
+- acceptable conduct
+- automated candidate moderation
+- current website-specific practices
+- engagement boundary
+- faq overview
+- glossary overview
+- intellectual property
+- jurisdiction map
+- jurisdiction note
+- legal notices
+- liability allocation
+- liability boundary
+- official reference points
+- persona-driven requirements
+- semaphores counter-based access control
+- thematic analysis
 search_words:
-  - data
-  - engineering
-  - governance
-  - supply
-  - chain
-  - provenance
-  - lessons
-  - cloud
-  - deadlock
-  - questions
-  - learning
-  - platform
-  - llm
-  - security
-  - china
-  - legal
-  - machine
-  - resource
-  - starvation
-  - fragmentation
-  - glossary
-  - npm
-  - conditions
-  - digital
-  - asked
-  - frequently
-  - models
-  - systems
-  - access
-  - coffman
-  - graph
-  - language
-  - large
-  - transformer
-  - trust
-  - attack
-  - knowledge
-  - operating
-  - papers
-  - sovereignty
-  - axios
-  - compliance
-  - compromise
-  - incident
-  - practice
-  - scheduling
-  - design
-  - faq
-  - privacy
-  - traceability
-  - circular
-  - credential
-  - cybersecurity
-  - search
-  - cookies
-  - law
-  - management
-  - protection
-  - residency
-  - theory
-  - artificial
-  - contention
-  - critical
-  - definitions
-  - evidence
-  - inference
-  - intelligence
-  - introduction
-  - lineage
-  - links
-  - literature
-  - networks
-  - neural
-  - policy
-  - priority
-  - prov-ml
-  - reading
-  - scope
-  - social
-  - teams
-  - alignment
-  - analysis
-  - answers
-  - disclaimer
-  - frontier
-  - notices
-  - prompt
-  - risk
-  - saas
-  - scholarly
-  - supply chain
-  - data provenance
-  - engineering governance
-  - machine learning
-  - asked questions
-  - frequently asked
-  - frequently asked questions
-  - chain security
-  - coffman conditions
-  - large language
-  - supply chain security
-  - data provenance machine
-  - engineering lessons
-  - provenance machine
-  - provenance machine learning
-  - digital sovereignty
-  - language models
-  - large language models
-  - axios npm
-  - chain attack
-  - data protection
-  - data residency
-  - supply chain attack
-  - artificial intelligence
-  - governance data
-  - graph neural
-  - graph neural networks
-  - neural networks
-  - operating systems
-  - platform engineering
-  - resource contention
-  - social engineering
-  - cookies data
-  - npm supply
-  - npm supply chain
-  - privacy cookies
-  - privacy cookies data
-  - prompt engineering
-  - traceability graph
-  - artificial intelligence artificial
-  - axios npm supply
-  - deadlock resource
-  - deadlock resource contention
-  - incident response
-  - intelligence artificial
-  - intelligence artificial intelligence
-  - learning traceability
-  - learning traceability graph
-  - llm inference
-  - machine learning traceability
-  - trust provenance
-  - cloud fragmentation
-  - cookies data protection
-  - governance digital
-  - legal notices
-  - platform fragmentation
-  - china cloud
-  - cloud platform
-  - critical evaluation
-  - data lineage
-  - deadlock theory
-  - digital sovereignty cloud
-  - faq hub
-  - graph methods
-  - knowledge distillation
-  - lessons engineering
-  - mutex semaphore
-  - priority aging
-  - seo geo
-  - sovereignty cloud
+- engineering
+- data
+- governance
+- supply
+- chain
+- provenance
+- lessons
+- cloud
+- deadlock
+- questions
+- learning
+- platform
+- llm
+- security
+- china
+- legal
+- machine
+- resource
+- starvation
+- fragmentation
+- glossary
+- npm
+- conditions
+- digital
+- asked
+- frequently
+- models
+- systems
+- access
+- coffman
+- graph
+- language
+- large
+- transformer
+- trust
+- attack
+- knowledge
+- operating
+- papers
+- sovereignty
+- axios
+- compliance
+- compromise
+- incident
+- practice
+- scheduling
+- search
+- cookies
+- design
+- faq
+- management
+- privacy
+- traceability
+- circular
+- credential
+- cybersecurity
+- literature
+- law
+- protection
+- residency
+- theory
+- artificial
+- contention
+- critical
+- definitions
+- evidence
+- inference
+- intelligence
+- introduction
+- lineage
+- links
+- networks
+- neural
+- policy
+- priority
+- prov-ml
+- reading
+- scope
+- social
+- teams
+- alignment
+- analysis
+- answers
+- disclaimer
+- frontier
+- notices
+- prompt
+- risk
+- saas
+- scholarly
+- supply chain
+- data provenance
+- engineering governance
+- machine learning
+- asked questions
+- frequently asked
+- frequently asked questions
+- chain security
+- coffman conditions
+- large language
+- supply chain security
+- data provenance machine
+- engineering lessons
+- provenance machine
+- provenance machine learning
+- digital sovereignty
+- language models
+- large language models
+- axios npm
+- chain attack
+- data protection
+- data residency
+- supply chain attack
+- artificial intelligence
+- governance data
+- graph neural
+- graph neural networks
+- neural networks
+- operating systems
+- platform engineering
+- resource contention
+- social engineering
+- cookies data
+- npm supply
+- npm supply chain
+- privacy cookies
+- privacy cookies data
+- prompt engineering
+- traceability graph
+- artificial intelligence artificial
+- axios npm supply
+- deadlock resource
+- deadlock resource contention
+- incident response
+- intelligence artificial
+- intelligence artificial intelligence
+- learning traceability
+- learning traceability graph
+- llm inference
+- machine learning traceability
+- trust provenance
+- cloud fragmentation
+- cookies data protection
+- governance digital
+- legal notices
+- platform fragmentation
+- china cloud
+- cloud platform
+- critical evaluation
+- data lineage
+- deadlock theory
+- digital sovereignty cloud
+- faq hub
+- graph methods
+- knowledge distillation
+- lessons engineering
+- mutex semaphore
+- priority aging
+- seo geo
+- sovereignty cloud
 global_questions:
-  - question: How should teams use community incident reports without spreading errors?
-    answer: Treat community reports as intake signals. Require independent corroboration through status pages, policy documents, support records, or contractual notices before escalation. This method preserves speed without sacrificing evidence quality.
-  - question: What is the best next step for readers who want to go deeper?
-    answer: Run a broader review that includes MLflow, OpenLineage, Pachyderm, and DVC literature, then test candidate approaches against your production constraints and governance requirements.
-  - question: How are keywords matched against papers?
-    answer: Matching runs against each record's title and abstract. "All keywords must match" narrows results to items where every keyword appears; "Any keyword may match" broadens results to items containing at least one keyword. Switching modes is the fastest way to widen a narrow search.
-  - question: How do I know if my environment is affected?
-    answer: Investigate systems that resolved or installed affected axios versions during the exposure window and hunt for reported indicators, including `sfrclak[.]com` and platform payload artifacts.
-  - question: How does Knowledge Space work?
-    answer: Select a research focus domain or enter your own keywords, choose your sources, and click Search Literature. Knowledge Space fetches recent papers and preprints in real time from the APIs you selected, filters by your keywords and match mode, and returns paginated results ready to explore.
-  - question: How was the maintainer's account compromised?
-    answer: Public reports did not conclusively publish every credential theft detail at first disclosure. Mandiant tradecraft reporting plus the maintainer post-mortem context supports social engineering as a credible precursor pattern.
-  - question: What central message unifies all sources in this revised collection?
-    answer: LLM reliability is an engineering and governance problem, not a presentation problem. Output quality begins with probabilistic sequence modeling and improves through architecture, training stages, and disciplined prompting. Reliable use requires governance controls that address error modes directly and that keep pace with the evolutionary arc from scaling to alignment to efficiency to federated deployment.
-  - question: What does success look like for a sovereign-aware cloud strategy?
-    answer: Success appears when regional legal constraints, technical controls, communication guarantees, and migration rights remain aligned and auditable over time. Teams can then maintain continuity through policy change without emergency redesign -.
-  - question: What immediate steps should I take?
-    answer: Quarantine affected hosts, rotate exposed credentials, inspect CI logs for vulnerable installs, and remediate by replacing compromised dependencies with known-good versions.
-  - question: What is the axios npm supply chain attack?
-    answer: Attackers published malicious axios versions on npm that introduced `plain-crypto-js@4.2.1`, which executed install-time malware delivery across multiple operating systems.
-  - question: What practical control should enterprises implement first?
-    answer: Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority aligns with observed access and notification disruptions in the corpus.
-  - question: What should an enterprise implement first after reading this analysis?
-    answer: Start with a minimal governance baseline. Define approved use cases. Define prompt versioning rules. Define output verification requirements. Define escalation procedures for harmful or ungrounded responses. This sequence converts theory into immediate control coverage.
-  - question: Why do result counts vary by source?
-    answer: API coverage, indexing frequency, metadata completeness, and availability differ across providers. OpenAlex and Crossref emphasize broad scholarly metadata, and publication typing may vary by source. Combining both sources usually yields broader and more resilient discovery coverage than relying on one source alone.
-  - question: Why keep discussing preprocessing provenance?
-    answer: "Because both relevance and complexity show up there: Pina et al. identify integration gaps at that stage, and Souza et al. identify curation as difficult."
-  - question: Does removing the malicious package versions remediate the compromise?
-    answer: No. Package removal does not guarantee host recovery after payload execution. Incident response must include endpoint validation, persistence checks, and credential hygiene measures.
-  - question: How do I architect cloud services for China compliance?
-    answer: Start by treating jurisdiction as a first-class architectural dimension rather than a deployment-time variable. Define data residency boundaries and key custody paths before selecting providers. Map every service to its legal operator (global vendor, regional partner, customer) and verify that contracts specify obligations for data export, incident escalation, and service-level restoration. Audit communication channels, because alert and notification infrastructure such as SMS can be subject to telecom-level blocking that bypasses application logic. The ten lessons in this article provide an ordered implementation guide, starting with jurisdiction-aware reference architectures in Lesson 1.
-  - question: How we use personal data?
-    answer: "Personal data may be used to: - operate, secure, maintain, and improve the website; - understand readership, traffic sources, and content performance"
-  - question: Is PROV-ML already a standard?
-    answer: In this evidence set, PROV-ML is best described as a proposed representation with promising applied evidence in a specific domain context.
-  - question: What is alignment in large language models?
-    answer: Alignment is the process of training or constraining an LLM so its outputs are helpful, honest, and harmless relative to intended use. The main techniques include supervised fine-tuning (SFT) on curated question-answer pairs, reinforcement learning from human feedback (RLHF) where human raters score responses and a reward model is trained on those preferences, and constitutional AI methods where the model critiques its own outputs against stated principles. Alignment does not eliminate all failure modes; recent aligned models report improved refusal behavior on specific benchmark suites, not universal reliability. Claims about alignment effectiveness should be evaluated within the reported evaluation setup rather than generalized.
-  - question: What is hallucination in LLMs and how do you prevent it?
-    answer: Hallucination occurs when an LLM generates plausible-sounding text that is factually wrong, internally inconsistent, or unsupported by any source. The root cause is that LLMs are trained to predict likely next tokens, not to assert truth. Prevention strategies include retrieval-augmented generation (grounding responses in retrieved source documents), contradiction checks against known facts, citation gates that require the model to specify a source for each factual claim, and multi-resolution evaluation that tests factuality separately from fluency. Hallucination is identified as a primary failure mode in both Brown et al. and the synthesis in this article.
-  - question: What is the difference between fine-tuning and prompt engineering in LLMs?
-    answer: Fine-tuning updates model weights on a curated dataset, adapting the model's internal representations and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in Yang et al.'s practitioner survey.
-  - question: Why do AI restrictions feel sharper than other SaaS restrictions?
-    answer: Recent records show AI access decisions integrating strategic and ownership criteria in addition to geography. This creates faster policy asymmetry across regions and legal entities. Engineering teams need provider abstraction and contingency model pathways.
-  - question: Does localization always reduce service quality?
-    answer: Localization does not automatically reduce quality. Breakdown appears when architecture, governance, and communication design remain globally uniform while constraints are region-specific. Quality depends on explicit regional control planes and migration safeguards.
-  - question: How do Coffman conditions apply to LLM inference and token scheduling?
-    answer: "Token slots in LLM inference are mutual-exclusion resources: exactly one inference request occupies a decoding slot during autoregressive generation. In a multi-model pipeline, if Request A holds a slot on Model-X while waiting for Model-Y, and Request B holds Model-Y while waiting for Model-X, all four Coffman conditions hold and a deadlock can form. Prevention requires either a global model-acquisition ordering (always acquire Model-X before Model-Y) or full-release semantics, where Request A must complete and release all slots before acquiring resources on a second model. Lessons 1 and 2 address both strategies."
-  - question: How do I check whether my npm project used a compromised package?
-    answer: Review your lockfile (`package-lock.json` or `yarn.lock`) for axios version 1.14.1 or 0.30.4, or for `plain-crypto-js@4.2.1`. Check your CI run logs for installations during the 30-31 March 2026 exposure window. Hunt for IOC domains (`sfrclak[.]com`) and platform-specific payload paths (`/Library/Caches/com.apple.act.mond` on macOS, `C:\ProgramData\wt.exe` on Windows, `/tmp/ld.py` on Linux) in EDR telemetry. The full IOC list appears in the Indicators of Compromise table in this article.
-  - question: How do you prevent deadlock in distributed systems?
-    answer: Four primary strategies correspond directly to breaking the four Coffman conditions. First, enforce a total order on resource acquisition to eliminate circular wait. Second, require atomic multi-resource acquisition or full release before requesting new resources to eliminate hold and wait. Third, implement preemption authority so the system can forcibly reclaim a blocked resource. Fourth, run cycle-detection on the live resource-request graph and reject configurations that would complete a cycle before they execute. Lessons 1 through 3 in this article cover practical implementations for supply chains, cloud platforms, and LLM inference systems.
-  - question: How does PROV-ML extend W3C PROV for machine learning?
-    answer: "PROV-ML, proposed by Souza et al., extends the base [W3C PROV](https://www.w3.org/TR/prov-overview/) model with [W3C ML Schema](https://www.w3.org/TR/ml-schema/) vocabulary to capture ML-specific concepts: hyperparameters, training runs, dataset versions, and evaluation metrics. It maps four user personas (domain scientists, computational engineers, ML engineers, and provenance specialists) to provenance query patterns. The PROV-ML design was evaluated in an oil and gas seismic classification pipeline using 48 GPUs through the ProvLake system. Whether it generalizes beyond that domain is an open question the paper does not demonstrate. It claims scoped guidance from three papers. It does not claim field-wide representativeness or comparative superiority over the broader lineage tooling ecosystem."
-  - question: How does deadlock theory apply to supply chain security?
-    answer: Supply chain attacks exhibit all four Coffman conditions at the credential and dependency level. A maintainer credential enforces mutual exclusion over package publication; a compromised developer holds a build environment while waiting for npm packages (hold and wait); once a malicious version is downloaded it cannot be universally recalled (no preemption); and transitive dependency cycles create circular wait across build graphs. The companion article on the [Axios npm supply chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience) reconstructs a confirmed March 2026 incident through this exact framework.
-  - question: How does the Transformer attention mechanism work?
-    answer: "The [Transformer](<https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)>) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the model's dimensional space."
-  - question: How should researchers and educators reuse these materials responsibly?
-    answer: Use short quotations only when wording precision matters. Prefer paraphrase for interpretation. Maintain explicit attribution. Preserve links to original context. Where applicable under UK law, assess whether CDPA 1988 ss. 29 (research/private study) and 31A (text and data analysis for non-commercial research) conditions are genuinely satisfied before reuse. This applies equally to video content and to published scholarly works.
-  - question: Is any data stored when I search?
-    answer: No. Fetched literature records are not stored in application-level persistent storage. Normal operational logs from hosting, edge, or analytics services may still apply independently under their own policies.
-  - question: Is the reported 91.3% GCN figure a universal result?
-    answer: No. It is a paper-reported result in one evaluation context. This review does not treat it as a universal benchmark.
-  - question: Is this legal advice or a professional recommendation?
-    answer: No. Knowledge Space is an informational research-discovery tool only, not legal advice or a professional recommendation. For jurisdiction-specific legal or compliance decisions, consult qualified counsel in the relevant jurisdiction. Mandatory local consumer and data protection rights remain fully unaffected.
-  - question: Should teams deploy provenance tooling immediately after reading this article?
-    answer: Use this article as orientation, not as a deployment checklist. Before adoption decisions, compare against your own stack, load profile, compliance obligations, and failure modes.
-  - question: What are the four Coffman conditions for deadlock?
-    answer: "Deadlock occurs when, and only when, all four of the following hold simultaneously: mutual exclusion (a resource is held exclusively by one thread), hold and wait (a thread holds one resource while requesting another), no preemption (held resources cannot be forcibly reclaimed), and circular wait (a cycle exists where each thread waits for a resource held by the next). Eliminating any single condition prevents deadlock entirely. The full theoretical foundation and formal definition appear in the [Understanding Deadlock](#understanding-deadlock-mutex-semaphore-and-the-coffman-conditions) section above."
-  - question: What does cloud platform bifurcation mean for enterprise teams?
-    answer: "Cloud bifurcation means a vendor maintains two structurally separate operating models for the same product: a global version and a localized version. For enterprise teams, this creates parity gaps in features, compliance attestations, security controls, and support coverage. It also introduces circular failure risk where a service withdrawal by either the global vendor or the regional partner cannot be resolved without both parties acting. The analysis in this article is grounded in documented operating structures from Microsoft, Salesforce, and Unity, mapped to OS-level circular-wait theory in the companion article on [deadlock and resource contention](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm)."
-  - question: What is a large language model?
-    answer: A large language model (LLM) is a neural network trained to predict the next token in a sequence of text. "Large" refers to the parameter count (hundreds of billions for frontier models) and the scale of training data (internet-scale corpora). The key architectural insight, introduced by [Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762) in "Attention Is All You Need," is that self-attention replaces sequential recurrence, allowing parallel computation across all positions in a sequence. This parallelism is what made billion-parameter pretraining tractable.
-  - question: What is a software supply chain attack?
-    answer: "A software supply chain attack targets the delivery infrastructure for code rather than the end application directly. Attackers compromise a package registry, maintainer credential, build tool, or dependency repository. Downstream consumers who install or update a package unknowingly receive and execute malicious code. The axios npm event is a confirmed example: a compromised maintainer credential allowed injection of malicious versions into npm's distribution system, propagating to every project that resolved the affected version range."
-  - question: What is data provenance in machine learning?
-    answer: Data provenance in machine learning is the record of where training data originated, how it was cleaned and transformed, which model versions it produced, and which individuals or systems were responsible at each stage. Provenance answers the question "why does this model behave this way?" by tracing outputs back to input data and pipeline decisions. All three papers in this review treat provenance as a lifecycle-design requirement rather than a logging afterthought.
-  - question: What is priority aging in operating systems and LLM scheduling?
-    answer: Priority aging is a scheduling technique in which a waiting thread's effective priority increases incrementally over time, ensuring low-priority requests are eventually scheduled even when higher-priority requests arrive continuously. It prevents indefinite starvation while preserving responsiveness for high-priority work. Applied to LLM inference queues, priority aging ensures that batch offline jobs are not permanently blocked by interactive user requests, which is the scenario described in the [LLM Inference and Token Schedulers](#llm-inference-and-token-schedulers-priority-starvation) section.
-  - question: What is the difference between data provenance and data lineage?
-    answer: "Data provenance and data lineage both trace data through a pipeline, but they differ in focus. Lineage records where data moved, which inputs fed which outputs. Provenance adds agent information: who or what performed each transformation, under what conditions, for what purpose, and with what authorization. The [W3C PROV](https://www.w3.org/TR/prov-overview/) standard formalizes this distinction using the entity-activity-agent model that Souza et al. extend in PROV-ML."
-  - question: What is the difference between deadlock and starvation?
-    answer: "Deadlock is a cycle in which no involved thread can make progress: every waiting thread holds a resource that another waiting thread needs, so the entire set is permanently blocked. Starvation is a state in which one specific thread is indefinitely denied access while other threads do make progress. Round-robin and first-come-first-serve scheduling prevent starvation; resource ordering, atomic acquisition, and the [Banker's algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm) prevent deadlock. Both pathologies appear in LLM inference queues and software supply chains."
-  - question: What tools are used for data provenance in machine learning?
-    answer: "Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier, Pina et al. integrate separate lifecycle tools using DNNProv and Chapman et al.'s preprocessing capture, and Souza et al. extend ProvLake with the PROV-ML vocabulary. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem."
-  - question: Which sources best support deep technical understanding?
-    answer: The strongest technical depth appears in Vaswani et al., Brown et al., and the Stanford, MIT, StatQuest, and Yannic Kilcher materials, because they explain objective functions, attention mechanics, and scaling behavior with explicit procedural detail. Yang et al.'s distillation survey and Ren et al.'s federated foundation model survey add the deployment and compression dimensions.
-  - question: Which sources best support practical implementation teams?
-    answer: Google Cloud Tech and AI Search provide direct implementation value for teams that need prompt design guidance and user-facing framing for model behavior. Yang et al.'s practitioner survey on ChatGPT and beyond adds empirical guidance on when to use LLMs versus fine-tuned models for specific NLP tasks.
-  - question: Which sources does this tool search?
-    answer: "The tool queries two open academic APIs: OpenAlex (a broad scholarly works index covering journals and conference papers) and Crossref (a DOI registration and metadata service). Each brings distinct coverage and indexing depth, so combining them typically yields a fuller picture."
-  - question: Who is responsible for the attack?
-    answer: Microsoft attributes the activity to Sapphire Sleet, Sophos maps related activity to NICKEL GLADSTONE, and Mandiant tracks overlapping tradecraft under UNC1069.
-  - question: Why is ChatGPT blocked in China?
-    answer: OpenAI has blocked API and web access for users in mainland China, Hong Kong, and Macau. The block was widely reported in July 2024. Anthropic has applied additional ownership-structure screening beyond geography. Both decisions reflect a combination of US export-control considerations, OpenAI's own usage policies, and the regulatory environment in China. Engineering teams cannot rely on direct OpenAI or Anthropic model access for China-deployed applications and must plan for approved domestic alternatives or allowlisted API routes.
-  - question: Is Azure available in China, and how does it differ from global Azure?
-    answer: Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within China's borders and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014.
-  - question: Where to look next?
-    answer: "- Privacy, cookies, data handling, and Hong Kong PICS-style notice: [Privacy, Cookies and Data Protection]() - Site access, acceptable use, intellectual property, and service boundaries: [Terms of Use]() - Overview of the full legal notice set: [Legal Notices]()"
+- question: How should teams use community incident reports without spreading errors?
+  answer: Treat community reports as intake signals. Require independent corroboration through status pages, policy documents, support records, or contractual notices before escalation. This method preserves speed without sacrificing evidence quality.
+- question: What is the best next step for readers who want to go deeper?
+  answer: Run a broader review that includes MLflow, OpenLineage, Pachyderm, and DVC literature, then test candidate approaches against your production constraints and governance requirements.
+- question: How are keywords matched against papers?
+  answer: Matching runs against each record's title and abstract. "All keywords must match" narrows results to items where every keyword appears; "Any keyword may match" broadens results to items containing at least one keyword. Switching modes is the fastest way to widen a narrow search.
+- question: How do I change cookie preferences later?
+  answer: Use the **Cookie Preferences** control in the site footer or open [Cookie Preferences]() from the legal page.
+- question: How do I know if my environment is affected?
+  answer: Investigate systems that resolved or installed affected axios versions during the exposure window and hunt for reported indicators, including `sfrclak[.]com` and platform payload artifacts.
+- question: How does Knowledge Space work?
+  answer: Select a research focus domain or enter your own keywords, choose your sources, and click Search Literature. Knowledge Space fetches recent papers and preprints in real time from the APIs you selected, filters by your keywords and match mode, and returns paginated results ready to explore.
+- question: How was the maintainer's account compromised?
+  answer: Public reports did not conclusively publish every credential theft detail at first disclosure. Mandiant tradecraft reporting plus the maintainer post-mortem context supports social engineering as a credible precursor pattern.
+- question: What central message unifies all sources in this revised collection?
+  answer: LLM reliability is an engineering and governance problem, not a presentation problem. Output quality begins with probabilistic sequence modeling and improves through architecture, training stages, and disciplined prompting. Reliable use requires governance controls that address error modes directly and that keep pace with the evolutionary arc from scaling to alignment to efficiency to federated deployment.
+- question: What does success look like for a sovereign-aware cloud strategy?
+  answer: Success appears when regional legal constraints, technical controls, communication guarantees, and migration rights remain aligned and auditable over time. Teams can then maintain continuity through policy change without emergency redesign -.
+- question: What immediate steps should I take?
+  answer: Quarantine affected hosts, rotate exposed credentials, inspect CI logs for vulnerable installs, and remediate by replacing compromised dependencies with known-good versions.
+- question: What is the axios npm supply chain attack?
+  answer: Attackers published malicious axios versions on npm that introduced `plain-crypto-js@4.2.1`, which executed install-time malware delivery across multiple operating systems.
+- question: What practical control should enterprises implement first?
+  answer: Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority aligns with observed access and notification disruptions in the corpus.
+- question: What should an enterprise implement first after reading this analysis?
+  answer: Start with a minimal governance baseline. Define approved use cases. Define prompt versioning rules. Define output verification requirements. Define escalation procedures for harmful or ungrounded responses. This sequence converts theory into immediate control coverage.
+- question: Why do result counts vary by source?
+  answer: API coverage, indexing frequency, metadata completeness, and availability differ across providers. OpenAlex and Crossref emphasize broad scholarly metadata, and publication typing may vary by source. Combining both sources usually yields broader and more resilient discovery coverage than relying on one source alone.
+- question: Why keep discussing preprocessing provenance?
+  answer: 'Because both relevance and complexity show up there: Pina et al. identify integration gaps at that stage, and Souza et al. identify curation as difficult.'
+- question: Does removing the malicious package versions remediate the compromise?
+  answer: No. Package removal does not guarantee host recovery after payload execution. Incident response must include endpoint validation, persistence checks, and credential hygiene measures.
+- question: How do I architect cloud services for China compliance?
+  answer: Start by treating jurisdiction as a first-class architectural dimension rather than a deployment-time variable. Define data residency boundaries and key custody paths before selecting providers. Map every service to its legal operator (global vendor, regional partner, customer) and verify that contracts specify obligations for data export, incident escalation, and service-level restoration. Audit communication channels, because alert and notification infrastructure such as SMS can be subject to telecom-level blocking that bypasses application logic. The ten lessons in this article provide an ordered implementation guide, starting with jurisdiction-aware reference architectures in Lesson 1.
+- question: How we use personal data?
+  answer: 'Personal data may be used to: - operate, secure, maintain, and improve the website; - understand readership, traffic sources, and content performance'
+- question: Is PROV-ML already a standard?
+  answer: In this evidence set, PROV-ML is best described as a proposed representation with promising applied evidence in a specific domain context.
+- question: What is alignment in large language models?
+  answer: Alignment is the process of training or constraining an LLM so its outputs are helpful, honest, and harmless relative to intended use. The main techniques include supervised fine-tuning (SFT) on curated question-answer pairs, reinforcement learning from human feedback (RLHF) where human raters score responses and a reward model is trained on those preferences, and constitutional AI methods where the model critiques its own outputs against stated principles. Alignment does not eliminate all failure modes; recent aligned models report improved refusal behavior on specific benchmark suites, not universal reliability. Claims about alignment effectiveness should be evaluated within the reported evaluation setup rather than generalized.
+- question: What is hallucination in LLMs and how do you prevent it?
+  answer: Hallucination occurs when an LLM generates plausible-sounding text that is factually wrong, internally inconsistent, or unsupported by any source. The root cause is that LLMs are trained to predict likely next tokens, not to assert truth. Prevention strategies include retrieval-augmented generation (grounding responses in retrieved source documents), contradiction checks against known facts, citation gates that require the model to specify a source for each factual claim, and multi-resolution evaluation that tests factuality separately from fluency. Hallucination is identified as a primary failure mode in both Brown et al. and the synthesis in this article.
+- question: What is the difference between fine-tuning and prompt engineering in LLMs?
+  answer: Fine-tuning updates model weights on a curated dataset, adapting the model's internal representations and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in Yang et al.'s practitioner survey.
+- question: Why do AI restrictions feel sharper than other SaaS restrictions?
+  answer: Recent records show AI access decisions integrating strategic and ownership criteria in addition to geography. This creates faster policy asymmetry across regions and legal entities. Engineering teams need provider abstraction and contingency model pathways.
+- question: Does localization always reduce service quality?
+  answer: Localization does not automatically reduce quality. Breakdown appears when architecture, governance, and communication design remain globally uniform while constraints are region-specific. Quality depends on explicit regional control planes and migration safeguards.
+- question: How do Coffman conditions apply to LLM inference and token scheduling?
+  answer: 'Token slots in LLM inference are mutual-exclusion resources: exactly one inference request occupies a decoding slot during autoregressive generation. In a multi-model pipeline, if Request A holds a slot on Model-X while waiting for Model-Y, and Request B holds Model-Y while waiting for Model-X, all four Coffman conditions hold and a deadlock can form. Prevention requires either a global model-acquisition ordering (always acquire Model-X before Model-Y) or full-release semantics, where Request A must complete and release all slots before acquiring resources on a second model. Lessons 1 and 2 address both strategies.'
+- question: How do I check whether my npm project used a compromised package?
+  answer: Review your lockfile (`package-lock.json` or `yarn.lock`) for axios version 1.14.1 or 0.30.4, or for `plain-crypto-js@4.2.1`. Check your CI run logs for installations during the 30-31 March 2026 exposure window. Hunt for IOC domains (`sfrclak[.]com`) and platform-specific payload paths (`/Library/Caches/com.apple.act.mond` on macOS, `C:\ProgramData\wt.exe` on Windows, `/tmp/ld.py` on Linux) in EDR telemetry. The full IOC list appears in the Indicators of Compromise table in this article.
+- question: How do you prevent deadlock in distributed systems?
+  answer: Four primary strategies correspond directly to breaking the four Coffman conditions. First, enforce a total order on resource acquisition to eliminate circular wait. Second, require atomic multi-resource acquisition or full release before requesting new resources to eliminate hold and wait. Third, implement preemption authority so the system can forcibly reclaim a blocked resource. Fourth, run cycle-detection on the live resource-request graph and reject configurations that would complete a cycle before they execute. Lessons 1 through 3 in this article cover practical implementations for supply chains, cloud platforms, and LLM inference systems.
+- question: How does PROV-ML extend W3C PROV for machine learning?
+  answer: 'PROV-ML, proposed by Souza et al., extends the base [W3C PROV](https://www.w3.org/TR/prov-overview/) model with [W3C ML Schema](https://www.w3.org/TR/ml-schema/) vocabulary to capture ML-specific concepts: hyperparameters, training runs, dataset versions, and evaluation metrics. It maps four user personas (domain scientists, computational engineers, ML engineers, and provenance specialists) to provenance query patterns. The PROV-ML design was evaluated in an oil and gas seismic classification pipeline using 48 GPUs through the ProvLake system. Whether it generalizes beyond that domain is an open question the paper does not demonstrate. It claims scoped guidance from three papers. It does not claim field-wide representativeness or comparative superiority over the broader lineage tooling ecosystem.'
+- question: How does deadlock theory apply to supply chain security?
+  answer: Supply chain attacks exhibit all four Coffman conditions at the credential and dependency level. A maintainer credential enforces mutual exclusion over package publication; a compromised developer holds a build environment while waiting for npm packages (hold and wait); once a malicious version is downloaded it cannot be universally recalled (no preemption); and transitive dependency cycles create circular wait across build graphs. The companion article on the [Axios npm supply chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience) reconstructs a confirmed March 2026 incident through this exact framework.
+- question: How does the Transformer attention mechanism work?
+  answer: 'The [Transformer](<https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)>) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the model''s dimensional space.'
+- question: How should researchers and educators reuse these materials responsibly?
+  answer: Use short quotations only when wording precision matters. Prefer paraphrase for interpretation. Maintain explicit attribution. Preserve links to original context. Where applicable under UK law, assess whether CDPA 1988 ss. 29 (research/private study) and 31A (text and data analysis for non-commercial research) conditions are genuinely satisfied before reuse. This applies equally to video content and to published scholarly works.
+- question: Is any data stored when I search?
+  answer: Fetched literature records are not stored in application-level persistent storage. Limited browser-side session state may be used for security and rate protection during your session. Normal operational logs from hosting, edge, or analytics services may still apply independently under their own policies.
+- question: Is the reported 91.3% GCN figure a universal result?
+  answer: No. It is a paper-reported result in one evaluation context. This review does not treat it as a universal benchmark.
+- question: Is this legal advice or a professional recommendation?
+  answer: No. Knowledge Space is an informational research-discovery tool only, not legal advice or a professional recommendation. For jurisdiction-specific legal or compliance decisions, consult qualified counsel in the relevant jurisdiction. Mandatory local consumer and data protection rights remain fully unaffected.
+- question: Should teams deploy provenance tooling immediately after reading this article?
+  answer: Use this article as orientation, not as a deployment checklist. Before adoption decisions, compare against your own stack, load profile, compliance obligations, and failure modes.
+- question: What are the four Coffman conditions for deadlock?
+  answer: 'Deadlock occurs when, and only when, all four of the following hold simultaneously: mutual exclusion (a resource is held exclusively by one thread), hold and wait (a thread holds one resource while requesting another), no preemption (held resources cannot be forcibly reclaimed), and circular wait (a cycle exists where each thread waits for a resource held by the next). Eliminating any single condition prevents deadlock entirely. The full theoretical foundation and formal definition appear in the [Understanding Deadlock](#understanding-deadlock-mutex-semaphore-and-the-coffman-conditions) section above.'
+- question: What does cloud platform bifurcation mean for enterprise teams?
+  answer: 'Cloud bifurcation means a vendor maintains two structurally separate operating models for the same product: a global version and a localized version. For enterprise teams, this creates parity gaps in features, compliance attestations, security controls, and support coverage. It also introduces circular failure risk where a service withdrawal by either the global vendor or the regional partner cannot be resolved without both parties acting. The analysis in this article is grounded in documented operating structures from Microsoft, Salesforce, and Unity, mapped to OS-level circular-wait theory in the companion article on [deadlock and resource contention](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm).'
+- question: What is a large language model?
+  answer: A large language model (LLM) is a neural network trained to predict the next token in a sequence of text. "Large" refers to the parameter count (hundreds of billions for frontier models) and the scale of training data (internet-scale corpora). The key architectural insight, introduced by [Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762) in "Attention Is All You Need," is that self-attention replaces sequential recurrence, allowing parallel computation across all positions in a sequence. This parallelism is what made billion-parameter pretraining tractable.
+- question: What is a software supply chain attack?
+  answer: 'A software supply chain attack targets the delivery infrastructure for code rather than the end application directly. Attackers compromise a package registry, maintainer credential, build tool, or dependency repository. Downstream consumers who install or update a package unknowingly receive and execute malicious code. The axios npm event is a confirmed example: a compromised maintainer credential allowed injection of malicious versions into npm''s distribution system, propagating to every project that resolved the affected version range.'
+- question: What is data provenance in machine learning?
+  answer: Data provenance in machine learning is the record of where training data originated, how it was cleaned and transformed, which model versions it produced, and which individuals or systems were responsible at each stage. Provenance answers the question "why does this model behave this way?" by tracing outputs back to input data and pipeline decisions. All three papers in this review treat provenance as a lifecycle-design requirement rather than a logging afterthought.
+- question: What is priority aging in operating systems and LLM scheduling?
+  answer: Priority aging is a scheduling technique in which a waiting thread's effective priority increases incrementally over time, ensuring low-priority requests are eventually scheduled even when higher-priority requests arrive continuously. It prevents indefinite starvation while preserving responsiveness for high-priority work. Applied to LLM inference queues, priority aging ensures that batch offline jobs are not permanently blocked by interactive user requests, which is the scenario described in the [LLM Inference and Token Schedulers](#llm-inference-and-token-schedulers-priority-starvation) section.
+- question: What is the difference between data provenance and data lineage?
+  answer: 'Data provenance and data lineage both trace data through a pipeline, but they differ in focus. Lineage records where data moved, which inputs fed which outputs. Provenance adds agent information: who or what performed each transformation, under what conditions, for what purpose, and with what authorization. The [W3C PROV](https://www.w3.org/TR/prov-overview/) standard formalizes this distinction using the entity-activity-agent model that Souza et al. extend in PROV-ML.'
+- question: What is the difference between deadlock and starvation?
+  answer: 'Deadlock is a cycle in which no involved thread can make progress: every waiting thread holds a resource that another waiting thread needs, so the entire set is permanently blocked. Starvation is a state in which one specific thread is indefinitely denied access while other threads do make progress. Round-robin and first-come-first-serve scheduling prevent starvation; resource ordering, atomic acquisition, and the [Banker''s algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm) prevent deadlock. Both pathologies appear in LLM inference queues and software supply chains.'
+- question: What tools are used for data provenance in machine learning?
+  answer: 'Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier, Pina et al. integrate separate lifecycle tools using DNNProv and Chapman et al.''s preprocessing capture, and Souza et al. extend ProvLake with the PROV-ML vocabulary. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem.'
+- question: Which sources best support deep technical understanding?
+  answer: The strongest technical depth appears in Vaswani et al., Brown et al., and the Stanford, MIT, StatQuest, and Yannic Kilcher materials, because they explain objective functions, attention mechanics, and scaling behavior with explicit procedural detail. Yang et al.'s distillation survey and Ren et al.'s federated foundation model survey add the deployment and compression dimensions.
+- question: Will search still work if I reject analytics cookies?
+  answer: Yes. Search and result browsing remain available. Rejecting analytics only stops optional GA4 or GTM usage measurement events for page interactions and search activity.
+- question: Which sources best support practical implementation teams?
+  answer: Google Cloud Tech and AI Search provide direct implementation value for teams that need prompt design guidance and user-facing framing for model behavior. Yang et al.'s practitioner survey on ChatGPT and beyond adds empirical guidance on when to use LLMs versus fine-tuned models for specific NLP tasks.
+- question: Which sources does this tool search?
+  answer: 'The tool queries two open academic APIs: OpenAlex (a broad scholarly works index covering journals and conference papers) and Crossref (a DOI registration and metadata service). Each brings distinct coverage and indexing depth, so combining them typically yields a fuller picture.'
+- question: Who is responsible for the attack?
+  answer: Microsoft attributes the activity to Sapphire Sleet, Sophos maps related activity to NICKEL GLADSTONE, and Mandiant tracks overlapping tradecraft under UNC1069.
+- question: Why is ChatGPT blocked in China?
+  answer: OpenAI has blocked API and web access for users in mainland China, Hong Kong, and Macau. The block was widely reported in July 2024. Anthropic has applied additional ownership-structure screening beyond geography. Both decisions reflect a combination of US export-control considerations, OpenAI's own usage policies, and the regulatory environment in China. Engineering teams cannot rely on direct OpenAI or Anthropic model access for China-deployed applications and must plan for approved domestic alternatives or allowlisted API routes.
+- question: Is Azure available in China, and how does it differ from global Azure?
+  answer: Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within China's borders and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014.
+- question: Where to look next?
+  answer: "- Privacy, cookies, data handling, and Hong Kong Personal Information Collection Statement (PICS)-style notice: [Privacy, Cookies and Data Protection]() - Site access, acceptable use, intellectual property, and service boundaries: [Terms of Use]() - Overview of the full legal notice set: [Legal Notices]()"
 posts:
   axios-supply-chain-compromise:
-    title: "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on Trust, Provenance, and Resilient Engineering"
+    title: 'axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on Trust, Provenance, and Resilient Engineering'
     url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
     keywords:
-      - chain
-      - supply
-      - npm
-      - engineering
-      - attack
-      - axios
-      - compromise
-      - trust
-      - credential
-      - incident
-      - security
-      - social
-      - lessons
-      - provenance
-      - package
-      - response
-      - malicious
-      - compromised
-      - dependency
-      - versions
-      - cybersecurity
-      - unc1069
-      - attribution
-      - defense
-      - maintainer
-      - malware
-      - removal
-      - timeline
-      - analysis
-      - evidence-based
-      - gladstone
-      - manager
-      - nickel
-      - postinstall
-      - resilient
-      - sapphire
-      - supply chain security
-      - social engineering
-      - incident response
-      - axios npm supply chain attack
+    - chain
+    - supply
+    - npm
+    - engineering
+    - attack
+    - axios
+    - compromise
+    - trust
+    - credential
+    - incident
+    - security
+    - social
+    - lessons
+    - provenance
+    - package
+    - response
+    - malicious
+    - compromised
+    - dependency
+    - versions
+    - cybersecurity
+    - unc1069
+    - attribution
+    - defense
+    - maintainer
+    - malware
+    - removal
+    - timeline
+    - analysis
+    - evidence-based
+    - gladstone
+    - manager
+    - nickel
+    - postinstall
+    - resilient
+    - sapphire
+    - supply chain security
+    - social engineering
+    - incident response
+    - axios npm supply chain attack
     key_phrases:
-      - supply chain
-      - axios npm
-      - supply chain attack
-      - chain attack
-      - social engineering
-      - npm supply
-      - npm supply chain
-      - axios npm supply
-      - incident response
-      - trust provenance
-      - supply chain security
-      - chain security
-      - chain security social
-      - security social
-      - security social engineering
-      - engineering incident
-      - response trust
-      - social engineering incident
-      - engineering incident response
-      - incident response trust
-      - response trust provenance
-      - supply chain compromise
-      - chain defense
-      - engineering lessons
+    - supply chain
+    - axios npm
+    - supply chain attack
+    - chain attack
+    - social engineering
+    - npm supply
+    - npm supply chain
+    - axios npm supply
+    - incident response
+    - trust provenance
+    - supply chain security
+    - chain security
+    - chain security social
+    - security social
+    - security social engineering
+    - engineering incident
+    - response trust
+    - social engineering incident
+    - engineering incident response
+    - incident response trust
+    - response trust provenance
+    - supply chain compromise
+    - chain defense
+    - engineering lessons
     catchwords:
-      - chain
-      - supply
-      - engineering
-      - attack
-      - axios
-      - compromise
-      - trust
-      - credential
-      - incident
-      - security
-      - social
-      - lessons
-      - provenance
-      - package
-      - response
-      - malicious
-      - compromised
-      - dependency
-      - versions
-      - cybersecurity
-      - unc1069
-      - attribution
-      - defense
-      - maintainer
-      - malware
-      - removal
-      - timeline
-      - analysis
+    - chain
+    - supply
+    - engineering
+    - attack
+    - axios
+    - compromise
+    - trust
+    - credential
+    - incident
+    - security
+    - social
+    - lessons
+    - provenance
+    - package
+    - response
+    - malicious
+    - compromised
+    - dependency
+    - versions
+    - cybersecurity
+    - unc1069
+    - attribution
+    - defense
+    - maintainer
+    - malware
+    - removal
+    - timeline
+    - analysis
     search_words:
-      - chain
-      - supply
-      - npm
-      - engineering
-      - attack
-      - axios
-      - compromise
-      - trust
-      - credential
-      - incident
-      - security
-      - social
-      - lessons
-      - provenance
-      - package
-      - response
-      - malicious
-      - compromised
-      - supply chain
-      - axios npm
-      - supply chain attack
-      - chain attack
-      - social engineering
-      - npm supply
-      - npm supply chain
-      - axios npm supply
-      - incident response
-      - trust provenance
-      - supply chain security
-      - chain security
+    - chain
+    - supply
+    - npm
+    - engineering
+    - attack
+    - axios
+    - compromise
+    - trust
+    - credential
+    - incident
+    - security
+    - social
+    - lessons
+    - provenance
+    - package
+    - response
+    - malicious
+    - compromised
+    - supply chain
+    - axios npm
+    - supply chain attack
+    - chain attack
+    - social engineering
+    - npm supply
+    - npm supply chain
+    - axios npm supply
+    - incident response
+    - trust provenance
+    - supply chain security
+    - chain security
     questions:
-      - question: How do I know if my environment is affected?
-        answer: Investigate systems that resolved or installed affected axios versions during the exposure window and hunt for reported indicators, including `sfrclak[.]com` and platform payload artifacts.
-      - question: How was the maintainer's account compromised?
-        answer: Public reports did not conclusively publish every credential theft detail at first disclosure. Mandiant tradecraft reporting plus the maintainer post-mortem context supports social engineering as a credible precursor pattern.
-      - question: What immediate steps should I take?
-        answer: Quarantine affected hosts, rotate exposed credentials, inspect CI logs for vulnerable installs, and remediate by replacing compromised dependencies with known-good versions.
-      - question: What is the axios npm supply chain attack?
-        answer: Attackers published malicious axios versions on npm that introduced `plain-crypto-js@4.2.1`, which executed install-time malware delivery across multiple operating systems.
-      - question: Does removing the malicious package versions remediate the compromise?
-        answer: No. Package removal does not guarantee host recovery after payload execution. Incident response must include endpoint validation, persistence checks, and credential hygiene measures.
-      - question: How do I check whether my npm project used a compromised package?
-        answer: Review your lockfile (`package-lock.json` or `yarn.lock`) for axios version 1.14.1 or 0.30.4, or for `plain-crypto-js@4.2.1`. Check your CI run logs for installations during the 30-31 March 2026 exposure window. Hunt for IOC domains (`sfrclak[.]com`) and platform-specific payload paths (`/Library/Caches/com.apple.act.mond` on macOS, `C:\ProgramData\wt.exe` on Windows, `/tmp/ld.py` on Linux) in EDR telemetry. The full IOC list appears in the Indicators of Compromise table in this article.
-      - question: What is a software supply chain attack?
-        answer: "A software supply chain attack targets the delivery infrastructure for code rather than the end application directly. Attackers compromise a package registry, maintainer credential, build tool, or dependency repository. Downstream consumers who install or update a package unknowingly receive and execute malicious code. The axios npm event is a confirmed example: a compromised maintainer credential allowed injection of malicious versions into npm's distribution system, propagating to every project that resolved the affected version range."
-      - question: Who is responsible for the attack?
-        answer: Microsoft attributes the activity to Sapphire Sleet, Sophos maps related activity to NICKEL GLADSTONE, and Mandiant tracks overlapping tradecraft under UNC1069.
+    - question: How do I know if my environment is affected?
+      answer: Investigate systems that resolved or installed affected axios versions during the exposure window and hunt for reported indicators, including `sfrclak[.]com` and platform payload artifacts.
+    - question: How was the maintainer's account compromised?
+      answer: Public reports did not conclusively publish every credential theft detail at first disclosure. Mandiant tradecraft reporting plus the maintainer post-mortem context supports social engineering as a credible precursor pattern.
+    - question: What immediate steps should I take?
+      answer: Quarantine affected hosts, rotate exposed credentials, inspect CI logs for vulnerable installs, and remediate by replacing compromised dependencies with known-good versions.
+    - question: What is the axios npm supply chain attack?
+      answer: Attackers published malicious axios versions on npm that introduced `plain-crypto-js@4.2.1`, which executed install-time malware delivery across multiple operating systems.
+    - question: Does removing the malicious package versions remediate the compromise?
+      answer: No. Package removal does not guarantee host recovery after payload execution. Incident response must include endpoint validation, persistence checks, and credential hygiene measures.
+    - question: How do I check whether my npm project used a compromised package?
+      answer: Review your lockfile (`package-lock.json` or `yarn.lock`) for axios version 1.14.1 or 0.30.4, or for `plain-crypto-js@4.2.1`. Check your CI run logs for installations during the 30-31 March 2026 exposure window. Hunt for IOC domains (`sfrclak[.]com`) and platform-specific payload paths (`/Library/Caches/com.apple.act.mond` on macOS, `C:\ProgramData\wt.exe` on Windows, `/tmp/ld.py` on Linux) in EDR telemetry. The full IOC list appears in the Indicators of Compromise table in this article.
+    - question: What is a software supply chain attack?
+      answer: 'A software supply chain attack targets the delivery infrastructure for code rather than the end application directly. Attackers compromise a package registry, maintainer credential, build tool, or dependency repository. Downstream consumers who install or update a package unknowingly receive and execute malicious code. The axios npm event is a confirmed example: a compromised maintainer credential allowed injection of malicious versions into npm''s distribution system, propagating to every project that resolved the affected version range.'
+    - question: Who is responsible for the attack?
+      answer: Microsoft attributes the activity to Sapphire Sleet, Sophos maps related activity to NICKEL GLADSTONE, and Mandiant tracks overlapping tradecraft under UNC1069.
   digital-sovereignty-fragmented-cloud-realities:
-    title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
+    title: 'Digital Sovereignty in Practice: Ten Engineering Lessons from China''s Cloud Access Fragmentation, 2014 to 2026'
     url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     keywords:
-      - china
-      - cloud
-      - governance
-      - digital
-      - engineering
-      - platform
-      - access
-      - data
-      - sovereignty
-      - compliance
-      - lessons
-      - residency
-      - saas
-      - blocked
-      - fragmentation
-      - localization
-      - azure
-      - risk
-      - restrictions
-      - services
-      - teams
-      - management
-      - bifurcation
-      - community
-      - cross-border
-      - regulatory
-      - chatgpt
-      - practice
-      - salesforce
-      - unity
-      - accountability
-      - always
-      - analysis
-      - architect
-      - architectures
-      - asked
-      - digital sovereignty
-      - cloud compliance
-      - platform engineering
-      - risk management
+    - china
+    - cloud
+    - governance
+    - digital
+    - engineering
+    - platform
+    - access
+    - data
+    - sovereignty
+    - compliance
+    - lessons
+    - residency
+    - saas
+    - blocked
+    - fragmentation
+    - localization
+    - azure
+    - risk
+    - restrictions
+    - services
+    - teams
+    - management
+    - bifurcation
+    - community
+    - cross-border
+    - regulatory
+    - chatgpt
+    - practice
+    - salesforce
+    - unity
+    - accountability
+    - always
+    - analysis
+    - architect
+    - architectures
+    - asked
+    - digital sovereignty
+    - cloud compliance
+    - platform engineering
+    - risk management
     key_phrases:
-      - digital sovereignty
-      - data residency
-      - engineering lessons
-      - digital sovereignty cloud
-      - china cloud
-      - sovereignty cloud
-      - digital governance digital
-      - sovereignty cloud compliance
-      - cloud compliance platform
-      - compliance platform engineering
-      - platform engineering risk
-      - governance data
-      - management governance
-      - risk management
-      - engineering risk
-      - platform engineering
-      - compliance platform
-      - cloud compliance
-      - governance digital
-      - digital governance
-      - engineering risk management
-      - risk management governance
-      - management governance data
-      - governance data residency
+    - digital sovereignty
+    - data residency
+    - engineering lessons
+    - digital sovereignty cloud
+    - china cloud
+    - sovereignty cloud
+    - digital governance digital
+    - sovereignty cloud compliance
+    - cloud compliance platform
+    - compliance platform engineering
+    - platform engineering risk
+    - governance data
+    - management governance
+    - risk management
+    - engineering risk
+    - platform engineering
+    - compliance platform
+    - cloud compliance
+    - governance digital
+    - digital governance
+    - engineering risk management
+    - risk management governance
+    - management governance data
+    - governance data residency
     catchwords:
-      - china
-      - cloud
-      - governance
-      - digital
-      - engineering
-      - platform
-      - access
-      - sovereignty
-      - compliance
-      - lessons
-      - residency
-      - blocked
-      - fragmentation
-      - localization
-      - azure
-      - restrictions
-      - services
-      - teams
-      - management
-      - bifurcation
-      - community
-      - cross-border
-      - regulatory
-      - chatgpt
-      - practice
-      - salesforce
-      - unity
-      - accountability
+    - china
+    - cloud
+    - governance
+    - digital
+    - engineering
+    - platform
+    - access
+    - sovereignty
+    - compliance
+    - lessons
+    - residency
+    - blocked
+    - fragmentation
+    - localization
+    - azure
+    - restrictions
+    - services
+    - teams
+    - management
+    - bifurcation
+    - community
+    - cross-border
+    - regulatory
+    - chatgpt
+    - practice
+    - salesforce
+    - unity
+    - accountability
     search_words:
-      - china
-      - cloud
-      - governance
-      - digital
-      - engineering
-      - platform
-      - access
-      - data
-      - sovereignty
-      - compliance
-      - lessons
-      - residency
-      - saas
-      - blocked
-      - fragmentation
-      - localization
-      - azure
-      - risk
-      - digital sovereignty
-      - data residency
-      - engineering lessons
-      - digital sovereignty cloud
-      - china cloud
-      - sovereignty cloud
-      - digital governance digital
-      - sovereignty cloud compliance
-      - cloud compliance platform
-      - compliance platform engineering
-      - platform engineering risk
-      - governance data
+    - china
+    - cloud
+    - governance
+    - digital
+    - engineering
+    - platform
+    - access
+    - data
+    - sovereignty
+    - compliance
+    - lessons
+    - residency
+    - saas
+    - blocked
+    - fragmentation
+    - localization
+    - azure
+    - risk
+    - digital sovereignty
+    - data residency
+    - engineering lessons
+    - digital sovereignty cloud
+    - china cloud
+    - sovereignty cloud
+    - digital governance digital
+    - sovereignty cloud compliance
+    - cloud compliance platform
+    - compliance platform engineering
+    - platform engineering risk
+    - governance data
     questions:
-      - question: How should teams use community incident reports without spreading errors?
-        answer: Treat community reports as intake signals. Require independent corroboration through status pages, policy documents, support records, or contractual notices before escalation. This method preserves speed without sacrificing evidence quality.
-      - question: What does success look like for a sovereign-aware cloud strategy?
-        answer: Success appears when regional legal constraints, technical controls, communication guarantees, and migration rights remain aligned and auditable over time. Teams can then maintain continuity through policy change without emergency redesign -.
-      - question: What practical control should enterprises implement first?
-        answer: Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority aligns with observed access and notification disruptions in the corpus.
-      - question: How do I architect cloud services for China compliance?
-        answer: Start by treating jurisdiction as a first-class architectural dimension rather than a deployment-time variable. Define data residency boundaries and key custody paths before selecting providers. Map every service to its legal operator (global vendor, regional partner, customer) and verify that contracts specify obligations for data export, incident escalation, and service-level restoration. Audit communication channels, because alert and notification infrastructure such as SMS can be subject to telecom-level blocking that bypasses application logic. The ten lessons in this article provide an ordered implementation guide, starting with jurisdiction-aware reference architectures in Lesson 1.
-      - question: Why do AI restrictions feel sharper than other SaaS restrictions?
-        answer: Recent records show AI access decisions integrating strategic and ownership criteria in addition to geography. This creates faster policy asymmetry across regions and legal entities. Engineering teams need provider abstraction and contingency model pathways.
-      - question: Does localization always reduce service quality?
-        answer: Localization does not automatically reduce quality. Breakdown appears when architecture, governance, and communication design remain globally uniform while constraints are region-specific. Quality depends on explicit regional control planes and migration safeguards.
-      - question: What does cloud platform bifurcation mean for enterprise teams?
-        answer: "Cloud bifurcation means a vendor maintains two structurally separate operating models for the same product: a global version and a localized version. For enterprise teams, this creates parity gaps in features, compliance attestations, security controls, and support coverage. It also introduces circular failure risk where a service withdrawal by either the global vendor or the regional partner cannot be resolved without both parties acting. The analysis in this article is grounded in documented operating structures from Microsoft, Salesforce, and Unity, mapped to OS-level circular-wait theory in the companion article on [deadlock and resource contention](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm)."
-      - question: Why is ChatGPT blocked in China?
-        answer: OpenAI has blocked API and web access for users in mainland China, Hong Kong, and Macau. The block was widely reported in July 2024. Anthropic has applied additional ownership-structure screening beyond geography. Both decisions reflect a combination of US export-control considerations, OpenAI's own usage policies, and the regulatory environment in China. Engineering teams cannot rely on direct OpenAI or Anthropic model access for China-deployed applications and must plan for approved domestic alternatives or allowlisted API routes.
-      - question: Is Azure available in China, and how does it differ from global Azure?
-        answer: Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within China's borders and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014.
+    - question: How should teams use community incident reports without spreading errors?
+      answer: Treat community reports as intake signals. Require independent corroboration through status pages, policy documents, support records, or contractual notices before escalation. This method preserves speed without sacrificing evidence quality.
+    - question: What does success look like for a sovereign-aware cloud strategy?
+      answer: Success appears when regional legal constraints, technical controls, communication guarantees, and migration rights remain aligned and auditable over time. Teams can then maintain continuity through policy change without emergency redesign -.
+    - question: What practical control should enterprises implement first?
+      answer: Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority aligns with observed access and notification disruptions in the corpus.
+    - question: How do I architect cloud services for China compliance?
+      answer: Start by treating jurisdiction as a first-class architectural dimension rather than a deployment-time variable. Define data residency boundaries and key custody paths before selecting providers. Map every service to its legal operator (global vendor, regional partner, customer) and verify that contracts specify obligations for data export, incident escalation, and service-level restoration. Audit communication channels, because alert and notification infrastructure such as SMS can be subject to telecom-level blocking that bypasses application logic. The ten lessons in this article provide an ordered implementation guide, starting with jurisdiction-aware reference architectures in Lesson 1.
+    - question: Why do AI restrictions feel sharper than other SaaS restrictions?
+      answer: Recent records show AI access decisions integrating strategic and ownership criteria in addition to geography. This creates faster policy asymmetry across regions and legal entities. Engineering teams need provider abstraction and contingency model pathways.
+    - question: Does localization always reduce service quality?
+      answer: Localization does not automatically reduce quality. Breakdown appears when architecture, governance, and communication design remain globally uniform while constraints are region-specific. Quality depends on explicit regional control planes and migration safeguards.
+    - question: What does cloud platform bifurcation mean for enterprise teams?
+      answer: 'Cloud bifurcation means a vendor maintains two structurally separate operating models for the same product: a global version and a localized version. For enterprise teams, this creates parity gaps in features, compliance attestations, security controls, and support coverage. It also introduces circular failure risk where a service withdrawal by either the global vendor or the regional partner cannot be resolved without both parties acting. The analysis in this article is grounded in documented operating structures from Microsoft, Salesforce, and Unity, mapped to OS-level circular-wait theory in the companion article on [deadlock and resource contention](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm).'
+    - question: Why is ChatGPT blocked in China?
+      answer: OpenAI has blocked API and web access for users in mainland China, Hong Kong, and Macau. The block was widely reported in July 2024. Anthropic has applied additional ownership-structure screening beyond geography. Both decisions reflect a combination of US export-control considerations, OpenAI's own usage policies, and the regulatory environment in China. Engineering teams cannot rely on direct OpenAI or Anthropic model access for China-deployed applications and must plan for approved domestic alternatives or allowlisted API routes.
+    - question: Is Azure available in China, and how does it differ from global Azure?
+      answer: Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within China's borders and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014.
   large-language-models-in-practice-from-transformer-to-present:
-    title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
+    title: 'Large Language Models in Practice: From the Transformer to the Present Frontier'
     url: "/large-language-models-practice-from-transformer-to-present-frontier"
     keywords:
-      - engineering
-      - transformer
-      - language
-      - large
-      - models
-      - governance
-      - alignment
-      - frontier
-      - prompt
-      - distillation
-      - knowledge
-      - llms
-      - attention
-      - gpt-3
-      - llm
-      - practice
-      - federated
-      - hallucination
-      - learning
-      - lessons
-      - artificial
-      - intelligence
-      - best
-      - collection
-      - design
-      - evaluation
-      - reading
-      - recurring
-      - support
-      - themes
-      - treat
-      - trustworthy
-      - works
-      - deployment
-      - explainability
-      - explained
-      - large language models
-      - prompt engineering
-      - ai governance
-      - artificial intelligence
+    - engineering
+    - transformer
+    - language
+    - large
+    - models
+    - governance
+    - alignment
+    - frontier
+    - prompt
+    - distillation
+    - knowledge
+    - llms
+    - attention
+    - gpt-3
+    - llm
+    - practice
+    - federated
+    - hallucination
+    - learning
+    - lessons
+    - artificial
+    - intelligence
+    - best
+    - collection
+    - design
+    - evaluation
+    - reading
+    - recurring
+    - support
+    - themes
+    - treat
+    - trustworthy
+    - works
+    - deployment
+    - explainability
+    - explained
+    - large language models
+    - prompt engineering
+    - ai governance
+    - artificial intelligence
     key_phrases:
-      - large language
-      - language models
-      - large language models
-      - engineering governance
-      - prompt engineering
-      - knowledge distillation
-      - transformer prompt engineering
-      - models transformer prompt
-      - language models transformer
-      - prompt engineering governance
-      - transformer prompt
-      - artificial intelligence
-      - models transformer
-      - lessons engineering
-      - governance trustworthy
-      - recurring themes
-      - best support
-      - lessons engineering governance
-      - alignment knowledge distillation
-      - gpt-3 alignment knowledge
-      - federated learning
-      - alignment knowledge
-      - gpt-3 alignment
-      - governance large language
+    - large language
+    - language models
+    - large language models
+    - engineering governance
+    - prompt engineering
+    - knowledge distillation
+    - transformer prompt engineering
+    - models transformer prompt
+    - language models transformer
+    - prompt engineering governance
+    - transformer prompt
+    - artificial intelligence
+    - models transformer
+    - lessons engineering
+    - governance trustworthy
+    - recurring themes
+    - best support
+    - lessons engineering governance
+    - alignment knowledge distillation
+    - gpt-3 alignment knowledge
+    - federated learning
+    - alignment knowledge
+    - gpt-3 alignment
+    - governance large language
     catchwords:
-      - engineering
-      - transformer
-      - language
-      - large
-      - models
-      - governance
-      - alignment
-      - frontier
-      - prompt
-      - distillation
-      - knowledge
-      - attention
-      - gpt-3
-      - practice
-      - federated
-      - hallucination
-      - learning
-      - lessons
-      - artificial
-      - intelligence
-      - collection
-      - design
-      - evaluation
-      - reading
-      - recurring
-      - support
-      - themes
-      - treat
+    - engineering
+    - transformer
+    - language
+    - large
+    - models
+    - governance
+    - alignment
+    - frontier
+    - prompt
+    - distillation
+    - knowledge
+    - attention
+    - gpt-3
+    - practice
+    - federated
+    - hallucination
+    - learning
+    - lessons
+    - artificial
+    - intelligence
+    - collection
+    - design
+    - evaluation
+    - reading
+    - recurring
+    - support
+    - themes
+    - treat
     search_words:
-      - engineering
-      - transformer
-      - language
-      - large
-      - models
-      - governance
-      - alignment
-      - frontier
-      - prompt
-      - distillation
-      - knowledge
-      - llms
-      - attention
-      - gpt-3
-      - llm
-      - practice
-      - federated
-      - hallucination
-      - large language
-      - language models
-      - large language models
-      - engineering governance
-      - prompt engineering
-      - knowledge distillation
-      - transformer prompt engineering
-      - models transformer prompt
-      - language models transformer
-      - prompt engineering governance
-      - transformer prompt
-      - artificial intelligence
+    - engineering
+    - transformer
+    - language
+    - large
+    - models
+    - governance
+    - alignment
+    - frontier
+    - prompt
+    - distillation
+    - knowledge
+    - llms
+    - attention
+    - gpt-3
+    - llm
+    - practice
+    - federated
+    - hallucination
+    - large language
+    - language models
+    - large language models
+    - engineering governance
+    - prompt engineering
+    - knowledge distillation
+    - transformer prompt engineering
+    - models transformer prompt
+    - language models transformer
+    - prompt engineering governance
+    - transformer prompt
+    - artificial intelligence
     questions:
-      - question: What central message unifies all sources in this revised collection?
-        answer: LLM reliability is an engineering and governance problem, not a presentation problem. Output quality begins with probabilistic sequence modeling and improves through architecture, training stages, and disciplined prompting. Reliable use requires governance controls that address error modes directly and that keep pace with the evolutionary arc from scaling to alignment to efficiency to federated deployment.
-      - question: What should an enterprise implement first after reading this analysis?
-        answer: Start with a minimal governance baseline. Define approved use cases. Define prompt versioning rules. Define output verification requirements. Define escalation procedures for harmful or ungrounded responses. This sequence converts theory into immediate control coverage.
-      - question: What is alignment in large language models?
-        answer: Alignment is the process of training or constraining an LLM so its outputs are helpful, honest, and harmless relative to intended use. The main techniques include supervised fine-tuning (SFT) on curated question-answer pairs, reinforcement learning from human feedback (RLHF) where human raters score responses and a reward model is trained on those preferences, and constitutional AI methods where the model critiques its own outputs against stated principles. Alignment does not eliminate all failure modes; recent aligned models report improved refusal behavior on specific benchmark suites, not universal reliability. Claims about alignment effectiveness should be evaluated within the reported evaluation setup rather than generalized.
-      - question: What is hallucination in LLMs and how do you prevent it?
-        answer: Hallucination occurs when an LLM generates plausible-sounding text that is factually wrong, internally inconsistent, or unsupported by any source. The root cause is that LLMs are trained to predict likely next tokens, not to assert truth. Prevention strategies include retrieval-augmented generation (grounding responses in retrieved source documents), contradiction checks against known facts, citation gates that require the model to specify a source for each factual claim, and multi-resolution evaluation that tests factuality separately from fluency. Hallucination is identified as a primary failure mode in both Brown et al. and the synthesis in this article.
-      - question: What is the difference between fine-tuning and prompt engineering in LLMs?
-        answer: Fine-tuning updates model weights on a curated dataset, adapting the model's internal representations and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in Yang et al.'s practitioner survey.
-      - question: How does the Transformer attention mechanism work?
-        answer: "The [Transformer](<https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)>) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the model's dimensional space."
-      - question: How should researchers and educators reuse these materials responsibly?
-        answer: Use short quotations only when wording precision matters. Prefer paraphrase for interpretation. Maintain explicit attribution. Preserve links to original context. Where applicable under UK law, assess whether CDPA 1988 ss. 29 (research/private study) and 31A (text and data analysis for non-commercial research) conditions are genuinely satisfied before reuse. This applies equally to video content and to published scholarly works.
-      - question: What is a large language model?
-        answer: A large language model (LLM) is a neural network trained to predict the next token in a sequence of text. "Large" refers to the parameter count (hundreds of billions for frontier models) and the scale of training data (internet-scale corpora). The key architectural insight, introduced by [Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762) in "Attention Is All You Need," is that self-attention replaces sequential recurrence, allowing parallel computation across all positions in a sequence. This parallelism is what made billion-parameter pretraining tractable.
-      - question: Which sources best support deep technical understanding?
-        answer: The strongest technical depth appears in Vaswani et al., Brown et al., and the Stanford, MIT, StatQuest, and Yannic Kilcher materials, because they explain objective functions, attention mechanics, and scaling behavior with explicit procedural detail. Yang et al.'s distillation survey and Ren et al.'s federated foundation model survey add the deployment and compression dimensions.
-      - question: Which sources best support practical implementation teams?
-        answer: Google Cloud Tech and AI Search provide direct implementation value for teams that need prompt design guidance and user-facing framing for model behavior. Yang et al.'s practitioner survey on ChatGPT and beyond adds empirical guidance on when to use LLMs versus fine-tuned models for specific NLP tasks.
+    - question: What central message unifies all sources in this revised collection?
+      answer: LLM reliability is an engineering and governance problem, not a presentation problem. Output quality begins with probabilistic sequence modeling and improves through architecture, training stages, and disciplined prompting. Reliable use requires governance controls that address error modes directly and that keep pace with the evolutionary arc from scaling to alignment to efficiency to federated deployment.
+    - question: What should an enterprise implement first after reading this analysis?
+      answer: Start with a minimal governance baseline. Define approved use cases. Define prompt versioning rules. Define output verification requirements. Define escalation procedures for harmful or ungrounded responses. This sequence converts theory into immediate control coverage.
+    - question: What is alignment in large language models?
+      answer: Alignment is the process of training or constraining an LLM so its outputs are helpful, honest, and harmless relative to intended use. The main techniques include supervised fine-tuning (SFT) on curated question-answer pairs, reinforcement learning from human feedback (RLHF) where human raters score responses and a reward model is trained on those preferences, and constitutional AI methods where the model critiques its own outputs against stated principles. Alignment does not eliminate all failure modes; recent aligned models report improved refusal behavior on specific benchmark suites, not universal reliability. Claims about alignment effectiveness should be evaluated within the reported evaluation setup rather than generalized.
+    - question: What is hallucination in LLMs and how do you prevent it?
+      answer: Hallucination occurs when an LLM generates plausible-sounding text that is factually wrong, internally inconsistent, or unsupported by any source. The root cause is that LLMs are trained to predict likely next tokens, not to assert truth. Prevention strategies include retrieval-augmented generation (grounding responses in retrieved source documents), contradiction checks against known facts, citation gates that require the model to specify a source for each factual claim, and multi-resolution evaluation that tests factuality separately from fluency. Hallucination is identified as a primary failure mode in both Brown et al. and the synthesis in this article.
+    - question: What is the difference between fine-tuning and prompt engineering in LLMs?
+      answer: Fine-tuning updates model weights on a curated dataset, adapting the model's internal representations and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in Yang et al.'s practitioner survey.
+    - question: How does the Transformer attention mechanism work?
+      answer: 'The [Transformer](<https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)>) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the model''s dimensional space.'
+    - question: How should researchers and educators reuse these materials responsibly?
+      answer: Use short quotations only when wording precision matters. Prefer paraphrase for interpretation. Maintain explicit attribution. Preserve links to original context. Where applicable under UK law, assess whether CDPA 1988 ss. 29 (research/private study) and 31A (text and data analysis for non-commercial research) conditions are genuinely satisfied before reuse. This applies equally to video content and to published scholarly works.
+    - question: What is a large language model?
+      answer: A large language model (LLM) is a neural network trained to predict the next token in a sequence of text. "Large" refers to the parameter count (hundreds of billions for frontier models) and the scale of training data (internet-scale corpora). The key architectural insight, introduced by [Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762) in "Attention Is All You Need," is that self-attention replaces sequential recurrence, allowing parallel computation across all positions in a sequence. This parallelism is what made billion-parameter pretraining tractable.
+    - question: Which sources best support deep technical understanding?
+      answer: The strongest technical depth appears in Vaswani et al., Brown et al., and the Stanford, MIT, StatQuest, and Yannic Kilcher materials, because they explain objective functions, attention mechanics, and scaling behavior with explicit procedural detail. Yang et al.'s distillation survey and Ren et al.'s federated foundation model survey add the deployment and compression dimensions.
+    - question: Which sources best support practical implementation teams?
+      answer: Google Cloud Tech and AI Search provide direct implementation value for teams that need prompt design guidance and user-facing framing for model behavior. Yang et al.'s practitioner survey on ChatGPT and beyond adds empirical guidance on when to use LLMs versus fine-tuned models for specific NLP tasks.
   data-provenance-ml-lifecycle-traceability-graph-methods:
-    title: "Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons"
+    title: 'Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons'
     url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     keywords:
-      - provenance
-      - data
-      - learning
-      - machine
-      - graph
-      - traceability
-      - governance
-      - networks
-      - neural
-      - prov-ml
-      - lessons
-      - lineage
-      - questions
-      - reproducibility
-      - methods
-      - preprocessing
-      - review
-      - artificial
-      - intelligence
-      - model
-      - evidence
-      - karuna
-      - pina
-      - practical
-      - practitioners
-      - prov
-      - reading
-      - requirements
-      - souza
-      - standard
-      - tooling
-      - w3c
-      - adopt
-      - afterward
-      - already
-      - data provenance
-      - machine learning
-      - graph neural networks
-      - ai governance
-      - artificial intelligence
+    - provenance
+    - data
+    - learning
+    - machine
+    - graph
+    - traceability
+    - governance
+    - networks
+    - neural
+    - prov-ml
+    - lessons
+    - lineage
+    - questions
+    - reproducibility
+    - methods
+    - preprocessing
+    - review
+    - artificial
+    - intelligence
+    - model
+    - evidence
+    - karuna
+    - pina
+    - practical
+    - practitioners
+    - prov
+    - reading
+    - requirements
+    - souza
+    - standard
+    - tooling
+    - w3c
+    - adopt
+    - afterward
+    - already
+    - data provenance
+    - machine learning
+    - graph neural networks
+    - ai governance
+    - artificial intelligence
     key_phrases:
-      - machine learning
-      - data provenance
-      - provenance machine
-      - provenance machine learning
-      - data provenance machine
-      - neural networks
-      - graph neural
-      - graph neural networks
-      - traceability graph
-      - learning traceability
-      - learning traceability graph
-      - machine learning traceability
-      - data lineage
-      - graph methods
-      - traceability graph neural
-      - neural networks reproducibility
-      - networks reproducibility governance
-      - reproducibility governance data
-      - governance data
-      - reproducibility governance
-      - networks reproducibility
-      - governance data provenance
-      - artificial intelligence
-      - governance lessons
+    - machine learning
+    - data provenance
+    - provenance machine
+    - provenance machine learning
+    - data provenance machine
+    - neural networks
+    - graph neural
+    - graph neural networks
+    - traceability graph
+    - learning traceability
+    - learning traceability graph
+    - machine learning traceability
+    - data lineage
+    - graph methods
+    - traceability graph neural
+    - neural networks reproducibility
+    - networks reproducibility governance
+    - reproducibility governance data
+    - governance data
+    - reproducibility governance
+    - networks reproducibility
+    - governance data provenance
+    - artificial intelligence
+    - governance lessons
     catchwords:
-      - provenance
-      - learning
-      - machine
-      - graph
-      - traceability
-      - governance
-      - networks
-      - neural
-      - prov-ml
-      - lessons
-      - lineage
-      - questions
-      - reproducibility
-      - methods
-      - preprocessing
-      - review
-      - artificial
-      - intelligence
-      - model
-      - evidence
-      - karuna
-      - practical
-      - practitioners
-      - reading
-      - requirements
-      - souza
-      - standard
-      - tooling
+    - provenance
+    - learning
+    - machine
+    - graph
+    - traceability
+    - governance
+    - networks
+    - neural
+    - prov-ml
+    - lessons
+    - lineage
+    - questions
+    - reproducibility
+    - methods
+    - preprocessing
+    - review
+    - artificial
+    - intelligence
+    - model
+    - evidence
+    - karuna
+    - practical
+    - practitioners
+    - reading
+    - requirements
+    - souza
+    - standard
+    - tooling
     search_words:
-      - provenance
-      - data
-      - learning
-      - machine
-      - graph
-      - traceability
-      - governance
-      - networks
-      - neural
-      - prov-ml
-      - lessons
-      - lineage
-      - questions
-      - reproducibility
-      - methods
-      - preprocessing
-      - review
-      - artificial
-      - machine learning
-      - data provenance
-      - provenance machine
-      - provenance machine learning
-      - data provenance machine
-      - neural networks
-      - graph neural
-      - graph neural networks
-      - traceability graph
-      - learning traceability
-      - learning traceability graph
-      - machine learning traceability
+    - provenance
+    - data
+    - learning
+    - machine
+    - graph
+    - traceability
+    - governance
+    - networks
+    - neural
+    - prov-ml
+    - lessons
+    - lineage
+    - questions
+    - reproducibility
+    - methods
+    - preprocessing
+    - review
+    - artificial
+    - machine learning
+    - data provenance
+    - provenance machine
+    - provenance machine learning
+    - data provenance machine
+    - neural networks
+    - graph neural
+    - graph neural networks
+    - traceability graph
+    - learning traceability
+    - learning traceability graph
+    - machine learning traceability
     questions:
-      - question: What is the best next step for readers who want to go deeper?
-        answer: Run a broader review that includes MLflow, OpenLineage, Pachyderm, and DVC literature, then test candidate approaches against your production constraints and governance requirements.
-      - question: Why keep discussing preprocessing provenance?
-        answer: "Because both relevance and complexity show up there: Pina et al. identify integration gaps at that stage, and Souza et al. identify curation as difficult."
-      - question: Is PROV-ML already a standard?
-        answer: In this evidence set, PROV-ML is best described as a proposed representation with promising applied evidence in a specific domain context.
-      - question: How does PROV-ML extend W3C PROV for machine learning?
-        answer: "PROV-ML, proposed by Souza et al., extends the base [W3C PROV](https://www.w3.org/TR/prov-overview/) model with [W3C ML Schema](https://www.w3.org/TR/ml-schema/) vocabulary to capture ML-specific concepts: hyperparameters, training runs, dataset versions, and evaluation metrics. It maps four user personas (domain scientists, computational engineers, ML engineers, and provenance specialists) to provenance query patterns. The PROV-ML design was evaluated in an oil and gas seismic classification pipeline using 48 GPUs through the ProvLake system. Whether it generalizes beyond that domain is an open question the paper does not demonstrate. It claims scoped guidance from three papers. It does not claim field-wide representativeness or comparative superiority over the broader lineage tooling ecosystem."
-      - question: Is the reported 91.3% GCN figure a universal result?
-        answer: No. It is a paper-reported result in one evaluation context. This review does not treat it as a universal benchmark.
-      - question: Should teams deploy provenance tooling immediately after reading this article?
-        answer: Use this article as orientation, not as a deployment checklist. Before adoption decisions, compare against your own stack, load profile, compliance obligations, and failure modes.
-      - question: What is data provenance in machine learning?
-        answer: Data provenance in machine learning is the record of where training data originated, how it was cleaned and transformed, which model versions it produced, and which individuals or systems were responsible at each stage. Provenance answers the question "why does this model behave this way?" by tracing outputs back to input data and pipeline decisions. All three papers in this review treat provenance as a lifecycle-design requirement rather than a logging afterthought.
-      - question: What is the difference between data provenance and data lineage?
-        answer: "Data provenance and data lineage both trace data through a pipeline, but they differ in focus. Lineage records where data moved, which inputs fed which outputs. Provenance adds agent information: who or what performed each transformation, under what conditions, for what purpose, and with what authorization. The [W3C PROV](https://www.w3.org/TR/prov-overview/) standard formalizes this distinction using the entity-activity-agent model that Souza et al. extend in PROV-ML."
-      - question: What tools are used for data provenance in machine learning?
-        answer: "Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier, Pina et al. integrate separate lifecycle tools using DNNProv and Chapman et al.'s preprocessing capture, and Souza et al. extend ProvLake with the PROV-ML vocabulary. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem."
+    - question: What is the best next step for readers who want to go deeper?
+      answer: Run a broader review that includes MLflow, OpenLineage, Pachyderm, and DVC literature, then test candidate approaches against your production constraints and governance requirements.
+    - question: Why keep discussing preprocessing provenance?
+      answer: 'Because both relevance and complexity show up there: Pina et al. identify integration gaps at that stage, and Souza et al. identify curation as difficult.'
+    - question: Is PROV-ML already a standard?
+      answer: In this evidence set, PROV-ML is best described as a proposed representation with promising applied evidence in a specific domain context.
+    - question: How does PROV-ML extend W3C PROV for machine learning?
+      answer: 'PROV-ML, proposed by Souza et al., extends the base [W3C PROV](https://www.w3.org/TR/prov-overview/) model with [W3C ML Schema](https://www.w3.org/TR/ml-schema/) vocabulary to capture ML-specific concepts: hyperparameters, training runs, dataset versions, and evaluation metrics. It maps four user personas (domain scientists, computational engineers, ML engineers, and provenance specialists) to provenance query patterns. The PROV-ML design was evaluated in an oil and gas seismic classification pipeline using 48 GPUs through the ProvLake system. Whether it generalizes beyond that domain is an open question the paper does not demonstrate. It claims scoped guidance from three papers. It does not claim field-wide representativeness or comparative superiority over the broader lineage tooling ecosystem.'
+    - question: Is the reported 91.3% GCN figure a universal result?
+      answer: No. It is a paper-reported result in one evaluation context. This review does not treat it as a universal benchmark.
+    - question: Should teams deploy provenance tooling immediately after reading this article?
+      answer: Use this article as orientation, not as a deployment checklist. Before adoption decisions, compare against your own stack, load profile, compliance obligations, and failure modes.
+    - question: What is data provenance in machine learning?
+      answer: Data provenance in machine learning is the record of where training data originated, how it was cleaned and transformed, which model versions it produced, and which individuals or systems were responsible at each stage. Provenance answers the question "why does this model behave this way?" by tracing outputs back to input data and pipeline decisions. All three papers in this review treat provenance as a lifecycle-design requirement rather than a logging afterthought.
+    - question: What is the difference between data provenance and data lineage?
+      answer: 'Data provenance and data lineage both trace data through a pipeline, but they differ in focus. Lineage records where data moved, which inputs fed which outputs. Provenance adds agent information: who or what performed each transformation, under what conditions, for what purpose, and with what authorization. The [W3C PROV](https://www.w3.org/TR/prov-overview/) standard formalizes this distinction using the entity-activity-agent model that Souza et al. extend in PROV-ML.'
+    - question: What tools are used for data provenance in machine learning?
+      answer: 'Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier, Pina et al. integrate separate lifecycle tools using DNNProv and Chapman et al.''s preprocessing capture, and Souza et al. extend ProvLake with the PROV-ML vocabulary. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem.'
   deadlock-resource-contention-supply-chains-cloud-platforms-llm-systems:
-    title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
+    title: 'Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems'
     url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
     keywords:
-      - deadlock
-      - lesson
-      - resource
-      - starvation
-      - conditions
-      - supply
-      - systems
-      - coffman
-      - chain
-      - llm
-      - cloud
-      - scheduling
-      - operating
-      - circular
-      - fragmentation
-      - theory
-      - contention
-      - platform
-      - priority
-      - concurrency
-      - inference
-      - security
-      - design
-      - engineering
-      - resilience
-      - aging
-      - apply
-      - mutex
-      - prevention
-      - recovery
-      - semaphore
-      - token
-      - applied
-      - cybersecurity
-      - management
-      - resource contention
-      - supply chain security
-      - cloud fragmentation
-      - thread management
-      - operating systems
+    - deadlock
+    - lesson
+    - resource
+    - starvation
+    - conditions
+    - supply
+    - systems
+    - coffman
+    - chain
+    - llm
+    - cloud
+    - scheduling
+    - operating
+    - circular
+    - fragmentation
+    - theory
+    - contention
+    - platform
+    - priority
+    - concurrency
+    - inference
+    - security
+    - design
+    - engineering
+    - resilience
+    - aging
+    - apply
+    - mutex
+    - prevention
+    - recovery
+    - semaphore
+    - token
+    - applied
+    - cybersecurity
+    - management
+    - resource contention
+    - supply chain security
+    - cloud fragmentation
+    - thread management
+    - operating systems
     key_phrases:
-      - coffman conditions
-      - supply chain
-      - resource contention
-      - operating systems
-      - supply chain security
-      - chain security
-      - llm inference
-      - deadlock resource contention
-      - deadlock resource
-      - cloud fragmentation
-      - priority aging
-      - mutex semaphore
-      - deadlock theory
-      - resilience thread
-      - thread management
-      - theory applied
-      - management deadlock
-      - cloud fragmentation scheduling
-      - security cloud fragmentation
-      - chain security cloud
-      - concurrency supply chain
-      - contention concurrency supply
-      - resource contention concurrency
-      - cybersecurity platform engineering
+    - coffman conditions
+    - supply chain
+    - resource contention
+    - operating systems
+    - supply chain security
+    - chain security
+    - llm inference
+    - deadlock resource contention
+    - deadlock resource
+    - cloud fragmentation
+    - priority aging
+    - mutex semaphore
+    - deadlock theory
+    - resilience thread
+    - thread management
+    - theory applied
+    - management deadlock
+    - cloud fragmentation scheduling
+    - security cloud fragmentation
+    - chain security cloud
+    - concurrency supply chain
+    - contention concurrency supply
+    - resource contention concurrency
+    - cybersecurity platform engineering
     catchwords:
-      - deadlock
-      - lesson
-      - resource
-      - starvation
-      - conditions
-      - supply
-      - systems
-      - coffman
-      - chain
-      - cloud
-      - scheduling
-      - operating
-      - circular
-      - fragmentation
-      - theory
-      - contention
-      - platform
-      - priority
-      - concurrency
-      - inference
-      - security
-      - design
-      - engineering
-      - resilience
-      - aging
-      - apply
-      - mutex
-      - prevention
+    - deadlock
+    - lesson
+    - resource
+    - starvation
+    - conditions
+    - supply
+    - systems
+    - coffman
+    - chain
+    - cloud
+    - scheduling
+    - operating
+    - circular
+    - fragmentation
+    - theory
+    - contention
+    - platform
+    - priority
+    - concurrency
+    - inference
+    - security
+    - design
+    - engineering
+    - resilience
+    - aging
+    - apply
+    - mutex
+    - prevention
     search_words:
-      - deadlock
-      - lesson
-      - resource
-      - starvation
-      - conditions
-      - supply
-      - systems
-      - coffman
-      - chain
-      - llm
-      - cloud
-      - scheduling
-      - operating
-      - circular
-      - fragmentation
-      - theory
-      - contention
-      - platform
-      - coffman conditions
-      - supply chain
-      - resource contention
-      - operating systems
-      - supply chain security
-      - chain security
-      - llm inference
-      - deadlock resource contention
-      - deadlock resource
-      - cloud fragmentation
-      - priority aging
-      - mutex semaphore
+    - deadlock
+    - lesson
+    - resource
+    - starvation
+    - conditions
+    - supply
+    - systems
+    - coffman
+    - chain
+    - llm
+    - cloud
+    - scheduling
+    - operating
+    - circular
+    - fragmentation
+    - theory
+    - contention
+    - platform
+    - coffman conditions
+    - supply chain
+    - resource contention
+    - operating systems
+    - supply chain security
+    - chain security
+    - llm inference
+    - deadlock resource contention
+    - deadlock resource
+    - cloud fragmentation
+    - priority aging
+    - mutex semaphore
     questions:
-      - question: How do Coffman conditions apply to LLM inference and token scheduling?
-        answer: "Token slots in LLM inference are mutual-exclusion resources: exactly one inference request occupies a decoding slot during autoregressive generation. In a multi-model pipeline, if Request A holds a slot on Model-X while waiting for Model-Y, and Request B holds Model-Y while waiting for Model-X, all four Coffman conditions hold and a deadlock can form. Prevention requires either a global model-acquisition ordering (always acquire Model-X before Model-Y) or full-release semantics, where Request A must complete and release all slots before acquiring resources on a second model. Lessons 1 and 2 address both strategies."
-      - question: How do you prevent deadlock in distributed systems?
-        answer: Four primary strategies correspond directly to breaking the four Coffman conditions. First, enforce a total order on resource acquisition to eliminate circular wait. Second, require atomic multi-resource acquisition or full release before requesting new resources to eliminate hold and wait. Third, implement preemption authority so the system can forcibly reclaim a blocked resource. Fourth, run cycle-detection on the live resource-request graph and reject configurations that would complete a cycle before they execute. Lessons 1 through 3 in this article cover practical implementations for supply chains, cloud platforms, and LLM inference systems.
-      - question: How does deadlock theory apply to supply chain security?
-        answer: Supply chain attacks exhibit all four Coffman conditions at the credential and dependency level. A maintainer credential enforces mutual exclusion over package publication; a compromised developer holds a build environment while waiting for npm packages (hold and wait); once a malicious version is downloaded it cannot be universally recalled (no preemption); and transitive dependency cycles create circular wait across build graphs. The companion article on the [Axios npm supply chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience) reconstructs a confirmed March 2026 incident through this exact framework.
-      - question: What are the four Coffman conditions for deadlock?
-        answer: "Deadlock occurs when, and only when, all four of the following hold simultaneously: mutual exclusion (a resource is held exclusively by one thread), hold and wait (a thread holds one resource while requesting another), no preemption (held resources cannot be forcibly reclaimed), and circular wait (a cycle exists where each thread waits for a resource held by the next). Eliminating any single condition prevents deadlock entirely. The full theoretical foundation and formal definition appear in the [Understanding Deadlock](#understanding-deadlock-mutex-semaphore-and-the-coffman-conditions) section above."
-      - question: What is priority aging in operating systems and LLM scheduling?
-        answer: Priority aging is a scheduling technique in which a waiting thread's effective priority increases incrementally over time, ensuring low-priority requests are eventually scheduled even when higher-priority requests arrive continuously. It prevents indefinite starvation while preserving responsiveness for high-priority work. Applied to LLM inference queues, priority aging ensures that batch offline jobs are not permanently blocked by interactive user requests, which is the scenario described in the [LLM Inference and Token Schedulers](#llm-inference-and-token-schedulers-priority-starvation) section.
-      - question: What is the difference between deadlock and starvation?
-        answer: "Deadlock is a cycle in which no involved thread can make progress: every waiting thread holds a resource that another waiting thread needs, so the entire set is permanently blocked. Starvation is a state in which one specific thread is indefinitely denied access while other threads do make progress. Round-robin and first-come-first-serve scheduling prevent starvation; resource ordering, atomic acquisition, and the [Banker's algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm) prevent deadlock. Both pathologies appear in LLM inference queues and software supply chains."
+    - question: How do Coffman conditions apply to LLM inference and token scheduling?
+      answer: 'Token slots in LLM inference are mutual-exclusion resources: exactly one inference request occupies a decoding slot during autoregressive generation. In a multi-model pipeline, if Request A holds a slot on Model-X while waiting for Model-Y, and Request B holds Model-Y while waiting for Model-X, all four Coffman conditions hold and a deadlock can form. Prevention requires either a global model-acquisition ordering (always acquire Model-X before Model-Y) or full-release semantics, where Request A must complete and release all slots before acquiring resources on a second model. Lessons 1 and 2 address both strategies.'
+    - question: How do you prevent deadlock in distributed systems?
+      answer: Four primary strategies correspond directly to breaking the four Coffman conditions. First, enforce a total order on resource acquisition to eliminate circular wait. Second, require atomic multi-resource acquisition or full release before requesting new resources to eliminate hold and wait. Third, implement preemption authority so the system can forcibly reclaim a blocked resource. Fourth, run cycle-detection on the live resource-request graph and reject configurations that would complete a cycle before they execute. Lessons 1 through 3 in this article cover practical implementations for supply chains, cloud platforms, and LLM inference systems.
+    - question: How does deadlock theory apply to supply chain security?
+      answer: Supply chain attacks exhibit all four Coffman conditions at the credential and dependency level. A maintainer credential enforces mutual exclusion over package publication; a compromised developer holds a build environment while waiting for npm packages (hold and wait); once a malicious version is downloaded it cannot be universally recalled (no preemption); and transitive dependency cycles create circular wait across build graphs. The companion article on the [Axios npm supply chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience) reconstructs a confirmed March 2026 incident through this exact framework.
+    - question: What are the four Coffman conditions for deadlock?
+      answer: 'Deadlock occurs when, and only when, all four of the following hold simultaneously: mutual exclusion (a resource is held exclusively by one thread), hold and wait (a thread holds one resource while requesting another), no preemption (held resources cannot be forcibly reclaimed), and circular wait (a cycle exists where each thread waits for a resource held by the next). Eliminating any single condition prevents deadlock entirely. The full theoretical foundation and formal definition appear in the [Understanding Deadlock](#understanding-deadlock-mutex-semaphore-and-the-coffman-conditions) section above.'
+    - question: What is priority aging in operating systems and LLM scheduling?
+      answer: Priority aging is a scheduling technique in which a waiting thread's effective priority increases incrementally over time, ensuring low-priority requests are eventually scheduled even when higher-priority requests arrive continuously. It prevents indefinite starvation while preserving responsiveness for high-priority work. Applied to LLM inference queues, priority aging ensures that batch offline jobs are not permanently blocked by interactive user requests, which is the scenario described in the [LLM Inference and Token Schedulers](#llm-inference-and-token-schedulers-priority-starvation) section.
+    - question: What is the difference between deadlock and starvation?
+      answer: 'Deadlock is a cycle in which no involved thread can make progress: every waiting thread holds a resource that another waiting thread needs, so the entire set is permanently blocked. Starvation is a state in which one specific thread is indefinitely denied access while other threads do make progress. Round-robin and first-come-first-serve scheduling prevent starvation; resource ordering, atomic acquisition, and the [Banker''s algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm) prevent deadlock. Both pathologies appear in LLM inference queues and software supply chains.'
 pages:
   zenith-law:
-    title: ""
+    title: ''
     url: "/_authors/zenith-law.html"
     keywords:
-      - data
-      - years
-      - abstractions
-      - application
-      - builds
-      - cloud
-      - cybersecurity
-      - delivery
-      - digital
-      - doctoral
-      - domains
-      - engineer
-      - experience
-      - focus
-      - governance
-      - hands-on
-      - law
-      - leadership
-      - legal
-      - lineage
-      - metadata
-      - mission-critical
-      - ml-ready
-      - observable
-      - perspective
-      - platform
-      - polyglot
-      - quality
-      - regulated
-      - researcher
-      - resilient
-      - scalable
-      - science
-      - senior
+    - data
+    - years
+    - abstractions
+    - application
+    - builds
+    - cloud
+    - cybersecurity
+    - delivery
+    - digital
+    - doctoral
+    - domains
+    - engineer
+    - experience
+    - focus
+    - governance
+    - hands-on
+    - law
+    - leadership
+    - legal
+    - lineage
+    - metadata
+    - mission-critical
+    - ml-ready
+    - observable
+    - perspective
+    - platform
+    - polyglot
+    - quality
+    - regulated
+    - researcher
+    - resilient
+    - scalable
+    - science
+    - senior
     key_phrases:
-      - platforms strong focus
-      - application platforms strong
-      - data application platforms
-      - observable data application
-      - scalable observable data
-      - mission-critical scalable observable
-      - builds mission-critical scalable
-      - leadership builds mission-critical
-      - technical leadership builds
-      - senior technical leadership
-      - years senior technical
-      - experience years senior
-      - engineering experience years
-      - polyglot engineering experience
-      - hands-on polyglot engineering
-      - years hands-on polyglot
-      - trainer years hands-on
-      - researcher trainer years
-      - engineer researcher trainer
-      - strategist engineer researcher
-      - law strategist engineer
-      - zenith law strategist
-      - platform abstractions
-      - ml-ready platform abstractions
+    - platforms strong focus
+    - application platforms strong
+    - data application platforms
+    - observable data application
+    - scalable observable data
+    - mission-critical scalable observable
+    - builds mission-critical scalable
+    - leadership builds mission-critical
+    - technical leadership builds
+    - senior technical leadership
+    - years senior technical
+    - experience years senior
+    - engineering experience years
+    - polyglot engineering experience
+    - hands-on polyglot engineering
+    - years hands-on polyglot
+    - trainer years hands-on
+    - researcher trainer years
+    - engineer researcher trainer
+    - strategist engineer researcher
+    - law strategist engineer
+    - zenith law strategist
+    - platform abstractions
+    - ml-ready platform abstractions
     catchwords:
-      - years
-      - abstractions
-      - application
-      - builds
-      - cloud
-      - cybersecurity
-      - delivery
-      - digital
-      - doctoral
-      - domains
-      - engineer
-      - experience
-      - focus
-      - governance
-      - hands-on
-      - leadership
-      - legal
-      - lineage
-      - metadata
-      - mission-critical
-      - ml-ready
-      - observable
-      - perspective
-      - platform
-      - polyglot
-      - quality
-      - regulated
-      - researcher
+    - years
+    - abstractions
+    - application
+    - builds
+    - cloud
+    - cybersecurity
+    - delivery
+    - digital
+    - doctoral
+    - domains
+    - engineer
+    - experience
+    - focus
+    - governance
+    - hands-on
+    - leadership
+    - legal
+    - lineage
+    - metadata
+    - mission-critical
+    - ml-ready
+    - observable
+    - perspective
+    - platform
+    - polyglot
+    - quality
+    - regulated
+    - researcher
     search_words:
-      - data
-      - years
-      - abstractions
-      - application
-      - builds
-      - cloud
-      - cybersecurity
-      - delivery
-      - digital
-      - doctoral
-      - domains
-      - engineer
-      - experience
-      - focus
-      - governance
-      - hands-on
-      - law
-      - platforms strong focus
-      - application platforms strong
-      - data application platforms
-      - observable data application
-      - scalable observable data
-      - mission-critical scalable observable
-      - builds mission-critical scalable
-      - leadership builds mission-critical
-      - technical leadership builds
-      - senior technical leadership
-      - years senior technical
-      - experience years senior
+    - data
+    - years
+    - abstractions
+    - application
+    - builds
+    - cloud
+    - cybersecurity
+    - delivery
+    - digital
+    - doctoral
+    - domains
+    - engineer
+    - experience
+    - focus
+    - governance
+    - hands-on
+    - law
+    - platforms strong focus
+    - application platforms strong
+    - data application platforms
+    - observable data application
+    - scalable observable data
+    - mission-critical scalable observable
+    - builds mission-critical scalable
+    - leadership builds mission-critical
+    - technical leadership builds
+    - senior technical leadership
+    - years senior technical
+    - experience years senior
     questions: []
   faq:
-    title: "FAQ Hub: Questions and Answers Across Published Pages"
+    title: 'FAQ Hub: Questions and Answers Across Published Pages'
     url: "/faq/"
     keywords:
-      - faq
-      - questions
-      - answers
-      - hub
-      - published
-      - direct
-      - search
-      - asked
-      - crawlability
-      - discoverability
-      - engineering
-      - frequently
-      - governance
-      - legal
-      - policy
-      - aeo
-      - aggregated
-      - cross-page
-      - extraction
-      - faqs
-      - geo
-      - improve
-      - improved
-      - intent
-      - overview
-      - retrieval
-      - seo
-      - topics
-      - searchability
-      - searchable
-      - faq hub
-      - frequently asked questions
-      - engineering faq
-      - governance faq
-      - legal and policy faq
-      - ai faq
-      - searchable answers
-      - aeo seo geo
+    - faq
+    - questions
+    - answers
+    - hub
+    - published
+    - direct
+    - search
+    - asked
+    - crawlability
+    - discoverability
+    - engineering
+    - frequently
+    - governance
+    - legal
+    - policy
+    - aeo
+    - aggregated
+    - cross-page
+    - extraction
+    - faqs
+    - geo
+    - improve
+    - improved
+    - intent
+    - overview
+    - retrieval
+    - seo
+    - topics
+    - searchability
+    - searchable
+    - faq hub
+    - frequently asked questions
+    - engineering faq
+    - governance faq
+    - legal and policy faq
+    - ai faq
+    - searchable answers
+    - aeo seo geo
     key_phrases:
-      - faq hub
-      - questions direct answers
-      - questions answers
-      - direct answers
-      - questions direct
-      - frequently asked questions
-      - legal policy
-      - questions answers published
-      - hub questions answers
-      - asked questions
-      - frequently asked
-      - faq hub questions
-      - answers published
-      - hub questions
-      - faq overview search
-      - crawlability answer extraction
-      - discoverability crawlability answer
-      - improve discoverability crawlability
-      - published improve discoverability
-      - aggregated published improve
-      - answers aggregated published
-      - direct answers aggregated
-      - asked questions direct
-      - published faq hub
+    - faq hub
+    - questions direct answers
+    - questions answers
+    - direct answers
+    - questions direct
+    - frequently asked questions
+    - legal policy
+    - questions answers published
+    - hub questions answers
+    - asked questions
+    - frequently asked
+    - faq hub questions
+    - answers published
+    - hub questions
+    - faq overview search
+    - crawlability answer extraction
+    - discoverability crawlability answer
+    - improve discoverability crawlability
+    - published improve discoverability
+    - aggregated published improve
+    - answers aggregated published
+    - direct answers aggregated
+    - asked questions direct
+    - published faq hub
     catchwords:
-      - questions
-      - answers
-      - published
-      - direct
-      - search
-      - asked
-      - crawlability
-      - discoverability
-      - engineering
-      - frequently
-      - governance
-      - legal
-      - policy
-      - aggregated
-      - cross-page
-      - extraction
-      - improve
-      - improved
-      - intent
-      - overview
-      - retrieval
-      - topics
-      - searchability
-      - searchable
+    - questions
+    - answers
+    - published
+    - direct
+    - search
+    - asked
+    - crawlability
+    - discoverability
+    - engineering
+    - frequently
+    - governance
+    - legal
+    - policy
+    - aggregated
+    - cross-page
+    - extraction
+    - improve
+    - improved
+    - intent
+    - overview
+    - retrieval
+    - topics
+    - searchability
+    - searchable
     search_words:
-      - faq
-      - questions
-      - answers
-      - hub
-      - published
-      - direct
-      - search
-      - asked
-      - crawlability
-      - discoverability
-      - engineering
-      - frequently
-      - governance
-      - legal
-      - policy
-      - aeo
-      - aggregated
-      - faq hub
-      - questions direct answers
-      - questions answers
-      - direct answers
-      - questions direct
-      - frequently asked questions
-      - legal policy
-      - questions answers published
-      - hub questions answers
-      - asked questions
-      - frequently asked
-      - faq hub questions
+    - faq
+    - questions
+    - answers
+    - hub
+    - published
+    - direct
+    - search
+    - asked
+    - crawlability
+    - discoverability
+    - engineering
+    - frequently
+    - governance
+    - legal
+    - policy
+    - aeo
+    - aggregated
+    - faq hub
+    - questions direct answers
+    - questions answers
+    - direct answers
+    - questions direct
+    - frequently asked questions
+    - legal policy
+    - questions answers published
+    - hub questions answers
+    - asked questions
+    - frequently asked
+    - faq hub questions
     questions: []
   glossary:
-    title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
+    title: 'Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI'
     url: "/glossary/"
     keywords:
-      - glossary
-      - definitions
-      - governance
-      - a-z
-      - engineering
-      - seo
-      - law
-      - policy
-      - aeo
-      - candidate
-      - cross-domain
-      - geo
-      - links
-      - legal
-      - asked
-      - automated
-      - card
-      - context
-      - cross-jurisdiction
-      - deeper
-      - difference
-      - discovery
-      - domains
-      - editorial
-      - exploration
-      - frequently
-      - included
-      - moderation
-      - multidisciplinary
-      - overview
-      - questions
-      - quick
-      - review
-      - simple
-      - sourced
-      - technical glossary
-      - multidisciplinary glossary
-      - cross-domain definitions
-      - cross-jurisdiction terminology
-      - what is seo
+    - glossary
+    - definitions
+    - governance
+    - a-z
+    - engineering
+    - seo
+    - law
+    - policy
+    - aeo
+    - candidate
+    - cross-domain
+    - geo
+    - links
+    - legal
+    - asked
+    - automated
+    - card
+    - context
+    - cross-jurisdiction
+    - deeper
+    - difference
+    - discovery
+    - domains
+    - editorial
+    - exploration
+    - frequently
+    - included
+    - moderation
+    - multidisciplinary
+    - overview
+    - questions
+    - quick
+    - review
+    - simple
+    - sourced
+    - technical glossary
+    - multidisciplinary glossary
+    - cross-domain definitions
+    - cross-jurisdiction terminology
+    - what is seo
     key_phrases:
-      - engineering governance
-      - glossary a-z definitions
-      - a-z definitions engineering
-      - definitions engineering governance
-      - engineering governance law
-      - glossary a-z
-      - a-z definitions
-      - definitions engineering
-      - governance law
-      - geo aeo
-      - seo geo
-      - seo geo aeo
-      - governance law glossary
-      - law glossary
-      - glossary cross-domain
-      - governance legal
-      - geo aeo context
-      - law policy domains
-      - governance law policy
-      - deeper exploration glossary
-      - verification deeper exploration
-      - quick verification deeper
-      - definitions quick verification
-      - aeo context seo
+    - engineering governance
+    - glossary a-z definitions
+    - a-z definitions engineering
+    - definitions engineering governance
+    - engineering governance law
+    - glossary a-z
+    - a-z definitions
+    - definitions engineering
+    - governance law
+    - geo aeo
+    - seo geo
+    - seo geo aeo
+    - governance law glossary
+    - law glossary
+    - glossary cross-domain
+    - governance legal
+    - geo aeo context
+    - law policy domains
+    - governance law policy
+    - deeper exploration glossary
+    - verification deeper exploration
+    - quick verification deeper
+    - definitions quick verification
+    - aeo context seo
     catchwords:
-      - glossary
-      - definitions
-      - governance
-      - engineering
-      - policy
-      - candidate
-      - cross-domain
-      - links
-      - legal
-      - asked
-      - automated
-      - context
-      - cross-jurisdiction
-      - deeper
-      - difference
-      - discovery
-      - domains
-      - editorial
-      - exploration
-      - frequently
-      - included
-      - moderation
-      - multidisciplinary
-      - overview
-      - questions
-      - quick
-      - review
-      - simple
+    - glossary
+    - definitions
+    - governance
+    - engineering
+    - policy
+    - candidate
+    - cross-domain
+    - links
+    - legal
+    - asked
+    - automated
+    - context
+    - cross-jurisdiction
+    - deeper
+    - difference
+    - discovery
+    - domains
+    - editorial
+    - exploration
+    - frequently
+    - included
+    - moderation
+    - multidisciplinary
+    - overview
+    - questions
+    - quick
+    - review
+    - simple
     search_words:
-      - glossary
-      - definitions
-      - governance
-      - a-z
-      - engineering
-      - seo
-      - law
-      - policy
-      - aeo
-      - candidate
-      - cross-domain
-      - geo
-      - links
-      - legal
-      - asked
-      - automated
-      - card
-      - context
-      - engineering governance
-      - glossary a-z definitions
-      - a-z definitions engineering
-      - definitions engineering governance
-      - engineering governance law
-      - glossary a-z
-      - a-z definitions
-      - definitions engineering
-      - governance law
-      - geo aeo
-      - seo geo
-      - seo geo aeo
+    - glossary
+    - definitions
+    - governance
+    - a-z
+    - engineering
+    - seo
+    - law
+    - policy
+    - aeo
+    - candidate
+    - cross-domain
+    - geo
+    - links
+    - legal
+    - asked
+    - automated
+    - card
+    - context
+    - engineering governance
+    - glossary a-z definitions
+    - a-z definitions engineering
+    - definitions engineering governance
+    - engineering governance law
+    - glossary a-z
+    - a-z definitions
+    - definitions engineering
+    - governance law
+    - geo aeo
+    - seo geo
+    - seo geo aeo
     questions: []
   disclaimer:
     title: Disclaimer
     url: "/legal/disclaimer/"
     keywords:
-      - disclaimer
-      - ai-assisted
-      - cross-jurisdiction
-      - drafting
-      - external
-      - links
-      - reliance
-      - accuracy
-      - adviser
-      - boundaries
-      - client
-      - completeness
-      - decisions
-      - educational
-      - high-impact
-      - liability
-      - limits
-      - materials
-      - relationship
-      - scope
-      - third-party
-      - timeliness
-      - tooling
-      - translation
-      - warranties
+    - disclaimer
+    - ai-assisted
+    - cross-jurisdiction
+    - drafting
+    - external
+    - links
+    - reliance
+    - accuracy
+    - adviser
+    - boundaries
+    - client
+    - completeness
+    - decisions
+    - educational
+    - high-impact
+    - liability
+    - limits
+    - materials
+    - relationship
+    - scope
+    - third-party
+    - timeliness
+    - tooling
+    - translation
+    - warranties
     key_phrases:
-      - external links
-      - ai-assisted drafting
-      - disclaimer disclaimer
-      - decisions cross-jurisdiction scope
-      - high-impact decisions cross-jurisdiction
-      - reliance high-impact decisions
-      - relationship reliance high-impact
-      - adviser relationship reliance
-      - client adviser relationship
-      - disclaimer client adviser
-      - reliance boundaries disclaimer
-      - cross-jurisdiction reliance boundaries
-      - drafting cross-jurisdiction reliance
-      - ai-assisted drafting cross-jurisdiction
-      - links ai-assisted drafting
-      - external links ai-assisted
-      - educational external links
-      - disclaimer educational external
-      - cross-jurisdiction scope limits
-      - scope limits accuracy
-      - limits accuracy completeness
-      - accuracy completeness timeliness
-      - completeness timeliness external
-      - timeliness external links
+    - external links
+    - ai-assisted drafting
+    - disclaimer disclaimer
+    - decisions cross-jurisdiction scope
+    - high-impact decisions cross-jurisdiction
+    - reliance high-impact decisions
+    - relationship reliance high-impact
+    - adviser relationship reliance
+    - client adviser relationship
+    - disclaimer client adviser
+    - reliance boundaries disclaimer
+    - cross-jurisdiction reliance boundaries
+    - drafting cross-jurisdiction reliance
+    - ai-assisted drafting cross-jurisdiction
+    - links ai-assisted drafting
+    - external links ai-assisted
+    - educational external links
+    - disclaimer educational external
+    - cross-jurisdiction scope limits
+    - scope limits accuracy
+    - limits accuracy completeness
+    - accuracy completeness timeliness
+    - completeness timeliness external
+    - timeliness external links
     catchwords:
-      - disclaimer
-      - ai-assisted
-      - cross-jurisdiction
-      - drafting
-      - external
-      - links
-      - reliance
-      - accuracy
-      - adviser
-      - boundaries
-      - client
-      - completeness
-      - decisions
-      - educational
-      - high-impact
-      - liability
-      - limits
-      - materials
-      - relationship
-      - scope
-      - third-party
-      - timeliness
-      - tooling
-      - translation
-      - warranties
+    - disclaimer
+    - ai-assisted
+    - cross-jurisdiction
+    - drafting
+    - external
+    - links
+    - reliance
+    - accuracy
+    - adviser
+    - boundaries
+    - client
+    - completeness
+    - decisions
+    - educational
+    - high-impact
+    - liability
+    - limits
+    - materials
+    - relationship
+    - scope
+    - third-party
+    - timeliness
+    - tooling
+    - translation
+    - warranties
     search_words:
-      - disclaimer
-      - ai-assisted
-      - cross-jurisdiction
-      - drafting
-      - external
-      - links
-      - reliance
-      - accuracy
-      - adviser
-      - boundaries
-      - client
-      - completeness
-      - decisions
-      - educational
-      - high-impact
-      - liability
-      - limits
-      - external links
-      - ai-assisted drafting
-      - disclaimer disclaimer
-      - decisions cross-jurisdiction scope
-      - high-impact decisions cross-jurisdiction
-      - reliance high-impact decisions
-      - relationship reliance high-impact
-      - adviser relationship reliance
-      - client adviser relationship
-      - disclaimer client adviser
-      - reliance boundaries disclaimer
-      - cross-jurisdiction reliance boundaries
+    - disclaimer
+    - ai-assisted
+    - cross-jurisdiction
+    - drafting
+    - external
+    - links
+    - reliance
+    - accuracy
+    - adviser
+    - boundaries
+    - client
+    - completeness
+    - decisions
+    - educational
+    - high-impact
+    - liability
+    - limits
+    - external links
+    - ai-assisted drafting
+    - disclaimer disclaimer
+    - decisions cross-jurisdiction scope
+    - high-impact decisions cross-jurisdiction
+    - reliance high-impact decisions
+    - relationship reliance high-impact
+    - adviser relationship reliance
+    - client adviser relationship
+    - disclaimer client adviser
+    - reliance boundaries disclaimer
+    - cross-jurisdiction reliance boundaries
     questions:
-      - question: Where to look next?
-        answer: "- Privacy, cookies, data handling, and Hong Kong PICS-style notice: [Privacy, Cookies and Data Protection]() - Site access, acceptable use, intellectual property, and service boundaries: [Terms of Use]() - Overview of the full legal notice set: [Legal Notices]()"
+    - question: Where to look next?
+      answer: "- Privacy, cookies, data handling, and Hong Kong Personal Information Collection Statement (PICS)-style notice: [Privacy, Cookies and Data Protection]() - Site access, acceptable use, intellectual property, and service boundaries: [Terms of Use]() - Overview of the full legal notice set: [Legal Notices]()"
   privacy-cookies-data-protection:
     title: Privacy, Cookies and Data Protection
     url: "/legal/privacy-cookies-data-protection/"
     keywords:
-      - data
-      - protection
-      - cookies
-      - privacy
-      - personal
-      - gdpr
-      - hong
-      - jurisdiction
-      - kong
-      - notice
-      - statement
-      - applies
-      - bases
-      - children
-      - collect
-      - collection
-      - combined
-      - contact
-      - cookie
-      - current
-      - dispute
-      - legal
-      - map
-      - note
-      - official
-      - online
-      - pics-style
-      - points
-      - policy
-      - practice
-      - practices
-      - reference
-      - resolution
-      - retention
-      - rights
-      - role
+    - data
+    - protection
+    - personal
+    - cookies
+    - privacy
+    - statement
+    - collection
+    - consent
+    - cookie
+    - gdpr
+    - hong
+    - jurisdiction
+    - kong
+    - notice
+    - role
+    - "-style"
+    - analytics
+    - applies
+    - bases
+    - children
+    - collect
+    - combined
+    - contact
+    - controller
+    - current
+    - dispute-resolution
+    - legal
+    - management
+    - map
+    - mapping
+    - note
+    - official
+    - online
+    - pics
+    - points
+    - policy
     key_phrases:
-      - data protection
-      - privacy cookies
-      - cookies data
-      - cookies data protection
-      - privacy cookies data
-      - hong kong
-      - personal data
-      - map jurisdiction dispute
-      - jurisdiction map jurisdiction
-      - role jurisdiction map
-      - jurisdiction dispute resolution
-      - scope role jurisdiction
-      - protection scope role
-      - dispute resolution note
-      - data protection scope
-      - security data protection
-      - data protection practice
-      - protection practice rights
-      - practice rights children
-      - pics-style statement website
-      - kong pics-style statement
-      - hong kong pics-style
-      - summary hong kong
-      - policy summary hong
+    - data protection
+    - privacy cookies
+    - cookies data
+    - cookies data protection
+    - privacy cookies data
+    - personal data
+    - personal collection statement
+    - kong personal collection
+    - collection statement
+    - personal collection
+    - kong personal
+    - hong kong
+    - hong kong personal
+    - data collect personal
+    - collect personal data
+    - personal data cookies
+    - data cookies storage
+    - cookies storage technologies
+    - storage technologies online
+    - personal data collect
+    - note personal data
+    - technologies online tracking
+    - dispute-resolution note personal
+    - jurisdiction dispute-resolution note
     catchwords:
-      - protection
-      - cookies
-      - privacy
-      - personal
-      - jurisdiction
-      - notice
-      - statement
-      - applies
-      - bases
-      - children
-      - collect
-      - collection
-      - combined
-      - contact
-      - cookie
-      - current
-      - dispute
-      - legal
-      - official
-      - online
-      - pics-style
-      - points
-      - policy
-      - practice
-      - practices
-      - reference
-      - resolution
-      - retention
+    - protection
+    - personal
+    - cookies
+    - privacy
+    - statement
+    - collection
+    - consent
+    - cookie
+    - jurisdiction
+    - notice
+    - "-style"
+    - analytics
+    - applies
+    - bases
+    - children
+    - collect
+    - combined
+    - contact
+    - controller
+    - current
+    - dispute-resolution
+    - legal
+    - management
+    - mapping
+    - official
+    - online
+    - points
+    - policy
     search_words:
-      - data
-      - protection
-      - cookies
-      - privacy
-      - personal
-      - gdpr
-      - hong
-      - jurisdiction
-      - kong
-      - notice
-      - statement
-      - applies
-      - bases
-      - children
-      - collect
-      - collection
-      - combined
-      - contact
-      - data protection
-      - privacy cookies
-      - cookies data
-      - cookies data protection
-      - privacy cookies data
-      - hong kong
-      - personal data
-      - map jurisdiction dispute
-      - jurisdiction map jurisdiction
-      - role jurisdiction map
-      - jurisdiction dispute resolution
-      - scope role jurisdiction
+    - data
+    - protection
+    - personal
+    - cookies
+    - privacy
+    - statement
+    - collection
+    - consent
+    - cookie
+    - gdpr
+    - hong
+    - jurisdiction
+    - kong
+    - notice
+    - role
+    - "-style"
+    - analytics
+    - applies
+    - data protection
+    - privacy cookies
+    - cookies data
+    - cookies data protection
+    - privacy cookies data
+    - personal data
+    - personal collection statement
+    - kong personal collection
+    - collection statement
+    - personal collection
+    - kong personal
+    - hong kong
     questions:
-      - question: How we use personal data?
-        answer: "Personal data may be used to: - operate, secure, maintain, and improve the website; - understand readership, traffic sources, and content performance"
+    - question: How we use personal data?
+      answer: 'Personal data may be used to: - operate, secure, maintain, and improve the website; - understand readership, traffic sources, and content performance'
   terms-of-use:
     title: Terms of Use
     url: "/legal/terms-of-use/"
     keywords:
-      - acceptable
-      - allocation
-      - liability
-      - access
-      - advice
-      - availability
-      - boundaries
-      - conduct
-      - engagement
-      - external
-      - governing
-      - intellectual
-      - international
-      - law
-      - legal
-      - links
-      - mandatory
-      - notices
-      - permitted
-      - professional
-      - property
-      - rights
-      - service
-      - services
-      - technical
-      - third-party
-      - website
+    - acceptable
+    - allocation
+    - liability
+    - access
+    - advice
+    - availability
+    - boundaries
+    - conduct
+    - engagement
+    - external
+    - governing
+    - intellectual
+    - international
+    - law
+    - legal
+    - links
+    - mandatory
+    - notices
+    - permitted
+    - professional
+    - property
+    - rights
+    - service
+    - services
+    - technical
+    - third-party
+    - website
     key_phrases:
-      - liability allocation
-      - law notices
-      - governing access website
-      - access website acceptable
-      - website acceptable rights
-      - acceptable rights service
-      - rights service boundaries
-      - service boundaries liability
-      - boundaries liability allocation
-      - permitted acceptable conduct
-      - acceptable conduct intellectual
-      - conduct intellectual property
-      - intellectual property legal
-      - property legal technical
-      - legal technical professional
-      - technical professional advice
-      - professional advice external
-      - advice external services
-      - external services third-party
-      - services third-party links
-      - third-party links availability
-      - links availability engagement
-      - availability engagement boundary
-      - engagement boundary liability
+    - liability allocation
+    - law notices
+    - governing access website
+    - access website acceptable
+    - website acceptable rights
+    - acceptable rights service
+    - rights service boundaries
+    - service boundaries liability
+    - boundaries liability allocation
+    - permitted acceptable conduct
+    - acceptable conduct intellectual
+    - conduct intellectual property
+    - intellectual property legal
+    - property legal technical
+    - legal technical professional
+    - technical professional advice
+    - professional advice external
+    - advice external services
+    - external services third-party
+    - services third-party links
+    - third-party links availability
+    - links availability engagement
+    - availability engagement boundary
+    - engagement boundary liability
     catchwords:
-      - acceptable
-      - allocation
-      - liability
-      - access
-      - advice
-      - availability
-      - boundaries
-      - conduct
-      - engagement
-      - external
-      - governing
-      - intellectual
-      - international
-      - legal
-      - links
-      - mandatory
-      - notices
-      - permitted
-      - professional
-      - property
-      - rights
-      - service
-      - services
-      - technical
-      - third-party
-      - website
+    - acceptable
+    - allocation
+    - liability
+    - access
+    - advice
+    - availability
+    - boundaries
+    - conduct
+    - engagement
+    - external
+    - governing
+    - intellectual
+    - international
+    - legal
+    - links
+    - mandatory
+    - notices
+    - permitted
+    - professional
+    - property
+    - rights
+    - service
+    - services
+    - technical
+    - third-party
+    - website
     search_words:
-      - acceptable
-      - allocation
-      - liability
-      - access
-      - advice
-      - availability
-      - boundaries
-      - conduct
-      - engagement
-      - external
-      - governing
-      - intellectual
-      - international
-      - law
-      - legal
-      - links
-      - mandatory
-      - liability allocation
-      - law notices
-      - governing access website
-      - access website acceptable
-      - website acceptable rights
-      - acceptable rights service
-      - rights service boundaries
-      - service boundaries liability
-      - boundaries liability allocation
-      - permitted acceptable conduct
-      - acceptable conduct intellectual
-      - conduct intellectual property
+    - acceptable
+    - allocation
+    - liability
+    - access
+    - advice
+    - availability
+    - boundaries
+    - conduct
+    - engagement
+    - external
+    - governing
+    - intellectual
+    - international
+    - law
+    - legal
+    - links
+    - mandatory
+    - liability allocation
+    - law notices
+    - governing access website
+    - access website acceptable
+    - website acceptable rights
+    - acceptable rights service
+    - rights service boundaries
+    - service boundaries liability
+    - boundaries liability allocation
+    - permitted acceptable conduct
+    - acceptable conduct intellectual
+    - conduct intellectual property
     questions: []
   literature:
-    title: "Knowledge Space: Discover Research Papers and Scholarly Literature"
+    title: 'Knowledge Space: Discover Research Papers and Scholarly Literature'
     url: "/literature/"
     keywords:
-      - papers
-      - literature
-      - search
-      - knowledge
-      - crossref
-      - data
-      - openalex
-      - discover
-      - live
-      - scholarly
-      - science
-      - space
-      - domain
-      - focus
-      - governance
-      - keyword
-      - open
-      - academic
-      - engineering
-      - preprints
-      - advice
-      - area
-      - asked
-      - configurable
-      - counts
-      - discovery
-      - drawn
-      - explore
-      - fetches
-      - filters
-      - frequently
-      - legal
-      - matched
-      - persistence
-      - professional
-      - research paper discovery
-      - live literature search
-      - how to find research papers online
-      - academic paper aggregator
-      - open knowledge explorer
+    - papers
+    - literature
+    - search
+    - knowledge
+    - crossref
+    - openalex
+    - discover
+    - live
+    - scholarly
+    - science
+    - space
+    - data
+    - domain
+    - focus
+    - governance
+    - keyword
+    - open
+    - work
+    - academic
+    - engineering
+    - preprints
+    - advice
+    - analytics
+    - area
+    - asked
+    - change
+    - configurable
+    - cookie
+    - cookies
+    - counts
+    - discovery
+    - drawn
+    - explore
+    - fetched
+    - research paper discovery
+    - live literature search
+    - how to find research papers online
+    - academic paper aggregator
+    - open knowledge explorer
+    - openalex works search
     key_phrases:
-      - knowledge space
-      - openalex crossref
-      - papers scholarly
-      - scholarly literature
-      - papers scholarly literature
-      - papers data
-      - engineering governance
-      - discover papers scholarly
-      - papers preprints
-      - space discover papers
-      - knowledge space discover
-      - literature knowledge
-      - discover papers
-      - space discover
-      - live keyword domain
-      - literature live keyword
-      - scholarly literature live
-      - explore papers scholarly
-      - advice professional recommendation
-      - crossref data persistence
-      - openalex crossref data
-      - drawn openalex crossref
-      - domain drawn openalex
-      - focus domain drawn
+    - knowledge space
+    - papers scholarly
+    - scholarly literature
+    - papers scholarly literature
+    - openalex crossref
+    - knowledge space discover
+    - space discover papers
+    - discover papers scholarly
+    - papers data
+    - engineering governance
+    - space discover
+    - discover papers
+    - papers preprints
+    - literature knowledge
+    - drawn openalex crossref
+    - openalex crossref persistence
+    - crossref persistence fetched
+    - persistence fetched literature
+    - fetched literature records
+    - explore papers scholarly
+    - scholarly literature live
+    - legal advice professional
+    - literature live keyword
+    - live keyword domain
     catchwords:
-      - papers
-      - literature
-      - search
-      - knowledge
-      - crossref
-      - openalex
-      - discover
-      - scholarly
-      - science
-      - space
-      - domain
-      - focus
-      - governance
-      - keyword
-      - academic
-      - engineering
-      - preprints
-      - advice
-      - asked
-      - configurable
-      - counts
-      - discovery
-      - drawn
-      - explore
-      - fetches
-      - filters
-      - frequently
-      - legal
+    - papers
+    - literature
+    - search
+    - knowledge
+    - crossref
+    - openalex
+    - discover
+    - scholarly
+    - science
+    - space
+    - domain
+    - focus
+    - governance
+    - keyword
+    - academic
+    - engineering
+    - preprints
+    - advice
+    - analytics
+    - asked
+    - change
+    - configurable
+    - cookie
+    - cookies
+    - counts
+    - discovery
+    - drawn
+    - explore
     search_words:
-      - papers
-      - literature
-      - search
-      - knowledge
-      - crossref
-      - data
-      - openalex
-      - discover
-      - live
-      - scholarly
-      - science
-      - space
-      - domain
-      - focus
-      - governance
-      - keyword
-      - open
-      - academic
-      - knowledge space
-      - openalex crossref
-      - papers scholarly
-      - scholarly literature
-      - papers scholarly literature
-      - papers data
-      - engineering governance
-      - discover papers scholarly
-      - papers preprints
-      - space discover papers
-      - knowledge space discover
-      - literature knowledge
+    - papers
+    - literature
+    - search
+    - knowledge
+    - crossref
+    - openalex
+    - discover
+    - live
+    - scholarly
+    - science
+    - space
+    - data
+    - domain
+    - focus
+    - governance
+    - keyword
+    - open
+    - work
+    - knowledge space
+    - papers scholarly
+    - scholarly literature
+    - papers scholarly literature
+    - openalex crossref
+    - knowledge space discover
+    - space discover papers
+    - discover papers scholarly
+    - papers data
+    - engineering governance
+    - space discover
+    - discover papers
     questions:
-      - question: How are keywords matched against papers?
-        answer: Matching runs against each record's title and abstract. "All keywords must match" narrows results to items where every keyword appears; "Any keyword may match" broadens results to items containing at least one keyword. Switching modes is the fastest way to widen a narrow search.
-      - question: How does Knowledge Space work?
-        answer: Select a research focus domain or enter your own keywords, choose your sources, and click Search Literature. Knowledge Space fetches recent papers and preprints in real time from the APIs you selected, filters by your keywords and match mode, and returns paginated results ready to explore.
-      - question: Why do result counts vary by source?
-        answer: API coverage, indexing frequency, metadata completeness, and availability differ across providers. OpenAlex and Crossref emphasize broad scholarly metadata, and publication typing may vary by source. Combining both sources usually yields broader and more resilient discovery coverage than relying on one source alone.
-      - question: Is any data stored when I search?
-        answer: No. Fetched literature records are not stored in application-level persistent storage. Normal operational logs from hosting, edge, or analytics services may still apply independently under their own policies.
-      - question: Is this legal advice or a professional recommendation?
-        answer: No. Knowledge Space is an informational research-discovery tool only, not legal advice or a professional recommendation. For jurisdiction-specific legal or compliance decisions, consult qualified counsel in the relevant jurisdiction. Mandatory local consumer and data protection rights remain fully unaffected.
-      - question: Which sources does this tool search?
-        answer: "The tool queries two open academic APIs: OpenAlex (a broad scholarly works index covering journals and conference papers) and Crossref (a DOI registration and metadata service). Each brings distinct coverage and indexing depth, so combining them typically yields a fuller picture."
-  "404":
-    title: "404"
+    - question: How are keywords matched against papers?
+      answer: Matching runs against each record's title and abstract. "All keywords must match" narrows results to items where every keyword appears; "Any keyword may match" broadens results to items containing at least one keyword. Switching modes is the fastest way to widen a narrow search.
+    - question: How do I change cookie preferences later?
+      answer: Use the **Cookie Preferences** control in the site footer or open [Cookie Preferences]() from the legal page.
+    - question: How does Knowledge Space work?
+      answer: Select a research focus domain or enter your own keywords, choose your sources, and click Search Literature. Knowledge Space fetches recent papers and preprints in real time from the APIs you selected, filters by your keywords and match mode, and returns paginated results ready to explore.
+    - question: Why do result counts vary by source?
+      answer: API coverage, indexing frequency, metadata completeness, and availability differ across providers. OpenAlex and Crossref emphasize broad scholarly metadata, and publication typing may vary by source. Combining both sources usually yields broader and more resilient discovery coverage than relying on one source alone.
+    - question: Is any data stored when I search?
+      answer: Fetched literature records are not stored in application-level persistent storage. Limited browser-side session state may be used for security and rate protection during your session. Normal operational logs from hosting, edge, or analytics services may still apply independently under their own policies.
+    - question: Is this legal advice or a professional recommendation?
+      answer: No. Knowledge Space is an informational research-discovery tool only, not legal advice or a professional recommendation. For jurisdiction-specific legal or compliance decisions, consult qualified counsel in the relevant jurisdiction. Mandatory local consumer and data protection rights remain fully unaffected.
+    - question: Will search still work if I reject analytics cookies?
+      answer: Yes. Search and result browsing remain available. Rejecting analytics only stops optional GA4 or GTM usage measurement events for page interactions and search activity.
+    - question: Which sources does this tool search?
+      answer: 'The tool queries two open academic APIs: OpenAlex (a broad scholarly works index covering journals and conference papers) and Crossref (a DOI registration and metadata service). Each brings distinct coverage and indexing depth, so combining them typically yields a fuller picture.'
+  '404':
+    title: '404'
     url: "/404"
     keywords: []
     key_phrases: []
@@ -2366,151 +2373,151 @@ pages:
     title: Categories
     url: "/categories"
     keywords:
-      - categories
+    - categories
     key_phrases:
-      - categories categories
-      - categories categories categories
+    - categories categories
+    - categories categories categories
     catchwords:
-      - categories
+    - categories
     search_words:
-      - categories
-      - categories categories
-      - categories categories categories
+    - categories
+    - categories categories
+    - categories categories categories
     questions: []
   index:
     title: Trustworthy Engineering. Resilient Platforms. Sovereign-by-Design.
     url: "/index.html"
     keywords:
-      - engineering
-      - platforms
-      - resilient
-      - sovereign-by-design
-      - trustworthy
+    - engineering
+    - platforms
+    - resilient
+    - sovereign-by-design
+    - trustworthy
     key_phrases:
-      - trustworthy engineering
-      - engineering resilient
-      - resilient platforms
-      - platforms sovereign-by-design
-      - trustworthy engineering resilient
-      - engineering resilient platforms
-      - resilient platforms sovereign-by-design
-      - sovereign-by-design trustworthy
-      - platforms sovereign-by-design trustworthy
-      - sovereign-by-design trustworthy engineering
+    - trustworthy engineering
+    - engineering resilient
+    - resilient platforms
+    - platforms sovereign-by-design
+    - trustworthy engineering resilient
+    - engineering resilient platforms
+    - resilient platforms sovereign-by-design
+    - sovereign-by-design trustworthy
+    - platforms sovereign-by-design trustworthy
+    - sovereign-by-design trustworthy engineering
     catchwords:
-      - engineering
-      - platforms
-      - resilient
-      - sovereign-by-design
-      - trustworthy
+    - engineering
+    - platforms
+    - resilient
+    - sovereign-by-design
+    - trustworthy
     search_words:
-      - engineering
-      - platforms
-      - resilient
-      - sovereign-by-design
-      - trustworthy
-      - trustworthy engineering
-      - engineering resilient
-      - resilient platforms
-      - platforms sovereign-by-design
-      - trustworthy engineering resilient
-      - engineering resilient platforms
-      - resilient platforms sovereign-by-design
-      - sovereign-by-design trustworthy
-      - platforms sovereign-by-design trustworthy
-      - sovereign-by-design trustworthy engineering
+    - engineering
+    - platforms
+    - resilient
+    - sovereign-by-design
+    - trustworthy
+    - trustworthy engineering
+    - engineering resilient
+    - resilient platforms
+    - platforms sovereign-by-design
+    - trustworthy engineering resilient
+    - engineering resilient platforms
+    - resilient platforms sovereign-by-design
+    - sovereign-by-design trustworthy
+    - platforms sovereign-by-design trustworthy
+    - sovereign-by-design trustworthy engineering
     questions: []
   legal:
     title: Legal Notices
     url: "/legal/"
     keywords:
-      - legal
-      - notices
-      - cookies
-      - data
-      - privacy
-      - disclaimer
-      - handling
-      - jurisdiction
-      - lean
-      - multiple
-      - note
-      - protection
-      - reliance
+    - legal
+    - notices
+    - cookies
+    - data
+    - privacy
+    - disclaimer
+    - handling
+    - jurisdiction
+    - lean
+    - multiple
+    - note
+    - protection
+    - reliance
     key_phrases:
-      - legal notices
-      - privacy cookies data
-      - cookies data
-      - privacy cookies
-      - handling reliance multiple
-      - reliance multiple jurisdictions
-      - notices disclaimer privacy
-      - data handling reliance
-      - cookies data handling
-      - legal notices disclaimer
-      - notices privacy cookies
-      - legal notices privacy
-      - lean legal notices
-      - disclaimer privacy cookies
-      - cookies data protection
-      - notices legal notices
-      - legal notices legal
-      - data protection jurisdiction
-      - jurisdiction note
-      - protection jurisdiction
-      - data protection
-      - disclaimer privacy
-      - notices disclaimer
-      - protection jurisdiction note
+    - legal notices
+    - privacy cookies data
+    - cookies data
+    - privacy cookies
+    - handling reliance multiple
+    - reliance multiple jurisdictions
+    - notices disclaimer privacy
+    - data handling reliance
+    - cookies data handling
+    - legal notices disclaimer
+    - notices privacy cookies
+    - legal notices privacy
+    - lean legal notices
+    - disclaimer privacy cookies
+    - cookies data protection
+    - notices legal notices
+    - legal notices legal
+    - data protection jurisdiction
+    - jurisdiction note
+    - protection jurisdiction
+    - data protection
+    - disclaimer privacy
+    - notices disclaimer
+    - protection jurisdiction note
     catchwords:
-      - legal
-      - notices
-      - cookies
-      - privacy
-      - disclaimer
-      - handling
-      - jurisdiction
-      - multiple
-      - protection
-      - reliance
+    - legal
+    - notices
+    - cookies
+    - privacy
+    - disclaimer
+    - handling
+    - jurisdiction
+    - multiple
+    - protection
+    - reliance
     search_words:
-      - legal
-      - notices
-      - cookies
-      - data
-      - privacy
-      - disclaimer
-      - handling
-      - jurisdiction
-      - lean
-      - multiple
-      - note
-      - protection
-      - reliance
-      - legal notices
-      - privacy cookies data
-      - cookies data
-      - privacy cookies
-      - handling reliance multiple
-      - reliance multiple jurisdictions
-      - notices disclaimer privacy
-      - data handling reliance
-      - cookies data handling
-      - legal notices disclaimer
-      - notices privacy cookies
-      - legal notices privacy
+    - legal
+    - notices
+    - cookies
+    - data
+    - privacy
+    - disclaimer
+    - handling
+    - jurisdiction
+    - lean
+    - multiple
+    - note
+    - protection
+    - reliance
+    - legal notices
+    - privacy cookies data
+    - cookies data
+    - privacy cookies
+    - handling reliance multiple
+    - reliance multiple jurisdictions
+    - notices disclaimer privacy
+    - data handling reliance
+    - cookies data handling
+    - legal notices disclaimer
+    - notices privacy cookies
+    - legal notices privacy
     questions: []
   tags:
     title: Tags
     url: "/tags"
     keywords:
-      - tags
+    - tags
     key_phrases:
-      - tags tags
-      - tags tags tags
+    - tags tags
+    - tags tags tags
     catchwords: []
     search_words:
-      - tags
-      - tags tags
-      - tags tags tags
+    - tags
+    - tags tags
+    - tags tags tags
     questions: []

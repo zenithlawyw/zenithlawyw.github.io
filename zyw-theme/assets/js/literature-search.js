@@ -80,6 +80,7 @@
     runSearch: document.getElementById("runSearch"),
     resetForm: document.getElementById("resetForm"),
     statusText: document.getElementById("statusText"),
+    consentTelemetryStatus: document.getElementById("consentTelemetryStatus"),
     resultMeta: document.getElementById("resultMeta"),
     resultList: document.getElementById("resultList"),
     emptyState: document.getElementById("emptyState"),
@@ -290,7 +291,36 @@
     return sources;
   }
 
+  function hasAnalyticsConsent() {
+    if (
+      window.ZYWConsentManager &&
+      typeof window.ZYWConsentManager.hasConsent === "function"
+    ) {
+      return window.ZYWConsentManager.hasConsent("analytics");
+    }
+
+    if (window.__ZYWConsentState) {
+      return !!window.__ZYWConsentState.analytics;
+    }
+
+    return false;
+  }
+
+  function renderConsentTelemetryStatus() {
+    if (!els.consentTelemetryStatus) {
+      return;
+    }
+
+    els.consentTelemetryStatus.textContent = hasAnalyticsConsent()
+      ? "Analytics consent is enabled. Optional usage measurement can run for supported events."
+      : "Analytics consent is disabled. Optional usage measurement is off.";
+  }
+
   function trackAnalyticsEvent(name, params) {
+    if (!hasAnalyticsConsent()) {
+      return;
+    }
+
     if (typeof window.gtag === "function") {
       window.gtag("event", name, params || {});
       return;
@@ -1135,9 +1165,14 @@
   els.keywordInput.addEventListener("input", updateSearchAvailability);
   els.runSearch.addEventListener("click", runSearch);
   els.resetForm.addEventListener("click", resetForm);
+  document.addEventListener(
+    "zyw:consent-changed",
+    renderConsentTelemetryStatus
+  );
 
   applyProfile(configuredDefaultProfile);
   loadSecurityState();
   updateStatus("Ready. Choose sources and click Search Literature.");
   updateSearchAvailability();
+  renderConsentTelemetryStatus();
 })();

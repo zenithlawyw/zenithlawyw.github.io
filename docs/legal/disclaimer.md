@@ -19,7 +19,7 @@ Material on this site may discuss law, regulation, standards, regulator guidance
 
 ## Cross-jurisdiction scope and limits
 
-This site may be accessed from the United Kingdom (including Scotland), the European Union or EEA, Hong Kong, Singapore, the United States, and other jurisdictions. Legal frameworks differ. Any reference to a statute, regulator, enforcement pattern, or good practice must be read in its proper context. Local mandatory rules on professional conduct, consumer law, data protection, and court procedure may materially alter the position.
+This site may be accessed from the United Kingdom (including Scotland), the European Union or the European Economic Area (EEA), Hong Kong, Mainland China, Singapore, Canada, Australia, the United States, and other jurisdictions. Legal frameworks differ. Any reference to a statute, regulator, enforcement pattern, or good practice must be read in its proper context. Local mandatory rules on professional conduct, consumer law, data protection, and court procedure may materially alter the position.
 
 ## Accuracy, completeness, and timeliness
 
@@ -27,7 +27,7 @@ Reasonable care is taken, but the site operator does not guarantee that all mate
 
 ## External links and third-party materials
 
-Links to third-party websites, papers, public records, source repositories, vendor material, or regulator pages are provided for context or convenience. Their content, availability, privacy practices, and accuracy are outside the site operator's control. A link does not constitute endorsement, partnership, sponsorship, or adoption of third-party terms.
+Links to third-party websites, papers, public records, source repositories, vendor material, or regulator pages are provided for context or convenience. Their content, availability, privacy practices, and accuracy are outside the site operator's control. Depending on processing context and contract, third-party providers may act as processors, service providers, or independent controllers under their own legal terms and privacy policies. A link does not constitute endorsement, partnership, sponsorship, or adoption of third-party terms.
 
 ## AI-assisted drafting, tooling, and translation
 
@@ -41,8 +41,14 @@ To the fullest extent permitted by applicable law, this website and its contents
 
 To the fullest extent permitted by applicable law, the site operator is not liable for any loss or damage arising from use of, inability to use, reliance on, or interpretation of this website or linked resources. This includes indirect, consequential, exemplary, special, reputational, data-related, business-interruption, or loss-of-opportunity claims. Nothing in this disclaimer excludes liability that cannot lawfully be excluded.
 
+Nothing in this disclaimer is intended to remove or restrict rights that cannot be excluded under mandatory consumer, privacy, data-protection, unfair-terms, or procedural law in the jurisdiction that applies to you.
+
+For public website use, and only where legally permitted, the baseline governing-law and non-exclusive jurisdiction position is set out in [Terms of Use]({{ '/legal/terms-of-use/' | relative_url }}). Nothing in this disclaimer is intended to override mandatory local rights, urgent local relief, or forum rules that cannot be displaced.
+
+Where a contract-specific document separately includes a valid arbitration clause, that clause may govern dispute process for that specific contract only.
+
 ## Where to look next
 
-- Privacy, cookies, data handling, and Hong Kong PICS-style notice: [Privacy, Cookies and Data Protection]({{ '/legal/privacy-cookies-data-protection/' | relative_url }})
+- Privacy, cookies, data handling, and Hong Kong Personal Information Collection Statement (PICS)-style notice: [Privacy, Cookies and Data Protection]({{ '/legal/privacy-cookies-data-protection/' | relative_url }})
 - Site access, acceptable use, intellectual property, and service boundaries: [Terms of Use]({{ '/legal/terms-of-use/' | relative_url }})
 - Overview of the full legal notice set: [Legal Notices]({{ '/legal/' | relative_url }})
