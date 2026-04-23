@@ -49,7 +49,7 @@
 
           <!-- Navigation menu -->
           <div
-            class="trigger fixed inset-x-0 top-16 z-20 hidden max-h-[calc(100vh-4rem)] w-full flex-col items-stretch gap-1 overflow-y-auto border-t border-gray-200 px-3 pb-4 pt-3 shadow-2xl md:static md:inset-auto md:z-auto md:ml-auto md:mr-0 md:flex md:h-16 md:max-h-none md:w-auto md:flex-none md:flex-row md:flex-nowrap md:items-center md:justify-end md:overflow-visible md:border-0 md:bg-transparent md:px-0 md:pb-0 md:pr-2 md:pt-0 md:shadow-none md:dark:bg-transparent"
+            class="trigger z-99 fixed inset-x-0 top-16 hidden max-h-[calc(100vh-4rem)] w-full flex-col items-stretch gap-1 overflow-y-auto border-t border-gray-200 bg-white/95 px-3 pb-4 pt-3 text-gray-900 shadow-2xl supports-[backdrop-filter]:bg-white/90 dark:border-gray-800 dark:bg-gray-950/95 dark:text-gray-100 dark:supports-[backdrop-filter]:bg-gray-950/90 md:static md:inset-auto md:z-auto md:ml-auto md:mr-0 md:flex md:h-16 md:max-h-none md:w-auto md:flex-none md:flex-row md:flex-nowrap md:items-center md:justify-end md:overflow-visible md:border-0 md:bg-transparent md:px-0 md:pb-0 md:pr-2 md:pt-0 md:shadow-none md:dark:bg-transparent"
             id="site-nav-menu"
           >
             <!-- Centered navigation items -->
@@ -66,7 +66,7 @@
                 -%}
                 {%- if nav_label != '' -%}
                   <a
-                    class="page-link nav-item nav-menu-item flex w-full items-center justify-start rounded-md bg-transparent px-3 py-2 text-left no-underline transition-colors hover:text-gray-900 hover:underline dark:hover:text-white md:inline-flex md:h-full md:w-auto md:justify-center md:rounded-none md:px-2 md:py-0"
+                    class="page-link nav-item nav-menu-item flex w-full items-center justify-start rounded-md bg-transparent px-3 py-2 text-left text-inherit no-underline transition-colors hover:bg-black/5 hover:text-gray-900 hover:underline dark:hover:bg-white/10 dark:hover:text-white md:inline-flex md:h-full md:w-auto md:justify-center md:rounded-none md:bg-transparent md:px-2 md:py-0"
                     href="{{ my_page.url | relative_url }}"
                   >
                     {{- nav_label | escape -}}
@@ -219,7 +219,7 @@
     );
     var textTargets = Array.prototype.slice.call(
       document.querySelectorAll(
-        '.site-header .site-brand-inner, .site-header .page-link, .site-header .menu-toggle-button, .site-header [data-theme-toggle] label'
+        '.site-header .site-brand-inner, .site-header .nav-controls-group, .site-header .menu-toggle-button, .site-header [data-theme-toggle] label'
       )
     );
     var separators = Array.prototype.slice.call(
