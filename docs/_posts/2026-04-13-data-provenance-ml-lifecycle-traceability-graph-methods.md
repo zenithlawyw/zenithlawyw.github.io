@@ -36,6 +36,8 @@ Karuna et al. report a study that applies Graph Neural Networks to financial tra
 
 This review examines each paper's claims, methods, and limitations, then derives scoped implications from those results. It is intentionally narrow: three papers are not treated as a representative sample of the provenance ecosystem. Where a claim rests directly on a paper's reported results, the text says so. Where the review draws inferences beyond what any single paper demonstrates, that boundary is marked. Several details could not be independently corroborated and are flagged accordingly.
 
+This article is designed for technical and governance learning. It does not provide legal, regulatory, or procurement advice. Readers should validate applicability against their own jurisdiction, risk model, and production constraints.
+
 > **Claim-level labeling convention used throughout this article:**
 >
 > - **Verified finding**: directly stated or demonstrated in the cited source.

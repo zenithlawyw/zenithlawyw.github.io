@@ -69,7 +69,50 @@ theme: zyw-theme
 sitemap: true
 lang: "en"
 
+landing:
+  article_preview:
+    enabled: true
+    heading: "Latest Engineering and Governance Articles"
+    description: "See recent incident-informed analysis, practical implementation guidance, and policy-aware architecture lessons."
+    count: 3
+    cta_label: "Read More"
+    cta_url: "/articles/"
+  testimonials:
+    enabled: false
+    heading: "Testimonials"
+    description: "Feedback themes from advisory and engineering collaboration across regulated and high-reliability workloads."
+    items:
+      - quote: "Clear technical direction, with governance controls that were actionable from day one."
+        name: "Platform Engineering Lead"
+        role: "Financial Services"
+      - quote: "Security, resilience, and delivery speed improved together instead of pulling in opposite directions."
+        name: "Head of Technology Risk"
+        role: "Enterprise Operations"
+      - quote: "Architecture recommendations translated directly into implementation plans that teams could execute."
+        name: "Principal Data Architect"
+        role: "Data and AI Platforms"
+  experience:
+    enabled: true
+    heading: "Experience and Expertise"
+    description: "Experience spans cloud-native platforms, data-intensive systems, and governance-critical modernization contexts."
+    items:
+      - name: "Cloud and Platform Teams"
+      - name: "Data and AI Programs"
+      - name: "Security and Risk Offices"
+      - name: "Engineering Leadership"
+      - name: "Regulated Industry Workloads"
+      - name: "Cross-Border Delivery"
+  cta:
+    enabled: true
+    heading: "Move From Reactive Fixes to Resilient System Design"
+    description: "Use the article hub to identify reusable patterns for reliability, traceability, and governance-by-design."
+    primary_label: "Open the Article Hub"
+    primary_url: "/articles/"
+    secondary_label: "Read Legal Notices"
+    secondary_url: "/legal/"
+
 references:
+  style: harvard
   compact_breakpoint: 900
   mobile_url_label_min: 18
   mobile_url_label_max: 52
@@ -105,6 +148,9 @@ legal_compliance_notice:
 
 markdown: kramdown
 highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
 kramdown:
   input: GFM
   syntax_highlighter: rouge
@@ -150,6 +196,7 @@ translate_reserved_words:
   - Zenith Law
 
 nav_pages:
+  - articles.md
   - literature.md
   - glossary.md
   - faq.md
@@ -159,6 +206,23 @@ glossary:
     enabled: true
     show_unapproved: false
     show_notice: false
+  auto_approve:
+    enabled: true
+    min_confidence: 7
+    require_related_post: true
+    terms:
+      - Support Vector Machine
+      - Support Vector Machines
+      - MCP
+      - A2A
+      - MCP A2A
+      - LangGraph
+      - LangChain
+      - Agent Card
+    patterns:
+      - '^mcp\b'
+      - '^a2a\b'
+      - "^support vector machine(s)?$"
 
 literature:
   default_profile: data-provenance

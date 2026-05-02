@@ -80,9 +80,16 @@ layout: section
         {%- for post in author_posts -%}
           <div class="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900">
             {% if post.image %}
+              {%- assign image_src = post.image | relative_url -%}
+              {%- if post.image_version -%}
+                {%- assign image_src = image_src
+                  | append: '?v='
+                  | append: post.image_version
+                -%}
+              {%- endif -%}
               <div class="overflow-hidden">
                 <img
-                  src="{{ post.image }}"
+                  src="{{ image_src }}"
                   alt="{{ post.title | escape }}"
                   class="aspect-video w-full object-cover"
                   loading="lazy"

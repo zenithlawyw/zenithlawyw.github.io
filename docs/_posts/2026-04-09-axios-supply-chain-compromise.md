@@ -42,6 +42,10 @@ This article reconstructs the axios npm compromise through a source-traceable me
 and the maintainer's [post-mortem thread](https://github.com/axios/axios/issues/10636#issuecomment-4180237789) {% include references/cite.html key="axios-2026-ref5" %}.
 The objective is practical explainability. Each lesson connects observable evidence to engineering decisions, then translates that connection into operational controls. Where evidence remains incomplete or inaccessible, the text marks the gap explicitly instead of masking uncertainty {% include references/cite.html key="axios-2026-ref6" %}.
 
+### Evidence Scope and Caution
+
+This article distinguishes incident-confirmed observations, cross-source inferences, and open questions. Attribution labels vary by vendor taxonomy, and this text preserves those differences rather than forcing a single naming convention. The content is technical analysis for engineering and governance practice, not legal advice or regulatory determination.
+
 ## Attack Reconstruction: Timeline and Mechanics
 
 Public reporting converges on a narrow timeline. On 30 to 31 March 2026, malicious axios versions `1.14.1` and `0.30.4` appeared on npm and propagated through normal dependency resolution flows {% include references/cite.html key="axios-2026-ref1" %}, {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}. Source reporting attributes the malicious behavior to dependency manipulation rather than direct source tampering in the axios codebase {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}. The inserted dependency `plain-crypto-js@4.2.1` executed an install-time path that launched `setup.js` during package installation {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.

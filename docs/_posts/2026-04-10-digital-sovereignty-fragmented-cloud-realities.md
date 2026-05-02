@@ -47,6 +47,10 @@ This article performs a close, source-graded reading of fifteen records that spa
 
 The analysis applies qualitative NLP techniques to the corpus, including sentiment profiling, semantic clustering, and constrained counterfactual framing. The practical output is a ten-lesson framework for engineering, security, legal compliance, platform operations, and governance teams. Each lesson incorporates explainability, interpretability, and trustworthiness as embedded operational criteria, not as detached theory.
 
+### Jurisdiction and Interpretation Boundary
+
+This article evaluates operating-model evidence and user-impact reports across multiple source tiers. It does not infer political intent from a single event and does not treat community posts as standalone proof. Where records conflict or remain incomplete, the analysis preserves uncertainty and flags the gap.
+
 ## Why This Matters
 
 Cross-border cloud planning for China now requires jurisdiction-aware architecture by default. Earlier assumptions treated global SaaS as one coherent operating surface. The current record shows a segmented reality where service availability, feature parity, escalation pathways, and data handling behavior can diverge by billing region, control ownership, and legal exposure {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref6" %}, {% include references/cite.html key="ds-2026-ref10" %}, {% include references/cite.html key="ds-2026-ref11" %}, {% include references/cite.html key="ds-2026-ref14" %}.

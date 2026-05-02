@@ -7,6 +7,14 @@
 {%- assign refs_arxiv_label_max = site.references.arxiv_label_max
   | default: 28
 -%}
+{%- assign post_date_iso = include.post_date_iso
+  | default: page.date
+  | date: '%Y-%m-%d'
+-%}
+{%- assign post_date_label = include.post_date_label
+  | default: page.date
+  | date: '%-d %B %Y'
+-%}
 {%- assign site_refs_style = site.references.style
   | default: site.references_style
 -%}
@@ -14,9 +22,38 @@
   | default: page.references_style
   | default: site_refs_style
   | default: 'ieee'
+  | strip
+  | remove: '"'
+  | remove: "'"
+  | remove: '’'
   | downcase
 -%}
 {%- assign refs_link_class = 'underline decoration-sky-300 underline-offset-2 hover:text-sky-700 dark:hover:text-sky-300' -%}
+{%- assign ref_is_online = false -%}
+{%- if item.url or item.doi or item.arXiv or item.arxiv -%}
+  {%- assign ref_is_online = true -%}
+{%- endif -%}
+{%- assign effective_accessed_iso = item.accessed_iso
+  | default: item.accessed_on
+  | default: ''
+-%}
+{%- assign effective_accessed_label = item.accessed_date | default: '' -%}
+{%- if effective_accessed_iso != ''
+  and post_date_iso != ''
+  and effective_accessed_iso > post_date_iso
+-%}
+  {%- assign effective_accessed_iso = post_date_iso -%}
+{%- endif -%}
+{%- if effective_accessed_iso == '' and ref_is_online -%}
+  {%- assign effective_accessed_iso = post_date_iso -%}
+{%- endif -%}
+{%- if effective_accessed_iso != '' -%}
+  {%- assign effective_accessed_label = effective_accessed_iso
+    | date: '%-d %B %Y'
+  -%}
+{%- elsif effective_accessed_label == '' and ref_is_online -%}
+  {%- assign effective_accessed_label = post_date_label -%}
+{%- endif -%}
 {%- assign has_structured_fields = false -%}
 {%- if item.text
   or item.authors
@@ -35,6 +72,9 @@
 {%- endif -%}
 
 {%- assign note_text = item.note | default: '' -%}
+{%- if note_text contains 'Legacy YAML citation preserved:' -%}
+  {%- assign note_text = '' -%}
+{%- endif -%}
 {%- capture note_html -%}
   {%- if note_text != '' -%}
     {%- assign note_words = note_text | split: ' ' -%}
@@ -91,6 +131,21 @@
   {%- assign doi_label = item.doi | slice: 0, doi_label_trim | append: '...' -%}
 {%- endif -%}
 
+{%- assign show_url_link = false -%}
+{%- if item.url and (item.doi == nil or item.doi == '') -%}
+  {%- assign show_url_link = true -%}
+{%- endif -%}
+{%- assign title_href = '' -%}
+{%- if item.doi -%}
+  {%- assign title_href = doi_href -%}
+{%- elsif item.url -%}
+  {%- assign title_href = item.url -%}
+{%- endif -%}
+{%- assign has_title_link = false -%}
+{%- if item.title and title_href != '' -%}
+  {%- assign has_title_link = true -%}
+{%- endif -%}
+
 {%- assign url_label = item.url -%}
 {%- if item.url -%}
   {%- assign url_label_trim = refs_url_label_max | minus: 3 -%}
@@ -126,17 +181,73 @@
     <span class="mr-2 font-semibold text-gray-900 dark:text-gray-100"
       >[{{ include.index }}]</span
     >
-    {%- if item.ieee -%}
-      {%- assign text_html = item.ieee | markdownify -%}
+    {%- if item.ieee_base -%}
+      {%- assign ieee_base_text = item.ieee_base -%}
+      {%- if has_title_link -%}
+        {%- capture linked_title -%}<a
+          class="{{ refs_link_class }}"
+          href="{{ title_href }}"
+          title="{{ title_href }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >{{ item.title }}</a>{%- endcapture -%}
+        {%- assign ieee_base_text = ieee_base_text
+          | replace_first: item.title, linked_title
+        -%}
+      {%- endif -%}
+      {%- assign text_html = ieee_base_text | markdownify -%}
       {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
+      {%- if item.doi -%}
+        doi:
+        <a
+          class="{{ refs_link_class }}"
+          href="{{ doi_href }}"
+          title="{{ item.doi }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{- doi_label -}}</a
+        >.
+      {%- endif -%}
+      {%- if effective_accessed_label != '' and ref_is_online -%}
+        {{ ' ' }}Accessed: {{ effective_accessed_label }}.
+      {%- endif -%}
+      {%- if note_html != '' -%}{{ note_html }}{%- endif -%}
+    {%- elsif item.ieee -%}
+      {%- assign ieee_text_without_accessed = item.ieee
+        | split: 'Accessed:'
+        | first
+        | strip
+      -%}
+      {%- assign text_html = ieee_text_without_accessed | markdownify -%}
+      {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
+      {%- if effective_accessed_label != '' and ref_is_online -%}
+        {{ ' ' }}Accessed: {{ effective_accessed_label }}.
+      {%- endif -%}
       {%- if note_html != '' -%}{{ note_html }}{%- endif -%}
     {%- elsif item.text -%}
       {%- assign text_html = item.text | markdownify -%}
       {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
+      {%- if effective_accessed_label != '' and ref_is_online -%}
+        {{ ' ' }}Accessed: {{ effective_accessed_label }}.
+      {%- endif -%}
       {%- if note_html != '' -%}{{ note_html }}{%- endif -%}
     {%- else -%}
       {%- if item.authors -%}{{ item.authors }},{%- endif -%}
-      {%- if item.title -%}"{{ item.title }}",{%- endif -%}
+      {%- if item.title -%}
+        {%- if has_title_link -%}
+          <a
+            class="{{ refs_link_class }}"
+            href="{{ title_href }}"
+            title="{{ title_href }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >"{{ item.title }}"</a
+          >,
+        {%- else -%}
+          "{{ item.title }}",
+        {%- endif -%}
+      {%- endif -%}
       {%- if item.journal -%}
         <em>{{ item.journal }}</em>,
       {%- elsif item.book -%}
@@ -164,31 +275,64 @@
           {{- doi_label -}}</a
         >.
       {%- endif -%}
-      {%- if item.url -%}
-        [Online]. Available:
-        <a
-          class="{{ refs_link_class }}"
-          href="{{ item.url }}"
-          title="{{ item.url }}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {{- url_label -}}</a
-        >.
+      {%- if effective_accessed_label != '' and ref_is_online -%}
+        {{ ' ' }}Accessed: {{ effective_accessed_label }}.
+      {%- elsif item.accessed -%}
+        {{ ' ' }}Accessed: {{ item.accessed }}.
       {%- endif -%}
-      {%- if item.accessed -%}Accessed: {{ item.accessed }}.{%- endif -%}
       {%- if note_html != '' -%}{{ note_html }}{%- endif -%}
     {%- endif -%}
   {%- elsif refs_style == 'harvard' -%}
-    {%- if item.harvard -%}
-      {%- assign text_html = item.harvard | markdownify -%}
+    {%- if item.harvard_base -%}
+      {%- assign harvard_base_text = item.harvard_base -%}
+      {%- if has_title_link -%}
+        {%- capture linked_title -%}<a
+          class="{{ refs_link_class }}"
+          href="{{ title_href }}"
+          title="{{ title_href }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >{{ item.title }}</a>{%- endcapture -%}
+        {%- assign harvard_base_text = harvard_base_text
+          | replace_first: item.title, linked_title
+        -%}
+      {%- endif -%}
+      {%- assign text_html = harvard_base_text | markdownify -%}
       {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
+      {%- if effective_accessed_label != '' and ref_is_online -%}
+        {{ ' ' }}Accessed: {{ effective_accessed_label }}.
+      {%- endif -%}
+      {%- if note_html != '' -%}{{ note_html }}{%- endif -%}
+    {%- elsif item.harvard -%}
+      {%- assign harvard_text_without_accessed = item.harvard
+        | split: 'Accessed:'
+        | first
+        | strip
+      -%}
+      {%- assign text_html = harvard_text_without_accessed | markdownify -%}
+      {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
+      {%- if effective_accessed_label != '' and ref_is_online -%}
+        Accessed: {{ effective_accessed_label }}.
+      {%- endif -%}
     {%- elsif has_structured_fields -%}
       {%- if item.authors -%}
         <span class="ref-authors">{{ item.authors }}</span>
       {%- endif -%}
       {%- if item.year -%}{{ item.year }}.{%- endif -%}
-      {%- if item.title -%}"{{ item.title }}".{%- endif -%}
+      {%- if item.title -%}
+        {%- if has_title_link -%}
+          <a
+            class="{{ refs_link_class }}"
+            href="{{ title_href }}"
+            title="{{ title_href }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >"{{ item.title }}"</a
+          >.
+        {%- else -%}
+          "{{ item.title }}".
+        {%- endif -%}
+      {%- endif -%}
       {%- if item.journal -%}
         <em>{{ item.journal }}</em>
         {%- if item.volume %}, {{ item.volume }}{% endif -%}
@@ -202,18 +346,6 @@
         .
       {%- endif -%}
       {%- if item.publisher -%}{{ item.publisher }}.{%- endif -%}
-      {%- if item.url -%}
-        Available at:
-        <a
-          class="{{ refs_link_class }}"
-          href="{{ item.url }}"
-          title="{{ item.url }}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {{- url_label -}}</a
-        >.
-      {%- endif -%}
       {%- if item.doi -%}
         doi:
         <a
@@ -226,7 +358,11 @@
           {{- doi_label -}}</a
         >.
       {%- endif -%}
-      {%- if item.accessed -%}Accessed {{ item.accessed }}.{%- endif -%}
+      {%- if effective_accessed_label != '' and ref_is_online -%}
+        Accessed: {{ effective_accessed_label }}.
+      {%- elsif item.accessed -%}
+        Accessed {{ item.accessed }}.
+      {%- endif -%}
     {%- else -%}
       {%- assign text_html = item | markdownify -%}
       {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
@@ -266,7 +402,7 @@
         .
       {%- endif -%}
 
-      {%- if item.url -%}
+      {%- if show_url_link -%}
         <a
           class="{{ refs_link_class }}"
           href="{{ item.url }}"
