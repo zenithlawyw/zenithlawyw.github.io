@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-04-23T19:34:59Z"
+generated_at: "2026-05-02T18:58:39Z"
 signal_weights:
   title: 3
   categories: 5
@@ -16,646 +16,682 @@ signal_weight_rationale:
   keywords_catchwords: Low weight to avoid over-amplifying manually supplied or potentially noisy token lists.
 keywords:
   - engineering
-  - data
   - governance
+  - data
+  - machine
+  - svm
+  - a2a
+  - mcp
   - supply
+  - model
   - chain
+  - support
   - provenance
   - lessons
+  - deployment
+  - questions
+  - vector
+  - acp
+  - learning
+  - practical
   - cloud
   - deadlock
-  - questions
-  - learning
+  - artificial
+  - intelligence
+  - orchestration
   - platform
-  - llm
-  - security
-  - china
-  - legal
-  - machine
-  - resource
-  - starvation
-  - fragmentation
-  - glossary
-  - npm
-  - conditions
-  - digital
+  - design
+  - systems
+  - agent
+  - benchmark
   - asked
   - frequently
-  - models
-  - systems
+  - china
+  - controls
+  - boundaries
+  - scope
+  - security
+  - trust
+  - tuning
+  - glossary
+  - llm
+  - agentic
+  - protocol
+  - resource
+  - legal
+  - architecture
+  - introduction
+  - starvation
+  - enterprise
+  - fragmentation
+  - npm
+  - conditions
+  - cross-border
+  - digital
+  - langchain
+  - langgraph
+  - language
+  - theory
   - access
   - coffman
+  - evaluation
   - graph
-  - language
   - large
+  - monitoring
+  - practice
+  - reference
   - transformer
-  - trust
   - attack
+  - classification
+  - har
+  - incident
   - knowledge
+  - management
   - operating
   - papers
   - sovereignty
   - axios
   - compliance
   - compromise
-  - incident
-  - practice
+  - layer
+  - reading
   - scheduling
   - search
+  - series
+  - tenant-aware
+  - tool
+  - uci
+  - confusion
   - cookies
-  - design
   - faq
-  - management
+  - interoperability
   - privacy
   - traceability
+  - analysis
   - circular
+  - claim
+  - cloud-native
   - credential
   - cybersecurity
+  - evidence
   - literature
+  - operational
+  - review
+  - teams
+  - deployable
+  - kernels
   - law
   - protection
   - residency
-  - theory
-  - artificial
+  - workflow
+  - apply
+  - calibration
+  - conclusion
   - contention
   - critical
+  - decision
   - definitions
-  - evidence
+  - difference
+  - first
+  - fit
+  - geometry
+  - implementation
   - inference
-  - intelligence
-  - introduction
+  - jurisdiction
+  - limits
   - lineage
   - links
   - networks
   - neural
+  - note
   - policy
   - priority
+  - production
   - prov-ml
-  - reading
-  - scope
-  - social
-  - teams
-  - alignment
-  - analysis
-  - answers
-  - disclaimer
-  - frontier
-  - notices
-  - prompt
+  - python
   - risk
+  - social
+  - start
+  - treat
+  - alignment
+  - answers
+  - communication
+  - deep
+  - disclaimer
+  - error
+  - frontier
+  - hub
+  - multi-agent
+  - notices
+  - observability
+  - playbook
+  - prompt
+  - quality
+  - reproducibility
+  - response
   - saas
   - scholarly
-  - blocked
-  - boundary
-  - collection
-  - concurrency
-  - difference
-  - distillation
-  - evaluation
-  - implement
-  - jurisdiction
-  - limits
-  - llms
-  - localization
-  - package
-  - personal
-  - practical
-  - resilient
-  - response
-  - review
-  - seo
-  - services
-  - technical
-  - timeline
-  - treat
-  - versions
-  - a-z
-  - attention
-  - azure
-  - gpt-3
-  - malicious
-  - prevention
-  - reproducibility
-  - resilience
-  - science
-  - trustworthy
   - work
-  - aeo
-  - aging
-  - apply
-  - architecture
+  - algorithm
   - best
-  - compromised
-  - control
-  - cookie
-  - cross-jurisdiction
-  - crossref
-  - dependencies
-  - domain
-  - external
-  - federated
-  - focus
-  - geo
-  - hallucination
-  - hub
-  - liability
-  - methods
-  - mutex
-  - notice
-  - open
-  - openalex
-  - preprocessing
-  - prevent
-  - recovery
-  - reference
-  - reliance
-  - restrictions
-  - semaphore
-  - statement
-  - surface
-  - token
-  - tooling
+  - better
 key_phrases:
   - supply chain
-  - data provenance
-  - engineering governance
-  - machine learning
+  - support vector
+  - support vector machine
+  - vector machine
+  - artificial intelligence
+  - mcp a2a
+  - a2a acp
+  - mcp a2a acp
   - asked questions
   - frequently asked
   - frequently asked questions
+  - machine learning
+  - engineering governance
+  - data provenance
+  - artificial intelligence artificial
+  - intelligence artificial
+  - intelligence artificial intelligence
+  - orchestration mcp
   - chain security
   - coffman conditions
+  - langgraph langchain
   - large language
+  - orchestration mcp a2a
   - supply chain security
   - data provenance machine
   - engineering lessons
+  - platform engineering
   - provenance machine
   - provenance machine learning
+  - agentic orchestration
+  - uci har
   - digital sovereignty
   - language models
   - large language models
   - axios npm
+  - a2a acp langgraph
+  - acp langgraph
+  - acp langgraph langchain
   - chain attack
   - data protection
   - data residency
   - supply chain attack
-  - artificial intelligence
   - governance data
   - graph neural
   - graph neural networks
+  - introduction scope
+  - model tuning
   - neural networks
   - operating systems
-  - platform engineering
   - resource contention
+  - scope claim
   - social engineering
+  - agentic orchestration mcp
   - cookies data
+  - enterprise agentic
+  - incident response
+  - model governance
   - npm supply
   - npm supply chain
   - privacy cookies
   - privacy cookies data
   - prompt engineering
   - traceability graph
-  - artificial intelligence artificial
   - axios npm supply
+  - claim classification
   - deadlock resource
   - deadlock resource contention
-  - incident response
-  - intelligence artificial
-  - intelligence artificial intelligence
+  - hong kong
+  - introduction scope claim
   - learning traceability
   - learning traceability graph
   - llm inference
+  - machine benchmark
   - machine learning traceability
+  - protocol design
+  - scope claim classification
+  - trust boundaries
   - trust provenance
+  - vector machine benchmark
   - cloud fragmentation
+  - confusion matrix
   - cookies data protection
   - governance digital
+  - har support
+  - har support vector
   - legal notices
   - platform fragmentation
+  - uci har support
+  - a2a acp agent
+  - acp agent
+  - acp agent interoperability
+  - agent interoperability
   - china cloud
+  - claim classification reference
+  - classification reference
+  - classification reference maintenance
   - cloud platform
   - critical evaluation
   - data lineage
   - deadlock theory
+  - deployment model
+  - deployment model governance
   - digital sovereignty cloud
   - faq hub
   - graph methods
   - knowledge distillation
   - lessons engineering
+  - machine series
+  - maintenance note
+  - model evaluation
   - mutex semaphore
   - priority aging
+  - reference maintenance
+  - reference maintenance note
   - seo geo
   - sovereignty cloud
+  - svm strong
+  - vector machine series
   - a-z definitions
   - a-z definitions engineering
+  - acp practical
+  - agent card
+  - agent interoperability protocol
+  - agent manifest
   - applied supply
+  - artificial intelligence design
+  - artificial intelligence platform
+  - benchmark confusion
+  - benchmark confusion matrix
+  - boundaries enterprise
   - chain security cloud
   - chain security social
+  - classification model
+  - classification model tuning
   - cloud compliance
   - cloud compliance platform
   - cloud fragmentation scheduling
   - compliance platform
   - compliance platform engineering
-  - concurrency supply
-  - concurrency supply chain
-  - contention concurrency
-  - contention concurrency supply
-  - cybersecurity platform
-  - cybersecurity platform engineering
-  - deadlock deadlock
-  - definitions engineering
-  - definitions engineering governance
-  - design cybersecurity
-  - design cybersecurity platform
-  - digital governance
-  - digital governance digital
-  - engineering governance law
-  - engineering incident
-  - engineering incident response
-  - engineering risk
-  - engineering risk management
-  - fragmentation scheduling
-  - fragmentation scheduling starvation
-  - geo aeo
-  - glossary a-z
-  - glossary a-z definitions
-  - governance data provenance
-  - governance data residency
-  - governance law
-  - governance legal
-  - governance lessons
-  - incident response trust
-  - knowledge space
-  - language models transformer
-  - legal policy
-  - management deadlock
-  - management governance
-  - management governance data
-  - models transformer
-  - models transformer prompt
-  - networks reproducibility
-  - networks reproducibility governance
-  - neural networks reproducibility
-  - openalex crossref
-  - operating systems design
-  - papers scholarly
-  - papers scholarly literature
-  - platform engineering risk
-  - prompt engineering governance
-  - reproducibility governance
-  - reproducibility governance data
-  - resilience thread
-  - resilience thread management
-  - resource contention concurrency
-  - response trust
-  - response trust provenance
-  - risk management
-  - risk management governance
-  - scheduling starvation
-  - scheduling starvation resilience
-  - scholarly literature
-  - security cloud
-  - security cloud fragmentation
+  - conclusion introduction
 catchwords:
   - engineering
   - governance
+  - machine
   - supply
+  - model
   - chain
+  - support
   - provenance
   - lessons
+  - deployment
+  - questions
+  - vector
+  - learning
+  - practical
   - cloud
   - deadlock
-  - questions
-  - learning
+  - artificial
+  - intelligence
+  - orchestration
   - platform
-  - security
-  - china
-  - legal
-  - machine
-  - resource
-  - starvation
-  - fragmentation
-  - glossary
-  - conditions
-  - digital
+  - design
+  - systems
+  - agent
+  - benchmark
   - asked
   - frequently
-  - models
-  - systems
+  - china
+  - controls
+  - boundaries
+  - scope
+  - security
+  - trust
+  - tuning
+  - glossary
+  - agentic
+  - protocol
+  - resource
+  - legal
+  - architecture
+  - introduction
+  - starvation
+  - enterprise
+  - fragmentation
+  - conditions
+  - cross-border
+  - digital
+  - langchain
+  - langgraph
+  - language
+  - theory
   - access
   - coffman
+  - evaluation
   - graph
-  - language
   - large
+  - monitoring
+  - practice
+  - reference
   - transformer
-  - trust
   - attack
+  - classification
+  - incident
   - knowledge
+  - management
   - operating
   - papers
   - sovereignty
   - axios
   - compliance
   - compromise
-  - incident
-  - practice
+  - layer
+  - reading
   - scheduling
   - search
+  - series
+  - tenant-aware
+  - confusion
   - cookies
-  - design
-  - management
+  - interoperability
   - privacy
   - traceability
+  - analysis
   - circular
+  - claim
+  - cloud-native
   - credential
   - cybersecurity
+  - evidence
   - literature
+  - operational
+  - review
+  - teams
+  - deployable
+  - kernels
   - protection
   - residency
-  - theory
-  - artificial
+  - workflow
+  - apply
+  - calibration
+  - conclusion
   - contention
   - critical
+  - decision
   - definitions
-  - evidence
+  - difference
+  - first
+  - geometry
+  - implementation
   - inference
-  - intelligence
-  - introduction
+  - jurisdiction
+  - limits
   - lineage
   - links
   - networks
   - neural
   - policy
   - priority
+  - production
   - prov-ml
-  - reading
-  - scope
+  - python
   - social
-  - teams
-  - alignment
-  - analysis
-  - answers
-  - disclaimer
-  - frontier
-  - notices
-  - prompt
-  - scholarly
-  - blocked
-  - boundary
-  - collection
-  - concurrency
-  - difference
-  - distillation
-  - evaluation
-  - implement
-  - jurisdiction
-  - limits
-  - localization
-  - package
-  - personal
-  - practical
-  - resilient
-  - response
-  - review
-  - services
-  - technical
-  - timeline
+  - start
   - treat
-  - versions
-  - attention
-  - azure
-  - gpt-3
-  - malicious
-  - prevention
+  - alignment
+  - answers
+  - communication
+  - disclaimer
+  - error
+  - frontier
+  - multi-agent
+  - notices
+  - observability
+  - playbook
+  - prompt
+  - quality
   - reproducibility
-  - resilience
-  - science
-  - trustworthy
-  - aging
-  - apply
-  - architecture
-  - compromised
-  - control
-  - cookie
-  - cross-jurisdiction
-  - crossref
-  - dependencies
-  - domain
-  - external
-  - federated
-  - focus
-  - hallucination
-  - liability
-  - methods
-  - mutex
-  - notice
-  - openalex
-  - preprocessing
-  - prevent
-  - recovery
-  - reference
-  - reliance
-  - restrictions
-  - semaphore
-  - statement
-  - surface
-  - token
-  - tooling
+  - response
+  - scholarly
+  - algorithm
+  - better
 catchphrases:
   - frequently asked questions
+  - agent card
+  - agent manifest
+  - 1 foundational margin theory
+  - 1 lock preprocessing contracts
+  - 2 algorithm diversification
   - 2 partnership models shift accountability maps
   - 4 semantic versioning convenience systematically enables supply chain propagation
   - 6 communication infrastructure carries hidden regulatory friction
   - acceptable conduct
   - automated candidate moderation
+  - common design mistakes
+  - container packaging
   - current website-specific practices
+  - durable execution
   - engagement boundary
+  - enterprise architecture considerations
   - faq overview
   - glossary overview
+  - hyperparameter stability signal
   - intellectual property
   - jurisdiction map
   - jurisdiction note
+  - layer 1 orchestrator service
+  - layer 2b optional acp-compatible interop edge
+  - layer 3 tooling behind mcp
+  - layer b decision behavior
   - legal notices
   - liability allocation
   - liability boundary
+  - observability requirements
   - official reference points
+  - operational documentation cadence
+  - pca geometry reading
   - persona-driven requirements
+  - practical decision framework
   - semaphores counter-based access control
+  - series roadmap
+  - step-by-step tuning workflow
+  - structured validation
+  - suggested repository shape
+  - tenant-aware operation
+  - tenant-aware orchestration controls
   - thematic analysis
 search_words:
   - engineering
-  - data
   - governance
+  - data
+  - machine
+  - svm
+  - a2a
+  - mcp
   - supply
+  - model
   - chain
+  - support
   - provenance
   - lessons
+  - deployment
+  - questions
+  - vector
+  - acp
+  - learning
+  - practical
   - cloud
   - deadlock
-  - questions
-  - learning
+  - artificial
+  - intelligence
+  - orchestration
   - platform
-  - llm
-  - security
-  - china
-  - legal
-  - machine
-  - resource
-  - starvation
-  - fragmentation
-  - glossary
-  - npm
-  - conditions
-  - digital
+  - design
+  - systems
+  - agent
+  - benchmark
   - asked
   - frequently
-  - models
-  - systems
+  - china
+  - controls
+  - boundaries
+  - scope
+  - security
+  - trust
+  - tuning
+  - glossary
+  - llm
+  - agentic
+  - protocol
+  - resource
+  - legal
+  - architecture
+  - introduction
+  - starvation
+  - enterprise
+  - fragmentation
+  - npm
+  - conditions
+  - cross-border
+  - digital
+  - langchain
+  - langgraph
+  - language
+  - theory
   - access
   - coffman
+  - evaluation
   - graph
-  - language
   - large
+  - monitoring
+  - practice
+  - reference
   - transformer
-  - trust
   - attack
+  - classification
+  - har
+  - incident
   - knowledge
+  - management
   - operating
   - papers
   - sovereignty
   - axios
   - compliance
   - compromise
-  - incident
-  - practice
+  - layer
+  - reading
   - scheduling
   - search
+  - series
+  - tenant-aware
+  - tool
+  - uci
+  - confusion
   - cookies
-  - design
   - faq
-  - management
-  - privacy
-  - traceability
-  - circular
-  - credential
-  - cybersecurity
-  - literature
-  - law
-  - protection
-  - residency
-  - theory
-  - artificial
-  - contention
-  - critical
-  - definitions
-  - evidence
-  - inference
-  - intelligence
-  - introduction
-  - lineage
-  - links
-  - networks
-  - neural
-  - policy
-  - priority
-  - prov-ml
-  - reading
-  - scope
-  - social
-  - teams
-  - alignment
-  - analysis
-  - answers
-  - disclaimer
-  - frontier
-  - notices
-  - prompt
-  - risk
-  - saas
-  - scholarly
+  - interoperability
   - supply chain
-  - data provenance
-  - engineering governance
-  - machine learning
+  - support vector
+  - support vector machine
+  - vector machine
+  - artificial intelligence
+  - mcp a2a
+  - a2a acp
+  - mcp a2a acp
   - asked questions
   - frequently asked
   - frequently asked questions
+  - machine learning
+  - engineering governance
+  - data provenance
+  - artificial intelligence artificial
+  - intelligence artificial
+  - intelligence artificial intelligence
+  - orchestration mcp
   - chain security
   - coffman conditions
+  - langgraph langchain
   - large language
+  - orchestration mcp a2a
   - supply chain security
   - data provenance machine
   - engineering lessons
+  - platform engineering
   - provenance machine
   - provenance machine learning
+  - agentic orchestration
+  - uci har
   - digital sovereignty
   - language models
   - large language models
   - axios npm
+  - a2a acp langgraph
+  - acp langgraph
+  - acp langgraph langchain
   - chain attack
   - data protection
   - data residency
   - supply chain attack
-  - artificial intelligence
   - governance data
   - graph neural
   - graph neural networks
+  - introduction scope
+  - model tuning
   - neural networks
   - operating systems
-  - platform engineering
   - resource contention
+  - scope claim
   - social engineering
+  - agentic orchestration mcp
   - cookies data
+  - enterprise agentic
+  - incident response
+  - model governance
   - npm supply
   - npm supply chain
   - privacy cookies
   - privacy cookies data
   - prompt engineering
   - traceability graph
-  - artificial intelligence artificial
   - axios npm supply
+  - claim classification
   - deadlock resource
   - deadlock resource contention
-  - incident response
-  - intelligence artificial
-  - intelligence artificial intelligence
+  - hong kong
+  - introduction scope claim
   - learning traceability
-  - learning traceability graph
-  - llm inference
-  - machine learning traceability
-  - trust provenance
-  - cloud fragmentation
-  - cookies data protection
-  - governance digital
-  - legal notices
-  - platform fragmentation
-  - china cloud
-  - cloud platform
-  - critical evaluation
-  - data lineage
-  - deadlock theory
-  - digital sovereignty cloud
-  - faq hub
-  - graph methods
-  - knowledge distillation
-  - lessons engineering
-  - mutex semaphore
-  - priority aging
-  - seo geo
-  - sovereignty cloud
 global_questions:
+  - question: How do I know whether to start with linear or RBF SVM?
+    answer: Start with linear SVM, inspect residual and class-pair errors, then move to RBF only when validation evidence shows nonlinear boundaries that linear regularization cannot recover.
   - question: How should teams use community incident reports without spreading errors?
     answer: Treat community reports as intake signals. Require independent corroboration through status pages, policy documents, support records, or contractual notices before escalation. This method preserves speed without sacrificing evidence quality.
   - question: What is the best next step for readers who want to go deeper?
     answer: Run a broader review that includes MLflow, OpenLineage, Pachyderm, and DVC literature, then test candidate approaches against your production constraints and governance requirements.
+  - question: What is the single most important SVM deployment control?
+    answer: Class-level monitoring with confusion-corridor tracking, because it reveals high-impact degradation earlier than aggregate accuracy.
   - question: How are keywords matched against papers?
     answer: Matching runs against each record's title and abstract. "All keywords must match" narrows results to items where every keyword appears; "Any keyword may match" broadens results to items containing at least one keyword. Switching modes is the fastest way to widen a narrow search.
   - question: How do I change cookie preferences later?
     answer: Use the **Cookie Preferences** control in the site footer or open [Cookie Preferences]() from the legal page.
+  - question: How do I keep this useful beyond one benchmark?
+    answer: Publish reproducible artifacts, versioned diagnostics, and post-release failure analyses so others can learn methods, not only final numbers.
   - question: How do I know if my environment is affected?
     answer: Investigate systems that resolved or installed affected axios versions during the exposure window and hunt for reported indicators, including `sfrclak[.]com` and platform payload artifacts.
+  - question: How do tenant-aware and cross-border controls affect protocol design?
+    answer: They require explicit policy partitioning, region-aware data handling, and identity federation choices that remain portable across clouds and partner ecosystems. Protocol layering helps preserve those controls without excessive custom glue.
   - question: How does Knowledge Space work?
     answer: Select a research focus domain or enter your own keywords, choose your sources, and click Search Literature. Knowledge Space fetches recent papers and preprints in real time from the APIs you selected, filters by your keywords and match mode, and returns paginated results ready to explore.
+  - question: How often should SVM models be retrained?
+    answer: Use drift and corridor-trigger thresholds rather than fixed calendar frequency, then validate stability against the previous release before promotion.
+  - question: How should I test agent-to-agent workflows without creating flaky suites?
+    answer: Separate contract tests from end-to-end tests. Use mocked or local A2A agents for protocol checks, then run a smaller number of containerized end-to-end workflows for full-path validation.
+  - question: How should I use confusion corridors in production?
+    answer: Track the highest-frequency class transitions as explicit alert channels and tie retraining or threshold updates to corridor-specific drift.
+  - question: How should enterprises handle cross-border and tenant-aware agent orchestration?
+    answer: Use protocol layering with explicit tenant policy boundaries, jurisdiction-aware data controls, and portable identity patterns. Keep integration contracts vendor-agnostic and preserve audit trails across all delegated tasks and tool invocations.
   - question: How was the maintainer's account compromised?
     answer: Public reports did not conclusively publish every credential theft detail at first disclosure. Mandiant tradecraft reporting plus the maintainer post-mortem context supports social engineering as a credible precursor pattern.
   - question: What central message unifies all sources in this revised collection?
@@ -666,10 +702,24 @@ global_questions:
     answer: Quarantine affected hosts, rotate exposed credentials, inspect CI logs for vulnerable installs, and remediate by replacing compromised dependencies with known-good versions.
   - question: What is the axios npm supply chain attack?
     answer: Attackers published malicious axios versions on npm that introduced `plain-crypto-js@4.2.1`, which executed install-time malware delivery across multiple operating systems.
+  - question: What is the first observability signal I should add?
+    answer: Add end-to-end tracing that ties one user request to one orchestration run, all delegated A2A tasks, and all MCP tool calls. Without that lineage, later debugging becomes unnecessarily speculative.
+  - question: What is the main difference among MCP, A2A, and ACP?
+    answer: MCP connects models or hosts to tools, resources, and prompts. A2A connects autonomous agents through task lifecycle collaboration. ACP defines a REST-oriented agent interoperability model with manifest and run semantics.
+  - question: What is the main reason to learn SVM in 2026 if deep models are common?
+    answer: SVM gives a transparent optimization framework that remains highly useful for structured, medium-scale classification and for disciplined baseline construction before scaling to heavier architectures.
+  - question: What is the simplest deployable architecture for MCP, A2A, and ACP-aware interoperability?
+    answer: One orchestrator service plus two or three specialist agents is enough. The orchestrator uses A2A to delegate tasks. Each specialist agent uses MCP to reach concrete tools and resources. ACP-compatible facades can be added at partner-facing boundaries where REST-native interoperability is required.
   - question: What practical control should enterprises implement first?
     answer: Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority aligns with observed access and notification disruptions in the corpus.
+  - question: What should I monitor first when training SVM models?
+    answer: Monitor per-class recall, pairwise confusion flows, and hyperparameter stability across folds before relying on top-line accuracy.
   - question: What should an enterprise implement first after reading this analysis?
     answer: Start with a minimal governance baseline. Define approved use cases. Define prompt versioning rules. Define output verification requirements. Define escalation procedures for harmful or ungrounded responses. This sequence converts theory into immediate control coverage.
+  - question: What should teams prototype first when they are unsure?
+    answer: Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. If the boundary is still ambiguous, model the remote side's expected autonomy before choosing a protocol.
+  - question: Why compare R and Python if both use libsvm-style tooling?
+    answer: Parity checks still matter because they expose silent preprocessing or CV mismatches and improve reproducibility across mixed-language teams.
   - question: Why do result counts vary by source?
     answer: API coverage, indexing frequency, metadata completeness, and availability differ across providers. OpenAlex and Crossref emphasize broad scholarly metadata, and publication typing may vary by source. Combining both sources usually yields broader and more resilient discovery coverage than relying on one source alone.
   - question: Why keep discussing preprocessing provenance?
@@ -682,6 +732,8 @@ global_questions:
     answer: "Personal data may be used to: - operate, secure, maintain, and improve the website; - understand readership, traffic sources, and content performance"
   - question: Is PROV-ML already a standard?
     answer: In this evidence set, PROV-ML is best described as a proposed representation with promising applied evidence in a specific domain context.
+  - question: Should I start new projects with ACP or A2A for agent-to-agent collaboration?
+    answer: For many long-lived greenfield collaborations, A2A is often a lower-regret default today because of active protocol momentum and documented ACP convergence direction. ACP patterns remain useful for REST-first interoperability edges and migration-minded design.
   - question: What is alignment in large language models?
     answer: Alignment is the process of training or constraining an LLM so its outputs are helpful, honest, and harmless relative to intended use. The main techniques include supervised fine-tuning (SFT) on curated question-answer pairs, reinforcement learning from human feedback (RLHF) where human raters score responses and a reward model is trained on those preferences, and constitutional AI methods where the model critiques its own outputs against stated principles. Alignment does not eliminate all failure modes; recent aligned models report improved refusal behavior on specific benchmark suites, not universal reliability. Claims about alignment effectiveness should be evaluated within the reported evaluation setup rather than generalized.
   - question: What is hallucination in LLMs and how do you prevent it?
@@ -690,6 +742,20 @@ global_questions:
     answer: Fine-tuning updates model weights on a curated dataset, adapting the model's internal representations and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in Yang et al.'s practitioner survey.
   - question: Why do AI restrictions feel sharper than other SaaS restrictions?
     answer: Recent records show AI access decisions integrating strategic and ownership criteria in addition to geography. This creates faster policy asymmetry across regions and legal entities. Engineering teams need provider abstraction and contingency model pathways.
+  - question: Why is macro F1 not enough for SVM evaluation?
+    answer: Macro F1 averages class behavior and can hide concentrated failure corridors that dominate real-world risk, especially in near-neighbor class pairs.
+  - question: Can A2A replace MCP for tool use?
+    answer: It can, but it is usually wasteful. Simple tools do not benefit much from peer-agent ceremony. A2A shines when the remote side behaves like a collaborator, not just a callable capability.
+  - question: Can MCP replace A2A in a multi-agent system?
+    answer: Only in narrow cases. If the “other agent” is really acting like a stateless or tightly bounded capability, MCP can be sufficient. Once the remote side owns task state, asynchronous progress, artifact delivery, or agent discovery, A2A is usually the cleaner protocol fit.
+  - question: Do I need supply-chain controls for an internal agent platform?
+    answer: In most organizations, supply-chain controls are advisable even for internal agent platforms based on risk profile, regulatory exposure, and internal assurance requirements. Internal platforms still ship containers, dependencies, and artifacts that can be tampered with or misattributed.
+  - question: Do these practices apply identically across UK, EU, US, Canada, Hong Kong, China, and Australia?
+    answer: No. Privacy, transfer, residency, and sector-specific obligations vary by jurisdiction and industry. Use these practices as technical design guidance and validate legal and regulatory requirements for each operating context.
+  - question: Do these recommendations apply identically across UK, EU, US, Canada, Hong Kong, China, and Australia?
+    answer: No. Privacy, transfer, and sector-specific obligations vary by jurisdiction and industry. Treat protocol guidance as architecture input and confirm legal and regulatory requirements for the specific operating context.
+  - question: Does better RF accuracy mean SVM is a bad model?
+    answer: No. It means RF is the better fit for this specific dataset geometry and operating objective; SVM can still be strong in other structured regimes.
   - question: Does localization always reduce service quality?
     answer: Localization does not automatically reduce quality. Breakdown appears when architecture, governance, and communication design remain globally uniform while constraints are region-specific. Quality depends on explicit regional control planes and migration safeguards.
   - question: How do Coffman conditions apply to LLM inference and token scheduling?
@@ -706,12 +772,20 @@ global_questions:
     answer: "The [Transformer](<https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)>) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the model's dimensional space."
   - question: How should researchers and educators reuse these materials responsibly?
     answer: Use short quotations only when wording precision matters. Prefer paraphrase for interpretation. Maintain explicit attribution. Preserve links to original context. Where applicable under UK law, assess whether CDPA 1988 ss. 29 (research/private study) and 31A (text and data analysis for non-commercial research) conditions are genuinely satisfied before reuse. This applies equally to video content and to published scholarly works.
+  - question: Is ACP obsolete now that it is converging with A2A?
+    answer: ACP remains important for architecture learning and for existing deployments. New strategy should account for announced convergence and migration direction toward A2A to reduce future integration churn.
+  - question: Is MCP more secure than A2A?
+    answer: Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services.
   - question: Is any data stored when I search?
     answer: Fetched literature records are not stored in application-level persistent storage. Limited browser-side session state may be used for security and rate protection during your session. Normal operational logs from hosting, edge, or analytics services may still apply independently under their own policies.
+  - question: Is one-class SVM the same as unsupervised clustering?
+    answer: No. One-class SVM estimates support for a target distribution and is mainly used for novelty/outlier detection rather than multi-cluster partitioning.
   - question: Is the reported 91.3% GCN figure a universal result?
     answer: No. It is a paper-reported result in one evaluation context. This review does not treat it as a universal benchmark.
   - question: Is this legal advice or a professional recommendation?
     answer: No. Knowledge Space is an informational research-discovery tool only, not legal advice or a professional recommendation. For jurisdiction-specific legal or compliance decisions, consult qualified counsel in the relevant jurisdiction. Mandatory local consumer and data protection rights remain fully unaffected.
+  - question: Should I choose LangGraph or LangChain for orchestration?
+    answer: Choose LangGraph when you need explicit durable workflow control. Use LangChain on top when its higher-level abstractions improve development speed without hiding critical execution logic.
   - question: Should teams deploy provenance tooling immediately after reading this article?
     answer: Use this article as orientation, not as a deployment checklist. Before adoption decisions, compare against your own stack, load profile, compliance obligations, and failure modes.
   - question: What are the four Coffman conditions for deadlock?
@@ -732,10 +806,28 @@ global_questions:
     answer: "Deadlock is a cycle in which no involved thread can make progress: every waiting thread holds a resource that another waiting thread needs, so the entire set is permanently blocked. Starvation is a state in which one specific thread is indefinitely denied access while other threads do make progress. Round-robin and first-come-first-serve scheduling prevent starvation; resource ordering, atomic acquisition, and the [Banker's algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm) prevent deadlock. Both pathologies appear in LLM inference queues and software supply chains."
   - question: What tools are used for data provenance in machine learning?
     answer: "Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier, Pina et al. integrate separate lifecycle tools using DNNProv and Chapman et al.'s preprocessing capture, and Souza et al. extend ProvLake with the PROV-ML vocabulary. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem."
+  - question: Where A2A Is the Better Fit?
+    answer: "A2A is usually the better fit when the remote surface is autonomous enough that it should own its own execution strategy, task state, and multi-turn interaction loop. Typical cases include: 1. A planning agent delegates vendor onboarding to a compliance agent that may require documents, approvals, and asynchronous review."
+  - question: Where MCP Is the Better Fit?
+    answer: "MCP is usually the better fit when the remote surface is deterministic enough that the caller should experience it as a bounded capability rather than an independent partner. Typical cases include: 1. A coding agent needs filesystem access, a browser automation tool, and a deployment command surface."
   - question: Which sources best support deep technical understanding?
     answer: The strongest technical depth appears in Vaswani et al., Brown et al., and the Stanford, MIT, StatQuest, and Yannic Kilcher materials, because they explain objective functions, attention mechanics, and scaling behavior with explicit procedural detail. Yang et al.'s distillation survey and Ren et al.'s federated foundation model survey add the deployment and compression dimensions.
+  - question: Why RF Wins Here Without Invalidating SVM Theory?
+    answer: "This benchmark does not contradict large-margin foundations. It shows that tree ensembles can better absorb overlap-heavy feature neighborhoods in this dataset. SVM remains theoretically coherent and operationally useful, but not the strongest empirical fit for these class corridors in this run. Model selection therefore becomes conditional: 1. Use SVM when boundary control and disciplined regularization are priorities."
+  - question: Why Start with Theory Before Benchmarks?
+    answer: "Benchmarks answer who won on one dataset. Theory answers why a model should or should not be expected to generalize when the data distribution, noise profile, feature scale, or class geometry changes. In SVM, this distinction is fundamental because expected behavior is tied to margin control, loss penalties, and kernel-induced geometry, not to any universal default configuration. The first reason to start with theory is statistical: SVM is built around structural risk minimization, where the margin acts as a capacity control mechanism. Soft-margin optimization formalizes the trade-off between fitting training data and preserving a boundary that is less sensitive to perturbations. Without this framing, hyperparameter choice becomes trial-and-error tuning rather than a controlled bias-variance decision. The second reason is optimization reliability. Classical SVM training is convex, so the objective has a global optimum under the chosen formulation. That property sharply changes how results should be interpreted compared with non-convex learners where optimizer path and initialization can dominate outcomes. Theory therefore tells you when score differences reflect model assumptions and data geometry, not unstable optimization trajectories."
   - question: Will search still work if I reject analytics cookies?
     answer: Yes. Search and result browsing remain available. Rejecting analytics only stops optional GA4 or GTM usage measurement events for page interactions and search activity.
+  - question: When should I calibrate SVM probabilities?
+    answer: Calibrate whenever scores are consumed as confidence or risk thresholds in downstream workflows; margin rankings alone are insufficient for probability-driven decisions.
+  - question: When should I use both MCP and A2A together?
+    answer: Use both when agents collaborate across system boundaries, but each agent still needs structured tool and data access within its own execution environment. That is the most common production-grade pattern.
+  - question: Where ACP Patterns Still Matter?
+    answer: "ACP patterns remain valuable when teams need: 1. REST-native agent integration through existing API gateways and service governance controls. 2. OpenAPI-documented run endpoints that align with established enterprise integration practices."
+  - question: Where SVM Is a Strong Fit?
+    answer: "SVM remains effective when: 1. Data is medium-scale with controlled feature engineering. 2. Classes are not severely imbalanced."
+  - question: Which Python packages are enough to start building this stack?
+    answer: For a practical Python-first baseline, `mcp`, `a2a-sdk`, `langgraph`, `langchain`, `fastapi`, `pydantic`, `pytest`, `httpx`, `opentelemetry-sdk`, `uvicorn`, and Docker-based packaging are sufficient for a strong first slice.
   - question: Which sources best support practical implementation teams?
     answer: Google Cloud Tech and AI Search provide direct implementation value for teams that need prompt design guidance and user-facing framing for model behavior. Yang et al.'s practitioner survey on ChatGPT and beyond adds empirical guidance on when to use LLMs versus fine-tuned models for specific NLP tasks.
   - question: Which sources does this tool search?
@@ -777,6 +869,7 @@ posts:
       - unc1069
       - attribution
       - defense
+      - evidence
       - maintainer
       - malware
       - removal
@@ -788,7 +881,6 @@ posts:
       - nickel
       - postinstall
       - resilient
-      - sapphire
       - supply chain security
       - social engineering
       - incident response
@@ -802,22 +894,22 @@ posts:
       - npm supply
       - npm supply chain
       - axios npm supply
-      - incident response
       - trust provenance
+      - incident response
       - supply chain security
       - chain security
       - chain security social
-      - security social
       - security social engineering
-      - engineering incident
       - response trust
+      - engineering incident
+      - response trust provenance
+      - security social
+      - incident response trust
       - social engineering incident
       - engineering incident response
-      - incident response trust
-      - response trust provenance
+      - trust provenance supply
+      - provenance supply chain
       - supply chain compromise
-      - chain defense
-      - engineering lessons
     catchwords:
       - chain
       - supply
@@ -842,11 +934,11 @@ posts:
       - unc1069
       - attribution
       - defense
+      - evidence
       - maintainer
       - malware
       - removal
       - timeline
-      - analysis
     search_words:
       - chain
       - supply
@@ -874,8 +966,8 @@ posts:
       - npm supply
       - npm supply chain
       - axios npm supply
-      - incident response
       - trust provenance
+      - incident response
       - supply chain security
       - chain security
     questions:
@@ -924,6 +1016,7 @@ posts:
       - bifurcation
       - community
       - cross-border
+      - jurisdiction
       - regulatory
       - chatgpt
       - practice
@@ -934,7 +1027,6 @@ posts:
       - analysis
       - architect
       - architectures
-      - asked
       - digital sovereignty
       - cloud compliance
       - platform engineering
@@ -987,12 +1079,12 @@ posts:
       - bifurcation
       - community
       - cross-border
+      - jurisdiction
       - regulatory
       - chatgpt
       - practice
       - salesforce
       - unity
-      - accountability
     search_words:
       - china
       - cloud
@@ -1483,6 +1575,726 @@ posts:
         answer: Priority aging is a scheduling technique in which a waiting thread's effective priority increases incrementally over time, ensuring low-priority requests are eventually scheduled even when higher-priority requests arrive continuously. It prevents indefinite starvation while preserving responsiveness for high-priority work. Applied to LLM inference queues, priority aging ensures that batch offline jobs are not permanently blocked by interactive user requests, which is the scenario described in the [LLM Inference and Token Schedulers](#llm-inference-and-token-schedulers-priority-starvation) section.
       - question: What is the difference between deadlock and starvation?
         answer: "Deadlock is a cycle in which no involved thread can make progress: every waiting thread holds a resource that another waiting thread needs, so the entire set is permanently blocked. Starvation is a state in which one specific thread is indefinitely denied access while other threads do make progress. Round-robin and first-come-first-serve scheduling prevent starvation; resource ordering, atomic acquisition, and the [Banker's algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm) prevent deadlock. Both pathologies appear in LLM inference queues and software supply chains."
+  support-vector-machine-practical-guide-kernels-margin-tuning:
+    title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
+    url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+    keywords:
+      - svm
+      - machine
+      - support
+      - vector
+      - kernels
+      - practical
+      - classification
+      - learning
+      - model
+      - algorithm
+      - tuning
+      - margins
+      - linear
+      - artificial
+      - intelligence
+      - choice
+      - choices
+      - core
+      - decision
+      - deep
+      - fit
+      - guide
+      - rbf
+      - series
+      - start
+      - strong
+      - theory
+      - variants
+      - selection
+      - asked
+      - behavior
+      - benchmark
+      - support vector machine
+      - machine learning
+      - model tuning
+      - artificial intelligence
+      - what is support vector machine
+      - how svm works
+      - svm margin intuition
+      - svm kernel selection
+    key_phrases:
+      - support vector
+      - vector machine
+      - support vector machine
+      - machine learning
+      - kernels support vector
+      - tuning kernels support
+      - model tuning kernels
+      - classification model tuning
+      - learning classification model
+      - machine learning classification
+      - machine machine learning
+      - vector machine machine
+      - kernels support
+      - tuning kernels
+      - model tuning
+      - classification model
+      - learning classification
+      - machine machine
+      - artificial intelligence
+      - margins kernels
+      - intelligence artificial intelligence
+      - artificial intelligence artificial
+      - intelligence artificial
+      - svm strong fit
+    catchwords:
+      - machine
+      - support
+      - vector
+      - kernels
+      - practical
+      - classification
+      - learning
+      - model
+      - algorithm
+      - tuning
+      - margins
+      - linear
+      - artificial
+      - intelligence
+      - choice
+      - choices
+      - decision
+      - guide
+      - series
+      - start
+      - strong
+      - theory
+      - variants
+      - selection
+      - asked
+      - behavior
+      - benchmark
+    search_words:
+      - svm
+      - machine
+      - support
+      - vector
+      - kernels
+      - practical
+      - classification
+      - learning
+      - model
+      - algorithm
+      - tuning
+      - margins
+      - linear
+      - artificial
+      - intelligence
+      - choice
+      - choices
+      - support vector
+      - vector machine
+      - support vector machine
+      - machine learning
+      - kernels support vector
+      - tuning kernels support
+      - model tuning kernels
+      - classification model tuning
+      - learning classification model
+      - machine learning classification
+      - machine machine learning
+      - vector machine machine
+    questions:
+      - question: How do I know whether to start with linear or RBF SVM?
+        answer: Start with linear SVM, inspect residual and class-pair errors, then move to RBF only when validation evidence shows nonlinear boundaries that linear regularization cannot recover.
+      - question: What is the main reason to learn SVM in 2026 if deep models are common?
+        answer: SVM gives a transparent optimization framework that remains highly useful for structured, medium-scale classification and for disciplined baseline construction before scaling to heavier architectures.
+      - question: What should I monitor first when training SVM models?
+        answer: Monitor per-class recall, pairwise confusion flows, and hyperparameter stability across folds before relying on top-line accuracy.
+      - question: Is one-class SVM the same as unsupervised clustering?
+        answer: No. One-class SVM estimates support for a target distribution and is mainly used for novelty/outlier detection rather than multi-cluster partitioning.
+      - question: Why Start with Theory Before Benchmarks?
+        answer: "Benchmarks answer who won on one dataset. Theory answers why a model should or should not be expected to generalize when the data distribution, noise profile, feature scale, or class geometry changes. In SVM, this distinction is fundamental because expected behavior is tied to margin control, loss penalties, and kernel-induced geometry, not to any universal default configuration. The first reason to start with theory is statistical: SVM is built around structural risk minimization, where the margin acts as a capacity control mechanism. Soft-margin optimization formalizes the trade-off between fitting training data and preserving a boundary that is less sensitive to perturbations. Without this framing, hyperparameter choice becomes trial-and-error tuning rather than a controlled bias-variance decision. The second reason is optimization reliability. Classical SVM training is convex, so the objective has a global optimum under the chosen formulation. That property sharply changes how results should be interpreted compared with non-convex learners where optimizer path and initialization can dominate outcomes. Theory therefore tells you when score differences reflect model assumptions and data geometry, not unstable optimization trajectories."
+      - question: Where SVM Is a Strong Fit?
+        answer: "SVM remains effective when: 1. Data is medium-scale with controlled feature engineering. 2. Classes are not severely imbalanced."
+  support-vector-machine-series-part-2-benchmark-error-analysis-har:
+    title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+    url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+    keywords:
+      - svm
+      - benchmark
+      - har
+      - uci
+      - confusion
+      - machine
+      - support
+      - vector
+      - error
+      - model
+      - evaluation
+      - geometry
+      - python
+      - matrix
+      - series
+      - corridors
+      - pca
+      - artificial
+      - class-level
+      - intelligence
+      - accuracy
+      - forensics
+      - parity
+      - random
+      - analysis
+      - class
+      - diagnostics
+      - implementation
+      - level
+      - metrics
+      - aggregate
+      - analyzes
+      - asked
+      - bad
+      - better
+      - boundaries
+      - support vector machine
+      - confusion matrix
+      - model evaluation
+      - uci har
+    key_phrases:
+      - uci har
+      - support vector
+      - vector machine
+      - support vector machine
+      - machine benchmark
+      - vector machine benchmark
+      - confusion matrix
+      - uci har support
+      - har support
+      - har support vector
+      - model evaluation
+      - machine benchmark confusion
+      - benchmark confusion matrix
+      - confusion matrix model
+      - matrix model evaluation
+      - model evaluation uci
+      - evaluation uci
+      - evaluation uci har
+      - benchmark confusion
+      - artificial intelligence
+      - matrix model
+      - confusion corridors
+      - pca geometry
+      - error forensics
+    catchwords:
+      - benchmark
+      - confusion
+      - machine
+      - support
+      - vector
+      - error
+      - model
+      - evaluation
+      - geometry
+      - python
+      - matrix
+      - series
+      - corridors
+      - artificial
+      - class-level
+      - intelligence
+      - accuracy
+      - forensics
+      - parity
+      - random
+      - analysis
+      - class
+      - diagnostics
+      - implementation
+      - level
+      - metrics
+      - aggregate
+      - analyzes
+    search_words:
+      - svm
+      - benchmark
+      - har
+      - uci
+      - confusion
+      - machine
+      - support
+      - vector
+      - error
+      - model
+      - evaluation
+      - geometry
+      - python
+      - matrix
+      - series
+      - corridors
+      - pca
+      - artificial
+      - uci har
+      - support vector
+      - vector machine
+      - support vector machine
+      - machine benchmark
+      - vector machine benchmark
+      - confusion matrix
+      - uci har support
+      - har support
+      - har support vector
+      - model evaluation
+      - machine benchmark confusion
+    questions:
+      - question: How should I use confusion corridors in production?
+        answer: Track the highest-frequency class transitions as explicit alert channels and tie retraining or threshold updates to corridor-specific drift.
+      - question: Why compare R and Python if both use libsvm-style tooling?
+        answer: Parity checks still matter because they expose silent preprocessing or CV mismatches and improve reproducibility across mixed-language teams.
+      - question: Why is macro F1 not enough for SVM evaluation?
+        answer: Macro F1 averages class behavior and can hide concentrated failure corridors that dominate real-world risk, especially in near-neighbor class pairs.
+      - question: Does better RF accuracy mean SVM is a bad model?
+        answer: No. It means RF is the better fit for this specific dataset geometry and operating objective; SVM can still be strong in other structured regimes.
+      - question: Why RF Wins Here Without Invalidating SVM Theory?
+        answer: "This benchmark does not contradict large-margin foundations. It shows that tree ensembles can better absorb overlap-heavy feature neighborhoods in this dataset. SVM remains theoretically coherent and operationally useful, but not the strongest empirical fit for these class corridors in this run. Model selection therefore becomes conditional: 1. Use SVM when boundary control and disciplined regularization are priorities."
+  support-vector-machine-series-part-3-tuning-monitoring-deployment-governance:
+    title: "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment Governance"
+    url: "/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance"
+    keywords:
+      - deployment
+      - model
+      - svm
+      - monitoring
+      - tuning
+      - governance
+      - machine
+      - support
+      - vector
+      - calibration
+      - operational
+      - controls
+      - layer
+      - production
+      - workflow
+      - artificial
+      - intelligence
+      - quality
+      - benchmark
+      - decision
+      - playbook
+      - selection
+      - drift
+      - series
+      - actions
+      - asked
+      - baseline
+      - behavior
+      - best
+      - beyond
+      - blueprint
+      - cadence
+      - calibrate
+      - checks
+      - claim
+      - class
+      - support vector machine
+      - model tuning
+      - model governance
+      - artificial intelligence
+    key_phrases:
+      - support vector
+      - vector machine
+      - support vector machine
+      - model governance
+      - deployment model
+      - deployment model governance
+      - machine model
+      - monitoring support
+      - machine deployment
+      - tuning workflow
+      - vector machine model
+      - machine model tuning
+      - model tuning deployment
+      - tuning deployment model
+      - model governance monitoring
+      - governance monitoring support
+      - monitoring support vector
+      - vector machine deployment
+      - artificial intelligence
+      - governance monitoring
+      - tuning deployment
+      - model tuning
+      - artificial intelligence artificial
+      - intelligence artificial intelligence
+    catchwords:
+      - deployment
+      - model
+      - monitoring
+      - tuning
+      - governance
+      - machine
+      - support
+      - vector
+      - calibration
+      - operational
+      - controls
+      - layer
+      - production
+      - workflow
+      - artificial
+      - intelligence
+      - quality
+      - benchmark
+      - decision
+      - playbook
+      - selection
+      - drift
+      - series
+      - actions
+      - asked
+      - baseline
+      - behavior
+      - beyond
+    search_words:
+      - deployment
+      - model
+      - svm
+      - monitoring
+      - tuning
+      - governance
+      - machine
+      - support
+      - vector
+      - calibration
+      - operational
+      - controls
+      - layer
+      - production
+      - workflow
+      - artificial
+      - intelligence
+      - quality
+      - support vector
+      - vector machine
+      - support vector machine
+      - model governance
+      - deployment model
+      - deployment model governance
+      - machine model
+      - monitoring support
+      - machine deployment
+      - tuning workflow
+      - vector machine model
+      - machine model tuning
+    questions:
+      - question: What is the single most important SVM deployment control?
+        answer: Class-level monitoring with confusion-corridor tracking, because it reveals high-impact degradation earlier than aggregate accuracy.
+      - question: How do I keep this useful beyond one benchmark?
+        answer: Publish reproducible artifacts, versioned diagnostics, and post-release failure analyses so others can learn methods, not only final numbers.
+      - question: How often should SVM models be retrained?
+        answer: Use drift and corridor-trigger thresholds rather than fixed calendar frequency, then validate stability against the previous release before promotion.
+      - question: When should I calibrate SVM probabilities?
+        answer: Calibrate whenever scores are consumed as confidence or risk thresholds in downstream workflows; margin rankings alone are insufficient for probability-driven decisions.
+  mcp-vs-a2a-practical-protocol-boundaries-agentic-systems:
+    title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+    url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    keywords:
+      - a2a
+      - mcp
+      - acp
+      - agent
+      - protocol
+      - design
+      - systems
+      - orchestration
+      - practical
+      - boundaries
+      - tool
+      - enterprise
+      - agentic
+      - multi-agent
+      - cloud-native
+      - cross-border
+      - interoperability
+      - tenant-aware
+      - bus
+      - mistake
+      - trust
+      - architecture
+      - artificial
+      - communication
+      - intelligence
+      - task
+      - vendor-agnostic
+      - better
+      - considerations
+      - deployment
+      - fit
+      - human-in-the-loop
+      - models
+      - replace
+      - scope
+      - agent interoperability
+      - protocol design
+      - multi-agent systems
+      - tool orchestration
+      - artificial intelligence
+    key_phrases:
+      - mcp a2a
+      - a2a acp
+      - mcp a2a acp
+      - orchestration mcp
+      - orchestration mcp a2a
+      - protocol design
+      - trust boundaries
+      - agent interoperability
+      - acp agent
+      - a2a acp agent
+      - acp agent interoperability
+      - agent interoperability protocol
+      - artificial intelligence design
+      - interoperability protocol design
+      - protocol design multi-agent
+      - design multi-agent systems
+      - multi-agent systems tool
+      - systems tool orchestration
+      - tool orchestration mcp
+      - tool orchestration
+      - systems tool
+      - multi-agent systems
+      - design multi-agent
+      - artificial intelligence
+    catchwords:
+      - agent
+      - protocol
+      - design
+      - systems
+      - orchestration
+      - practical
+      - boundaries
+      - enterprise
+      - agentic
+      - multi-agent
+      - cloud-native
+      - cross-border
+      - interoperability
+      - tenant-aware
+      - mistake
+      - trust
+      - architecture
+      - artificial
+      - communication
+      - intelligence
+      - vendor-agnostic
+      - better
+      - considerations
+      - deployment
+      - human-in-the-loop
+      - models
+      - replace
+      - scope
+    search_words:
+      - a2a
+      - mcp
+      - acp
+      - agent
+      - protocol
+      - design
+      - systems
+      - orchestration
+      - practical
+      - boundaries
+      - tool
+      - enterprise
+      - agentic
+      - multi-agent
+      - cloud-native
+      - cross-border
+      - interoperability
+      - tenant-aware
+      - mcp a2a
+      - a2a acp
+      - mcp a2a acp
+      - orchestration mcp
+      - orchestration mcp a2a
+      - protocol design
+      - trust boundaries
+      - agent interoperability
+      - acp agent
+      - a2a acp agent
+      - acp agent interoperability
+      - agent interoperability protocol
+    questions:
+      - question: How should enterprises handle cross-border and tenant-aware agent orchestration?
+        answer: Use protocol layering with explicit tenant policy boundaries, jurisdiction-aware data controls, and portable identity patterns. Keep integration contracts vendor-agnostic and preserve audit trails across all delegated tasks and tool invocations.
+      - question: What is the main difference among MCP, A2A, and ACP?
+        answer: MCP connects models or hosts to tools, resources, and prompts. A2A connects autonomous agents through task lifecycle collaboration. ACP defines a REST-oriented agent interoperability model with manifest and run semantics.
+      - question: What should teams prototype first when they are unsure?
+        answer: Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. If the boundary is still ambiguous, model the remote side's expected autonomy before choosing a protocol.
+      - question: Can A2A replace MCP for tool use?
+        answer: It can, but it is usually wasteful. Simple tools do not benefit much from peer-agent ceremony. A2A shines when the remote side behaves like a collaborator, not just a callable capability.
+      - question: Can MCP replace A2A in a multi-agent system?
+        answer: Only in narrow cases. If the “other agent” is really acting like a stateless or tightly bounded capability, MCP can be sufficient. Once the remote side owns task state, asynchronous progress, artifact delivery, or agent discovery, A2A is usually the cleaner protocol fit.
+      - question: Do these recommendations apply identically across UK, EU, US, Canada, Hong Kong, China, and Australia?
+        answer: No. Privacy, transfer, and sector-specific obligations vary by jurisdiction and industry. Treat protocol guidance as architecture input and confirm legal and regulatory requirements for the specific operating context.
+      - question: Is ACP obsolete now that it is converging with A2A?
+        answer: ACP remains important for architecture learning and for existing deployments. New strategy should account for announced convergence and migration direction toward A2A to reduce future integration churn.
+      - question: Is MCP more secure than A2A?
+        answer: Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services.
+      - question: Where A2A Is the Better Fit?
+        answer: "A2A is usually the better fit when the remote surface is autonomous enough that it should own its own execution strategy, task state, and multi-turn interaction loop. Typical cases include: 1. A planning agent delegates vendor onboarding to a compliance agent that may require documents, approvals, and asynchronous review."
+      - question: Where MCP Is the Better Fit?
+        answer: "MCP is usually the better fit when the remote surface is deterministic enough that the caller should experience it as a bounded capability rather than an independent partner. Typical cases include: 1. A coding agent needs filesystem access, a browser automation tool, and a deployment command surface."
+      - question: When should I use both MCP and A2A together?
+        answer: Use both when agents collaborate across system boundaries, but each agent still needs structured tool and data access within its own execution environment. That is the most common production-grade pattern.
+      - question: Where ACP Patterns Still Matter?
+        answer: "ACP patterns remain valuable when teams need: 1. REST-native agent integration through existing API gateways and service governance controls. 2. OpenAPI-documented run endpoints that align with established enterprise integration practices."
+  building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook:
+    title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+    url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    keywords:
+      - a2a
+      - orchestration
+      - mcp
+      - langchain
+      - langgraph
+      - acp
+      - agentic
+      - agent
+      - deployment
+      - controls
+      - deployable
+      - architecture
+      - observability
+      - layer
+      - opentelemetry
+      - cross-border
+      - fastapi
+      - platform
+      - stack
+      - tenant-aware
+      - boundaries
+      - design
+      - docker
+      - durable
+      - enterprise
+      - artificial
+      - building
+      - cloud-native
+      - engineering
+      - intelligence
+      - protocol
+      - pytest
+      - sigstore
+      - slsa
+      - workflow
+      - agent-to-agent
+      - agentic orchestration
+      - artificial intelligence
+      - platform engineering
+      - agentic orchestration framework
+    key_phrases:
+      - mcp a2a
+      - langgraph langchain
+      - agentic orchestration
+      - a2a acp
+      - mcp a2a acp
+      - acp langgraph
+      - acp langgraph langchain
+      - a2a acp langgraph
+      - orchestration mcp
+      - orchestration mcp a2a
+      - agentic orchestration mcp
+      - artificial intelligence platform
+      - langchain fastapi
+      - deployment observability
+      - langchain deployment
+      - platform engineering
+      - intelligence platform
+      - artificial intelligence
+      - langgraph langchain fastapi
+      - intelligence platform engineering
+      - langchain deployment observability
+      - langgraph langchain deployment
+      - platform engineering artificial
+      - docker slsa
+    catchwords:
+      - orchestration
+      - langchain
+      - langgraph
+      - agentic
+      - agent
+      - deployment
+      - controls
+      - deployable
+      - architecture
+      - observability
+      - layer
+      - opentelemetry
+      - cross-border
+      - fastapi
+      - platform
+      - stack
+      - tenant-aware
+      - boundaries
+      - design
+      - docker
+      - durable
+      - enterprise
+      - artificial
+      - building
+      - cloud-native
+      - engineering
+      - intelligence
+      - protocol
+    search_words:
+      - a2a
+      - orchestration
+      - mcp
+      - langchain
+      - langgraph
+      - acp
+      - agentic
+      - agent
+      - deployment
+      - controls
+      - deployable
+      - architecture
+      - observability
+      - layer
+      - opentelemetry
+      - cross-border
+      - fastapi
+      - platform
+      - mcp a2a
+      - langgraph langchain
+      - agentic orchestration
+      - a2a acp
+      - mcp a2a acp
+      - acp langgraph
+      - acp langgraph langchain
+      - a2a acp langgraph
+      - orchestration mcp
+      - orchestration mcp a2a
+      - agentic orchestration mcp
+      - artificial intelligence platform
+    questions:
+      - question: How do tenant-aware and cross-border controls affect protocol design?
+        answer: They require explicit policy partitioning, region-aware data handling, and identity federation choices that remain portable across clouds and partner ecosystems. Protocol layering helps preserve those controls without excessive custom glue.
+      - question: How should I test agent-to-agent workflows without creating flaky suites?
+        answer: Separate contract tests from end-to-end tests. Use mocked or local A2A agents for protocol checks, then run a smaller number of containerized end-to-end workflows for full-path validation.
+      - question: What is the first observability signal I should add?
+        answer: Add end-to-end tracing that ties one user request to one orchestration run, all delegated A2A tasks, and all MCP tool calls. Without that lineage, later debugging becomes unnecessarily speculative.
+      - question: What is the simplest deployable architecture for MCP, A2A, and ACP-aware interoperability?
+        answer: One orchestrator service plus two or three specialist agents is enough. The orchestrator uses A2A to delegate tasks. Each specialist agent uses MCP to reach concrete tools and resources. ACP-compatible facades can be added at partner-facing boundaries where REST-native interoperability is required.
+      - question: Should I start new projects with ACP or A2A for agent-to-agent collaboration?
+        answer: For many long-lived greenfield collaborations, A2A is often a lower-regret default today because of active protocol momentum and documented ACP convergence direction. ACP patterns remain useful for REST-first interoperability edges and migration-minded design.
+      - question: Do I need supply-chain controls for an internal agent platform?
+        answer: In most organizations, supply-chain controls are advisable even for internal agent platforms based on risk profile, regulatory exposure, and internal assurance requirements. Internal platforms still ship containers, dependencies, and artifacts that can be tampered with or misattributed.
+      - question: Do these practices apply identically across UK, EU, US, Canada, Hong Kong, China, and Australia?
+        answer: No. Privacy, transfer, residency, and sector-specific obligations vary by jurisdiction and industry. Use these practices as technical design guidance and validate legal and regulatory requirements for each operating context.
+      - question: Should I choose LangGraph or LangChain for orchestration?
+        answer: Choose LangGraph when you need explicit durable workflow control. Use LangChain on top when its higher-level abstractions improve development speed without hiding critical execution logic.
+      - question: Which Python packages are enough to start building this stack?
+        answer: For a practical Python-first baseline, `mcp`, `a2a-sdk`, `langgraph`, `langchain`, `fastapi`, `pydantic`, `pytest`, `httpx`, `opentelemetry-sdk`, `uvicorn`, and Docker-based packaging are sufficient for a strong first slice.
 pages:
   zenith-law:
     title: ""
@@ -1606,6 +2418,78 @@ pages:
       - senior technical leadership
       - years senior technical
       - experience years senior
+    questions: []
+  articles:
+    title: Article Hub
+    url: "/articles/"
+    keywords:
+      - hub
+      - controls
+      - engineering
+      - explore
+      - governance
+      - guidance
+      - implementation
+      - incident-informed
+      - lessons
+      - practical
+    key_phrases:
+      - governance practical lessons
+      - engineering governance practical
+      - incident-informed engineering governance
+      - explore incident-informed engineering
+      - practical lessons controls
+      - lessons controls implementation
+      - controls implementation guidance
+      - implementation guidance
+      - controls implementation
+      - lessons controls
+      - practical lessons
+      - governance practical
+      - engineering governance
+      - incident-informed engineering
+      - explore incident-informed
+      - hub hub
+      - implementation guidance explore
+      - guidance explore incident-informed
+      - hub explore incident-informed
+      - hub hub explore
+      - hub hub hub
+      - guidance explore
+      - hub explore
+    catchwords:
+      - controls
+      - engineering
+      - explore
+      - governance
+      - guidance
+      - implementation
+      - incident-informed
+      - lessons
+      - practical
+    search_words:
+      - hub
+      - controls
+      - engineering
+      - explore
+      - governance
+      - guidance
+      - implementation
+      - incident-informed
+      - lessons
+      - practical
+      - governance practical lessons
+      - engineering governance practical
+      - incident-informed engineering governance
+      - explore incident-informed engineering
+      - practical lessons controls
+      - lessons controls implementation
+      - controls implementation guidance
+      - implementation guidance
+      - controls implementation
+      - lessons controls
+      - practical lessons
+      - governance practical
     questions: []
   faq:
     title: "FAQ Hub: Questions and Answers Across Published Pages"

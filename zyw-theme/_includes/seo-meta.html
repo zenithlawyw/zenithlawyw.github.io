@@ -278,3 +278,17 @@
   href="{{ '/llms.txt' | absolute_url }}"
   title="LLMs content map"
 >
+{%- if page.paginator -%}
+  {%- if page.paginator.previous_page -%}
+    <link
+      rel="prev"
+      href="{{ page.paginator.previous_page_path | absolute_url }}"
+    >
+  {%- endif -%}
+  {%- if page.paginator.next_page -%}
+    <link
+      rel="next"
+      href="{{ page.paginator.next_page_path | absolute_url }}"
+    >
+  {%- endif -%}
+{%- endif -%}

@@ -1,4 +1,4 @@
-.PHONY: help bootstrap install start stop restart prebuild build publish clean serve seo-auto glossary-auto taxonomy-auto
+.PHONY: help bootstrap install start stop restart prebuild build publish clean serve seo-auto glossary-auto taxonomy-auto references-auto validate-faq validate-reference-dates
 
 # Variables
 BUNDLE := bundle exec
@@ -39,7 +39,10 @@ help:
 	@echo "  publish      - Run full publish pipeline (prebuild + production build)"
 	@echo "  seo-auto     - Generate auto SEO/AEO/GEO vocabulary and FAQ extraction"
 	@echo "  glossary-auto - Generate auto glossary terminology candidates"
+	@echo "  validate-faq  - Validate non-empty FAQ extraction for posts"
+	@echo "  validate-reference-dates - Validate reference accessed dates do not exceed post publication dates"
 	@echo "  taxonomy-auto - Run all automated taxonomy extractors"
+	@echo "  references-auto - Generate references data from BibTeX"
 	@echo "  serve        - Start server and watch for changes (foreground)"
 	@echo "  clean        - Remove generated _site directory"
 	@echo "  help         - Show this help message"
@@ -91,7 +94,22 @@ glossary-auto:
 taxonomy-auto: seo-auto glossary-auto
 	@echo "✓ Taxonomy extractors complete"
 
-prebuild: taxonomy-auto
+references-auto:
+	@echo "Generating references data from BibTeX..."
+	ruby scripts/generate_references_from_bibtex.rb
+	@echo "✓ References generated (_data/references_generated.yml)"
+
+validate-faq:
+	@echo "Validating extracted FAQ questions for posts..."
+	ruby scripts/validate_seo_questions.rb
+	@echo "✓ FAQ validation passed"
+
+validate-reference-dates:
+	@echo "Validating reference accessed dates against publication dates..."
+	ruby scripts/validate_reference_access_dates.rb
+	@echo "✓ Reference date integrity validation passed"
+
+prebuild: taxonomy-auto references-auto validate-faq validate-reference-dates
 	@echo "✓ Prebuild scripts complete"
 
 build: prebuild

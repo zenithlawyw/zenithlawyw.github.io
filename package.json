@@ -15,11 +15,16 @@
     "docs:seo": "make -C docs seo-auto",
     "docs:glossary": "make -C docs glossary-auto",
     "docs:taxonomy": "make -C docs taxonomy-auto",
+    "docs:references": "make -C docs references-auto",
+    "docs:validate-faq": "make -C docs validate-faq",
+    "docs:validate-reference-dates": "make -C docs validate-reference-dates",
     "docs:prebuild": "make -C docs prebuild",
     "docs:build": "make -C docs build",
     "docs:publish": "make -C docs publish",
     "docs:serve": "make -C docs serve",
-    "docs:dev": "make -C docs serve"
+    "docs:dev": "make -C docs serve",
+    "governance:self-check": "bash scripts/governance-self-check.sh",
+    "governance:apply": "bash scripts/governance-self-check.sh --apply"
   },
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "^1.10.2",

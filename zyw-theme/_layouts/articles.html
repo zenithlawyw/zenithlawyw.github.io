@@ -1,44 +1,185 @@
 ---
-layout: section
+layout: default
 ---
-<div class="articles">
-  {{ content }}
+{{ content }}
 
-  {%- if page.paginator -%}
-    {%- assign paginator = page.paginator -%}
-  {%- elsif paginator == null -%}
-    {%- assign paginator = site -%}
-  {%- endif -%}
+{%- assign per_page = page.per_page | default: 6 -%}
+{%- assign total_posts = site.posts | size -%}
 
-  {%- if paginator.posts.size > 0 -%}
-    <div class="pagination">
-      <ul class="post-list ml-0 list-none">
-        <!-- Top list item -->
-        {%- if paginator == site or paginator.page == 1 -%}
-          {%- assign post_item_class = 'top-post' -%}
-          {%- assign posts = site.posts
-            | where_exp: 'item', 'item.top > 0'
-            | sort: 'date'
-            | reverse
-            | sort: 'top'
-          -%}
-          {%- for post in posts -%}
-            {%- include views/post-item.html -%}
-          {%- endfor -%}
-        {%- endif -%}
-
-        <!-- Normal list item -->
-        {%- assign post_item_class = '' -%}
-        {%- assign posts = paginator.posts | sort: 'date' | reverse -%}
-        {%- for post in posts -%}
-          {%- if post.top -%}
-            {%- continue -%}
-          {%- endif -%}
-          {%- include views/post-item.html -%}
-        {%- endfor -%}
-      </ul>
+<section
+  id="article-hub"
+  class="pb-6"
+  data-article-hub
+  data-per-page="{{ per_page }}"
+>
+  <div class="w-full">
+    <div class="mb-6 grid grid-cols-1 gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-end md:gap-x-6 md:gap-y-2">
+      <div class="max-w-4xl md:pr-2">
+        <h2
+          id="article-hub-grid-heading"
+          class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 md:text-4xl"
+        >
+          Articles
+        </h2>
+        <p class="mt-2 text-base leading-relaxed text-gray-600 dark:text-gray-300">
+          Filter by tags and categories inside each card, and page through the
+          full archive from this dedicated article hub.
+        </p>
+      </div>
+      <p class="self-start justify-self-start text-sm text-gray-600 dark:text-gray-300 md:self-end md:justify-self-end">
+        {{ total_posts }} published posts
+      </p>
     </div>
-  {%- else -%}
-    <div>No posts found.</div>
-  {%- endif -%}
-</div>
+
+    <div
+      class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5"
+      data-article-grid
+    >
+      {% for post in site.posts %}
+        {%- include views/post-card.html post=post data_attr='data-article-card' -%}
+      {% endfor %}
+    </div>
+
+    <nav
+      class="mt-7 flex flex-wrap items-center justify-center gap-x-5 gap-y-3"
+      aria-label="Article pagination"
+      data-article-pagination
+    >
+      <a
+        href="{{ page.url | relative_url }}"
+        class="rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800"
+        data-page-prev
+        rel="prev"
+      >
+        Previous
+      </a>
+
+      <span
+        class="min-w-[8.5rem] px-1 text-center text-sm text-gray-500 dark:text-gray-400"
+        data-page-status
+        >Page 1 of 1</span
+      >
+
+      <a
+        href="{{ page.url | relative_url }}?page=2"
+        class="rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800"
+        data-page-next
+        rel="next"
+      >
+        Next
+      </a>
+    </nav>
+
+    <noscript>
+      <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+        JavaScript is disabled, so all posts are shown on a single page.
+      </p>
+    </noscript>
+  </div>
+</section>
+
+<script>
+  (() => {
+    const hub = document.querySelector('[data-article-hub]');
+    if (!hub) {
+      return;
+    }
+
+    const cards = Array.from(hub.querySelectorAll('[data-article-card]'));
+    const status = hub.querySelector('[data-page-status]');
+    const prev = hub.querySelector('[data-page-prev]');
+    const next = hub.querySelector('[data-page-next]');
+    const basePath = '{{ page.url | relative_url }}';
+    const perPage = Math.max(1, parseInt(hub.dataset.perPage || '6', 10));
+    const totalPages = Math.max(1, Math.ceil(cards.length / perPage));
+    const initialPageParam = new URLSearchParams(window.location.search).get(
+      'page'
+    );
+    let currentPage = parseInt(initialPageParam || '1', 10);
+
+    if (Number.isNaN(currentPage) || currentPage < 1) {
+      currentPage = 1;
+    }
+    if (currentPage > totalPages) {
+      currentPage = totalPages;
+    }
+
+    function makePageHref(page) {
+      return page <= 1 ? basePath : `${basePath}?page=${page}`;
+    }
+
+    function render() {
+      const start = (currentPage - 1) * perPage;
+      const end = start + perPage;
+
+      cards.forEach((card, index) => {
+        if (index >= start && index < end) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (status) {
+        status.textContent = `Page ${currentPage} of ${totalPages}`;
+      }
+
+      if (prev) {
+        prev.href = makePageHref(currentPage - 1);
+        prev.classList.toggle('pointer-events-none', currentPage === 1);
+        prev.classList.toggle('opacity-40', currentPage === 1);
+        prev.setAttribute(
+          'aria-disabled',
+          currentPage === 1 ? 'true' : 'false'
+        );
+      }
+
+      if (next) {
+        next.href = makePageHref(currentPage + 1);
+        next.classList.toggle('pointer-events-none', currentPage >= totalPages);
+        next.classList.toggle('opacity-40', currentPage >= totalPages);
+        next.setAttribute(
+          'aria-disabled',
+          currentPage >= totalPages ? 'true' : 'false'
+        );
+      }
+
+      const canonicalUrl = makePageHref(currentPage);
+      window.history.replaceState({}, '', canonicalUrl);
+    }
+
+    function navigateToPage(page) {
+      if (page < 1 || page > totalPages || page === currentPage) {
+        return;
+      }
+      currentPage = page;
+      render();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    if (prev) {
+      prev.addEventListener('click', (event) => {
+        event.preventDefault();
+        navigateToPage(currentPage - 1);
+      });
+    }
+
+    if (next) {
+      next.addEventListener('click', (event) => {
+        event.preventDefault();
+        navigateToPage(currentPage + 1);
+      });
+    }
+
+    window.addEventListener('popstate', () => {
+      const pageParam = new URLSearchParams(window.location.search).get('page');
+      const parsed = parseInt(pageParam || '1', 10);
+      if (!Number.isNaN(parsed) && parsed >= 1 && parsed <= totalPages) {
+        currentPage = parsed;
+        render();
+      }
+    });
+
+    render();
+  })();
+</script>

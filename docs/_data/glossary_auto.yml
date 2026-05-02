@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-04-23T19:35:00Z"
-total_candidates: 491
+generated_at: "2026-05-02T18:58:40Z"
+total_candidates: 627
 candidates:
   - term: Incident Response
     status: approved
@@ -16,6 +16,680 @@ candidates:
       - title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
+  - term: A2a Acp
+    status: approved
+    confidence: 9
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (editorial auto-approved)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: Mcp A2a
+    status: approved
+    confidence: 9
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (editorial auto-approved)
+    related_posts:
+      - title: "MCP vs A2A: Practical Protocol Boundaries for Tool-Connected and Multi-Agent AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: Mcp A2a Acp
+    status: approved
+    confidence: 9
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (editorial auto-approved)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: Support Vector Machine
+    status: approved
+    confidence: 8
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (editorial auto-approved)
+    related_posts:
+      - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
+        url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+    related_pages: []
+  - term: A2a Langgraph
+    status: approved
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (editorial auto-approved)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: A2a Langgraph Langchain
+    status: approved
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (editorial auto-approved)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: Mcp A2a Langgraph
+    status: approved
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (editorial auto-approved)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: Caveats Relevance Repository
+    status: candidate
+    confidence: 67
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Evidence Snapshot Reported
+    status: candidate
+    confidence: 67
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Findings Limitations Caveats
+    status: candidate
+    confidence: 67
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Focus Method Evidence
+    status: candidate
+    confidence: 67
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Limitations Caveats Relevance
+    status: candidate
+    confidence: 67
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Method Evidence Snapshot
+    status: candidate
+    confidence: 67
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Relevance Repository Themes
+    status: candidate
+    confidence: 67
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Reported Findings Limitations
+    status: candidate
+    confidence: 67
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Repository Themes Reviewer
+    status: candidate
+    confidence: 67
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Snapshot Reported Findings
+    status: candidate
+    confidence: 67
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Themes Reviewer Notes
+    status: candidate
+    confidence: 67
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Focus Method
+    status: candidate
+    confidence: 49
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Evidence Snapshot
+    status: candidate
+    confidence: 41
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Method Evidence
+    status: candidate
+    confidence: 41
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Findings
+    status: candidate
+    confidence: 36
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
+        url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Themes
+    status: candidate
+    confidence: 36
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
+        url: "/large-language-models-practice-from-transformer-to-present-frontier"
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Caveats
+    status: candidate
+    confidence: 35
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Limitations
+    status: candidate
+    confidence: 35
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Method
+    status: candidate
+    confidence: 35
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons"
+        url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Notes
+    status: candidate
+    confidence: 35
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Relevance
+    status: candidate
+    confidence: 35
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Reported
+    status: candidate
+    confidence: 35
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Reported Findings
+    status: candidate
+    confidence: 35
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Repository
+    status: candidate
+    confidence: 35
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Reviewer
+    status: candidate
+    confidence: 35
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Snapshot
+    status: candidate
+    confidence: 35
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Snapshot Reported
+    status: candidate
+    confidence: 35
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Findings Limitations
+    status: candidate
+    confidence: 25
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Limitations Caveats
+    status: candidate
+    confidence: 25
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Vector Machines
+    status: candidate
+    confidence: 17
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+      - title: ""
+        url: "/literature-reviews/crammer-and-singer-2001-on-the-algorithmic-implementation-of-multiclass-kernel-based-vector-machines.html"
+      - title: ""
+        url: "/literature-reviews/hearst-et-al-1998-support-vector-machines.html"
+  - term: Machines Focus
+    status: candidate
+    confidence: 15
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+      - title: ""
+        url: "/literature-reviews/crammer-and-singer-2001-on-the-algorithmic-implementation-of-multiclass-kernel-based-vector-machines.html"
+      - title: ""
+        url: "/literature-reviews/hearst-et-al-1998-support-vector-machines.html"
+  - term: Machines Focus Method
+    status: candidate
+    confidence: 15
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+      - title: ""
+        url: "/literature-reviews/crammer-and-singer-2001-on-the-algorithmic-implementation-of-multiclass-kernel-based-vector-machines.html"
+      - title: ""
+        url: "/literature-reviews/hearst-et-al-1998-support-vector-machines.html"
+  - term: Support Vector Machines
+    status: candidate
+    confidence: 15
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+      - title: ""
+        url: "/literature-reviews/hearst-et-al-1998-support-vector-machines.html"
+      - title: ""
+        url: "/literature-reviews/kecman-2005-support-vector-machines-an-introduction.html"
+  - term: Vector Machines Focus
+    status: candidate
+    confidence: 15
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+      - title: ""
+        url: "/literature-reviews/crammer-and-singer-2001-on-the-algorithmic-implementation-of-multiclass-kernel-based-vector-machines.html"
+      - title: ""
+        url: "/literature-reviews/hearst-et-al-1998-support-vector-machines.html"
+  - term: Vector
+    status: candidate
+    confidence: 14
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
+        url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+      - title: ""
+        url: "/literature-reviews/cortes-and-vapnik-1995-support-vector-networks.html"
+      - title: ""
+        url: "/literature-reviews/crammer-and-singer-2001-on-the-algorithmic-implementation-of-multiclass-kernel-based-vector-machines.html"
+  - term: Caveats Relevance
+    status: candidate
+    confidence: 13
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
   - term: Data Protection
     status: candidate
     confidence: 13
@@ -32,6 +706,22 @@ candidates:
         url: "/legal/privacy-cookies-data-protection/"
       - title: Terms of Use
         url: "/legal/terms-of-use/"
+  - term: Relevance Repository
+    status: candidate
+    confidence: 13
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
   - term: SEO GEO
     status: candidate
     confidence: 12
@@ -130,6 +820,38 @@ candidates:
       - title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
     related_pages: []
+  - term: Repository Themes
+    status: candidate
+    confidence: 11
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Reviewer Notes
+    status: candidate
+    confidence: 11
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
   - term: Site Operator
     status: candidate
     confidence: 11
@@ -146,6 +868,22 @@ candidates:
         url: "/legal/privacy-cookies-data-protection/"
       - title: Terms of Use
         url: "/legal/terms-of-use/"
+  - term: Themes Reviewer
+    status: candidate
+    confidence: 11
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/bishop-and-nasrabadi-2006-pattern-recognition-and-machine-learning.html"
+      - title: ""
+        url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
   - term: Alignment Knowledge
     status: candidate
     confidence: 10
@@ -230,6 +968,38 @@ candidates:
       - title: "Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Machines
+    status: candidate
+    confidence: 10
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+      - title: ""
+        url: "/literature-reviews/crammer-and-singer-2001-on-the-algorithmic-implementation-of-multiclass-kernel-based-vector-machines.html"
+      - title: ""
+        url: "/literature-reviews/hearst-et-al-1998-support-vector-machines.html"
+  - term: Models Focus Method
+    status: candidate
+    confidence: 10
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/ferdaus-et-al-2026-towards-trustworthy-ai-a-review-of-ethical-and-robust-large-language-models.html"
+      - title: ""
+        url: "/literature-reviews/ren-et-al-2026-advances-and-open-challenges-in-federated-foundation-models.html"
+      - title: ""
+        url: "/literature-reviews/sanu-et-al-2024-limitations-of-large-language-models.html"
   - term: Provenance Data
     status: candidate
     confidence: 10
@@ -566,6 +1336,18 @@ candidates:
     related_pages:
       - title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
         url: "/glossary/"
+  - term: Agentic Orchestration
+    status: candidate
+    confidence: 8
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
   - term: Alignment
     status: candidate
     confidence: 8
@@ -736,6 +1518,22 @@ candidates:
       - title: "Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Models Focus
+    status: candidate
+    confidence: 8
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/ferdaus-et-al-2026-towards-trustworthy-ai-a-review-of-ethical-and-robust-large-language-models.html"
+      - title: ""
+        url: "/literature-reviews/ren-et-al-2026-advances-and-open-challenges-in-federated-foundation-models.html"
+      - title: ""
+        url: "/literature-reviews/sanu-et-al-2024-limitations-of-large-language-models.html"
   - term: Privacy
     status: candidate
     confidence: 8
@@ -826,7 +1624,7 @@ candidates:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
     related_pages: []
-  - term: Support Vector Machine
+  - term: Uci Har
     status: candidate
     confidence: 8
     suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
@@ -835,8 +1633,8 @@ candidates:
       url: "/faq/"
       tier: Internal synthesis (automated candidate)
     related_posts:
-      - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
-        url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
     related_pages: []
   - term: A-z Definitions
     status: candidate
@@ -920,6 +1718,18 @@ candidates:
       - title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
     related_pages: []
+  - term: Agent Interoperability
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP vs A2A: Practical Protocol Boundaries for Tool-Connected and Multi-Agent AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    related_pages: []
   - term: Algorithms Practical
     status: candidate
     confidence: 7
@@ -944,6 +1754,18 @@ candidates:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
     related_pages: []
+  - term: Alignment Focus Method
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/liu-et-al-2023-trustworthy-llms-a-survey-and-guideline-for-evaluating-large-language-models-alignment.html"
   - term: Alignment Stages
     status: candidate
     confidence: 7
@@ -1138,6 +1960,30 @@ candidates:
       - title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
     related_pages: []
+  - term: Co-evolving Models Post-llm
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/wu-et-al-2025-knowledge-empowered-collaborative-and-co-evolving-ai-models-the-post-llm-roadmap.html"
+  - term: Confusion Matrix
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+    related_pages: []
   - term: Context
     status: candidate
     confidence: 7
@@ -1176,6 +2022,22 @@ candidates:
         url: "/legal/privacy-cookies-data-protection/"
       - title: Terms of Use
         url: "/legal/terms-of-use/"
+  - term: Cross-border
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
+        url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
   - term: Data Provenance Data
     status: candidate
     confidence: 7
@@ -1200,6 +2062,18 @@ candidates:
       - title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
+  - term: Data Traceability Graph
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/karuna-et-al-2024-enhancing-financial-data-traceability-using-graph-neural-networks-for-provenance-methods.html"
   - term: Deadlock Deadlock
     status: candidate
     confidence: 7
@@ -1230,6 +2104,18 @@ candidates:
       tier: Internal synthesis (automated candidate)
     related_posts: []
     related_pages: []
+  - term: Deep Learning Provenance
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/pina-et-al-2023-deep-learning-provenance-data-integration-a-practical-approach.html"
   - term: Design
     status: candidate
     confidence: 7
@@ -1470,6 +2356,18 @@ candidates:
     related_pages:
       - title: Privacy, Cookies and Data Protection
         url: "/legal/privacy-cookies-data-protection/"
+  - term: Langgraph Langchain
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
   - term: Language Models
     status: candidate
     confidence: 7
@@ -1482,6 +2380,18 @@ candidates:
       - title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
     related_pages: []
+  - term: Language Models Alignment
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/liu-et-al-2023-trustworthy-llms-a-survey-and-guideline-for-evaluating-large-language-models-alignment.html"
   - term: Large Language
     status: candidate
     confidence: 7
@@ -1494,6 +2404,30 @@ candidates:
       - title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
     related_pages: []
+  - term: Learning Provenance
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/pina-et-al-2023-deep-learning-provenance-data-integration-a-practical-approach.html"
+  - term: Learning Provenance Data
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/pina-et-al-2023-deep-learning-provenance-data-integration-a-practical-approach.html"
   - term: Lessons Data Provenance
     status: candidate
     confidence: 7
@@ -1542,6 +2476,18 @@ candidates:
       - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
         url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
     related_pages: []
+  - term: Model Evaluation
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+    related_pages: []
   - term: Model Tuning
     status: candidate
     confidence: 7
@@ -1554,6 +2500,78 @@ candidates:
       - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
         url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
     related_pages: []
+  - term: Models Alignment Focus
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/liu-et-al-2023-trustworthy-llms-a-survey-and-guideline-for-evaluating-large-language-models-alignment.html"
+  - term: Models Post-llm
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/wu-et-al-2025-knowledge-empowered-collaborative-and-co-evolving-ai-models-the-post-llm-roadmap.html"
+  - term: Models Post-llm Roadmap
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/wu-et-al-2025-knowledge-empowered-collaborative-and-co-evolving-ai-models-the-post-llm-roadmap.html"
+  - term: Multi-agent Systems
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP vs A2A: Practical Protocol Boundaries for Tool-Connected and Multi-Agent AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    related_pages: []
+  - term: Networks Provenance Methods
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/karuna-et-al-2024-enhancing-financial-data-traceability-using-graph-neural-networks-for-provenance-methods.html"
+  - term: Neural Networks Provenance
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/karuna-et-al-2024-enhancing-financial-data-traceability-using-graph-neural-networks-for-provenance-methods.html"
   - term: Operating Systems
     status: candidate
     confidence: 7
@@ -1565,6 +2583,30 @@ candidates:
     related_posts:
       - title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: Orchestration Mcp
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: Orchestration Mcp A2a
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
     related_pages: []
   - term: Paper Gpt-3 Alignment
     status: candidate
@@ -1630,6 +2672,30 @@ candidates:
         url: "/_authors/zenith-law.html"
       - title: Trustworthy Engineering. Resilient Platforms. Sovereign-by-Design.
         url: "/index.html"
+  - term: Post-llm Roadmap
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/wu-et-al-2025-knowledge-empowered-collaborative-and-co-evolving-ai-models-the-post-llm-roadmap.html"
+  - term: Post-llm Roadmap Focus
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/wu-et-al-2025-knowledge-empowered-collaborative-and-co-evolving-ai-models-the-post-llm-roadmap.html"
   - term: Practical Insights
     status: candidate
     confidence: 7
@@ -1678,6 +2744,30 @@ candidates:
       - title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
     related_pages: []
+  - term: Protocol Design
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    related_pages: []
+  - term: Provenance Data Integration
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/pina-et-al-2023-deep-learning-provenance-data-integration-a-practical-approach.html"
   - term: Provenance Data Lineage
     status: candidate
     confidence: 7
@@ -1690,6 +2780,18 @@ candidates:
       - title: "Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Provenance Data Machine
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/souza-et-al-2019-provenance-data-in-the-machine-learning-lifecycle-in-computational-science-and-engineering.html"
   - term: Provenance Integration
     status: candidate
     confidence: 7
@@ -1702,6 +2804,18 @@ candidates:
       - title: "Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Provenance Methods Focus
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/karuna-et-al-2024-enhancing-financial-data-traceability-using-graph-neural-networks-for-provenance-methods.html"
   - term: Provenance Resilient
     status: candidate
     confidence: 7
@@ -1715,6 +2829,18 @@ candidates:
         url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
     related_pages: []
   - term: Provenance Resilient Engineering
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on Trust, Provenance, and Resilient Engineering"
+        url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
+    related_pages: []
+  - term: Provenance Supply Chain
     status: candidate
     confidence: 7
     suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
@@ -1777,6 +2903,22 @@ candidates:
     related_posts:
       - title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
+    related_pages: []
+  - term: Series
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
+        url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+      - title: "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment Governance"
+        url: "/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance"
     related_pages: []
   - term: Sovereignty Cloud
     status: candidate
@@ -1982,6 +3124,30 @@ candidates:
       - title: "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on Trust, Provenance, and Resilient Engineering"
         url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
     related_pages: []
+  - term: Trust Provenance Supply
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on Trust, Provenance, and Resilient Engineering"
+        url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
+    related_pages: []
+  - term: Uci Har Support
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+    related_pages: []
   - term: Vector Machine
     status: candidate
     confidence: 7
@@ -1993,6 +3159,18 @@ candidates:
     related_posts:
       - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
         url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+    related_pages: []
+  - term: Vector Machine Benchmark
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
     related_pages: []
   - term: Vector Machine Svm
     status: candidate
@@ -2054,6 +3232,56 @@ candidates:
     related_pages:
       - title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
         url: "/glossary/"
+  - term: A2a Acp Agent
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    related_pages: []
+  - term: A2a Acp Langgraph
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: A2a Agent
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP vs A2A: Practical Protocol Boundaries for Tool-Connected and Multi-Agent AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: A2a Agent Interoperability
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP vs A2A: Practical Protocol Boundaries for Tool-Connected and Multi-Agent AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    related_pages: []
   - term: Acceptedanswer Type
     status: candidate
     confidence: 6
@@ -2114,6 +3342,56 @@ candidates:
       - title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
+  - term: Acp Agent
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: Acp Agent Interoperability
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    related_pages: []
+  - term: Acp Langgraph
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: Acp Langgraph Langchain
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
   - term: Advice
     status: candidate
     confidence: 6
@@ -2130,6 +3408,58 @@ candidates:
         url: "/legal/disclaimer/"
       - title: Terms of Use
         url: "/legal/terms-of-use/"
+  - term: Agent
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP vs A2A: Practical Protocol Boundaries for Tool-Connected and Multi-Agent AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: Agent Interoperability Protocol
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    related_pages: []
+  - term: Agentic
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP vs A2A: Practical Protocol Boundaries for Tool-Connected and Multi-Agent AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: Agentic Orchestration Mcp
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
   - term: Ai-assisted Drafting
     status: candidate
     confidence: 6
@@ -2208,6 +3538,30 @@ candidates:
       - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
         url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
     related_pages: []
+  - term: Artificial Intelligence Design
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    related_pages: []
+  - term: Artificial Intelligence Platform
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
   - term: Arxiv Openalex
     status: candidate
     confidence: 6
@@ -2271,6 +3625,30 @@ candidates:
         url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
       - title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
+    related_pages: []
+  - term: Benchmark Confusion
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+    related_pages: []
+  - term: Benchmark Confusion Matrix
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
     related_pages: []
   - term: Blocked China
     status: candidate
@@ -2536,6 +3914,18 @@ candidates:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
     related_pages: []
+  - term: Confusion Matrix Model
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+    related_pages: []
   - term: Contention Concurrency Supply
     status: candidate
     confidence: 6
@@ -2626,6 +4016,62 @@ candidates:
     related_pages:
       - title: Privacy, Cookies and Data Protection
         url: "/legal/privacy-cookies-data-protection/"
+  - term: Decision
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
+        url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+      - title: "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment Governance"
+        url: "/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance"
+    related_pages:
+      - title: Disclaimer
+        url: "/legal/disclaimer/"
+  - term: Deep
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
+        url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+    related_pages:
+      - title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
+        url: "/glossary/"
+      - title: ""
+        url: "/literature-reviews/pina-et-al-2023-deep-learning-provenance-data-integration-a-practical-approach.html"
+  - term: Deployment Model
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment Governance"
+        url: "/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance"
+    related_pages: []
+  - term: Deployment Model Governance
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment Governance"
+        url: "/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance"
+    related_pages: []
   - term: Digital Governance
     status: candidate
     confidence: 6
@@ -2772,6 +4218,20 @@ candidates:
       - title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
+  - term: Enterprise
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
   - term: Evaluation
     status: candidate
     confidence: 6
@@ -2785,6 +4245,30 @@ candidates:
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
       - title: "Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
+    related_pages: []
+  - term: Evaluation Uci
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+    related_pages: []
+  - term: Evaluation Uci Har
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
     related_pages: []
   - term: Evidence
     status: candidate
@@ -2938,6 +4422,30 @@ candidates:
       - title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
+  - term: Governance Monitoring
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment Governance"
+        url: "/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance"
+    related_pages: []
+  - term: Governance Monitoring Support
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment Governance"
+        url: "/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance"
+    related_pages: []
   - term: Guide
     status: candidate
     confidence: 6
@@ -2952,6 +4460,46 @@ candidates:
       - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
         url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
     related_pages: []
+  - term: Har Support
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+    related_pages: []
+  - term: Har Support Vector
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+    related_pages: []
+  - term: Implementation
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+    related_pages:
+      - title: Article Hub
+        url: "/articles/"
+      - title: ""
+        url: "/literature-reviews/crammer-and-singer-2001-on-the-algorithmic-implementation-of-multiclass-kernel-based-vector-machines.html"
   - term: Incident
     status: candidate
     confidence: 6
@@ -3002,6 +4550,30 @@ candidates:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
     related_pages: []
+  - term: Kernels Support
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
+        url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+    related_pages: []
+  - term: Kernels Support Vector
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
+        url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+    related_pages: []
   - term: Knowledge Space
     status: candidate
     confidence: 6
@@ -3026,6 +4598,20 @@ candidates:
       - title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
     related_pages: []
+  - term: Language Models Focus
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/ferdaus-et-al-2026-towards-trustworthy-ai-a-review-of-ethical-and-robust-large-language-models.html"
+      - title: ""
+        url: "/literature-reviews/sanu-et-al-2024-limitations-of-large-language-models.html"
   - term: Language Models Transformer
     status: candidate
     confidence: 6
@@ -3037,6 +4623,20 @@ candidates:
     related_posts:
       - title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
+    related_pages: []
+  - term: Layer
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment Governance"
+        url: "/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance"
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
     related_pages: []
   - term: Learning
     status: candidate
@@ -3176,6 +4776,30 @@ candidates:
     related_pages:
       - title: "Research Literature Explorer: Keyword-Filtered Papers and Preprints"
         url: "/literature/"
+  - term: Machine Benchmark
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+    related_pages: []
+  - term: Machine Benchmark Confusion
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+    related_pages: []
   - term: Machine Learning Classification
     status: candidate
     confidence: 6
@@ -3284,6 +4908,20 @@ candidates:
       - title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
+  - term: Methods Focus Method
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/karuna-et-al-2024-enhancing-financial-data-traceability-using-graph-neural-networks-for-provenance-methods.html"
+      - title: ""
+        url: "/literature-reviews/platt-1999-probabilistic-outputs-for-svms-and-comparisons-to-regularized-likehood-methods.html"
   - term: Model Tuning Support
     status: candidate
     confidence: 6
@@ -3434,6 +5072,20 @@ candidates:
         url: "/legal/privacy-cookies-data-protection/"
       - title: Terms of Use
         url: "/legal/terms-of-use/"
+  - term: Orchestration
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
   - term: Package
     status: candidate
     confidence: 6
@@ -3566,6 +5218,18 @@ candidates:
       - title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
+  - term: Post-llm
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/literature-reviews/wu-et-al-2025-knowledge-empowered-collaborative-and-co-evolving-ai-models-the-post-llm-roadmap.html"
   - term: Practical Insights Statistical
     status: candidate
     confidence: 6
@@ -3642,6 +5306,20 @@ candidates:
         url: "/legal/privacy-cookies-data-protection/"
       - title: Terms of Use
         url: "/legal/terms-of-use/"
+  - term: Protocol
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
   - term: Prov-ml Proposed
     status: candidate
     confidence: 6
@@ -4106,6 +5784,20 @@ candidates:
       - title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
     related_pages: []
+  - term: Tenant-aware
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
   - term: Terms Use
     status: candidate
     confidence: 6
@@ -4118,6 +5810,20 @@ candidates:
     related_pages:
       - title: Terms of Use
         url: "/legal/terms-of-use/"
+  - term: Theory
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
+        url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+      - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
+        url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+    related_pages: []
   - term: Thread Resource
     status: candidate
     confidence: 6
@@ -4166,6 +5872,36 @@ candidates:
       - title: "Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Trust
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on Trust, Provenance, and Resilient Engineering"
+        url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
+      - title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
+        url: "/large-language-models-practice-from-transformer-to-present-frontier"
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    related_pages:
+      - title: Trustworthy Engineering. Resilient Platforms. Sovereign-by-Design.
+        url: "/index.html"
+  - term: Trust Boundaries
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    related_pages: []
   - term: Trustworthy
     status: candidate
     confidence: 6
@@ -4180,6 +5916,20 @@ candidates:
     related_pages:
       - title: Trustworthy Engineering. Resilient Platforms. Sovereign-by-Design.
         url: "/index.html"
+  - term: Tuning
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
+        url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+      - title: "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment Governance"
+        url: "/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance"
+    related_pages: []
   - term: Tuning Support
     status: candidate
     confidence: 6
@@ -4428,6 +6178,34 @@ candidates:
       - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
         url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
     related_pages: []
+  - term: Best
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
+        url: "/large-language-models-practice-from-transformer-to-present-frontier"
+      - title: "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment Governance"
+        url: "/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance"
+    related_pages: []
+  - term: Better
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    related_pages: []
   - term: Blocked
     status: candidate
     confidence: 5
@@ -4504,6 +6282,16 @@ candidates:
       - title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
     related_pages: []
+  - term: Claim Classification
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages: []
   - term: Classification
     status: candidate
     confidence: 5
@@ -4541,6 +6329,20 @@ candidates:
       url: "/faq/"
       tier: Internal synthesis (automated candidate)
     related_posts: []
+    related_pages: []
+  - term: Cloud-native
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
     related_pages: []
   - term: Coffman
     status: candidate
@@ -4627,6 +6429,18 @@ candidates:
     related_posts:
       - title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: Confusion
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
     related_pages: []
   - term: Constraints
     status: candidate
@@ -4782,6 +6596,18 @@ candidates:
       - title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
     related_pages: []
+  - term: Docker SLSA
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
   - term: Domain
     status: candidate
     confidence: 5
@@ -4828,6 +6654,18 @@ candidates:
         url: "/legal/disclaimer/"
       - title: Legal Notices
         url: "/legal/"
+  - term: Enterprise Agentic
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    related_pages: []
   - term: Explained
     status: candidate
     confidence: 5
@@ -5070,6 +6908,18 @@ candidates:
       tier: Internal synthesis (automated candidate)
     related_posts: []
     related_pages: []
+  - term: Interoperability
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    related_pages: []
   - term: Introduction
     status: candidate
     confidence: 5
@@ -5081,6 +6931,26 @@ candidates:
     related_posts:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
+    related_pages: []
+  - term: Introduction Scope
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages: []
+  - term: Introduction Scope Claim
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
     related_pages: []
   - term: Jurisdiction
     status: candidate

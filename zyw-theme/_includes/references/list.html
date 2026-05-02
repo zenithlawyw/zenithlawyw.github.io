@@ -48,6 +48,10 @@
       | default: page.references_style
       | default: site_refs_style
       | default: 'ieee'
+      | strip
+      | remove: '"'
+      | remove: "'"
+      | remove: '’'
       | downcase
     -%}
     {%- assign refs_title = include.title
@@ -63,6 +67,9 @@
       | default: 'references'
     -%}
     {%- assign refs_data = site.data[refs_data_file] -%}
+    {%- assign generated_refs_data = site.data.references_generated -%}
+    {%- assign post_date_iso = page.date | date: '%Y-%m-%d' -%}
+    {%- assign post_date_label = page.date | date: '%-d %B %Y' -%}
 
     <section
       id="{{ refs_heading_id | escape }}"
@@ -88,7 +95,9 @@
           {%- assign ref_key_str = ref_key | append: '' -%}
 
           {%- assign ref_item = ref -%}
-          {%- if refs_data and refs_data[ref_key_str] -%}
+          {%- if generated_refs_data and generated_refs_data[ref_key_str] -%}
+            {%- assign ref_item = generated_refs_data[ref_key_str] -%}
+          {%- elsif refs_data and refs_data[ref_key_str] -%}
             {%- assign ref_item = refs_data[ref_key_str] -%}
           {%- endif -%}
 
@@ -108,6 +117,8 @@
             anchor_id=ref_anchor_id
             index=forloop.index
             style=refs_style
+            post_date_iso=post_date_iso
+            post_date_label=post_date_label
           -%}
         {%- endfor -%}
       </ol>

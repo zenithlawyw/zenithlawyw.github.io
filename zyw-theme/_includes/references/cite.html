@@ -7,7 +7,11 @@
   {%- assign refs_style = include.style
     | default: page.references_style
     | default: site_refs_style
-    | default: 'ieee'
+    | default: 'harvard'
+    | strip
+    | remove: '"'
+    | remove: "'"
+    | remove: '’'
     | downcase
   -%}
   {%- assign refs_list = include.references | default: page.references -%}
@@ -16,7 +20,13 @@
     | default: 'references'
   -%}
   {%- assign refs_data = site.data[refs_data_file] -%}
-  {%- assign entry = refs_data[cite_key] -%}
+  {%- assign generated_refs_data = site.data.references_generated -%}
+  {%- assign entry = nil -%}
+  {%- if generated_refs_data and generated_refs_data[cite_key] -%}
+    {%- assign entry = generated_refs_data[cite_key] -%}
+  {%- elsif refs_data and refs_data[cite_key] -%}
+    {%- assign entry = refs_data[cite_key] -%}
+  {%- endif -%}
 
   {%- assign mode = include.mode | default: 'parenthetical' -%}
   {%- assign cite_anchor = include.anchor_id | default: cite_key | slugify -%}

@@ -8,6 +8,7 @@ ROOT = File.expand_path('..', __dir__)
 SEO_AUTO_FILE = File.join(ROOT, '_data', 'seo_auto.yml')
 GLOSSARY_FILE = File.join(ROOT, '_data', 'glossary_terms.yml')
 OUTPUT_FILE = File.join(ROOT, '_data', 'glossary_auto.yml')
+CONFIG_FILE = File.join(ROOT, '_config.yml')
 
 STOP_WORDS = %w[
   data model page post site article content section system process example
@@ -116,6 +117,56 @@ rescue StandardError
 end
 
 
+def truthy?(value)
+  case value
+  when true then true
+  when false, nil then false
+  else
+    %w[1 true yes on].include?(value.to_s.strip.downcase)
+  end
+end
+
+
+def normalize_regex(pattern)
+  text = pattern.to_s.strip
+  return nil if text.empty?
+
+  Regexp.new(text, Regexp::IGNORECASE)
+rescue RegexpError
+  nil
+end
+
+
+def load_auto_approve_config(config)
+  raw = config.dig('glossary', 'auto_approve')
+  return { 'enabled' => false } unless raw.is_a?(Hash)
+
+  {
+    'enabled' => truthy?(raw['enabled']),
+    'min_confidence' => raw['min_confidence'].to_i,
+    'require_related_post' => raw.key?('require_related_post') ? truthy?(raw['require_related_post']) : true,
+    'terms' => Array(raw['terms']).map { |item| normalize_term(item).downcase }.reject(&:empty?).uniq,
+    'patterns' => Array(raw['patterns']).map { |item| normalize_regex(item) }.compact
+  }
+end
+
+
+def auto_approve_term?(entry, policy)
+  return false unless policy['enabled']
+  return false if entry['confidence'].to_i < policy['min_confidence'].to_i
+
+  if policy['require_related_post']
+    related_posts = Array(entry['related_posts'])
+    return false if related_posts.empty?
+  end
+
+  key = normalize_term(entry['term']).downcase
+  return true if policy['terms'].include?(key)
+
+  policy['patterns'].any? { |pattern| key.match?(pattern) }
+end
+
+
 def merge_with_existing_candidate(generated, existing)
   merged = deep_copy(generated)
   return merged unless existing.is_a?(Hash)
@@ -138,6 +189,8 @@ end
 seo_auto = load_yaml(SEO_AUTO_FILE)
 manual_glossary = load_yaml(GLOSSARY_FILE)
 existing_glossary_auto = load_yaml(OUTPUT_FILE)
+site_config = load_yaml(CONFIG_FILE)
+auto_approve_policy = load_auto_approve_config(site_config)
 
 post_records = seo_auto['posts'].is_a?(Hash) ? seo_auto['posts'] : {}
 page_records = seo_auto['pages'].is_a?(Hash) ? seo_auto['pages'] : {}
@@ -198,7 +251,15 @@ end
 
 merged_candidates = generated_candidates.map do |entry|
   key = normalize_term(entry['term']).downcase
-  merge_with_existing_candidate(entry, existing_auto_by_term[key])
+  merged = merge_with_existing_candidate(entry, existing_auto_by_term[key])
+
+  if normalize_status(merged['status']) == 'candidate' && auto_approve_term?(merged, auto_approve_policy)
+    merged['status'] = 'approved'
+    merged['source'] ||= {}
+    merged['source']['tier'] = 'Internal synthesis (editorial auto-approved)'
+  end
+
+  merged
 end
 
 # Keep existing moderated entries even if they are not re-extracted in the latest run.
