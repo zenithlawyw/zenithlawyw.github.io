@@ -11,7 +11,7 @@ npm run docs:build
 npm run format
 
 # Auto-stage generated data artifacts from pre-commit generators.
-git add docs/_data/seo_auto.yml docs/_data/glossary_auto.yml
+git add docs/_data/seo_auto.yml docs/_data/glossary_auto.yml docs/_data/references_generated.yml
 
 # Re-stage formatter changes only for files that were already staged.
 if [ -n "$STAGED_FILES" ]; then
