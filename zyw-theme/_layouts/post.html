@@ -138,6 +138,13 @@ hidden: []
       color: #111827;
     }
 
+    .post-print-header h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      line-height: 1.25;
+      color: #111827;
+    }
+
     .post-print-header .post-print-meta,
     .post-print-header .post-print-url {
       margin-top: 0.35rem;
@@ -263,7 +270,7 @@ hidden: []
     </div>
 
     <header class="post-print-header" aria-hidden="true">
-      <h1>{{ page.title | escape }}</h1>
+      <h2>{{ page.title | escape }}</h2>
       <p class="post-print-meta">
         Published {{ page.date | date: date_format }}
         {% if print_author %}
@@ -293,8 +300,13 @@ hidden: []
                   alt="{{ page.title }}"
                   class="h-full w-full object-cover"
                   loading="eager"
+                  width="1600"
+                  height="900"
                 >
               </div>
+              <figcaption class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                {{ page.intro_image_caption | default: page.title | escape }}
+              </figcaption>
             </figure>
           {% endif %}
           <div class="{% if page.intro_image %}md:col-span-5{% else %}md:col-span-12{% endif %}">
@@ -315,6 +327,135 @@ hidden: []
       </aside>
 
       <div class="post-main order-2 min-w-0 overflow-x-hidden lg:order-1">
+        {% assign article = page.content %}
+        {% assign lang = page.lang | default: site.lang | default: 'en' %}
+        {%- include functions.html func='get_article_words' article=article lang=lang -%}
+        {% assign article_words = return %}
+        {%- include functions.html func='get_reading_time' -%}
+        {% assign snapshot_reading_time = return %}
+        {% assign reference_count = page.references | size %}
+
+        {%- assign show_article_snapshot = page.article_snapshot
+          | default: site.zyw.article_snapshot
+          | default: false
+        -%}
+        {%- if show_article_snapshot -%}
+          <section
+            class="mb-8 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-900"
+            aria-labelledby="article-snapshot-title"
+          >
+            <h2
+              id="article-snapshot-title"
+              class="text-xl font-bold text-gray-900 dark:text-gray-100"
+            >
+              Article Snapshot
+            </h2>
+
+            <dl class="mt-4 grid grid-cols-1 gap-3 text-sm text-gray-700 dark:text-gray-200 sm:grid-cols-2">
+              <div>
+                <dt class="font-semibold text-gray-900 dark:text-gray-100">
+                  Published
+                </dt>
+                <dd>{{ page.date | date: date_format }}</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-900 dark:text-gray-100">
+                  Last updated
+                </dt>
+                <dd>
+                  {{
+                    page.last_modified_at
+                    | default: page.date
+                    | date: date_format
+                  }}
+                </dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-900 dark:text-gray-100">
+                  Estimated reading time
+                </dt>
+                <dd>{{ snapshot_reading_time }}</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-900 dark:text-gray-100">
+                  Word count
+                </dt>
+                <dd>{{ article_words }}</dd>
+              </div>
+            </dl>
+
+            {%- if page.tags and page.tags.size > 0 -%}
+              <h3 class="mt-5 text-base font-semibold text-gray-900 dark:text-gray-100">
+                Key topics
+              </h3>
+              <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700 dark:text-gray-200">
+                {%- for tag in page.tags limit: 8 -%}
+                  <li>{{ tag }}</li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+
+            <div class="mt-5 overflow-x-auto">
+              <table class="min-w-full border-collapse border border-gray-200 text-sm dark:border-gray-700">
+                <caption class="sr-only">
+                  Article evidence and structure metrics
+                </caption>
+                <thead>
+                  <tr>
+                    <th
+                      class="border border-gray-200 bg-gray-50 px-3 py-2 text-left font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                      scope="col"
+                    >
+                      Signal
+                    </th>
+                    <th
+                      class="border border-gray-200 bg-gray-50 px-3 py-2 text-left font-semibold text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                      scope="col"
+                    >
+                      Value
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th
+                      class="border border-gray-200 px-3 py-2 text-left font-medium text-gray-900 dark:border-gray-700 dark:text-gray-100"
+                      scope="row"
+                    >
+                      References listed
+                    </th>
+                    <td class="border border-gray-200 px-3 py-2 dark:border-gray-700">
+                      {{ reference_count }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th
+                      class="border border-gray-200 px-3 py-2 text-left font-medium text-gray-900 dark:border-gray-700 dark:text-gray-100"
+                      scope="row"
+                    >
+                      Primary language
+                    </th>
+                    <td class="border border-gray-200 px-3 py-2 dark:border-gray-700">
+                      {{ page.lang | default: site.lang | default: 'en' }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th
+                      class="border border-gray-200 px-3 py-2 text-left font-medium text-gray-900 dark:border-gray-700 dark:text-gray-100"
+                      scope="row"
+                    >
+                      Canonical URL
+                    </th>
+                    <td class="border border-gray-200 px-3 py-2 dark:border-gray-700">
+                      {{ page.url | absolute_url }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        {%- endif -%}
+
         {%- include views/article.html -%}
 
         {%- include references/list.html -%}

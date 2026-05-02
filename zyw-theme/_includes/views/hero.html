@@ -74,7 +74,14 @@
           class="absolute inset-0 bg-cover bg-center"
           style="background-image: url({{ hero_image }}); opacity: {{ resolved_hero_opacity }};"
         ></div>
-        <img class="hidden" src="{{ hero_image }}" alt="" loading="eager">
+        <img
+          class="hidden"
+          src="{{ hero_image }}"
+          alt="{{ heading | default: page.title | default: site.title | escape }}"
+          loading="eager"
+          width="1600"
+          height="900"
+        >
       {%- endif -%}
     </div>
     <div class="absolute inset-0 bg-black/40"></div>

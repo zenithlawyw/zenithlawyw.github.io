@@ -52,6 +52,7 @@ hero:
   height: "100vh"
 
 zyw:
+  article_snapshot: false
   date_format: "%-d %B %Y"
 
 collections:
