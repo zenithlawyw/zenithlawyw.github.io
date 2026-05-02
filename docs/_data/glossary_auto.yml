@@ -1,111 +1,7 @@
 ---
-generated_at: "2026-05-02T18:58:40Z"
+generated_at: "2026-05-02T20:31:46Z"
 total_candidates: 627
 candidates:
-  - term: Incident Response
-    status: approved
-    confidence: 10
-    suggested_definition: Incident Response is a structured, technical sub-discipline of incident management comprising the specific processes, technologies, and strategic actions an organization employs to prepare for, detect, and resolve confirmed security incidents. It transforms a series of correlated alerts into a coordinated defense aimed at neutralizing active threats, restoring system integrity, and leveraging forensic insights to prevent future recurrences.
-    source:
-      label: Auto extraction from site corpus
-      url: "/faq/"
-      tier: Internal synthesis (editorial)
-    related_posts:
-      - title: "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on Trust, Provenance, and Resilient Engineering"
-        url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
-      - title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
-        url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
-    related_pages: []
-  - term: A2a Acp
-    status: approved
-    confidence: 9
-    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
-    source:
-      label: Auto extraction from site corpus
-      url: "/faq/"
-      tier: Internal synthesis (editorial auto-approved)
-    related_posts:
-      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
-        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
-      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
-        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
-    related_pages: []
-  - term: Mcp A2a
-    status: approved
-    confidence: 9
-    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
-    source:
-      label: Auto extraction from site corpus
-      url: "/faq/"
-      tier: Internal synthesis (editorial auto-approved)
-    related_posts:
-      - title: "MCP vs A2A: Practical Protocol Boundaries for Tool-Connected and Multi-Agent AI Systems"
-        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
-      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
-        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
-    related_pages: []
-  - term: Mcp A2a Acp
-    status: approved
-    confidence: 9
-    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
-    source:
-      label: Auto extraction from site corpus
-      url: "/faq/"
-      tier: Internal synthesis (editorial auto-approved)
-    related_posts:
-      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
-        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
-      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
-        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
-    related_pages: []
-  - term: Support Vector Machine
-    status: approved
-    confidence: 8
-    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
-    source:
-      label: Auto extraction from site corpus
-      url: "/faq/"
-      tier: Internal synthesis (editorial auto-approved)
-    related_posts:
-      - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
-        url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
-    related_pages: []
-  - term: A2a Langgraph
-    status: approved
-    confidence: 7
-    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
-    source:
-      label: Auto extraction from site corpus
-      url: "/faq/"
-      tier: Internal synthesis (editorial auto-approved)
-    related_posts:
-      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
-        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
-    related_pages: []
-  - term: A2a Langgraph Langchain
-    status: approved
-    confidence: 7
-    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
-    source:
-      label: Auto extraction from site corpus
-      url: "/faq/"
-      tier: Internal synthesis (editorial auto-approved)
-    related_posts:
-      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
-        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
-    related_pages: []
-  - term: Mcp A2a Langgraph
-    status: approved
-    confidence: 7
-    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
-    source:
-      label: Auto extraction from site corpus
-      url: "/faq/"
-      tier: Internal synthesis (editorial auto-approved)
-    related_posts:
-      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
-        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
-    related_pages: []
   - term: Caveats Relevance Repository
     status: candidate
     confidence: 67
@@ -968,6 +864,20 @@ candidates:
       - title: "Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Incident Response
+    status: candidate
+    confidence: 10
+    suggested_definition: Incident Response is a structured, technical sub-discipline of incident management comprising the specific processes, technologies, and strategic actions an organization employs to prepare for, detect, and resolve confirmed security incidents. It transforms a series of correlated alerts into a coordinated defense aimed at neutralizing active threats, restoring system integrity, and leveraging forensic insights to prevent future recurrences.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (editorial)
+    related_posts:
+      - title: "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on Trust, Provenance, and Resilient Engineering"
+        url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
+      - title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
+        url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
+    related_pages: []
   - term: Machines
     status: candidate
     confidence: 10
@@ -1048,6 +958,20 @@ candidates:
     related_pages:
       - title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
         url: "/glossary/"
+  - term: A2a Acp
+    status: candidate
+    confidence: 9
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
   - term: Coffman Conditions Deadlock
     status: candidate
     confidence: 9
@@ -1209,6 +1133,34 @@ candidates:
     related_posts:
       - title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: Mcp A2a
+    status: candidate
+    confidence: 9
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP vs A2A: Practical Protocol Boundaries for Tool-Connected and Multi-Agent AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: Mcp A2a Acp
+    status: candidate
+    confidence: 9
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
     related_pages: []
   - term: Npm Supply Chain
     status: candidate
@@ -1624,6 +1576,18 @@ candidates:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
     related_pages: []
+  - term: Support Vector Machine
+    status: candidate
+    confidence: 8
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
+        url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+    related_pages: []
   - term: Uci Har
     status: candidate
     confidence: 8
@@ -1660,6 +1624,30 @@ candidates:
     related_pages:
       - title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
         url: "/glossary/"
+  - term: A2a Langgraph
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: A2a Langgraph Langchain
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
   - term: AEO SEO GEO
     status: candidate
     confidence: 7
@@ -2475,6 +2463,18 @@ candidates:
     related_posts:
       - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
         url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+    related_pages: []
+  - term: Mcp A2a Langgraph
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
     related_pages: []
   - term: Model Evaluation
     status: candidate

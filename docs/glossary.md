@@ -21,7 +21,7 @@ intro: "Glossary of cross-domain terms for engineering, governance, legal, polic
 {% assign glossary_auto_approved = glossary_auto_candidates | where_exp: "item", "item.status == 'approved'" %}
 {% assign glossary_auto_approved_sorted = glossary_auto_approved | sort: "term" %}
 {% assign glossary_auto_unapproved = glossary_auto_candidates | where_exp: "item", "item.status != 'approved'" %}
-{% assign glossary_combined_terms = terms_sorted | concat: glossary_auto_approved_sorted | sort: "term" %}
+{% assign glossary_combined_terms = terms_sorted %}
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   <div
