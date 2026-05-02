@@ -19,6 +19,8 @@
           alt="{{ include.post.title | escape }}"
           class="aspect-video w-full object-cover"
           loading="lazy"
+          width="1600"
+          height="900"
       ></a>
     </div>
   {% endif %}
@@ -63,7 +65,7 @@
           {%- for category in include.post.original_categories -%}
             <a
               href="{{ '/categories.html' | relative_url }}#{{ category | slugify }}"
-              class="inline-block rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 no-underline transition-colors hover:bg-blue-100 dark:bg-blue-900/60 dark:text-blue-100 dark:hover:bg-blue-800/70"
+              class="inline-flex min-h-11 items-center rounded-full bg-blue-50 px-3 py-2 text-sm font-semibold text-blue-700 no-underline transition-colors hover:bg-blue-100 dark:bg-blue-900/60 dark:text-blue-100 dark:hover:bg-blue-800/70"
             >
               {{- category -}}
             </a>
@@ -72,7 +74,7 @@
           {%- for category in include.post.categories -%}
             <a
               href="{{ '/categories.html' | relative_url }}#{{ category | slugify }}"
-              class="inline-block rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 no-underline transition-colors hover:bg-blue-100 dark:bg-blue-900/60 dark:text-blue-100 dark:hover:bg-blue-800/70"
+              class="inline-flex min-h-11 items-center rounded-full bg-blue-50 px-3 py-2 text-sm font-semibold text-blue-700 no-underline transition-colors hover:bg-blue-100 dark:bg-blue-900/60 dark:text-blue-100 dark:hover:bg-blue-800/70"
             >
               {{- category -}}
             </a>
@@ -83,7 +85,7 @@
         {%- for tag in include.post.tags -%}
           <a
             href="{{ '/tags.html' | relative_url }}#{{ tag | slugify }}"
-            class="inline-block rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600 no-underline transition-colors hover:text-gray-800 dark:bg-gray-700 dark:text-gray-100 dark:hover:text-white"
+            class="inline-flex min-h-11 items-center rounded-full bg-gray-100 px-3 py-2 text-sm font-medium text-gray-600 no-underline transition-colors hover:text-gray-800 dark:bg-gray-700 dark:text-gray-100 dark:hover:text-white"
             >#{{ tag -}}
           </a>
         {%- endfor -%}
@@ -96,7 +98,7 @@
   <div class="border-t border-gray-200 dark:border-gray-700">
     <a
       href="{{ include.post.url | relative_url }}"
-      class="block w-full bg-gray-900 px-3 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-gray-700 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-300"
+      class="inline-flex min-h-11 w-full items-center justify-center bg-gray-900 px-3 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-gray-700 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-300"
     >
       Read more
     </a>
