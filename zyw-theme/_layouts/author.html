@@ -12,8 +12,6 @@ layout: section
               src="{{ page.avatar | relative_url }}"
               alt="{{ page.name }}"
               class="h-full w-full object-cover"
-              width="96"
-              height="96"
             >
           {% else %}
             <span class="text-3xl font-bold">{{ page.name | slice: 0 }}</span>
@@ -39,7 +37,7 @@ layout: section
             {% for link in page.links %}
               <a
                 href="{{ link.url }}"
-                class="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-4 py-2 text-sm font-medium text-gray-600 no-underline transition-colors hover:border-blue-400 hover:text-blue-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:border-blue-500 dark:hover:text-blue-400"
+                class="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-600 no-underline transition-colors hover:border-blue-400 hover:text-blue-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:border-blue-500 dark:hover:text-blue-400"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -95,8 +93,6 @@ layout: section
                   alt="{{ post.title | escape }}"
                   class="aspect-video w-full object-cover"
                   loading="lazy"
-                  width="1600"
-                  height="900"
                 >
               </div>
             {% endif %}

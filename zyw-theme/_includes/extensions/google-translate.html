@@ -14,7 +14,7 @@
     type="button"
     aria-expanded="false"
     aria-haspopup="listbox"
-    class="inline-flex min-h-11 items-center gap-2 rounded border border-white/40 bg-white/10 px-3 py-2 text-sm text-inherit transition-colors hover:bg-white/20 dark:bg-black/20 dark:hover:bg-black/30"
+    class="inline-flex items-center gap-2 rounded border border-white/40 bg-white/10 px-2 py-1 text-sm text-inherit transition-colors hover:bg-white/20 dark:bg-black/20 dark:hover:bg-black/30"
   >
     <span aria-hidden="true">&#127760;</span>
     <span id="google-translate-current" class="hidden sm:inline"
@@ -39,9 +39,9 @@
   >
     {% for item in translate_langs %}
       <li class="m-0 p-0">
-        <button
-          type="button"
-          class="google-translate-option flex min-h-11 w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm text-gray-700 no-underline hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800"
+        <a
+          href="#"
+          class="google-translate-option flex items-center gap-2 rounded px-2 py-1.5 text-sm text-gray-700 no-underline hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800"
           data-lang="{{ item.lang }}"
           data-label="{{ item.text }}"
           role="option"
@@ -52,12 +52,10 @@
               title="{{ item.text }}"
               alt="{{ item.text }}"
               class="h-4 w-4 object-contain"
-              width="16"
-              height="16"
             >
           {% endif %}
           <span>{{ item.text }}</span>
-        </button>
+        </a>
       </li>
     {% endfor %}
   </ul>
