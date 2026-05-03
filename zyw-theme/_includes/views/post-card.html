@@ -102,7 +102,7 @@
       href="{{ include.post.url | relative_url }}"
       class="inline-flex min-h-[45px] w-full items-center justify-center bg-gray-900 px-3 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-gray-700 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-300"
     >
-      Read more
+      Read: {{ include.post.title | escape }}
     </a>
   </div>
 </article>
