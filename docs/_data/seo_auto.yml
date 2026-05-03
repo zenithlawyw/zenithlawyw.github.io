@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-05-03T14:03:43Z"
+generated_at: "2026-05-03T14:34:47Z"
 signal_weights:
   title: 3
   categories: 5
@@ -22,64 +22,65 @@ keywords:
   - svm
   - a2a
   - supply
+  - support
   - mcp
   - model
-  - support
   - chain
-  - questions
   - provenance
-  - lessons
+  - questions
   - deployment
   - practical
   - vector
+  - lessons
   - acp
   - cloud
   - learning
   - deadlock
   - artificial
   - intelligence
-  - orchestration
   - platform
   - design
+  - orchestration
   - systems
   - asked
   - frequently
   - agent
-  - benchmark
   - controls
+  - benchmark
+  - boundaries
   - china
   - legal
   - glossary
   - security
-  - boundaries
+  - architecture
+  - resource
   - scope
   - trust
   - tuning
   - llm
   - agentic
-  - architecture
   - protocol
-  - resource
+  - fragmentation
   - hub
+  - theory
   - introduction
   - starvation
   - teams
   - enterprise
-  - fragmentation
   - npm
   - conditions
   - cross-border
   - digital
+  - evidence
+  - incident
   - langchain
   - langgraph
   - language
-  - theory
   - access
   - coffman
+  - compromise
   - evaluation
-  - evidence
   - graph
-  - incident
   - large
   - monitoring
   - practice
@@ -91,13 +92,15 @@ keywords:
   - classification
   - compliance
   - har
+  - interoperability
   - knowledge
   - management
   - operating
   - papers
   - sovereignty
+  - traceability
+  - analysis
   - axios
-  - compromise
   - definitions
   - layer
   - scheduling
@@ -109,34 +112,35 @@ keywords:
   - confusion
   - cookies
   - faq
-  - interoperability
   - operational
   - privacy
   - technical
-  - traceability
-  - analysis
   - circular
   - claim
   - cloud-native
+  - contention
   - credential
   - cybersecurity
   - implementation
   - literature
   - production
+  - response
   - review
   - start
   - decision
   - deployable
   - kernels
   - law
+  - multi-agent
+  - patterns
   - protection
   - residency
   - risk
+  - work
   - workflow
   - apply
   - calibration
   - conclusion
-  - contention
   - critical
   - difference
   - first
@@ -154,7 +158,6 @@ keywords:
   - priority
   - prov-ml
   - python
-  - response
   - social
   - treat
   - alignment
@@ -163,18 +166,15 @@ keywords:
   - disclaimer
   - error
   - frontier
-  - multi-agent
   - notices
   - observability
-  - patterns
   - playbook
   - prompt
   - quality
   - reproducibility
   - saas
   - scholarly
-  - work
-  - algorithm
+  - trustworthy
 key_phrases:
   - supply chain
   - support vector
@@ -211,6 +211,7 @@ key_phrases:
   - language models
   - large language models
   - axios npm
+  - resource contention
   - a2a acp langgraph
   - acp langgraph
   - acp langgraph langchain
@@ -226,10 +227,10 @@ key_phrases:
   - model tuning
   - neural networks
   - operating systems
-  - resource contention
   - scope claim
   - social engineering
   - agentic orchestration mcp
+  - cloud fragmentation
   - cookies data
   - engineering governance resilience
   - enterprise agentic
@@ -259,11 +260,9 @@ key_phrases:
   - trust boundaries
   - trust provenance
   - vector machine benchmark
-  - cloud fragmentation
   - confusion matrix
   - cookies data protection
   - engineering governance legal
-  - governance digital
   - har support
   - har support vector
   - legal notices
@@ -316,64 +315,66 @@ key_phrases:
   - chain security social
   - classification model
   - classification model tuning
+  - cloud compliance
 catchwords:
   - engineering
   - governance
   - machine
   - supply
-  - model
   - support
+  - model
   - chain
-  - questions
   - provenance
-  - lessons
+  - questions
   - deployment
   - practical
   - vector
+  - lessons
   - cloud
   - learning
   - deadlock
   - artificial
   - intelligence
-  - orchestration
   - platform
   - design
+  - orchestration
   - systems
   - asked
   - frequently
   - agent
-  - benchmark
   - controls
+  - benchmark
+  - boundaries
   - china
   - legal
   - glossary
   - security
-  - boundaries
+  - architecture
+  - resource
   - scope
   - trust
   - tuning
   - agentic
-  - architecture
   - protocol
-  - resource
+  - fragmentation
+  - theory
   - introduction
   - starvation
   - teams
   - enterprise
-  - fragmentation
   - conditions
   - cross-border
   - digital
+  - evidence
+  - incident
   - langchain
   - langgraph
   - language
-  - theory
   - access
   - coffman
+  - compromise
   - evaluation
-  - evidence
   - graph
-  - incident
   - large
   - monitoring
   - practice
@@ -384,13 +385,15 @@ catchwords:
   - attack
   - classification
   - compliance
+  - interoperability
   - knowledge
   - management
   - operating
   - papers
   - sovereignty
+  - traceability
+  - analysis
   - axios
-  - compromise
   - definitions
   - layer
   - scheduling
@@ -399,32 +402,32 @@ catchwords:
   - tenant-aware
   - confusion
   - cookies
-  - interoperability
   - operational
   - privacy
   - technical
-  - traceability
-  - analysis
   - circular
   - claim
   - cloud-native
+  - contention
   - credential
   - cybersecurity
   - implementation
   - literature
   - production
+  - response
   - review
   - start
   - decision
   - deployable
   - kernels
+  - multi-agent
+  - patterns
   - protection
   - residency
   - workflow
   - apply
   - calibration
   - conclusion
-  - contention
   - critical
   - difference
   - first
@@ -440,7 +443,6 @@ catchwords:
   - priority
   - prov-ml
   - python
-  - response
   - social
   - treat
   - alignment
@@ -448,16 +450,14 @@ catchwords:
   - disclaimer
   - error
   - frontier
-  - multi-agent
   - notices
   - observability
-  - patterns
   - playbook
   - prompt
   - quality
   - reproducibility
   - scholarly
-  - algorithm
+  - trustworthy
 catchphrases:
   - frequently asked questions
   - agent card
@@ -512,64 +512,65 @@ search_words:
   - svm
   - a2a
   - supply
+  - support
   - mcp
   - model
-  - support
   - chain
-  - questions
   - provenance
-  - lessons
+  - questions
   - deployment
   - practical
   - vector
+  - lessons
   - acp
   - cloud
   - learning
   - deadlock
   - artificial
   - intelligence
-  - orchestration
   - platform
   - design
+  - orchestration
   - systems
   - asked
   - frequently
   - agent
-  - benchmark
   - controls
+  - benchmark
+  - boundaries
   - china
   - legal
   - glossary
   - security
-  - boundaries
+  - architecture
+  - resource
   - scope
   - trust
   - tuning
   - llm
   - agentic
-  - architecture
   - protocol
-  - resource
+  - fragmentation
   - hub
+  - theory
   - introduction
   - starvation
   - teams
   - enterprise
-  - fragmentation
   - npm
   - conditions
   - cross-border
   - digital
+  - evidence
+  - incident
   - langchain
   - langgraph
   - language
-  - theory
   - access
   - coffman
+  - compromise
   - evaluation
-  - evidence
   - graph
-  - incident
   - large
   - monitoring
   - practice
@@ -581,20 +582,19 @@ search_words:
   - classification
   - compliance
   - har
+  - interoperability
   - knowledge
   - management
   - operating
   - papers
   - sovereignty
+  - traceability
+  - analysis
   - axios
-  - compromise
   - definitions
   - layer
   - scheduling
   - search
-  - series
-  - tenant-aware
-  - tool
   - supply chain
   - support vector
   - support vector machine
@@ -630,6 +630,7 @@ search_words:
   - language models
   - large language models
   - axios npm
+  - resource contention
   - a2a acp langgraph
   - acp langgraph
   - acp langgraph langchain
@@ -645,10 +646,10 @@ search_words:
   - model tuning
   - neural networks
   - operating systems
-  - resource contention
   - scope claim
   - social engineering
   - agentic orchestration mcp
+  - cloud fragmentation
   - cookies data
   - engineering governance resilience
   - enterprise agentic
@@ -664,7 +665,6 @@ search_words:
   - claim classification
   - deadlock resource
   - deadlock resource contention
-  - faq hub
 global_questions:
   - question: How do I know whether to start with linear or RBF SVM?
     answer: Start with linear SVM, inspect residual and class-pair errors, then move to RBF only when validation evidence shows nonlinear boundaries that linear regularization cannot recover.
@@ -2330,124 +2330,126 @@ pages:
     title: ""
     url: "/_authors/zenith-law.html"
     keywords:
-      - data
-      - years
-      - abstractions
-      - application
-      - builds
       - cloud
+      - data
+      - governance
+      - machine
+      - platform
+      - theory
+      - ai-ready
+      - analysis
+      - architecture
+      - boundaries
+      - compromise
+      - contention
+      - controls
+      - cross-jurisdiction
       - cybersecurity
-      - delivery
+      - deployment
+      - design
       - digital
       - doctoral
-      - domains
+      - emphasis
       - engineer
-      - experience
-      - focus
-      - governance
-      - hands-on
+      - evidence
+      - fragmentation
+      - implementation-focused
+      - incident
+      - interoperability
       - law
-      - leadership
+      - learning
       - legal
       - lineage
+      - maps
       - metadata
-      - mission-critical
-      - ml-ready
-      - observable
-      - perspective
-      - platform
-      - polyglot
-      - quality
-      - regulated
-      - researcher
-      - resilient
-      - scalable
-      - science
-      - senior
+      - multi-agent
+      - operating-systems
+      - operations
     key_phrases:
-      - platforms strong focus
-      - application platforms strong
-      - data application platforms
-      - observable data application
-      - scalable observable data
-      - mission-critical scalable observable
-      - builds mission-critical scalable
-      - leadership builds mission-critical
-      - technical leadership builds
-      - senior technical leadership
-      - years senior technical
-      - experience years senior
-      - engineering experience years
-      - polyglot engineering experience
-      - hands-on polyglot engineering
-      - years hands-on polyglot
-      - trainer years hands-on
-      - researcher trainer years
-      - engineer researcher trainer
-      - strategist engineer researcher
-      - law strategist engineer
-      - zenith law strategist
-      - platform abstractions
-      - ml-ready platform abstractions
+      - ai-ready platform design
+      - fragmentation multi-agent interoperability
+      - cloud fragmentation multi-agent
+      - cross-jurisdiction cloud fragmentation
+      - response cross-jurisdiction cloud
+      - compromise response cross-jurisdiction
+      - supply-chain compromise response
+      - controls supply-chain compromise
+      - practical controls supply-chain
+      - theory practical controls
+      - technical theory practical
+      - evidence technical theory
+      - incident evidence technical
+      - maps incident evidence
+      - work maps incident
+      - operations work maps
+      - cloud operations work
+      - resilient cloud operations
+      - architecture resilient cloud
+      - platform architecture resilient
+      - governance platform architecture
+      - sovereignty governance platform
+      - digital sovereignty governance
+      - cybersecurity digital sovereignty
     catchwords:
-      - years
-      - abstractions
-      - application
-      - builds
       - cloud
+      - governance
+      - machine
+      - platform
+      - theory
+      - ai-ready
+      - analysis
+      - architecture
+      - boundaries
+      - compromise
+      - contention
+      - controls
+      - cross-jurisdiction
       - cybersecurity
-      - delivery
+      - deployment
+      - design
       - digital
       - doctoral
-      - domains
+      - emphasis
       - engineer
-      - experience
-      - focus
-      - governance
-      - hands-on
-      - leadership
+      - evidence
+      - fragmentation
+      - implementation-focused
+      - incident
+      - interoperability
+      - learning
       - legal
       - lineage
-      - metadata
-      - mission-critical
-      - ml-ready
-      - observable
-      - perspective
-      - platform
-      - polyglot
-      - quality
-      - regulated
-      - researcher
     search_words:
-      - data
-      - years
-      - abstractions
-      - application
-      - builds
       - cloud
-      - cybersecurity
-      - delivery
-      - digital
-      - doctoral
-      - domains
-      - engineer
-      - experience
-      - focus
+      - data
       - governance
-      - hands-on
-      - law
-      - platforms strong focus
-      - application platforms strong
-      - data application platforms
-      - observable data application
-      - scalable observable data
-      - mission-critical scalable observable
-      - builds mission-critical scalable
-      - leadership builds mission-critical
-      - technical leadership builds
-      - senior technical leadership
-      - years senior technical
-      - experience years senior
+      - machine
+      - platform
+      - theory
+      - ai-ready
+      - analysis
+      - architecture
+      - boundaries
+      - compromise
+      - contention
+      - controls
+      - cross-jurisdiction
+      - cybersecurity
+      - deployment
+      - design
+      - digital
+      - ai-ready platform design
+      - fragmentation multi-agent interoperability
+      - cloud fragmentation multi-agent
+      - cross-jurisdiction cloud fragmentation
+      - response cross-jurisdiction cloud
+      - compromise response cross-jurisdiction
+      - supply-chain compromise response
+      - controls supply-chain compromise
+      - practical controls supply-chain
+      - theory practical controls
+      - technical theory practical
+      - evidence technical theory
     questions: []
   articles:
     title: Engineering, Governance, and Resilience Articles | Practical Playbooks
