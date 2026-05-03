@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-05-03T08:19:17Z"
+generated_at: "2026-05-03T08:33:05Z"
 signal_weights:
   title: 3
   categories: 5
@@ -25,11 +25,11 @@ keywords:
   - supply
   - model
   - chain
+  - questions
   - support
   - provenance
   - lessons
   - deployment
-  - questions
   - vector
   - acp
   - learning
@@ -119,6 +119,7 @@ keywords:
   - review
   - teams
   - deployable
+  - hub
   - kernels
   - law
   - protection
@@ -160,7 +161,6 @@ keywords:
   - disclaimer
   - error
   - frontier
-  - hub
   - multi-agent
   - notices
   - observability
@@ -243,6 +243,7 @@ key_phrases:
   - claim classification
   - deadlock resource
   - deadlock resource contention
+  - faq hub
   - hong kong
   - introduction scope claim
   - learning traceability
@@ -279,7 +280,6 @@ key_phrases:
   - deployment model
   - deployment model governance
   - digital sovereignty cloud
-  - faq hub
   - graph methods
   - knowledge distillation
   - lessons engineering
@@ -323,11 +323,11 @@ catchwords:
   - supply
   - model
   - chain
+  - questions
   - support
   - provenance
   - lessons
   - deployment
-  - questions
   - vector
   - learning
   - practical
@@ -475,7 +475,6 @@ catchphrases:
   - durable execution
   - engagement boundary
   - enterprise architecture considerations
-  - faq overview
   - glossary overview
   - hyperparameter stability signal
   - intellectual property
@@ -513,11 +512,11 @@ search_words:
   - supply
   - model
   - chain
+  - questions
   - support
   - provenance
   - lessons
   - deployment
-  - questions
   - vector
   - acp
   - learning
@@ -660,9 +659,9 @@ search_words:
   - claim classification
   - deadlock resource
   - deadlock resource contention
+  - faq hub
   - hong kong
   - introduction scope claim
-  - learning traceability
 global_questions:
   - question: How do I know whether to start with linear or RBF SVM?
     answer: Start with linear SVM, inspect residual and class-pair errors, then move to RBF only when validation evidence shows nonlinear boundaries that linear regularization cannot recover.
@@ -674,6 +673,10 @@ global_questions:
     answer: Class-level monitoring with confusion-corridor tracking, because it reveals high-impact degradation earlier than aggregate accuracy.
   - question: How are keywords matched against papers?
     answer: Matching runs against each record's title and abstract. "All keywords must match" narrows results to items where every keyword appears; "Any keyword may match" broadens results to items containing at least one keyword. Switching modes is the fastest way to widen a narrow search.
+  - question: How can I find answers quickly?
+    answer: Read the top intent section first, then move to article FAQs for deeper context.
+  - question: How current is this page?
+    answer: This page shows published and updated dates and refreshes from current site content.
   - question: How do I change cookie preferences later?
     answer: Use the **Cookie Preferences** control in the site footer or open [Cookie Preferences]() from the legal page.
   - question: How do I keep this useful beyond one benchmark?
@@ -710,6 +713,8 @@ global_questions:
     answer: SVM gives a transparent optimization framework that remains highly useful for structured, medium-scale classification and for disciplined baseline construction before scaling to heavier architectures.
   - question: What is the simplest deployable architecture for MCP, A2A, and ACP-aware interoperability?
     answer: One orchestrator service plus two or three specialist agents is enough. The orchestrator uses A2A to delegate tasks. Each specialist agent uses MCP to reach concrete tools and resources. ACP-compatible facades can be added at partner-facing boundaries where REST-native interoperability is required.
+  - question: What is this FAQ hub for?
+    answer: This hub gives direct answers from published content so users and AI search systems can find facts quickly.
   - question: What practical control should enterprises implement first?
     answer: Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority aligns with observed access and notification disruptions in the corpus.
   - question: What should I monitor first when training SVM models?
@@ -756,6 +761,8 @@ global_questions:
     answer: No. It means RF is the better fit for this specific dataset geometry and operating objective; SVM can still be strong in other structured regimes.
   - question: Does localization always reduce service quality?
     answer: Localization does not automatically reduce quality. Breakdown appears when architecture, governance, and communication design remain globally uniform while constraints are region-specific. Quality depends on explicit regional control planes and migration safeguards.
+  - question: Does this page provide legal advice?
+    answer: No. This page is educational and informational only, and legal rights vary by jurisdiction.
   - question: How do Coffman conditions apply to LLM inference and token scheduling?
     answer: "Token slots in LLM inference are mutual-exclusion resources: exactly one inference request occupies a decoding slot during autoregressive generation. In a multi-model pipeline, if Request A holds a slot on Model-X while waiting for Model-Y, and Request B holds Model-Y while waiting for Model-X, all four Coffman conditions hold and a deadlock can form. Prevention requires either a global model-acquisition ordering (always acquire Model-X before Model-Y) or full-release semantics, where Request A must complete and release all slots before acquiring resources on a second model. Lessons 1 and 2 address both strategies."
   - question: How do I check whether my npm project used a compromised package?
@@ -2495,8 +2502,8 @@ pages:
     title: "FAQ Hub: Questions and Answers Across Published Pages"
     url: "/faq/"
     keywords:
-      - faq
       - questions
+      - faq
       - answers
       - hub
       - published
@@ -2512,14 +2519,14 @@ pages:
       - policy
       - aeo
       - aggregated
+      - article-specific
       - cross-page
       - extraction
-      - faqs
       - geo
       - improve
       - improved
+      - included
       - intent
-      - overview
       - retrieval
       - seo
       - topics
@@ -2535,20 +2542,22 @@ pages:
       - aeo seo geo
     key_phrases:
       - faq hub
-      - questions direct answers
       - questions answers
-      - direct answers
+      - questions direct answers
       - questions direct
+      - direct answers
+      - faq hub questions
+      - hub questions answers
+      - questions answers published
       - frequently asked questions
       - legal policy
-      - questions answers published
-      - hub questions answers
+      - hub questions
+      - answers published
       - asked questions
       - frequently asked
-      - faq hub questions
-      - answers published
-      - hub questions
-      - faq overview search
+      - questions questions answer
+      - hub cross-page questions
+      - faq hub cross-page
       - crawlability answer extraction
       - discoverability crawlability answer
       - improve discoverability crawlability
@@ -2556,8 +2565,6 @@ pages:
       - aggregated published improve
       - answers aggregated published
       - direct answers aggregated
-      - asked questions direct
-      - published faq hub
     catchwords:
       - questions
       - answers
@@ -2573,19 +2580,20 @@ pages:
       - legal
       - policy
       - aggregated
+      - article-specific
       - cross-page
       - extraction
       - improve
       - improved
+      - included
       - intent
-      - overview
       - retrieval
       - topics
       - searchability
       - searchable
     search_words:
-      - faq
       - questions
+      - faq
       - answers
       - hub
       - published
@@ -2602,18 +2610,26 @@ pages:
       - aeo
       - aggregated
       - faq hub
-      - questions direct answers
       - questions answers
-      - direct answers
+      - questions direct answers
       - questions direct
+      - direct answers
+      - faq hub questions
+      - hub questions answers
+      - questions answers published
       - frequently asked questions
       - legal policy
-      - questions answers published
-      - hub questions answers
-      - asked questions
-      - frequently asked
-      - faq hub questions
-    questions: []
+      - hub questions
+      - answers published
+    questions:
+      - question: How can I find answers quickly?
+        answer: Read the top intent section first, then move to article FAQs for deeper context.
+      - question: How current is this page?
+        answer: This page shows published and updated dates and refreshes from current site content.
+      - question: What is this FAQ hub for?
+        answer: This hub gives direct answers from published content so users and AI search systems can find facts quickly.
+      - question: Does this page provide legal advice?
+        answer: No. This page is educational and informational only, and legal rights vary by jurisdiction.
   glossary:
     title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
     url: "/glossary/"
