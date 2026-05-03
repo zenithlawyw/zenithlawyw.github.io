@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-05-03T10:43:52Z"
-total_candidates: 629
+generated_at: "2026-05-03T12:10:38Z"
+total_candidates: 634
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -2162,6 +2162,18 @@ candidates:
     related_pages:
       - title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
         url: "/glossary/"
+  - term: Engineering Governance Resilience
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Article Hub: Engineering, Governance, and Resilience Guides"
+        url: "/articles/"
   - term: Engineering Lessons
     status: candidate
     confidence: 7
@@ -2294,6 +2306,18 @@ candidates:
       - title: "Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Governance Resilience
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Article Hub: Engineering, Governance, and Resilience Guides"
+        url: "/articles/"
   - term: Graph Methods
     status: candidate
     confidence: 7
@@ -4484,6 +4508,30 @@ candidates:
       - title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
         url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
     related_pages: []
+  - term: Hub Engineering
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Article Hub: Engineering, Governance, and Resilience Guides"
+        url: "/articles/"
+  - term: Hub Engineering Governance
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "Article Hub: Engineering, Governance, and Resilience Guides"
+        url: "/articles/"
   - term: Implementation
     status: candidate
     confidence: 6
@@ -5462,6 +5510,20 @@ candidates:
     related_pages:
       - title: Privacy, Cookies and Data Protection
         url: "/legal/privacy-cookies-data-protection/"
+  - term: Resilience
+    status: candidate
+    confidence: 6
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
+        url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages:
+      - title: "Article Hub: Engineering, Governance, and Resilience Guides"
+        url: "/articles/"
   - term: Resilience Thread
     status: candidate
     confidence: 6

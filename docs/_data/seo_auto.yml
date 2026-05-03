@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-05-03T10:43:51Z"
+generated_at: "2026-05-03T12:10:37Z"
 signal_weights:
   title: 3
   categories: 5
@@ -16,25 +16,25 @@ signal_weight_rationale:
   keywords_catchwords: Low weight to avoid over-amplifying manually supplied or potentially noisy token lists.
 keywords:
   - engineering
-  - data
   - governance
+  - data
   - machine
   - svm
   - a2a
-  - mcp
   - supply
+  - mcp
   - model
+  - questions
   - support
   - chain
-  - questions
   - provenance
   - lessons
   - deployment
+  - practical
   - vector
   - acp
-  - learning
-  - practical
   - cloud
+  - learning
   - deadlock
   - artificial
   - intelligence
@@ -43,23 +43,24 @@ keywords:
   - design
   - systems
   - agent
-  - benchmark
   - asked
   - frequently
-  - china
+  - benchmark
   - controls
+  - china
   - glossary
+  - security
   - boundaries
   - scope
-  - security
   - trust
   - tuning
+  - legal
   - llm
   - agentic
+  - architecture
   - protocol
   - resource
-  - legal
-  - architecture
+  - hub
   - introduction
   - starvation
   - enterprise
@@ -75,26 +76,29 @@ keywords:
   - access
   - coffman
   - evaluation
+  - evidence
   - graph
+  - incident
   - large
   - monitoring
   - practice
+  - reading
   - reference
+  - resilience
+  - teams
   - transformer
   - attack
   - classification
+  - compliance
   - har
-  - incident
   - knowledge
   - management
   - operating
   - papers
   - sovereignty
   - axios
-  - compliance
   - compromise
   - layer
-  - reading
   - scheduling
   - search
   - series
@@ -105,7 +109,9 @@ keywords:
   - cookies
   - faq
   - interoperability
+  - operational
   - privacy
+  - technical
   - traceability
   - analysis
   - circular
@@ -113,30 +119,27 @@ keywords:
   - cloud-native
   - credential
   - cybersecurity
-  - evidence
+  - definitions
+  - implementation
   - literature
-  - operational
   - review
-  - teams
+  - decision
   - deployable
-  - hub
   - kernels
   - law
   - protection
   - residency
+  - risk
   - workflow
   - apply
   - calibration
   - conclusion
   - contention
   - critical
-  - decision
-  - definitions
   - difference
   - first
   - fit
   - geometry
-  - implementation
   - inference
   - jurisdiction
   - limits
@@ -150,10 +153,9 @@ keywords:
   - production
   - prov-ml
   - python
-  - risk
+  - response
   - social
   - start
-  - technical
   - treat
   - alignment
   - answers
@@ -165,16 +167,14 @@ keywords:
   - multi-agent
   - notices
   - observability
+  - patterns
   - playbook
   - prompt
   - quality
   - reproducibility
-  - response
   - saas
   - scholarly
   - work
-  - algorithm
-  - best
 key_phrases:
   - supply chain
   - support vector
@@ -183,23 +183,23 @@ key_phrases:
   - artificial intelligence
   - mcp a2a
   - a2a acp
+  - engineering governance
   - mcp a2a acp
   - asked questions
   - frequently asked
   - frequently asked questions
   - machine learning
-  - engineering governance
   - data provenance
   - artificial intelligence artificial
   - intelligence artificial
   - intelligence artificial intelligence
   - orchestration mcp
   - chain security
+  - supply chain security
   - coffman conditions
   - langgraph langchain
   - large language
   - orchestration mcp a2a
-  - supply chain security
   - data provenance machine
   - engineering lessons
   - platform engineering
@@ -221,6 +221,7 @@ key_phrases:
   - governance data
   - graph neural
   - graph neural networks
+  - incident response
   - introduction scope
   - model tuning
   - neural networks
@@ -230,8 +231,9 @@ key_phrases:
   - social engineering
   - agentic orchestration mcp
   - cookies data
+  - engineering governance resilience
   - enterprise agentic
-  - incident response
+  - governance resilience
   - model governance
   - npm supply
   - npm supply chain
@@ -314,24 +316,22 @@ key_phrases:
   - cloud compliance platform
   - cloud fragmentation scheduling
   - compliance platform
-  - compliance platform engineering
-  - conclusion introduction
 catchwords:
   - engineering
   - governance
   - machine
   - supply
   - model
+  - questions
   - support
   - chain
-  - questions
   - provenance
   - lessons
   - deployment
-  - vector
-  - learning
   - practical
+  - vector
   - cloud
+  - learning
   - deadlock
   - artificial
   - intelligence
@@ -340,22 +340,22 @@ catchwords:
   - design
   - systems
   - agent
-  - benchmark
   - asked
   - frequently
-  - china
+  - benchmark
   - controls
+  - china
   - glossary
+  - security
   - boundaries
   - scope
-  - security
   - trust
   - tuning
+  - legal
   - agentic
+  - architecture
   - protocol
   - resource
-  - legal
-  - architecture
   - introduction
   - starvation
   - enterprise
@@ -370,25 +370,28 @@ catchwords:
   - access
   - coffman
   - evaluation
+  - evidence
   - graph
+  - incident
   - large
   - monitoring
   - practice
+  - reading
   - reference
+  - resilience
+  - teams
   - transformer
   - attack
   - classification
-  - incident
+  - compliance
   - knowledge
   - management
   - operating
   - papers
   - sovereignty
   - axios
-  - compliance
   - compromise
   - layer
-  - reading
   - scheduling
   - search
   - series
@@ -396,7 +399,9 @@ catchwords:
   - confusion
   - cookies
   - interoperability
+  - operational
   - privacy
+  - technical
   - traceability
   - analysis
   - circular
@@ -404,11 +409,11 @@ catchwords:
   - cloud-native
   - credential
   - cybersecurity
-  - evidence
+  - definitions
+  - implementation
   - literature
-  - operational
   - review
-  - teams
+  - decision
   - deployable
   - kernels
   - protection
@@ -419,12 +424,9 @@ catchwords:
   - conclusion
   - contention
   - critical
-  - decision
-  - definitions
   - difference
   - first
   - geometry
-  - implementation
   - inference
   - jurisdiction
   - limits
@@ -437,9 +439,9 @@ catchwords:
   - production
   - prov-ml
   - python
+  - response
   - social
   - start
-  - technical
   - treat
   - alignment
   - answers
@@ -450,13 +452,12 @@ catchwords:
   - multi-agent
   - notices
   - observability
+  - patterns
   - playbook
   - prompt
   - quality
   - reproducibility
-  - response
   - scholarly
-  - algorithm
 catchphrases:
   - frequently asked questions
   - agent card
@@ -503,25 +504,25 @@ catchphrases:
   - thematic analysis
 search_words:
   - engineering
-  - data
   - governance
+  - data
   - machine
   - svm
   - a2a
-  - mcp
   - supply
+  - mcp
   - model
+  - questions
   - support
   - chain
-  - questions
   - provenance
   - lessons
   - deployment
+  - practical
   - vector
   - acp
-  - learning
-  - practical
   - cloud
+  - learning
   - deadlock
   - artificial
   - intelligence
@@ -530,23 +531,24 @@ search_words:
   - design
   - systems
   - agent
-  - benchmark
   - asked
   - frequently
-  - china
+  - benchmark
   - controls
+  - china
   - glossary
+  - security
   - boundaries
   - scope
-  - security
   - trust
   - tuning
+  - legal
   - llm
   - agentic
+  - architecture
   - protocol
   - resource
-  - legal
-  - architecture
+  - hub
   - introduction
   - starvation
   - enterprise
@@ -562,36 +564,35 @@ search_words:
   - access
   - coffman
   - evaluation
+  - evidence
   - graph
+  - incident
   - large
   - monitoring
   - practice
+  - reading
   - reference
+  - resilience
+  - teams
   - transformer
   - attack
   - classification
+  - compliance
   - har
-  - incident
   - knowledge
   - management
   - operating
   - papers
   - sovereignty
   - axios
-  - compliance
   - compromise
   - layer
-  - reading
   - scheduling
   - search
   - series
   - tenant-aware
   - tool
   - uci
-  - confusion
-  - cookies
-  - faq
-  - interoperability
   - supply chain
   - support vector
   - support vector machine
@@ -599,23 +600,23 @@ search_words:
   - artificial intelligence
   - mcp a2a
   - a2a acp
+  - engineering governance
   - mcp a2a acp
   - asked questions
   - frequently asked
   - frequently asked questions
   - machine learning
-  - engineering governance
   - data provenance
   - artificial intelligence artificial
   - intelligence artificial
   - intelligence artificial intelligence
   - orchestration mcp
   - chain security
+  - supply chain security
   - coffman conditions
   - langgraph langchain
   - large language
   - orchestration mcp a2a
-  - supply chain security
   - data provenance machine
   - engineering lessons
   - platform engineering
@@ -637,6 +638,7 @@ search_words:
   - governance data
   - graph neural
   - graph neural networks
+  - incident response
   - introduction scope
   - model tuning
   - neural networks
@@ -646,8 +648,9 @@ search_words:
   - social engineering
   - agentic orchestration mcp
   - cookies data
+  - engineering governance resilience
   - enterprise agentic
-  - incident response
+  - governance resilience
   - model governance
   - npm supply
   - npm supply chain
@@ -660,8 +663,6 @@ search_words:
   - deadlock resource
   - deadlock resource contention
   - faq hub
-  - hong kong
-  - introduction scope claim
 global_questions:
   - question: How do I know whether to start with linear or RBF SVM?
     answer: Start with linear SVM, inspect residual and class-pair errors, then move to RBF only when validation evidence shows nonlinear boundaries that linear regularization cannot recover.
@@ -675,6 +676,10 @@ global_questions:
     answer: Matching runs against each record's title and abstract. "All keywords must match" narrows results to items where every keyword appears; "Any keyword may match" broadens results to items containing at least one keyword. Switching modes is the fastest way to widen a narrow search.
   - question: How can I find answers quickly?
     answer: Read the top intent section first, then move to article FAQs for deeper context.
+  - question: How can I find the right article quickly?
+    answer: Use the workflow table and question headings on this page, then open cards that match your system context, risk profile, and implementation stage.
+  - question: How current is the content in this hub?
+    answer: This page shows published and updated dates, and each linked article preserves its own publication timeline for freshness assessment.
   - question: How current is this page?
     answer: This page shows published and updated dates and refreshes from current site content.
   - question: How do I change cookie preferences later?
@@ -703,6 +708,8 @@ global_questions:
     answer: Success appears when regional legal constraints, technical controls, communication guarantees, and migration rights remain aligned and auditable over time. Teams can then maintain continuity through policy change without emergency redesign -.
   - question: What immediate steps should I take?
     answer: Quarantine affected hosts, rotate exposed credentials, inspect CI logs for vulnerable installs, and remediate by replacing compromised dependencies with known-good versions.
+  - question: What is the Article Hub used for?
+    answer: The Article Hub provides a single navigation surface for engineering, governance, and resilience content, with direct links to implementation-focused posts.
   - question: What is the axios npm supply chain attack?
     answer: Attackers published malicious axios versions on npm that introduced `plain-crypto-js@4.2.1`, which executed install-time malware delivery across multiple operating systems.
   - question: What is the first observability signal I should add?
@@ -745,6 +752,8 @@ global_questions:
     answer: Fine-tuning updates model weights on a curated dataset, adapting the model's internal representations and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in Yang et al.'s practitioner survey.
   - question: Why do AI restrictions feel sharper than other SaaS restrictions?
     answer: Recent records show AI access decisions integrating strategic and ownership criteria in addition to geography. This creates faster policy asymmetry across regions and legal entities. Engineering teams need provider abstraction and contingency model pathways.
+  - question: Why does this page include structured tables and definitions?
+    answer: Structured elements improve extraction quality for search and answer engines, helping readers and AI systems identify key facts quickly.
   - question: Why is macro F1 not enough for SVM evaluation?
     answer: Macro F1 averages class behavior and can hide concentrated failure corridors that dominate real-world risk, especially in near-neighbor class pairs.
   - question: Can A2A replace MCP for tool use?
@@ -762,7 +771,7 @@ global_questions:
   - question: Does localization always reduce service quality?
     answer: Localization does not automatically reduce quality. Breakdown appears when architecture, governance, and communication design remain globally uniform while constraints are region-specific. Quality depends on explicit regional control planes and migration safeguards.
   - question: Does this page provide legal advice?
-    answer: No. This page is educational and informational only, and legal rights vary by jurisdiction.
+    answer: No. This page is educational and informational only. Legal obligations and rights vary by jurisdiction.
   - question: How do Coffman conditions apply to LLM inference and token scheduling?
     answer: "Token slots in LLM inference are mutual-exclusion resources: exactly one inference request occupies a decoding slot during autoregressive generation. In a multi-model pipeline, if Request A holds a slot on Model-X while waiting for Model-Y, and Request B holds Model-Y while waiting for Model-X, all four Coffman conditions hold and a deadlock can form. Prevention requires either a global model-acquisition ordering (always acquire Model-X before Model-Y) or full-release semantics, where Request A must complete and release all slots before acquiring resources on a second model. Lessons 1 and 2 address both strategies."
   - question: How do I check whether my npm project used a compromised package?
@@ -815,6 +824,8 @@ global_questions:
     answer: "A2A is usually the better fit when the remote surface is autonomous enough that it should own its own execution strategy, task state, and multi-turn interaction loop. Typical cases include: 1. A planning agent delegates vendor onboarding to a compliance agent that may require documents, approvals, and asynchronous review."
   - question: Where MCP Is the Better Fit?
     answer: "MCP is usually the better fit when the remote surface is deterministic enough that the caller should experience it as a bounded capability rather than an independent partner. Typical cases include: 1. A coding agent needs filesystem access, a browser automation tool, and a deployment command surface."
+  - question: Which external standards are useful for follow-up validation?
+    answer: Useful starting points include NIST AI RMF, NIST SSDF, CISA secure-by-design guidance, and OWASP references for application and API security.
   - question: Which sources best support deep technical understanding?
     answer: The strongest technical depth appears in Vaswani et al., Brown et al., and the Stanford, MIT, StatQuest, and Yannic Kilcher materials, because they explain objective functions, attention mechanics, and scaling behavior with explicit procedural detail. Yang et al.'s distillation survey and Ren et al.'s federated foundation model survey add the deployment and compression dimensions.
   - question: Why RF Wins Here Without Invalidating SVM Theory?
@@ -845,6 +856,8 @@ global_questions:
     answer: Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within China's borders and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014.
   - question: Is MCP more secure than A2A?
     answer: Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services. ACP-oriented deployments additionally depend on API gateway policy, token scope, and run-endpoint governance quality, so security posture is a composition problem, not a single-protocol verdict.
+  - question: Who Is Responsible For This Content?
+    answer: '- **Author:** [Zenith Law]() - **Site and policy context:** [Legal Notices]() <div class="mt-4">'
   - question: Where to look next?
     answer: "- Privacy, cookies, data handling, and Hong Kong Personal Information Collection Statement (PICS)-style notice: [Privacy, Cookies and Data Protection]() - Site access, acceptable use, intellectual property, and service boundaries: [Terms of Use]() - Overview of the full legal notice set: [Legal Notices]()"
 posts:
@@ -2427,77 +2440,149 @@ pages:
       - experience years senior
     questions: []
   articles:
-    title: Article Hub
+    title: Engineering, Governance, and Resilience Articles | Practical Playbooks
     url: "/articles/"
     keywords:
       - hub
-      - controls
-      - engineering
-      - explore
       - governance
-      - guidance
-      - implementation
-      - incident-informed
-      - lessons
+      - engineering
+      - resilience
       - practical
+      - controls
+      - evidence
+      - implementation
+      - paths
+      - playbooks
+      - provide
+      - teams
+      - insights
+      - technical
+      - advice
+      - architecture
+      - asked
+      - citation-ready
+      - contents
+      - coverage
+      - current
+      - date-signaled
+      - dated
+      - definitions
+      - discover
+      - frequently
+      - guide
+      - implementation-focused
+      - legal
+      - lists
+      - map
+      - matter
+      - measurable
+      - navigation
+      - overview
+      - questions
+      - article hub
+      - engineering articles
+      - governance articles
+      - resilience engineering guides
     key_phrases:
-      - governance practical lessons
-      - engineering governance practical
-      - incident-informed engineering governance
-      - explore incident-informed engineering
-      - practical lessons controls
-      - lessons controls implementation
-      - controls implementation guidance
-      - implementation guidance
-      - controls implementation
-      - lessons controls
-      - practical lessons
-      - governance practical
+      - engineering governance resilience
       - engineering governance
-      - incident-informed engineering
-      - explore incident-informed
-      - hub hub
-      - implementation guidance explore
-      - guidance explore incident-informed
-      - hub explore incident-informed
-      - hub hub explore
-      - hub hub hub
-      - guidance explore
-      - hub explore
+      - governance resilience
+      - governance resilience practical
+      - resilience practical playbooks
+      - hub engineering governance
+      - resilience practical
+      - practical playbooks
+      - hub engineering
+      - dated evidence practical
+      - resilience dated evidence
+      - governance resilience dated
+      - discover engineering governance
+      - teams map reading
+      - map reading paths
+      - reading paths citation-ready
+      - paths citation-ready technical
+      - date-signaled evidence paths
+      - navigation date-signaled evidence
+      - implementation-focused navigation date-signaled
+      - summaries implementation-focused navigation
+      - structured summaries implementation-focused
+      - insights structured summaries
+      - resilience insights structured
     catchwords:
-      - controls
-      - engineering
-      - explore
       - governance
-      - guidance
-      - implementation
-      - incident-informed
-      - lessons
+      - engineering
+      - resilience
       - practical
+      - controls
+      - evidence
+      - implementation
+      - paths
+      - playbooks
+      - provide
+      - teams
+      - insights
+      - technical
+      - advice
+      - architecture
+      - asked
+      - citation-ready
+      - contents
+      - coverage
+      - current
+      - date-signaled
+      - dated
+      - definitions
+      - discover
+      - frequently
+      - guide
+      - implementation-focused
+      - legal
     search_words:
       - hub
-      - controls
-      - engineering
-      - explore
       - governance
-      - guidance
-      - implementation
-      - incident-informed
-      - lessons
+      - engineering
+      - resilience
       - practical
-      - governance practical lessons
-      - engineering governance practical
-      - incident-informed engineering governance
-      - explore incident-informed engineering
-      - practical lessons controls
-      - lessons controls implementation
-      - controls implementation guidance
-      - implementation guidance
-      - controls implementation
-      - lessons controls
-      - practical lessons
-      - governance practical
-    questions: []
+      - controls
+      - evidence
+      - implementation
+      - paths
+      - playbooks
+      - provide
+      - teams
+      - insights
+      - technical
+      - advice
+      - architecture
+      - asked
+      - citation-ready
+      - engineering governance resilience
+      - engineering governance
+      - governance resilience
+      - governance resilience practical
+      - resilience practical playbooks
+      - hub engineering governance
+      - resilience practical
+      - practical playbooks
+      - hub engineering
+      - dated evidence practical
+      - resilience dated evidence
+      - governance resilience dated
+    questions:
+      - question: How can I find the right article quickly?
+        answer: Use the workflow table and question headings on this page, then open cards that match your system context, risk profile, and implementation stage.
+      - question: How current is the content in this hub?
+        answer: This page shows published and updated dates, and each linked article preserves its own publication timeline for freshness assessment.
+      - question: What is the Article Hub used for?
+        answer: The Article Hub provides a single navigation surface for engineering, governance, and resilience content, with direct links to implementation-focused posts.
+      - question: Why does this page include structured tables and definitions?
+        answer: Structured elements improve extraction quality for search and answer engines, helping readers and AI systems identify key facts quickly.
+      - question: Does this page provide legal advice?
+        answer: No. This page is educational and informational only. Legal obligations and rights vary by jurisdiction.
+      - question: Which external standards are useful for follow-up validation?
+        answer: Useful starting points include NIST AI RMF, NIST SSDF, CISA secure-by-design guidance, and OWASP references for application and API security.
+      - question: Who Is Responsible For This Content?
+        answer: '- **Author:** [Zenith Law]() - **Site and policy context:** [Legal Notices]() <div class="mt-4">'
   faq:
     title: "FAQ Hub: Questions and Answers Across Published Pages"
     url: "/faq/"

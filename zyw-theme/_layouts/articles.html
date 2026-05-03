@@ -1,7 +1,10 @@
 ---
 layout: default
 ---
-{{ content }}
+{%- assign content_parts = content
+  | split: '<!-- TECHNICAL_APPENDIX_SPLIT -->'
+-%}
+{{ content_parts[0] }}
 
 {%- assign per_page = page.per_page | default: 6 -%}
 {%- assign total_posts = site.posts | size -%}
@@ -47,7 +50,7 @@ layout: default
     >
       <a
         href="{{ page.url | relative_url }}"
-        class="rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800"
+        class="inline-flex min-h-10 items-center rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800"
         data-page-prev
         rel="prev"
       >
@@ -62,7 +65,7 @@ layout: default
 
       <a
         href="{{ page.url | relative_url }}?page=2"
-        class="rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800"
+        class="inline-flex min-h-10 items-center rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800"
         data-page-next
         rel="next"
       >
@@ -183,3 +186,7 @@ layout: default
     render();
   })();
 </script>
+
+{%- if content_parts.size > 1 -%}
+  {{ content_parts[1] }}
+{%- endif -%}
