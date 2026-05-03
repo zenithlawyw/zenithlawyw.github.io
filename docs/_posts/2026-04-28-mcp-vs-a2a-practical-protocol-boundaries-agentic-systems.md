@@ -273,23 +273,23 @@ ACP remains important for architecture learning and for existing deployments. Ne
 
 ### Can MCP replace A2A in a multi-agent system?
 
-Only in narrow cases. If the “other agent” is really acting like a stateless or tightly bounded capability, MCP can be sufficient. Once the remote side owns task state, asynchronous progress, artifact delivery, or agent discovery, A2A is usually the cleaner protocol fit.
+Only in narrow cases. If the remote side is really a bounded capability, MCP can be sufficient. Once the remote side owns task state, asynchronous progress, artifact delivery, or agent discovery, A2A is usually the cleaner fit. If the integration boundary is HTTP-governed and partner-facing, ACP-style contracts may still be the practical edge pattern during A2A migration planning.
 
 ### Can A2A replace MCP for tool use?
 
-It can, but it is usually wasteful. Simple tools do not benefit much from peer-agent ceremony. A2A shines when the remote side behaves like a collaborator, not just a callable capability.
+It can, but it is usually wasteful. Simple tools do not benefit much from peer-agent ceremony. A2A shines when the remote side behaves like a collaborator, not just a callable capability. ACP-style REST wrappers can expose those collaborators to existing API ecosystems, but they do not remove the need for MCP when local tool boundaries and consent controls are required.
 
-### When should I use both MCP and A2A together?
+### When should I use MCP, A2A, and ACP together?
 
-Use both when agents collaborate across system boundaries, but each agent still needs structured tool and data access within its own execution environment. That is the most common production-grade pattern.
+Use layered protocols when agents collaborate across system boundaries and each agent still needs structured tool and data access internally. A2A should carry delegated task lifecycle, MCP should carry model-to-capability access, and ACP-compatible REST seams should be used at gateway, partner, or legacy integration edges.
 
 ### How should enterprises handle cross-border and tenant-aware agent orchestration?
 
-Use protocol layering with explicit tenant policy boundaries, jurisdiction-aware data controls, and portable identity patterns. Keep integration contracts vendor-agnostic and preserve audit trails across all delegated tasks and tool invocations.
+Use protocol layering with explicit tenant policy boundaries, jurisdiction-aware data controls, and portable identity patterns. Keep integration contracts vendor-agnostic and preserve audit trails across delegated tasks, MCP tool invocations, and ACP-style REST runs.
 
 ### Is MCP more secure than A2A?
 
-Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services {% include references/cite.html key="mcpa2a-2026-ref2" %}, {% include references/cite.html key="mcpa2a-2026-ref5" %}.
+Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services. ACP-oriented deployments additionally depend on API gateway policy, token scope, and run-endpoint governance quality, so security posture is a composition problem, not a single-protocol verdict {% include references/cite.html key="mcpa2a-2026-ref2" %}, {% include references/cite.html key="mcpa2a-2026-ref5" %}, {% include references/cite.html key="mcpa2a-2026-ref18" %}.
 
 ### Do these recommendations apply identically across UK, EU, US, Canada, Hong Kong, China, and Australia?
 
@@ -297,7 +297,7 @@ No. Privacy, transfer, and sector-specific obligations vary by jurisdiction and 
 
 ### What should teams prototype first when they are unsure?
 
-Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. If the boundary is still ambiguous, model the remote side's expected autonomy before choosing a protocol.
+Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. Start with ACP-style REST seams if the first integration must pass through existing API gateways or partner-facing HTTP contracts. If the boundary is still ambiguous, model the remote side's autonomy and integration constraints before choosing a primary protocol.
 
 ## Conclusion
 

@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-05-03T08:06:52Z"
+generated_at: "2026-05-03T08:19:17Z"
 signal_weights:
   title: 3
   categories: 5
@@ -681,17 +681,17 @@ global_questions:
   - question: How do I know if my environment is affected?
     answer: Investigate systems that resolved or installed affected axios versions during the exposure window and hunt for reported indicators, including `sfrclak[.]com` and platform payload artifacts.
   - question: How do tenant-aware and cross-border controls affect protocol design?
-    answer: They require explicit policy partitioning, region-aware data handling, and identity federation choices that remain portable across clouds and partner ecosystems. Protocol layering helps preserve those controls without excessive custom glue.
+    answer: They require explicit policy partitioning, region-aware data handling, and identity federation choices that remain portable across clouds and partner ecosystems. In practice, teams should align MCP tool policy, A2A task authorization, and ACP-compatible gateway policy so tenant and jurisdiction controls remain consistent across every protocol boundary.
   - question: How does Knowledge Space work?
     answer: Select a research focus domain or enter your own keywords, choose your sources, and click Search Literature. Knowledge Space fetches recent papers and preprints in real time from the APIs you selected, filters by your keywords and match mode, and returns paginated results ready to explore.
   - question: How often should SVM models be retrained?
     answer: Use drift and corridor-trigger thresholds rather than fixed calendar frequency, then validate stability against the previous release before promotion.
   - question: How should I test agent-to-agent workflows without creating flaky suites?
-    answer: Separate contract tests from end-to-end tests. Use mocked or local A2A agents for protocol checks, then run a smaller number of containerized end-to-end workflows for full-path validation.
+    answer: Separate contract tests from end-to-end tests. Use mocked or local A2A agents for protocol checks, then run a smaller number of containerized end-to-end workflows for full-path validation. If ACP-compatible endpoints are part of the path, add REST contract tests for manifest and run endpoints so protocol drift is caught before integration rollout.
   - question: How should I use confusion corridors in production?
     answer: Track the highest-frequency class transitions as explicit alert channels and tie retraining or threshold updates to corridor-specific drift.
   - question: How should enterprises handle cross-border and tenant-aware agent orchestration?
-    answer: Use protocol layering with explicit tenant policy boundaries, jurisdiction-aware data controls, and portable identity patterns. Keep integration contracts vendor-agnostic and preserve audit trails across all delegated tasks and tool invocations.
+    answer: Use protocol layering with explicit tenant policy boundaries, jurisdiction-aware data controls, and portable identity patterns. Keep integration contracts vendor-agnostic and preserve audit trails across delegated tasks, MCP tool invocations, and ACP-style REST runs.
   - question: How was the maintainer's account compromised?
     answer: Public reports did not conclusively publish every credential theft detail at first disclosure. Mandiant tradecraft reporting plus the maintainer post-mortem context supports social engineering as a credible precursor pattern.
   - question: What central message unifies all sources in this revised collection?
@@ -703,7 +703,7 @@ global_questions:
   - question: What is the axios npm supply chain attack?
     answer: Attackers published malicious axios versions on npm that introduced `plain-crypto-js@4.2.1`, which executed install-time malware delivery across multiple operating systems.
   - question: What is the first observability signal I should add?
-    answer: Add end-to-end tracing that ties one user request to one orchestration run, all delegated A2A tasks, and all MCP tool calls. Without that lineage, later debugging becomes unnecessarily speculative.
+    answer: Add end-to-end tracing that ties one user request to one orchestration run, all delegated A2A tasks, all MCP tool calls, and any ACP-style run IDs at REST boundaries. Without that lineage, later debugging becomes unnecessarily speculative.
   - question: What is the main difference among MCP, A2A, and ACP?
     answer: MCP connects models or hosts to tools, resources, and prompts. A2A connects autonomous agents through task lifecycle collaboration. ACP defines a REST-oriented agent interoperability model with manifest and run semantics.
   - question: What is the main reason to learn SVM in 2026 if deep models are common?
@@ -716,8 +716,6 @@ global_questions:
     answer: Monitor per-class recall, pairwise confusion flows, and hyperparameter stability across folds before relying on top-line accuracy.
   - question: What should an enterprise implement first after reading this analysis?
     answer: Start with a minimal governance baseline. Define approved use cases. Define prompt versioning rules. Define output verification requirements. Define escalation procedures for harmful or ungrounded responses. This sequence converts theory into immediate control coverage.
-  - question: What should teams prototype first when they are unsure?
-    answer: Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. If the boundary is still ambiguous, model the remote side's expected autonomy before choosing a protocol.
   - question: Why compare R and Python if both use libsvm-style tooling?
     answer: Parity checks still matter because they expose silent preprocessing or CV mismatches and improve reproducibility across mixed-language teams.
   - question: Why do result counts vary by source?
@@ -745,9 +743,9 @@ global_questions:
   - question: Why is macro F1 not enough for SVM evaluation?
     answer: Macro F1 averages class behavior and can hide concentrated failure corridors that dominate real-world risk, especially in near-neighbor class pairs.
   - question: Can A2A replace MCP for tool use?
-    answer: It can, but it is usually wasteful. Simple tools do not benefit much from peer-agent ceremony. A2A shines when the remote side behaves like a collaborator, not just a callable capability.
+    answer: It can, but it is usually wasteful. Simple tools do not benefit much from peer-agent ceremony. A2A shines when the remote side behaves like a collaborator, not just a callable capability. ACP-style REST wrappers can expose those collaborators to existing API ecosystems, but they do not remove the need for MCP when local tool boundaries and consent controls are required.
   - question: Can MCP replace A2A in a multi-agent system?
-    answer: Only in narrow cases. If the “other agent” is really acting like a stateless or tightly bounded capability, MCP can be sufficient. Once the remote side owns task state, asynchronous progress, artifact delivery, or agent discovery, A2A is usually the cleaner protocol fit.
+    answer: Only in narrow cases. If the remote side is really a bounded capability, MCP can be sufficient. Once the remote side owns task state, asynchronous progress, artifact delivery, or agent discovery, A2A is usually the cleaner fit. If the integration boundary is HTTP-governed and partner-facing, ACP-style contracts may still be the practical edge pattern during A2A migration planning.
   - question: Do I need supply-chain controls for an internal agent platform?
     answer: In most organizations, supply-chain controls are advisable even for internal agent platforms based on risk profile, regulatory exposure, and internal assurance requirements. Internal platforms still ship containers, dependencies, and artifacts that can be tampered with or misattributed.
   - question: Do these practices apply identically across UK, EU, US, Canada, Hong Kong, China, and Australia?
@@ -774,8 +772,6 @@ global_questions:
     answer: Use short quotations only when wording precision matters. Prefer paraphrase for interpretation. Maintain explicit attribution. Preserve links to original context. Where applicable under UK law, assess whether CDPA 1988 ss. 29 (research/private study) and 31A (text and data analysis for non-commercial research) conditions are genuinely satisfied before reuse. This applies equally to video content and to published scholarly works.
   - question: Is ACP obsolete now that it is converging with A2A?
     answer: ACP remains important for architecture learning and for existing deployments. New strategy should account for announced convergence and migration direction toward A2A to reduce future integration churn.
-  - question: Is MCP more secure than A2A?
-    answer: Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services.
   - question: Is any data stored when I search?
     answer: Fetched literature records are not stored in application-level persistent storage. Limited browser-side session state may be used for security and rate protection during your session. Normal operational logs from hosting, edge, or analytics services may still apply independently under their own policies.
   - question: Is one-class SVM the same as unsupervised clustering?
@@ -785,7 +781,7 @@ global_questions:
   - question: Is this legal advice or a professional recommendation?
     answer: No. Knowledge Space is an informational research-discovery tool only, not legal advice or a professional recommendation. For jurisdiction-specific legal or compliance decisions, consult qualified counsel in the relevant jurisdiction. Mandatory local consumer and data protection rights remain fully unaffected.
   - question: Should I choose LangGraph or LangChain for orchestration?
-    answer: Choose LangGraph when you need explicit durable workflow control. Use LangChain on top when its higher-level abstractions improve development speed without hiding critical execution logic.
+    answer: "Choose LangGraph when you need explicit durable workflow control. Use LangChain on top when its higher-level abstractions improve development speed without hiding critical execution logic. This choice is orthogonal to protocol layering: MCP still handles tool boundaries, A2A still handles peer delegation, and ACP-compatible seams can still expose REST-native partner integration."
   - question: Should teams deploy provenance tooling immediately after reading this article?
     answer: Use this article as orientation, not as a deployment checklist. Before adoption decisions, compare against your own stack, load profile, compliance obligations, and failure modes.
   - question: What are the four Coffman conditions for deadlock?
@@ -804,6 +800,8 @@ global_questions:
     answer: "Data provenance and data lineage both trace data through a pipeline, but they differ in focus. Lineage records where data moved, which inputs fed which outputs. Provenance adds agent information: who or what performed each transformation, under what conditions, for what purpose, and with what authorization. The [W3C PROV](https://www.w3.org/TR/prov-overview/) standard formalizes this distinction using the entity-activity-agent model that Souza et al. extend in PROV-ML."
   - question: What is the difference between deadlock and starvation?
     answer: "Deadlock is a cycle in which no involved thread can make progress: every waiting thread holds a resource that another waiting thread needs, so the entire set is permanently blocked. Starvation is a state in which one specific thread is indefinitely denied access while other threads do make progress. Round-robin and first-come-first-serve scheduling prevent starvation; resource ordering, atomic acquisition, and the [Banker's algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm) prevent deadlock. Both pathologies appear in LLM inference queues and software supply chains."
+  - question: What should teams prototype first when they are unsure?
+    answer: Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. Start with ACP-style REST seams if the first integration must pass through existing API gateways or partner-facing HTTP contracts. If the boundary is still ambiguous, model the remote side's autonomy and integration constraints before choosing a primary protocol.
   - question: What tools are used for data provenance in machine learning?
     answer: "Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier, Pina et al. integrate separate lifecycle tools using DNNProv and Chapman et al.'s preprocessing capture, and Souza et al. extend ProvLake with the PROV-ML vocabulary. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem."
   - question: Where A2A Is the Better Fit?
@@ -820,14 +818,14 @@ global_questions:
     answer: Yes. Search and result browsing remain available. Rejecting analytics only stops optional GA4 or GTM usage measurement events for page interactions and search activity.
   - question: When should I calibrate SVM probabilities?
     answer: Calibrate whenever scores are consumed as confidence or risk thresholds in downstream workflows; margin rankings alone are insufficient for probability-driven decisions.
-  - question: When should I use both MCP and A2A together?
-    answer: Use both when agents collaborate across system boundaries, but each agent still needs structured tool and data access within its own execution environment. That is the most common production-grade pattern.
+  - question: When should I use MCP, A2A, and ACP together?
+    answer: Use layered protocols when agents collaborate across system boundaries and each agent still needs structured tool and data access internally. A2A should carry delegated task lifecycle, MCP should carry model-to-capability access, and ACP-compatible REST seams should be used at gateway, partner, or legacy integration edges.
   - question: Where ACP Patterns Still Matter?
     answer: "ACP patterns remain valuable when teams need: 1. REST-native agent integration through existing API gateways and service governance controls. 2. OpenAPI-documented run endpoints that align with established enterprise integration practices."
   - question: Where SVM Is a Strong Fit?
     answer: "SVM remains effective when: 1. Data is medium-scale with controlled feature engineering. 2. Classes are not severely imbalanced."
   - question: Which Python packages are enough to start building this stack?
-    answer: For a practical Python-first baseline, `mcp`, `a2a-sdk`, `langgraph`, `langchain`, `fastapi`, `pydantic`, `pytest`, `httpx`, `opentelemetry-sdk`, `uvicorn`, and Docker-based packaging are sufficient for a strong first slice.
+    answer: For a practical Python-first baseline, `mcp`, `a2a-sdk`, `langgraph`, `langchain`, `fastapi`, `pydantic`, `pytest`, `httpx`, `opentelemetry-sdk`, `uvicorn`, and Docker-based packaging are sufficient for a strong first slice. If ACP-compatible REST interoperability is required on day one, add OpenAPI tooling and gateway middleware that can enforce auth, rate policy, and run-lifecycle observability at the HTTP edge.
   - question: Which sources best support practical implementation teams?
     answer: Google Cloud Tech and AI Search provide direct implementation value for teams that need prompt design guidance and user-facing framing for model behavior. Yang et al.'s practitioner survey on ChatGPT and beyond adds empirical guidance on when to use LLMs versus fine-tuned models for specific NLP tasks.
   - question: Which sources does this tool search?
@@ -838,6 +836,8 @@ global_questions:
     answer: OpenAI has blocked API and web access for users in mainland China, Hong Kong, and Macau. The block was widely reported in July 2024. Anthropic has applied additional ownership-structure screening beyond geography. Both decisions reflect a combination of US export-control considerations, OpenAI's own usage policies, and the regulatory environment in China. Engineering teams cannot rely on direct OpenAI or Anthropic model access for China-deployed applications and must plan for approved domestic alternatives or allowlisted API routes.
   - question: Is Azure available in China, and how does it differ from global Azure?
     answer: Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within China's borders and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014.
+  - question: Is MCP more secure than A2A?
+    answer: Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services. ACP-oriented deployments additionally depend on API gateway policy, token scope, and run-endpoint governance quality, so security posture is a composition problem, not a single-protocol verdict.
   - question: Where to look next?
     answer: "- Privacy, cookies, data handling, and Hong Kong Personal Information Collection Statement (PICS)-style notice: [Privacy, Cookies and Data Protection]() - Site access, acceptable use, intellectual property, and service boundaries: [Terms of Use]() - Overview of the full legal notice set: [Legal Notices]()"
 posts:
@@ -2124,29 +2124,29 @@ posts:
       - agent interoperability protocol
     questions:
       - question: How should enterprises handle cross-border and tenant-aware agent orchestration?
-        answer: Use protocol layering with explicit tenant policy boundaries, jurisdiction-aware data controls, and portable identity patterns. Keep integration contracts vendor-agnostic and preserve audit trails across all delegated tasks and tool invocations.
+        answer: Use protocol layering with explicit tenant policy boundaries, jurisdiction-aware data controls, and portable identity patterns. Keep integration contracts vendor-agnostic and preserve audit trails across delegated tasks, MCP tool invocations, and ACP-style REST runs.
       - question: What is the main difference among MCP, A2A, and ACP?
         answer: MCP connects models or hosts to tools, resources, and prompts. A2A connects autonomous agents through task lifecycle collaboration. ACP defines a REST-oriented agent interoperability model with manifest and run semantics.
-      - question: What should teams prototype first when they are unsure?
-        answer: Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. If the boundary is still ambiguous, model the remote side's expected autonomy before choosing a protocol.
       - question: Can A2A replace MCP for tool use?
-        answer: It can, but it is usually wasteful. Simple tools do not benefit much from peer-agent ceremony. A2A shines when the remote side behaves like a collaborator, not just a callable capability.
+        answer: It can, but it is usually wasteful. Simple tools do not benefit much from peer-agent ceremony. A2A shines when the remote side behaves like a collaborator, not just a callable capability. ACP-style REST wrappers can expose those collaborators to existing API ecosystems, but they do not remove the need for MCP when local tool boundaries and consent controls are required.
       - question: Can MCP replace A2A in a multi-agent system?
-        answer: Only in narrow cases. If the “other agent” is really acting like a stateless or tightly bounded capability, MCP can be sufficient. Once the remote side owns task state, asynchronous progress, artifact delivery, or agent discovery, A2A is usually the cleaner protocol fit.
+        answer: Only in narrow cases. If the remote side is really a bounded capability, MCP can be sufficient. Once the remote side owns task state, asynchronous progress, artifact delivery, or agent discovery, A2A is usually the cleaner fit. If the integration boundary is HTTP-governed and partner-facing, ACP-style contracts may still be the practical edge pattern during A2A migration planning.
       - question: Do these recommendations apply identically across UK, EU, US, Canada, Hong Kong, China, and Australia?
         answer: No. Privacy, transfer, and sector-specific obligations vary by jurisdiction and industry. Treat protocol guidance as architecture input and confirm legal and regulatory requirements for the specific operating context.
       - question: Is ACP obsolete now that it is converging with A2A?
         answer: ACP remains important for architecture learning and for existing deployments. New strategy should account for announced convergence and migration direction toward A2A to reduce future integration churn.
-      - question: Is MCP more secure than A2A?
-        answer: Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services.
+      - question: What should teams prototype first when they are unsure?
+        answer: Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. Start with ACP-style REST seams if the first integration must pass through existing API gateways or partner-facing HTTP contracts. If the boundary is still ambiguous, model the remote side's autonomy and integration constraints before choosing a primary protocol.
       - question: Where A2A Is the Better Fit?
         answer: "A2A is usually the better fit when the remote surface is autonomous enough that it should own its own execution strategy, task state, and multi-turn interaction loop. Typical cases include: 1. A planning agent delegates vendor onboarding to a compliance agent that may require documents, approvals, and asynchronous review."
       - question: Where MCP Is the Better Fit?
         answer: "MCP is usually the better fit when the remote surface is deterministic enough that the caller should experience it as a bounded capability rather than an independent partner. Typical cases include: 1. A coding agent needs filesystem access, a browser automation tool, and a deployment command surface."
-      - question: When should I use both MCP and A2A together?
-        answer: Use both when agents collaborate across system boundaries, but each agent still needs structured tool and data access within its own execution environment. That is the most common production-grade pattern.
+      - question: When should I use MCP, A2A, and ACP together?
+        answer: Use layered protocols when agents collaborate across system boundaries and each agent still needs structured tool and data access internally. A2A should carry delegated task lifecycle, MCP should carry model-to-capability access, and ACP-compatible REST seams should be used at gateway, partner, or legacy integration edges.
       - question: Where ACP Patterns Still Matter?
         answer: "ACP patterns remain valuable when teams need: 1. REST-native agent integration through existing API gateways and service governance controls. 2. OpenAPI-documented run endpoints that align with established enterprise integration practices."
+      - question: Is MCP more secure than A2A?
+        answer: Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services. ACP-oriented deployments additionally depend on API gateway policy, token scope, and run-endpoint governance quality, so security posture is a composition problem, not a single-protocol verdict.
   building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook:
     title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
     url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
@@ -2278,11 +2278,11 @@ posts:
       - artificial intelligence platform
     questions:
       - question: How do tenant-aware and cross-border controls affect protocol design?
-        answer: They require explicit policy partitioning, region-aware data handling, and identity federation choices that remain portable across clouds and partner ecosystems. Protocol layering helps preserve those controls without excessive custom glue.
+        answer: They require explicit policy partitioning, region-aware data handling, and identity federation choices that remain portable across clouds and partner ecosystems. In practice, teams should align MCP tool policy, A2A task authorization, and ACP-compatible gateway policy so tenant and jurisdiction controls remain consistent across every protocol boundary.
       - question: How should I test agent-to-agent workflows without creating flaky suites?
-        answer: Separate contract tests from end-to-end tests. Use mocked or local A2A agents for protocol checks, then run a smaller number of containerized end-to-end workflows for full-path validation.
+        answer: Separate contract tests from end-to-end tests. Use mocked or local A2A agents for protocol checks, then run a smaller number of containerized end-to-end workflows for full-path validation. If ACP-compatible endpoints are part of the path, add REST contract tests for manifest and run endpoints so protocol drift is caught before integration rollout.
       - question: What is the first observability signal I should add?
-        answer: Add end-to-end tracing that ties one user request to one orchestration run, all delegated A2A tasks, and all MCP tool calls. Without that lineage, later debugging becomes unnecessarily speculative.
+        answer: Add end-to-end tracing that ties one user request to one orchestration run, all delegated A2A tasks, all MCP tool calls, and any ACP-style run IDs at REST boundaries. Without that lineage, later debugging becomes unnecessarily speculative.
       - question: What is the simplest deployable architecture for MCP, A2A, and ACP-aware interoperability?
         answer: One orchestrator service plus two or three specialist agents is enough. The orchestrator uses A2A to delegate tasks. Each specialist agent uses MCP to reach concrete tools and resources. ACP-compatible facades can be added at partner-facing boundaries where REST-native interoperability is required.
       - question: Should I start new projects with ACP or A2A for agent-to-agent collaboration?
@@ -2292,9 +2292,9 @@ posts:
       - question: Do these practices apply identically across UK, EU, US, Canada, Hong Kong, China, and Australia?
         answer: No. Privacy, transfer, residency, and sector-specific obligations vary by jurisdiction and industry. Use these practices as technical design guidance and validate legal and regulatory requirements for each operating context.
       - question: Should I choose LangGraph or LangChain for orchestration?
-        answer: Choose LangGraph when you need explicit durable workflow control. Use LangChain on top when its higher-level abstractions improve development speed without hiding critical execution logic.
+        answer: "Choose LangGraph when you need explicit durable workflow control. Use LangChain on top when its higher-level abstractions improve development speed without hiding critical execution logic. This choice is orthogonal to protocol layering: MCP still handles tool boundaries, A2A still handles peer delegation, and ACP-compatible seams can still expose REST-native partner integration."
       - question: Which Python packages are enough to start building this stack?
-        answer: For a practical Python-first baseline, `mcp`, `a2a-sdk`, `langgraph`, `langchain`, `fastapi`, `pydantic`, `pytest`, `httpx`, `opentelemetry-sdk`, `uvicorn`, and Docker-based packaging are sufficient for a strong first slice.
+        answer: For a practical Python-first baseline, `mcp`, `a2a-sdk`, `langgraph`, `langchain`, `fastapi`, `pydantic`, `pytest`, `httpx`, `opentelemetry-sdk`, `uvicorn`, and Docker-based packaging are sufficient for a strong first slice. If ACP-compatible REST interoperability is required on day one, add OpenAPI tooling and gateway middleware that can enforce auth, rate policy, and run-lifecycle observability at the HTTP edge.
 pages:
   zenith-law:
     title: ""

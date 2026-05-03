@@ -252,6 +252,7 @@ Observability in agentic systems must answer more than â€œdid the request fail?â
 6. Which human approval checkpoint altered workflow progression and why?
 
 OpenTelemetry is useful here because it can represent the orchestrator span, the delegated A2A task spans, and the downstream tool-invocation spans in one trace lineage {% include references/cite.html key="mcpa2a-2026-ref13" %}. That makes post-incident review materially easier.
+When ACP-compatible REST edges are present, include run IDs and API gateway correlation IDs in the same trace context so cross-protocol incident analysis remains coherent.
 
 ## Enterprise Deployment Profile: Tenant-Aware, Cross-Border, and Human-Centered
 
@@ -260,6 +261,7 @@ OpenTelemetry is useful here because it can represent the orchestrator span, the
 1. Scope credentials, tool catalogs, and policy bundles by tenant.
 2. Isolate traces and run identifiers so tenant data never co-mingles in operational views.
 3. Apply per-tenant rate limits and task-priority controls to prevent noisy-neighbor effects.
+4. Apply tenant-specific API gateway policy on ACP-compatible endpoints so REST integrations follow the same partitioning rules as A2A tasks and MCP tool access.
 
 ### Cross-border and jurisdiction-aware operation
 
@@ -287,7 +289,7 @@ Adopt SLSA-aligned provenance generation and sign build artifacts with Sigstore-
 
 ### Transport and trust boundaries
 
-Use MCP transports appropriate to deployment mode. The official Python SDK recommends Streamable HTTP as the production transport choice for scalable deployment patterns {% include references/cite.html key="mcpa2a-2026-ref3" %}. For A2A, publish a clear Agent Card, use HTTPS in production, and ensure task and webhook authorization is scoped correctly {% include references/cite.html key="mcpa2a-2026-ref5" %}, {% include references/cite.html key="mcpa2a-2026-ref7" %}.
+Use MCP transports appropriate to deployment mode. The official Python SDK recommends Streamable HTTP as the production transport choice for scalable deployment patterns {% include references/cite.html key="mcpa2a-2026-ref3" %}. For A2A, publish a clear Agent Card, use HTTPS in production, and ensure task and webhook authorization is scoped correctly {% include references/cite.html key="mcpa2a-2026-ref5" %}, {% include references/cite.html key="mcpa2a-2026-ref7" %}. For ACP-compatible surfaces, enforce strong REST auth, signed run metadata where possible, and gateway-level policy controls on run and event endpoints {% include references/cite.html key="mcpa2a-2026-ref18" %}.
 
 ## Twelve Implementation Lessons
 
@@ -334,11 +336,11 @@ One orchestrator service plus two or three specialist agents is enough. The orch
 
 ### Should I choose LangGraph or LangChain for orchestration?
 
-Choose LangGraph when you need explicit durable workflow control. Use LangChain on top when its higher-level abstractions improve development speed without hiding critical execution logic {% include references/cite.html key="mcpa2a-2026-ref8" %}, {% include references/cite.html key="mcpa2a-2026-ref9" %}.
+Choose LangGraph when you need explicit durable workflow control. Use LangChain on top when its higher-level abstractions improve development speed without hiding critical execution logic {% include references/cite.html key="mcpa2a-2026-ref8" %}, {% include references/cite.html key="mcpa2a-2026-ref9" %}. This choice is orthogonal to protocol layering: MCP still handles tool boundaries, A2A still handles peer delegation, and ACP-compatible seams can still expose REST-native partner integration.
 
 ### Which Python packages are enough to start building this stack?
 
-For a practical Python-first baseline, `mcp`, `a2a-sdk`, `langgraph`, `langchain`, `fastapi`, `pydantic`, `pytest`, `httpx`, `opentelemetry-sdk`, `uvicorn`, and Docker-based packaging are sufficient for a strong first slice {% include references/cite.html key="mcpa2a-2026-ref3" %}, {% include references/cite.html key="mcpa2a-2026-ref7" %}.
+For a practical Python-first baseline, `mcp`, `a2a-sdk`, `langgraph`, `langchain`, `fastapi`, `pydantic`, `pytest`, `httpx`, `opentelemetry-sdk`, `uvicorn`, and Docker-based packaging are sufficient for a strong first slice {% include references/cite.html key="mcpa2a-2026-ref3" %}, {% include references/cite.html key="mcpa2a-2026-ref7" %}. If ACP-compatible REST interoperability is required on day one, add OpenAPI tooling and gateway middleware that can enforce auth, rate policy, and run-lifecycle observability at the HTTP edge {% include references/cite.html key="mcpa2a-2026-ref18" %}.
 
 ### Should I start new projects with ACP or A2A for agent-to-agent collaboration?
 
@@ -346,7 +348,7 @@ For many long-lived greenfield collaborations, A2A is often a lower-regret defau
 
 ### How should I test agent-to-agent workflows without creating flaky suites?
 
-Separate contract tests from end-to-end tests. Use mocked or local A2A agents for protocol checks, then run a smaller number of containerized end-to-end workflows for full-path validation.
+Separate contract tests from end-to-end tests. Use mocked or local A2A agents for protocol checks, then run a smaller number of containerized end-to-end workflows for full-path validation. If ACP-compatible endpoints are part of the path, add REST contract tests for manifest and run endpoints so protocol drift is caught before integration rollout.
 
 ### Do I need supply-chain controls for an internal agent platform?
 
@@ -354,11 +356,11 @@ In most organizations, supply-chain controls are advisable even for internal age
 
 ### What is the first observability signal I should add?
 
-Add end-to-end tracing that ties one user request to one orchestration run, all delegated A2A tasks, and all MCP tool calls. Without that lineage, later debugging becomes unnecessarily speculative.
+Add end-to-end tracing that ties one user request to one orchestration run, all delegated A2A tasks, all MCP tool calls, and any ACP-style run IDs at REST boundaries. Without that lineage, later debugging becomes unnecessarily speculative.
 
 ### How do tenant-aware and cross-border controls affect protocol design?
 
-They require explicit policy partitioning, region-aware data handling, and identity federation choices that remain portable across clouds and partner ecosystems. Protocol layering helps preserve those controls without excessive custom glue.
+They require explicit policy partitioning, region-aware data handling, and identity federation choices that remain portable across clouds and partner ecosystems. In practice, teams should align MCP tool policy, A2A task authorization, and ACP-compatible gateway policy so tenant and jurisdiction controls remain consistent across every protocol boundary.
 
 ### Do these practices apply identically across UK, EU, US, Canada, Hong Kong, China, and Australia?
 
