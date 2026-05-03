@@ -3,7 +3,7 @@ layout: articles
 nav_title: Articles
 title: "Engineering, Governance, and Resilience Articles | Practical Playbooks"
 description: "Discover engineering, governance, and resilience articles with dated evidence and practical controls. Find your next implementation guide now."
-heading: "Welcome to the Article Hub for Engineering, Governance, and Resilience"
+heading: "Article Hub: Wisdom and Insights in Engineering, Governance, and Resilience"
 permalink: /articles/
 date: 2026-04-09
 last_modified_at: 2026-05-03
