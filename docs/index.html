@@ -2,10 +2,253 @@
 layout: homepage
 title: Trustworthy Engineering. Resilient Platforms. Sovereign-by-Design.
 subtitle: Build with Trust. Operate with Resilience. Govern with Sovereignty.
+author: Zenith Law
+date: 2026-04-01
+last_modified_at: 2026-05-03
 hero: "/assets/images/home.jpg"
 meta_description: "Engineering and governance insights for resilient platforms, secure delivery, and digital sovereignty across cloud and AI systems."
 image: "/assets/images/home-og-1200x630.jpg"
 og_image_width: 1200
 og_image_height: 630
 image_alt: "Trustworthy engineering and resilient platform architecture"
+enable_article_meta: true
+article_schema: true
+article_schema_types: "Article"
+faq:
+  - question: "What does this website publish?"
+    answer: "This website publishes engineering and governance articles focused on resilience, AI reliability, and digital sovereignty with practical implementation guidance."
+  - question: "How can teams use these resources in production programs?"
+    answer: "Teams can use the article hub to define architecture decisions, risk controls, incident response practices, and governance checkpoints before release."
+  - question: "Why are citations and external references included?"
+    answer: "References are included to improve verifiability, strengthen technical claims, and help readers trace conclusions to authoritative sources."
+  - question: "Where should a new reader start?"
+    answer: "Start with the article hub, then follow the implementation checklist and governance sections to build a practical delivery roadmap."
+howto_name: "How to Use This Site for Trustworthy Delivery"
+howto_description: "Follow this short workflow to find relevant guidance and turn it into actionable engineering and governance decisions."
+howto_total_time: "PT15M"
+howto_steps:
+  - name: "Identify the delivery objective"
+    text: "Define whether your immediate need is architecture clarity, reliability hardening, or governance controls."
+  - name: "Open the article hub"
+    text: "Review recent articles and choose pieces aligned to your objective and risk profile."
+  - name: "Extract implementation actions"
+    text: "Convert the article lessons into backlog tasks, acceptance criteria, and release checks."
+  - name: "Validate controls"
+    text: "Apply legal, security, and quality review gates before production rollout."
 ---
+{% assign published_label = page.date | date: '%-d %B %Y' %}
+{% assign updated_label = page.last_modified_at
+  | default: page.date
+  | date: '%-d %B %Y'
+%}
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/Article">
+  <div
+    class="post-content e-content content-prose-shell tap-target-zone"
+    itemprop="articleBody"
+  >
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What does this website publish?</h3>
+    <p>
+      The site publishes practical engineering and governance guidance for
+      resilient platform delivery and trustworthy AI operations.
+    </p>
+
+    <h3>How can teams use these resources in production programs?</h3>
+    <p>
+      Teams can map article lessons to backlog items, quality gates, and release
+      controls, then validate outcomes against operational risk criteria.
+    </p>
+
+    <h3>Why are citations and external references included?</h3>
+    <p>
+      Citations make claims auditable and help readers verify technical and
+      policy statements against primary or authoritative sources.
+    </p>
+
+    <h3>Where should a new reader start?</h3>
+    <p>
+      Start with the Article Hub, then prioritize articles tied to your current
+      delivery risk and compliance exposure.
+    </p>
+
+    <details id="home-technical-appendix" class="appendix-callout group">
+      <summary class="appendix-summary min-h-[45px] py-2">
+        <span class="appendix-summary-title">
+          <svg
+            class="appendix-chevron"
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            aria-hidden="true"
+          >
+            <path d="M7 4l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          <span>Technical Appendix</span>
+          <span class="appendix-summary-kicker"
+            >Methodology, machine-readable signals, and reference notes</span
+          >
+        </span>
+        <span class="appendix-state-chip group-open:hidden">Closed</span>
+        <span class="appendix-state-chip hidden group-open:inline-flex"
+          >Open</span
+        >
+      </summary>
+
+      <div class="mt-4">
+        <h2>Homepage Overview</h2>
+
+        <p>
+          This landing page is the reader-first entry point to engineering,
+          governance, and resilience content across this site. It is designed to
+          help teams move quickly from orientation to implementation detail.
+        </p>
+
+        <p>
+          <strong>Published:</strong> {{ published_label -}}
+          <br>
+          <strong>Updated:</strong> {{ updated_label }}
+        </p>
+
+        <p>
+          This page is educational and informational. It is not legal advice,
+          and legal obligations vary by jurisdiction.
+        </p>
+
+        <h2>How Should Teams Use This Page?</h2>
+
+        <ol>
+          <li>
+            Start with your immediate delivery objective: architecture,
+            resilience, governance, or compliance.
+          </li>
+          <li>
+            Use the article previews below to choose the most relevant
+            implementation path.
+          </li>
+          <li>
+            Convert selected guidance into backlog actions, quality gates, and
+            review checkpoints.
+          </li>
+          <li>
+            Validate controls with legal, security, and operations stakeholders
+            before release.
+          </li>
+        </ol>
+
+        <blockquote>
+          The primary reading path above is intentionally concise. Structured
+          technical signals remain available here for retrieval, validation, and
+          citation workflows.
+        </blockquote>
+
+        <h2>What Machine-Readable Signals Are Included?</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Signal</th>
+              <th>Status</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Article freshness meta tags</td>
+              <td>Enabled</td>
+              <td>Improves publication recency interpretation</td>
+            </tr>
+            <tr>
+              <td>Article schema</td>
+              <td>Enabled</td>
+              <td>Clarifies page type for indexing systems</td>
+            </tr>
+            <tr>
+              <td>FAQPage schema</td>
+              <td>Enabled</td>
+              <td>Supports direct-answer extraction</td>
+            </tr>
+            <tr>
+              <td>HowTo schema</td>
+              <td>Enabled</td>
+              <td>Supports stepwise answer extraction</td>
+            </tr>
+            <tr>
+              <td>Visible freshness dates</td>
+              <td>Enabled</td>
+              <td>Provides human-readable recency context</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Coverage Snapshot</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total published posts</td>
+              <td>{{ site.posts | size }}</td>
+            </tr>
+            <tr>
+              <td>Active categories</td>
+              <td>{{ site.categories | size }}</td>
+            </tr>
+            <tr>
+              <td>Freshness window</td>
+              <td>{{ published_label }} to {{ updated_label }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Key Definitions</h2>
+        <dl>
+          <dt>Trustworthy engineering</dt>
+          <dd>
+            Engineering practice that combines reliability, security, and
+            transparent controls to produce predictable outcomes.
+          </dd>
+          <dt>Resilient platform</dt>
+          <dd>
+            A platform designed to absorb failures, recover quickly, and
+            preserve critical service behavior under stress.
+          </dd>
+          <dt>Sovereign-by-design</dt>
+          <dd>
+            Architecture and governance choices that respect jurisdictional,
+            regulatory, and data-control boundaries by default.
+          </dd>
+        </dl>
+
+        <h2>Author and Source Context</h2>
+        <p>
+          Author: Zenith Law. See the
+          <a href="{{ '/about/' | relative_url }}">About page</a> for profile
+          context.
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.nist.gov/itl/ai-risk-management-framework"
+              >NIST AI Risk Management Framework</a
+            >
+          </li>
+          <li>
+            <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/"
+              >ICO guidance on AI and data protection</a
+            >
+          </li>
+          <li>
+            <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach"
+              >UK AI regulation policy framework</a
+            >
+          </li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</article>

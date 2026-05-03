@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{{ content }}
+{%- assign homepage_content = content | strip_newlines | strip -%}
 
 {%- assign landing = site.landing -%}
 {%- assign article_preview = landing.article_preview -%}
@@ -193,3 +193,7 @@ layout: default
     </div>
   </section>
 {%- endif -%}
+
+{%- unless homepage_content == '' -%}
+  {{ content }}
+{%- endunless -%}

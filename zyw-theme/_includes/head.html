@@ -9,6 +9,10 @@
   {%- include seo-meta.html -%}
   {%- include seo-structured-data.html -%}
   <link rel="icon" href="{{ site.favicon }}">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css"
@@ -62,7 +66,7 @@
     //-->
   </script>
   <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | relative_url }}">
-  <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+  <script src="{{ "/assets/js/main.js" | relative_url }}" defer></script>
   {%- feed_meta -%}
   {%- include extensions/consent-management.html -%}
   {%- if jekyll.environment == 'production'
@@ -75,7 +79,9 @@
     {%- include extensions/google-analytics.html -%}
     {%- include extensions/analytics-interactions.html -%}
   {%- endif -%}
-  {%- include extensions/highlight.html -%}
+  {%- if page.layout == 'post' or page.enable_highlight == true -%}
+    {%- include extensions/highlight.html -%}
+  {%- endif -%}
   {%- if page.math != false and site.math != false -%}
     {%- include extensions/mathjax.html -%}
   {%- endif -%}

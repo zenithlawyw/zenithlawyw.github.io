@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-05-03T13:12:53Z"
+generated_at: "2026-05-03T14:03:43Z"
 signal_weights:
   title: 3
   categories: 5
@@ -26,8 +26,8 @@ keywords:
   - model
   - support
   - chain
-  - provenance
   - questions
+  - provenance
   - lessons
   - deployment
   - practical
@@ -42,9 +42,9 @@ keywords:
   - platform
   - design
   - systems
-  - agent
   - asked
   - frequently
+  - agent
   - benchmark
   - controls
   - china
@@ -63,6 +63,7 @@ keywords:
   - hub
   - introduction
   - starvation
+  - teams
   - enterprise
   - fragmentation
   - npm
@@ -85,7 +86,6 @@ keywords:
   - reading
   - reference
   - resilience
-  - teams
   - transformer
   - attack
   - classification
@@ -98,6 +98,7 @@ keywords:
   - sovereignty
   - axios
   - compromise
+  - definitions
   - layer
   - scheduling
   - search
@@ -119,10 +120,11 @@ keywords:
   - cloud-native
   - credential
   - cybersecurity
-  - definitions
   - implementation
   - literature
+  - production
   - review
+  - start
   - decision
   - deployable
   - kernels
@@ -150,12 +152,10 @@ keywords:
   - note
   - policy
   - priority
-  - production
   - prov-ml
   - python
   - response
   - social
-  - start
   - treat
   - alignment
   - communication
@@ -183,11 +183,11 @@ key_phrases:
   - artificial intelligence
   - mcp a2a
   - engineering governance
-  - a2a acp
-  - mcp a2a acp
   - asked questions
   - frequently asked
   - frequently asked questions
+  - a2a acp
+  - mcp a2a acp
   - machine learning
   - data provenance
   - artificial intelligence artificial
@@ -324,8 +324,8 @@ catchwords:
   - model
   - support
   - chain
-  - provenance
   - questions
+  - provenance
   - lessons
   - deployment
   - practical
@@ -339,9 +339,9 @@ catchwords:
   - platform
   - design
   - systems
-  - agent
   - asked
   - frequently
+  - agent
   - benchmark
   - controls
   - china
@@ -358,6 +358,7 @@ catchwords:
   - resource
   - introduction
   - starvation
+  - teams
   - enterprise
   - fragmentation
   - conditions
@@ -379,7 +380,6 @@ catchwords:
   - reading
   - reference
   - resilience
-  - teams
   - transformer
   - attack
   - classification
@@ -391,6 +391,7 @@ catchwords:
   - sovereignty
   - axios
   - compromise
+  - definitions
   - layer
   - scheduling
   - search
@@ -409,10 +410,11 @@ catchwords:
   - cloud-native
   - credential
   - cybersecurity
-  - definitions
   - implementation
   - literature
+  - production
   - review
+  - start
   - decision
   - deployable
   - kernels
@@ -436,12 +438,10 @@ catchwords:
   - neural
   - policy
   - priority
-  - production
   - prov-ml
   - python
   - response
   - social
-  - start
   - treat
   - alignment
   - communication
@@ -472,11 +472,13 @@ catchphrases:
   - automated candidate moderation
   - common design mistakes
   - container packaging
+  - coverage snapshot
   - current website-specific practices
   - durable execution
   - engagement boundary
   - enterprise architecture considerations
   - glossary overview
+  - homepage overview
   - hyperparameter stability signal
   - intellectual property
   - jurisdiction map
@@ -514,8 +516,8 @@ search_words:
   - model
   - support
   - chain
-  - provenance
   - questions
+  - provenance
   - lessons
   - deployment
   - practical
@@ -530,9 +532,9 @@ search_words:
   - platform
   - design
   - systems
-  - agent
   - asked
   - frequently
+  - agent
   - benchmark
   - controls
   - china
@@ -551,6 +553,7 @@ search_words:
   - hub
   - introduction
   - starvation
+  - teams
   - enterprise
   - fragmentation
   - npm
@@ -573,7 +576,6 @@ search_words:
   - reading
   - reference
   - resilience
-  - teams
   - transformer
   - attack
   - classification
@@ -586,13 +588,13 @@ search_words:
   - sovereignty
   - axios
   - compromise
+  - definitions
   - layer
   - scheduling
   - search
   - series
   - tenant-aware
   - tool
-  - uci
   - supply chain
   - support vector
   - support vector machine
@@ -600,11 +602,11 @@ search_words:
   - artificial intelligence
   - mcp a2a
   - engineering governance
-  - a2a acp
-  - mcp a2a acp
   - asked questions
   - frequently asked
   - frequently asked questions
+  - a2a acp
+  - mcp a2a acp
   - machine learning
   - data provenance
   - artificial intelligence artificial
@@ -678,6 +680,8 @@ global_questions:
     answer: Read the top intent section first, then move to article FAQs for deeper context.
   - question: How can I find the right article quickly?
     answer: Use the workflow table and question headings on this page, then open cards that match your system context, risk profile, and implementation stage.
+  - question: How can teams use these resources in production programs?
+    answer: Teams can use the article hub to define architecture decisions, risk controls, incident response practices, and governance checkpoints before release.
   - question: How current is the content in this hub?
     answer: This page shows published and updated dates, and each linked article preserves its own publication timeline for freshness assessment.
   - question: How current is this page?
@@ -706,6 +710,8 @@ global_questions:
     answer: LLM reliability is an engineering and governance problem, not a presentation problem. Output quality begins with probabilistic sequence modeling and improves through architecture, training stages, and disciplined prompting. Reliable use requires governance controls that address error modes directly and that keep pace with the evolutionary arc from scaling to alignment to efficiency to federated deployment.
   - question: What does success look like for a sovereign-aware cloud strategy?
     answer: Success appears when regional legal constraints, technical controls, communication guarantees, and migration rights remain aligned and auditable over time. Teams can then maintain continuity through policy change without emergency redesign -.
+  - question: What does this website publish?
+    answer: This website publishes engineering and governance articles focused on resilience, AI reliability, and digital sovereignty with practical implementation guidance.
   - question: What immediate steps should I take?
     answer: Quarantine affected hosts, rotate exposed credentials, inspect CI logs for vulnerable installs, and remediate by replacing compromised dependencies with known-good versions.
   - question: What is the Article Hub used for?
@@ -750,6 +756,8 @@ global_questions:
     answer: Hallucination occurs when an LLM generates plausible-sounding text that is factually wrong, internally inconsistent, or unsupported by any source. The root cause is that LLMs are trained to predict likely next tokens, not to assert truth. Prevention strategies include retrieval-augmented generation (grounding responses in retrieved source documents), contradiction checks against known facts, citation gates that require the model to specify a source for each factual claim, and multi-resolution evaluation that tests factuality separately from fluency. Hallucination is identified as a primary failure mode in both Brown et al. and the synthesis in this article.
   - question: What is the difference between fine-tuning and prompt engineering in LLMs?
     answer: Fine-tuning updates model weights on a curated dataset, adapting the model's internal representations and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in Yang et al.'s practitioner survey.
+  - question: Why are citations and external references included?
+    answer: References are included to improve verifiability, strengthen technical claims, and help readers trace conclusions to authoritative sources.
   - question: Why do AI restrictions feel sharper than other SaaS restrictions?
     answer: Recent records show AI access decisions integrating strategic and ownership criteria in addition to geography. This creates faster policy asymmetry across regions and legal entities. Engineering teams need provider abstraction and contingency model pathways.
   - question: Why does this page include structured tables and definitions?
@@ -842,6 +850,8 @@ global_questions:
     answer: "ACP patterns remain valuable when teams need: 1. REST-native agent integration through existing API gateways and service governance controls. 2. OpenAPI-documented run endpoints that align with established enterprise integration practices."
   - question: Where SVM Is a Strong Fit?
     answer: "SVM remains effective when: 1. Data is medium-scale with controlled feature engineering. 2. Classes are not severely imbalanced."
+  - question: Where should a new reader start?
+    answer: Start with the article hub, then follow the implementation checklist and governance sections to build a practical delivery roadmap.
   - question: Which Python packages are enough to start building this stack?
     answer: For a practical Python-first baseline, `mcp`, `a2a-sdk`, `langgraph`, `langchain`, `fastapi`, `pydantic`, `pytest`, `httpx`, `opentelemetry-sdk`, `uvicorn`, and Docker-based packaging are sufficient for a strong first slice. If ACP-compatible REST interoperability is required on day one, add OpenAPI tooling and gateway middleware that can enforce auth, rate policy, and run-lifecycle observability at the HTTP edge.
   - question: Which sources best support practical implementation teams?
@@ -2629,29 +2639,29 @@ pages:
       - legal and policy faq
     key_phrases:
       - faq hub
-      - engineering governance legal
-      - governance legal
       - engineering governance
+      - governance legal
+      - engineering governance legal
       - questions direct answers
       - questions direct
       - direct answers
-      - frequently asked questions
       - legal policy
+      - frequently asked questions
       - governance legal domains
-      - hub engineering
       - hub engineering governance
       - asked questions
       - frequently asked
       - faq hub engineering
       - legal domains
+      - hub engineering
+      - answers engineering governance
+      - direct answers engineering
+      - cross-page questions direct
+      - hub cross-page questions
+      - faq hub cross-page
       - crawlability answer extraction
       - discoverability crawlability answer
-      - faq hub cross-page
-      - hub cross-page questions
-      - cross-page questions direct
-      - direct answers engineering
-      - answers engineering governance
-      - governance legal policy
+      - improve discoverability crawlability
     catchwords:
       - questions
       - answer
@@ -2700,17 +2710,17 @@ pages:
       - aeo
       - aggregated
       - faq hub
-      - engineering governance legal
-      - governance legal
       - engineering governance
+      - governance legal
+      - engineering governance legal
       - questions direct answers
       - questions direct
       - direct answers
-      - frequently asked questions
       - legal policy
+      - frequently asked questions
       - governance legal domains
-      - hub engineering
       - hub engineering governance
+      - asked questions
     questions:
       - question: How can I find answers quickly?
         answer: Read the top intent section first, then move to article FAQs for deeper context.
@@ -2778,17 +2788,17 @@ pages:
       - seo geo
       - seo geo aeo
       - governance law glossary
-      - discovery glossary
       - law glossary
       - glossary cross-domain
       - governance legal
-      - citable tiers interpreted
-      - tiers interpreted markup
-      - glossary overview a-z
-      - discovery glossary overview
-      - links discovery glossary
+      - data glossary citable
+      - review automated candidate
+      - editorial review automated
+      - candidate editorial review
+      - discovery candidate editorial
       - domains links discovery
       - policy domains links
+      - law policy domains
     catchwords:
       - glossary
       - definitions
@@ -3378,45 +3388,128 @@ pages:
     title: Trustworthy Engineering. Resilient Platforms. Sovereign-by-Design.
     url: "/index.html"
     keywords:
+      - included
+      - teams
       - engineering
       - platforms
       - resilient
       - sovereign-by-design
       - trustworthy
+      - asked
+      - author
+      - citations
+      - context
+      - coverage
+      - definitions
+      - external
+      - frequently
+      - homepage
+      - machine-readable
+      - overview
+      - production
+      - programs
+      - publish
+      - questions
+      - reader
+      - resources
+      - signals
+      - snapshot
+      - start
+      - website
     key_phrases:
+      - resilient platforms sovereign-by-design
+      - engineering resilient platforms
+      - trustworthy engineering resilient
       - trustworthy engineering
       - engineering resilient
       - resilient platforms
       - platforms sovereign-by-design
-      - trustworthy engineering resilient
-      - engineering resilient platforms
-      - resilient platforms sovereign-by-design
-      - sovereign-by-design trustworthy
+      - frequently asked
       - platforms sovereign-by-design trustworthy
       - sovereign-by-design trustworthy engineering
+      - frequently asked questions
+      - asked questions website
+      - questions website publish
+      - website publish teams
+      - publish teams resources
+      - teams resources production
+      - resources production programs
+      - production programs citations
+      - programs citations external
+      - citations external included
+      - external included reader
+      - included reader start
+      - reader start homepage
+      - start homepage overview
     catchwords:
+      - included
+      - teams
       - engineering
       - platforms
       - resilient
       - sovereign-by-design
       - trustworthy
+      - asked
+      - author
+      - citations
+      - context
+      - coverage
+      - definitions
+      - external
+      - frequently
+      - homepage
+      - machine-readable
+      - overview
+      - production
+      - programs
+      - publish
+      - questions
+      - reader
+      - resources
+      - signals
+      - snapshot
+      - start
+      - website
     search_words:
+      - included
+      - teams
       - engineering
       - platforms
       - resilient
       - sovereign-by-design
       - trustworthy
+      - asked
+      - author
+      - citations
+      - context
+      - coverage
+      - definitions
+      - external
+      - frequently
+      - homepage
+      - machine-readable
+      - overview
+      - resilient platforms sovereign-by-design
+      - engineering resilient platforms
+      - trustworthy engineering resilient
       - trustworthy engineering
       - engineering resilient
       - resilient platforms
       - platforms sovereign-by-design
-      - trustworthy engineering resilient
-      - engineering resilient platforms
-      - resilient platforms sovereign-by-design
-      - sovereign-by-design trustworthy
+      - frequently asked
       - platforms sovereign-by-design trustworthy
       - sovereign-by-design trustworthy engineering
-    questions: []
+      - frequently asked questions
+      - asked questions website
+    questions:
+      - question: How can teams use these resources in production programs?
+        answer: Teams can use the article hub to define architecture decisions, risk controls, incident response practices, and governance checkpoints before release.
+      - question: What does this website publish?
+        answer: This website publishes engineering and governance articles focused on resilience, AI reliability, and digital sovereignty with practical implementation guidance.
+      - question: Why are citations and external references included?
+        answer: References are included to improve verifiability, strengthen technical claims, and help readers trace conclusions to authoritative sources.
+      - question: Where should a new reader start?
+        answer: Start with the article hub, then follow the implementation checklist and governance sections to build a practical delivery roadmap.
   legal:
     title: Legal Notices
     url: "/legal/"

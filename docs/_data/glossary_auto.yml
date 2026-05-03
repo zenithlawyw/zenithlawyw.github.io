@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-05-03T13:12:54Z"
-total_candidates: 636
+generated_at: "2026-05-03T14:03:44Z"
+total_candidates: 637
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -6936,6 +6936,22 @@ candidates:
       - title: "Deadlock and Resource Contention: Operating Systems Theory Applied to Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
     related_pages: []
+  - term: Included
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: "FAQ Hub: Across Engineering, Governance, Legal, and AI Domains"
+        url: "/faq/"
+      - title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
+        url: "/glossary/"
+      - title: Trustworthy Engineering. Resilient Platforms. Sovereign-by-Design.
+        url: "/index.html"
   - term: Inference
     status: candidate
     confidence: 5

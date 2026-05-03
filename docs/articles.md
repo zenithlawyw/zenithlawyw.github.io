@@ -57,53 +57,6 @@ per_page: 6
 {% assign updated_label = page.last_modified_at | default: page.date | date: '%-d %B %Y' %}
 
 <div class="not-prose mt-4 text-gray-800 dark:text-gray-200">
-  <h2 class="mb-3 mt-0 scroll-mt-24 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">Article Hub Overview</h2>
-
-  <p class="my-3 leading-7">
-    This page is a practical article hub for engineering, governance, and resilience work. It helps readers move from quick orientation to implementation-level detail without losing context.
-  </p>
-
-  <p class="my-3 leading-7">
-    <strong>Published:</strong> {{ published_label }}<br>
-    <strong>Updated:</strong> {{ updated_label }}
-  </p>
-
-  <p class="my-3 leading-7">
-    This page is educational and informational only. It is not legal advice and is not a substitute for jurisdiction-specific legal advice from qualified counsel. Mandatory statutory rights remain unaffected.
-  </p>
-
-  <h2 class="mb-3 mt-8 scroll-mt-24 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">How Should Teams Use This Page?</h2>
-
-  <p class="my-3 leading-7">
-    Use this quick workflow when you need a fast route from a problem statement to actionable article detail.
-  </p>
-
-  <ol class="my-3 list-decimal pl-5 leading-7">
-    <li>Identify your immediate problem type: architecture, operations, governance, or incident response.</li>
-    <li>Use article-card tags and categories to narrow to relevant implementation context.</li>
-    <li>Read the selected article summary first, then move to full technical sections and references.</li>
-    <li>Record controls, assumptions, and evidence links before introducing changes to production systems.</li>
-  </ol>
-
-  <h2 class="mb-3 mt-8 scroll-mt-24 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">What Can You Do From This Hub?</h2>
-
-  <p class="my-3 leading-7">
-    Use this page to move from broad research questions to implementation-ready reading paths. The article cards are organized to help teams compare incident lessons, architecture boundaries, and governance controls before making delivery decisions.
-  </p>
-
-  <p class="my-3 leading-7">
-    Each card links directly to evidence-based writeups with dated publication context, practical risk framing, and concrete engineering implications. This makes it easier to prioritize what to read first when timelines are short and decisions are high impact.
-  </p>
-
-  <p class="my-3 leading-7">
-    If you are planning controls, use the overview and FAQ sections for orientation, then use the Technical Appendix for methodology notes, reference frameworks, and terminology alignment.
-  </p>
-
-  <ul class="my-3 list-disc pl-5 leading-7">
-    <li>Need architecture direction: start with protocol and orchestration topics.</li>
-    <li>Need operational resilience: focus on incident and supply-chain analyses.</li>
-    <li>Need governance traceability: use posts that include control and validation patterns.</li>
-  </ul>
 </div>
 
 <!-- TECHNICAL_APPENDIX_SPLIT -->
@@ -165,6 +118,54 @@ per_page: 6
 - **Site and policy context:** <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href="{{ '/legal/' | relative_url }}">Legal Notices</a>
 
     <div class="mt-4">
+      <h2 class="mb-3 mt-0 scroll-mt-24 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">Article Hub Overview</h2>
+
+      <p class="my-3 leading-7">
+        This page is a practical article hub for engineering, governance, and resilience work. It helps readers move from quick orientation to implementation-level detail without losing context.
+      </p>
+
+      <p class="my-3 leading-7">
+        <strong>Published:</strong> {{ published_label }}<br>
+        <strong>Updated:</strong> {{ updated_label }}
+      </p>
+
+      <p class="my-3 leading-7">
+        This page is educational and informational only. It is not legal advice and is not a substitute for jurisdiction-specific legal advice from qualified counsel. Mandatory statutory rights remain unaffected.
+      </p>
+
+      <h2 class="mb-3 mt-8 scroll-mt-24 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">How Should Teams Use This Page?</h2>
+
+      <p class="my-3 leading-7">
+        Use this quick workflow when you need a fast route from a problem statement to actionable article detail.
+      </p>
+
+      <ol class="my-3 list-decimal pl-5 leading-7">
+        <li>Identify your immediate problem type: architecture, operations, governance, or incident response.</li>
+        <li>Use article-card tags and categories to narrow to relevant implementation context.</li>
+        <li>Read the selected article summary first, then move to full technical sections and references.</li>
+        <li>Record controls, assumptions, and evidence links before introducing changes to production systems.</li>
+      </ol>
+
+      <h2 class="mb-3 mt-8 scroll-mt-24 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">What Can You Do From This Hub?</h2>
+
+      <p class="my-3 leading-7">
+        Use this page to move from broad research questions to implementation-ready reading paths. The article cards are organized to help teams compare incident lessons, architecture boundaries, and governance controls before making delivery decisions.
+      </p>
+
+      <p class="my-3 leading-7">
+        Each card links directly to evidence-based writeups with dated publication context, practical risk framing, and concrete engineering implications. This makes it easier to prioritize what to read first when timelines are short and decisions are high impact.
+      </p>
+
+      <p class="my-3 leading-7">
+        If you are planning controls, use the overview and FAQ sections for orientation, then use the Technical Appendix for methodology notes, reference frameworks, and terminology alignment.
+      </p>
+
+      <ul class="my-3 list-disc pl-5 leading-7">
+        <li>Need architecture direction: start with protocol and orchestration topics.</li>
+        <li>Need operational resilience: focus on incident and supply-chain analyses.</li>
+        <li>Need governance traceability: use posts that include control and validation patterns.</li>
+      </ul>
+
       <blockquote>
         The article hub keeps the primary reading path concise while preserving full SEO, GEO, and AEO technical depth in this appendix.
       </blockquote>
