@@ -53,7 +53,7 @@
             id="site-nav-menu"
           >
             <!-- Centered navigation items -->
-            <div class="nav-menu-items order-first mx-0 flex min-w-0 flex-col items-stretch px-0 md:order-first md:ml-auto md:mr-0 md:w-auto md:flex-none md:flex-row md:items-center md:justify-end md:gap-1 md:px-2">
+            <div class="nav-menu-items order-first mx-0 flex min-w-0 flex-col items-stretch px-0 md:order-first md:ml-auto md:mr-0 md:w-auto md:flex-none md:flex-row md:items-center md:justify-end md:gap-3 md:px-2">
               {%- for path in page_paths -%}
                 {%- assign my_page = site.pages
                   | where: 'path', path
@@ -66,7 +66,7 @@
                 -%}
                 {%- if nav_label != '' -%}
                   <a
-                    class="page-link nav-item nav-menu-item flex w-full items-center justify-start rounded-md bg-black/10 px-3 py-2 text-left text-gray-600 no-underline transition-colors hover:text-gray-500 hover:underline dark:bg-white/10 dark:text-gray-100 dark:underline-offset-4 dark:hover:text-white dark:hover:decoration-white md:inline-flex md:h-full md:w-auto md:justify-center md:rounded-none md:bg-transparent md:px-2 md:py-0 md:dark:bg-transparent"
+                    class="page-link nav-item nav-menu-item inline-flex min-h-[45px] items-center rounded-md px-3 py-2 text-left text-gray-700 no-underline transition-colors hover:text-gray-900 hover:underline dark:text-gray-200 dark:hover:text-white md:px-2 md:py-0 md:underline-offset-4"
                     href="{{ my_page.url | relative_url }}"
                   >
                     {{- nav_label | escape -}}
