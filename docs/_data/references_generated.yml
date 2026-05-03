@@ -1095,9 +1095,8 @@ mcpa2a-2026-ref2:
   url: https://modelcontextprotocol.io/specification/latest
   accessed_iso: "2026-04-28"
   accessed_date: 28 April 2026
-  ieee_base: Model Context Protocol, Specification, Model Context Protocol specification, 2026, Schema revision 2025-11-25.
-  harvard_base: Model Context Protocol. (2026). Specification. Model Context Protocol specification. Schema revision 2025-11-25.
-  note: Schema revision 2025-11-25
+  ieee_base: Model Context Protocol, Specification, Model Context Protocol specification, 2026.
+  harvard_base: Model Context Protocol. (2026). Specification. Model Context Protocol specification.
   source_format: bibtex
 mcpa2a-2026-ref3:
   entry_type: online
@@ -1239,9 +1238,8 @@ mcpa2a-2026-ref13:
   url: https://opentelemetry.io/docs/
   accessed_iso: "2026-04-30"
   accessed_date: 30 April 2026
-  ieee_base: OpenTelemetry Authors, Documentation, OpenTelemetry documentation, 2025, Last modified 29 August 2025.
-  harvard_base: OpenTelemetry Authors. (2025). Documentation. OpenTelemetry documentation. Last modified 29 August 2025.
-  note: Last modified 29 August 2025
+  ieee_base: OpenTelemetry Authors, Documentation, OpenTelemetry documentation, 2025.
+  harvard_base: OpenTelemetry Authors. (2025). Documentation. OpenTelemetry documentation.
   source_format: bibtex
 mcpa2a-2026-ref14:
   entry_type: online
@@ -1305,9 +1303,8 @@ mcpa2a-2026-ref18:
   url: https://agentcommunicationprotocol.dev/spec/openapi.yaml
   accessed_iso: "2026-04-28"
   accessed_date: 28 April 2026
-  ieee_base: Agent Communication Protocol, ACP OpenAPI specification, ACP documentation, 2026, OpenAPI 3.1.1 (version 0.2.0).
-  harvard_base: Agent Communication Protocol. (2026). ACP OpenAPI specification. ACP documentation. OpenAPI 3.1.1 (version 0.2.0).
-  note: OpenAPI 3.1.1 (version 0.2.0)
+  ieee_base: Agent Communication Protocol, ACP OpenAPI specification, ACP documentation, 2026.
+  harvard_base: Agent Communication Protocol. (2026). ACP OpenAPI specification. ACP documentation.
   source_format: bibtex
 mcpa2a-2026-ref19:
   entry_type: online
@@ -1334,7 +1331,6 @@ mcpa2a-2026-ref20:
   url: https://www.ibm.com/think/topics/agent-communication-protocol
   accessed_iso: "2026-04-28"
   accessed_date: 28 April 2026
-  ieee_base: S. Besen and A. Gutowska, What is Agent Communication Protocol (ACP)?, IBM Think, 2026, IBM page states ACP has merged with A2A and advises migration-path review.
-  harvard_base: S. Besen and A. Gutowska. (2026). What is Agent Communication Protocol (ACP)?. IBM Think. IBM page states ACP has merged with A2A and advises migration-path review.
-  note: IBM page states ACP has merged with A2A and advises migration-path review
+  ieee_base: S. Besen and A. Gutowska, What is Agent Communication Protocol (ACP)?, IBM Think, 2026.
+  harvard_base: S. Besen and A. Gutowska. (2026). What is Agent Communication Protocol (ACP)?. IBM Think.
   source_format: bibtex
