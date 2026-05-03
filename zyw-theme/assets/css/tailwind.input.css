@@ -49,7 +49,7 @@
   }
 
   .translate-toggle-btn {
-    @apply inline-flex min-h-11 items-center gap-2 rounded bg-white/10 px-3 py-1.5 text-sm text-inherit transition-colors hover:bg-white/20 dark:bg-black/20 dark:hover:bg-black/30;
+    @apply inline-flex min-h-10 items-center gap-2 rounded bg-white/10 px-3 py-1.5 text-sm text-inherit transition-colors hover:bg-white/20 dark:bg-black/20 dark:hover:bg-black/30;
   }
 
   .translate-menu-panel {
