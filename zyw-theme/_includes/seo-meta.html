@@ -21,7 +21,8 @@
 {%- if seo_title.size > 60 -%}
   {%- assign seo_title = seo_title | truncate: 60, '' -%}
 {%- endif -%}
-{%- assign page_desc = page.description
+{%- assign page_desc = page.meta_description
+  | default: page.description
   | default: page.intro
   | default: site.description
 -%}
