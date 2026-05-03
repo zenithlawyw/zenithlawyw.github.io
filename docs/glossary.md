@@ -192,11 +192,11 @@ Related:
   <details id="glossary-method-notes" class="appendix-callout group">
     <summary class="appendix-summary">
       <span class="appendix-summary-title">
-        <svg class="appendix-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-          <path d="M7 4l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <span>Technical Appendix</span>
-        <span class="appendix-summary-kicker">Methodology and source-tier notes</span>
+      <svg class="appendix-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"> 
+        <path d="M7 4l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <span>Technical Appendix</span>
+      <span class="appendix-summary-kicker">Methodology and source-tier notes</span>
       </span>
       <span class="appendix-state-chip group-open:hidden">Closed</span>
       <span class="appendix-state-chip hidden group-open:inline-flex">Open</span>
