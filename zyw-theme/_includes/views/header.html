@@ -66,7 +66,7 @@
                 -%}
                 {%- if nav_label != '' -%}
                   <a
-                    class="page-link nav-item nav-menu-item inline-flex min-h-[45px] items-center rounded-md px-3 py-2 text-left text-gray-700 no-underline transition-colors hover:text-gray-900 hover:underline dark:text-gray-200 dark:hover:text-white md:px-2 md:py-0 md:underline-offset-4"
+                    class="page-link nav-item nav-menu-item inline-flex min-h-[45px] items-center rounded-md px-3 py-2 text-left text-gray-700 no-underline transition-colors hover:underline dark:text-gray-200 md:px-2 md:py-0 md:underline-offset-4"
                     href="{{ my_page.url | relative_url }}"
                   >
                     {{- nav_label | escape -}}
@@ -219,7 +219,7 @@
     );
     var textTargets = Array.prototype.slice.call(
       document.querySelectorAll(
-        '.site-header .site-brand-inner, .site-header .nav-controls-group, .site-header .menu-toggle-button, .site-header [data-theme-toggle] label'
+        '.site-header .site-brand-inner, .site-header .nav-controls-group, .site-header .menu-toggle-button, .site-header .nav-menu-item, .site-header [data-theme-toggle] label'
       )
     );
     var separators = Array.prototype.slice.call(

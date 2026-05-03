@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "FAQ Hub: Questions and Answers Across Published Pages"
+title: "FAQ Hub: Across Engineering, Governance, Legal, and AI Domains"
+heading: "Frequently Asked Questions Across Multi-Disciplinary Domains"
 nav_title: "FAQ"
 permalink: /faq/
 image: /assets/images/faq-hub-questions-answers.png

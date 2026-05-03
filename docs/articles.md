@@ -145,7 +145,7 @@ per_page: 6
 </section>
 
 <details id="article-method-notes" class="appendix-callout group" markdown="1">
-  <summary class="appendix-summary">
+  <summary class="appendix-summary min-h-[45px] py-2">
     <span class="appendix-summary-title">
       <svg class="appendix-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
         <path d="M7 4l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -161,8 +161,8 @@ per_page: 6
 
 ## Who Is Responsible For This Content?
 
-- **Author:** [Zenith Law]({{ '/authors/zenith-law/' | relative_url }})
-- **Site and policy context:** [Legal Notices]({{ '/legal/' | relative_url }})
+- **Author:** <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href="{{ '/authors/zenith-law/' | relative_url }}">Zenith Law</a>
+- **Site and policy context:** <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href="{{ '/legal/' | relative_url }}">Legal Notices</a>
 
     <div class="mt-4">
       <blockquote>
@@ -257,10 +257,10 @@ per_page: 6
 
       <p>Reference frameworks for follow-up validation:</p>
       <ul>
-        <li><a class="-mx-1 inline-flex min-h-10 items-center rounded px-1" href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework (AI RMF 1.0)</a></li>
-        <li><a class="-mx-1 inline-flex min-h-10 items-center rounded px-1" href="https://csrc.nist.gov/Projects/ssdf">NIST Secure Software Development Framework (SSDF)</a></li>
-        <li><a class="-mx-1 inline-flex min-h-10 items-center rounded px-1" href="https://www.cisa.gov/securebydesign">CISA Secure by Design</a></li>
-        <li><a class="-mx-1 inline-flex min-h-10 items-center rounded px-1" href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a></li>
+        <li><a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework (AI RMF 1.0)</a></li>
+        <li><a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href="https://csrc.nist.gov/Projects/ssdf">NIST Secure Software Development Framework (SSDF)</a></li>
+        <li><a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href="https://www.cisa.gov/securebydesign">CISA Secure by Design</a></li>
+        <li><a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a></li>
       </ul>
 
       <h2>What Technical Terms Matter On This Page?</h2>
