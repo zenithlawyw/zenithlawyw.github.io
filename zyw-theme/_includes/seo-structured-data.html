@@ -1,7 +1,8 @@
 {%- assign seo_cfg = site.seo | default: null -%}
 {%- assign seo_auto = site.data.seo_auto | default: null -%}
 {%- assign page_title = page.title | default: site.title -%}
-{%- assign page_desc = page.description
+{%- assign page_desc = page.meta_description
+  | default: page.description
   | default: page.intro
   | default: site.description
 -%}
