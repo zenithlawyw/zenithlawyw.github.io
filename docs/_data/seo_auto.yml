@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-05-03T15:34:36Z"
+generated_at: "2026-05-03T16:24:53Z"
 signal_weights:
   title: 3
   categories: 5
@@ -759,7 +759,7 @@ global_questions:
   - question: Should I start new projects with ACP or A2A for agent-to-agent collaboration?
     answer: For many long-lived greenfield collaborations, A2A is often a lower-regret default today because of active protocol momentum and documented ACP convergence direction. ACP patterns remain useful for REST-first interoperability edges and migration-minded design.
   - question: What Expertise Areas Are Covered?
-    answer: "| Domain | Focus | Practical Output | | --- | --- | --- | | Cybersecurity and supply-chain assurance | Incident-informed controls and trust boundaries | Control checklists and response priorities |"
+    answer: "| Domain | Focus | Practical Output | | ------------------------------------------ | ----------------------------------------------------------- | --------------------------------------------------- | | Cybersecurity and supply-chain assurance | Incident-informed controls and trust boundaries | Control checklists and response priorities |"
   - question: What is alignment in large language models?
     answer: Alignment is the process of training or constraining an LLM so its outputs are helpful, honest, and harmless relative to intended use. The main techniques include supervised fine-tuning (SFT) on curated question-answer pairs, reinforcement learning from human feedback (RLHF) where human raters score responses and a reward model is trained on those preferences, and constitutional AI methods where the model critiques its own outputs against stated principles. Alignment does not eliminate all failure modes; recent aligned models report improved refusal behavior on specific benchmark suites, not universal reliability. Claims about alignment effectiveness should be evaluated within the reported evaluation setup rather than generalized.
   - question: What is hallucination in LLMs and how do you prevent it?
@@ -887,7 +887,7 @@ global_questions:
   - question: Is MCP more secure than A2A?
     answer: Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services. ACP-oriented deployments additionally depend on API gateway policy, token scope, and run-endpoint governance quality, so security posture is a composition problem, not a single-protocol verdict.
   - question: Who Is Responsible For This Content?
-    answer: '- **Author:** <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href=" ">Zenith Law</a> - **Site and policy context:** <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href=" ">Legal Notices</a> <div class="mt-4">'
+    answer: <ul> <li><strong>Author:</strong> <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href=" ">Zenith Law</a></li> <li><strong>Site and policy context:</strong> <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href=" ">Legal Notices</a></li>
   - question: Where to look next?
     answer: "- Privacy, cookies, data handling, and Hong Kong Personal Information Collection Statement (PICS)-style notice: [Privacy, Cookies and Data Protection]() - Site access, acceptable use, intellectual property, and service boundaries: [Terms of Use]() - Overview of the full legal notice set: [Legal Notices]()"
 posts:
@@ -2483,7 +2483,7 @@ pages:
       - question: Why Is This Page Citation-Ready?
         answer: 1. It provides explicit publication and update dates. 2. It includes structured FAQ and HowTo schema for answer extraction. 3. It links to public profile credentials and authoritative technical references.
       - question: What Expertise Areas Are Covered?
-        answer: "| Domain | Focus | Practical Output | | --- | --- | --- | | Cybersecurity and supply-chain assurance | Incident-informed controls and trust boundaries | Control checklists and response priorities |"
+        answer: "| Domain | Focus | Practical Output | | ------------------------------------------ | ----------------------------------------------------------- | --------------------------------------------------- | | Cybersecurity and supply-chain assurance | Incident-informed controls and trust boundaries | Control checklists and response priorities |"
       - question: Why Are Structured Methods And Evidence Signals Included?
         answer: Structured sections help readers and AI systems extract key facts quickly, compare options, and trace recommendations to practical controls and authoritative references.
       - question: Does this profile page provide legal advice?
@@ -2637,7 +2637,7 @@ pages:
       - question: Which external standards are useful for follow-up validation?
         answer: Useful starting points include NIST AI RMF, NIST SSDF, CISA secure-by-design guidance, and OWASP references for application and API security.
       - question: Who Is Responsible For This Content?
-        answer: '- **Author:** <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href=" ">Zenith Law</a> - **Site and policy context:** <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href=" ">Legal Notices</a> <div class="mt-4">'
+        answer: <ul> <li><strong>Author:</strong> <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href=" ">Zenith Law</a></li> <li><strong>Site and policy context:</strong> <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href=" ">Legal Notices</a></li>
   faq:
     title: "FAQ Hub: Across Engineering, Governance, Legal, and AI Domains"
     url: "/faq/"
