@@ -76,7 +76,7 @@ landing:
     heading: "Latest Engineering and Governance Articles"
     description: "See recent incident-informed analysis, practical implementation guidance, and policy-aware architecture lessons."
     count: 3
-    cta_label: "Read More"
+    cta_label: "Browse all articles"
     cta_url: "/articles/"
   testimonials:
     enabled: false
@@ -277,6 +277,7 @@ seo:
   organization_type: "ProfessionalService" # Schema.org @type for the publisher entity.
   publisher_name: "Zenith Law" # Publisher name used in JSON-LD.
   publisher_logo: "/assets/images/zenithlaw.png" # Publisher logo used in JSON-LD and social cards.
+  schema_description: "Zenith Law provides technology strategy and engineering guidance for secure, resilient platforms, data governance, and AI-ready systems." # Short description for JSON-LD WebSite and ProfessionalService blocks.
   default_image: "/assets/images/zenithlaw.png" # Fallback OG/Twitter image when page.image is absent.
   service_type: "Technology Strategy and Engineering Advisory" # Service label for ProfessionalService schema.
   area_served: # Regions/countries served for service schema.

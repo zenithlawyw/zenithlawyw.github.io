@@ -8,6 +8,14 @@
 -%}
 {%- assign canonical_url = page.url | absolute_url -%}
 {%- assign page_lang = page.lang | default: site.lang | default: 'en' -%}
+{%- assign schema_desc = site.seo.schema_description
+  | default: site.description
+  | strip
+  | strip_newlines
+-%}
+{%- if schema_desc.size > 170 -%}
+  {%- assign schema_desc = schema_desc | truncate: 170, '' -%}
+{%- endif -%}
 {%- assign publisher_name = seo_cfg.publisher_name | default: site.title -%}
 {%- assign publisher_logo = seo_cfg.publisher_logo
   | default: site.favicon
@@ -56,7 +64,7 @@
     "name": {{ site.title | jsonify }},
     "url": {{ site.url | jsonify }},
     "inLanguage": {{ page_lang | jsonify }},
-    "description": {{ site.description | strip | strip_newlines | jsonify }}{% if seo_cfg and seo_cfg.keywords %},
+    "description": {{ schema_desc | strip | strip_newlines | jsonify }}{% if seo_cfg and seo_cfg.keywords %},
     "keywords": {{ seo_cfg.keywords | join: ', ' | jsonify }}{% endif %}{% if seo_cfg and seo_cfg.same_as %},
     "sameAs": [{% for profile in seo_cfg.same_as %}{{ profile | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %}{% if seo_auto and seo_auto.key_phrases and seo_auto.key_phrases.size > 0 %},
     "about": [{% for phrase in seo_auto.key_phrases limit: 20 %}{"@type":"Thing","name":{{ phrase | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %},
@@ -76,7 +84,7 @@
     "name": {{ publisher_name | jsonify }},
     "url": {{ site.url | jsonify }},
     "email": {{ site.email | jsonify }},
-    "description": {{ site.description | strip | strip_newlines | jsonify }},
+    "description": {{ schema_desc | strip | strip_newlines | jsonify }},
     "logo": {{ publisher_logo | jsonify }}{% if seo_cfg and seo_cfg.same_as %},
     "sameAs": [{% for profile in seo_cfg.same_as %}{{ profile | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %}{% if seo_cfg and seo_cfg.knows_about %},
     "knowsAbout": [{% for topic in seo_cfg.knows_about %}{{ topic | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %}{% if seo_cfg and seo_cfg.service_type %},
