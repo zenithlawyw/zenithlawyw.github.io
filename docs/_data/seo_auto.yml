@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-05-03T12:18:13Z"
+generated_at: "2026-05-03T12:45:35Z"
 signal_weights:
   title: 3
   categories: 5
@@ -24,10 +24,10 @@ keywords:
   - supply
   - mcp
   - model
-  - questions
   - support
   - chain
   - provenance
+  - questions
   - lessons
   - deployment
   - practical
@@ -48,13 +48,13 @@ keywords:
   - benchmark
   - controls
   - china
+  - legal
   - glossary
   - security
   - boundaries
   - scope
   - trust
   - tuning
-  - legal
   - llm
   - agentic
   - architecture
@@ -158,7 +158,6 @@ keywords:
   - start
   - treat
   - alignment
-  - answers
   - communication
   - deep
   - disclaimer
@@ -175,6 +174,7 @@ keywords:
   - saas
   - scholarly
   - work
+  - algorithm
 key_phrases:
   - supply chain
   - support vector
@@ -182,8 +182,8 @@ key_phrases:
   - vector machine
   - artificial intelligence
   - mcp a2a
-  - a2a acp
   - engineering governance
+  - a2a acp
   - mcp a2a acp
   - asked questions
   - frequently asked
@@ -246,6 +246,7 @@ key_phrases:
   - deadlock resource
   - deadlock resource contention
   - faq hub
+  - governance legal
   - hong kong
   - introduction scope claim
   - learning traceability
@@ -261,6 +262,7 @@ key_phrases:
   - cloud fragmentation
   - confusion matrix
   - cookies data protection
+  - engineering governance legal
   - governance digital
   - har support
   - har support vector
@@ -283,6 +285,8 @@ key_phrases:
   - deployment model governance
   - digital sovereignty cloud
   - graph methods
+  - hub engineering
+  - hub engineering governance
   - knowledge distillation
   - lessons engineering
   - machine series
@@ -312,20 +316,16 @@ key_phrases:
   - chain security social
   - classification model
   - classification model tuning
-  - cloud compliance
-  - cloud compliance platform
-  - cloud fragmentation scheduling
-  - compliance platform
 catchwords:
   - engineering
   - governance
   - machine
   - supply
   - model
-  - questions
   - support
   - chain
   - provenance
+  - questions
   - lessons
   - deployment
   - practical
@@ -345,13 +345,13 @@ catchwords:
   - benchmark
   - controls
   - china
+  - legal
   - glossary
   - security
   - boundaries
   - scope
   - trust
   - tuning
-  - legal
   - agentic
   - architecture
   - protocol
@@ -444,7 +444,6 @@ catchwords:
   - start
   - treat
   - alignment
-  - answers
   - communication
   - disclaimer
   - error
@@ -458,6 +457,7 @@ catchwords:
   - quality
   - reproducibility
   - scholarly
+  - algorithm
 catchphrases:
   - frequently asked questions
   - agent card
@@ -512,10 +512,10 @@ search_words:
   - supply
   - mcp
   - model
-  - questions
   - support
   - chain
   - provenance
+  - questions
   - lessons
   - deployment
   - practical
@@ -536,13 +536,13 @@ search_words:
   - benchmark
   - controls
   - china
+  - legal
   - glossary
   - security
   - boundaries
   - scope
   - trust
   - tuning
-  - legal
   - llm
   - agentic
   - architecture
@@ -599,8 +599,8 @@ search_words:
   - vector machine
   - artificial intelligence
   - mcp a2a
-  - a2a acp
   - engineering governance
+  - a2a acp
   - mcp a2a acp
   - asked questions
   - frequently asked
@@ -857,7 +857,7 @@ global_questions:
   - question: Is MCP more secure than A2A?
     answer: Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services. ACP-oriented deployments additionally depend on API gateway policy, token scope, and run-endpoint governance quality, so security posture is a composition problem, not a single-protocol verdict.
   - question: Who Is Responsible For This Content?
-    answer: '- **Author:** [Zenith Law]() - **Site and policy context:** [Legal Notices]() <div class="mt-4">'
+    answer: '- **Author:** <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href=" ">Zenith Law</a> - **Site and policy context:** <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href=" ">Legal Notices</a> <div class="mt-4">'
   - question: Where to look next?
     answer: "- Privacy, cookies, data handling, and Hong Kong Personal Information Collection Statement (PICS)-style notice: [Privacy, Cookies and Data Protection]() - Site access, acceptable use, intellectual property, and service boundaries: [Terms of Use]() - Overview of the full legal notice set: [Legal Notices]()"
 posts:
@@ -2582,25 +2582,25 @@ pages:
       - question: Which external standards are useful for follow-up validation?
         answer: Useful starting points include NIST AI RMF, NIST SSDF, CISA secure-by-design guidance, and OWASP references for application and API security.
       - question: Who Is Responsible For This Content?
-        answer: '- **Author:** [Zenith Law]() - **Site and policy context:** [Legal Notices]() <div class="mt-4">'
+        answer: '- **Author:** <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href=" ">Zenith Law</a> - **Site and policy context:** <a class="-mx-1 inline-flex min-h-[45px] items-center rounded px-1" href=" ">Legal Notices</a> <div class="mt-4">'
   faq:
-    title: "FAQ Hub: Questions and Answers Across Published Pages"
+    title: "FAQ Hub: Across Engineering, Governance, Legal, and AI Domains"
     url: "/faq/"
     keywords:
-      - questions
       - faq
-      - answers
+      - questions
       - hub
-      - published
+      - answer
+      - engineering
+      - governance
+      - legal
       - direct
       - search
       - asked
       - crawlability
       - discoverability
-      - engineering
+      - domains
       - frequently
-      - governance
-      - legal
       - policy
       - aeo
       - aggregated
@@ -2617,11 +2617,11 @@ pages:
       - intent
       - layers
       - markup
+      - published
       - retrieval
       - seo
       - standards
       - support
-      - technical
       - faq hub
       - frequently asked questions
       - engineering faq
@@ -2629,42 +2629,42 @@ pages:
       - legal and policy faq
     key_phrases:
       - faq hub
+      - engineering governance legal
+      - governance legal
+      - engineering governance
       - questions direct answers
-      - direct answers
       - questions direct
-      - questions answers
-      - faq hub questions
-      - frequently asked
-      - asked questions
-      - answers published
-      - hub questions answers
-      - questions answers published
-      - legal policy
+      - direct answers
       - frequently asked questions
-      - hub questions
+      - legal policy
+      - governance legal domains
+      - hub engineering
+      - hub engineering governance
+      - asked questions
+      - frequently asked
+      - faq hub engineering
+      - legal domains
       - crawlability answer extraction
+      - discoverability crawlability answer
       - faq hub cross-page
       - hub cross-page questions
       - cross-page questions direct
       - direct answers engineering
       - answers engineering governance
-      - engineering governance legal
       - governance legal policy
-      - legal policy topics
-      - discoverability crawlability answer
     catchwords:
       - questions
-      - answers
-      - published
+      - answer
+      - engineering
+      - governance
+      - legal
       - direct
       - search
       - asked
       - crawlability
       - discoverability
-      - engineering
+      - domains
       - frequently
-      - governance
-      - legal
       - policy
       - aggregated
       - article-specific
@@ -2678,39 +2678,39 @@ pages:
       - intent
       - layers
       - markup
+      - published
       - retrieval
       - standards
-      - support
     search_words:
-      - questions
       - faq
-      - answers
+      - questions
       - hub
-      - published
+      - answer
+      - engineering
+      - governance
+      - legal
       - direct
       - search
       - asked
       - crawlability
       - discoverability
-      - engineering
+      - domains
       - frequently
-      - governance
-      - legal
       - policy
       - aeo
       - aggregated
       - faq hub
+      - engineering governance legal
+      - governance legal
+      - engineering governance
       - questions direct answers
-      - direct answers
       - questions direct
-      - questions answers
-      - faq hub questions
-      - frequently asked
-      - asked questions
-      - answers published
-      - hub questions answers
-      - questions answers published
+      - direct answers
+      - frequently asked questions
       - legal policy
+      - governance legal domains
+      - hub engineering
+      - hub engineering governance
     questions:
       - question: How can I find answers quickly?
         answer: Read the top intent section first, then move to article FAQs for deeper context.
