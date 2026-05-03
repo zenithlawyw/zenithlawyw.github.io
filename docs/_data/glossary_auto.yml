@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-05-03T14:03:44Z"
-total_candidates: 637
+generated_at: "2026-05-03T14:34:48Z"
+total_candidates: 640
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -2026,6 +2026,18 @@ candidates:
       - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
         url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
     related_pages: []
+  - term: Cybersecurity Digital Sovereignty
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/_authors/zenith-law.html"
   - term: Data Provenance Data
     status: candidate
     confidence: 7
@@ -2150,6 +2162,18 @@ candidates:
       - title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
+  - term: Digital Sovereignty Governance
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/_authors/zenith-law.html"
   - term: Digital Sovereignty Readiness
     status: candidate
     confidence: 7
@@ -2994,6 +3018,18 @@ candidates:
       - title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
+  - term: Sovereignty Governance Platform
+    status: candidate
+    confidence: 7
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages:
+      - title: ""
+        url: "/_authors/zenith-law.html"
   - term: Sovereignty Practice
     status: candidate
     confidence: 7

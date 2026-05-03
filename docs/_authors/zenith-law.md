@@ -5,20 +5,23 @@ position: Strategist | Engineer | Researcher | Trainer
 avatar: /assets/images/zenithlaw.png
 description: >-
   Zenith Law is a strategist, engineer, researcher, and
-  trainer with 25+ years of hands-on polyglot engineering
-  experience and 12+ years in senior technical leadership.
-  He builds mission-critical, scalable, and observable data
-  and application platforms, with a strong focus on
-  cybersecurity, governance, digital sovereignty, and
-  resilient cloud delivery in regulated domains. His
-  perspective is further shaped by legal training and
-  doctoral research in data science, including metadata,
-  lineage, data quality, and AI/ML-ready platform
-  abstractions.
+  trainer who publishes implementation-focused analysis across
+  cybersecurity, digital sovereignty, AI governance, platform
+  architecture, and resilient cloud operations. His work maps
+  incident evidence and technical theory to practical controls,
+  including supply-chain compromise response, cross-jurisdiction
+  cloud fragmentation, multi-agent interoperability boundaries,
+  operating-systems resource contention patterns, data
+  provenance and lineage for machine learning, and support
+  vector machine engineering from theory to deployment
+  governance. His perspective is shaped by legal training and
+  doctoral research in data science, with emphasis on metadata
+  quality, traceability, and trustworthy AI-ready platform
+  design.
 meta_description: >-
-  Zenith Law builds secure data platforms and resilient
-  applications with expertise in governance, digital
-  sovereignty, and AI readiness.
+  Zenith Law writes practical engineering and governance
+  analyses on cybersecurity, digital sovereignty, AI/ML
+  reliability, provenance, and resilient cloud architecture.
 links:
   - label: GitHub
     url: https://github.com/zenithlawyw
