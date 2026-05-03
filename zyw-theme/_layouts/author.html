@@ -22,28 +22,109 @@ layout: section
       </div>
       <div class="min-w-0 flex-1 text-center sm:text-left">
         <h1 class="m-0 text-3xl font-bold text-gray-900 dark:text-gray-100">
-          {{ page.name }}
+          {{ page.heading | default: page.name }}
         </h1>
         {% if page.position %}
           <p class="mt-1 text-lg font-medium text-gray-500 dark:text-gray-400">
             {{ page.position }}
           </p>
         {% endif %}
-        {% if page.description %}
+        {% assign author_summary = page.profile_description
+          | default: page.description
+        %}
+        {% if author_summary %}
           <p class="mt-3 text-base leading-relaxed text-gray-600 dark:text-gray-300">
-            {{ page.description }}
+            {{ author_summary }}
           </p>
         {% endif %}
         {% if page.links %}
           <div class="mt-4 flex flex-wrap justify-center gap-3 sm:justify-start">
             {% for link in page.links %}
+              {%- assign link_url_lc = link.url | downcase -%}
+              {%- assign link_host = link_url_lc
+                | remove: 'https://'
+                | remove: 'http://'
+                | split: '/'
+                | first
+                | remove: 'www.'
+              -%}
+              {%- assign platform_label = link.label | default: link_host -%}
+              {%- assign platform_icon = 'link' -%}
+
+              {%- if link_host contains 'github.com' -%}
+                {%- assign platform_label = 'GitHub' -%}
+                {%- assign platform_icon = 'github' -%}
+              {%- elsif link_host contains 'linkedin.com' -%}
+                {%- assign platform_label = 'LinkedIn' -%}
+                {%- assign platform_icon = 'linkedin' -%}
+              {%- elsif link_host contains 'x.com'
+                or link_host contains 'twitter.com'
+              -%}
+                {%- assign platform_label = 'X' -%}
+                {%- assign platform_icon = 'x' -%}
+              {%- elsif link_host contains 'facebook.com'
+                or link_host contains 'fb.com'
+              -%}
+                {%- assign platform_label = 'Facebook' -%}
+                {%- assign platform_icon = 'facebook' -%}
+              {%- endif -%}
+
               <a
                 href="{{ link.url }}"
-                class="inline-flex min-h-10 items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-4 py-2 text-sm font-medium text-gray-600 no-underline transition-colors hover:border-blue-400 hover:text-blue-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:border-blue-500 dark:hover:text-blue-400"
+                class="inline-flex min-h-[45px] items-center gap-2 rounded-md border border-gray-200 bg-gray-50 px-3 py-2 text-sm font-medium text-gray-700 no-underline transition-colors hover:border-blue-400 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-blue-500 dark:hover:text-blue-300"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="{{ platform_label }}"
               >
-                {{ link.label }}
+                {% if platform_icon == 'github' %}
+                  <svg
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    fill="currentColor"
+                  >
+                    <path d="M12 .5C5.65.5.5 5.66.5 12.02c0 5.09 3.3 9.4 7.88 10.93.58.1.79-.25.79-.56 0-.28-.01-1.02-.01-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.19-3.11-.12-.29-.52-1.46.12-3.05 0 0 .97-.31 3.17 1.19a10.9 10.9 0 0 1 5.78 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.76.12 3.05.74.81 1.19 1.85 1.19 3.11 0 4.43-2.69 5.41-5.25 5.69.41.35.77 1.04.77 2.1 0 1.52-.01 2.74-.01 3.11 0 .31.21.67.8.56A11.54 11.54 0 0 0 23.5 12C23.5 5.66 18.35.5 12 .5Z"/>
+                  </svg>
+                {% elsif platform_icon == 'linkedin' %}
+                  <svg
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    fill="currentColor"
+                  >
+                    <path d="M4.98 3.5a2.49 2.49 0 1 0 0 4.98 2.49 2.49 0 0 0 0-4.98ZM3 9h4v12H3V9Zm7 0h3.83v1.64h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.09V21h-4v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.16 1.46-2.16 2.96V21h-4V9Z"/>
+                  </svg>
+                {% elsif platform_icon == 'x' %}
+                  <svg
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    fill="currentColor"
+                  >
+                    <path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.25l-4.9-6.42L6.5 22H3.4l7.23-8.26L.8 2h6.4l4.43 5.84L18.9 2Zm-1.1 18h1.73L6.26 3.9H4.4L17.8 20Z"/>
+                  </svg>
+                {% elsif platform_icon == 'facebook' %}
+                  <svg
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    fill="currentColor"
+                  >
+                    <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.19 2.23.19v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/>
+                  </svg>
+                {% else %}
+                  <svg
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 14 21 3m0 0h-7m7 0v7M14 10l-9 9a2 2 0 1 1-3-3l9-9"/>
+                  </svg>
+                {% endif %}
+                <span>{{ platform_label }}</span>
               </a>
             {% endfor %}
           </div>
@@ -51,14 +132,6 @@ layout: section
       </div>
     </div>
   </div>
-
-  <!-- Author bio content -->
-  {% assign stripped = content | strip_newlines | strip %}
-  {% unless stripped == null or stripped == '' %}
-    <div class="prose mt-8 max-w-none dark:prose-invert prose-headings:text-gray-900 prose-p:text-gray-800 prose-strong:text-gray-900 prose-li:text-gray-800 dark:prose-headings:text-gray-100 dark:prose-p:text-gray-200 dark:prose-strong:text-gray-100 dark:prose-li:text-gray-200">
-      {{ content }}
-    </div>
-  {% endunless %}
 
   <!-- Author's posts -->
   {%- assign author_posts = site.posts | where: 'author', page.short_name -%}
@@ -78,54 +151,18 @@ layout: section
       </div>
 
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-        {%- assign date_format = site.zyw.date_format | default: '%-d %B %Y' -%}
         {%- for post in author_posts -%}
-          <div class="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900">
-            {% if post.image %}
-              {%- assign image_src = post.image | relative_url -%}
-              {%- if post.image_version -%}
-                {%- assign image_src = image_src
-                  | append: '?v='
-                  | append: post.image_version
-                -%}
-              {%- endif -%}
-              <div class="overflow-hidden">
-                <img
-                  src="{{ image_src }}"
-                  alt="{{ post.title | escape }}"
-                  class="aspect-video w-full object-cover"
-                  loading="lazy"
-                  width="1600"
-                  height="900"
-                >
-              </div>
-            {% endif %}
-            <div class="flex-1 p-5">
-              <a
-                href="{{ post.url | relative_url }}"
-                class="block text-lg font-bold text-gray-900 no-underline transition-colors hover:text-blue-600 dark:text-gray-100 dark:hover:text-blue-400"
-              >
-                {{ post.title | escape }}
-              </a>
-              <p class="mt-1.5 text-sm text-gray-500 dark:text-gray-400">
-                {{ post.date | date: date_format }}
-              </p>
-              <p class="mt-2 line-clamp-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-                {{ post.excerpt | strip_html | truncate: 120 }}
-              </p>
-              {%- if post.tags.size > 0 -%}
-                <div class="mt-3 flex flex-wrap gap-1.5">
-                  {%- for tag in post.tags -%}
-                    <span class="inline-block rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-800 dark:text-gray-400"
-                      >#{{ tag -}}
-                    </span>
-                  {%- endfor -%}
-                </div>
-              {%- endif -%}
-            </div>
-          </div>
+          {%- include views/post-card.html post=post -%}
         {%- endfor -%}
       </div>
     </div>
   {%- endif -%}
+
+  <!-- Author bio content and technical appendix -->
+  {% assign stripped = content | strip_newlines | strip %}
+  {% unless stripped == null or stripped == '' %}
+    <div class="prose mt-10 max-w-none dark:prose-invert prose-headings:text-gray-900 prose-p:text-gray-800 prose-strong:text-gray-900 prose-li:text-gray-800 dark:prose-headings:text-gray-100 dark:prose-p:text-gray-200 dark:prose-strong:text-gray-100 dark:prose-li:text-gray-200">
+      {{ content }}
+    </div>
+  {% endunless %}
 </div>

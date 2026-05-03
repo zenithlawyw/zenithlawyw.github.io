@@ -3,6 +3,7 @@
 
 require 'yaml'
 require 'time'
+require 'tempfile'
 
 ROOT = File.expand_path('..', __dir__)
 SEO_AUTO_FILE = File.join(ROOT, '_data', 'seo_auto.yml')
@@ -17,6 +18,9 @@ STOP_WORDS = %w[
 ].to_h { |w| [w, true] }
 
 ACRONYMS = %w[AEO AI API CVE GEO LLM ML NLP PROV SBOM SDK SEO SLA SLO SLSA]
+
+MAX_SERIALIZE_DEPTH = 16
+MAX_ENUMERATOR_ITEMS = 500
 
 
 def load_yaml(path)
@@ -113,6 +117,34 @@ def deep_copy(value)
   Marshal.load(Marshal.dump(value))
 rescue StandardError
   value
+end
+
+
+def normalize_for_yaml(value, depth = 0)
+  return nil if depth > MAX_SERIALIZE_DEPTH
+
+  case value
+  when Hash
+    value.each_with_object({}) do |(k, v), acc|
+      acc[k.to_s] = normalize_for_yaml(v, depth + 1)
+    end
+  when Array
+    value.map { |item| normalize_for_yaml(item, depth + 1) }
+  when Enumerator
+    begin
+      value.take(MAX_ENUMERATOR_ITEMS).map { |item| normalize_for_yaml(item, depth + 1) }
+    rescue StandardError
+      []
+    end
+  when Time
+    value.utc.iso8601
+  when String
+    value.encode('UTF-8', invalid: :replace, undef: :replace, replace: '')
+  when Numeric, TrueClass, FalseClass, NilClass
+    value
+  else
+    value.to_s
+  end
 end
 
 
@@ -245,5 +277,12 @@ payload = {
   'candidates' => candidates
 }
 
-File.write(OUTPUT_FILE, payload.to_yaml(line_width: -1))
+sanitized_payload = normalize_for_yaml(payload)
+
+Tempfile.create(['glossary_auto', '.yml'], File.dirname(OUTPUT_FILE)) do |tempfile|
+  tempfile.write(YAML.dump(sanitized_payload))
+  tempfile.flush
+  File.rename(tempfile.path, OUTPUT_FILE)
+end
+
 puts "Generated #{OUTPUT_FILE} with #{candidates.length} glossary candidates"

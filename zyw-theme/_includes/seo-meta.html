@@ -314,7 +314,7 @@
 {%- if seo_cfg and seo_cfg.alternate_urls -%}
   {%- for item in seo_cfg.alternate_urls -%}
     {%- assign alt_lang = item.lang | default: '' | strip -%}
-    {%- if alt_lang != '' and alt_lang != 'x-default' -%}
+    {%- if alt_lang != '' -%}
       {%- assign alt_href = item.url | default: '' | strip -%}
       {%- if alt_href != '' and page.url != '/' and alt_href contains '://' -%}
         {%- assign last_char = alt_href | slice: -1, 1 -%}
