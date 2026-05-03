@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-05-03T08:40:19Z"
-total_candidates: 627
+generated_at: "2026-05-03T10:43:52Z"
+total_candidates: 629
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -6991,6 +6991,30 @@ candidates:
     related_posts:
       - title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
+    related_pages: []
+  - term: Langchain
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: Langgraph
+    status: candidate
+    confidence: 5
+    suggested_definition: Auto-extracted terminology candidate derived from site content signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
     related_pages: []
   - term: Language
     status: candidate

@@ -10,6 +10,21 @@ description: "Glossary of A-Z definitions across engineering, governance, law, p
 keywords: "technical glossary, multidisciplinary glossary, cross-domain definitions, cross-jurisdiction terminology, what is SEO, what is GEO, what is AEO, what is data provenance, what is digital sovereignty, what is a large language model, policy and compliance glossary, software supply chain terms"
 catchwords: "glossary, multidisciplinary, cross-domain, cross-jurisdiction, governance, legal, ethics, transparency, fairness, SEO, GEO, AEO"
 intro: "Glossary of cross-domain terms for engineering, governance, legal, policy, and AI contexts, with sourced definitions and related articles for quick verification and deeper exploration."
+date: 2026-04-18
+last_modified_at: 2026-05-03
+enable_article_meta: true
+article_schema: true
+article_schema_types: "Article,BlogPosting"
+howto_name: "How to use this glossary quickly"
+howto_description: "Find a term, verify the source, and open related articles for practical context."
+howto_total_time: "PT2M"
+howto_steps:
+  - name: "Jump to the letter"
+    text: "Use the A-Z navigation to jump to the first letter of your term."
+  - name: "Read and verify"
+    text: "Read the one-line definition, then open the source link to verify meaning and scope."
+  - name: "Open related context"
+    text: "Use the related article links to see how the term is applied in real cases."
 ---
 
 {% assign letters = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z" | split: "," %}
@@ -22,17 +37,32 @@ intro: "Glossary of cross-domain terms for engineering, governance, legal, polic
 {% assign glossary_auto_approved_sorted = glossary_auto_approved | sort: "term" %}
 {% assign glossary_auto_unapproved = glossary_auto_candidates | where_exp: "item", "item.status != 'approved'" %}
 {% assign glossary_combined_terms = terms_sorted %}
+{% assign published_label = page.date | date: '%-d %B %Y' %}
+{% assign updated_label = page.last_modified_at | default: page.date | date: '%-d %B %Y' %}
+{% assign glossary_term_count = glossary_combined_terms | size %}
+{% assign glossary_auto_approved_count = glossary_auto_approved_sorted | size %}
+{% assign glossary_auto_candidate_count = glossary_auto_candidates | size %}
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   <div
-    class="post-content e-content mb-8 max-w-none prose dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-p:text-gray-800 dark:prose-p:text-gray-200 prose-li:text-gray-800 dark:prose-li:text-gray-200 prose-strong:text-gray-900 dark:prose-strong:text-gray-100 prose-blockquote:text-gray-800 dark:prose-blockquote:text-gray-200 prose-pre:rounded-lg prose-pre:border prose-pre:border-gray-200 dark:prose-pre:border-gray-700 prose-pre:bg-gray-50 dark:prose-pre:bg-gray-800 prose-code:before:content-none prose-code:after:content-none prose-code:rounded prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-sm prose-code:font-medium dark:prose-code:bg-gray-800 dark:prose-code:text-gray-200 [overflow-wrap:anywhere] [&_a]:[overflow-wrap:anywhere] [&_a]:break-words [&_code]:[overflow-wrap:anywhere] [&_code]:break-words"
+    class="post-content e-content content-prose-shell tap-target-zone"
     itemprop="articleBody"
   >
 <div class="not-prose mt-4 text-gray-800 dark:text-gray-200">
   <h2 class="mb-3 mt-0 scroll-mt-24 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">Glossary Overview</h2>
 
   <p class="my-3 leading-7">
-    The Zenith Law Glossary provides concise, source-linked definitions for recurring terms across engineering, governance, legal, policy, and AI topics. Terms are grouped A-Z and connected to related site articles for direct context.
+    This glossary explains recurring terms from engineering, governance, legal, policy, and AI pages across this site.
+    Definitions are short, source-linked, and grouped A-Z for fast scanning.
+  </p>
+
+  <p class="my-3 leading-7">
+    Each definition aims to state scope first, then point to a source readers can verify independently.
+    This structure helps both human readers and retrieval systems resolve terms without losing context.
+  </p>
+
+  <p class="my-3 leading-7">
+    Where meaning changes across jurisdictions or technical domains, related links provide implementation context so the same term is not interpreted as universally identical.
   </p>
 
   <p class="my-3 leading-7">
@@ -40,22 +70,29 @@ intro: "Glossary of cross-domain terms for engineering, governance, legal, polic
   </p>
 
   <p class="my-3 leading-7">
-    Source tiers distinguish authority level: external standards and peer-reviewed sources are shown separately from internal editorial synthesis links.
+    Nothing on this page limits any mandatory statutory rights. For jurisdiction-specific legal or regulatory decisions, consult qualified counsel.
   </p>
 
   <p class="my-3 leading-7">
-    Source tier guide: Tier 1 = official standards or peer-reviewed primary sources; Tier 3 = reference encyclopaedias and general technical references; Internal synthesis (editorial) = this site's own evidence-grounded summaries.
+    <strong>Published:</strong> {{ published_label }}<br>
+    <strong>Updated:</strong> {{ updated_label }}
   </p>
 
   <p class="my-3 leading-7">
-    Tier 3 references support orientation and discovery. They should not be treated as authoritative legal advice or as a substitute for jurisdiction-specific primary legal sources.
+    Need source-tier guidance, schema details, and indexing metrics? Use the Technical Appendix near the end of this page.
   </p>
 
   <h2 class="mb-3 mt-8 scroll-mt-24 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">How To Use The A-Z Glossary Quickly</h2>
 
   <p class="my-3 leading-7">
-    Use the letter navigation to jump to terms, read the one-line definition first, then open the source link for verification and the related article link for practical implementation context.
+    Follow this three-step flow for the fastest result.
   </p>
+
+  <ol class="my-3 list-decimal pl-5 leading-7">
+    <li>Jump to the letter for your term.</li>
+    <li>Read the one-line definition.</li>
+    <li>Open source and related links for verification and implementation context.</li>
+  </ol>
 
   <div class="my-4 flex flex-wrap gap-2" aria-label="Glossary letter navigation">
     {% for letter in letters %}
@@ -67,9 +104,9 @@ intro: "Glossary of cross-domain terms for engineering, governance, legal, polic
         {% endif %}
       {% endfor %}
       {% if has_terms %}
-        <a href="#letter-{{ letter }}" class="min-w-8 rounded-full border border-gray-300 bg-white px-2 py-1 text-center text-sm no-underline text-gray-800 transition-colors hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-800">{{ letter }}</a>
+        <a href="#letter-{{ letter }}" class="glossary-letter-link text-gray-800 transition-colors hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800">{{ letter }}</a>
       {% else %}
-        <span aria-disabled="true" class="min-w-8 rounded-full border border-dashed border-gray-300 px-2 py-1 text-center text-sm opacity-45 dark:border-gray-600">{{ letter }}</span>
+        <span aria-disabled="true" class="glossary-letter-disabled">{{ letter }}</span>
       {% endif %}
     {% endfor %}
   </div>
@@ -93,13 +130,13 @@ intro: "Glossary of cross-domain terms for engineering, governance, legal, polic
 {% capture current_term_token %}|{{ item.term | downcase }}|{% endcapture %}
 {% unless rendered_terms contains current_term_token %}
 {% assign rendered_terms = rendered_terms | append: current_term_token %}
-<article class="rounded-xl border border-zinc-200 bg-white p-4 text-gray-900 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200" itemscope itemtype="https://schema.org/DefinedTerm">
+<article class="glossary-term-card text-gray-900 dark:text-gray-200" itemscope itemtype="https://schema.org/DefinedTerm">
 <h3 class="mb-1 mt-0 text-base font-semibold leading-6" itemprop="name">{{ item.term }}</h3>
 <p class="my-1.5 leading-7" itemprop="description">{{ item.definition | default: item.suggested_definition }}</p>
 {% if item.source and item.source.url and item.source.label %}
 <p class="my-1.5 text-sm leading-6 text-gray-700 dark:text-gray-300">
 Source:
-<a href="{{ item.source.url }}" target="_blank" rel="noopener" class="underline text-blue-700 dark:text-blue-300">{{ item.source.label }}</a>
+<a href="{{ item.source.url }}" target="_blank" rel="noopener" class="glossary-inline-link text-blue-700 dark:text-blue-300">{{ item.source.label }}</a>
 {% if item.source.tier %}({{ item.source.tier }}){% endif %}
 </p>
 {% endif %}
@@ -107,7 +144,7 @@ Source:
 <p class="my-1.5 text-sm leading-6 text-gray-700 dark:text-gray-300">
 Related:
 {% for post in item.related_posts %}
-<a href="{{ post.url }}" class="underline text-blue-700 dark:text-blue-300">{{ post.title }}</a>{% unless forloop.last %}, {% endunless %}
+<a href="{{ post.url }}" class="glossary-inline-link text-blue-700 dark:text-blue-300">{{ post.title }}</a>{% unless forloop.last %}, {% endunless %}
 {% endfor %}
 </p>
 {% endif %}
@@ -130,7 +167,7 @@ Related:
 
     <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-4">
       {% for item in glossary_auto_unapproved limit: 24 %}
-        <article class="rounded-xl border border-dashed border-amber-300 bg-amber-50/40 p-4 text-gray-900 dark:border-amber-700 dark:bg-amber-950/20 dark:text-gray-200" itemscope itemtype="https://schema.org/DefinedTerm">
+        <article class="glossary-candidate-card text-gray-900 dark:text-gray-200" itemscope itemtype="https://schema.org/DefinedTerm">
           <h3 class="mb-1 mt-0 text-base font-semibold leading-6" itemprop="name">{{ item.term }}</h3>
           <p class="my-1.5 text-sm leading-6 text-gray-700 dark:text-gray-300">Status: {{ item.status | default: 'candidate' }} (pending moderation)</p>
           <p class="my-1.5 leading-7" itemprop="description">{{ item.suggested_definition }}</p>
@@ -138,7 +175,7 @@ Related:
             <p class="my-1.5 text-sm leading-6 text-gray-700 dark:text-gray-300">
               Related posts:
               {% for post in item.related_posts %}
-                <a href="{{ post.url }}" class="underline text-blue-700 dark:text-blue-300">{{ post.title }}</a>{% unless forloop.last %}, {% endunless %}
+                <a href="{{ post.url }}" class="glossary-inline-link text-blue-700 dark:text-blue-300">{{ post.title }}</a>{% unless forloop.last %}, {% endunless %}
               {% endfor %}
             </p>
           {% endif %}
@@ -161,37 +198,131 @@ Related:
   <section class="mt-10 border-t border-gray-200 pt-3 dark:border-gray-700">
     <h2>Frequently Asked Questions</h2>
 
+    <p>
+      These answers are intentionally short. They define the core term first, then direct readers to source evidence and related articles for implementation detail.
+    </p>
+
     <h3>What is this glossary for?</h3>
     <p>
-      This page provides quick definitions for recurring terms across engineering, governance, legal, policy, and AI topics published across the site.
+      This page provides quick definitions for recurring terms across engineering, governance, legal, policy, and AI topics published across the site. It acts as a starting layer for faster orientation before deeper analysis.
     </p>
 
     <h3>How should I use these definitions?</h3>
     <p>
-      Start with the one-line definition, then open the source link for a deeper reference and the related post link for applied context from this site.
+      Start with the one-line definition, then open the source link for a deeper reference and the related post link for applied context from this site. This sequence reduces misinterpretation when similar terms are used across multiple domains.
     </p>
 
     <h3>Why are source links included on each card?</h3>
     <p>
-      Source links make each definition attributable and easier for readers and AI retrieval systems to validate before reuse.
+      Source links make each definition attributable and easier for readers and AI retrieval systems to validate before reuse. They also support citation workflows where traceability matters as much as readability.
     </p>
 
     <h3>What is the difference between SEO, GEO, and AEO in this context?</h3>
     <p>
-      SEO improves discoverability in search results, GEO may improve citation likelihood in generative AI responses, and AEO improves extraction quality for direct-answer systems.
+      SEO improves discoverability in search results, GEO may improve citation likelihood in generative AI responses, and AEO improves extraction quality for direct-answer systems. Together they improve retrieval quality across both human and machine reading paths.
     </p>
 
     <h3>What is SEO in simple terms?</h3>
     <p>
-      SEO is the practice of improving page structure, metadata, and content clarity so search engines can index and rank the page accurately for relevant queries.
+      SEO is the practice of improving page structure, metadata, and content clarity so search engines can index and rank the page accurately for relevant queries. In practical terms, it helps the right reader find the right definition faster.
     </p>
 
     <h3>How often is this glossary updated?</h3>
     <p>
-      This glossary is updated as new topics appear across site publications, so definitions and linked references expand over time rather than remaining fixed to a closed domain list.
+      This glossary is updated as new topics appear across site publications, so definitions and linked references expand over time rather than remaining fixed to a closed domain list. Update timing follows the publication cadence of new or revised source pages.
     </p>
 
   </section>
+
+  <details id="glossary-method-notes" class="appendix-callout group">
+    <summary class="appendix-summary">
+      <span class="appendix-summary-title">
+        <svg class="appendix-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M7 4l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <span>Technical Appendix</span>
+        <span class="appendix-summary-kicker">Methodology and source-tier notes</span>
+      </span>
+      <span class="appendix-state-chip group-open:hidden">Closed</span>
+      <span class="appendix-state-chip hidden group-open:inline-flex">Open</span>
+    </summary>
+
+    <div class="mt-4">
+      <blockquote>
+        The glossary prioritizes quick reading first. Technical and metadata context remains available here for citation, validation, and AI retrieval use cases.
+      </blockquote>
+
+      <h2>What Data Makes This Glossary Citable?</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+            <th>Interpretation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Approved glossary terms</td>
+            <td>{{ glossary_term_count }}</td>
+            <td>Current visible definition inventory</td>
+          </tr>
+          <tr>
+            <td>Auto-approved candidates</td>
+            <td>{{ glossary_auto_approved_count }}</td>
+            <td>Machine-assisted terms approved through moderation rules</td>
+          </tr>
+          <tr>
+            <td>Total auto candidates tracked</td>
+            <td>{{ glossary_auto_candidate_count }}</td>
+            <td>Overall candidate pool for editorial workflow</td>
+          </tr>
+          <tr>
+            <td>Freshness window</td>
+            <td>{{ published_label }} to {{ updated_label }}</td>
+            <td>Visible publication and update timeline</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>How Are Source Tiers Interpreted?</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tier</th>
+            <th>Meaning</th>
+            <th>Usage Guidance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tier 1</td>
+            <td>Official standards and peer-reviewed primary sources</td>
+            <td>Primary authority for formal interpretation</td>
+          </tr>
+          <tr>
+            <td>Tier 3</td>
+            <td>Reference encyclopaedias and general technical references</td>
+            <td>Orientation and discovery, not jurisdiction-specific legal advice</td>
+          </tr>
+          <tr>
+            <td>Internal synthesis</td>
+            <td>Editorial summaries published on this site</td>
+            <td>Practical context that should be cross-checked with primary sources</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Which Markup Supports Discovery?</h2>
+      <ul>
+        <li><a href="https://schema.org/DefinedTermSet">Schema.org DefinedTermSet</a> for glossary-wide term indexing</li>
+        <li><a href="https://schema.org/FAQPage">Schema.org FAQPage</a> for direct question-answer extraction</li>
+        <li><a href="https://schema.org/Article">Schema.org Article</a> and <a href="https://schema.org/BlogPosting">Schema.org BlogPosting</a> metadata signals</li>
+        <li><a href="https://ogp.me/">Open Graph protocol</a> for interoperability across indexing and sharing systems</li>
+      </ul>
+    </div>
+
+  </details>
   </div>
 </article>
 
