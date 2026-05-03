@@ -49,51 +49,6 @@ howto_steps:
     itemprop="articleBody"
   >
 <div class="not-prose mt-4 text-gray-800 dark:text-gray-200">
-  <h2 class="mb-3 mt-0 scroll-mt-24 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">Glossary Overview</h2>
-
-  <p class="my-3 leading-7">
-    This glossary explains recurring terms from engineering, governance, legal, policy, and AI pages across this site.
-    Definitions are short, source-linked, and grouped A-Z for fast scanning.
-  </p>
-
-  <p class="my-3 leading-7">
-    Each definition aims to state scope first, then point to a source readers can verify independently.
-    This structure helps both human readers and retrieval systems resolve terms without losing context.
-  </p>
-
-  <p class="my-3 leading-7">
-    Where meaning changes across jurisdictions or technical domains, related links provide implementation context so the same term is not interpreted as universally identical.
-  </p>
-
-  <p class="my-3 leading-7">
-    This glossary is informational and educational. It is not legal advice, and legal obligations can vary by jurisdiction.
-  </p>
-
-  <p class="my-3 leading-7">
-    Nothing on this page limits any mandatory statutory rights. For jurisdiction-specific legal or regulatory decisions, consult qualified counsel.
-  </p>
-
-  <p class="my-3 leading-7">
-    <strong>Published:</strong> {{ published_label }}<br>
-    <strong>Updated:</strong> {{ updated_label }}
-  </p>
-
-  <p class="my-3 leading-7">
-    Need source-tier guidance, schema details, and indexing metrics? Use the Technical Appendix near the end of this page.
-  </p>
-
-  <h2 class="mb-3 mt-8 scroll-mt-24 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">How To Use The A-Z Glossary Quickly</h2>
-
-  <p class="my-3 leading-7">
-    Follow this three-step flow for the fastest result.
-  </p>
-
-  <ol class="my-3 list-decimal pl-5 leading-7">
-    <li>Jump to the letter for your term.</li>
-    <li>Read the one-line definition.</li>
-    <li>Open source and related links for verification and implementation context.</li>
-  </ol>
-
   <div class="my-4 flex flex-wrap gap-2" aria-label="Glossary letter navigation">
     {% for letter in letters %}
       {% assign has_terms = false %}
@@ -248,6 +203,51 @@ Related:
     </summary>
 
     <div class="mt-4">
+      <h2 class="mb-3 mt-0 scroll-mt-24 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">Glossary Overview</h2>
+
+      <p class="my-3 leading-7">
+        This glossary explains recurring terms from engineering, governance, legal, policy, and AI pages across this site.
+        Definitions are short, source-linked, and grouped A-Z for fast scanning.
+      </p>
+
+      <p class="my-3 leading-7">
+        Each definition aims to state scope first, then point to a source readers can verify independently.
+        This structure helps both human readers and retrieval systems resolve terms without losing context.
+      </p>
+
+      <p class="my-3 leading-7">
+        Where meaning changes across jurisdictions or technical domains, related links provide implementation context so the same term is not interpreted as universally identical.
+      </p>
+
+      <p class="my-3 leading-7">
+        This glossary is informational and educational. It is not legal advice, and legal obligations can vary by jurisdiction.
+      </p>
+
+      <p class="my-3 leading-7">
+        Nothing on this page limits any mandatory statutory rights. For jurisdiction-specific legal or regulatory decisions, consult qualified counsel.
+      </p>
+
+      <p class="my-3 leading-7">
+        <strong>Published:</strong> {{ published_label }}<br>
+        <strong>Updated:</strong> {{ updated_label }}
+      </p>
+
+      <p class="my-3 leading-7">
+        Need source-tier guidance, schema details, and indexing metrics? Use the Technical Appendix near the end of this page.
+      </p>
+
+      <h2 class="mb-3 mt-8 scroll-mt-24 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">How To Use The A-Z Glossary Quickly</h2>
+
+      <p class="my-3 leading-7">
+        Follow this three-step flow for the fastest result.
+      </p>
+
+      <ol class="my-3 list-decimal pl-5 leading-7">
+        <li>Jump to the letter for your term.</li>
+        <li>Read the one-line definition.</li>
+        <li>Open source and related links for verification and implementation context.</li>
+      </ol>
+
       <blockquote>
         The glossary prioritizes quick reading first. Technical and metadata context remains available here for citation, validation, and AI retrieval use cases.
       </blockquote>

@@ -63,36 +63,6 @@ faq:
     itemprop="articleBody"
   >
 
-<h2>What Is This FAQ Hub?</h2>
-<p>
-  This page lists common questions from published articles. It gives short, direct answers in plain language.
-</p>
-
-<p>
-  This page is for education and information only. It is not legal advice. Legal rights and duties vary by jurisdiction.
-</p>
-
-<p>
-  Nothing on this page limits any mandatory statutory rights. For jurisdiction-specific legal or regulatory decisions, consult qualified counsel.
-</p>
-
-<p>
-  <strong>Published:</strong> {{ published_label }}<br>
-  <strong>Updated:</strong> {{ updated_label }}
-</p>
-
-<p>
-  Need implementation and metadata details? Use the notes section at the end of this page.
-</p>
-
-<p>
-  Each answer in this hub is intentionally concise so readers can decide quickly whether they need only a direct response or a full technical source review.
-</p>
-
-<p>
-  When a topic has legal, policy, or jurisdiction-specific implications, use the linked source article to confirm scope before applying the answer in operational decisions.
-</p>
-
 {% if global_questions and global_questions.size > 0 %}
 
   <h2>What Are The Top Search Intent Questions?</h2>
@@ -166,6 +136,36 @@ faq:
   </summary>
 
   <div class="mt-4">
+
+  <h2>What Is This FAQ Hub?</h2>
+  <p>
+    This page lists common questions from published articles. It gives short, direct answers in plain language.
+  </p>
+
+  <p>
+    This page is for education and information only. It is not legal advice. Legal rights and duties vary by jurisdiction.
+  </p>
+
+  <p>
+    Nothing on this page limits any mandatory statutory rights. For jurisdiction-specific legal or regulatory decisions, consult qualified counsel.
+  </p>
+
+  <p>
+    <strong>Published:</strong> {{ published_label }}<br>
+    <strong>Updated:</strong> {{ updated_label }}
+  </p>
+
+  <p>
+    Need implementation and metadata details? Use the notes section at the end of this page.
+  </p>
+
+  <p>
+    Each answer in this hub is intentionally concise so readers can decide quickly whether they need only a direct response or a full technical source review.
+  </p>
+
+  <p>
+    When a topic has legal, policy, or jurisdiction-specific implications, use the linked source article to confirm scope before applying the answer in operational decisions.
+  </p>
 
   <blockquote>
     The FAQ hub is an evidence index, not a summary dump. It keeps short answers readable and points readers to full source context.
