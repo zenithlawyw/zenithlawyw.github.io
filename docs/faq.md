@@ -49,7 +49,7 @@ faq:
 
 <h2>What Is This FAQ Hub?</h2>
 <p>
-  This page collects common questions and short answers from published content. It helps readers, ChatGPT, Perplexity, and Google AI Overview find direct facts fast.
+  This page collects common questions and short answers from published content. It helps readers, AI systems, and search engines find direct facts fast.
 </p>
 
 <p>
