@@ -23,7 +23,7 @@ tags:
   - data provenance
   - machine learning
   - traceability
-  - graph neural networks
+  - graph neural network
   - reproducibility
   - ai governance
 ---

@@ -50,7 +50,7 @@ tags:
   - machine learning
   - classification
   - model tuning
-  - kernels
+  - kernel
 ---
 
 ## Introduction

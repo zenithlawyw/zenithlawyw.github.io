@@ -1,4 +1,4 @@
-.PHONY: help bootstrap install start stop restart prebuild build publish clean serve seo-auto glossary-auto taxonomy-auto references-auto validate-faq validate-reference-dates
+.PHONY: help bootstrap install start stop restart prebuild build publish clean serve seo-auto glossary-auto glossary-promote taxonomy-auto references-auto validate-faq validate-reference-dates validate-hero-images validate-editorial-depth
 
 # Variables
 BUNDLE := bundle exec
@@ -39,7 +39,10 @@ help:
 	@echo "  publish      - Run full publish pipeline (prebuild + production build)"
 	@echo "  seo-auto     - Generate auto SEO/AEO/GEO vocabulary and FAQ extraction"
 	@echo "  glossary-auto - Generate auto glossary terminology candidates"
+	@echo "  glossary-promote - Promote approved auto glossary terms into glossary_terms.yml"
 	@echo "  validate-faq  - Validate non-empty FAQ extraction for posts"
+	@echo "  validate-hero-images - Validate unique hero image usage and badge compliance"
+	@echo "  validate-editorial-depth POST=<post-path> - Validate editorial depth and human-voice policy"
 	@echo "  validate-reference-dates - Validate reference accessed dates do not exceed post publication dates"
 	@echo "  taxonomy-auto - Run all automated taxonomy extractors"
 	@echo "  references-auto - Generate references data from BibTeX"
@@ -91,7 +94,12 @@ glossary-auto:
 	ruby scripts/generate_glossary_auto.rb
 	@echo "✓ Glossary auto data updated (_data/glossary_auto.yml)"
 
-taxonomy-auto: seo-auto glossary-auto
+glossary-promote:
+	@echo "Promoting approved glossary candidates into canonical glossary terms..."
+	ruby scripts/promote_glossary_approved.rb
+	@echo "✓ Glossary approved-term promotion complete"
+
+taxonomy-auto: seo-auto glossary-auto glossary-promote
 	@echo "✓ Taxonomy extractors complete"
 
 references-auto:
@@ -109,7 +117,21 @@ validate-reference-dates:
 	ruby scripts/validate_reference_access_dates.rb
 	@echo "✓ Reference date integrity validation passed"
 
-prebuild: taxonomy-auto references-auto validate-faq validate-reference-dates
+validate-hero-images:
+	@echo "Validating hero image uniqueness and branding compliance..."
+	python3 scripts/validate_hero_images.py
+	@echo "✓ Hero image validation passed"
+
+validate-editorial-depth:
+	@if [ -z "$(POST)" ]; then \
+		echo "✗ Missing POST path. Usage: make -C docs validate-editorial-depth POST=_posts/<file>.md"; \
+		exit 1; \
+	fi
+	@echo "Validating editorial depth and human-voice policy for $(POST)..."
+	ruby scripts/validate_editorial_depth.rb "$(POST)"
+	@echo "✓ Editorial depth validation passed"
+
+prebuild: taxonomy-auto references-auto validate-faq validate-hero-images validate-reference-dates
 	@echo "✓ Prebuild scripts complete"
 
 build: prebuild

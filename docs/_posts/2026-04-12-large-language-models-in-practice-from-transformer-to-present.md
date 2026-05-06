@@ -40,7 +40,7 @@ references:
 categories:
   - Artificial Intelligence
 tags:
-  - large language models
+  - large language model
   - transformer
   - prompt engineering
   - ai governance

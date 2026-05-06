@@ -1,349 +1,388 @@
+---
 - term: AEO
-  definition: "Answer Engine Optimisation focuses on making content easy for answer systems to quote directly as concise, high-confidence responses."
+  definition:
+    Answer Engine Optimisation focuses on making content easy for answer
+    systems to quote directly as concise, high-confidence responses.
   source:
-    label: "Generative engine optimization (Wikipedia)"
-    url: "https://en.wikipedia.org/wiki/Generative_engine_optimization"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Generative engine optimization (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Generative_engine_optimization
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Large Language Models in Practice"
+    - title: Large Language Models in Practice
       url: "/large-language-models-practice-from-transformer-to-present-frontier"
-
 - term: AI Alignment
-  definition: "AI alignment is the practice of steering model behaviour so outputs better match human goals, constraints, and safety expectations."
+  definition:
+    AI alignment is the practice of steering model behaviour so outputs
+    better match human goals, constraints, and safety expectations.
   source:
-    label: "AI alignment (Wikipedia)"
-    url: "https://en.wikipedia.org/wiki/AI_alignment"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: AI alignment (Wikipedia)
+    url: https://en.wikipedia.org/wiki/AI_alignment
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Large Language Models in Practice"
+    - title: Large Language Models in Practice
       url: "/large-language-models-practice-from-transformer-to-present-frontier"
-
 - term: Banker's Algorithm
-  definition: "Banker's algorithm is a deadlock-avoidance method that grants resource requests only if the system remains in a provably safe state."
+  definition:
+    Banker's algorithm is a deadlock-avoidance method that grants resource
+    requests only if the system remains in a provably safe state.
   source:
-    label: "Deadlock avoidance and prevention"
-    url: "https://en.wikipedia.org/wiki/Deadlock#Deadlock_avoidance"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Deadlock avoidance and prevention
+    url: https://en.wikipedia.org/wiki/Deadlock#Deadlock_avoidance
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Deadlock and Resource Contention"
+    - title: Deadlock and Resource Contention
       url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
-
 - term: Circular Wait
-  definition: "Circular wait is a deadlock condition where each process waits for a resource currently held by the next process in a cycle."
+  definition:
+    Circular wait is a deadlock condition where each process waits for a
+    resource currently held by the next process in a cycle.
   source:
-    label: "Deadlock (computer science)"
-    url: "https://en.wikipedia.org/wiki/Deadlock_(computer_science)"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Deadlock (computer science)
+    url: https://en.wikipedia.org/wiki/Deadlock_(computer_science)
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Deadlock and Resource Contention"
+    - title: Deadlock and Resource Contention
       url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
-
-- term: Cloud Localization
-  definition: "Cloud localization is the adaptation of cloud services to jurisdiction-specific legal, operational, and data-residency requirements."
-  source:
-    label: "Digital Sovereignty in Practice"
-    url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
-    tier: "Internal synthesis (editorial)"
-  related_posts:
-    - title: "Digital Sovereignty in Practice"
-      url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
-
-- term: Coffman Conditions
-  definition: "The Coffman conditions are four necessary conditions for deadlock: mutual exclusion, hold and wait, no preemption, and circular wait."
-  source:
-    label: "Deadlock (computer science)"
-    url: "https://en.wikipedia.org/wiki/Deadlock_(computer_science)#Conditions"
-    tier: "Tier 3 (reference encyclopaedia)"
-  related_posts:
-    - title: "Deadlock and Resource Contention"
-      url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
-
 - term: Cloud Fragmentation
-  definition: "Cloud fragmentation can describe a split operating model where platform features, support paths, or control requirements diverge by jurisdiction or provider channel."
+  definition:
+    Cloud fragmentation can describe a split operating model where platform
+    features, support paths, or control requirements diverge by jurisdiction or provider
+    channel.
   source:
-    label: "Digital Sovereignty in Practice"
+    label: Digital Sovereignty in Practice
     url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
-    tier: "Internal synthesis (editorial)"
+    tier: Internal synthesis (editorial)
   related_posts:
-    - title: "Digital Sovereignty in Practice"
+    - title: Digital Sovereignty in Practice
       url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
-
+- term: Cloud Localization
+  definition:
+    Cloud localization is the adaptation of cloud services to jurisdiction-specific
+    legal, operational, and data-residency requirements.
+  source:
+    label: Digital Sovereignty in Practice
+    url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
+    tier: Internal synthesis (editorial)
+  related_posts:
+    - title: Digital Sovereignty in Practice
+      url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
+- term: Coffman Conditions
+  definition:
+    "The Coffman conditions are four necessary conditions for deadlock:
+    mutual exclusion, hold and wait, no preemption, and circular wait."
+  source:
+    label: Deadlock (computer science)
+    url: https://en.wikipedia.org/wiki/Deadlock_(computer_science)#Conditions
+    tier: Tier 3 (reference encyclopaedia)
+  related_posts:
+    - title: Deadlock and Resource Contention
+      url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
 - term: Data Lineage
-  definition: "Data lineage records how data moves and transforms across systems, while preserving dependency paths from source to downstream outputs."
+  definition:
+    Data lineage records how data moves and transforms across systems, while
+    preserving dependency paths from source to downstream outputs.
   source:
-    label: "Data lineage"
-    url: "https://en.wikipedia.org/wiki/Data_lineage"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Data lineage
+    url: https://en.wikipedia.org/wiki/Data_lineage
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Data Provenance in Machine Learning"
+    - title: Data Provenance in Machine Learning
       url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
-
-- term: Deadlock
-  definition: "Deadlock is a state where competing processes hold resources and wait indefinitely, so none can progress without external intervention."
-  source:
-    label: "Deadlock (computer science)"
-    url: "https://en.wikipedia.org/wiki/Deadlock_(computer_science)"
-    tier: "Tier 3 (reference encyclopaedia)"
-  related_posts:
-    - title: "Deadlock and Resource Contention"
-      url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
-
 - term: Data Provenance
-  definition: "Data provenance records where data originates, how it changes, and which processes and models consume or produce it."
+  definition:
+    Data provenance records where data originates, how it changes, and which
+    processes and models consume or produce it.
   source:
-    label: "Data Provenance in Machine Learning"
+    label: Data Provenance in Machine Learning
     url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
-    tier: "Internal synthesis (editorial)"
+    tier: Internal synthesis (editorial)
   related_posts:
-    - title: "Data Provenance in Machine Learning"
+    - title: Data Provenance in Machine Learning
       url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
-
+- term: Deadlock
+  definition:
+    Deadlock is a state where competing processes hold resources and wait
+    indefinitely, so none can progress without external intervention.
+  source:
+    label: Deadlock (computer science)
+    url: https://en.wikipedia.org/wiki/Deadlock_(computer_science)
+    tier: Tier 3 (reference encyclopaedia)
+  related_posts:
+    - title: Deadlock and Resource Contention
+      url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
 - term: Digital Sovereignty
-  definition: "In this glossary context, digital sovereignty describes jurisdiction-level control expectations for data handling, cloud operations, and digital infrastructure governance boundaries."
+  definition:
+    In this glossary context, digital sovereignty describes jurisdiction-level
+    control expectations for data handling, cloud operations, and digital infrastructure
+    governance boundaries.
   source:
-    label: "Digital Sovereignty in Practice"
+    label: Digital Sovereignty in Practice
     url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
-    tier: "Internal synthesis (editorial)"
+    tier: Internal synthesis (editorial)
   related_posts:
-    - title: "Digital Sovereignty in Practice"
+    - title: Digital Sovereignty in Practice
       url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
-
 - term: Federated Learning
-  definition: "Federated learning trains a shared model across distributed nodes without centralising raw data, reducing direct data-movement exposure."
+  definition:
+    Federated learning trains a shared model across distributed nodes without
+    centralising raw data, reducing direct data-movement exposure.
   source:
-    label: "Federated learning"
-    url: "https://en.wikipedia.org/wiki/Federated_learning"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Federated learning
+    url: https://en.wikipedia.org/wiki/Federated_learning
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Large Language Models in Practice"
+    - title: Large Language Models in Practice
       url: "/large-language-models-practice-from-transformer-to-present-frontier"
-
 - term: Generative Engine Optimisation
-  definition: "Generative Engine Optimisation structures content so AI answer systems can retrieve, summarise, and cite it with minimal ambiguity."
+  definition:
+    Generative Engine Optimisation structures content so AI answer systems
+    can retrieve, summarise, and cite it with minimal ambiguity.
   source:
-    label: "Generative engine optimization"
-    url: "https://en.wikipedia.org/wiki/Generative_engine_optimization"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Generative engine optimization
+    url: https://en.wikipedia.org/wiki/Generative_engine_optimization
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Large Language Models in Practice"
+    - title: Large Language Models in Practice
       url: "/large-language-models-practice-from-transformer-to-present-frontier"
-
 - term: Graph Neural Network
-  definition: "A graph neural network is a model family that learns from node-edge structures, making it useful for relational provenance and dependency analysis."
+  definition:
+    A graph neural network is a model family that learns from node-edge
+    structures, making it useful for relational provenance and dependency analysis.
   source:
-    label: "Graph neural network"
-    url: "https://en.wikipedia.org/wiki/Graph_neural_network"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Graph neural network
+    url: https://en.wikipedia.org/wiki/Graph_neural_network
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Data Provenance in Machine Learning"
+    - title: Data Provenance in Machine Learning
       url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
-
 - term: Hallucination
-  definition: "In LLM contexts, hallucination is a fluent but unsupported output that is not grounded in reliable evidence."
+  definition:
+    In LLM contexts, hallucination is a fluent but unsupported output that
+    is not grounded in reliable evidence.
   source:
-    label: "Hallucination (artificial intelligence)"
-    url: "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Hallucination (artificial intelligence)
+    url: https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Large Language Models in Practice"
+    - title: Large Language Models in Practice
       url: "/large-language-models-practice-from-transformer-to-present-frontier"
-
 - term: Hold and Wait
-  definition: "Hold and wait is a deadlock condition where a process keeps one resource while waiting to acquire additional resources."
+  definition:
+    Hold and wait is a deadlock condition where a process keeps one resource
+    while waiting to acquire additional resources.
   source:
-    label: "Deadlock (computer science)"
-    url: "https://en.wikipedia.org/wiki/Deadlock_(computer_science)"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Deadlock (computer science)
+    url: https://en.wikipedia.org/wiki/Deadlock_(computer_science)
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Deadlock and Resource Contention"
+    - title: Deadlock and Resource Contention
       url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
-
 - term: In-Context Learning
-  definition: "In-context learning is a model behavior where prompts and examples in the input guide task performance without updating model weights."
+  definition:
+    In-context learning is a model behavior where prompts and examples in
+    the input guide task performance without updating model weights.
   source:
-    label: "Large Language Models in Practice"
+    label: Large Language Models in Practice
     url: "/large-language-models-practice-from-transformer-to-present-frontier"
-    tier: "Internal synthesis (editorial)"
+    tier: Internal synthesis (editorial)
   related_posts:
-    - title: "Large Language Models in Practice"
+    - title: Large Language Models in Practice
       url: "/large-language-models-practice-from-transformer-to-present-frontier"
-
 - term: Indicator of Compromise
-  definition: "An indicator of compromise is a forensic artefact such as a domain, hash, or process pattern that signals potential malicious activity."
+  definition:
+    An indicator of compromise is a forensic artefact such as a domain,
+    hash, or process pattern that signals potential malicious activity.
   source:
-    label: "Indicator of compromise"
-    url: "https://en.wikipedia.org/wiki/Indicator_of_compromise"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Indicator of compromise
+    url: https://en.wikipedia.org/wiki/Indicator_of_compromise
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "axios npm Supply Chain Compromise 2026"
+    - title: axios npm Supply Chain Compromise 2026
       url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
-
-- term: Mutual Exclusion
-  definition: "Mutual exclusion is a concurrency rule that allows only one process at a time to access a critical shared resource."
-  source:
-    label: "Mutual exclusion"
-    url: "https://en.wikipedia.org/wiki/Mutual_exclusion"
-    tier: "Tier 3 (reference encyclopaedia)"
-  related_posts:
-    - title: "Deadlock and Resource Contention"
-      url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
-
-- term: No Preemption
-  definition: "No preemption means a held resource cannot be forcibly taken away and must be released voluntarily, which contributes to deadlock risk."
-  source:
-    label: "Deadlock (computer science)"
-    url: "https://en.wikipedia.org/wiki/Deadlock_(computer_science)"
-    tier: "Tier 3 (reference encyclopaedia)"
-  related_posts:
-    - title: "Deadlock and Resource Contention"
-      url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
-
 - term: Knowledge Distillation
-  definition: "Knowledge distillation transfers behavior from a larger teacher model to a smaller student model to improve efficiency while retaining useful performance."
+  definition:
+    Knowledge distillation transfers behavior from a larger teacher model
+    to a smaller student model to improve efficiency while retaining useful performance.
   source:
-    label: "Knowledge distillation"
-    url: "https://en.wikipedia.org/wiki/Knowledge_distillation"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Knowledge distillation
+    url: https://en.wikipedia.org/wiki/Knowledge_distillation
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Large Language Models in Practice"
+    - title: Large Language Models in Practice
       url: "/large-language-models-practice-from-transformer-to-present-frontier"
-
 - term: Large Language Model
-  definition: "A large language model is a neural language model trained on large corpora to generate and analyze text through token prediction."
+  definition:
+    A large language model is a neural language model trained on large corpora
+    to generate and analyze text through token prediction.
   source:
-    label: "Large language model"
-    url: "https://en.wikipedia.org/wiki/Large_language_model"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Large language model
+    url: https://en.wikipedia.org/wiki/Large_language_model
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Large Language Models in Practice"
+    - title: Large Language Models in Practice
       url: "/large-language-models-practice-from-transformer-to-present-frontier"
-
-- term: PROV-ML
-  definition: "PROV-ML is a provenance representation proposal that extends W3C PROV with machine-learning-specific entities and lifecycle relations."
+- term: Mutual Exclusion
+  definition:
+    Mutual exclusion is a concurrency rule that allows only one process
+    at a time to access a critical shared resource.
   source:
-    label: "Data Provenance in Machine Learning"
-    url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
-    tier: "Internal synthesis (editorial)"
+    label: Mutual exclusion
+    url: https://en.wikipedia.org/wiki/Mutual_exclusion
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Data Provenance in Machine Learning"
-      url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
-
-- term: Prompt Engineering
-  definition: "Prompt engineering is the disciplined design and testing of model instructions to improve accuracy, consistency, and controllability."
+    - title: Deadlock and Resource Contention
+      url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+- term: No Preemption
+  definition:
+    No preemption means a held resource cannot be forcibly taken away and
+    must be released voluntarily, which contributes to deadlock risk.
   source:
-    label: "Prompt engineering"
-    url: "https://en.wikipedia.org/wiki/Prompt_engineering"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Deadlock (computer science)
+    url: https://en.wikipedia.org/wiki/Deadlock_(computer_science)
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Large Language Models in Practice"
-      url: "/large-language-models-practice-from-transformer-to-present-frontier"
-
+    - title: Deadlock and Resource Contention
+      url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
 - term: Postinstall Script
-  definition: "A postinstall script is package lifecycle code that runs automatically after dependency installation and can execute privileged local actions."
+  definition:
+    A postinstall script is package lifecycle code that runs automatically
+    after dependency installation and can execute privileged local actions.
   source:
-    label: "axios npm Supply Chain Compromise 2026"
+    label: axios npm Supply Chain Compromise 2026
     url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
-    tier: "Internal synthesis (editorial)"
+    tier: Internal synthesis (editorial)
   related_posts:
-    - title: "axios npm Supply Chain Compromise 2026"
+    - title: axios npm Supply Chain Compromise 2026
       url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
-
+- term: Prompt Engineering
+  definition:
+    Prompt engineering is the disciplined design and testing of model instructions
+    to improve accuracy, consistency, and controllability.
+  source:
+    label: Prompt engineering
+    url: https://en.wikipedia.org/wiki/Prompt_engineering
+    tier: Tier 3 (reference encyclopaedia)
+  related_posts:
+    - title: Large Language Models in Practice
+      url: "/large-language-models-practice-from-transformer-to-present-frontier"
+- term: PROV-ML
+  definition:
+    PROV-ML is a provenance representation proposal that extends W3C PROV
+    with machine-learning-specific entities and lifecycle relations.
+  source:
+    label: Data Provenance in Machine Learning
+    url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
+    tier: Internal synthesis (editorial)
+  related_posts:
+    - title: Data Provenance in Machine Learning
+      url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
 - term: Resource Starvation
-  definition: "Resource starvation occurs when a process waits indefinitely because scheduling or lock contention keeps denying access to required resources."
+  definition:
+    Resource starvation occurs when a process waits indefinitely because
+    scheduling or lock contention keeps denying access to required resources.
   source:
-    label: "Starvation (computer science)"
-    url: "https://en.wikipedia.org/wiki/Starvation_(computer_science)"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Starvation (computer science)
+    url: https://en.wikipedia.org/wiki/Starvation_(computer_science)
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Deadlock and Resource Contention"
+    - title: Deadlock and Resource Contention
       url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
-
 - term: SBOM
-  definition: "A software bill of materials is a nested inventory of software components that improves supply-chain transparency and vulnerability response."
+  definition:
+    A software bill of materials is a nested inventory of software components
+    that improves supply-chain transparency and vulnerability response.
   source:
-    label: "NTIA Software Bill of Materials"
-    url: "https://www.ntia.gov/SBOM"
-    tier: "Tier 1"
+    label: NTIA Software Bill of Materials
+    url: https://www.ntia.gov/SBOM
+    tier: Tier 1
   related_posts:
-    - title: "axios npm Supply Chain Compromise 2026"
+    - title: axios npm Supply Chain Compromise 2026
       url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
-
-- term: SEO
-  definition: "Search Engine Optimisation is the practice of improving content structure and metadata so search systems can discover, rank, and present pages accurately."
-  source:
-    label: "Search engine optimization"
-    url: "https://en.wikipedia.org/wiki/Search_engine_optimization"
-    tier: "Tier 3 (reference encyclopaedia)"
-  related_posts:
-    - title: "Large Language Models in Practice"
-      url: "/large-language-models-practice-from-transformer-to-present-frontier"
-
 - term: Semaphore
-  definition: "A semaphore is a synchronization primitive that controls access to shared resources through counter-based permits."
+  definition:
+    A semaphore is a synchronization primitive that controls access to shared
+    resources through counter-based permits.
   source:
-    label: "Semaphore (programming)"
-    url: "https://en.wikipedia.org/wiki/Semaphore_(programming)"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Semaphore (programming)
+    url: https://en.wikipedia.org/wiki/Semaphore_(programming)
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Deadlock and Resource Contention"
+    - title: Deadlock and Resource Contention
       url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
-
-- term: Supply Chain Attack
-  definition: "A supply chain attack compromises a trusted upstream component or channel to reach downstream victims at scale."
+- term: SEO
+  definition:
+    Search Engine Optimisation is the practice of improving content structure
+    and metadata so search systems can discover, rank, and present pages accurately.
   source:
-    label: "Supply chain attack"
-    url: "https://en.wikipedia.org/wiki/Supply_chain_attack"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Search engine optimization
+    url: https://en.wikipedia.org/wiki/Search_engine_optimization
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "axios npm Supply Chain Compromise 2026"
-      url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
-
+    - title: Large Language Models in Practice
+      url: "/large-language-models-practice-from-transformer-to-present-frontier"
 - term: Software Supply Chain
-  definition: "The software supply chain is the end-to-end dependency and delivery ecosystem through which code, packages, and build artifacts move to production."
+  definition:
+    The software supply chain is the end-to-end dependency and delivery
+    ecosystem through which code, packages, and build artifacts move to production.
   source:
-    label: "Software supply chain"
-    url: "https://en.wikipedia.org/wiki/Software_supply_chain"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Software supply chain
+    url: https://en.wikipedia.org/wiki/Software_supply_chain
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "axios npm Supply Chain Compromise 2026"
+    - title: axios npm Supply Chain Compromise 2026
       url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
-
+- term: Supply Chain Attack
+  definition:
+    A supply chain attack compromises a trusted upstream component or channel
+    to reach downstream victims at scale.
+  source:
+    label: Supply chain attack
+    url: https://en.wikipedia.org/wiki/Supply_chain_attack
+    tier: Tier 3 (reference encyclopaedia)
+  related_posts:
+    - title: axios npm Supply Chain Compromise 2026
+      url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
 - term: Tokenization
-  definition: "Tokenization splits text into model-processable units so language models can compute probabilities and generate outputs token by token."
+  definition:
+    Tokenization splits text into model-processable units so language models
+    can compute probabilities and generate outputs token by token.
   source:
-    label: "Tokenization (lexical analysis)"
-    url: "https://en.wikipedia.org/wiki/Lexical_analysis#Tokenization"
-    tier: "Tier 3 (reference encyclopaedia)"
+    label: Tokenization (lexical analysis)
+    url: https://en.wikipedia.org/wiki/Lexical_analysis#Tokenization
+    tier: Tier 3 (reference encyclopaedia)
   related_posts:
-    - title: "Large Language Models in Practice"
+    - title: Large Language Models in Practice
       url: "/large-language-models-practice-from-transformer-to-present-frontier"
-
-- term: Trusted Publishing
-  definition: "Trusted publishing is a release practice where package publication is tied to verifiable identity and provenance controls in CI/CD workflows."
-  source:
-    label: "axios npm Supply Chain Compromise 2026"
-    url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
-    tier: "Internal synthesis (editorial)"
-  related_posts:
-    - title: "axios npm Supply Chain Compromise 2026"
-      url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
-
 - term: Transformer
-  definition: "The Transformer architecture uses attention mechanisms instead of recurrence to model long-range token dependencies efficiently."
+  definition:
+    The Transformer architecture uses attention mechanisms instead of recurrence
+    to model long-range token dependencies efficiently.
   source:
-    label: "Attention Is All You Need"
-    url: "https://arxiv.org/abs/1706.03762"
-    tier: "Tier 1"
+    label: Attention Is All You Need
+    url: https://arxiv.org/abs/1706.03762
+    tier: Tier 1
   related_posts:
-    - title: "Large Language Models in Practice"
+    - title: Large Language Models in Practice
       url: "/large-language-models-practice-from-transformer-to-present-frontier"
-
-- term: W3C PROV
-  definition: "W3C PROV is a standard data model for representing provenance, including entities, activities, and agents involved in data production."
+- term: Trusted Publishing
+  definition:
+    Trusted publishing is a release practice where package publication is
+    tied to verifiable identity and provenance controls in CI/CD workflows.
   source:
-    label: "W3C PROV Overview"
-    url: "https://www.w3.org/TR/prov-overview/"
-    tier: "Tier 1"
+    label: axios npm Supply Chain Compromise 2026
+    url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
+    tier: Internal synthesis (editorial)
   related_posts:
-    - title: "Data Provenance in Machine Learning"
+    - title: axios npm Supply Chain Compromise 2026
+      url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
+- term: W3C PROV
+  definition:
+    W3C PROV is a standard data model for representing provenance, including
+    entities, activities, and agents involved in data production.
+  source:
+    label: W3C PROV Overview
+    url: https://www.w3.org/TR/prov-overview/
+    tier: Tier 1
+  related_posts:
+    - title: Data Provenance in Machine Learning
       url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"

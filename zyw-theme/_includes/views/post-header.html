@@ -37,12 +37,12 @@
   </div>
 
   {%- if page.categories.size > 0 -%}
-    <div class="post-categories mb-3 flex flex-wrap gap-2">
+    <div class="post-categories mb-3 flex flex-wrap gap-1.5">
       {%- if page.original_categories -%}
         {%- for category in page.original_categories -%}
           {%- assign cat_slug = category | slugify -%}
           <a
-            class="post-taxonomy-pill"
+            class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-semibold leading-5 text-blue-700 no-underline transition-colors hover:bg-blue-100 dark:bg-blue-900/60 dark:text-blue-100 dark:hover:bg-blue-800/70"
             href="{{ '/categories.html' | relative_url }}#{{ cat_slug }}"
           >
             {{- category -}}
@@ -52,7 +52,7 @@
         {%- for category in page.categories -%}
           {%- assign cat_slug = category | slugify -%}
           <a
-            class="post-taxonomy-pill"
+            class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-semibold leading-5 text-blue-700 no-underline transition-colors hover:bg-blue-100 dark:bg-blue-900/60 dark:text-blue-100 dark:hover:bg-blue-800/70"
             href="{{ '/categories.html' | relative_url }}#{{ cat_slug }}"
           >
             {{- category -}}
@@ -63,11 +63,11 @@
   {%- endif -%}
 
   {%- if page.tags.size > 0 -%}
-    <div class="post-tags flex flex-wrap gap-x-3 gap-y-2">
+    <div class="post-tags flex flex-wrap gap-1.5">
       {%- for tag in page.tags -%}
         {%- assign tag_slug = tag | slugify -%}
         <a
-          class="post-tag-link"
+          class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium leading-5 text-gray-600 no-underline transition-colors hover:text-gray-800 dark:bg-gray-700 dark:text-gray-100 dark:hover:text-white"
           href="{{ '/tags.html' | relative_url }}#{{ tag_slug }}"
           >#{{ tag -}}
         </a>
