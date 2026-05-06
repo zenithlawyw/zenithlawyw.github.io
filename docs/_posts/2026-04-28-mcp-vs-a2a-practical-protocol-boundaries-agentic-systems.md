@@ -42,7 +42,7 @@ tags:
   - ACP
   - agent interoperability
   - protocol design
-  - multi-agent systems
+  - multi-agent system
   - tool orchestration
 ---
 

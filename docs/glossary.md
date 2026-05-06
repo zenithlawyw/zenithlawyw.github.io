@@ -96,12 +96,14 @@ Source:
 </p>
 {% endif %}
 {% if item.related_posts and item.related_posts.size > 0 %}
-<p class="my-1.5 text-sm leading-6 text-gray-700 dark:text-gray-300">
-Related:
+<div class="my-1.5 text-sm leading-6 text-gray-700 dark:text-gray-300">
+<p class="mb-1">Related:</p>
+<ul class="m-0 list-none space-y-1 p-0">
 {% for post in item.related_posts %}
-<a href="{{ post.url }}" class="glossary-inline-link text-blue-700 dark:text-blue-300">{{ post.title }}</a>{% unless forloop.last %}, {% endunless %}
+<li><a href="{{ post.url }}" class="glossary-inline-link text-blue-700 dark:text-blue-300">{{ post.title }}</a></li>
 {% endfor %}
-</p>
+</ul>
+</div>
 {% endif %}
 </article>
 {% endunless %}
@@ -127,12 +129,14 @@ Related:
           <p class="my-1.5 text-sm leading-6 text-gray-700 dark:text-gray-300">Status: {{ item.status | default: 'candidate' }} (pending moderation)</p>
           <p class="my-1.5 leading-7" itemprop="description">{{ item.suggested_definition }}</p>
           {% if item.related_posts and item.related_posts.size > 0 %}
-            <p class="my-1.5 text-sm leading-6 text-gray-700 dark:text-gray-300">
-              Related posts:
-              {% for post in item.related_posts %}
-                <a href="{{ post.url }}" class="glossary-inline-link text-blue-700 dark:text-blue-300">{{ post.title }}</a>{% unless forloop.last %}, {% endunless %}
-              {% endfor %}
-            </p>
+            <div class="my-1.5 text-sm leading-6 text-gray-700 dark:text-gray-300">
+              <p class="mb-1">Related posts:</p>
+              <ul class="m-0 list-none space-y-1 p-0">
+                {% for post in item.related_posts %}
+                <li><a href="{{ post.url }}" class="glossary-inline-link text-blue-700 dark:text-blue-300">{{ post.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
           {% endif %}
         </article>
       {% endfor %}

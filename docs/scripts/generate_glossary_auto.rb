@@ -106,6 +106,7 @@ end
 
 def normalize_status(value)
   status = value.to_s.strip.downcase
+  return 'approved' if status == 'approved'
   return 'rejected' if status == 'rejected'
   return 'archived' if status == 'archived'
 

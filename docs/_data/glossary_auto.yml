@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-05-03T16:35:44Z"
-total_candidates: 644
+generated_at: "2026-05-06T21:19:49Z"
+total_candidates: 670
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -1010,30 +1010,6 @@ candidates:
           Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
-  - term: Incident Response
-    status: candidate
-    confidence: 10
-    suggested_definition:
-      Incident Response is a structured, technical sub-discipline
-      of incident management comprising the specific processes, technologies, and strategic
-      actions an organization employs to prepare for, detect, and resolve confirmed
-      security incidents. It transforms a series of correlated alerts into a coordinated
-      defense aimed at neutralizing active threats, restoring system integrity, and
-      leveraging forensic insights to prevent future recurrences.
-    source:
-      label: Auto extraction from site corpus
-      url: "/faq/"
-      tier: Internal synthesis (editorial)
-    related_posts:
-      - title:
-          "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on
-          Trust, Provenance, and Resilient Engineering"
-        url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
-      - title:
-          "Digital Sovereignty in Practice: Ten Engineering Lessons from China's
-          Cloud Access Fragmentation, 2014 to 2026"
-        url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
-    related_pages: []
   - term: Machines
     status: candidate
     confidence: 10
@@ -1680,6 +1656,22 @@ candidates:
         url: "/legal/privacy-cookies-data-protection/"
       - title: Legal Notices
         url: "/legal/"
+  - term: Domain Adaptation
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
   - term: Frequently Asked Questions
     status: candidate
     confidence: 8
@@ -1844,6 +1836,22 @@ candidates:
         url: "/legal/privacy-cookies-data-protection/"
       - title: Terms of Use
         url: "/legal/terms-of-use/"
+  - term: Representation Learning
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
   - term: Resource Contention
     status: candidate
     confidence: 8
@@ -1874,6 +1882,22 @@ candidates:
     related_pages:
       - title: "FAQ Hub: Questions and Answers Across Published Pages"
         url: "/faq/"
+  - term: Semantic Communications
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
   - term: Site May
     status: candidate
     confidence: 8
@@ -2103,6 +2127,38 @@ candidates:
           "Deadlock and Resource Contention: Operating Systems Theory Applied to
           Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: Adaptation Deep
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
+  - term: Adaptation Deep Clustering
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
     related_pages: []
   - term: Agent Interoperability
     status: candidate
@@ -2622,6 +2678,22 @@ candidates:
       tier: Internal synthesis (automated candidate)
     related_posts: []
     related_pages: []
+  - term: Deep Clustering
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
   - term: Deep Learning Provenance
     status: candidate
     confidence: 7
@@ -2726,6 +2798,22 @@ candidates:
     related_pages:
       - title: ""
         url: "/_authors/zenith-law.html"
+  - term: Domain Adaptation Deep
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
   - term: Engineering Governance Law
     status: candidate
     confidence: 7
@@ -2985,6 +3073,38 @@ candidates:
           "Data Provenance in Machine Learning: Traceability, Graph Methods, and
           Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
+    related_pages: []
+  - term: Hilbert Space
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
+  - term: Hilbert Spaces
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
     related_pages: []
   - term: Hold Wait
     status: candidate
@@ -3724,6 +3844,22 @@ candidates:
           Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
+  - term: Semantic Communication
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
   - term: Series
     status: candidate
     confidence: 7
@@ -3745,6 +3881,22 @@ candidates:
           "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment
           Governance"
         url: "/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance"
+    related_pages: []
+  - term: Shared Theme
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
     related_pages: []
   - term: Sovereignty Cloud
     status: candidate
@@ -4968,6 +5120,26 @@ candidates:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
     related_pages: []
+  - term: Communication
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic
+          AI Systems"
+        url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
   - term: Compliance Platform
     status: candidate
     confidence: 6
@@ -5774,6 +5946,22 @@ candidates:
           UCI HAR"
         url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
     related_pages: []
+  - term: Hilbert Spaces Quantum
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
   - term: Hub Engineering
     status: candidate
     confidence: 6
@@ -5842,6 +6030,30 @@ candidates:
           Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
+  - term: Incident Response
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Incident Response is a structured, technical sub-discipline
+      of incident management comprising the specific processes, technologies, and strategic
+      actions an organization employs to prepare for, detect, and resolve confirmed
+      security incidents. It transforms a series of correlated alerts into a coordinated
+      defense aimed at neutralizing active threats, restoring system integrity, and
+      leveraging forensic insights to prevent future recurrences.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (editorial)
+    related_posts:
+      - title:
+          "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on
+          Trust, Provenance, and Resilient Engineering"
+        url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
+      - title:
+          "Digital Sovereignty in Practice: Ten Engineering Lessons from China's
+          Cloud Access Fragmentation, 2014 to 2026"
+        url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
+    related_pages: []
   - term: Incident Response Trust
     status: candidate
     confidence: 6
@@ -5886,6 +6098,40 @@ candidates:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
     related_pages: []
+  - term: Kernel
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
+        url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
+  - term: Kernel Methods
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
   - term: Kernels Support
     status: candidate
     confidence: 6
@@ -5929,6 +6175,22 @@ candidates:
       - title: "Knowledge Space: Discover Research Papers and Preprints Live"
         url: "/literature/"
   - term: Language Model
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Large Language Models in Practice: From the Transformer to the Present
+          Frontier"
+        url: "/large-language-models-practice-from-transformer-to-present-frontier"
+    related_pages: []
+  - term: Language Model Transformer
     status: candidate
     confidence: 6
     suggested_definition:
@@ -6043,6 +6305,22 @@ candidates:
     related_posts:
       - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
         url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+    related_pages: []
+  - term: Learning Quantum
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
     related_pages: []
   - term: Learning Statistical
     status: candidate
@@ -6336,6 +6614,26 @@ candidates:
           Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
+  - term: Methods
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Data Provenance in Machine Learning: Traceability, Graph Methods, and
+          Governance Lessons"
+        url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
   - term: Methods Focus Method
     status: candidate
     confidence: 6
@@ -6352,6 +6650,22 @@ candidates:
         url: "/literature-reviews/karuna-et-al-2024-enhancing-financial-data-traceability-using-graph-neural-networks-for-provenance-methods.html"
       - title: ""
         url: "/literature-reviews/platt-1999-probabilistic-outputs-for-svms-and-comparisons-to-regularized-likehood-methods.html"
+  - term: Model Transformer
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Large Language Models in Practice: From the Transformer to the Present
+          Frontier"
+        url: "/large-language-models-practice-from-transformer-to-present-frontier"
+    related_pages: []
   - term: Model Tuning Support
     status: candidate
     confidence: 6
@@ -6870,6 +7184,22 @@ candidates:
           Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Quantum Semantics
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
   - term: Question Name
     status: candidate
     confidence: 6
@@ -7382,6 +7712,22 @@ candidates:
     related_pages:
       - title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
         url: "/glossary/"
+  - term: Spaces Quantum
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
   - term: Supply
     status: candidate
     confidence: 6
@@ -7754,6 +8100,38 @@ candidates:
     related_pages:
       - title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
         url: "/glossary/"
+  - term: Unsupervised Domain
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
+  - term: Unsupervised Domain Adaptation
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
   - term: Use Site
     status: candidate
     confidence: 6
@@ -7830,6 +8208,22 @@ candidates:
     related_pages:
       - title: "Research Literature Explorer: Keyword-Filtered Papers and Preprints"
         url: "/literature/"
+  - term: Adaptation
+    status: candidate
+    confidence: 5
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
   - term: Algorithms
     status: candidate
     confidence: 5
@@ -8203,6 +8597,22 @@ candidates:
           "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain:
           A Deployable Open-Source Playbook"
         url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: Clustering
+    status: candidate
+    confidence: 5
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
     related_pages: []
   - term: Coffman
     status: candidate
@@ -8781,6 +9191,26 @@ candidates:
           "Large Language Models in Practice: From the Transformer to the Present
           Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
+    related_pages: []
+  - term: Geometry
+    status: candidate
+    confidence: 5
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Support Vector Machine Series Part 2: Benchmark and Error Forensics on
+          UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
     related_pages: []
   - term: Glossary
     status: candidate

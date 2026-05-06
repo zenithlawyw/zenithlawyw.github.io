@@ -32,7 +32,7 @@ references:
   - deadlock-2026-ref7
   - deadlock-2026-ref8
 categories:
-  - Operating Systems
+  - Operating System
   - System Design
   - Cybersecurity
   - Platform Engineering

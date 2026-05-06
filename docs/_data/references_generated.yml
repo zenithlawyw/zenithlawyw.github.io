@@ -1,4 +1,66 @@
 ---
+qsc-2026-ref1:
+  entry_type: article
+  short_author: Andreou et al.
+  year: "2025"
+  authors: Andreou, Andreas and Mavromoustakis, Constandinos X. and Mastorakis, George and Bourdena, Athina and Markakis, Evangelos
+  title: "Quantum Computing in Semantic Communications: Overcoming Optimization Challenges with High-Dimensional {Hilbert} Spaces"
+  journal: IEEE Access
+  doi: 10.1109/ACCESS.2024.0429000
+  ieee_base: "Andreou, Andreas and Mavromoustakis, Constandinos X. and Mastorakis, George and Bourdena, Athina and Markakis, Evangelos, Quantum Computing in Semantic Communications: Overcoming Optimization Challenges with High-Dimensional {Hilbert} Spaces, IEEE Access, 2025, Accepted for publication."
+  harvard_base: "Andreou, Andreas and Mavromoustakis, Constandinos X. and Mastorakis, George and Bourdena, Athina and Markakis, Evangelos. (2025). Quantum Computing in Semantic Communications: Overcoming Optimization Challenges with High-Dimensional {Hilbert} Spaces. IEEE Access. Accepted for publication."
+  note: Accepted for publication
+  source_format: bibtex
+qsc-2026-ref2:
+  entry_type: article
+  short_author: Chehimi et al.
+  year: "2024"
+  authors: Chehimi, Mahdi and Thomas, Christo Kurisummoottil and Chaccour, Christina and Saad, Walid
+  title: Quantum Semantic Communications for Resource-Efficient Quantum Networking
+  journal: IEEE Communications Letters
+  volume: "28"
+  number: "4"
+  pages: 803--807
+  doi: 10.1109/LCOMM.2024.3361831
+  ieee_base: Chehimi, Mahdi and Thomas, Christo Kurisummoottil and Chaccour, Christina and Saad, Walid, Quantum Semantic Communications for Resource-Efficient Quantum Networking, IEEE Communications Letters, vol. 28, no. 4, pp. 803--807, 2024.
+  harvard_base: Chehimi, Mahdi and Thomas, Christo Kurisummoottil and Chaccour, Christina and Saad, Walid. (2024). Quantum Semantic Communications for Resource-Efficient Quantum Networking. IEEE Communications Letters. vol. 28, no. 4, pp. 803--807.
+  source_format: bibtex
+qsc-2026-ref3:
+  entry_type: article
+  short_author: Qiang et al.
+  year: "2026"
+  authors: Qiang, Wenwen and Gu, Ziyin and Si, Lingyu and Li, Jiangmeng and Sun, Fuchun and Xiong, Hui and Zheng, Changwen
+  title: On the Transferability and Discriminability of Representation Learning in Unsupervised Domain Adaptation
+  journal: IEEE Transactions on Pattern Analysis and Machine Intelligence
+  volume: "48"
+  number: "5"
+  pages: 4983--4998
+  doi: 10.1109/TPAMI.2025.3649294
+  ieee_base: Qiang, Wenwen and Gu, Ziyin and Si, Lingyu and Li, Jiangmeng and Sun, Fuchun and Xiong, Hui and Zheng, Changwen, On the Transferability and Discriminability of Representation Learning in Unsupervised Domain Adaptation, IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 48, no. 5, pp. 4983--4998, 2026.
+  harvard_base: Qiang, Wenwen and Gu, Ziyin and Si, Lingyu and Li, Jiangmeng and Sun, Fuchun and Xiong, Hui and Zheng, Changwen. (2026). On the Transferability and Discriminability of Representation Learning in Unsupervised Domain Adaptation. IEEE Transactions on Pattern Analysis and Machine Intelligence. vol. 48, no. 5, pp. 4983--4998.
+  source_format: bibtex
+qsc-2026-ref4:
+  entry_type: inproceedings
+  short_author: Ren et al.
+  year: "2023"
+  authors: Ren, Lina and Huang, Ruizhang and Ma, Shengwei and Qin, Yongbin and Chen, Yanping and Lin, Chuan
+  title: Deep Multi-Kernel Clustering Network
+  book: 2023 IEEE International Conference on Data Mining (ICDM)
+  doi: 10.1109/ICDM58522.2023.00062
+  ieee_base: Ren, Lina and Huang, Ruizhang and Ma, Shengwei and Qin, Yongbin and Chen, Yanping and Lin, Chuan, Deep Multi-Kernel Clustering Network, in 2023 IEEE International Conference on Data Mining (ICDM), 2023.
+  harvard_base: Ren, Lina and Huang, Ruizhang and Ma, Shengwei and Qin, Yongbin and Chen, Yanping and Lin, Chuan. (2023). Deep Multi-Kernel Clustering Network. In 2023 IEEE International Conference on Data Mining (ICDM).
+  source_format: bibtex
+qsc-2026-ref5:
+  entry_type: inproceedings
+  short_author: Sreedhar et al.
+  year: "2025"
+  authors: Sreedhar, Anjali and others
+  title: "Towards Scalable and Accurate {QNLP} Models: A {ZX}-Calculus and {Hilbert} Space Approach"
+  book: Proceedings of the 3rd International Conference on Sustainable Computing and Data Communication Systems (ICSCDS-2025)
+  doi: 10.1109/ICSCDS65426.2025.11167678
+  ieee_base: "Sreedhar, Anjali and others, Towards Scalable and Accurate {QNLP} Models: A {ZX}-Calculus and {Hilbert} Space Approach, in Proceedings of the 3rd International Conference on Sustainable Computing and Data Communication Systems (ICSCDS-2025), 2025."
+  harvard_base: "Sreedhar, Anjali and others. (2025). Towards Scalable and Accurate {QNLP} Models: A {ZX}-Calculus and {Hilbert} Space Approach. In Proceedings of the 3rd International Conference on Sustainable Computing and Data Communication Systems (ICSCDS-2025)."
+  source_format: bibtex
 axios-2026-ref1:
   entry_type: misc
   short_author: Axios
