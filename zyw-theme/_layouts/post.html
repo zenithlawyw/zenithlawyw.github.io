@@ -66,9 +66,9 @@ hidden: []
 
   @media print {
     :root {
-      --print-margin-x: 18mm;
-      --print-margin-top: 16mm;
-      --print-margin-bottom: 22mm;
+      --print-margin-x: 25mm;
+      --print-margin-top: 20mm;
+      --print-margin-bottom: 25mm;
     }
 
     @page {
@@ -86,6 +86,61 @@ hidden: []
       forced-color-adjust: none;
     }
 
+    /* Force all text/bg to print-safe colours regardless of dark mode state */
+    *,
+    *::before,
+    *::after {
+      color: #111827 !important;
+      background-color: transparent !important;
+      background-image: none !important;
+      border-color: #d1d5db !important;
+      text-shadow: none !important;
+      box-shadow: none !important;
+    }
+
+    .post-print-header,
+    .post-print-footer,
+    .post-main,
+    .post-main * {
+      color: #111827 !important;
+      background-color: transparent !important;
+    }
+
+    .post-print-header .post-print-meta,
+    .post-print-header .post-print-url,
+    .post-print-footer {
+      color: #4b5563 !important;
+    }
+
+    [aria-labelledby='post-intro'] {
+      background: transparent !important;
+      background-color: transparent !important;
+      background-image: none !important;
+      border-color: #d1d5db !important;
+      box-shadow: none !important;
+    }
+
+    .post a[href] {
+      color: #1d4ed8 !important;
+    }
+
+    code,
+    pre,
+    kbd {
+      color: #111827 !important;
+      background-color: #f3f4f6 !important;
+      border-color: #d1d5db !important;
+    }
+
+    table th {
+      background-color: #f9fafb !important;
+      color: #111827 !important;
+    }
+
+    table td {
+      color: #111827 !important;
+    }
+
     .site-header,
     .site-footer,
     .page-hero,
@@ -99,8 +154,8 @@ hidden: []
     }
 
     .page-content {
-      padding-top: 0 !important;
-      padding-bottom: 0 !important;
+      padding-top: 10mm !important;
+      padding-bottom: 10mm !important;
     }
 
     .post > section {
@@ -109,8 +164,8 @@ hidden: []
 
     .wrapper {
       max-width: 100% !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
+      padding-left: 10mm !important;
+      padding-right: 10mm !important;
     }
 
     .post-layout {
