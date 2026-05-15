@@ -18,7 +18,7 @@ image: /assets/images/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems.p
 image_version: "20260502-hero-tight-v2"
 hero:
   image: /assets/images/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems.png
-keywords: "mcp vs a2a vs acp, model context protocol explained, agent2agent protocol explained, agent communication protocol explained, protocol comparison for agentic ai, multi-agent interoperability, tenant-aware agent architecture, cross-border ai orchestration, cloud-native agent systems, human in the loop ai orchestration, vendor-agnostic agent protocol design"
+keywords: "MCP vs A2A vs ACP, model context protocol explained, agent2agent protocol explained, agent communication protocol explained, protocol comparison for agentic ai, multi-agent interoperability, tenant-aware agent architecture, cross-border ai orchestration, cloud-native agent systems, human in the loop ai orchestration, vendor-agnostic agent protocol design"
 catchwords: "MCP, A2A, ACP, agent interoperability, tool calling, task orchestration, Agent Card, Agent Manifest, JSON-RPC, REST, streaming, delegation, security boundaries"
 references_enabled: true
 references_style: ieee
@@ -235,7 +235,95 @@ The companion article on [building agentic orchestration with MCP, A2A, LangGrap
 9. Hybrid layering usually outperforms protocol monoculture in enterprise settings.
 10. Protocol choice should be judged by lifecycle cost, observability quality, and migration resilience.
 
-## Glossary
+## Frequently Asked Questions
+
+### What boundary-level differences matter most between MCP, A2A, and ACP for MCP vs A2A vs ACP?
+
+MCP connects models or hosts to tools, resources, and prompts. A2A connects autonomous agents through task lifecycle collaboration. ACP defines a REST-oriented agent interoperability model with manifest and run semantics {% include references/cite.html key="mcpa2a-2026-ref2" %}, {% include references/cite.html key="mcpa2a-2026-ref5" %}, {% include references/cite.html key="mcpa2a-2026-ref18" %}.
+
+### Is ACP obsolete, or still useful during A2A convergence and migration for MCP vs A2A vs ACP?
+
+ACP remains important for architecture learning and for existing deployments. New strategy should account for announced convergence and migration direction toward A2A to reduce future integration churn {% include references/cite.html key="mcpa2a-2026-ref19" %}, {% include references/cite.html key="mcpa2a-2026-ref20" %}.
+
+### Can MCP replace A2A for multi-agent collaboration scenarios for MCP vs A2A vs ACP?
+
+Only in narrow cases. If the remote side is really a bounded capability, MCP can be sufficient. Once the remote side owns task state, asynchronous progress, artifact delivery, or agent discovery, A2A is usually the cleaner fit. If the integration boundary is HTTP-governed and partner-facing, ACP-style contracts may still be the practical edge pattern during A2A migration planning.
+
+### Can A2A replace MCP for tool invocation and capability exposure for MCP vs A2A vs ACP?
+
+It can, but it is usually wasteful. Simple tools do not benefit much from peer-agent ceremony. A2A shines when the remote side behaves like a collaborator, not just a callable capability. ACP-style REST wrappers can expose those collaborators to existing API ecosystems, but they do not remove the need for MCP when local tool boundaries and consent controls are required.
+
+### When should enterprises layer MCP, A2A, and ACP in one architecture for MCP vs A2A vs ACP?
+
+Use layered protocols when agents collaborate across system boundaries and each agent still needs structured tool and data access internally. A2A should carry delegated task lifecycle, MCP should carry model-to-capability access, and ACP-compatible REST seams should be used at gateway, partner, or legacy integration edges.
+
+### How should cross-border and tenant-aware controls be designed for agent orchestration for MCP vs A2A vs ACP?
+
+Use protocol layering with explicit tenant policy boundaries, jurisdiction-aware data controls, and portable identity patterns. Keep integration contracts vendor-agnostic and preserve audit trails across delegated tasks, MCP tool invocations, and ACP-style REST runs.
+
+### Is MCP more secure than A2A, or are they securing different boundaries for MCP vs A2A vs ACP?
+
+Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services. ACP-oriented deployments additionally depend on API gateway policy, token scope, and run-endpoint governance quality, so security posture is a composition problem, not a single-protocol verdict {% include references/cite.html key="mcpa2a-2026-ref2" %}, {% include references/cite.html key="mcpa2a-2026-ref5" %}, {% include references/cite.html key="mcpa2a-2026-ref18" %}.
+
+### Do these protocol recommendations transfer uniformly across UK, EU, US, Canada, Hong Kong, China, and Australia for MCP vs A2A vs ACP?
+
+No. Privacy, transfer, and sector-specific obligations vary by jurisdiction and industry. Treat protocol guidance as architecture input and confirm legal and regulatory requirements for the specific operating context.
+
+### What should teams prototype first when protocol boundaries are still unclear for MCP vs A2A vs ACP?
+
+Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. Start with ACP-style REST seams if the first integration must pass through existing API gateways or partner-facing HTTP contracts. If the boundary is still ambiguous, model the remote side's autonomy and integration constraints before choosing a primary protocol.
+
+## Conclusion
+
+The useful comparison is not “which protocol wins.” The useful comparison is “which interaction boundary is being standardized for your enterprise context.” MCP standardizes controlled capability access, A2A standardizes peer-agent collaboration, and ACP contributes REST-oriented interoperability patterns that remain relevant during standards convergence. Systems that preserve these boundaries while designing for tenant awareness, cloud-native scale, vendor neutrality, cross-border operation, and human-in-the-loop clarity are better positioned for resilient agentic AI adoption.
+
+## Technical Appendix
+
+<details markdown="1" class="appendix-callout group">
+<summary class="appendix-summary">
+  <span class="appendix-summary-title"><strong>Protocol Glossary</strong></span>
+  <span class="inline-flex items-center gap-2">
+    <span class="appendix-state-chip inline-flex group-open:hidden" aria-hidden="true">Collapsed</span>
+    <span class="appendix-state-chip hidden group-open:inline-flex" aria-hidden="true">Expanded</span>
+    <svg class="appendix-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M7.05 4.55a.75.75 0 0 1 1.06 0l4.4 4.4a.75.75 0 0 1 0 1.06l-4.4 4.4a.75.75 0 1 1-1.06-1.06L10.92 10 7.05 6.11a.75.75 0 0 1 0-1.06Z" />
+    </svg>
+  </span>
+</summary>
+
+### Appendix Table of Contents
+
+- [Citability Snapshot](#citability-snapshot)
+- [Authoritative Reference Set](#authoritative-reference-set)
+- [Protocol Glossary](#protocol-glossary)
+
+### Citability Snapshot
+
+| Metric                                            | Value | Why this supports citation quality                         |
+| ------------------------------------------------- | ----- | ---------------------------------------------------------- |
+| Protocol families compared                        | 3     | Clarifies direct comparison boundary                       |
+| Core comparison dimensions                        | 5     | Improves structured retrieval and summarization            |
+| Migration-significant standards updates discussed | 1     | Preserves temporal relevance for architecture decisions    |
+| FAQ entries tied to boundary decisions            | 9     | Improves answerability for common implementation questions |
+
+<blockquote>
+<strong>Synthesis note:</strong> Protocol selection quality improves when capability exposure, peer-agent task delegation, and REST interoperability are modeled as separate boundaries.
+</blockquote>
+
+<figure>
+  <img src="/assets/images/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems.png" alt="Protocol boundary map comparing MCP, A2A, and ACP across capability, task, and interoperability concerns" loading="lazy" decoding="async" width="1600" height="900" />
+  <figcaption>
+    Figure A1. Boundary-oriented comparison of MCP, A2A, and ACP for enterprise orchestration design decisions.
+  </figcaption>
+</figure>
+
+### Authoritative Reference Set
+
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) (`.gov`)
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework) (`.gov`)
+- [CMU Software Engineering Institute](https://www.sei.cmu.edu/) (`.edu`)
+
+### Protocol Glossary
 
 ### Agent Card
 
@@ -261,44 +349,4 @@ The central A2A unit of work. Tasks carry state, optional history, and artifacts
 
 An ACP-oriented discovery artifact describing agent identity, capabilities, content types, and metadata for interoperable routing and integration {% include references/cite.html key="mcpa2a-2026-ref18" %}.
 
-## Frequently Asked Questions
-
-### What is the main difference among MCP, A2A, and ACP?
-
-MCP connects models or hosts to tools, resources, and prompts. A2A connects autonomous agents through task lifecycle collaboration. ACP defines a REST-oriented agent interoperability model with manifest and run semantics {% include references/cite.html key="mcpa2a-2026-ref2" %}, {% include references/cite.html key="mcpa2a-2026-ref5" %}, {% include references/cite.html key="mcpa2a-2026-ref18" %}.
-
-### Is ACP obsolete now that it is converging with A2A?
-
-ACP remains important for architecture learning and for existing deployments. New strategy should account for announced convergence and migration direction toward A2A to reduce future integration churn {% include references/cite.html key="mcpa2a-2026-ref19" %}, {% include references/cite.html key="mcpa2a-2026-ref20" %}.
-
-### Can MCP replace A2A in a multi-agent system?
-
-Only in narrow cases. If the remote side is really a bounded capability, MCP can be sufficient. Once the remote side owns task state, asynchronous progress, artifact delivery, or agent discovery, A2A is usually the cleaner fit. If the integration boundary is HTTP-governed and partner-facing, ACP-style contracts may still be the practical edge pattern during A2A migration planning.
-
-### Can A2A replace MCP for tool use?
-
-It can, but it is usually wasteful. Simple tools do not benefit much from peer-agent ceremony. A2A shines when the remote side behaves like a collaborator, not just a callable capability. ACP-style REST wrappers can expose those collaborators to existing API ecosystems, but they do not remove the need for MCP when local tool boundaries and consent controls are required.
-
-### When should I use MCP, A2A, and ACP together?
-
-Use layered protocols when agents collaborate across system boundaries and each agent still needs structured tool and data access internally. A2A should carry delegated task lifecycle, MCP should carry model-to-capability access, and ACP-compatible REST seams should be used at gateway, partner, or legacy integration edges.
-
-### How should enterprises handle cross-border and tenant-aware agent orchestration?
-
-Use protocol layering with explicit tenant policy boundaries, jurisdiction-aware data controls, and portable identity patterns. Keep integration contracts vendor-agnostic and preserve audit trails across delegated tasks, MCP tool invocations, and ACP-style REST runs.
-
-### Is MCP more secure than A2A?
-
-Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services. ACP-oriented deployments additionally depend on API gateway policy, token scope, and run-endpoint governance quality, so security posture is a composition problem, not a single-protocol verdict {% include references/cite.html key="mcpa2a-2026-ref2" %}, {% include references/cite.html key="mcpa2a-2026-ref5" %}, {% include references/cite.html key="mcpa2a-2026-ref18" %}.
-
-### Do these recommendations apply identically across UK, EU, US, Canada, Hong Kong, China, and Australia?
-
-No. Privacy, transfer, and sector-specific obligations vary by jurisdiction and industry. Treat protocol guidance as architecture input and confirm legal and regulatory requirements for the specific operating context.
-
-### What should teams prototype first when they are unsure?
-
-Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. Start with ACP-style REST seams if the first integration must pass through existing API gateways or partner-facing HTTP contracts. If the boundary is still ambiguous, model the remote side's autonomy and integration constraints before choosing a primary protocol.
-
-## Conclusion
-
-The useful comparison is not “which protocol wins.” The useful comparison is “which interaction boundary is being standardized for your enterprise context.” MCP standardizes controlled capability access, A2A standardizes peer-agent collaboration, and ACP contributes REST-oriented interoperability patterns that remain relevant during standards convergence. Systems that preserve these boundaries while designing for tenant awareness, cloud-native scale, vendor neutrality, cross-border operation, and human-in-the-loop clarity are better positioned for resilient agentic AI adoption.
+</details>

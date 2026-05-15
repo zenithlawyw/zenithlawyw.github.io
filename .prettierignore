@@ -2,3 +2,7 @@
 # significant for Markdown rendering. The liquid-html parser reflowing
 # <a> tags to multiline causes Kramdown to escape them as text.
 zyw-theme/_includes/references/cite.html
+
+# Biber tool artifacts
+*.blg
+*_bibertool.bib

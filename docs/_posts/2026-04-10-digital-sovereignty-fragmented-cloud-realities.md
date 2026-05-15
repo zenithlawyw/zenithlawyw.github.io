@@ -50,6 +50,7 @@ The analysis applies qualitative NLP techniques to the corpus, including sentime
 ### Jurisdiction and Interpretation Boundary
 
 This article evaluates operating-model evidence and user-impact reports across multiple source tiers. It does not infer political intent from a single event and does not treat community posts as standalone proof. Where records conflict or remain incomplete, the analysis preserves uncertainty and flags the gap.
+This article is not legal advice.
 
 ## Why This Matters
 
@@ -165,38 +166,104 @@ The corpus shows persistent fragmentation pressure across cloud, collaboration, 
 
 ## Frequently Asked Questions
 
-### Is Azure available in China, and how does it differ from global Azure?
+### How does Azure China under 21Vianet differ operationally from global Azure for digital sovereignty China?
 
 Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within China's borders and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014 {% include references/cite.html key="ds-2026-ref2" %}.
 
-### Why is ChatGPT blocked in China?
+### Why are ChatGPT and related AI services restricted in mainland China contexts for digital sovereignty China?
 
 OpenAI has blocked API and web access for users in mainland China, Hong Kong, and Macau. The block was widely reported in July 2024. Anthropic has applied additional ownership-structure screening beyond geography. Both decisions reflect a combination of US export-control considerations, OpenAI's own usage policies, and the regulatory environment in China. Engineering teams cannot rely on direct OpenAI or Anthropic model access for China-deployed applications and must plan for approved domestic alternatives or allowlisted API routes {% include references/cite.html key="ds-2026-ref10" %}, {% include references/cite.html key="ds-2026-ref11" %}.
 
-### How do I architect cloud services for China compliance?
+### What architecture decisions should teams make first for China-compliant cloud services for digital sovereignty China?
 
 Start by treating jurisdiction as a first-class architectural dimension rather than a deployment-time variable. Define data residency boundaries and key custody paths before selecting providers. Map every service to its legal operator (global vendor, regional partner, customer) and verify that contracts specify obligations for data export, incident escalation, and service-level restoration. Audit communication channels, because alert and notification infrastructure such as SMS can be subject to telecom-level blocking that bypasses application logic. The ten lessons in this article provide an ordered implementation guide, starting with jurisdiction-aware reference architectures in Lesson 1 {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref6" %}.
 
-### What does cloud platform bifurcation mean for enterprise teams?
+### What does cloud platform bifurcation mean for enterprise reliability and governance for digital sovereignty China?
 
 Cloud bifurcation means a vendor maintains two structurally separate operating models for the same product: a global version and a localized version. For enterprise teams, this creates parity gaps in features, compliance attestations, security controls, and support coverage. It also introduces circular failure risk where a service withdrawal by either the global vendor or the regional partner cannot be resolved without both parties acting. The analysis in this article is grounded in documented operating structures from Microsoft, Salesforce, and Unity, mapped to OS-level circular-wait theory in the companion article on [deadlock and resource contention](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm) {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}.
 
-### Does localization always reduce service quality?
+### Does localization inherently reduce service quality, or expose architecture gaps for digital sovereignty China?
 
 Localization does not automatically reduce quality. Breakdown appears when architecture, governance, and communication design remain globally uniform while constraints are region-specific {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}. Quality depends on explicit regional control planes and migration safeguards.
 
-### Why do AI restrictions feel sharper than other SaaS restrictions?
+### Why do AI access restrictions often change faster than other SaaS restrictions for digital sovereignty China?
 
 Recent records show AI access decisions integrating strategic and ownership criteria in addition to geography {% include references/cite.html key="ds-2026-ref10" %}, {% include references/cite.html key="ds-2026-ref11" %}. This creates faster policy asymmetry across regions and legal entities. Engineering teams need provider abstraction and contingency model pathways.
 
-### What practical control should enterprises implement first?
+### What is the first practical control for sovereign-aware enterprise cloud programs for digital sovereignty China?
 
 Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority aligns with observed access and notification disruptions in the corpus {% include references/cite.html key="ds-2026-ref5" %}, {% include references/cite.html key="ds-2026-ref6" %}, {% include references/cite.html key="ds-2026-ref12" %}, {% include references/cite.html key="ds-2026-ref14" %}, {% include references/cite.html key="ds-2026-ref15" %}.
 
-### How should teams use community incident reports without spreading errors?
+### How should teams use community incident reports without amplifying false signals for digital sovereignty China?
 
 Treat community reports as intake signals. Require independent corroboration through status pages, policy documents, support records, or contractual notices before escalation. This method preserves speed without sacrificing evidence quality {% include references/cite.html key="ds-2026-ref9" %}, {% include references/cite.html key="ds-2026-ref15" %}.
 
-### What does success look like for a sovereign-aware cloud strategy?
+### What defines success for a sovereign-aware cloud strategy across legal and technical layers for digital sovereignty China?
 
 Success appears when regional legal constraints, technical controls, communication guarantees, and migration rights remain aligned and auditable over time. Teams can then maintain continuity through policy change without emergency redesign {% include references/cite.html key="ds-2026-ref1" %}-{% include references/cite.html key="ds-2026-ref15" %}.
+
+## Technical Appendix
+
+<details markdown="1" class="appendix-callout group">
+<summary class="appendix-summary">
+  <span class="appendix-summary-title"><strong>Corpus Scope, Claim Classes, and Operational Definitions</strong></span>
+  <span class="inline-flex items-center gap-2">
+    <span class="appendix-state-chip inline-flex group-open:hidden" aria-hidden="true">Collapsed</span>
+    <span class="appendix-state-chip hidden group-open:inline-flex" aria-hidden="true">Expanded</span>
+    <svg class="appendix-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M7.05 4.55a.75.75 0 0 1 1.06 0l4.4 4.4a.75.75 0 0 1 0 1.06l-4.4 4.4a.75.75 0 1 1-1.06-1.06L10.92 10 7.05 6.11a.75.75 0 0 1 0-1.06Z" />
+    </svg>
+  </span>
+</summary>
+
+### Appendix Table of Contents
+
+- [Citability Snapshot](#citability-snapshot)
+- [Authoritative Reference Set](#authoritative-reference-set)
+- [Operational Definitions](#operational-definitions)
+
+### Citability Snapshot
+
+| Metric                             | Value | Why it improves citability                        |
+| ---------------------------------- | ----- | ------------------------------------------------- |
+| Source records synthesized         | 15    | Documents coverage boundary for retrieval systems |
+| Distinct source tiers              | 4     | Clarifies evidence-quality heterogeneity          |
+| Confirmed operating-model examples | 6     | Supports repeatable cross-source pattern checks   |
+| FAQ items mapped to corpus         | 9     | Expands answer-engine extractability              |
+
+<blockquote>
+<strong>Synthesis note:</strong> Sovereign-aware cloud operations require continuous reassessment of controls as policy, ownership, and market constraints shift.
+</blockquote>
+
+<figure>
+  <img src="/assets/images/digital-sovereignty-in-practice.png" alt="Digital sovereignty pattern map across China cloud localization, platform bifurcation, and cross-border control boundaries" loading="lazy" decoding="async" width="1600" height="900" />
+  <figcaption>
+    Figure A1. Evidence-to-control map for sovereign-aware cloud architecture: localization constraints, ownership boundaries, and channel asymmetry linked to engineering controls.
+  </figcaption>
+</figure>
+
+### Authoritative Reference Set
+
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework) (`.gov`)
+- [NIST Secure Software Development Framework](https://csrc.nist.gov/Projects/ssdf) (`.gov`)
+- [CISA Secure by Design](https://www.cisa.gov/securebydesign) (`.gov`)
+- [CMU Software Engineering Institute](https://www.sei.cmu.edu/) (`.edu`)
+
+### Corpus Scope
+
+This article synthesizes fifteen records across official announcements, institutional operational notices, trade-media reporting, and community incident threads {% include references/cite.html key="ds-2026-ref1" %}-{% include references/cite.html key="ds-2026-ref15" %}. The evidence mix is intentionally broad for pattern reconstruction, but source classes are uneven in verification strength.
+
+### Claim Classes Used in This Article
+
+1. Protocol-confirmed and institution-confirmed operating facts from official and institutional sources.
+2. Pattern-level synthesis across multiple corroborating sources.
+3. Community-signal observations treated as provisional unless independently corroborated.
+
+### Operational Definitions
+
+- **Platform bifurcation**: One product delivered through structurally distinct regional operating models.
+- **Region-scoped control ownership**: Legal, operational, and support authority separated across entities by geography.
+- **Channel asymmetry**: Different escalation or notification reliability by region and telecom path.
+- **Sovereign-aware architecture**: System design that treats jurisdiction, control ownership, and data obligations as first-class constraints.
+
+</details>

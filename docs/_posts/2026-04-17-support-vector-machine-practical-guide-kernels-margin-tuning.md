@@ -58,6 +58,7 @@ tags:
 [Support Vector Machine](https://en.wikipedia.org/wiki/Support_vector_machine) {% include references/cite.html key="svm-2026-ref17" %} is still one of the clearest ways to reason about discriminative classification: it formalizes class separation as a margin-maximization problem with explicit controls for complexity and tolerance to error. That clarity makes SVM useful for rigorous model comparison and governance, even when a different model family eventually wins in production.
 
 This article focuses on margin mechanics, kernel behavior, and algorithm variants so you can make defensible model choices before benchmarking and deployment.
+This article is not legal advice.
 
 The discussion is evidence-led rather than benchmark-led: each section ties implementation advice to established SVM research streams, including foundational optimization theory, multiclass and regression extensions, probability calibration methods, and large-scale solver literature {% include references/cite.html key="svm-2026-ref1" %} {% include references/cite.html key="svm-2026-ref3" %} {% include references/cite.html key="svm-2026-ref5" %} {% include references/cite.html key="svm-2026-ref7" %} {% include references/cite.html key="svm-2026-ref12" %}.
 
@@ -66,20 +67,6 @@ The discussion is evidence-led rather than benchmark-led: each section ties impl
 - Part 3: deployment playbook for tuning, monitoring, calibration, and governance.
 
 For adjacent continuity topics, see [data provenance in machine learning](/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons) and [deadlock and resource contention patterns](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm).
-
-## Scope and Claim Classification
-
-This article uses three claim classes to keep interpretation explicit:
-
-1. **Literature-confirmed findings** summarize results, definitions, or methods reported in the cited sources.
-2. **Implementation-oriented synthesis** translates those findings into practical SVM design and tuning guidance.
-3. **Operational recommendations** describe defensible engineering choices, not guaranteed outcomes across all datasets.
-
-The source set is intentionally focused on foundational SVM papers, applied extensions, and mainstream implementation guidance. Conclusions in this article should therefore be read as evidence-led and scope-bounded rather than universal ranking claims.
-
-## Reference and Maintenance Note
-
-SVM toolchains, library defaults, and benchmark conventions change over time. For production reuse, periodically re-check solver defaults, API behavior, and dataset assumptions against current documentation and release notes before carrying this guidance forward unchanged.
 
 ## Why Start with Theory Before Benchmarks
 
@@ -251,19 +238,19 @@ Continue with:
 
 ## Frequently Asked Questions
 
-### What is the main reason to learn SVM in 2026 if deep models are common?
+### Why is SVM still valuable in 2026 despite dominant deep-learning workflows for support vector machine?
 
 SVM gives a transparent optimization framework that remains highly useful for structured, medium-scale classification and for disciplined baseline construction before scaling to heavier architectures.
 
-### How do I know whether to start with linear or RBF SVM?
+### How should teams decide between linear and RBF SVM as a starting baseline for support vector machine?
 
 Start with linear SVM, inspect residual and class-pair errors, then move to RBF only when validation evidence shows nonlinear boundaries that linear regularization cannot recover.
 
-### Is one-class SVM the same as unsupervised clustering?
+### How is one-class SVM different from unsupervised clustering objectives for support vector machine?
 
 No. One-class SVM estimates support for a target distribution and is mainly used for novelty/outlier detection rather than multi-cluster partitioning.
 
-### What should I monitor first when training SVM models?
+### Which metrics should be monitored first during SVM training and validation for support vector machine?
 
 Monitor per-class recall, pairwise confusion flows, and hyperparameter stability across folds before relying on top-line accuracy.
 
@@ -274,3 +261,77 @@ SVM remains a high-value method because its behavior is explainable, tunable, an
 The broader literature supports a constrained but durable claim: SVM is not a universal winner, yet it remains one of the strongest baseline families for disciplined model selection when teams require explicit regularization semantics, reproducible optimization, and clear monitoring hooks for post-deployment drift {% include references/cite.html key="svm-2026-ref1" %} {% include references/cite.html key="svm-2026-ref3" %} {% include references/cite.html key="svm-2026-ref12" %} {% include references/cite.html key="svm-2026-ref15" %}.
 
 Part 2 applies this framework to a full HAR benchmark and error-forensics workflow.
+
+## Technical Appendix
+
+<details markdown="1" class="appendix-callout group">
+<summary class="appendix-summary">
+  <span class="appendix-summary-title"><strong>Scope, Claim Taxonomy, and Maintenance Notes</strong></span>
+  <span class="inline-flex items-center gap-2">
+    <span class="appendix-state-chip inline-flex group-open:hidden" aria-hidden="true">Collapsed</span>
+    <span class="appendix-state-chip hidden group-open:inline-flex" aria-hidden="true">Expanded</span>
+    <svg class="appendix-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M7.05 4.55a.75.75 0 0 1 1.06 0l4.4 4.4a.75.75 0 0 1 0 1.06l-4.4 4.4a.75.75 0 1 1-1.06-1.06L10.92 10 7.05 6.11a.75.75 0 0 1 0-1.06Z" />
+    </svg>
+  </span>
+</summary>
+
+### Appendix Table of Contents
+
+- [Citability Snapshot](#citability-snapshot)
+- [Authoritative Reference Set](#authoritative-reference-set)
+- [Terminology Definitions](#terminology-definitions)
+
+### Citability Snapshot
+
+| Metric                                      | Value | Why it improves citation utility                            |
+| ------------------------------------------- | ----- | ----------------------------------------------------------- |
+| Foundational and extension references cited | 20    | Supports multi-angle retrieval across theory and operations |
+| Series continuity links provided            | 2     | Improves navigability and context carryover                 |
+| Distinct SVM decision dimensions emphasized | 5     | Enables feature-snippet extraction for practical queries    |
+
+<blockquote>
+<strong>Synthesis note:</strong> Reliable SVM outcomes typically depend on disciplined preprocessing, tuning, and evaluation design rather than defaults.
+</blockquote>
+
+<figure>
+  <img src="/assets/images/support-vector-machine-part-1-foundations.png" alt="Support Vector Machine foundations showing margin intuition, kernel choice, and tuning implications" loading="lazy" decoding="async" width="1600" height="900" />
+  <figcaption>
+    Figure A1. Foundational SVM design map from margin control to kernel selection and operational tuning readiness.
+  </figcaption>
+</figure>
+
+### Authoritative Reference Set
+
+- [UCI Machine Learning Repository](https://archive.ics.uci.edu/) (`.edu`)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) (`.gov`)
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework) (`.gov`)
+
+### Terminology Definitions
+
+<dl>
+  <dt><dfn>Margin control</dfn></dt>
+  <dd>The process of balancing boundary width and training error tolerance to manage generalization behavior.</dd>
+
+  <dt><dfn>Kernel-induced geometry</dfn></dt>
+  <dd>The transformed similarity structure created by a kernel function that shapes class separability.</dd>
+
+  <dt><dfn>Comparator retention</dfn></dt>
+  <dd>The practice of retaining at least one alternative model family during retraining cycles to detect fit degradation.</dd>
+</dl>
+
+### Scope and Claim Classification
+
+This article uses three claim classes to keep interpretation explicit:
+
+1. **Literature-confirmed findings** summarize results, definitions, or methods reported in the cited sources.
+2. **Implementation-oriented synthesis** translates those findings into practical SVM design and tuning guidance.
+3. **Operational recommendations** describe defensible engineering choices, not guaranteed outcomes across all datasets.
+
+The source set is intentionally focused on foundational SVM papers, applied extensions, and mainstream implementation guidance. Conclusions in this article should therefore be read as evidence-led and scope-bounded rather than universal ranking claims.
+
+### Reference and Maintenance Note
+
+SVM toolchains, library defaults, and benchmark conventions change over time. For production reuse, periodically re-check solver defaults, API behavior, and dataset assumptions against current documentation and release notes before carrying this guidance forward unchanged.
+
+</details>

@@ -49,22 +49,9 @@ tags:
 ## Introduction
 
 This second article in the SVM series focuses on one question: what do benchmark results actually say about model behavior once we move beyond aggregate accuracy? Using the [UCI Human Activity Recognition dataset](https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones) {% include references/cite.html key="svm-2026-ref16" %}, we compare an RBF SVM pipeline against a Random Forest baseline and inspect class-level precision, recall, F1, confusion corridors, tuning stability, and PCA geometry signals.
+This article is not legal advice.
 
 If you have not read the conceptual foundation, start with [Part 1: Margins, Kernels, and Core Algorithms](/support-vector-machine-practical-guide-kernels-margin-tuning). For system-level reliability analogies in resource contention, see [deadlock and resource contention lessons](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm).
-
-## Scope and Claim Classification
-
-This benchmark-focused article separates claims into three classes:
-
-1. **Run-confirmed findings** report the measured outcomes for this HAR experiment setup.
-2. **Interpretive synthesis** explains likely geometric or operational reasons behind observed class behavior.
-3. **Deployment recommendations** propose practical controls for production monitoring and retraining.
-
-Results are intentionally scoped to the dataset, feature pipeline, split assumptions, and tuning grid used in this run. They should inform transfer decisions, not be treated as universal rankings for all activity-recognition contexts.
-
-## Reference and Maintenance Note
-
-Benchmark conclusions should be revisited when key dependencies, preprocessing contracts, or dataset distributions change. Re-run parity checks and class-corridor diagnostics after material library, feature-engineering, or data-governance updates.
 
 ## Benchmark Setup and Reproducibility Boundaries
 
@@ -197,22 +184,91 @@ For implementation playbooks and deployment controls, continue with [Part 3: Tun
 
 ## Frequently Asked Questions
 
-### Why is macro F1 not enough for SVM evaluation?
+### Why is macro F1 alone insufficient for SVM evaluation in HAR benchmarking for support vector machine benchmark?
 
 Macro F1 averages class behavior and can hide concentrated failure corridors that dominate real-world risk, especially in near-neighbor class pairs.
 
-### Does better RF accuracy mean SVM is a bad model?
+### Does higher random-forest accuracy mean SVM is the wrong model family for support vector machine benchmark?
 
 No. It means RF is the better fit for this specific dataset geometry and operating objective; SVM can still be strong in other structured regimes.
 
-### How should I use confusion corridors in production?
+### How should confusion corridors be operationalized in production monitoring for support vector machine benchmark?
 
 Track the highest-frequency class transitions as explicit alert channels and tie retraining or threshold updates to corridor-specific drift.
 
-### Why compare R and Python if both use libsvm-style tooling?
+### Why does R-versus-Python parity still matter with similar libsvm tooling for support vector machine benchmark?
 
 Parity checks still matter because they expose silent preprocessing or CV mismatches and improve reproducibility across mixed-language teams.
 
 ## Conclusion
 
 The HAR benchmark shows a clear but nuanced result: SVM is robust and informative, while RF is stronger for the overlap profile in this run. The key outcome is diagnostic clarity about where and why each model family wins. Part 3 turns these diagnostics into a deployment governance playbook with explicit tuning, monitoring, and escalation controls.
+
+## Technical Appendix
+
+<details markdown="1" class="appendix-callout group">
+<summary class="appendix-summary">
+  <span class="appendix-summary-title"><strong>Scope, Claim Taxonomy, and Maintenance Notes</strong></span>
+  <span class="inline-flex items-center gap-2">
+    <span class="appendix-state-chip inline-flex group-open:hidden" aria-hidden="true">Collapsed</span>
+    <span class="appendix-state-chip hidden group-open:inline-flex" aria-hidden="true">Expanded</span>
+    <svg class="appendix-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M7.05 4.55a.75.75 0 0 1 1.06 0l4.4 4.4a.75.75 0 0 1 0 1.06l-4.4 4.4a.75.75 0 1 1-1.06-1.06L10.92 10 7.05 6.11a.75.75 0 0 1 0-1.06Z" />
+    </svg>
+  </span>
+</summary>
+
+### Appendix Table of Contents
+
+- [Citability Snapshot](#citability-snapshot)
+- [Benchmark Definitions](#benchmark-definitions)
+- [Scope and Claim Classification](#scope-and-claim-classification)
+
+### Citability Snapshot
+
+| Metric                                   | Value | Why it improves retrieval quality                   |
+| ---------------------------------------- | ----- | --------------------------------------------------- |
+| Models benchmarked                       | 2     | Makes comparison boundary explicit                  |
+| Aggregate metrics reported               | 3     | Enables concise score extraction                    |
+| Dominant confusion corridors highlighted | 3     | Supports actionable class-level monitoring guidance |
+| Diagnostic layers discussed              | 4     | Preserves practical depth beyond top-line accuracy  |
+
+<blockquote>
+<strong>Synthesis note:</strong> In overlap-heavy HAR settings, class-level diagnostics are often more operationally useful than global accuracy alone.
+</blockquote>
+
+<figure>
+  <img src="/assets/images/support-vector-machine-part-2-benchmark-forensics.png" alt="SVM benchmark forensics map showing confusion corridors and class-level error concentration on UCI HAR" loading="lazy" decoding="async" width="1600" height="900" />
+  <figcaption>
+    Figure A1. Benchmark-forensics view linking aggregate scores with corridor-level error behavior for deployment diagnostics.
+  </figcaption>
+</figure>
+
+### Benchmark Definitions
+
+<dl>
+  <dt><dfn>Confusion corridor</dfn></dt>
+  <dd>A high-frequency directional class-transition error that persists across validation or production windows.</dd>
+
+  <dt><dfn>Parity validation</dfn></dt>
+  <dd>A cross-toolchain consistency check verifying that matched preprocessing and hyperparameters produce comparable outcomes.</dd>
+
+  <dt><dfn>Geometry mismatch</dfn></dt>
+  <dd>A condition where class overlap remains high in transformed feature space despite acceptable global metrics.</dd>
+</dl>
+
+### Scope and Claim Classification
+
+This benchmark-focused article separates claims into three classes:
+
+1. **Run-confirmed findings** report the measured outcomes for this HAR experiment setup.
+2. **Interpretive synthesis** explains likely geometric or operational reasons behind observed class behavior.
+3. **Deployment recommendations** propose practical controls for production monitoring and retraining.
+
+Results are intentionally scoped to the dataset, feature pipeline, split assumptions, and tuning grid used in this run. They should inform transfer decisions, not be treated as universal rankings for all activity-recognition contexts.
+
+### Reference and Maintenance Note
+
+Benchmark conclusions should be revisited when key dependencies, preprocessing contracts, or dataset distributions change. Re-run parity checks and class-corridor diagnostics after material library, feature-engineering, or data-governance updates.
+
+</details>
