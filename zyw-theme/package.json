@@ -2,7 +2,8 @@
   "name": "zyw-theme",
   "private": true,
   "scripts": {
-    "build:css": "tailwindcss -c tailwind.config.js -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.css --minify",
+    "build:css": "tailwindcss -c tailwind.config.js -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.css --minify && npm run patch:css-compat",
+    "patch:css-compat": "node -e \"const fs=require('fs');const p='assets/css/tailwind.css';let css=fs.readFileSync(p,'utf8');css=css.replace(/-webkit-appearance:button(?=;|})(?!;appearance:button)/g,'-webkit-appearance:button;appearance:button').replace(/-webkit-appearance:textfield(?=;|})(?!;appearance:textfield)/g,'-webkit-appearance:textfield;appearance:textfield').replace(/-webkit-appearance:none(?=;|})(?!;appearance:none)/g,'-webkit-appearance:none;appearance:none');fs.writeFileSync(p,css);\"",
     "watch:css": "tailwindcss -c tailwind.config.js -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.css --watch"
   },
   "devDependencies": {

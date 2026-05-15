@@ -39,7 +39,19 @@ QUESTION_PREFIX = /^(who|what|why|how|when|where|can|should|is|are|do|does|did|w
 GENERIC_QUESTION_PATTERNS = [
   /\Awhy\s+this\s+matters\??\z/i,
   /\Aoverview\??\z/i,
-  /\Aintroduction\??\z/i
+  /\Aintroduction\??\z/i,
+  /\Awho\s+should\s+read\s+what\s+first\??\z/i,
+  /\Ahow\s+the\s+[^?]{0,80}\s+was\s+built\??\z/i,
+  /\Awhere\s+the\s+evidence\s+is\s+still\s+thin\??\z/i
+].freeze
+
+GENERIC_CONTEXT_PATTERNS = [
+  /\A(is|are)\s+this\s+(review|article|page|post)\b/i,
+  /\bafter\s+reading\s+this\s+(review|article|page|post)\b/i,
+  /\bwhat\s+questions\s+does\b/i,
+  /\bwho\s+should\s+read\b/i,
+  /\bwhere\s+the\s+evidence\s+is\b/i,
+  /\bhow\s+the\s+[^?]{0,80}\s+was\s+built\b/i
 ].freeze
 
 CONTENT_EXTENSIONS = %w[md markdown html].freeze
@@ -342,10 +354,12 @@ end
 
 
 def quality_question?(question)
+  normalized = normalize_text(question)
   return false if question.empty?
-  return false if question.length < 10 || question.length > 180
+  return false if question.length < 24 || question.length > 320
   return false unless question.end_with?('?') || question.match?(QUESTION_PREFIX)
   return false if GENERIC_QUESTION_PATTERNS.any? { |pattern| question.match?(pattern) }
+  return false if GENERIC_CONTEXT_PATTERNS.any? { |pattern| normalized.match?(pattern) }
 
   true
 end
@@ -353,7 +367,7 @@ end
 
 def quality_answer?(answer)
   return false if answer.empty?
-  return false if answer.length < 24
+  return false if answer.length < 55
   return false if answer.match?(/\Asee\s+the\s+section\b/i)
 
   true
@@ -383,11 +397,24 @@ end
 def heading_questions(markdown)
   lines = markdown.lines
   qa = []
+  in_faq_section = false
 
   lines.each_with_index do |line, index|
-    next unless line =~ /^\#{2,6}\s+(.+)$/
+    next unless line =~ /^(\#{2,6})\s+(.+)$/
 
-    heading = normalize_question(Regexp.last_match(1).to_s)
+    level = Regexp.last_match(1).length
+    heading_text = Regexp.last_match(2).to_s
+
+    if level == 2
+      normalized_h2 = normalize_text(heading_text)
+      in_faq_section = normalized_h2.include?('frequently asked questions')
+      next
+    end
+
+    next unless in_faq_section
+    next unless level >= 3
+
+    heading = normalize_question(heading_text)
     next unless quality_question?(heading)
 
     answer_lines = []
@@ -412,6 +439,56 @@ def heading_questions(markdown)
   end
 
   qa
+end
+
+
+def heading_questions_anywhere(markdown)
+  lines = markdown.lines
+  qa = []
+
+  lines.each_with_index do |line, index|
+    next unless line =~ /^\#{2,6}\s+(.+)$/
+
+    heading = normalize_question(Regexp.last_match(1).to_s)
+    next unless quality_question?(heading)
+
+    answer_lines = []
+    i = index + 1
+    while i < lines.length
+      current = lines[i]
+      break if current =~ /^\#{1,6}\s+/ || current.strip.start_with?('---')
+
+      stripped = current.strip
+      answer_lines << stripped unless stripped.empty?
+      break if answer_lines.length >= 3
+
+      i += 1
+    end
+
+    answer = clean_sentence(answer_lines.join(' '))
+    next unless quality_answer?(answer)
+
+    qa << { 'question' => heading, 'answer' => answer }
+  end
+
+  qa
+end
+
+
+def dedupe_questions_preserve_order(questions, limit)
+  seen = {}
+  output = []
+
+  questions.each do |item|
+    key = item['question'].downcase.gsub(/\s+/, ' ').strip
+    next if seen[key]
+
+    seen[key] = true
+    output << item
+    break if output.length >= limit
+  end
+
+  output
 end
 
 
@@ -575,8 +652,11 @@ content_files.each do |path|
                                  .map(&:first)
                                  .first(24)
 
-  extracted_questions = dedupe_and_rank_questions(
-    frontmatter_questions(front) + heading_questions(body),
+  section_questions = heading_questions(body)
+  fallback_questions = section_questions.empty? ? heading_questions_anywhere(body) : []
+
+  extracted_questions = dedupe_questions_preserve_order(
+    frontmatter_questions(front) + section_questions + fallback_questions,
     16
   )
 
@@ -635,7 +715,7 @@ records_by_path.values.each do |record|
   end
 end
 
-all_questions = (post_records.values + page_records.values)
+all_questions = post_records.values
   .flat_map { |entry| entry['questions'] }
 
 all_questions = dedupe_and_rank_questions(all_questions, 250)

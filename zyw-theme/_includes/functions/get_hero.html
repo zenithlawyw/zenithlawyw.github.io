@@ -31,6 +31,30 @@
 {%- include functions.html func='get_value' -%}
 {% assign hero_opacity = return %}
 
+{%- include functions.html func='log' level='debug' msg='Get hero_image_version value' -%}
+{% assign name = 'hero.image_version' %}
+{%- include functions.html func='get_value' -%}
+{% assign hero_image_version = return %}
+{%- unless hero_image_version -%}
+  {% assign name = 'image_version' %}
+  {%- include functions.html func='get_value' -%}
+  {% assign hero_image_version = return %}
+{%- endunless -%}
+
+{%- if hero_image and hero_image_version -%}
+  {%- if hero_image contains '?' -%}
+    {%- assign hero_image = hero_image
+      | append: '&v='
+      | append: hero_image_version
+    -%}
+  {%- else -%}
+    {%- assign hero_image = hero_image
+      | append: '?v='
+      | append: hero_image_version
+    -%}
+  {%- endif -%}
+{%- endif -%}
+
 {%- include functions.html func='log' level='debug' msg='Get hero_height value' -%}
 {% assign name = 'hero.height' %}
 {%- include functions.html func='get_value' -%}

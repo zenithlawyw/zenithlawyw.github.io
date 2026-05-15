@@ -32,6 +32,8 @@ scripts
 
 # Temp files
 *.log
+*.blg
+*_bibertool.bib
 *.tmp
 *.zip
 resources

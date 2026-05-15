@@ -55,6 +55,8 @@ Operating systems textbooks dedicate chapters to a simple question: when can con
 On 30 to 31 March 2026, malicious axios package versions propagated through npm's dependency resolution workflow because a maintainer credential was compromised. A detailed reconstruction of this incident appears in the companion article on the [Axios npm supply-chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience). The incident cascades through hold-and-wait behavior: each build held a lock on developer identity while waiting for upstream package access. On 25 July 2019 and across the intervening years, SaaS platforms withdrew localized versions in jurisdictions like China, creating a platform-fragmentation pattern where service bifurcation introduced circular dependencies that no single vendor could resolve autonomously. The structural dimensions of this fragmentation are examined in the article on [digital sovereignty and fragmented cloud realities](/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons). More recently, LLM deployment in distributed systems exhibits similar contention: concurrent inference requests compete for token-generation slots, and resource starvation under priority-flat scheduling leaves lower-priority jobs indefinitely suspended. The architectural evolution that produced these scheduling challenges is traced in the companion article on [large language models in practice](/large-language-models-practice-from-transformer-to-present-frontier).
 
 This article reconstructs these three domains, supply chain security, platform operations, and AI systems, through the lens of concurrency theory. The objective is not metaphor. It is interpretability through structure. By mapping incident patterns onto Coffman's conditions and classical resource scheduling algorithms, engineering teams can apply decades of OS mitigation strategies to domains where contention is often treated as inevitable rather than engineered away.
+{% include references/cite.html key="deadlock-2026-ref1" %}
+This article is not legal advice.
 
 ### Evidence Scope and Claim Boundaries
 
@@ -327,33 +329,79 @@ Detailed domain evidence is available in companion articles: the [Axios supply c
 
 ## Frequently Asked Questions
 
-### What are the four Coffman conditions for deadlock?
+### What are the four Coffman conditions, and why do they still matter for modern systems for deadlock?
 
 Deadlock occurs when, and only when, all four of the following hold simultaneously: mutual exclusion (a resource is held exclusively by one thread), hold and wait (a thread holds one resource while requesting another), no preemption (held resources cannot be forcibly reclaimed), and circular wait (a cycle exists where each thread waits for a resource held by the next). Eliminating any single condition prevents deadlock entirely. The full theoretical foundation and formal definition appear in the [Understanding Deadlock](#understanding-deadlock-mutex-semaphore-and-the-coffman-conditions) section above.
 
-### How does deadlock theory apply to supply chain security?
+### How does deadlock theory map to software supply chain security failures?
 
 Supply chain attacks exhibit all four Coffman conditions at the credential and dependency level. A maintainer credential enforces mutual exclusion over package publication; a compromised developer holds a build environment while waiting for npm packages (hold and wait); once a malicious version is downloaded it cannot be universally recalled (no preemption); and transitive dependency cycles create circular wait across build graphs. The companion article on the [Axios npm supply chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience) reconstructs a confirmed March 2026 incident through this exact framework.
 
-### What is the difference between deadlock and starvation?
+### How do deadlock and starvation differ in distributed and AI-serving systems?
 
 Deadlock is a cycle in which no involved thread can make progress: every waiting thread holds a resource that another waiting thread needs, so the entire set is permanently blocked. Starvation is a state in which one specific thread is indefinitely denied access while other threads do make progress. Round-robin and first-come-first-serve scheduling prevent starvation; resource ordering, atomic acquisition, and the [Banker's algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm) prevent deadlock. Both pathologies appear in LLM inference queues and software supply chains.
 
-### How do you prevent deadlock in distributed systems?
+### Which controls most effectively prevent deadlock in distributed production systems?
 
 Four primary strategies correspond directly to breaking the four Coffman conditions. First, enforce a total order on resource acquisition to eliminate circular wait. Second, require atomic multi-resource acquisition or full release before requesting new resources to eliminate hold and wait. Third, implement preemption authority so the system can forcibly reclaim a blocked resource. Fourth, run cycle-detection on the live resource-request graph and reject configurations that would complete a cycle before they execute. Lessons 1 through 3 in this article cover practical implementations for supply chains, cloud platforms, and LLM inference systems.
 
-### What is priority aging in operating systems and LLM scheduling?
+### What is priority aging, and how does it apply to LLM inference scheduling for deadlock?
 
 Priority aging is a scheduling technique in which a waiting thread's effective priority increases incrementally over time, ensuring low-priority requests are eventually scheduled even when higher-priority requests arrive continuously. It prevents indefinite starvation while preserving responsiveness for high-priority work. Applied to LLM inference queues, priority aging ensures that batch offline jobs are not permanently blocked by interactive user requests, which is the scenario described in the [LLM Inference and Token Schedulers](#llm-inference-and-token-schedulers-priority-starvation) section.
 
-### How do Coffman conditions apply to LLM inference and token scheduling?
+### How can Coffman-condition analysis improve LLM inference and token-slot design for deadlock?
 
 Token slots in LLM inference are mutual-exclusion resources: exactly one inference request occupies a decoding slot during autoregressive generation. In a multi-model pipeline, if Request A holds a slot on Model-X while waiting for Model-Y, and Request B holds Model-Y while waiting for Model-X, all four Coffman conditions hold and a deadlock can form. Prevention requires either a global model-acquisition ordering (always acquire Model-X before Model-Y) or full-release semantics, where Request A must complete and release all slots before acquiring resources on a second model. Lessons 1 and 2 address both strategies.
 
 ---
 
-## Appendix: Concurrency Term Reference
+## Technical Appendix
+
+<details markdown="1" class="appendix-callout group">
+<summary class="appendix-summary">
+  <span class="appendix-summary-title"><strong>Concurrency Term Reference</strong></span>
+  <span class="inline-flex items-center gap-2">
+    <span class="appendix-state-chip inline-flex group-open:hidden" aria-hidden="true">Collapsed</span>
+    <span class="appendix-state-chip hidden group-open:inline-flex" aria-hidden="true">Expanded</span>
+    <svg class="appendix-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M7.05 4.55a.75.75 0 0 1 1.06 0l4.4 4.4a.75.75 0 0 1 0 1.06l-4.4 4.4a.75.75 0 1 1-1.06-1.06L10.92 10 7.05 6.11a.75.75 0 0 1 0-1.06Z" />
+    </svg>
+  </span>
+</summary>
+
+### Appendix Table of Contents
+
+- [Citability Snapshot](#citability-snapshot)
+- [Authoritative Reference Set](#authoritative-reference-set)
+- [Concurrency Term Reference](#concurrency-term-reference)
+
+### Citability Snapshot
+
+| Metric                                          | Value | Citability value                             |
+| ----------------------------------------------- | ----- | -------------------------------------------- |
+| Cross-domain contexts mapped with Coffman logic | 3     | Shows theory portability across domains      |
+| Coffman conditions used in analysis             | 4     | Preserves formal deadlock completeness       |
+| Scheduling or prevention strategies highlighted | 6     | Supports actionable systems design takeaways |
+| FAQ entries with prevention guidance            | 6     | Improves answer-engine extraction depth      |
+
+<blockquote>
+<strong>Synthesis note:</strong> Deadlock prevention can be engineered by systematically breaking at least one Coffman condition in the targeted execution path.
+</blockquote>
+
+<figure>
+  <img src="/assets/images/deadlock-resource-contention-engineering.png" alt="Deadlock prevention map linking Coffman conditions to controls across supply chains, cloud systems, and LLM inference" loading="lazy" decoding="async" width="1600" height="900" />
+  <figcaption>
+    Figure A1. Cross-domain deadlock control mapping from formal OS theory to practical cloud, supply-chain, and AI scheduling operations.
+  </figcaption>
+</figure>
+
+### Authoritative Reference Set
+
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework) (`.gov`)
+- [CISA Secure by Design](https://www.cisa.gov/securebydesign) (`.gov`)
+- [CMU Software Engineering Institute](https://www.sei.cmu.edu/) (`.edu`)
+
+### Concurrency Term Reference
 
 **Mutex (Mutual Exclusion)**: A lock that enforces exactly-one access to a resource. Only one thread can hold a mutex at a time.
 
@@ -380,6 +428,8 @@ Token slots in LLM inference are mutual-exclusion resources: exactly one inferen
 **Circular Wait**: A cycle in the resource-request graph in which thread T₁ waits for a resource held by thread T₂, thread T₂ waits for a resource held by thread T₃, …, thread Tₙ waits for a resource held by thread T₁.
 
 **Hold and Wait**: A condition in which a thread holds a resource while waiting for another resource. Breaking this condition prevents deadlock but requires either atomic multi-resource acquisition or forced release of all held resources before waiting.
+
+</details>
 
 ---
 

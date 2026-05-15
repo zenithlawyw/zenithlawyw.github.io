@@ -36,57 +36,7 @@ Karuna et al. report a study that applies Graph Neural Networks to financial tra
 
 This review examines each paper's claims, methods, and limitations, then derives scoped implications from those results. It is intentionally narrow: three papers are not treated as a representative sample of the provenance ecosystem. Where a claim rests directly on a paper's reported results, the text says so. Where the review draws inferences beyond what any single paper demonstrates, that boundary is marked. Several details could not be independently corroborated and are flagged accordingly.
 
-This article is designed for technical and governance learning. It does not provide legal, regulatory, or procurement advice. Readers should validate applicability against their own jurisdiction, risk model, and production constraints.
-
-> **Claim-level labeling convention used throughout this article:**
->
-> - **Verified finding**: directly stated or demonstrated in the cited source.
-> - **Inferred synthesis**: logical interpretation connecting findings across sources; not directly stated in any one paper.
-> - **Unverified detail**: plausible based on source context but not independently confirmed from the available text.
-
----
-
-## Source Inventory and Evidence Grading
-
-### Scope and Verification Boundary
-
-The source set is deliberately small and non-exhaustive. It supports a focused comparison, not a field-wide conclusion. In particular, this article does not benchmark these papers against widely used data lineage platforms such as MLflow, OpenLineage, Pachyderm, or DVC, and therefore does not claim comparative superiority over those ecosystems.
-
-### Karuna et al. (2024)
-
-This paper was published at the 2024 International Conference on IoT, Communication and Automation Technology (ICICAT), an IEEE conference {% include references/cite.html key="prov-2026-ref1" %}. The paper reports using a dataset described as containing 1,000,000 transactions from 100,000 entities at a global financial organization. The experimental design compares a Graph Convolutional Network implementation (built with PyTorch Geometric, trained on an NVIDIA Tesla V100 GPU) against logistic regression and random forest baselines.
-
-The paper reports the following metrics:
-
-| Model               | Accuracy | Precision | Recall | F1-Score |
-| ------------------- | -------- | --------- | ------ | -------- |
-| Logistic Regression | 78.4%    | 75.6%     | 77.2%  | 76.4%    |
-| Random Forest       | 82.1%    | 79.5%     | 80.4%  | 79.9%    |
-| GNN (GCN)           | 91.3%    | 89.7%     | 90.5%  | 90.1%    |
-
-The paper also reports traceability completeness improving from 75.6% to 92.4% {% include references/cite.html key="prov-2026-ref1" %}.
-
-**Evidence grade:** The numerical claims above are verified findings taken directly from the paper's reported results. These metrics are internal to the study's evaluation framework and reflect the authors' experimental setup rather than a community-accepted benchmark protocol. The paper excerpt reviewed here does not provide uncertainty statistics (for example, variance across runs or confidence intervals), and it does not make the task formulation behind "traceability completeness" fully transparent in this review context. Whether the dataset or code has been publicly released could not be confirmed (**unverified detail**).
-
-### Pina et al. (2023)
-
-This paper appeared in the Companion Proceedings of the ACM Web Conference 2023 (WWW '23 Companion) {% include references/cite.html key="prov-2026-ref2" %}. The work describes a prototype that integrates provenance data from preprocessing operations (captured using the approach of Chapman et al.) with training provenance captured by DNNProv. The authors present use cases derived from Data Science Stack Exchange questions and published literature.
-
-**Evidence grade:** The contribution is architectural. The paper demonstrates integration feasibility and formulates provenance queries that join preprocessing records with training metrics. It does not report production-scale overhead measurements for the integrated pipeline, and the current version is limited to structured data preprocessing. These characterizations are verified findings drawn from the paper text. The absence of quantitative stress testing means this source primarily supports a "can integrate" claim, not a "scales under production constraints" claim.
-
-### Souza et al. (2019)
-
-The paper is described on its title page as an author preprint accepted at the 14th WORKS Workshop, co-located with SC 2019 {% include references/cite.html key="prov-2026-ref3" %}. The publication venue claim is taken at face value from the paper's own statement; it was not independently verified against the proceedings record (**unverified detail**). The paper introduces PROV-ML as a proposed data representation (not an industry-adopted standard) that combines W3C PROV with W3C ML Schema. It provides extensions to the ProvLake system and reports evaluation in an oil and gas seismic classification application using 48 GPUs in parallel.
-
-The paper identifies four persona types whose provenance needs motivated the PROV-ML design: domain scientists, computational scientists and engineers, ML scientists and engineers, and provenance specialists {% include references/cite.html key="prov-2026-ref3" %}.
-
-**Evidence grade:** The PROV-ML representation, ProvLake extensions, 48-GPU evaluation, and persona characterization are verified findings, well-supported by the paper's abstract and body text. The generalizability to domains beyond the reported oil and gas case is an open claim the paper itself does not demonstrate. The "48 GPUs" detail is treated here as a study-specific context indicator, not as standalone proof of broad operational maturity.
-
-| Source        | Venue                 | Year | Method                           | Domain                 | Evidence Grade                                                               |
-| ------------- | --------------------- | ---- | -------------------------------- | ---------------------- | ---------------------------------------------------------------------------- |
-| Karuna et al. | IEEE ICICAT           | 2024 | GNN (GCN) vs baselines           | Financial traceability | Quantitative; internal evaluation; no confirmed public replication artifacts |
-| Pina et al.   | ACM WWW '23 Companion | 2023 | Provenance integration prototype | DL lifecycle (general) | Architectural; feasibility demonstrated; no overhead benchmarks              |
-| Souza et al.  | WORKS @ SC 2019       | 2019 | PROV-ML + ProvLake extensions    | O&G / CSE              | Practical; 48-GPU evaluation; single-domain validation                       |
+This article is designed for technical and governance learning. It does not provide legal, regulatory, or procurement advice. It is not legal advice. Readers should validate applicability against their own jurisdiction, risk model, and production constraints.
 
 ---
 
@@ -190,41 +140,41 @@ A strong synthesis is not only accumulation of supportive findings. It also look
 
 ## Frequently Asked Questions
 
-### What is data provenance in machine learning?
+### What is data provenance in the machine-learning lifecycle, beyond basic lineage?
 
 Data provenance in machine learning is the record of where training data originated, how it was cleaned and transformed, which model versions it produced, and which individuals or systems were responsible at each stage. Provenance answers the question "why does this model behave this way?" by tracing outputs back to input data and pipeline decisions. All three papers in this review treat provenance as a lifecycle-design requirement rather than a logging afterthought.
 
-### What is the difference between data provenance and data lineage?
+### How is ML data provenance different from standard data lineage?
 
 Data provenance and data lineage both trace data through a pipeline, but they differ in focus. Lineage records where data moved, which inputs fed which outputs. Provenance adds agent information: who or what performed each transformation, under what conditions, for what purpose, and with what authorization. The [W3C PROV](https://www.w3.org/TR/prov-overview/) standard formalizes this distinction using the entity-activity-agent model that Souza et al. extend in PROV-ML {% include references/cite.html key="prov-2026-ref3" %}.
 
-### What tools are used for data provenance in machine learning?
+### Which tooling patterns are most relevant for ML provenance implementation today for data provenance?
 
 Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier {% include references/cite.html key="prov-2026-ref1" %}, Pina et al. integrate separate lifecycle tools using DNNProv and Chapman et al.'s preprocessing capture {% include references/cite.html key="prov-2026-ref2" %}, and Souza et al. extend ProvLake with the PROV-ML vocabulary {% include references/cite.html key="prov-2026-ref3" %}. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem.
 
-### How does PROV-ML extend W3C PROV for machine learning?
+### How does PROV-ML extend W3C PROV for machine-learning-specific traceability for data provenance?
 
 PROV-ML, proposed by Souza et al., extends the base [W3C PROV](https://www.w3.org/TR/prov-overview/) model with [W3C ML Schema](https://www.w3.org/TR/ml-schema/) vocabulary to capture ML-specific concepts: hyperparameters, training runs, dataset versions, and evaluation metrics. It maps four user personas (domain scientists, computational engineers, ML engineers, and provenance specialists) to provenance query patterns. The PROV-ML design was evaluated in an oil and gas seismic classification pipeline using 48 GPUs through the ProvLake system. Whether it generalizes beyond that domain is an open question the paper does not demonstrate {% include references/cite.html key="prov-2026-ref3" %}.
 
 It claims scoped guidance from three papers. It does not claim field-wide representativeness or comparative superiority over the broader lineage tooling ecosystem.
 
-### Is the reported 91.3% GCN figure a universal result?
+### Is the reported 91.3% GCN result generalizable beyond its study context for data provenance?
 
 No. It is a paper-reported result in one evaluation context {% include references/cite.html key="prov-2026-ref1" %}. This review does not treat it as a universal benchmark.
 
-### Why keep discussing preprocessing provenance?
+### Why does preprocessing provenance remain a high-risk traceability gap for data provenance?
 
 Because both relevance and complexity show up there: Pina et al. identify integration gaps at that stage {% include references/cite.html key="prov-2026-ref2" %}, and Souza et al. identify curation as difficult {% include references/cite.html key="prov-2026-ref3" %}.
 
-### Is PROV-ML already a standard?
+### Is PROV-ML an adopted standard or an emerging representation model for data provenance?
 
 In this evidence set, PROV-ML is best described as a proposed representation with promising applied evidence in a specific domain context {% include references/cite.html key="prov-2026-ref3" %}.
 
-### Should teams deploy provenance tooling immediately after reading this article?
+### Should teams deploy provenance tooling immediately, or run stack-specific pilots first for data provenance?
 
 Use this article as orientation, not as a deployment checklist. Before adoption decisions, compare against your own stack, load profile, compliance obligations, and failure modes.
 
-### What is the best next step for readers who want to go deeper?
+### What is the strongest next step for deeper ML provenance evaluation for data provenance?
 
 Run a broader review that includes MLflow, OpenLineage, Pachyderm, and DVC literature, then test candidate approaches against your production constraints and governance requirements.
 
@@ -233,3 +183,97 @@ Run a broader review that includes MLflow, OpenLineage, Pachyderm, and DVC liter
 This review does not yet include comparative analysis against production tooling ecosystems commonly used for lineage and experiment tracking. Priority next-pass sources should include MLflow, OpenLineage, Pachyderm, and DVC design and evaluation literature, followed by studies that report measurable interoperability and overhead outcomes under production load.
 
 A second priority is contradiction-seeking: identify studies where provenance integration increased operational complexity or where lineage capture failed to improve model governance outcomes. Without that adversarial read, synthesis risks confirmation bias.
+
+## Technical Appendix
+
+<details markdown="1" class="appendix-callout group">
+<summary class="appendix-summary">
+  <span class="appendix-summary-title"><strong>Source Inventory and Evidence Grading</strong></span>
+  <span class="inline-flex items-center gap-2">
+    <span class="appendix-state-chip inline-flex group-open:hidden" aria-hidden="true">Collapsed</span>
+    <span class="appendix-state-chip hidden group-open:inline-flex" aria-hidden="true">Expanded</span>
+    <svg class="appendix-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M7.05 4.55a.75.75 0 0 1 1.06 0l4.4 4.4a.75.75 0 0 1 0 1.06l-4.4 4.4a.75.75 0 1 1-1.06-1.06L10.92 10 7.05 6.11a.75.75 0 0 1 0-1.06Z" />
+    </svg>
+  </span>
+</summary>
+
+### Appendix Table of Contents
+
+- [Source Inventory and Evidence Grading](#source-inventory-and-evidence-grading)
+- [Scope and Verification Boundary](#scope-and-verification-boundary)
+- [Source-Level Assessment](#source-level-assessment)
+
+<blockquote>
+<strong>Synthesis note:</strong> This review prioritizes entity-activity-agent traceability because that structure is foundational for portable provenance interpretation.
+</blockquote>
+
+<figure>
+  <img src="/assets/images/data-provenance-ml-lifecycle-traceability-graph-methods.png" alt="Data provenance lifecycle with graph traceability links among preprocessing, training, and governance checkpoints" loading="lazy" decoding="async" width="1600" height="900" />
+  <figcaption>
+    Figure A1. Provenance evidence map across preprocessing, training, evaluation, and governance audit surfaces.
+  </figcaption>
+</figure>
+
+### Source-Level Assessment
+
+<dl>
+  <dt><dfn>Traceability completeness</dfn></dt>
+  <dd>The proportion of required lineage links that can be reconstructed for a model decision or pipeline output.</dd>
+
+  <dt><dfn>Integration overhead</dfn></dt>
+  <dd>The additional compute, storage, and operational burden introduced by provenance-capture and query infrastructure.</dd>
+
+  <dt><dfn>Persona-driven provenance</dfn></dt>
+  <dd>A provenance model tailored to distinct stakeholder information needs, such as ML engineers, domain scientists, and auditors.</dd>
+</dl>
+
+> **Claim-level labeling convention used throughout this article:**
+>
+> - **Verified finding**: directly stated or demonstrated in the cited source.
+> - **Inferred synthesis**: logical interpretation connecting findings across sources; not directly stated in any one paper.
+> - **Unverified detail**: plausible based on source context but not independently confirmed from the available text.
+
+### Source Inventory and Evidence Grading
+
+### Scope and Verification Boundary
+
+The source set is deliberately small and non-exhaustive. It supports a focused comparison, not a field-wide conclusion. In particular, this article does not benchmark these papers against widely used data lineage platforms such as MLflow, OpenLineage, Pachyderm, or DVC, and therefore does not claim comparative superiority over those ecosystems.
+
+### Karuna et al. (2024)
+
+This paper was published at the 2024 International Conference on IoT, Communication and Automation Technology (ICICAT), an IEEE conference {% include references/cite.html key="prov-2026-ref1" %}. The paper reports using a dataset described as containing 1,000,000 transactions from 100,000 entities at a global financial organization. The experimental design compares a Graph Convolutional Network implementation (built with PyTorch Geometric, trained on an NVIDIA Tesla V100 GPU) against logistic regression and random forest baselines.
+
+The paper reports the following metrics:
+
+| Model               | Accuracy | Precision | Recall | F1-Score |
+| ------------------- | -------- | --------- | ------ | -------- |
+| Logistic Regression | 78.4%    | 75.6%     | 77.2%  | 76.4%    |
+| Random Forest       | 82.1%    | 79.5%     | 80.4%  | 79.9%    |
+| GNN (GCN)           | 91.3%    | 89.7%     | 90.5%  | 90.1%    |
+
+The paper also reports traceability completeness improving from 75.6% to 92.4% {% include references/cite.html key="prov-2026-ref1" %}.
+
+**Evidence grade:** The numerical claims above are verified findings taken directly from the paper's reported results. These metrics are internal to the study's evaluation framework and reflect the authors' experimental setup rather than a community-accepted benchmark protocol. The paper excerpt reviewed here does not provide uncertainty statistics (for example, variance across runs or confidence intervals), and it does not make the task formulation behind "traceability completeness" fully transparent in this review context. Whether the dataset or code has been publicly released could not be confirmed (**unverified detail**).
+
+### Pina et al. (2023)
+
+This paper appeared in the Companion Proceedings of the ACM Web Conference 2023 (WWW '23 Companion) {% include references/cite.html key="prov-2026-ref2" %}. The work describes a prototype that integrates provenance data from preprocessing operations (captured using the approach of Chapman et al.) with training provenance captured by DNNProv. The authors present use cases derived from Data Science Stack Exchange questions and published literature.
+
+**Evidence grade:** The contribution is architectural. The paper demonstrates integration feasibility and formulates provenance queries that join preprocessing records with training metrics. It does not report production-scale overhead measurements for the integrated pipeline, and the current version is limited to structured data preprocessing. These characterizations are verified findings drawn from the paper text. The absence of quantitative stress testing means this source primarily supports a "can integrate" claim, not a "scales under production constraints" claim.
+
+### Souza et al. (2019)
+
+The paper is described on its title page as an author preprint accepted at the 14th WORKS Workshop, co-located with SC 2019 {% include references/cite.html key="prov-2026-ref3" %}. The publication venue claim is taken at face value from the paper's own statement; it was not independently verified against the proceedings record (**unverified detail**). The paper introduces PROV-ML as a proposed data representation (not an industry-adopted standard) that combines W3C PROV with W3C ML Schema. It provides extensions to the ProvLake system and reports evaluation in an oil and gas seismic classification application using 48 GPUs in parallel.
+
+The paper identifies four persona types whose provenance needs motivated the PROV-ML design: domain scientists, computational scientists and engineers, ML scientists and engineers, and provenance specialists {% include references/cite.html key="prov-2026-ref3" %}.
+
+**Evidence grade:** The PROV-ML representation, ProvLake extensions, 48-GPU evaluation, and persona characterization are verified findings, well-supported by the paper's abstract and body text. The generalizability to domains beyond the reported oil and gas case is an open claim the paper itself does not demonstrate. The "48 GPUs" detail is treated here as a study-specific context indicator, not as standalone proof of broad operational maturity.
+
+| Source        | Venue                 | Year | Method                           | Domain                 | Evidence Grade                                                               |
+| ------------- | --------------------- | ---- | -------------------------------- | ---------------------- | ---------------------------------------------------------------------------- |
+| Karuna et al. | IEEE ICICAT           | 2024 | GNN (GCN) vs baselines           | Financial traceability | Quantitative; internal evaluation; no confirmed public replication artifacts |
+| Pina et al.   | ACM WWW '23 Companion | 2023 | Provenance integration prototype | DL lifecycle (general) | Architectural; feasibility demonstrated; no overhead benchmarks              |
+| Souza et al.  | WORKS @ SC 2019       | 2019 | PROV-ML + ProvLake extensions    | O&G / CSE              | Practical; 48-GPU evaluation; single-domain validation                       |
+
+</details>

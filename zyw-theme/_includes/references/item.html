@@ -123,6 +123,16 @@
     {%- endfor -%}
   {%- endif -%}
 {%- endcapture -%}
+{%- assign note_is_redundant = false -%}
+{%- if note_text != '' -%}
+  {%- if item.ieee_base and item.ieee_base contains note_text -%}
+    {%- assign note_is_redundant = true -%}
+  {%- elsif item.harvard_base and item.harvard_base contains note_text -%}
+    {%- assign note_is_redundant = true -%}
+  {%- elsif item.text and item.text contains note_text -%}
+    {%- assign note_is_redundant = true -%}
+  {%- endif -%}
+{%- endif -%}
 
 {%- assign doi_href = item.doi | prepend: 'https://doi.org/' -%}
 {%- assign doi_label = item.doi -%}
@@ -212,7 +222,9 @@
       {%- if effective_accessed_label != '' and ref_is_online -%}
         {{ ' ' }}Accessed: {{ effective_accessed_label }}.
       {%- endif -%}
-      {%- if note_html != '' -%}{{ note_html }}{%- endif -%}
+      {%- if note_html != '' and note_is_redundant == false -%}
+        {{ note_html }}
+      {%- endif -%}
     {%- elsif item.ieee -%}
       {%- assign ieee_text_without_accessed = item.ieee
         | split: 'Accessed:'
@@ -224,14 +236,18 @@
       {%- if effective_accessed_label != '' and ref_is_online -%}
         {{ ' ' }}Accessed: {{ effective_accessed_label }}.
       {%- endif -%}
-      {%- if note_html != '' -%}{{ note_html }}{%- endif -%}
+      {%- if note_html != '' and note_is_redundant == false -%}
+        {{ note_html }}
+      {%- endif -%}
     {%- elsif item.text -%}
       {%- assign text_html = item.text | markdownify -%}
       {{ text_html | replace: '<p>', '' | replace: '</p>', '' }}
       {%- if effective_accessed_label != '' and ref_is_online -%}
         {{ ' ' }}Accessed: {{ effective_accessed_label }}.
       {%- endif -%}
-      {%- if note_html != '' -%}{{ note_html }}{%- endif -%}
+      {%- if note_html != '' and note_is_redundant == false -%}
+        {{ note_html }}
+      {%- endif -%}
     {%- else -%}
       {%- if item.authors -%}{{ item.authors }},{%- endif -%}
       {%- if item.title -%}
@@ -280,7 +296,9 @@
       {%- elsif item.accessed -%}
         {{ ' ' }}Accessed: {{ item.accessed }}.
       {%- endif -%}
-      {%- if note_html != '' -%}{{ note_html }}{%- endif -%}
+      {%- if note_html != '' and note_is_redundant == false -%}
+        {{ note_html }}
+      {%- endif -%}
     {%- endif -%}
   {%- elsif refs_style == 'harvard' -%}
     {%- if item.harvard_base -%}
@@ -302,7 +320,9 @@
       {%- if effective_accessed_label != '' and ref_is_online -%}
         {{ ' ' }}Accessed: {{ effective_accessed_label }}.
       {%- endif -%}
-      {%- if note_html != '' -%}{{ note_html }}{%- endif -%}
+      {%- if note_html != '' and note_is_redundant == false -%}
+        {{ note_html }}
+      {%- endif -%}
     {%- elsif item.harvard -%}
       {%- assign harvard_text_without_accessed = item.harvard
         | split: 'Accessed:'
@@ -450,7 +470,7 @@
         >.
       {%- endif -%}
 
-      {%- if note_html != '' -%}
+      {%- if note_html != '' and note_is_redundant == false -%}
         {{ note_html }}
       {%- endif -%}
     {%- else -%}

@@ -37,6 +37,56 @@
 {%- assign auto_post_terms = null -%}
 {%- assign auto_page_terms = null -%}
 {%- assign auto_terms = null -%}
+{%- assign schema_author_name = page.author | default: site.author -%}
+{%- assign schema_author_url = null -%}
+{%- assign schema_author_links = null -%}
+{%- assign schema_author_job_title = null -%}
+{%- assign schema_author_image = null -%}
+{%- assign schema_author_record = null -%}
+{%- if page.author -%}
+  {%- assign schema_author_record = site.authors
+    | where: 'short_name', page.author
+    | first
+  -%}
+  {%- unless schema_author_record -%}
+    {%- assign schema_author_record = site.authors
+      | where: 'name', page.author
+      | first
+    -%}
+  {%- endunless -%}
+{%- endif -%}
+{%- if schema_author_record -%}
+  {%- assign schema_author_name = schema_author_record.name
+    | default: schema_author_name
+  -%}
+  {%- if schema_author_record.url -%}
+    {%- assign schema_author_url = schema_author_record.url | absolute_url -%}
+  {%- endif -%}
+  {%- if schema_author_record.position -%}
+    {%- assign schema_author_job_title = schema_author_record.position -%}
+  {%- endif -%}
+  {%- if schema_author_record.avatar -%}
+    {%- assign schema_author_image = schema_author_record.avatar
+      | absolute_url
+    -%}
+  {%- endif -%}
+  {%- if schema_author_record.links and schema_author_record.links.size > 0 -%}
+    {%- assign schema_author_links = schema_author_record.links -%}
+  {%- endif -%}
+{%- endif -%}
+{%- assign page_published_at = page.date
+  | default: site.time
+  | date_to_xmlschema
+-%}
+{%- assign page_modified_at = page.last_modified_at
+  | default: page.date
+  | default: site.time
+  | date_to_xmlschema
+-%}
+{%- assign page_word_count = page.content | strip_html | number_of_words -%}
+{%- assign speakable_selectors = '#post-content h2,#post-content p,.post-content h2,.post-content p,article h2,article p'
+  | split: ','
+-%}
 {%- if seo_auto
   and page_slug_key != ''
   and seo_auto.posts
@@ -102,6 +152,8 @@
     "url": {{ canonical_url | jsonify }},
     "inLanguage": {{ page_lang | jsonify }},
     "description": {{ page_desc | strip | strip_newlines | jsonify }},
+    "datePublished": {{ page_published_at | jsonify }},
+    "dateModified": {{ page_modified_at | jsonify }},
     "primaryImageOfPage": {
       "@type": "ImageObject",
       "url": {{ page_image | jsonify }}
@@ -110,7 +162,11 @@
       "@type": "WebSite",
       "name": {{ site.title | jsonify }},
       "url": {{ site.url | jsonify }}
-    }{% if seo_cfg and seo_cfg.knows_about %},
+    }{% if page.layout == 'post' %},
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [{% for selector in speakable_selectors %}{{ selector | strip | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]
+    }{% endif %}{% if seo_cfg and seo_cfg.knows_about %},
     "about": [{% for topic in seo_cfg.knows_about %}{"@type":"Thing","name":{{ topic | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}{% if seo_auto and seo_auto.key_phrases and seo_auto.key_phrases.size > 0 %},{% for phrase in seo_auto.key_phrases limit: 12 %}{"@type":"Thing","name":{{ phrase | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}{% endif %}]{% endif %}
   }
 </script>
@@ -152,24 +208,31 @@
       "headline": {{ page_title | jsonify }},
       "description": {{ page_desc | strip | strip_newlines | jsonify }},
       "url": {{ canonical_url | jsonify }},
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": {{ canonical_url | jsonify }}
-      },
-      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
-      "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+      "mainEntityOfPage": {{ canonical_url | jsonify }},
+      "datePublished": {{ page_published_at | jsonify }},
+      "dateModified": {{ page_modified_at | jsonify }},
+      "wordCount": {{ page_word_count }},
       "author": {
         "@type": "Person",
-        "name": {{ page.author | default: site.author | jsonify }}
+        "name": {{ schema_author_name | jsonify }}{% if schema_author_url %},
+        "url": {{ schema_author_url | jsonify }}{% endif %}{% if schema_author_links %},
+        "sameAs": [{% for profile in schema_author_links %}{{ profile.url | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %}{% if schema_author_job_title %},
+        "jobTitle": {{ schema_author_job_title | jsonify }}{% endif %}{% if schema_author_image %},
+        "image": {{ schema_author_image | jsonify }}{% endif %}
       },
       "publisher": {
         "@type": "Organization",
         "name": {{ publisher_name | jsonify }},
         "@id": {{ site.url | append: '#publisher' | jsonify }},
+        "url": {{ site.url | jsonify }},
         "logo": {
           "@type": "ImageObject",
           "url": {{ publisher_logo | jsonify }}
         }
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [{% for selector in speakable_selectors %}{{ selector | strip | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]
       }{% if page.image or seo_cfg.default_image %},
       "image": {{ page.image | default: seo_cfg.default_image | absolute_url | jsonify }}{% endif %}{% if page.tags %},
       "keywords": {{ page.tags | join: ', ' | jsonify }}{% elsif auto_post_terms and auto_post_terms.keywords %},
@@ -193,24 +256,31 @@
           "headline": {{ page_title | jsonify }},
           "description": {{ page_desc | strip | strip_newlines | jsonify }},
           "url": {{ canonical_url | jsonify }},
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": {{ canonical_url | jsonify }}
-          },
-          "datePublished": {{ page.date | default: site.time | date_to_xmlschema | jsonify }},
-          "dateModified": {{ page.last_modified_at | default: page.date | default: site.time | date_to_xmlschema | jsonify }},
+          "mainEntityOfPage": {{ canonical_url | jsonify }},
+          "datePublished": {{ page_published_at | jsonify }},
+          "dateModified": {{ page_modified_at | jsonify }},
+          "wordCount": {{ page_word_count }},
           "author": {
             "@type": "Person",
-            "name": {{ page.author | default: site.author | jsonify }}
+            "name": {{ schema_author_name | jsonify }}{% if schema_author_url %},
+            "url": {{ schema_author_url | jsonify }}{% endif %}{% if schema_author_links %},
+            "sameAs": [{% for profile in schema_author_links %}{{ profile.url | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %}{% if schema_author_job_title %},
+            "jobTitle": {{ schema_author_job_title | jsonify }}{% endif %}{% if schema_author_image %},
+            "image": {{ schema_author_image | jsonify }}{% endif %}
           },
           "publisher": {
             "@type": "Organization",
             "name": {{ publisher_name | jsonify }},
             "@id": {{ site.url | append: '#publisher' | jsonify }},
+            "url": {{ site.url | jsonify }},
             "logo": {
               "@type": "ImageObject",
               "url": {{ publisher_logo | jsonify }}
             }
+          },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [{% for selector in speakable_selectors %}{{ selector | strip | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]
           }{% if page.image or seo_cfg.default_image %},
           "image": {{ page.image | default: seo_cfg.default_image | absolute_url | jsonify }}{% endif %}
         }

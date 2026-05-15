@@ -1,8 +1,9 @@
-.PHONY: help bootstrap install start stop restart prebuild build publish clean serve seo-auto glossary-auto glossary-promote taxonomy-auto references-auto validate-faq validate-reference-dates validate-hero-images validate-editorial-depth
+.PHONY: help bootstrap install start stop restart prebuild build publish clean serve seo-auto glossary-auto glossary-promote taxonomy-auto references-auto validate-faq validate-reference-dates validate-hero-images validate-hero-cache validate-post-date-intervals validate-editorial-depth validate-post-contract
 
 # Variables
 BUNDLE := bundle exec
 JEKYLL := $(BUNDLE) jekyll
+PYTHON := $(shell if [ -x ../.venv/bin/python ]; then echo ../.venv/bin/python; else echo python3; fi)
 PORT := 4000
 HOST := localhost
 PID_FILE := .jekyll.pid
@@ -40,9 +41,12 @@ help:
 	@echo "  seo-auto     - Generate auto SEO/AEO/GEO vocabulary and FAQ extraction"
 	@echo "  glossary-auto - Generate auto glossary terminology candidates"
 	@echo "  glossary-promote - Promote approved auto glossary terms into glossary_terms.yml"
-	@echo "  validate-faq  - Validate non-empty FAQ extraction for posts"
+	@echo "  validate-faq  - Validate FAQ extraction quality (non-empty, non-generic, non-trivial answers)"
 	@echo "  validate-hero-images - Validate unique hero image usage and badge compliance"
+	@echo "  validate-hero-cache - Validate hero cache-busting consistency (preview and article templates)"
+	@echo "  validate-post-date-intervals - Validate publication date spacing and same-day collision rules"
 	@echo "  validate-editorial-depth POST=<post-path> - Validate editorial depth and human-voice policy"
+	@echo "  validate-post-contract POST=<post-path> - Validate new-post publication contract"
 	@echo "  validate-reference-dates - Validate reference accessed dates do not exceed post publication dates"
 	@echo "  taxonomy-auto - Run all automated taxonomy extractors"
 	@echo "  references-auto - Generate references data from BibTeX"
@@ -108,8 +112,12 @@ references-auto:
 	@echo "✓ References generated (_data/references_generated.yml)"
 
 validate-faq:
+	@echo "[faq] regenerating seo_auto.yml"
+	ruby scripts/generate_seo_auto.rb
 	@echo "Validating extracted FAQ questions for posts..."
 	ruby scripts/validate_seo_questions.rb
+	@echo "[faq] validating seo_auto.yml question and answer quality"
+	ruby scripts/validate_faq_quality.rb
 	@echo "✓ FAQ validation passed"
 
 validate-reference-dates:
@@ -119,8 +127,18 @@ validate-reference-dates:
 
 validate-hero-images:
 	@echo "Validating hero image uniqueness and branding compliance..."
-	python3 scripts/validate_hero_images.py
+	$(PYTHON) scripts/validate_hero_images.py
 	@echo "✓ Hero image validation passed"
+
+validate-hero-cache:
+	@echo "Validating hero cache consistency for preview cards and article hero..."
+	$(PYTHON) scripts/validate_hero_cache_consistency.py
+	@echo "✓ Hero cache consistency validation passed"
+
+validate-post-date-intervals:
+	@echo "Validating publication date intervals and same-day collisions..."
+	$(PYTHON) scripts/validate_post_date_intervals.py
+	@echo "✓ Publication date interval validation passed"
 
 validate-editorial-depth:
 	@if [ -z "$(POST)" ]; then \
@@ -131,7 +149,16 @@ validate-editorial-depth:
 	ruby scripts/validate_editorial_depth.rb "$(POST)"
 	@echo "✓ Editorial depth validation passed"
 
-prebuild: taxonomy-auto references-auto validate-faq validate-hero-images validate-reference-dates
+validate-post-contract:
+	@if [ -z "$(POST)" ]; then \
+		echo "✗ Missing POST path. Usage: make -C docs validate-post-contract POST=_posts/<file>.md"; \
+		exit 1; \
+	fi
+	@echo "Validating post publication contract for $(POST)..."
+	$(PYTHON) scripts/validate_post_publication_contract.py "$(POST)"
+	@echo "✓ Post publication contract validation passed"
+
+prebuild: taxonomy-auto references-auto validate-faq validate-hero-images validate-post-date-intervals validate-reference-dates
 	@echo "✓ Prebuild scripts complete"
 
 build: prebuild

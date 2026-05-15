@@ -88,7 +88,7 @@
 
   {%- assign label = include.label | default: computed_label | strip -%}
   {%- assign cite_class = include.class
-    | default: 'reference-cite text-sky-700 underline decoration-sky-300 underline-offset-2 hover:text-sky-800 dark:text-sky-300 dark:hover:text-sky-200'
+    | default: 'reference-cite -mx-1 inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded px-1 text-sky-700 underline decoration-sky-300 underline-offset-2 hover:text-sky-800 dark:text-sky-300 dark:hover:text-sky-200'
   -%}
 
   {{- include.prefix -}}<a class="{{ cite_class }}" href="#{{ cite_anchor | escape }}" data-cite-modal="true" data-cite-anchor="{{ cite_anchor | escape }}" data-cite-label="{{ label | escape }}" data-cite-title="{{ label | escape }}" aria-haspopup="dialog" aria-expanded="false">{{- label -}}</a>{{- include.suffix -}}

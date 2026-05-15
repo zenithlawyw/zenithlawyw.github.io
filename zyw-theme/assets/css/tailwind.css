@@ -228,6 +228,7 @@ input:where([type="button"]),
 input:where([type="reset"]),
 input:where([type="submit"]) {
   -webkit-appearance: button;
+  appearance: button;
   background-color: transparent;
   background-image: none;
 }
@@ -246,13 +247,16 @@ progress {
 }
 [type="search"] {
   -webkit-appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px;
 }
 ::-webkit-search-decoration {
   -webkit-appearance: none;
+  appearance: none;
 }
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
+  appearance: button;
   font: inherit;
 }
 summary {
@@ -2307,6 +2311,9 @@ video {
 .min-h-8 {
   min-height: 2rem;
 }
+.min-h-\[44px\] {
+  min-height: 44px;
+}
 .min-h-\[45px\] {
   min-height: 45px;
 }
@@ -2339,6 +2346,9 @@ video {
 }
 .min-w-0 {
   min-width: 0;
+}
+.min-w-\[44px\] {
+  min-width: 44px;
 }
 .min-w-\[8\.5rem\] {
   min-width: 8.5rem;

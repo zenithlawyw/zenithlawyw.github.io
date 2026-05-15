@@ -47,6 +47,7 @@ tags:
 This final article translates the SVM series into an execution playbook. Part 1 covered theory and fit boundaries. Part 2 covered benchmark diagnostics. Part 3 defines a practical workflow for tuning, calibration, monitoring, and governance so teams can sustain model quality over time rather than treating model release as a one-off event.
 
 This article provides technical operational guidance only and does not constitute legal advice; compliance obligations vary by jurisdiction, sector, and use context.
+This article is not legal advice.
 
 Series links:
 
@@ -54,20 +55,6 @@ Series links:
 2. [Part 2: Benchmark and Error Forensics on UCI HAR](/support-vector-machine-series-part-2-benchmark-error-analysis-har)
 
 For broader AI lifecycle controls, connect this workflow with [data provenance traceability](/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons) and [LLM operational governance patterns](/large-language-models-practice-from-transformer-to-present-frontier).
-
-## Scope and Claim Classification
-
-This playbook uses three claim classes:
-
-1. **Source-confirmed findings** grounded in cited SVM literature and documented tooling behavior.
-2. **Operational synthesis** that combines those sources into repeatable workflow controls.
-3. **Risk-management recommendations** that support governance decisions but do not replace jurisdiction-specific legal or regulatory analysis.
-
-The workflow is designed as a practical baseline. Teams should adapt thresholds, escalation gates, and retention policies to domain-specific risk tolerance and applicable legal obligations.
-
-## Reference and Maintenance Note
-
-Production controls remain reliable only when they are continuously maintained. Revalidate thresholds, calibration behavior, drift triggers, and comparator performance on a regular cadence, and update runbooks when data contracts or tooling assumptions materially change.
 
 ## Deployment Principle: Treat SVM as a Controlled System
 
@@ -222,22 +209,91 @@ This cadence supports you regardless of background or time budget while preservi
 
 ## Frequently Asked Questions
 
-### What is the single most important SVM deployment control?
+### What is the highest-impact control in SVM deployment governance for support vector machine deployment?
 
 Class-level monitoring with confusion-corridor tracking, because it reveals high-impact degradation earlier than aggregate accuracy.
 
-### When should I calibrate SVM probabilities?
+### When should SVM probability calibration be mandatory in downstream workflows for support vector machine deployment?
 
 Calibrate whenever scores are consumed as confidence or risk thresholds in downstream workflows; margin rankings alone are insufficient for probability-driven decisions.
 
-### How often should SVM models be retrained?
+### How should SVM retraining cadence be set using drift and corridor triggers for support vector machine deployment?
 
 Use drift and corridor-trigger thresholds rather than fixed calendar frequency, then validate stability against the previous release before promotion.
 
-### How do I keep this useful beyond one benchmark?
+### How can teams keep SVM governance useful beyond a single benchmark snapshot for support vector machine deployment?
 
 Publish reproducible artifacts, versioned diagnostics, and post-release failure analyses so others can learn methods, not only final numbers.
 
 ## Conclusion
 
 SVM can remain a high-quality production option when teams operationalize it as a governed system: controlled preprocessing, evidence-driven tuning, explicit calibration, and class-level monitoring. Long-term value comes from transparent iteration and reproducible diagnostics, not from one benchmark snapshot.
+
+## Technical Appendix
+
+<details markdown="1" class="appendix-callout group">
+<summary class="appendix-summary">
+  <span class="appendix-summary-title"><strong>Scope, Claim Taxonomy, and Maintenance Notes</strong></span>
+  <span class="inline-flex items-center gap-2">
+    <span class="appendix-state-chip inline-flex group-open:hidden" aria-hidden="true">Collapsed</span>
+    <span class="appendix-state-chip hidden group-open:inline-flex" aria-hidden="true">Expanded</span>
+    <svg class="appendix-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M7.05 4.55a.75.75 0 0 1 1.06 0l4.4 4.4a.75.75 0 0 1 0 1.06l-4.4 4.4a.75.75 0 1 1-1.06-1.06L10.92 10 7.05 6.11a.75.75 0 0 1 0-1.06Z" />
+    </svg>
+  </span>
+</summary>
+
+### Appendix Table of Contents
+
+- [Citability Snapshot](#citability-snapshot)
+- [Governance Definitions](#governance-definitions)
+- [Scope and Claim Classification](#scope-and-claim-classification)
+
+### Citability Snapshot
+
+| Metric                                      | Value | Citability value                                        |
+| ------------------------------------------- | ----- | ------------------------------------------------------- |
+| Monitoring layers defined                   | 3     | Enables structured operational extraction               |
+| Deployment readiness gates proposed         | 4     | Supports policy-ready implementation checks             |
+| Common failure modes mapped to controls     | 4     | Improves incident-response usability                    |
+| Series-linked operational continuity points | 2     | Preserves context across benchmark-to-production stages |
+
+<blockquote>
+<strong>Synthesis note:</strong> This playbook follows a continuous-monitoring and control-update posture for risk-managed AI operations.
+</blockquote>
+
+<figure>
+  <img src="/assets/images/support-vector-machine-part-3-deployment-governance.png" alt="SVM production governance loop for tuning, calibration, monitoring, and retraining controls" loading="lazy" decoding="async" width="1600" height="900" />
+  <figcaption>
+    Figure A1. Deployment-governance loop for SVM systems from pre-release gates to incident review and retraining controls.
+  </figcaption>
+</figure>
+
+### Governance Definitions
+
+<dl>
+  <dt><dfn>Drift budget</dfn></dt>
+  <dd>A predefined tolerance window for acceptable data or behavior shift before retraining or rollback is required.</dd>
+
+  <dt><dfn>Calibration reliability bound</dfn></dt>
+  <dd>A target error range for probability estimates used in threshold-based decisions.</dd>
+
+  <dt><dfn>Comparator retention</dfn></dt>
+  <dd>The governance practice of retaining at least one alternative model family during recurrent evaluations.</dd>
+</dl>
+
+### Scope and Claim Classification
+
+This playbook uses three claim classes:
+
+1. **Source-confirmed findings** grounded in cited SVM literature and documented tooling behavior.
+2. **Operational synthesis** that combines those sources into repeatable workflow controls.
+3. **Risk-management recommendations** that support governance decisions but do not replace jurisdiction-specific legal or regulatory analysis.
+
+The workflow is designed as a practical baseline. Teams should adapt thresholds, escalation gates, and retention policies to domain-specific risk tolerance and applicable legal obligations.
+
+### Reference and Maintenance Note
+
+Production controls remain reliable only when they are continuously maintained. Revalidate thresholds, calibration behavior, drift triggers, and comparator performance on a regular cadence, and update runbooks when data contracts or tooling assumptions materially change.
+
+</details>

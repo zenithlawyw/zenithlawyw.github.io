@@ -48,7 +48,7 @@ Five recent papers from different subfields make the same core point: model qual
 
 Read together, the papers form two streams. Three papers are quantum-oriented and focus on semantic communication and language representation {% include references/cite.html key="qsc-2026-ref1" %}, {% include references/cite.html key="qsc-2026-ref2" %}, {% include references/cite.html key="qsc-2026-ref5" %}. Two are classical and focus on domain adaptation and clustering geometry {% include references/cite.html key="qsc-2026-ref3" %}, {% include references/cite.html key="qsc-2026-ref4" %}. The common thread is not just better scores. It is how representation structure controls what the model can preserve, separate, and generalize.
 
-This article is technical commentary for education and engineering analysis. It is not legal, regulatory, procurement, or investment advice. Any metric quoted here is paper-reported unless explicitly stated otherwise.
+This article is technical commentary for education and engineering analysis. It is not legal, regulatory, procurement, or investment advice. It is not legal advice. Any metric quoted here is paper-reported unless explicitly stated otherwise.
 
 ---
 
@@ -102,6 +102,18 @@ These takeaways are where readers can extract immediate value. They are concrete
 
 ---
 
+## Quick Definitions
+
+Representation geometry is the shape of the feature space that decides what data points stay close or far apart.
+
+A Hilbert space is a vector space with an inner product that lets models measure angle, distance, and projection in a consistent way.
+
+Semantic fidelity is how well a representation keeps task-relevant meaning after compression or transformation.
+
+Target discriminability is the degree to which target-domain classes stay separable after adaptation.
+
+---
+
 ## Where the Evidence Is Still Thin
 
 Two limitations remain important.
@@ -136,31 +148,29 @@ These are actionable next questions that can turn a promising research direction
 
 ## Frequently Asked Questions
 
-### What is representation learning in high-dimensional Hilbert spaces?
+### What does representation learning in high-dimensional Hilbert spaces mean in practice?
 
-In this article, it refers to learning embeddings where geometry captures task-relevant structure in large feature spaces, including quantum Hilbert spaces and kernel-induced Hilbert spaces {% include references/cite.html key="qsc-2026-ref1" %}, {% include references/cite.html key="qsc-2026-ref4" %}. The key point is that useful geometry matters more than dimensionality alone.
+It means learning embeddings where geometry keeps useful structure. Points from the same class should stay close. Different classes should stay apart. In this article, that applies to both quantum Hilbert spaces and kernel-induced Hilbert spaces {% include references/cite.html key="qsc-2026-ref1" %}, {% include references/cite.html key="qsc-2026-ref4" %}.
 
-### Do quantum semantic communication methods already outperform classical systems in production?
+### Do quantum semantic communication methods currently outperform classical systems in production for representation learning?
 
-Current evidence in this source set is simulation-first, not production-validated at scale {% include references/cite.html key="qsc-2026-ref1" %}, {% include references/cite.html key="qsc-2026-ref2" %}. The practical interpretation is feasibility signal, not confirmed deployment superiority.
+Not yet. The evidence in this set is mostly simulation-first, not production-validated at scale {% include references/cite.html key="qsc-2026-ref1" %}, {% include references/cite.html key="qsc-2026-ref2" %}. The current signal is technical feasibility, not proven operational superiority.
 
-### Why is discriminability as important as alignment in unsupervised domain adaptation?
+### Why is target discriminability as critical as alignment in unsupervised domain adaptation for representation learning?
 
-Qiang et al. show that distribution alignment and source risk minimization can still leave target features insufficiently separable {% include references/cite.html key="qsc-2026-ref3" %}. Adding target-discriminability constraints addresses this under-specification and improves adaptation consistency.
+Alignment can make domains look similar while classes still overlap. Qiang et al. show that this hurts prediction quality in target data {% include references/cite.html key="qsc-2026-ref3" %}. Adding discriminability constraints helps keep class boundaries clear.
 
-### How does multi-kernel deep clustering differ from standard deep clustering?
+### How does multi-kernel deep clustering differ from standard deep clustering pipelines for representation learning?
 
-DMKCN learns adaptive kernel combinations and jointly optimizes clustering structure and representation quality, instead of relying on one fixed kernel or reconstruction-only objectives {% include references/cite.html key="qsc-2026-ref4" %}. This improves separability on heterogeneous manifolds but increases tuning complexity.
+DMKCN learns adaptive kernel mixes and optimizes clustering and representation quality together {% include references/cite.html key="qsc-2026-ref4" %}. Standard pipelines often use one fixed kernel or reconstruction-heavy goals. The trade-off is better separability with more tuning work.
 
-### Is high quantum circuit fidelity the same as strong semantic understanding in QNLP?
+### Is high quantum circuit fidelity equivalent to strong semantic understanding in QNLP for representation learning?
 
-Not necessarily. Circuit fidelity measures closeness to expected quantum states, while semantic adequacy concerns whether linguistic meaning is preserved for the task {% include references/cite.html key="qsc-2026-ref5" %}. Both should be evaluated together.
+No. Circuit fidelity measures state accuracy. Semantic adequacy measures whether meaning is preserved for the task {% include references/cite.html key="qsc-2026-ref5" %}. Teams should evaluate both at the same time.
 
-### What is the safest way to apply these five papers in real projects?
+### What is the safest way to translate these five papers into real project decisions for representation learning?
 
-Use evidence-maturity gates: simulation validation, then constrained pilot, then production rollout only after stability, uncertainty, and cost checks pass. This staged approach is consistent with the uneven evidence maturity across the five sources.
-
----
+Use staged evidence gates. Start with simulation validation. Move to a constrained pilot. Scale to production only after stability, uncertainty, and cost checks pass. This matches the mixed maturity of the five sources.
 
 ## Source Representativeness Limits
 
@@ -176,8 +186,44 @@ These limits apply to the synthesis itself, not only to the source papers. Both 
 
 ---
 
-<details>
-<summary><strong>Technical Appendix: Paper Metadata and Reference Details</strong></summary>
+## Technical Appendix
+
+<details markdown="1" class="appendix-callout group">
+<summary class="appendix-summary">
+  <span class="appendix-summary-title"><strong>Paper Metadata and Reference Details</strong></span>
+  <span class="inline-flex items-center gap-2">
+    <span class="appendix-state-chip inline-flex group-open:hidden" aria-hidden="true">Collapsed</span>
+    <span class="appendix-state-chip hidden group-open:inline-flex" aria-hidden="true">Expanded</span>
+    <svg class="appendix-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M7.05 4.55a.75.75 0 0 1 1.06 0l4.4 4.4a.75.75 0 0 1 0 1.06l-4.4 4.4a.75.75 0 1 1-1.06-1.06L10.92 10 7.05 6.11a.75.75 0 0 1 0-1.06Z" />
+    </svg>
+  </span>
+</summary>
+
+### Appendix Table of Contents
+
+- [Citability Snapshot](#citability-snapshot)
+- [Paper Metadata and Reference Details](#paper-metadata-and-reference-details)
+- [Terminology Definitions](#terminology-definitions)
+
+### Citability Snapshot
+
+| Metric                                        | Value | Why it improves citation quality         |
+| --------------------------------------------- | ----- | ---------------------------------------- |
+| Papers synthesized                            | 5     | Keeps evidence boundary explicit         |
+| Primary technical streams covered             | 3     | Supports cross-domain retrieval context  |
+| DOI-linked entries in metadata table          | 5     | Improves verifiability and traceability  |
+| FAQ items with direct implementation guidance | 6     | Strengthens answer-extraction usefulness |
+
+<blockquote>
+<strong>Synthesis note:</strong> Representation and metadata structures should remain machine-readable when findings are expected to be reusable and auditable.
+</blockquote>
+<figure>
+  <img src="/assets/images/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering.png" alt="Representation-learning synthesis map across quantum semantics, domain adaptation, and deep clustering" loading="lazy" decoding="async" width="1600" height="900" />
+  <figcaption>
+    Figure A1. Cross-domain representation-learning structure linking geometric assumptions to deployment-oriented interpretation.
+  </figcaption>
+</figure>
 
 <div class="overflow-x-auto">
   <table>
@@ -230,6 +276,19 @@ These limits apply to the synthesis itself, not only to the source papers. Both 
   </table>
 </div>
 
-<p>All DOIs listed above are sourced from the respective papers' own metadata and are treated as face-value (<strong>unverified detail</strong> for external DOI resolution confirmation).</p>
+<p>All DOIs listed above are sourced from the respective papers' own metadata and are presented as reported by those sources, without independent DOI-resolution revalidation in this article.</p>
+
+### Terminology Definitions
+
+<dl>
+  <dt><dfn>Semantic fidelity</dfn></dt>
+  <dd>The degree to which a learned representation preserves task-relevant meaning under transformation or compression.</dd>
+
+  <dt><dfn>Target discriminability</dfn></dt>
+  <dd>The extent to which target-domain classes remain separable after adaptation from a source domain.</dd>
+
+  <dt><dfn>Kernel mixing</dfn></dt>
+  <dd>An adaptive approach that combines multiple kernels to better model heterogeneous manifold structures.</dd>
+</dl>
 
 </details>

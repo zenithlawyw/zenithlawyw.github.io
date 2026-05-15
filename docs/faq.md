@@ -71,19 +71,9 @@ faq:
   <ul>
     {% for item in global_questions limit: 10 %}
       {% assign plain_answer = item.answer | markdownify | strip_html | replace: '\n', ' ' | replace: '  ', ' ' | strip %}
-      {% assign answer_sentences = plain_answer | split: '. ' %}
-      {% assign short_parts = answer_sentences | slice: 0, 2 %}
-      {% assign short_answer = short_parts | join: '. ' | strip %}
-      {% if short_answer == '' %}
-        {% assign short_answer = plain_answer | strip %}
-      {% endif %}
-      {% assign short_answer_last = short_answer | slice: -1, 1 %}
-      {% unless short_answer_last == '.' or short_answer_last == '!' or short_answer_last == '?' %}
-        {% assign short_answer = short_answer | append: '.' %}
-      {% endunless %}
       <li>
         <strong>{{ item.question }}</strong><br>
-        {{ short_answer }}
+        {{ plain_answer }}
       </li>
     {% endfor %}
   </ul>
@@ -100,21 +90,11 @@ faq:
       <h3 id="post-{{ slug }}">What Questions Does {{ display_title | escape }} Answer?</h3>
       <p><a href="{{ profile.url }}" class="-mx-1 inline-flex min-h-10 items-center rounded px-1">Open the full article: {{ display_title | escape }}</a></p>
       <ul>
-        {% for item in profile.questions limit: 3 %}
+        {% for item in profile.questions %}
           {% assign post_plain_answer = item.answer | markdownify | strip_html | replace: '\n', ' ' | replace: '  ', ' ' | strip %}
-          {% assign post_sentences = post_plain_answer | split: '. ' %}
-          {% assign post_short_parts = post_sentences | slice: 0, 2 %}
-          {% assign post_short_answer = post_short_parts | join: '. ' | strip %}
-          {% if post_short_answer == '' %}
-            {% assign post_short_answer = post_plain_answer | strip %}
-          {% endif %}
-          {% assign post_short_answer_last = post_short_answer | slice: -1, 1 %}
-          {% unless post_short_answer_last == '.' or post_short_answer_last == '!' or post_short_answer_last == '?' %}
-            {% assign post_short_answer = post_short_answer | append: '.' %}
-          {% endunless %}
           <li>
             <strong>{{ item.question }}</strong><br>
-            {{ post_short_answer }}
+            {{ post_plain_answer }}
           </li>
         {% endfor %}
       </ul>
