@@ -241,16 +241,15 @@ Retain policy-change history, failure and recovery evidence, intervention trends
 
 ## Technical Appendix
 
-<details markdown="1">
-<summary>
-  <span class="appendix-summary">
-    <span class="appendix-summary-title"><strong>Example Component Matrix and Initial Backlog</strong></span>
-    <span class="inline-flex items-center gap-2">
-      <span class="appendix-state-chip inline-flex" aria-hidden="true">Appendix</span>
-      <svg class="appendix-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false">
-        <path fill="currentColor" d="M7.05 4.55a.75.75 0 0 1 1.06 0l4.4 4.4a.75.75 0 0 1 0 1.06l-4.4 4.4a.75.75 0 1 1-1.06-1.06L10.92 10 7.05 6.11a.75.75 0 0 1 0-1.06Z" />
-      </svg>
-    </span>
+<details markdown="1" class="appendix-callout group">
+<summary class="appendix-summary">
+  <span class="appendix-summary-title"><strong>Corpus, Evidence Limits, and Practical Translation Map</strong></span>
+  <span class="inline-flex items-center gap-2">
+    <span class="appendix-state-chip inline-flex group-open:hidden" aria-hidden="true">Collapsed</span>
+    <span class="appendix-state-chip hidden group-open:inline-flex" aria-hidden="true">Expanded</span>
+    <svg class="appendix-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M7.05 4.55a.75.75 0 0 1 1.06 0l4.4 4.4a.75.75 0 0 1 0 1.06l-4.4 4.4a.75.75 0 1 1-1.06-1.06L10.92 10 7.05 6.11a.75.75 0 0 1 0-1.06Z" />
+    </svg>
   </span>
 </summary>
 
