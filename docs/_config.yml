@@ -19,6 +19,9 @@ description: >-
   doctoral research in data science, including metadata, 
   lineage, data quality, and AI/ML-ready platform abstractions.
 
+site_verification:
+  bing: "75D8018FB88654D7037F72D05D25E925"
+
 google_analytics: G-P49RPF7579
 gtm_container_id: ""
 enableDNT: "false"
