@@ -1,4 +1,8 @@
-{%- if page.url == '/' -%}
+{%- if page.url == '/'
+  and site.site_verification
+  and site.site_verification.bing
+  and site.site_verification.bing != ''
+-%}
   <!-- prettier-ignore -->
-  <meta name="msvalidate.01" content="75D8018FB88654D7037F72D05D25E925" />
+  <meta name="msvalidate.01" content="{{ site.site_verification.bing | escape }}" />
 {%- endif -%}
