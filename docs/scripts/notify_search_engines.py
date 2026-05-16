@@ -68,6 +68,23 @@ def http_form_post(url: str, form_data: dict[str, str]) -> tuple[int, str]:
         return exc.code, text
 
 
+def http_get(url: str, headers: dict[str, str] | None = None) -> tuple[int, str]:
+    req_headers = {
+        "User-Agent": "zenithlaw-search-notifier/1.0",
+    }
+    if headers:
+        req_headers.update(headers)
+
+    request = urllib.request.Request(url, headers=req_headers, method="GET")
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            text = response.read().decode("utf-8", errors="replace")
+            return response.status, text
+    except urllib.error.HTTPError as exc:
+        text = exc.read().decode("utf-8", errors="replace") if exc.fp else ""
+        return exc.code, text
+
+
 def http_put(url: str, headers: dict[str, str] | None = None) -> tuple[int, str]:
     req_headers = {
         "User-Agent": "zenithlaw-search-notifier/1.0",
@@ -156,7 +173,19 @@ def submit_bing_sitemap(site_url: str, sitemap_url: str) -> None:
     )
     request_url = f"{endpoint}?{query}"
 
-    status, body = http_put(request_url)
+    # Bing SubmitSiteMap endpoint expects GET semantics for query-style submission.
+    status, body = http_get(request_url)
+    if status == 405:
+        # Some edge environments may enforce POST instead of GET.
+        status, body = http_form_post(
+            endpoint,
+            {
+                "apikey": api_key,
+                "siteUrl": site_url,
+                "siteMap": sitemap_url,
+            },
+        )
+
     if 200 <= status < 300:
         log(f"Bing Webmaster sitemap submit success (status {status}).")
     else:
