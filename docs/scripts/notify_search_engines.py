@@ -163,33 +163,54 @@ def submit_bing_sitemap(site_url: str, sitemap_url: str) -> None:
         log("Skipping Bing Webmaster sitemap submit: BING_WEBMASTER_API_KEY is not configured.")
         return
 
-    endpoint = "https://ssl.bing.com/webmaster/api.svc/json/SubmitSiteMap"
-    query = urllib.parse.urlencode(
-        {
-            "apikey": api_key,
-            "siteUrl": site_url,
-            "siteMap": sitemap_url,
-        }
-    )
-    request_url = f"{endpoint}?{query}"
+    endpoints: list[str] = []
+    configured_endpoint = os.getenv("BING_WEBMASTER_ENDPOINT", "").strip()
+    if configured_endpoint:
+        endpoints.append(configured_endpoint)
 
-    # Bing SubmitSiteMap endpoint expects GET semantics for query-style submission.
-    status, body = http_get(request_url)
-    if status == 405:
-        # Some edge environments may enforce POST instead of GET.
-        status, body = http_form_post(
-            endpoint,
+    # Current and legacy endpoint variants.
+    endpoints.extend(
+        [
+            "https://www.bing.com/webmasters/api.svc/json/SubmitSiteMap",
+            "https://www.bing.com/webmaster/api.svc/json/SubmitSiteMap",
+            "https://ssl.bing.com/webmaster/api.svc/json/SubmitSiteMap",
+        ]
+    )
+
+    # De-duplicate while preserving order.
+    endpoints = list(dict.fromkeys(endpoints))
+
+    for endpoint in endpoints:
+        query = urllib.parse.urlencode(
             {
                 "apikey": api_key,
                 "siteUrl": site_url,
                 "siteMap": sitemap_url,
-            },
+            }
         )
+        request_url = f"{endpoint}?{query}"
 
-    if 200 <= status < 300:
-        log(f"Bing Webmaster sitemap submit success (status {status}).")
-    else:
-        log(f"Bing Webmaster sitemap submit failed with status {status}. Response: {body[:1000]}")
+        # Primary mode: query-based GET.
+        status, body = http_get(request_url)
+
+        # Fallback for environments that reject GET but allow form POST.
+        if status == 405:
+            status, body = http_form_post(
+                endpoint,
+                {
+                    "apikey": api_key,
+                    "siteUrl": site_url,
+                    "siteMap": sitemap_url,
+                },
+            )
+
+        if 200 <= status < 300:
+            log(f"Bing Webmaster sitemap submit success via {endpoint} (status {status}).")
+            return
+
+        log(f"Bing Webmaster sitemap submit attempt failed via {endpoint} (status {status}).")
+
+    log(f"Bing Webmaster sitemap submit failed across all endpoints. Last response: {body[:1000]}")
 
 
 def load_google_service_account_info() -> dict | None:
