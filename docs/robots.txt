@@ -33,5 +33,4 @@ Disallow: /node_modules/
 # Avoid crawling parameterized duplicates (e.g., UTM/query variants).
 Disallow: /*?*
 
-Host: zenithlaw.com
 Sitemap: {{ '/sitemap.xml' | absolute_url }}

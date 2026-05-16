@@ -25,6 +25,8 @@ theme
 
 # Python
 .venv
+__pycache__/
+*.py[cod]
 
 # Scripts
 scripts
