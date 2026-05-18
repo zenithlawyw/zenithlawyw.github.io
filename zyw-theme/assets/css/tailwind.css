@@ -2064,6 +2064,9 @@ video {
   left: 0;
   right: 0;
 }
+.-left-\[9999px\] {
+  left: -9999px;
+}
 .bottom-10 {
   bottom: 2.5rem;
 }
@@ -2245,6 +2248,9 @@ video {
 .inline-block {
   display: inline-block;
 }
+.inline {
+  display: inline;
+}
 .flex {
   display: flex;
 }
@@ -2254,11 +2260,17 @@ video {
 .table {
   display: table;
 }
+.table-row {
+  display: table-row;
+}
 .grid {
   display: grid;
 }
 .contents {
   display: contents;
+}
+.list-item {
+  display: list-item;
 }
 .hidden {
   display: none;
