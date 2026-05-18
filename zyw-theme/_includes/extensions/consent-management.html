@@ -1,7 +1,6 @@
 {%- assign consent_config = site.consent_management -%}
 {%- if consent_config and consent_config.enabled != false -%}
   <script>
-    <!--//
     (function () {
       var config = {{ site.consent_management | jsonify }} || {};
       var storageKey = config.storage_key || 'zyw_cookie_consent';
@@ -512,6 +511,5 @@
         bindConsentUi();
       }
     })();
-    //-->
   </script>
 {%- endif -%}

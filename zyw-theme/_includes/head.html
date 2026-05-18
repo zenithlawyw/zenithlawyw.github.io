@@ -68,6 +68,27 @@
   <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | relative_url }}">
   <script src="{{ "/assets/js/main.js" | relative_url }}" defer></script>
   {%- feed_meta -%}
+  <script>
+    /* Early stub: Google Translate calls this callback when loaded.
+       If the real init isn't ready yet, queue and replay when it is. */
+    (function () {
+      var realInit = null;
+      var called = false;
+      window.googleTranslateElementInit = function () {
+        if (realInit) {
+          realInit();
+        } else {
+          called = true;
+        }
+      };
+      window.__zywRegisterTranslateInit = function (fn) {
+        realInit = fn;
+        if (called) {
+          fn();
+        }
+      };
+    })();
+  </script>
   {%- include extensions/consent-management.html -%}
   {%- if jekyll.environment == 'production'
     and site.gtm_container_id
