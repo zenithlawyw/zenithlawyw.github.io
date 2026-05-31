@@ -53,13 +53,6 @@ tags:
   - kernel
 ---
 
-## Contents
-
-{: .no_toc}
-
-- TOC
-  {:toc}
-
 ## Introduction
 
 [Support Vector Machine](https://en.wikipedia.org/wiki/Support_vector_machine) {% include references/cite.html key="svm-2026-ref17" %} is still one of the clearest ways to reason about discriminative classification: it formalizes class separation as a margin-maximization problem with explicit controls for complexity and tolerance to error. That clarity makes SVM useful for rigorous model comparison and governance, even when a different model family eventually wins in production.

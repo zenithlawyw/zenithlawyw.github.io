@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-05-31T14:29:22Z"
+generated_at: "2026-05-31T14:44:33Z"
 signal_weights:
   title: 3
   categories: 5
@@ -34,7 +34,6 @@ keywords:
   - mcp
   - svm
   - chain
-  - contents
   - definitions
   - learning
   - retrieval
@@ -75,6 +74,7 @@ keywords:
   - geo
   - literature
   - npm
+  - contents
   - snapshot
   - table
   - sovereignty
@@ -227,7 +227,6 @@ key_phrases:
   - supply chain attack
   - axios npm supply
   - representation learning
-  - contents introduction
   - artificial intelligence artificial
   - intelligence artificial
   - intelligence artificial intelligence
@@ -249,10 +248,7 @@ key_phrases:
   - vector machine benchmark
   - engineering lessons
   - evidence review
-  - notes contents
-  - optimisation notes contents
   - coffman conditions
-  - contents introduction quick
   - introduction quick
   - introduction quick definitions
   - langgraph langchain
@@ -281,7 +277,8 @@ key_phrases:
   - data protection
   - data provenance machine
   - data residency
-  - notes contents introduction
+  - notes introduction
+  - optimisation notes introduction
   - provenance machine
   - provenance machine learning
   - retrieval augmented
@@ -316,6 +313,9 @@ key_phrases:
   - traceability graph
   - a2a acp agent
   - acp agent
+  - china cloud
+  - claim classification
+  - contents author
 catchwords:
   - engineering
   - governance
@@ -331,7 +331,6 @@ catchwords:
   - practical
   - supply
   - chain
-  - contents
   - definitions
   - learning
   - retrieval
@@ -366,6 +365,7 @@ catchwords:
   - axios
   - digital
   - literature
+  - contents
   - snapshot
   - table
   - sovereignty
@@ -567,7 +567,6 @@ search_words:
   - mcp
   - svm
   - chain
-  - contents
   - definitions
   - learning
   - retrieval
@@ -608,6 +607,7 @@ search_words:
   - geo
   - literature
   - npm
+  - contents
   - snapshot
   - table
   - sovereignty
@@ -689,7 +689,6 @@ search_words:
   - supply chain attack
   - axios npm supply
   - representation learning
-  - contents introduction
   - artificial intelligence artificial
   - intelligence artificial
   - intelligence artificial intelligence
@@ -708,6 +707,7 @@ search_words:
   - deep clustering
   - machine benchmark
   - platform engineering
+  - vector machine benchmark
 global_questions:
   - question: How do I handle documents that update frequently in a RAG system?
     answer: "Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. Li et al.'s survey of generative retrieval includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well."
@@ -985,7 +985,6 @@ posts:
       - appendix
       - attribution
       - compromised
-      - contents
       - control
       - defense
       - definitions
@@ -996,6 +995,7 @@ posts:
       - removal
       - teams
       - technical
+      - telemetry
       - supply chain security
       - social engineering
       - incident response
@@ -1003,28 +1003,28 @@ posts:
     key_phrases:
       - supply chain
       - axios npm
-      - npm supply chain
       - npm supply
-      - supply chain attack
+      - npm supply chain
       - chain attack
       - axios npm supply
+      - supply chain attack
       - social engineering
-      - trust provenance
       - incident response
-      - supply chain security
+      - trust provenance
       - chain security
+      - supply chain security
       - supply chain compromise
       - chain compromise
-      - engineering incident response
-      - social engineering incident
       - incident response trust
-      - security social engineering
+      - engineering incident response
       - response trust provenance
+      - social engineering incident
+      - security social engineering
       - chain security social
       - software supply
       - software supply chain
-      - response trust
       - security social
+      - engineering incident
     catchwords:
       - chain
       - supply
@@ -1050,10 +1050,10 @@ posts:
       - appendix
       - attribution
       - compromised
-      - contents
       - control
       - defense
       - definitions
+      - evidence
     search_words:
       - chain
       - supply
@@ -1075,16 +1075,16 @@ posts:
       - cybersecurity
       - supply chain
       - axios npm
-      - npm supply chain
       - npm supply
-      - supply chain attack
+      - npm supply chain
       - chain attack
       - axios npm supply
+      - supply chain attack
       - social engineering
-      - trust provenance
       - incident response
-      - supply chain security
+      - trust provenance
       - chain security
+      - supply chain security
     questions:
       - question: What happened in the 2026 axios npm supply chain compromise for axios npm supply chain attack?
         answer: Attackers published malicious axios versions on npm that introduced `plain-crypto-js@4.2.1`, which executed install-time malware delivery across multiple operating systems.
@@ -1132,7 +1132,6 @@ posts:
       - architecture
       - bifurcation
       - community
-      - contents
       - corpus
       - cross-border
       - definitions
@@ -1142,6 +1141,7 @@ posts:
       - regulatory
       - sovereign-aware
       - technical
+      - 21vianet
       - digital sovereignty
       - cloud compliance
       - platform engineering
@@ -1195,11 +1195,11 @@ posts:
       - architecture
       - bifurcation
       - community
-      - contents
       - corpus
       - cross-border
       - definitions
       - enterprise
+      - first
     search_words:
       - china
       - digital
@@ -1278,7 +1278,6 @@ posts:
       - technical
       - appendix
       - boundary
-      - contents
       - controls
       - definitions
       - design
@@ -1289,6 +1288,7 @@ posts:
       - practical
       - recurring
       - synthesis
+      - teams
       - large language model
       - prompt engineering
       - ai governance
@@ -1313,8 +1313,8 @@ posts:
       - lessons engineering
       - governance trustworthy
       - hallucination controls
+      - alignment knowledge distillation
       - lessons engineering governance
-      - gpt-3 alignment knowledge
       - artificial intelligence artificial
       - intelligence artificial intelligence
     catchwords:
@@ -1341,11 +1341,11 @@ posts:
       - technical
       - appendix
       - boundary
-      - contents
       - controls
       - definitions
       - design
       - evaluation
+      - limits
     search_words:
       - language
       - large
@@ -1424,7 +1424,6 @@ posts:
       - appendix
       - assessment
       - beyond
-      - contents
       - evidence
       - karuna
       - pina
@@ -1434,6 +1433,7 @@ posts:
       - requirements
       - souza
       - w3c
+      - lifecycle
       - data provenance
       - machine learning
       - graph neural network
@@ -1459,7 +1459,7 @@ posts:
       - network reproducibility governance
       - reproducibility governance data
       - governance data provenance
-      - network reproducibility
+      - governance data
       - governance lessons
       - reproducibility governance
     catchwords:
@@ -1487,10 +1487,10 @@ posts:
       - appendix
       - assessment
       - beyond
-      - contents
       - evidence
       - karuna
       - practical
+      - practitioners
     search_words:
       - provenance
       - data
@@ -1705,7 +1705,6 @@ posts:
       - appendix
       - choice
       - choices
-      - contents
       - core
       - decision
       - definitions
@@ -1721,6 +1720,7 @@ posts:
       - aeo
       - asked
       - authoritative
+      - baseline
       - support vector machine
       - machine learning
       - model tuning
@@ -1732,26 +1732,26 @@ posts:
       - vector machine
       - support vector machine
       - machine learning
-      - vector machine machine
+      - kernel support vector
+      - tuning kernel support
+      - model tuning kernel
+      - classification model tuning
+      - learning classification model
+      - machine learning classification
       - machine machine learning
+      - vector machine machine
       - kernel support
       - tuning kernel
       - model tuning
       - classification model
       - learning classification
       - machine machine
-      - machine learning classification
       - artificial intelligence
-      - learning classification model
-      - classification model tuning
-      - model tuning kernel
       - margins kernels
-      - tuning kernel support
-      - kernel support vector
+      - intelligence artificial intelligence
+      - artificial intelligence artificial
       - algorithm variants
-      - svm strong
-      - strong fit
-      - svm strong fit
+      - intelligence artificial
     catchwords:
       - machine
       - support
@@ -1770,7 +1770,6 @@ posts:
       - appendix
       - choice
       - choices
-      - contents
       - decision
       - definitions
       - guide
@@ -1781,6 +1780,7 @@ posts:
       - variants
       - selection
       - asked
+      - authoritative
     search_words:
       - machine
       - svm
@@ -1803,14 +1803,14 @@ posts:
       - vector machine
       - support vector machine
       - machine learning
-      - vector machine machine
+      - kernel support vector
+      - tuning kernel support
+      - model tuning kernel
+      - classification model tuning
+      - learning classification model
+      - machine learning classification
       - machine machine learning
-      - kernel support
-      - tuning kernel
-      - model tuning
-      - classification model
-      - learning classification
-      - machine machine
+      - vector machine machine
     questions:
       - question: Why is SVM still valuable in 2026 despite dominant deep-learning workflows for support vector machine?
         answer: SVM gives a transparent optimization framework that remains highly useful for structured, medium-scale classification and for disciplined baseline construction before scaling to heavier architectures.
@@ -1847,7 +1847,6 @@ posts:
       - intelligence
       - accuracy
       - appendix
-      - contents
       - definitions
       - forensics
       - insufficient
@@ -1860,6 +1859,7 @@ posts:
       - level
       - metrics
       - aeo
+      - aggregate
       - support vector machine
       - confusion matrix
       - model evaluation
@@ -1909,7 +1909,6 @@ posts:
       - intelligence
       - accuracy
       - appendix
-      - contents
       - definitions
       - forensics
       - insufficient
@@ -1918,6 +1917,7 @@ posts:
       - analysis
       - class
       - diagnostics
+      - implementation
     search_words:
       - benchmark
       - machine
@@ -1984,7 +1984,6 @@ posts:
       - appendix
       - benchmark
       - cadence
-      - contents
       - decision
       - definitions
       - playbook
@@ -1998,6 +1997,7 @@ posts:
       - baseline
       - behavior
       - best
+      - beyond
       - support vector machine
       - model tuning
       - model governance
@@ -2011,7 +2011,7 @@ posts:
       - model governance
       - deployment model
       - deployment model governance
-      - artificial intelligence
+      - monitoring support
       - tuning workflow
       - deployment svm
       - vector machine model
@@ -2022,11 +2022,11 @@ posts:
       - governance monitoring support
       - monitoring support vector
       - machine deployment svm
+      - governance monitoring
+      - artificial intelligence
       - deployment governance
       - machine model
       - model tuning
-      - tuning deployment
-      - monitoring support
     catchwords:
       - deployment
       - machine
@@ -2049,13 +2049,13 @@ posts:
       - appendix
       - benchmark
       - cadence
-      - contents
       - decision
       - definitions
       - playbook
       - retraining
       - selection
       - snapshot
+      - series
     search_words:
       - deployment
       - machine
@@ -2083,7 +2083,7 @@ posts:
       - model governance
       - deployment model
       - deployment model governance
-      - artificial intelligence
+      - monitoring support
       - tuning workflow
       - deployment svm
       - vector machine model
@@ -2132,10 +2132,10 @@ posts:
       - capability
       - collaboration
       - considerations
-      - contents
       - deployment
       - fit
       - human-in-the-loop
+      - matter
       - agent interoperability
       - protocol design
       - multi-agent system
@@ -2146,8 +2146,8 @@ posts:
       - mcp a2a acp
       - orchestration mcp a2a
       - orchestration mcp
-      - a2a acp mcp
       - acp mcp
+      - a2a acp mcp
       - a2a acp agent
       - acp agent interoperability
       - trust boundaries
@@ -2192,8 +2192,8 @@ posts:
       - capability
       - collaboration
       - considerations
-      - contents
       - deployment
+      - human-in-the-loop
     search_words:
       - a2a
       - mcp
@@ -2218,8 +2218,8 @@ posts:
       - mcp a2a acp
       - orchestration mcp a2a
       - orchestration mcp
-      - a2a acp mcp
       - acp mcp
+      - a2a acp mcp
       - a2a acp agent
       - acp agent interoperability
       - trust boundaries
@@ -2423,13 +2423,13 @@ posts:
       - multi-kernel
       - alignment
       - appendix
-      - contents
       - critical
       - definitions
       - evidence
       - geometry
       - lessons
       - performance
+      - practitioners
       - representation learning
       - quantum computing
       - semantic communication
@@ -2487,9 +2487,9 @@ posts:
       - multi-kernel
       - alignment
       - appendix
-      - contents
       - critical
       - definitions
+      - evidence
     search_words:
       - learning
       - representation
@@ -2563,7 +2563,6 @@ posts:
       - fintech
       - intelligence
       - appendix
-      - contents
       - controls
       - corpus
       - decisions
@@ -2571,6 +2570,7 @@ posts:
       - early
       - graduated
       - guidance
+      - infrastructure
       - lightning network
       - cross-border payments
       - agentic ai
@@ -2586,22 +2586,22 @@ posts:
       - literature review
       - micropayments agentic
       - blockchain artificial intelligence
+      - network cross-border payments
+      - cross-border payments micropayments
+      - payments micropayments agentic
       - micropayments agentic blockchain
       - agentic blockchain literature
       - blockchain literature review
-      - fintech blockchain artificial
-      - payments micropayments agentic
-      - cross-border payments micropayments
       - blockchain literature
       - agentic blockchain
-      - network cross-border payments
-      - agentic commerce
-      - fintech blockchain
-      - blockchain artificial
-      - artificial intelligence
-      - cross-border payments
+      - fintech blockchain artificial
       - payments micropayments
-      - micropayments evidence review
+      - cross-border payments
+      - artificial intelligence
+      - blockchain artificial
+      - fintech blockchain
+      - agentic commerce
+      - micropayments evidence
     catchwords:
       - lightning
       - cross-border
@@ -2628,9 +2628,9 @@ posts:
       - fintech
       - intelligence
       - appendix
-      - contents
       - controls
       - corpus
+      - decisions
     search_words:
       - lightning
       - cross-border
@@ -2657,10 +2657,10 @@ posts:
       - literature review
       - micropayments agentic
       - blockchain artificial intelligence
+      - network cross-border payments
+      - cross-border payments micropayments
+      - payments micropayments agentic
       - micropayments agentic blockchain
-      - agentic blockchain literature
-      - blockchain literature review
-      - fintech blockchain artificial
     questions:
       - question: What is a realistic first milestone for a Lightning micropayment pilot for lightning network cross-border micropayments?
         answer: Start with one corridor, one policy set, one reconciliation flow, and one rollback plan. This scope is small enough to run fast and large enough to test the core risks. You can validate identity mapping, route behavior, and failure recovery without mixing many variables in one pilot.
@@ -2712,7 +2712,6 @@ posts:
       - agentic
       - appendix
       - author
-      - contents
       - control
       - definitions
       - lock-in
@@ -2726,31 +2725,32 @@ posts:
       - lightning network implementation guide
       - open source micropayment stack
       - bitcoin lightning production deployment
+      - autonomous agent payments architecture
     key_phrases:
       - lightning network
-      - lightning network implementation
       - network implementation
+      - lightning network implementation
       - implementation guide
       - network implementation guide
+      - implementation playbook
       - lightning network micropayments
+      - fintech engineering
       - network micropayments open
       - micropayments open deployment
+      - network micropayments
+      - micropayments open
+      - open deployment
+      - deployment software
+      - software architecture
+      - architecture testing
       - open deployment software
       - deployment software architecture
       - software architecture testing
-      - architecture testing
-      - software architecture
-      - deployment software
-      - implementation playbook
-      - fintech engineering
-      - network micropayments
-      - open deployment
-      - micropayments open
+      - testing lightning network
+      - architecture testing lightning
       - fintech engineering fintech
       - engineering fintech engineering
       - corridor lightning
-      - pilot corridor
-      - engineering fintech
     catchwords:
       - lightning
       - implementation
@@ -2777,9 +2777,9 @@ posts:
       - agentic
       - appendix
       - author
-      - contents
       - control
       - definitions
+      - lock-in
     search_words:
       - lightning
       - implementation
@@ -2800,17 +2800,17 @@ posts:
       - engineering
       - first
       - lightning network
-      - lightning network implementation
       - network implementation
+      - lightning network implementation
       - implementation guide
       - network implementation guide
+      - implementation playbook
       - lightning network micropayments
+      - fintech engineering
       - network micropayments open
       - micropayments open deployment
-      - open deployment software
-      - deployment software architecture
-      - software architecture testing
-      - architecture testing
+      - network micropayments
+      - micropayments open
     questions:
       - question: Which Lightning runtime should teams choose first for lightning network implementation guide?
         answer: Choose the runtime that best fits your team skills, operations model, and support plan. LND, Core Lightning, Eclair, and LDK can all work when used with clear boundaries. Keep node access behind adapters so migration risk stays low if reliability, ecosystem support, or governance needs change later.
@@ -2876,41 +2876,41 @@ posts:
       - appendix
       - applications
       - architectural
-      - contents
       - corpus
       - definitions
       - domain-specific
       - evolution
       - fine-tuning
+      - guidance
       - retrieval augmented generation
       - large language model
       - information retrieval
       - literature review
     key_phrases:
       - evidence review
+      - retrieval-augmented generation
+      - retrieval augmented generation
       - augmented generation
       - retrieval augmented
-      - retrieval augmented generation
-      - retrieval-augmented generation
+      - retrieval literature
+      - literature review
+      - review natural
+      - natural language
+      - language processing
+      - natural language processing
+      - review natural language
       - literature review natural
       - retrieval literature review
-      - healthcare deployment
       - model retrieval literature
       - language model retrieval
-      - review natural language
       - large language model
-      - language processing
-      - natural language
-      - review natural
-      - natural language processing
-      - literature review
-      - retrieval literature
+      - generation large language
+      - augmented generation large
+      - healthcare deployment
+      - artificial intelligence retrieval
       - model retrieval
       - language model
       - large language
-      - generation large
-      - generation large language
-      - augmented generation large
     catchwords:
       - retrieval
       - review
@@ -2960,17 +2960,17 @@ posts:
       - practical
       - retrieval-augmented
       - evidence review
+      - retrieval-augmented generation
+      - retrieval augmented generation
       - augmented generation
       - retrieval augmented
-      - retrieval augmented generation
-      - retrieval-augmented generation
-      - literature review natural
-      - retrieval literature review
-      - healthcare deployment
-      - model retrieval literature
-      - language model retrieval
+      - retrieval literature
+      - literature review
+      - review natural
+      - natural language
+      - language processing
+      - natural language processing
       - review natural language
-      - large language model
     questions:
       - question: What is the most important finding from this RAG evidence review?
         answer: Cuconasu et al.'s discovery that semantically similar but non-answer-containing documents (distractors) degrade LLM accuracy more than completely random documents. This counter-intuitive finding challenges the assumption that higher retrieval scores produce better RAG outputs and has direct implications for how retrieval pipelines should be designed.

@@ -42,13 +42,6 @@ tags:
   - kernel method
 ---
 
-## Contents
-
-{: .no_toc}
-
-- TOC
-  {:toc}
-
 ## Introduction
 
 Recent papers from different subfields make the same core point: model quality is often a geometry problem before it becomes a deployment problem. If the representation space is well-structured, downstream tasks improve. If it is not, performance gains tend to be fragile.

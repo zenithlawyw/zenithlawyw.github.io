@@ -57,13 +57,6 @@ tags:
   - literature review
 ---
 
-## Contents
-
-{: .no_toc}
-
-- TOC
-  {:toc}
-
 ## Why This Review Matters
 
 Lightning is often discussed as a speed-and-fee story. The reviewed literature shows a different reality: teams usually succeed or fail on identity design, policy controls, and operational recovery long before they hit scaling limits.

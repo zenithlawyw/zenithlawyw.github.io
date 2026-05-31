@@ -46,13 +46,6 @@ tags:
   - tool orchestration
 ---
 
-## Contents
-
-{: .no_toc}
-
-- TOC
-  {:toc}
-
 ## Introduction
 
 Agentic AI systems are pushing enterprise software toward large-scale distributed coordination among models, tools, services, and humans. In that shift, protocol boundaries now shape delivery speed, operational risk, and cross-vendor interoperability as much as model quality.
