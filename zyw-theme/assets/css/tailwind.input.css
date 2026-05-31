@@ -91,4 +91,44 @@
   .glossary-inline-link {
     @apply -mx-1 inline-flex min-h-[45px] items-center rounded px-1 text-blue-700 underline dark:text-blue-300;
   }
+
+  /* Responsive progression flow: horizontal on wide, vertical on narrow */
+  .progression-flow {
+    @apply my-6 flex flex-col items-center gap-2 text-center;
+  }
+
+  .progression-flow__step {
+    @apply rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-sm font-medium text-gray-800 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200;
+  }
+
+  .progression-flow__arrow {
+    @apply text-lg text-gray-400 dark:text-gray-500;
+  }
+
+  .progression-flow__arrow--horizontal {
+    display: none !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .progression-flow__arrow--vertical {
+    display: inline !important;
+  }
+
+  @media (min-width: 640px) {
+    .progression-flow {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .progression-flow__arrow--horizontal {
+      display: inline !important;
+    }
+
+    .progression-flow__arrow--vertical {
+      display: none !important;
+    }
+  }
 }
