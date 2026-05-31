@@ -55,6 +55,13 @@ tags:
   - observability
 ---
 
+## Contents
+
+{: .no_toc}
+
+- TOC
+  {:toc}
+
 ## Introduction
 
 A deployable agentic orchestration stack succeeds or fails on separation of concerns. [MCP](https://modelcontextprotocol.io/) should carry model-to-tool and model-to-context integration. [A2A](https://a2a-protocol.org/latest/) should carry peer-agent delegation and long-running task collaboration. [ACP](https://agentcommunicationprotocol.dev/introduction/welcome) contributes REST-native agent interoperability patterns that many platform teams can operationalize with existing API governance controls {% include references/cite.html key="mcpa2a-2026-ref17" %}, {% include references/cite.html key="mcpa2a-2026-ref18" %}. [LangGraph](https://docs.langchain.com/oss/python/langgraph/overview) should own durable workflow state. [LangChain](https://docs.langchain.com/oss/python/langchain/overview) should help with model and tool abstractions when higher-level ergonomics are useful. [FastAPI](https://fastapi.tiangolo.com/) and [Pydantic](https://pydantic.dev/docs/validation/latest/get-started/) should provide typed service boundaries. [pytest](https://docs.pytest.org/en/stable/) should make the workflow testable. [OpenTelemetry](https://opentelemetry.io/docs/) should make it observable. [Docker](https://docs.docker.com/get-started/docker-overview/) should make it portable. [SLSA](https://slsa.dev/) and [Sigstore](https://www.sigstore.dev/) should strengthen release integrity evidence and provenance workflows {% include references/cite.html key="mcpa2a-2026-ref8" %}-{% include references/cite.html key="mcpa2a-2026-ref16" %}.
@@ -62,6 +69,25 @@ A deployable agentic orchestration stack succeeds or fails on separation of conc
 ACP status requires planning discipline. As of May 2026, ACP maintainers publicly described active convergence into A2A under Linux Foundation collaboration, so architecture choices should preserve migration-friendly boundaries {% include references/cite.html key="mcpa2a-2026-ref19" %}, {% include references/cite.html key="mcpa2a-2026-ref20" %}.
 
 That package combination is not the only viable one, but it is a coherent one. It yields a simple but sophisticated outcome: a coordinator agent that delegates work to specialist agents over A2A, while each specialist uses MCP to reach local tools and contextual resources. The stack is small enough for a single team to understand and strong enough to support progressive hardening.
+
+## Quick Definitions
+
+<dl>
+  <dt><dfn>Agentic orchestration</dfn></dt>
+  <dd>A design pattern in which a coordinator agent decomposes user requests into subtasks and delegates them to specialised agents with explicit state management, observability, and approval controls.</dd>
+
+  <dt><dfn>LangGraph</dfn></dt>
+  <dd>A Python framework for building stateful, multi-step agent workflows as directed graphs with durable checkpointing and human-in-the-loop support.</dd>
+
+  <dt><dfn>LangChain</dfn></dt>
+  <dd>A framework that provides composable abstractions for connecting language models to tools, retrievers, and memory, simplifying common LLM application patterns.</dd>
+
+  <dt><dfn>Agent Communication Protocol (ACP)</dfn></dt>
+  <dd>A REST-oriented agent interoperability protocol with synchronous, asynchronous, and streamed execution patterns, currently converging into A2A under Linux Foundation collaboration.</dd>
+
+  <dt><dfn>Directed acyclic graph (DAG)</dfn></dt>
+  <dd>A graph structure with directed edges and no cycles, used in workflow engines to represent task dependencies and ensure deterministic execution ordering.</dd>
+</dl>
 
 ## The Design Objective
 
@@ -355,6 +381,7 @@ The most valuable agentic stacks are not the ones with the most moving parts. Th
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Protocol Glossary](#protocol-glossary)
+- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -369,7 +396,7 @@ The most valuable agentic stacks are not the ones with the most moving parts. Th
 <strong>Synthesis note:</strong> End-to-end observability should be treated as a release prerequisite for multi-agent orchestration because protocol-layer failures are difficult to diagnose without trace continuity.
 </blockquote>
 
-<figure>
+<figure markdown="1">
   <img src="/assets/images/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook.png" alt="Deployable orchestration architecture linking MCP tools, A2A delegation, ACP-compatible interop, and observable workflow control" loading="lazy" decoding="async" width="1600" height="900" />
   <figcaption>
     Figure A1. Reference architecture map for protocol-layered orchestration with durability, testing, and observability controls.
@@ -429,5 +456,15 @@ An ACP-oriented description surface for discovery and interoperability, includin
 #### Structured validation
 
 Type-driven input or output validation, commonly implemented with Pydantic models or typed schemas to reduce ambiguity across service boundaries {% include references/cite.html key="mcpa2a-2026-ref11" %}.
+
+### SEO, GEO, and AEO Optimisation Notes
+
+**Target queries**: "agentic orchestration MCP A2A tutorial", "LangGraph LangChain multi-agent playbook", "open source AI agent stack", "Docker deployment for AI agents", "tenant-aware agent architecture".
+
+**Schema signals**: FAQPage schema with evidence-grounded answers, HowTo schema for implementation steps, Article schema with author attribution and datePublished.
+
+**AEO coverage**: FAQ implementation prompts, structured protocol glossary, citability snapshot with measurable deployment criteria, and package-level component references.
+
+**GEO coverage**: The open-source stack (FastAPI, LangGraph, Docker, OpenTelemetry) and protocol layers are globally available; cross-border orchestration controls and tenant isolation are explicitly addressed as design requirements.
 
 </details>

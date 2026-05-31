@@ -56,9 +56,16 @@ tags:
   - testing
 ---
 
+## Contents
+
+{: .no_toc}
+
+- TOC
+  {:toc}
+
 ## From Research to Buildable Architecture
 
-This playbook uses six papers as directional inputs on Lightning micropayment design, routing, and operational tradeoffs {% include references/cite.html key="ln-2026-ref1" %} {% include references/cite.html key="ln-2026-ref2" %} {% include references/cite.html key="ln-2026-ref3" %} {% include references/cite.html key="ln-2026-ref4" %} {% include references/cite.html key="ln-2026-ref5" %} {% include references/cite.html key="ln-2026-ref6" %}. Where specific claims are directly supported by those sources, inline citations mark them. Recommendations without a citation are implementation judgment and should be validated through pilot evidence before scale-up.
+This playbook uses the cited literature as directional inputs on Lightning micropayment design, routing, and operational tradeoffs {% include references/cite.html key="ln-2026-ref1" %} {% include references/cite.html key="ln-2026-ref2" %} {% include references/cite.html key="ln-2026-ref3" %} {% include references/cite.html key="ln-2026-ref4" %} {% include references/cite.html key="ln-2026-ref5" %} {% include references/cite.html key="ln-2026-ref6" %}. Where specific claims are directly supported by those sources, inline citations mark them. Recommendations without a citation are implementation judgment and should be validated through pilot evidence before scale-up.
 
 For source-grounded context, read the paired [Lightning cross-border evidence review](/lightning-cross-border-micropayments-evidence-review). For orchestration boundary design between payment flows and multi-agent systems, see the [agentic orchestration playbook](/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook) and the [MCP, A2A, and ACP boundary guide](/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems).
 
@@ -70,13 +77,32 @@ This is implementation guidance for technical planning only and is not legal adv
 
 ## Evidence Scope and Confidence Boundaries
 
-This post is a synthesis of six literature sources, with uneven evidence maturity across the set. It blends three evidence types, each with different confidence levels.
+This post is a synthesis of the cited literature, with uneven evidence maturity across the set. It blends three evidence types, each with different confidence levels.
 
-1. Source-cited statements from the six-paper set, including the sixth source as directional input where publication metadata is limited {% include references/cite.html key="ln-2026-ref6" %}.
+1. Source-cited statements from the reviewed literature, including one source treated as directional input where publication metadata is limited {% include references/cite.html key="ln-2026-ref6" %}.
 2. General reliability patterns from distributed-systems and payment operations practice.
 3. Author recommendations for sequencing and control design in early pilots.
 
 Treat this as a pilot-planning document, not production proof for regulated autonomous settlement at scale. Any production decision should be tied to measured outcomes in your own corridor tests.
+
+## Quick Definitions
+
+<dl>
+  <dt><dfn>Agentic micropayment</dfn></dt>
+  <dd>A low-value payment initiated, authorised, or settled by an autonomous software agent rather than a human operator, requiring machine-readable identity and policy controls.</dd>
+
+  <dt><dfn>Payment channel network</dfn></dt>
+  <dd>A mesh of interconnected payment channels that enables multi-hop routing of funds between parties who do not share a direct channel, as implemented by the Lightning Network.</dd>
+
+  <dt><dfn>Invoice-based settlement</dfn></dt>
+  <dd>A payment flow in which the recipient generates a cryptographic invoice containing a payment hash and amount, and the sender fulfils it by revealing the corresponding preimage through the channel network.</dd>
+
+  <dt><dfn>L402 protocol</dfn></dt>
+  <dd>An HTTP-native authentication and payment protocol that combines macaroon-based credentials with Lightning invoices to gate API access behind micropayment verification.</dd>
+
+  <dt><dfn>Programmable money</dfn></dt>
+  <dd>Digital currency whose transfer, holding, or release conditions are enforced by executable code rather than manual approval, enabling automated, policy-driven financial workflows.</dd>
+</dl>
 
 A practical jurisdiction baseline should include privacy, consumer, and payment controls. Depending on service design, teams typically need to evaluate UK GDPR and DPA 2018, EU GDPR plus local ePrivacy and consumer rules, US federal and state requirements including California, Canada PIPEDA with provincial overlays, Hong Kong PDPO, China PIPL, and Australia Privacy Act and ACL obligations. This list is not exhaustive.
 
@@ -263,12 +289,13 @@ Retain policy-change history, failure and recovery evidence, intervention trends
 - [E. Example Component Matrix](#e-example-component-matrix)
 - [F. Initial Backlog for First 30 Days](#f-initial-backlog-for-first-30-days)
 - [G. Known Uncertainty Log](#g-known-uncertainty-log)
+- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Author and Source Credibility
 
-This playbook is authored by [Zenith Law](/authors/zenith-law/) and builds on the paired six-paper evidence review plus implementation baselines from security and payments standards. For profile and publication context, see the [author profile](/authors/zenith-law/).
+This playbook is authored by [Zenith Law](/authors/zenith-law/) and builds on the paired evidence review plus implementation baselines from security and payments standards. For profile and publication context, see the [author profile](/authors/zenith-law/).
 
-Evidence quality across the six-paper set is mixed: two cited items are IEEE publications, several are preprint or non-peer-reviewed outputs, and one source has limited publication metadata {% include references/cite.html key="ln-2026-ref6" %}. The paper set is therefore useful for hypothesis generation and design direction, but not sufficient as standalone proof of production viability.
+Evidence quality across the reviewed literature is mixed: two cited items are IEEE publications, several are preprint or non-peer-reviewed outputs, and one source has limited publication metadata {% include references/cite.html key="ln-2026-ref6" %}. The paper set is therefore useful for hypothesis generation and design direction, but not sufficient as standalone proof of production viability.
 
 Authoritative external references used throughout implementation planning include:
 
@@ -289,13 +316,13 @@ Authoritative external references used throughout implementation planning includ
 | FAQ implementation questions answered | 15    | Strong long-tail answer-engine coverage          |
 
 <blockquote>
-  <strong>Synthesis note:</strong> Across the six cited papers, the recurring pattern is that deployment durability correlates more with identity, policy, and recovery control maturity than with headline throughput. This is the author's interpretive synthesis, not a statistical finding from the sources.
+  <strong>Synthesis note:</strong> Across the cited papers, the recurring pattern is that deployment durability correlates more with identity, policy, and recovery control maturity than with headline throughput. This is the author's interpretive synthesis, not a statistical finding from the sources.
 </blockquote>
 
-<figure>
+<figure markdown="1">
   <img src="/assets/images/lightning-network-agentic-micropayments-open-source-implementation-playbook.png" alt="Open-source Lightning implementation workflow from pilot setup to production hardening with identity, policy, and recovery controls" loading="lazy" decoding="async" width="1600" height="900" />
   <figcaption>
-    Figure 1. Implementation path from six-paper evidence to deployable controls: 3-phase rollout, 5 control planes, and 5 reliability metrics for production decision gates {% include references/cite.html key="ln-2026-ref1" %} {% include references/cite.html key="ln-2026-ref2" %} {% include references/cite.html key="ln-2026-ref3" %} {% include references/cite.html key="ln-2026-ref4" %} {% include references/cite.html key="ln-2026-ref5" %} {% include references/cite.html key="ln-2026-ref6" %}.
+    Figure 1. Implementation path from reviewed evidence to deployable controls: 3-phase rollout, 5 control planes, and 5 reliability metrics for production decision gates {% include references/cite.html key="ln-2026-ref1" %} {% include references/cite.html key="ln-2026-ref2" %} {% include references/cite.html key="ln-2026-ref3" %} {% include references/cite.html key="ln-2026-ref4" %} {% include references/cite.html key="ln-2026-ref5" %} {% include references/cite.html key="ln-2026-ref6" %}.
   </figcaption>
 </figure>
 
@@ -311,7 +338,7 @@ Authoritative external references used throughout implementation planning includ
 
 ### C. E-E-A-T and Author Traceability
 
-This playbook is authored by [Zenith Law](/authors/zenith-law/) and should be read together with the six cited Lightning papers plus public implementation standards from NIST and FATF. The technical posture here is practical engineering guidance, not legal advice.
+This playbook is authored by [Zenith Law](/authors/zenith-law/) and should be read together with the cited Lightning papers plus public implementation standards from NIST and FATF. The technical posture here is practical engineering guidance, not legal advice.
 
 ### D. Technical Term Definitions
 
@@ -350,5 +377,15 @@ This playbook is authored by [Zenith Law](/authors/zenith-law/) and should be re
 2. Policy thresholds for autonomous spend require iterative calibration.
 3. Production key-management model depends on governance maturity.
 4. Several source items are preprint or non-peer-reviewed; pilot evidence is required before hard lock-in decisions.
+
+### SEO, GEO, and AEO Optimisation Notes
+
+**Target queries**: "Lightning Network implementation guide", "open source micropayment stack", "bitcoin lightning production deployment", "autonomous agent payments architecture", "LND vs Core Lightning comparison".
+
+**Schema signals**: HowTo schema for implementation workflow steps, FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
+
+**AEO coverage**: Implementation citability snapshot, control comparison matrix for early production, technical term definitions for idempotent payment intent and autonomy tiering, component matrix and 30-day backlog.
+
+**GEO coverage**: The playbook addresses cross-border corridor design with explicit references to FATF, BIS, and NIST standards; implementation patterns are jurisdiction-neutral with policy-externalised compliance hooks for regional adaptation.
 
 </details>

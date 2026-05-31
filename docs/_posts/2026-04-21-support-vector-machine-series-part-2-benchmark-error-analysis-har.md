@@ -46,12 +46,38 @@ tags:
   - uci har
 ---
 
+## Contents
+
+{: .no_toc}
+
+- TOC
+  {:toc}
+
 ## Introduction
 
 This second article in the SVM series focuses on one question: what do benchmark results actually say about model behavior once we move beyond aggregate accuracy? Using the [UCI Human Activity Recognition dataset](https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones) {% include references/cite.html key="svm-2026-ref16" %}, we compare an RBF SVM pipeline against a Random Forest baseline and inspect class-level precision, recall, F1, confusion corridors, tuning stability, and PCA geometry signals.
 This article is not legal advice.
 
 If you have not read the conceptual foundation, start with [Part 1: Margins, Kernels, and Core Algorithms](/support-vector-machine-practical-guide-kernels-margin-tuning). For system-level reliability analogies in resource contention, see [deadlock and resource contention lessons](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm).
+
+## Quick Definitions
+
+<dl>
+  <dt><dfn>Benchmark evaluation</dfn></dt>
+  <dd>A controlled experimental comparison of model performance on a standardised dataset, using agreed metrics and reproducible splits to enable fair cross-method assessment.</dd>
+
+  <dt><dfn>Confusion matrix</dfn></dt>
+  <dd>A table that cross-tabulates predicted class labels against true class labels, revealing per-class error patterns such as false positives and false negatives.</dd>
+
+  <dt><dfn>Error analysis</dfn></dt>
+  <dd>The systematic inspection of misclassified instances to identify structured failure patterns, boundary weaknesses, and class-pair confusion corridors.</dd>
+
+  <dt><dfn>Human activity recognition (HAR)</dfn></dt>
+  <dd>A classification task that infers physical activities such as walking, sitting, or standing from sensor data, commonly benchmarked using the UCI HAR smartphone accelerometer dataset.</dd>
+
+  <dt><dfn>Cross-validation</dfn></dt>
+  <dd>A resampling procedure that partitions data into complementary training and validation subsets across multiple folds, providing a more robust estimate of model generalisation than a single train-test split.</dd>
+</dl>
 
 ## Benchmark Setup and Reproducibility Boundaries
 
@@ -223,6 +249,7 @@ The HAR benchmark shows a clear but nuanced result: SVM is robust and informativ
 - [Citability Snapshot](#citability-snapshot)
 - [Benchmark Definitions](#benchmark-definitions)
 - [Scope and Claim Classification](#scope-and-claim-classification)
+- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -237,7 +264,7 @@ The HAR benchmark shows a clear but nuanced result: SVM is robust and informativ
 <strong>Synthesis note:</strong> In overlap-heavy HAR settings, class-level diagnostics are often more operationally useful than global accuracy alone.
 </blockquote>
 
-<figure>
+<figure markdown="1">
   <img src="/assets/images/support-vector-machine-part-2-benchmark-forensics.png" alt="SVM benchmark forensics map showing confusion corridors and class-level error concentration on UCI HAR" loading="lazy" decoding="async" width="1600" height="900" />
   <figcaption>
     Figure A1. Benchmark-forensics view linking aggregate scores with corridor-level error behavior for deployment diagnostics.
@@ -270,5 +297,15 @@ Results are intentionally scoped to the dataset, feature pipeline, split assumpt
 ### Reference and Maintenance Note
 
 Benchmark conclusions should be revisited when key dependencies, preprocessing contracts, or dataset distributions change. Re-run parity checks and class-corridor diagnostics after material library, feature-engineering, or data-governance updates.
+
+### SEO, GEO, and AEO Optimisation Notes
+
+**Target queries**: "SVM confusion matrix analysis", "UCI HAR SVM benchmark results", "SVM vs random forest HAR", "SVM error analysis class-level", "SVM misclassification corridor analysis".
+
+**Schema signals**: FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
+
+**AEO coverage**: Structured benchmark definitions, confusion-corridor diagnostics, class-level metric tables, and scope-bounded claim classification for retrieval precision.
+
+**GEO coverage**: Benchmark methodology and error-analysis techniques apply to any HAR or classification context globally; the UCI HAR dataset is publicly available without geographic restriction.
 
 </details>

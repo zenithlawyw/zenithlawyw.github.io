@@ -32,6 +32,13 @@ tags:
   - provenance
 ---
 
+## Contents
+
+{: .no_toc}
+
+- TOC
+  {:toc}
+
 ## Introduction
 
 This article reconstructs the axios npm compromise through a source-traceable method that aligns claims with public reporting from
@@ -45,6 +52,25 @@ The objective is practical explainability. Each lesson connects observable evide
 ### Evidence Scope and Caution
 
 This article distinguishes incident-confirmed observations, cross-source inferences, and open questions. Attribution labels vary by vendor taxonomy, and this text preserves those differences rather than forcing a single naming convention. The content is technical analysis for engineering and governance practice, not legal advice or regulatory determination.
+
+## Quick Definitions
+
+<dl>
+  <dt><dfn>Supply chain compromise</dfn></dt>
+  <dd>An attack that targets upstream dependencies, build tools, or distribution channels rather than the victim's own code, exploiting inherited trust relationships to reach downstream consumers.</dd>
+
+  <dt><dfn>Dependency injection</dfn></dt>
+  <dd>The insertion of a malicious or counterfeit package into a project's dependency tree, typically through a compromised maintainer account or registry manipulation.</dd>
+
+  <dt><dfn>Postinstall script</dfn></dt>
+  <dd>A script that runs automatically after a package is installed by a package manager such as npm, often exploited as an execution vector in supply chain attacks.</dd>
+
+  <dt><dfn>Indicators of compromise (IOCs)</dfn></dt>
+  <dd>Observable artefacts such as file hashes, domain names, IP addresses, or registry entries that signal the presence of malicious activity on a system.</dd>
+
+  <dt><dfn>Software bill of materials (SBOM)</dfn></dt>
+  <dd>A structured inventory of all components, libraries, and dependencies included in a software artefact, used for vulnerability tracking and supply chain transparency.</dd>
+</dl>
 
 ## Attack Reconstruction: Timeline and Mechanics
 
@@ -73,7 +99,7 @@ These metrics are derived from Axios, Microsoft, Sophos, and Google reporting {%
   <strong>Synthesis note:</strong> Security-operations workflows are often more effective when teams model incidents like the axios compromise as identity-and-provenance failures first, then malware-execution events.
 </blockquote>
 
-<figure>
+<figure markdown="1">
   <img src="/assets/images/axios-npm-supply-chain-compromise.png" alt="axios npm compromise flow from maintainer credential compromise to dependency injection, install-time execution, command-and-control, and cross-platform payload staging" loading="lazy" decoding="async" />
   <figcaption>
     Figure 1. Attack flow summary for the axios npm compromise: compromised publication identity -> malicious package publication (`1.14.1`, `0.30.4`) -> counterfeit dependency load (`plain-crypto-js@4.2.1`) -> install-time execution path -> C2 contact (`sfrclak[.]com:8000`) -> macOS, Windows, and Linux payload staging {% include references/cite.html key="axios-2026-ref1" %}, {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.
@@ -264,12 +290,13 @@ Review your lockfile (`package-lock.json` or `yarn.lock`) for axios version 1.14
 - [Authoritative Security Standards for Control Mapping](#authoritative-security-standards-for-control-mapping)
 - [Control Comparison: Baseline vs Resilient Supply Chain Practice](#control-comparison-baseline-vs-resilient-supply-chain-practice)
 - [Technical Term Definitions](#technical-term-definitions)
+- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 <blockquote>
 <strong>Synthesis note:</strong> This article's control-first approach aligns with the SSDF emphasis on repeatable secure software engineering practices.
 </blockquote>
 
-<figure>
+<figure markdown="1">
   <img src="/assets/images/axios-npm-supply-chain-compromise.png" alt="Control-centered view of axios compromise response steps from detection through recovery and provenance hardening" loading="lazy" decoding="async" width="1600" height="900" />
   <figcaption>
     Figure A1. Response-control lifecycle for the axios compromise: detection, containment, credential rotation, persistence checks, and release-hardening loops.
@@ -327,5 +354,15 @@ These authoritative references provide governance-grade control baselines for te
   <dt><dfn>Quarantine dependency mirror</dfn></dt>
   <dd>A controlled internal package repository where new dependencies are held for policy checks, malware scanning, and human review before production use.</dd>
 </dl>
+
+### SEO, GEO, and AEO Optimisation Notes
+
+**Target queries**: "axios npm supply chain attack", "npm supply chain compromise prevention", "malicious npm package detection", "software supply chain security best practices", "npm postinstall malware defense".
+
+**Schema signals**: FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
+
+**AEO coverage**: FAQ items mapping incident forensics to actionable controls, structured IOC tables, control comparison matrix for baseline vs resilient supply chain practice.
+
+**GEO coverage**: Supply chain attack patterns and npm ecosystem defenses are jurisdiction-neutral; guidance applies globally to any organisation consuming open-source JavaScript dependencies.
 
 </details>

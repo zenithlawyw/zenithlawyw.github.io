@@ -46,6 +46,13 @@ tags:
   - tool orchestration
 ---
 
+## Contents
+
+{: .no_toc}
+
+- TOC
+  {:toc}
+
 ## Introduction
 
 Agentic AI systems are pushing enterprise software toward large-scale distributed coordination among models, tools, services, and humans. In that shift, protocol boundaries now shape delivery speed, operational risk, and cross-vendor interoperability as much as model quality.
@@ -73,6 +80,25 @@ Three claim classes are used throughout:
 1. Protocol-confirmed claims are stated directly in the public specifications or official protocol documentation.
 2. Implementation-oriented synthesis connects those protocol details to practical system design choices.
 3. Critical evaluation highlights where a protocol is a poor fit even when it is technically possible to make it work.
+
+## Quick Definitions
+
+<dl>
+  <dt><dfn>Model Context Protocol (MCP)</dfn></dt>
+  <dd>A JSON-RPC-based protocol that standardises how AI models access tools, resources, and prompts through a structured capability interface with explicit safety controls.</dd>
+
+  <dt><dfn>Agent-to-Agent (A2A) protocol</dfn></dt>
+  <dd>A peer-agent collaboration protocol that provides task lifecycle semantics, Agent Card discovery, streaming, and push notifications for multi-agent coordination.</dd>
+
+  <dt><dfn>Agentic system</dfn></dt>
+  <dd>A software system in which one or more autonomous AI agents plan, execute, and coordinate actions with limited human intervention, often delegating subtasks to specialised agents or tools.</dd>
+
+  <dt><dfn>Tool invocation</dfn></dt>
+  <dd>The act of an AI model calling an external capability such as a database query, API request, or code execution function through a structured protocol interface.</dd>
+
+  <dt><dfn>Agent orchestration</dfn></dt>
+  <dd>The coordination layer that routes tasks between agents, manages state across multi-step workflows, and enforces policy and approval checkpoints.</dd>
+</dl>
 
 ## MCP in Practical Terms
 
@@ -296,6 +322,7 @@ The useful comparison is not “which protocol wins.” The useful comparison is
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Protocol Glossary](#protocol-glossary)
+- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -310,7 +337,7 @@ The useful comparison is not “which protocol wins.” The useful comparison is
 <strong>Synthesis note:</strong> Protocol selection quality improves when capability exposure, peer-agent task delegation, and REST interoperability are modeled as separate boundaries.
 </blockquote>
 
-<figure>
+<figure markdown="1">
   <img src="/assets/images/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems.png" alt="Protocol boundary map comparing MCP, A2A, and ACP across capability, task, and interoperability concerns" loading="lazy" decoding="async" width="1600" height="900" />
   <figcaption>
     Figure A1. Boundary-oriented comparison of MCP, A2A, and ACP for enterprise orchestration design decisions.
@@ -348,5 +375,15 @@ The central A2A unit of work. Tasks carry state, optional history, and artifacts
 ### Agent Manifest
 
 An ACP-oriented discovery artifact describing agent identity, capabilities, content types, and metadata for interoperable routing and integration {% include references/cite.html key="mcpa2a-2026-ref18" %}.
+
+### SEO, GEO, and AEO Optimisation Notes
+
+**Target queries**: "MCP vs A2A protocol comparison", "model context protocol explained", "agent2agent protocol explained", "agentic AI protocol selection", "multi-agent interoperability protocols".
+
+**Schema signals**: FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
+
+**AEO coverage**: FAQ items mapping protocol boundary decisions to implementation choices, structured protocol glossary, comparison tables across MCP, A2A, and ACP dimensions.
+
+**GEO coverage**: Protocol specifications (MCP, A2A, ACP) are open standards with global applicability; cross-border orchestration patterns are addressed as a first-class design concern throughout the analysis.
 
 </details>

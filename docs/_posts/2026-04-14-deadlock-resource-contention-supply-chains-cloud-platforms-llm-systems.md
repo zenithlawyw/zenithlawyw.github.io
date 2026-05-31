@@ -48,6 +48,13 @@ tags:
   - thread management
 ---
 
+## Contents
+
+{: .no_toc}
+
+- TOC
+  {:toc}
+
 ## Introduction
 
 Operating systems textbooks dedicate chapters to a simple question: when can concurrent processes waiting for resources lock each other in permanent obstruction? The answer is the [Coffman conditions](<https://en.wikipedia.org/wiki/Deadlock_(computer_science)#Conditions>), four necessary and sufficient conditions for [deadlock](<https://en.wikipedia.org/wiki/Deadlock_(computer_science)>): mutual exclusion, hold and wait, no preemption, and circular wait. When all four hold simultaneously, deadlock risk reaches its highest structural state. The same logic can be used outside the kernel as a diagnostic model. In 2026, supply-chain incidents, cloud platform fragmentation, and AI scheduling contention all illustrated recurring patterns that align with these conditions.
@@ -61,6 +68,25 @@ This article is not legal advice.
 ### Evidence Scope and Claim Boundaries
 
 This article combines three claim classes to preserve analytical precision. The supply-chain section is incident-confirmed and anchored to a timestamped compromise with independently corroborated technical artifacts. The cloud-platform section uses documented policy and operating-model evidence, and it also includes illustrative composite continuity flows where no single outage report captures the full dependency cycle. The LLM section is pattern-driven and models recurrent production scheduling behavior rather than attributing deadlock risk to one named 2026 outage. This separation keeps the framework operational without overstating evidentiary certainty.
+
+## Quick Definitions
+
+<dl>
+  <dt><dfn>Deadlock</dfn></dt>
+  <dd>A state in which two or more processes are permanently blocked, each waiting for a resource held by another, with no possibility of progress without external intervention.</dd>
+
+  <dt><dfn>Resource contention</dfn></dt>
+  <dd>A condition in which multiple processes or threads compete for the same limited resource, leading to queuing, performance degradation, or blocking.</dd>
+
+  <dt><dfn>Starvation</dfn></dt>
+  <dd>A scheduling failure in which a process is indefinitely denied access to a resource it needs, even though the resource becomes available to other processes.</dd>
+
+  <dt><dfn>Priority inversion</dfn></dt>
+  <dd>A concurrency anomaly in which a high-priority task is blocked by a lower-priority task that holds a required resource, while medium-priority tasks run ahead of both.</dd>
+
+  <dt><dfn>Livelock</dfn></dt>
+  <dd>A condition in which processes continuously change state in response to each other without making progress, unlike deadlock where processes are completely idle.</dd>
+</dl>
 
 ## Understanding Deadlock: Mutex, Semaphore, and the Coffman Conditions
 
@@ -374,6 +400,7 @@ Token slots in LLM inference are mutual-exclusion resources: exactly one inferen
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Concurrency Term Reference](#concurrency-term-reference)
+- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -388,7 +415,7 @@ Token slots in LLM inference are mutual-exclusion resources: exactly one inferen
 <strong>Synthesis note:</strong> Deadlock prevention can be engineered by systematically breaking at least one Coffman condition in the targeted execution path.
 </blockquote>
 
-<figure>
+<figure markdown="1">
   <img src="/assets/images/deadlock-resource-contention-engineering.png" alt="Deadlock prevention map linking Coffman conditions to controls across supply chains, cloud systems, and LLM inference" loading="lazy" decoding="async" width="1600" height="900" />
   <figcaption>
     Figure A1. Cross-domain deadlock control mapping from formal OS theory to practical cloud, supply-chain, and AI scheduling operations.
@@ -428,6 +455,16 @@ Token slots in LLM inference are mutual-exclusion resources: exactly one inferen
 **Circular Wait**: A cycle in the resource-request graph in which thread T₁ waits for a resource held by thread T₂, thread T₂ waits for a resource held by thread T₃, …, thread Tₙ waits for a resource held by thread T₁.
 
 **Hold and Wait**: A condition in which a thread holds a resource while waiting for another resource. Breaking this condition prevents deadlock but requires either atomic multi-resource acquisition or forced release of all held resources before waiting.
+
+### SEO, GEO, and AEO Optimisation Notes
+
+**Target queries**: "deadlock prevention techniques", "Coffman conditions explained", "deadlock vs starvation", "resource contention cloud platforms", "LLM inference scheduling deadlock".
+
+**Schema signals**: FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
+
+**AEO coverage**: FAQ entries with prevention guidance, structured concurrency term reference, cross-domain Coffman-condition analysis across supply chains, cloud platforms, and LLM systems.
+
+**GEO coverage**: Deadlock theory and concurrency controls are universally applicable across computing environments; the cross-domain analysis covers supply-chain, cloud-platform, and LLM-inference contexts without geographic restriction.
 
 </details>
 

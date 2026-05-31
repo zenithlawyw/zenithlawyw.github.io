@@ -1615,3 +1615,93 @@ mcpa2a-2026-ref20:
   ieee_base: Besen, S. and Gutowska, A., What is Agent Communication Protocol (ACP)?, IBM Think, 2026.
   harvard_base: Besen, S. and Gutowska, A.. (2026). What is Agent Communication Protocol (ACP)?. IBM Think.
   source_format: bibtex
+rag-2026-ref1:
+  entry_type: book
+  short_author: Kimothi
+  year: "2025"
+  authors: Kimothi, Abhinav
+  title: A Simple Guide to Retrieval Augmented Generation
+  publisher: Manning Publications
+  published_iso: "2025-01-01"
+  published_date: 1 January 2025
+  ieee_base: Kimothi, Abhinav, A Simple Guide to Retrieval Augmented Generation, Manning Publications, 2025.
+  harvard_base: Kimothi, Abhinav. (2025). A Simple Guide to Retrieval Augmented Generation. Manning Publications.
+  source_format: bibtex
+rag-2026-ref2:
+  entry_type: article
+  short_author: Zhao et al.
+  year: "2026"
+  authors: Zhao, Penghao and Zhang, Hailin and Yu, Qinhan and Wang, Zhengren and Geng, Yunteng and Fu, Fangcheng and Yang, Ling and Zhang, Wentao and Jiang, Jie and Cui, Bin
+  title: "Retrieval-Augmented Generation for {AI}-Generated Content: A Survey"
+  volume: "11"
+  pages: 1--29
+  doi: 10.1007/s41019-025-00335-5
+  published_iso: "2026-01-01"
+  published_date: 1 January 2026
+  ieee_base: "Zhao, Penghao and Zhang, Hailin and Yu, Qinhan and Wang, Zhengren and Geng, Yunteng and Fu, Fangcheng and Yang, Ling and Zhang, Wentao and Jiang, Jie and Cui, Bin, Retrieval-Augmented Generation for {AI}-Generated Content: A Survey, vol. 11, pp. 1--29, 2026."
+  harvard_base: "Zhao, Penghao and Zhang, Hailin and Yu, Qinhan and Wang, Zhengren and Geng, Yunteng and Fu, Fangcheng and Yang, Ling and Zhang, Wentao and Jiang, Jie and Cui, Bin. (2026). Retrieval-Augmented Generation for {AI}-Generated Content: A Survey. vol. 11, pp. 1--29."
+  source_format: bibtex
+rag-2026-ref3:
+  entry_type: article
+  short_author: Huang et al.
+  year: n.d.
+  authors: Huang, Yizheng and Huang, Jimmy Xiangji
+  title: A Survey on Retrieval-Augmented Text Generation for Large Language Models
+  volume: "58"
+  number: "12"
+  pages: 300:1--300:38
+  doi: 10.1145/3805774
+  ieee_base: Huang, Yizheng and Huang, Jimmy Xiangji, A Survey on Retrieval-Augmented Text Generation for Large Language Models, vol. 58, no. 12, pp. 300:1--300:38, n.d.
+  harvard_base: Huang, Yizheng and Huang, Jimmy Xiangji. (n.d.). A Survey on Retrieval-Augmented Text Generation for Large Language Models. vol. 58, no. 12, pp. 300:1--300:38.
+  source_format: bibtex
+rag-2026-ref4:
+  entry_type: inproceedings
+  short_author: Cuconasu et al.
+  year: n.d.
+  authors: Cuconasu, Florin and Trappolini, Giovanni and Siciliano, Federico and Filice, Simone and Campagnano, Cesare and Maarek, Yoelle and Tonellotto, Nicola and Silvestri, Fabrizio
+  title: "The Power of Noise: Redefining Retrieval for {RAG} Systems"
+  book: Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '24)
+  pages: 719--729
+  doi: 10.1145/3626772.3657834
+  ieee_base: "Cuconasu, Florin and Trappolini, Giovanni and Siciliano, Federico and Filice, Simone and Campagnano, Cesare and Maarek, Yoelle and Tonellotto, Nicola and Silvestri, Fabrizio, The Power of Noise: Redefining Retrieval for {RAG} Systems, in Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '24), pp. 719--729, n.d."
+  harvard_base: "Cuconasu, Florin and Trappolini, Giovanni and Siciliano, Federico and Filice, Simone and Campagnano, Cesare and Maarek, Yoelle and Tonellotto, Nicola and Silvestri, Fabrizio. (n.d.). The Power of Noise: Redefining Retrieval for {RAG} Systems. In Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '24). pp. 719--729."
+  source_format: bibtex
+rag-2026-ref5:
+  entry_type: article
+  short_author: Amugongo et al.
+  year: n.d.
+  authors: Amugongo, Lameck Mbangula and Mascheroni, Pietro and Brooks, Steven and Doering, Stefan and Seidel, Jan
+  title: "Retrieval Augmented Generation for Large Language Models in Healthcare: A Systematic Review"
+  volume: "4"
+  number: "6"
+  doi: 10.1371/journal.pdig.0000877
+  ieee_base: "Amugongo, Lameck Mbangula and Mascheroni, Pietro and Brooks, Steven and Doering, Stefan and Seidel, Jan, Retrieval Augmented Generation for Large Language Models in Healthcare: A Systematic Review, vol. 4, no. 6, n.d."
+  harvard_base: "Amugongo, Lameck Mbangula and Mascheroni, Pietro and Brooks, Steven and Doering, Stefan and Seidel, Jan. (n.d.). Retrieval Augmented Generation for Large Language Models in Healthcare: A Systematic Review. vol. 4, no. 6."
+  source_format: bibtex
+rag-2026-ref6:
+  entry_type: article
+  short_author: Li et al.
+  year: n.d.
+  authors: Li, Xiaoxi and Jin, Jiajie and Zhou, Yujia and Zhang, Yuyao and Zhang, Peitian and Zhu, Yutao and Dou, Zhicheng
+  title: "From Matching to Generation: A Survey on Generative Information Retrieval"
+  volume: "43"
+  number: "3"
+  pages: 83:1--83:62
+  doi: 10.1145/3722552
+  ieee_base: "Li, Xiaoxi and Jin, Jiajie and Zhou, Yujia and Zhang, Yuyao and Zhang, Peitian and Zhu, Yutao and Dou, Zhicheng, From Matching to Generation: A Survey on Generative Information Retrieval, vol. 43, no. 3, pp. 83:1--83:62, n.d."
+  harvard_base: "Li, Xiaoxi and Jin, Jiajie and Zhou, Yujia and Zhang, Yuyao and Zhang, Peitian and Zhu, Yutao and Dou, Zhicheng. (n.d.). From Matching to Generation: A Survey on Generative Information Retrieval. vol. 43, no. 3, pp. 83:1--83:62."
+  source_format: bibtex
+rag-2026-ref7:
+  entry_type: inproceedings
+  short_author: Meng et al.
+  year: "2025"
+  authors: Meng, Qi and Wu, Zhenglong and Zhao, Zhongshi and Lian, Xi'nan
+  title: Analysis of Text Generation System Design Combining Retrieval Augmented Generation and Fine-tuning Strategy
+  book: 2025 2nd International Conference on Smart Grid and Artificial Intelligence (SGAI)
+  pages: 204--208
+  doi: 10.1109/SGAI64825.2025.11009349
+  published_iso: "2025-01-01"
+  published_date: 1 January 2025
+  ieee_base: Meng, Qi and Wu, Zhenglong and Zhao, Zhongshi and Lian, Xi'nan, Analysis of Text Generation System Design Combining Retrieval Augmented Generation and Fine-tuning Strategy, in 2025 2nd International Conference on Smart Grid and Artificial Intelligence (SGAI), pp. 204--208, 2025.
+  harvard_base: Meng, Qi and Wu, Zhenglong and Zhao, Zhongshi and Lian, Xi'nan. (2025). Analysis of Text Generation System Design Combining Retrieval Augmented Generation and Fine-tuning Strategy. In 2025 2nd International Conference on Smart Grid and Artificial Intelligence (SGAI). pp. 204--208.
+  source_format: bibtex
