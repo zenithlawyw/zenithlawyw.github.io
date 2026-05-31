@@ -46,13 +46,6 @@ tags:
   - uci har
 ---
 
-## Contents
-
-{: .no_toc}
-
-- TOC
-  {:toc}
-
 ## Introduction
 
 This second article in the SVM series focuses on one question: what do benchmark results actually say about model behavior once we move beyond aggregate accuracy? Using the [UCI Human Activity Recognition dataset](https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones) {% include references/cite.html key="svm-2026-ref16" %}, we compare an RBF SVM pipeline against a Random Forest baseline and inspect class-level precision, recall, F1, confusion corridors, tuning stability, and PCA geometry signals.

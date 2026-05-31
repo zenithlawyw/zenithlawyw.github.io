@@ -55,13 +55,6 @@ tags:
   - observability
 ---
 
-## Contents
-
-{: .no_toc}
-
-- TOC
-  {:toc}
-
 ## Introduction
 
 A deployable agentic orchestration stack succeeds or fails on separation of concerns. [MCP](https://modelcontextprotocol.io/) should carry model-to-tool and model-to-context integration. [A2A](https://a2a-protocol.org/latest/) should carry peer-agent delegation and long-running task collaboration. [ACP](https://agentcommunicationprotocol.dev/introduction/welcome) contributes REST-native agent interoperability patterns that many platform teams can operationalize with existing API governance controls {% include references/cite.html key="mcpa2a-2026-ref17" %}, {% include references/cite.html key="mcpa2a-2026-ref18" %}. [LangGraph](https://docs.langchain.com/oss/python/langgraph/overview) should own durable workflow state. [LangChain](https://docs.langchain.com/oss/python/langchain/overview) should help with model and tool abstractions when higher-level ergonomics are useful. [FastAPI](https://fastapi.tiangolo.com/) and [Pydantic](https://pydantic.dev/docs/validation/latest/get-started/) should provide typed service boundaries. [pytest](https://docs.pytest.org/en/stable/) should make the workflow testable. [OpenTelemetry](https://opentelemetry.io/docs/) should make it observable. [Docker](https://docs.docker.com/get-started/docker-overview/) should make it portable. [SLSA](https://slsa.dev/) and [Sigstore](https://www.sigstore.dev/) should strengthen release integrity evidence and provenance workflows {% include references/cite.html key="mcpa2a-2026-ref8" %}-{% include references/cite.html key="mcpa2a-2026-ref16" %}.

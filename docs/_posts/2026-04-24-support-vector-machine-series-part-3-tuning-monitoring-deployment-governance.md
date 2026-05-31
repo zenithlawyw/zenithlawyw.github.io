@@ -42,13 +42,6 @@ tags:
   - monitoring
 ---
 
-## Contents
-
-{: .no_toc}
-
-- TOC
-  {:toc}
-
 ## Introduction
 
 This final article translates the SVM series into an execution playbook. Part 1 covered theory and fit boundaries. Part 2 covered benchmark diagnostics. Part 3 defines a practical workflow for tuning, calibration, monitoring, and governance so teams can sustain model quality over time rather than treating model release as a one-off event.

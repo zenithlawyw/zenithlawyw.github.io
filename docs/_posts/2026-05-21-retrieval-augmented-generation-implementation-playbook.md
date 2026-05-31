@@ -60,13 +60,6 @@ tags:
   - natural language processing
 ---
 
-## Contents
-
-{: .no_toc}
-
-- TOC
-  {:toc}
-
 ## From Evidence to Implementation
 
 The [companion evidence review](/retrieval-augmented-generation-evidence-review) identified five recurring themes across production RAG literature: retrieval quality as the primary bottleneck, distractor contamination, evaluation separation, domain-specific safety, and RAG-plus-fine-tuning complementarity. This playbook translates those architectural findings into a concrete implementation path using robust open-source tools.

@@ -28,13 +28,6 @@ tags:
   - ai governance
 ---
 
-## Contents
-
-{: .no_toc}
-
-- TOC
-  {:toc}
-
 ## Introduction
 
 Three recent works address the problem of tracking data transformations across the machine learning lifecycle. Each approaches provenance from a different application context and proposes a different technical strategy.

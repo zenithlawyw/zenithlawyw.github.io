@@ -48,13 +48,6 @@ tags:
   - thread management
 ---
 
-## Contents
-
-{: .no_toc}
-
-- TOC
-  {:toc}
-
 ## Introduction
 
 Operating systems textbooks dedicate chapters to a simple question: when can concurrent processes waiting for resources lock each other in permanent obstruction? The answer is the [Coffman conditions](<https://en.wikipedia.org/wiki/Deadlock_(computer_science)#Conditions>), four necessary and sufficient conditions for [deadlock](<https://en.wikipedia.org/wiki/Deadlock_(computer_science)>): mutual exclusion, hold and wait, no preemption, and circular wait. When all four hold simultaneously, deadlock risk reaches its highest structural state. The same logic can be used outside the kernel as a diagnostic model. In 2026, supply-chain incidents, cloud platform fragmentation, and AI scheduling contention all illustrated recurring patterns that align with these conditions.

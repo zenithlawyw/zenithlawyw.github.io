@@ -56,13 +56,6 @@ tags:
   - natural language processing
 ---
 
-## Contents
-
-{: .no_toc}
-
-- TOC
-  {:toc}
-
 ## Why This Review Matters
 
 Retrieval-augmented generation has moved from a research concept to the default architecture pattern for knowledge-intensive AI applications. Yet the gap between "RAG works in demos" and "RAG works in production" remains wide. The reviewed literature exposes exactly where that gap comes from: retrieval noise sensitivity, evaluation fragmentation, domain-specific safety requirements, and the open question of whether retrieval alone is sufficient or needs to be fused with fine-tuning.

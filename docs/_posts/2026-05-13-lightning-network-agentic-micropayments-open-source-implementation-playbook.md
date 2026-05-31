@@ -56,13 +56,6 @@ tags:
   - testing
 ---
 
-## Contents
-
-{: .no_toc}
-
-- TOC
-  {:toc}
-
 ## From Research to Buildable Architecture
 
 This playbook uses the cited literature as directional inputs on Lightning micropayment design, routing, and operational tradeoffs {% include references/cite.html key="ln-2026-ref1" %} {% include references/cite.html key="ln-2026-ref2" %} {% include references/cite.html key="ln-2026-ref3" %} {% include references/cite.html key="ln-2026-ref4" %} {% include references/cite.html key="ln-2026-ref5" %} {% include references/cite.html key="ln-2026-ref6" %}. Where specific claims are directly supported by those sources, inline citations mark them. Recommendations without a citation are implementation judgment and should be validated through pilot evidence before scale-up.

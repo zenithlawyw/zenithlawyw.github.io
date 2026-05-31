@@ -32,13 +32,6 @@ tags:
   - provenance
 ---
 
-## Contents
-
-{: .no_toc}
-
-- TOC
-  {:toc}
-
 ## Introduction
 
 This article reconstructs the axios npm compromise through a source-traceable method that aligns claims with public reporting from
