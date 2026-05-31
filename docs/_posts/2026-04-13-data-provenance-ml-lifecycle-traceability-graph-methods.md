@@ -28,6 +28,13 @@ tags:
   - ai governance
 ---
 
+## Contents
+
+{: .no_toc}
+
+- TOC
+  {:toc}
+
 ## Introduction
 
 Three recent works address the problem of tracking data transformations across the machine learning lifecycle. Each approaches provenance from a different application context and proposes a different technical strategy.
@@ -37,6 +44,25 @@ Karuna et al. report a study that applies Graph Neural Networks to financial tra
 This review examines each paper's claims, methods, and limitations, then derives scoped implications from those results. It is intentionally narrow: three papers are not treated as a representative sample of the provenance ecosystem. Where a claim rests directly on a paper's reported results, the text says so. Where the review draws inferences beyond what any single paper demonstrates, that boundary is marked. Several details could not be independently corroborated and are flagged accordingly.
 
 This article is designed for technical and governance learning. It does not provide legal, regulatory, or procurement advice. It is not legal advice. Readers should validate applicability against their own jurisdiction, risk model, and production constraints.
+
+## Quick Definitions
+
+<dl>
+  <dt><dfn>Data provenance</dfn></dt>
+  <dd>A record of the origin, transformations, and ownership history of a dataset, used to establish trust, support auditing, and enable reproducibility in data-driven workflows.</dd>
+
+  <dt><dfn>ML lifecycle traceability</dfn></dt>
+  <dd>The ability to track and link data inputs, preprocessing steps, training configurations, and model outputs across the full machine learning development and deployment pipeline.</dd>
+
+  <dt><dfn>Provenance graph</dfn></dt>
+  <dd>A directed graph that represents entities, activities, and agents involved in data production and transformation, typically following the W3C PROV model.</dd>
+
+  <dt><dfn>Data lineage</dfn></dt>
+  <dd>The path a data element follows from its source through successive transformations to its current form, often used interchangeably with provenance but emphasising the transformation chain.</dd>
+
+  <dt><dfn>Reproducibility</dfn></dt>
+  <dd>The capacity to obtain consistent results when an experiment or pipeline is re-executed with the same data, code, and configuration, a core requirement for scientific and operational credibility.</dd>
+</dl>
 
 ---
 
@@ -203,12 +229,13 @@ A second priority is contradiction-seeking: identify studies where provenance in
 - [Source Inventory and Evidence Grading](#source-inventory-and-evidence-grading)
 - [Scope and Verification Boundary](#scope-and-verification-boundary)
 - [Source-Level Assessment](#source-level-assessment)
+- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 <blockquote>
 <strong>Synthesis note:</strong> This review prioritizes entity-activity-agent traceability because that structure is foundational for portable provenance interpretation.
 </blockquote>
 
-<figure>
+<figure markdown="1">
   <img src="/assets/images/data-provenance-ml-lifecycle-traceability-graph-methods.png" alt="Data provenance lifecycle with graph traceability links among preprocessing, training, and governance checkpoints" loading="lazy" decoding="async" width="1600" height="900" />
   <figcaption>
     Figure A1. Provenance evidence map across preprocessing, training, evaluation, and governance audit surfaces.
@@ -275,5 +302,15 @@ The paper identifies four persona types whose provenance needs motivated the PRO
 | Karuna et al. | IEEE ICICAT           | 2024 | GNN (GCN) vs baselines           | Financial traceability | Quantitative; internal evaluation; no confirmed public replication artifacts |
 | Pina et al.   | ACM WWW '23 Companion | 2023 | Provenance integration prototype | DL lifecycle (general) | Architectural; feasibility demonstrated; no overhead benchmarks              |
 | Souza et al.  | WORKS @ SC 2019       | 2019 | PROV-ML + ProvLake extensions    | O&G / CSE              | Practical; 48-GPU evaluation; single-domain validation                       |
+
+### SEO, GEO, and AEO Optimisation Notes
+
+**Target queries**: "data provenance machine learning", "ML traceability graph methods", "W3C PROV ML lifecycle", "data lineage vs provenance", "GNN traceability".
+
+**Schema signals**: Article schema with author attribution and datePublished, structured evidence-grading tables.
+
+**AEO coverage**: Source-level evidence assessments with explicit grading, structured comparison table across venues and methods, definition lists for traceability terminology.
+
+**GEO coverage**: Provenance standards (W3C PROV, PROV-ML) and graph-based traceability methods are internationally applicable across research and industry contexts without jurisdiction-specific constraints.
 
 </details>

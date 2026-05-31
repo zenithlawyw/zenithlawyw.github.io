@@ -53,6 +53,13 @@ tags:
   - kernel
 ---
 
+## Contents
+
+{: .no_toc}
+
+- TOC
+  {:toc}
+
 ## Introduction
 
 [Support Vector Machine](https://en.wikipedia.org/wiki/Support_vector_machine) {% include references/cite.html key="svm-2026-ref17" %} is still one of the clearest ways to reason about discriminative classification: it formalizes class separation as a margin-maximization problem with explicit controls for complexity and tolerance to error. That clarity makes SVM useful for rigorous model comparison and governance, even when a different model family eventually wins in production.
@@ -67,6 +74,25 @@ The discussion is evidence-led rather than benchmark-led: each section ties impl
 - Part 3: deployment playbook for tuning, monitoring, calibration, and governance.
 
 For adjacent continuity topics, see [data provenance in machine learning](/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons) and [deadlock and resource contention patterns](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm).
+
+## Quick Definitions
+
+<dl>
+  <dt><dfn>Support vector machine (SVM)</dfn></dt>
+  <dd>A supervised learning algorithm that finds the decision boundary maximising the margin between classes, using only the closest training points (support vectors) to define the separator.</dd>
+
+  <dt><dfn>Kernel function</dfn></dt>
+  <dd>A function that computes the inner product of data points in a higher-dimensional feature space without explicitly performing the transformation, enabling SVM to learn non-linear boundaries.</dd>
+
+  <dt><dfn>Margin</dfn></dt>
+  <dd>The perpendicular distance between the decision boundary and the nearest support vectors; a wider margin generally indicates better expected generalisation.</dd>
+
+  <dt><dfn>Hyperplane</dfn></dt>
+  <dd>A flat decision surface in the feature space that separates classes; in two dimensions it is a line, in three dimensions a plane, and in higher dimensions a hyperplane.</dd>
+
+  <dt><dfn>Regularisation parameter C</dfn></dt>
+  <dd>A penalty coefficient that controls the trade-off between maximising the margin and minimising training classification errors in soft-margin SVM formulations.</dd>
+</dl>
 
 ## Why Start with Theory Before Benchmarks
 
@@ -281,6 +307,7 @@ Part 2 applies this framework to a full HAR benchmark and error-forensics workfl
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Terminology Definitions](#terminology-definitions)
+- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -294,7 +321,7 @@ Part 2 applies this framework to a full HAR benchmark and error-forensics workfl
 <strong>Synthesis note:</strong> Reliable SVM outcomes typically depend on disciplined preprocessing, tuning, and evaluation design rather than defaults.
 </blockquote>
 
-<figure>
+<figure markdown="1">
   <img src="/assets/images/support-vector-machine-part-1-foundations.png" alt="Support Vector Machine foundations showing margin intuition, kernel choice, and tuning implications" loading="lazy" decoding="async" width="1600" height="900" />
   <figcaption>
     Figure A1. Foundational SVM design map from margin control to kernel selection and operational tuning readiness.
@@ -333,5 +360,15 @@ The source set is intentionally focused on foundational SVM papers, applied exte
 ### Reference and Maintenance Note
 
 SVM toolchains, library defaults, and benchmark conventions change over time. For production reuse, periodically re-check solver defaults, API behavior, and dataset assumptions against current documentation and release notes before carrying this guidance forward unchanged.
+
+### SEO, GEO, and AEO Optimisation Notes
+
+**Target queries**: "what is support vector machine", "SVM kernel selection guide", "linear SVM vs RBF SVM", "SVM margin intuition", "practical SVM classification guide".
+
+**Schema signals**: FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
+
+**AEO coverage**: FAQ items covering kernel selection, margin behaviour, and tuning decisions, structured terminology definitions, citability snapshot for retrieval systems.
+
+**GEO coverage**: SVM theory and implementation guidance is universally applicable; referenced toolchains (scikit-learn, e1071) and datasets (UCI repository) are internationally available without geographic restriction.
 
 </details>

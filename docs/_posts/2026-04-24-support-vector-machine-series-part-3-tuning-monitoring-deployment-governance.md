@@ -42,6 +42,13 @@ tags:
   - monitoring
 ---
 
+## Contents
+
+{: .no_toc}
+
+- TOC
+  {:toc}
+
 ## Introduction
 
 This final article translates the SVM series into an execution playbook. Part 1 covered theory and fit boundaries. Part 2 covered benchmark diagnostics. Part 3 defines a practical workflow for tuning, calibration, monitoring, and governance so teams can sustain model quality over time rather than treating model release as a one-off event.
@@ -55,6 +62,25 @@ Series links:
 2. [Part 2: Benchmark and Error Forensics on UCI HAR](/support-vector-machine-series-part-2-benchmark-error-analysis-har)
 
 For broader AI lifecycle controls, connect this workflow with [data provenance traceability](/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons) and [LLM operational governance patterns](/large-language-models-practice-from-transformer-to-present-frontier).
+
+## Quick Definitions
+
+<dl>
+  <dt><dfn>Hyperparameter tuning</dfn></dt>
+  <dd>The systematic search for optimal model configuration values such as C and gamma that are set before training and control the bias-variance trade-off.</dd>
+
+  <dt><dfn>Model drift</dfn></dt>
+  <dd>A gradual change in the statistical relationship between input features and target labels after deployment, causing model performance to degrade over time.</dd>
+
+  <dt><dfn>Production monitoring</dfn></dt>
+  <dd>The continuous measurement of model behaviour in live operation, including prediction distributions, class-level metrics, and data quality checks.</dd>
+
+  <dt><dfn>Model governance</dfn></dt>
+  <dd>The organisational controls, approval workflows, and audit practices that ensure models are developed, deployed, and retired in a traceable and accountable manner.</dd>
+
+  <dt><dfn>Calibration</dfn></dt>
+  <dd>The post-training adjustment of model output scores so they correspond to true class probabilities, often achieved through Platt scaling or isotonic regression.</dd>
+</dl>
 
 ## Deployment Principle: Treat SVM as a Controlled System
 
@@ -248,6 +274,7 @@ SVM can remain a high-quality production option when teams operationalize it as 
 - [Citability Snapshot](#citability-snapshot)
 - [Governance Definitions](#governance-definitions)
 - [Scope and Claim Classification](#scope-and-claim-classification)
+- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -262,7 +289,7 @@ SVM can remain a high-quality production option when teams operationalize it as 
 <strong>Synthesis note:</strong> This playbook follows a continuous-monitoring and control-update posture for risk-managed AI operations.
 </blockquote>
 
-<figure>
+<figure markdown="1">
   <img src="/assets/images/support-vector-machine-part-3-deployment-governance.png" alt="SVM production governance loop for tuning, calibration, monitoring, and retraining controls" loading="lazy" decoding="async" width="1600" height="900" />
   <figcaption>
     Figure A1. Deployment-governance loop for SVM systems from pre-release gates to incident review and retraining controls.
@@ -295,5 +322,15 @@ The workflow is designed as a practical baseline. Teams should adapt thresholds,
 ### Reference and Maintenance Note
 
 Production controls remain reliable only when they are continuously maintained. Revalidate thresholds, calibration behavior, drift triggers, and comparator performance on a regular cadence, and update runbooks when data contracts or tooling assumptions materially change.
+
+### SEO, GEO, and AEO Optimisation Notes
+
+**Target queries**: "SVM deployment production checklist", "SVM calibration monitoring strategy", "SVM retraining drift detection", "model governance SVM", "SVM incident response workflow".
+
+**Schema signals**: FAQPage schema with evidence-grounded answers, HowTo schema for tuning workflow steps, Article schema with author attribution and datePublished.
+
+**AEO coverage**: FAQ items with deployment and governance guidance, structured governance definitions, monitoring-layer and readiness-gate matrices, scope-bounded claim classification.
+
+**GEO coverage**: SVM deployment governance and MLOps controls are applicable across industries and regions; risk-management recommendations are designed to complement jurisdiction-specific regulatory requirements rather than replace them.
 
 </details>

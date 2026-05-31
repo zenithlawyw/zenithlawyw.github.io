@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-05-18T20:58:32Z"
-total_candidates: 929
+generated_at: "2026-05-31T14:29:17Z"
+total_candidates: 949
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -1430,6 +1430,26 @@ candidates:
           Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Retrieval Augmented Generation
+    status: candidate
+    confidence: 10
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: A Seven-Paper Evidence Review of Architecture,
+          Retrieval Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages: []
   - term: SEO GEO AEO
     status: candidate
     confidence: 10
@@ -1463,6 +1483,30 @@ candidates:
           "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain:
           A Deployable Open-Source Playbook"
         url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+    related_pages: []
+  - term: AEO Optimisation
+    status: candidate
+    confidence: 9
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages: []
+  - term: AEO Optimisation Notes
+    status: candidate
+    confidence: 9
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
     related_pages: []
   - term: Architecture Decisions
     status: candidate
@@ -1719,6 +1763,18 @@ candidates:
           "Digital Sovereignty in Practice: Ten Engineering Lessons from China's
           Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
+    related_pages: []
+  - term: GEO AEO Optimisation
+    status: candidate
+    confidence: 9
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
     related_pages: []
   - term: Governance Data Provenance
     status: candidate
@@ -2360,6 +2416,26 @@ candidates:
       - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
         url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
     related_pages: []
+  - term: Language Processing
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: A Seven-Paper Evidence Review of Architecture,
+          Retrieval Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages: []
   - term: Large Language Models
     status: candidate
     confidence: 8
@@ -2454,6 +2530,46 @@ candidates:
         url: "/literature-reviews/ren-et-al-2026-advances-and-open-challenges-in-federated-foundation-models.html"
       - title: ""
         url: "/literature-reviews/sanu-et-al-2024-limitations-of-large-language-models.html"
+  - term: Natural Language
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: A Seven-Paper Evidence Review of Architecture,
+          Retrieval Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages: []
+  - term: Natural Language Processing
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: A Seven-Paper Evidence Review of Architecture,
+          Retrieval Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages: []
   - term: Planning
     status: candidate
     confidence: 8
@@ -5942,6 +6058,28 @@ candidates:
           Trust, Provenance, and Resilient Engineering"
         url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
     related_pages: []
+  - term: Retrieval
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: A Seven-Paper Evidence Review of Architecture,
+          Retrieval Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages:
+      - title: "FAQ Hub: Across Engineering, Governance, Legal, and AI Domains"
+        url: "/faq/"
   - term: Risk Management
     status: candidate
     confidence: 7
@@ -7345,6 +7483,46 @@ candidates:
           "Data Provenance in Machine Learning: Traceability, Graph Methods, and
           Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
+    related_pages: []
+  - term: Augmented Generation
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: A Seven-Paper Evidence Review of Architecture,
+          Retrieval Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages: []
+  - term: Augmented Generation Large
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: A Seven-Paper Evidence Review of Architecture,
+          Retrieval Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
     related_pages: []
   - term: Author
     status: candidate
@@ -8896,6 +9074,22 @@ candidates:
           Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Evidence Review
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: A Seven-Paper Evidence Review of Architecture,
+          Retrieval Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+    related_pages: []
   - term: Evidence-based Lessons Trust
     status: candidate
     confidence: 6
@@ -9111,6 +9305,66 @@ candidates:
           "Deadlock and Resource Contention: Operating Systems Theory Applied to
           Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: Generation
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: A Seven-Paper Evidence Review of Architecture,
+          Retrieval Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages: []
+  - term: Generation Large
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: A Seven-Paper Evidence Review of Architecture,
+          Retrieval Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages: []
+  - term: Generation Large Language
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: A Seven-Paper Evidence Review of Architecture,
+          Retrieval Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
     related_pages: []
   - term: Glossary Cross-domain
     status: candidate
@@ -9380,6 +9634,22 @@ candidates:
     related_pages:
       - title: "Article Hub: Engineering, Governance, and Resilience Guides"
         url: "/articles/"
+  - term: Hybrid Retrieval
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages: []
   - term: Implementation
     status: candidate
     confidence: 6
@@ -10816,6 +11086,56 @@ candidates:
           Playbook"
         url: "/lightning-network-agentic-micropayments-open-source-implementation-playbook"
     related_pages: []
+  - term: Open
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain:
+          A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+      - title:
+          "Lightning Network Agentic Micropayments: Open-Source End-to-End Implementation
+          Playbook"
+        url: "/lightning-agentic-micropayments-playbook"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages:
+      - title: "Knowledge Space: Discover Research Papers and Scholarly Literature"
+        url: "/literature/"
+  - term: Open-source
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain:
+          A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+      - title:
+          "Lightning Network Agentic Micropayments: Open-Source End-to-End Implementation
+          Playbook"
+        url: "/lightning-agentic-micropayments-playbook"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages: []
   - term: Openalex Crossref
     status: candidate
     confidence: 6
@@ -11609,6 +11929,46 @@ candidates:
           "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on
           Trust, Provenance, and Resilient Engineering"
         url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
+    related_pages: []
+  - term: Retrieval Augmented
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: A Seven-Paper Evidence Review of Architecture,
+          Retrieval Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages: []
+  - term: Retrieval-augmented Generation
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: A Seven-Paper Evidence Review of Architecture,
+          Retrieval Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
     related_pages: []
   - term: Rights
     status: candidate
@@ -12416,6 +12776,28 @@ candidates:
     related_pages:
       - title: "Research Literature Explorer: Keyword-Filtered Papers and Preprints"
         url: "/literature/"
+  - term: Accuracy
+    status: candidate
+    confidence: 5
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Support Vector Machine Series Part 2: Benchmark and Error Forensics on
+          UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+      - title:
+          "Retrieval-Augmented Generation: A Seven-Paper Evidence Review of Architecture,
+          Retrieval Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+    related_pages:
+      - title: Disclaimer
+        url: "/legal/disclaimer/"
   - term: Adaptation
     status: candidate
     confidence: 5

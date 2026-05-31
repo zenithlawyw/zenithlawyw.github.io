@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-05-18T20:58:33Z"
+generated_at: "2026-05-31T14:29:22Z"
 signal_weights:
   title: 3
   categories: 5
@@ -15,120 +15,141 @@ signal_weight_rationale:
   intro_description_headings: Medium weight for context enrichment without dominating keyword extraction.
   keywords_catchwords: Low weight to avoid over-amplifying manually supplied or potentially noisy token lists.
 keywords:
-  - governance
   - engineering
+  - governance
   - machine
   - lightning
   - data
+  - implementation
   - network
+  - deployment
+  - rag
+  - model
+  - vector
   - a2a
+  - architecture
   - support
+  - practical
   - supply
   - mcp
   - svm
-  - vector
   - chain
+  - contents
+  - definitions
   - learning
-  - implementation
+  - retrieval
+  - teams
   - provenance
   - acp
-  - practical
-  - teams
-  - deployment
-  - orchestration
-  - cross-border
-  - model
-  - agentic
-  - architecture
-  - questions
   - appendix
+  - language
+  - questions
+  - orchestration
   - technical
-  - lessons
-  - micropayments
+  - cross-border
   - artificial
   - intelligence
+  - agentic
+  - evidence
+  - review
+  - production
+  - guide
+  - lessons
+  - micropayments
+  - frequently
   - controls
+  - large
+  - asked
   - china
   - cloud
   - deadlock
-  - guide
-  - asked
-  - frequently
+  - design
+  - systems
   - agent
   - benchmark
-  - definitions
-  - language
-  - design
+  - seo
+  - llm
+  - aeo
   - axios
   - digital
-  - llm
+  - geo
+  - literature
   - npm
-  - large
-  - production
-  - sovereignty
-  - systems
-  - boundaries
-  - contents
-  - evidence
-  - legal
-  - platform
-  - protocol
-  - reference
   - snapshot
   - table
+  - sovereignty
+  - boundaries
+  - legal
+  - notes
+  - optimisation
+  - platform
+  - protocol
+  - quick
+  - reference
   - security
+  - evaluation
   - first
   - representation
-  - review
   - scope
   - attack
-  - papers
+  - citability
+  - practice
   - trust
   - deep
   - domain
   - glossary
-  - citability
-  - practice
+  - generation
+  - open-source
   - tuning
+  - framework
+  - playbook
   - clustering
   - introduction
-  - literature
+  - monitoring
   - resource
-  - framework
   - hub
+  - open
   - operational
+  - papers
   - incident
+  - langchain
   - quantum
   - starvation
+  - strategy
   - adaptation
   - enterprise
   - fragmentation
+  - knowledge
   - reliability
+  - software
   - traceability
   - access
+  - authoritative
   - compromise
-  - evaluation
-  - langchain
+  - decisions
+  - guidance
   - langgraph
   - matter
-  - monitoring
+  - stage
   - theory
+  - context
   - har
-  - knowledge
   - law
+  - metrics
   - resilience
   - risk
-  - authoritative
+  - author
   - claim
   - communication
   - conditions
-  - decisions
+  - critical
   - early
   - graph
+  - inference
   - kernel
   - layer
   - limits
-  - playbook
+  - map
   - profile
   - semantic
   - set
@@ -136,15 +157,16 @@ keywords:
   - classification
   - compliance
   - management
-  - open
+  - patterns
+  - pipeline
+  - analysis
   - coffman
-  - critical
   - cybersecurity
   - geometry
   - pilot
+  - processing
   - search
   - series
-  - software
   - tenant-aware
   - tool
   - uci
@@ -153,72 +175,59 @@ keywords:
   - cookies
   - faq
   - interoperability
-  - method
-  - operating
-  - patterns
-  - privacy
-  - analysis
-  - author
-  - beyond
-  - calibration
-  - circular
-  - cloud-native
-  - hilbert
-  - included
-  - inference
-  - observability
-  - open-source
-  - policy
-  - reading
-  - scheduling
-  - signals
-  - synthesis
-  - autonomous
-  - blockchain
 key_phrases:
   - lightning network
   - support vector
   - support vector machine
   - vector machine
   - supply chain
+  - artificial intelligence
   - a2a acp
   - mcp a2a
   - mcp a2a acp
-  - artificial intelligence
+  - large language
   - asked questions
   - frequently asked
   - frequently asked questions
-  - engineering governance
-  - data provenance
   - implementation guide
-  - large language
+  - engineering governance
+  - seo geo
+  - geo aeo
+  - seo geo aeo
+  - data provenance
+  - table contents
   - lightning network implementation
   - network implementation
   - agentic orchestration
   - digital sovereignty
   - network cross-border
   - network implementation guide
-  - lightning network cross-border
-  - table contents
-  - axios npm
-  - machine learning
-  - cross-border micropayments
+  - aeo optimisation
+  - aeo optimisation notes
   - appendix appendix
   - appendix appendix table
   - appendix table
   - appendix table contents
-  - language models
-  - large language models
+  - geo aeo optimisation
+  - lightning network cross-border
+  - optimisation notes
   - technical appendix
   - technical appendix appendix
+  - axios npm
+  - machine learning
+  - quick definitions
+  - cross-border micropayments
+  - citability snapshot
+  - language models
+  - large language models
   - chain attack
   - network cross-border micropayments
   - npm supply
   - npm supply chain
   - supply chain attack
   - axios npm supply
-  - citability snapshot
   - representation learning
+  - contents introduction
   - artificial intelligence artificial
   - intelligence artificial
   - intelligence artificial intelligence
@@ -239,17 +248,27 @@ key_phrases:
   - platform engineering
   - vector machine benchmark
   - engineering lessons
+  - evidence review
+  - notes contents
+  - optimisation notes contents
   - coffman conditions
+  - contents introduction quick
+  - introduction quick
+  - introduction quick definitions
   - langgraph langchain
   - uci har
   - adaptation deep
   - domain adaptation deep
+  - literature review
   - machine deployment
   - vector machine deployment
   - authoritative reference
   - authoritative reference set
   - citability snapshot authoritative
   - governance data
+  - language processing
+  - natural language
+  - natural language processing
   - reference set
   - scope claim
   - snapshot authoritative
@@ -258,19 +277,30 @@ key_phrases:
   - acp langgraph
   - acp langgraph langchain
   - adaptation deep clustering
+  - augmented generation
   - data protection
   - data provenance machine
   - data residency
+  - notes contents introduction
   - provenance machine
   - provenance machine learning
+  - retrieval augmented
+  - retrieval augmented generation
+  - augmented generation large
+  - author credibility
   - conclusion technical
   - conclusion technical appendix
+  - generation large
+  - generation large language
   - graph neural
+  - hybrid retrieval
+  - implementation playbook
   - incident response
   - llm inference
   - model tuning
   - resource contention
   - social engineering
+  - technical definitions
   - agentic orchestration mcp
   - cookies data
   - engineering governance resilience
@@ -280,220 +310,197 @@ key_phrases:
   - privacy cookies
   - privacy cookies data
   - prompt engineering
+  - retrieval-augmented generation
   - software supply
   - software supply chain
   - traceability graph
   - a2a acp agent
   - acp agent
-  - china cloud
-  - claim classification
-  - deadlock resource
-  - deadlock resource contention
-  - faq hub
-  - governance digital
-  - governance legal
-  - hong kong
-  - learning traceability
-  - learning traceability graph
-  - literature review
-  - machine learning traceability
-  - protocol design
-  - scope claim classification
-  - trust boundaries
-  - trust provenance
-  - zenith law
-  - benchmark confusion
-  - cloud fragmentation
-  - confusion matrix
-  - cookies data protection
-  - engineering governance legal
-  - har support
-  - har support vector
-  - legal notices
-  - machine benchmark confusion
-  - micropayments agentic
-  - monitoring support
-  - monitoring support vector
-  - platform fragmentation
-  - protocol boundaries
 catchwords:
-  - governance
   - engineering
+  - governance
   - machine
   - lightning
-  - network
-  - support
-  - supply
-  - vector
-  - chain
-  - learning
   - implementation
-  - provenance
-  - practical
-  - teams
+  - network
   - deployment
-  - orchestration
-  - cross-border
   - model
-  - agentic
+  - vector
   - architecture
-  - questions
+  - support
+  - practical
+  - supply
+  - chain
+  - contents
+  - definitions
+  - learning
+  - retrieval
+  - teams
+  - provenance
   - appendix
+  - language
+  - questions
+  - orchestration
   - technical
-  - lessons
-  - micropayments
+  - cross-border
   - artificial
   - intelligence
+  - agentic
+  - evidence
+  - review
+  - production
+  - guide
+  - lessons
+  - micropayments
+  - frequently
   - controls
+  - large
+  - asked
   - china
   - cloud
   - deadlock
-  - guide
-  - asked
-  - frequently
+  - design
+  - systems
   - agent
   - benchmark
-  - definitions
-  - language
-  - design
   - axios
   - digital
-  - large
-  - production
-  - sovereignty
-  - systems
-  - boundaries
-  - contents
-  - evidence
-  - legal
-  - platform
-  - protocol
-  - reference
+  - literature
   - snapshot
   - table
+  - sovereignty
+  - boundaries
+  - legal
+  - notes
+  - optimisation
+  - platform
+  - protocol
+  - quick
+  - reference
   - security
+  - evaluation
   - first
   - representation
-  - review
   - scope
   - attack
-  - papers
+  - citability
+  - practice
   - trust
   - domain
   - glossary
-  - citability
-  - practice
+  - generation
+  - open-source
   - tuning
+  - framework
+  - playbook
   - clustering
   - introduction
-  - literature
+  - monitoring
   - resource
-  - framework
   - operational
+  - papers
   - incident
+  - langchain
   - quantum
   - starvation
+  - strategy
   - adaptation
   - enterprise
   - fragmentation
+  - knowledge
   - reliability
+  - software
   - traceability
   - access
+  - authoritative
   - compromise
-  - evaluation
-  - langchain
+  - decisions
+  - guidance
   - langgraph
   - matter
-  - monitoring
+  - stage
   - theory
-  - knowledge
+  - context
+  - metrics
   - resilience
-  - authoritative
+  - author
   - claim
   - communication
   - conditions
-  - decisions
+  - critical
   - early
   - graph
+  - inference
   - kernel
   - layer
   - limits
-  - playbook
   - profile
   - semantic
   - transformer
   - classification
   - compliance
   - management
+  - patterns
+  - pipeline
+  - analysis
   - coffman
-  - critical
   - cybersecurity
   - geometry
   - pilot
+  - processing
   - search
   - series
-  - software
   - tenant-aware
   - alignment
   - confusion
   - cookies
   - interoperability
-  - method
-  - operating
-  - patterns
-  - privacy
-  - analysis
-  - author
-  - beyond
-  - calibration
-  - circular
-  - cloud-native
-  - hilbert
-  - included
-  - inference
-  - observability
-  - open-source
-  - policy
-  - reading
-  - scheduling
-  - signals
-  - synthesis
-  - autonomous
-  - blockchain
 catchphrases:
   - frequently asked questions
   - technical appendix
+  - quick definitions
   - citability snapshot
   - authoritative reference set
-  - quick definitions
   - terminology definitions
   - agent card
   - agent manifest
+  - e evidence maturity snapshot
+  - evidence confidence map
+  - f practical translation map
   - protocol glossary
   - 1 foundational margin theory
   - 1 lock preprocessing contracts
   - 2 algorithm diversification
   - 2 partnership models shift accountability maps
+  - 3 enforce strict context positioning rules
   - 4 semantic versioning convenience systematically enables supply chain propagation
   - 6 communication infrastructure carries hidden regulatory friction
   - acceptable conduct
+  - architecture overview
   - automated candidate moderation
+  - b authoritative baselines
+  - b deployment readiness checklist
   - benchmark definitions
+  - bm25 sparse retrieval
+  - chunking strategy
   - citation-ready data extracts
   - claim taxonomy
   - common design mistakes
   - container packaging
+  - containerised deployment
+  - context compression
   - control comparison baseline vs resilient supply chain practice
   - corpus scope
   - coverage snapshot
   - cross-paper pattern controlled hybridization wins
   - current website-specific practices
+  - dense retrieval
+  - document loading
   - durable execution
-  - e evidence maturity snapshot
+  - embedding model selection
   - engagement boundary
   - enterprise architecture considerations
   - externalize routing policy
-  - f practical translation map
   - glossary overview
   - governance definitions
   - homepage overview
@@ -510,6 +517,7 @@ catchphrases:
   - legal notices
   - liability allocation
   - liability boundary
+  - monitoring checklist
   - observability requirements
   - official reference points
   - operational definitions
@@ -522,150 +530,166 @@ catchphrases:
   - practical decision framework
   - practical takeaways
   - profile overview
+  - reciprocal rank fusion
+  - retrieval metrics
   - role-based implementation focus
   - semaphores counter-based access control
   - series roadmap
   - source-level assessment
+  - stage 3 hybrid retrieval
+  - stage 7 evaluation pipeline
+  - stage 8 rag fine-tuning fusion
+  - start vllm server
   - step-by-step tuning workflow
   - structured validation
   - suggested repository shape
   - tenant-aware operation
   - tenant-aware orchestration controls
   - thematic analysis
+  - vector store setup
 search_words:
-  - governance
   - engineering
+  - governance
   - machine
   - lightning
   - data
+  - implementation
   - network
+  - deployment
+  - rag
+  - model
+  - vector
   - a2a
+  - architecture
   - support
+  - practical
   - supply
   - mcp
   - svm
-  - vector
   - chain
+  - contents
+  - definitions
   - learning
-  - implementation
+  - retrieval
+  - teams
   - provenance
   - acp
-  - practical
-  - teams
-  - deployment
-  - orchestration
-  - cross-border
-  - model
-  - agentic
-  - architecture
-  - questions
   - appendix
+  - language
+  - questions
+  - orchestration
   - technical
-  - lessons
-  - micropayments
+  - cross-border
   - artificial
   - intelligence
+  - agentic
+  - evidence
+  - review
+  - production
+  - guide
+  - lessons
+  - micropayments
+  - frequently
   - controls
+  - large
+  - asked
   - china
   - cloud
   - deadlock
-  - guide
-  - asked
-  - frequently
+  - design
+  - systems
   - agent
   - benchmark
-  - definitions
-  - language
-  - design
+  - seo
+  - llm
+  - aeo
   - axios
   - digital
-  - llm
+  - geo
+  - literature
   - npm
-  - large
-  - production
-  - sovereignty
-  - systems
-  - boundaries
-  - contents
-  - evidence
-  - legal
-  - platform
-  - protocol
-  - reference
   - snapshot
   - table
+  - sovereignty
+  - boundaries
+  - legal
+  - notes
+  - optimisation
+  - platform
+  - protocol
+  - quick
+  - reference
   - security
+  - evaluation
   - first
   - representation
-  - review
   - scope
   - attack
-  - papers
+  - citability
+  - practice
   - trust
   - deep
   - domain
   - glossary
-  - citability
-  - practice
+  - generation
+  - open-source
   - tuning
+  - framework
+  - playbook
   - clustering
   - introduction
-  - literature
-  - resource
-  - framework
-  - hub
-  - operational
-  - incident
-  - quantum
-  - starvation
-  - adaptation
-  - enterprise
-  - fragmentation
-  - reliability
-  - traceability
   - lightning network
   - support vector
   - support vector machine
   - vector machine
   - supply chain
+  - artificial intelligence
   - a2a acp
   - mcp a2a
   - mcp a2a acp
-  - artificial intelligence
+  - large language
   - asked questions
   - frequently asked
   - frequently asked questions
-  - engineering governance
-  - data provenance
   - implementation guide
-  - large language
+  - engineering governance
+  - seo geo
+  - geo aeo
+  - seo geo aeo
+  - data provenance
+  - table contents
   - lightning network implementation
   - network implementation
   - agentic orchestration
   - digital sovereignty
   - network cross-border
   - network implementation guide
-  - lightning network cross-border
-  - table contents
-  - axios npm
-  - machine learning
-  - cross-border micropayments
+  - aeo optimisation
+  - aeo optimisation notes
   - appendix appendix
   - appendix appendix table
   - appendix table
   - appendix table contents
-  - language models
-  - large language models
+  - geo aeo optimisation
+  - lightning network cross-border
+  - optimisation notes
   - technical appendix
   - technical appendix appendix
+  - axios npm
+  - machine learning
+  - quick definitions
+  - cross-border micropayments
+  - citability snapshot
+  - language models
+  - large language models
   - chain attack
   - network cross-border micropayments
   - npm supply
   - npm supply chain
   - supply chain attack
   - axios npm supply
-  - citability snapshot
   - representation learning
+  - contents introduction
   - artificial intelligence artificial
   - intelligence artificial
   - intelligence artificial intelligence
@@ -684,26 +708,25 @@ search_words:
   - deep clustering
   - machine benchmark
   - platform engineering
-  - vector machine benchmark
-  - engineering lessons
-  - coffman conditions
-  - langgraph langchain
-  - uci har
-  - adaptation deep
-  - domain adaptation deep
-  - machine deployment
-  - vector machine deployment
 global_questions:
+  - question: How do I handle documents that update frequently in a RAG system?
+    answer: "Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. Li et al.'s survey of generative retrieval includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well."
+  - question: How should I evaluate my RAG system's quality?
+    answer: Separate retrieval evaluation from generation evaluation. Measure retrieval with precision, recall, and mean reciprocal rank (MRR). Measure generation with accuracy, faithfulness (does the output match retrieved evidence?), and relevance (does it answer the question?). When performance drops, this separation tells you which component to fix.
   - question: How should pilot success thresholds be defined for lightning network implementation guide?
     answer: Define pilot thresholds before go-live. Include settlement latency, recovery time, intervention rate, and audit completeness against a baseline window. Keep targets realistic and tied to business risk, not only technical preference. Review thresholds after each pilot cycle and adjust only with documented evidence.
   - question: How should teams decide between linear and RBF SVM as a starting baseline for support vector machine?
     answer: Start with linear SVM, inspect residual and class-pair errors, then move to RBF only when validation evidence shows nonlinear boundaries that linear regularization cannot recover.
   - question: How should teams use community incident reports without amplifying false signals for digital sovereignty China?
     answer: Treat community reports as intake signals. Require independent corroboration through status pages, policy documents, support records, or contractual notices before escalation. This method preserves speed without sacrificing evidence quality.
+  - question: What chunk size should I use for RAG document processing?
+    answer: Target 256–512 tokens per chunk. Smaller chunks (128 tokens) improve retrieval precision but lose surrounding context. Larger chunks (1024+ tokens) preserve context but reduce retrieval accuracy because irrelevant content dilutes the embedding signal. Use sentence-level splitting with paragraph awareness for the best balance.
+  - question: What is the RAG maturity progression and where should my team start?
+    answer: "Kimothi describes three maturity levels: Naïve RAG (basic retrieve-and-generate), Advanced RAG (query rewriting, re-ranking, iterative retrieval), and Modular RAG (composable pipeline with pluggable components). Start with Naïve RAG, measure evaluation metrics, and progress only when evidence from those metrics justifies the added complexity."
   - question: What is the highest-impact control in SVM deployment governance for support vector machine deployment?
     answer: Class-level monitoring with confusion-corridor tracking, because it reveals high-impact degradation earlier than aggregate accuracy.
-  - question: What is the safest way to translate these five papers into real project decisions for representation learning?
-    answer: Use staged evidence gates. Start with simulation validation. Move to a constrained pilot. Scale to production only after stability, uncertainty, and cost checks pass. This matches the mixed maturity of the five sources.
+  - question: What is the safest way to translate the reviewed papers into real project decisions for representation learning?
+    answer: Use staged evidence gates. Start with simulation validation. Move to a constrained pilot. Scale to production only after stability, uncertainty, and cost checks pass. This matches the mixed maturity of the reviewed sources.
   - question: What is the strongest next step for deeper ML provenance evaluation for data provenance?
     answer: Run a broader review that includes MLflow, OpenLineage, Pachyderm, and DVC literature, then test candidate approaches against your production constraints and governance requirements.
   - question: What must every production runbook include for lightning network implementation guide?
@@ -718,10 +741,16 @@ global_questions:
     answer: Publish reproducible artifacts, versioned diagnostics, and post-release failure analyses so others can learn methods, not only final numbers.
   - question: How can teams test agent-to-agent workflows without introducing flaky suites for agentic orchestration framework?
     answer: Separate contract tests from end-to-end tests. Use mocked or local A2A agents for protocol checks, then run a smaller number of containerized end-to-end workflows for full-path validation. If ACP-compatible endpoints are part of the path, add REST contract tests for manifest and run endpoints so protocol drift is caught before integration rollout.
+  - question: How do I evaluate whether my RAG system is production-ready?
+    answer: "Run the separated evaluation pipeline described in Stage 7. Production readiness requires: retrieval precision@5 > 0.7, context recall@20 > 0.9, generation faithfulness > 0.85, and answer relevancy > 0.8. Also verify latency targets (p95 < 2s for most applications) and error rates (< 1% failed queries)."
+  - question: How do I handle multilingual documents in a RAG system?
+    answer: Use multilingual embedding models (e.g., `multilingual-e5-large` or `paraphrase-multilingual-MiniLM-L12-v2`). Note that Amugongo et al. found 78.9% of healthcare RAG studies use English-only datasets, so evaluate multilingual retrieval quality carefully before deploying in non-English clinical or critical settings.
   - question: How do teams avoid lock-in when integrating Lightning libraries for lightning network implementation guide?
     answer: Avoid lock-in by hiding node-specific logic behind internal adapters, versioning schemas explicitly, and keeping external APIs neutral. Do not expose implementation-specific payload fields to clients. This design lets teams swap runtimes or change routing logic later with less disruption and lower migration risk.
   - question: How do tenant-aware and cross-border controls reshape protocol design choices for agentic orchestration framework?
     answer: They require explicit policy partitioning, region-aware data handling, and identity federation choices that remain portable across clouds and partner ecosystems. In practice, teams should align MCP tool policy, A2A task authorization, and ACP-compatible gateway policy so tenant and jurisdiction controls remain consistent across every protocol boundary.
+  - question: How does generative information retrieval (GenIR) relate to RAG?
+    answer: RAG and GenIR are complementary strategies. RAG augments generation with retrieved external knowledge using explicit indexes. GenIR replaces index-based retrieval with parametric memory — models directly generate document identifiers or responses from their parameters. Production systems may eventually combine both, but GenIR remains largely experimental.
   - question: How does multi-kernel deep clustering differ from standard deep clustering pipelines for representation learning?
     answer: DMKCN learns adaptive kernel mixes and optimizes clustering and representation quality together. Standard pipelines often use one fixed kernel or reconstruction-heavy goals. The trade-off is better separability with more tuning work.
   - question: How is one-class SVM different from unsupervised clustering objectives for support vector machine?
@@ -738,6 +767,8 @@ global_questions:
     answer: Turn each research claim into a testable pilot hypothesis. Measure latency, fee behavior, route reliability, recovery success, and policy compliance in one real corridor. Keep test conditions explicit and repeatable. Make architecture decisions only after results stay stable across multiple runs, not after one successful demonstration.
   - question: How was the axios maintainer account likely compromised, based on current reporting for axios npm supply chain attack?
     answer: Public reports did not conclusively publish every credential theft detail at first disclosure. Mandiant tradecraft reporting plus the maintainer post-mortem context supports social engineering as a credible precursor pattern.
+  - question: What are the biggest risks when deploying RAG in healthcare?
+    answer: "Amugongo et al. identify four: language bias (78.9% English-only datasets), proprietary model dependency (GPT-3.5/4 dominance), evaluation fragmentation (no standard framework), and ethics gaps (most studies omit ethical considerations). Teams deploying healthcare RAG must address all four to meet clinical safety requirements."
   - question: What boundary-level differences matter most between MCP, A2A, and ACP for MCP vs A2A vs ACP?
     answer: MCP connects models or hosts to tools, resources, and prompts. A2A connects autonomous agents through task lifecycle collaboration. ACP defines a REST-oriented agent interoperability model with manifest and run semantics.
   - question: What core operational message connects the full LLM source synthesis for large language models?
@@ -758,10 +789,18 @@ global_questions:
     answer: Start with one corridor, one policy set, one reconciliation flow, and one rollback plan. This scope is small enough to run fast and large enough to test the core risks. You can validate identity mapping, route behavior, and failure recovery without mixing many variables in one pilot.
   - question: What is the first practical control for sovereign-aware enterprise cloud programs for digital sovereignty China?
     answer: Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority aligns with observed access and notification disruptions in the corpus.
+  - question: What is the minimum viable RAG pipeline I can deploy quickly?
+    answer: A simple directory reader, sentence splitter (512-token chunks), all-MiniLM-L6-v2 embeddings, FAISS index, Ollama with Llama 3.1 8B, and a basic prompt template. This can be built in under a day with LlamaIndex or LangChain. Add hybrid retrieval and re-ranking as your first optimisation.
+  - question: What is the most common failure mode in production RAG?
+    answer: Distractor contamination — retrieving documents that are semantically similar to the query but do not contain the correct answer. This is the most harmful retrieval artefact, worse than completely random documents. Implement cross-encoder re-ranking and monitor retrieval precision to detect and prevent this failure mode.
+  - question: What is the most important finding from this RAG evidence review?
+    answer: Cuconasu et al.'s discovery that semantically similar but non-answer-containing documents (distractors) degrade LLM accuracy more than completely random documents. This counter-intuitive finding challenges the assumption that higher retrieval scores produce better RAG outputs and has direct implications for how retrieval pipelines should be designed.
   - question: What is the most important reliability primitive in payment orchestration for lightning network implementation guide?
     answer: Idempotent payment intents are among the most important reliability primitives. They prevent duplicate settlement when retries, delayed callbacks, or replay events occur. Pair them with deterministic state transitions so every event lands in a known state. Together, these patterns make reconciliation faster and reduce hidden failure loops in production operations.
   - question: What is the simplest deployable architecture for MCP, A2A, and ACP interoperability for agentic orchestration framework?
     answer: One orchestrator service plus two or three specialist agents is enough. The orchestrator uses A2A to delegate tasks. Each specialist agent uses MCP to reach concrete tools and resources. ACP-compatible facades can be added at partner-facing boundaries where REST-native interoperability is required.
+  - question: What retrieval document positioning gives the best RAG accuracy?
+    answer: Place the most relevant document adjacent to the query in the prompt. Cuconasu et al. show that "near" positioning (relevant document closest to query) consistently outperforms "mid" (middle of context) and "far" (beginning of context) placements across all tested LLMs. This confirms the "lost in the middle" effect from prior research.
   - question: What should enterprises implement first after this LLM practice review for large language models?
     answer: Start with a minimal governance baseline. Define approved use cases. Define prompt versioning rules. Define output verification requirements. Define escalation procedures for harmful or ungrounded responses. This sequence converts theory into immediate control coverage.
   - question: Why does R-versus-Python parity still matter with similar libsvm tooling for support vector machine benchmark?
@@ -782,6 +821,8 @@ global_questions:
     answer: Hallucination occurs when an LLM generates plausible-sounding text that is factually wrong, internally inconsistent, or unsupported by any source. The root cause is that LLMs are trained to predict likely next tokens, not to assert truth. Prevention strategies include retrieval-augmented generation (grounding responses in retrieved source documents), contradiction checks against known facts, citation gates that require the model to specify a source for each factual claim, and multi-resolution evaluation that tests factuality separately from fluency. Hallucination is identified as a primary failure mode in both Brown et al. and the synthesis in this article.
   - question: Why do AI access restrictions often change faster than other SaaS restrictions for digital sovereignty China?
     answer: Recent records show AI access decisions integrating strategic and ownership criteria in addition to geography. This creates faster policy asymmetry across regions and legal entities. Engineering teams need provider abstraction and contingency model pathways.
+  - question: Why do random documents sometimes improve RAG accuracy?
+    answer: Cuconasu et al. hypothesise that random documents act as an attention regularisation mechanism. When only one gold document is present, the LLM may over-attend to any semantically similar content. Random noise reduces this over-reliance by distributing attention, potentially helping the model focus more carefully on the genuinely relevant passage. The mechanism is hypothesised, not mechanistically proven.
   - question: Why is SVM still valuable in 2026 despite dominant deep-learning workflows for support vector machine?
     answer: SVM gives a transparent optimization framework that remains highly useful for structured, medium-scale classification and for disciplined baseline construction before scaling to heavier architectures.
   - question: Why is identity governance still necessary for autonomous agents for lightning network cross-border micropayments?
@@ -792,6 +833,10 @@ global_questions:
     answer: Alignment can make domains look similar while classes still overlap. Qiang et al. show that this hurts prediction quality in target data. Adding discriminability constraints helps keep class boundaries clear.
   - question: Can A2A replace MCP for tool invocation and capability exposure for MCP vs A2A vs ACP?
     answer: It can, but it is usually wasteful. Simple tools do not benefit much from peer-agent ceremony. A2A shines when the remote side behaves like a collaborator, not just a callable capability. ACP-style REST wrappers can expose those collaborators to existing API ecosystems, but they do not remove the need for MCP when local tool boundaries and consent controls are required.
+  - question: Can I use RAG without a GPU?
+    answer: Yes, for small-scale deployments. CPU-based embedding models (all-MiniLM-L6-v2) and quantised LLMs (via Ollama or llama.cpp) can run on standard servers. For production throughput, a GPU accelerates both embedding computation and LLM inference. The RAG infrastructure itself (vector store, BM25 index, re-ranker) can run on CPU.
+  - question: Can I use this evidence review as the sole basis for my RAG architecture?
+    answer: No. This review is strong for identifying retrieval pipeline priorities, evaluation strategies, and failure modes. Final architecture decisions should follow measured outcomes from your own domain-specific evaluation, including retrieval quality, generation faithfulness, and domain safety requirements. Use this synthesis as a starting map, not a destination.
   - question: Can MCP replace A2A for multi-agent collaboration scenarios for MCP vs A2A vs ACP?
     answer: Only in narrow cases. If the remote side is really a bounded capability, MCP can be sufficient. Once the remote side owns task state, asynchronous progress, artifact delivery, or agent discovery, A2A is usually the cleaner fit. If the integration boundary is HTTP-governed and partner-facing, ACP-style contracts may still be the practical edge pattern during A2A migration planning.
   - question: Can stablecoins replace identity and governance requirements for lightning network cross-border micropayments?
@@ -828,12 +873,18 @@ global_questions:
     answer: Use short quotations only when wording precision matters. Prefer paraphrase for interpretation. Maintain explicit attribution. Preserve links to original context. Where applicable under UK law, assess whether CDPA 1988 ss. 29 (research/private study) and 31A (text and data analysis for non-commercial research) conditions are genuinely satisfied before reuse. This applies equally to video content and to published scholarly works.
   - question: Is ACP obsolete, or still useful during A2A convergence and migration for MCP vs A2A vs ACP?
     answer: ACP remains important for architecture learning and for existing deployments. New strategy should account for announced convergence and migration direction toward A2A to reduce future integration churn.
+  - question: Is RAG sufficient on its own, or should I also fine-tune my model?
+    answer: For general knowledge tasks, RAG alone can be effective. For domain-specific applications (healthcare, legal, finance), combining RAG with parameter-efficient fine-tuning produces better results. Meng et al. show that the fusion pattern — retrieval provides current context, fine-tuning adapts generation style — reaches 90%+ accuracy in domain-specific Q&A.
+  - question: Is cross-encoder re-ranking worth the additional latency?
+    answer: Absolutely. While cross-encoders introduce a minor latency cost (50–200ms depending on hardware), they eliminate high-scoring semantic distractors. Given that distractor contamination can degrade generation accuracy by over 25%, a re-ranking layer is a required safety gate for production RAG, not an optional enhancement.
   - question: Is high quantum circuit fidelity equivalent to strong semantic understanding in QNLP for representation learning?
     answer: No. Circuit fidelity measures state accuracy. Semantic adequacy measures whether meaning is preserved for the task. Teams should evaluate both at the same time.
   - question: Is the reported 91.3% GCN result generalizable beyond its study context for data provenance?
     answer: No. It is a paper-reported result in one evaluation context. This review does not treat it as a universal benchmark.
-  - question: Is this six-paper synthesis enough for final architecture lock-in for lightning network cross-border micropayments?
+  - question: Is this evidence review enough for final architecture lock-in for lightning network cross-border micropayments?
     answer: No. This synthesis is strong for shortlisting options and shaping a pilot plan, but it is not enough for final lock-in. Final architecture should follow measured outcomes from production-like tests, including failure behavior, operator workload, and policy enforcement quality over time.
+  - question: Should I use dense retrieval or sparse retrieval for my RAG system?
+    answer: Use both. Huang and Huang's survey finds that hybrid retrieval — combining sparse methods like BM25 with dense methods like DPR or Contriever — consistently outperforms either method alone. BM25 handles exact terminology; dense retrieval captures semantic relationships. The combination covers both failure modes.
   - question: Should constrained devices run full Lightning clients directly for lightning network cross-border micropayments?
     answer: Usually no. Constrained devices often lack stable resources for full node operation and key management. A gateway-assisted model is more practical for many deployments. Kurt and colleagues show this pattern can keep cryptographic accountability at the originating endpoint while reducing edge runtime pressure.
   - question: Should every service run a full Lightning node for lightning network implementation guide?
@@ -880,6 +931,8 @@ global_questions:
     answer: For a practical Python-first baseline, `mcp`, `a2a-sdk`, `langgraph`, `langchain`, `fastapi`, `pydantic`, `pytest`, `httpx`, `opentelemetry-sdk`, `uvicorn`, and Docker-based packaging are sufficient for a strong first slice. If ACP-compatible REST interoperability is required on day one, add OpenAPI tooling and gateway middleware that can enforce auth, rate policy, and run-lifecycle observability at the HTTP edge.
   - question: Which metrics should be monitored first during SVM training and validation for support vector machine?
     answer: Monitor per-class recall, pairwise confusion flows, and hyperparameter stability across folds before relying on top-line accuracy.
+  - question: Which open-source vector database should I choose for RAG?
+    answer: Choose **FAISS** for ultra-fast performance during local prototyping. Use **Chroma** for lightweight disk persistence with structured metadata filtering. Transition to **Qdrant** for true large-scale multi-node orchestration requiring advanced data storage, payload management, and horizontal scaling. Start with FAISS or Chroma for development; migrate to Qdrant when you need production persistence and filtering.
   - question: Which references are most useful for implementation-focused engineering teams for large language models?
     answer: Google Cloud Tech and AI Search provide direct implementation value for teams that need prompt design guidance and user-facing framing for model behavior. Yang et al.'s practitioner survey on ChatGPT and beyond adds empirical guidance on when to use LLMs versus fine-tuned models for specific NLP tasks.
   - question: Which threat groups are linked to the axios compromise by major vendors for axios npm supply chain attack?
@@ -894,6 +947,8 @@ global_questions:
     answer: No. Privacy, transfer, and sector-specific obligations vary by jurisdiction and industry. Treat protocol guidance as architecture input and confirm legal and regulatory requirements for the specific operating context.
   - question: Is MCP more secure than A2A, or are they securing different boundaries for MCP vs A2A vs ACP?
     answer: Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services. ACP-oriented deployments additionally depend on API gateway policy, token scope, and run-endpoint governance quality, so security posture is a composition problem, not a single-protocol verdict.
+  - question: Should I fine-tune my LLM in addition to using RAG?
+    answer: Do not treat them as mutually exclusive choices. RAG provides an external, volatile memory bank — ideal for real-time, updatable data. Fine-tuning teaches the model domain-specific formatting, structural constraints, and industry vocabulary. For domain-specific deployments where the model needs to adopt specialised citation styles or conventions, add LoRA fine-tuning. Meng et al. show that the combination outperforms either technique alone.
   - question: When should teams choose fine-tuning versus prompt engineering for LLM workloads for large language models?
     answer: Fine-tuning updates model weights on a curated dataset, adapting the model's internal representations and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in Yang et al.'s practitioner survey.
   - question: Which controls most effectively prevent deadlock in distributed production systems?
@@ -930,8 +985,10 @@ posts:
       - appendix
       - attribution
       - compromised
+      - contents
       - control
       - defense
+      - definitions
       - evidence
       - maintainer
       - malware
@@ -939,8 +996,6 @@ posts:
       - removal
       - teams
       - technical
-      - telemetry
-      - timeline
       - supply chain security
       - social engineering
       - incident response
@@ -948,11 +1003,11 @@ posts:
     key_phrases:
       - supply chain
       - axios npm
-      - npm supply
       - npm supply chain
-      - axios npm supply
-      - chain attack
+      - npm supply
       - supply chain attack
+      - chain attack
+      - axios npm supply
       - social engineering
       - trust provenance
       - incident response
@@ -960,16 +1015,16 @@ posts:
       - chain security
       - supply chain compromise
       - chain compromise
-      - incident response trust
       - engineering incident response
-      - response trust provenance
       - social engineering incident
-      - response trust
-      - engineering incident
-      - security social
+      - incident response trust
       - security social engineering
+      - response trust provenance
       - chain security social
+      - software supply
       - software supply chain
+      - response trust
+      - security social
     catchwords:
       - chain
       - supply
@@ -995,10 +1050,10 @@ posts:
       - appendix
       - attribution
       - compromised
+      - contents
       - control
       - defense
-      - evidence
-      - maintainer
+      - definitions
     search_words:
       - chain
       - supply
@@ -1020,11 +1075,11 @@ posts:
       - cybersecurity
       - supply chain
       - axios npm
-      - npm supply
       - npm supply chain
-      - axios npm supply
-      - chain attack
+      - npm supply
       - supply chain attack
+      - chain attack
+      - axios npm supply
       - social engineering
       - trust provenance
       - incident response
@@ -1077,16 +1132,16 @@ posts:
       - architecture
       - bifurcation
       - community
+      - contents
       - corpus
       - cross-border
+      - definitions
       - enterprise
       - first
       - jurisdiction
       - regulatory
       - sovereign-aware
       - technical
-      - 21vianet
-      - chatgpt
       - digital sovereignty
       - cloud compliance
       - platform engineering
@@ -1140,11 +1195,11 @@ posts:
       - architecture
       - bifurcation
       - community
+      - contents
       - corpus
       - cross-border
+      - definitions
       - enterprise
-      - first
-      - jurisdiction
     search_words:
       - china
       - digital
@@ -1223,7 +1278,9 @@ posts:
       - technical
       - appendix
       - boundary
+      - contents
       - controls
+      - definitions
       - design
       - evaluation
       - limits
@@ -1232,8 +1289,6 @@ posts:
       - practical
       - recurring
       - synthesis
-      - teams
-      - themes
       - large language model
       - prompt engineering
       - ai governance
@@ -1286,11 +1341,11 @@ posts:
       - technical
       - appendix
       - boundary
+      - contents
       - controls
+      - definitions
       - design
       - evaluation
-      - limits
-      - operational
     search_words:
       - language
       - large
@@ -1369,6 +1424,7 @@ posts:
       - appendix
       - assessment
       - beyond
+      - contents
       - evidence
       - karuna
       - pina
@@ -1378,7 +1434,6 @@ posts:
       - requirements
       - souza
       - w3c
-      - lifecycle
       - data provenance
       - machine learning
       - graph neural network
@@ -1405,8 +1460,8 @@ posts:
       - reproducibility governance data
       - governance data provenance
       - network reproducibility
+      - governance lessons
       - reproducibility governance
-      - artificial intelligence
     catchwords:
       - provenance
       - traceability
@@ -1432,10 +1487,10 @@ posts:
       - appendix
       - assessment
       - beyond
+      - contents
       - evidence
       - karuna
       - practical
-      - practitioners
     search_words:
       - provenance
       - data
@@ -1540,8 +1595,8 @@ posts:
       - supply chain security
       - chain security
       - cloud fragmentation
-      - mutex semaphore
       - priority aging
+      - mutex semaphore
       - deadlock theory
       - starvation resilience
       - resilience thread
@@ -1551,8 +1606,8 @@ posts:
       - concurrency supply chain
       - theory applied
       - chain security cloud
-      - deadlock deadlock
       - security cloud fragmentation
+      - deadlock deadlock
       - cloud fragmentation scheduling
       - fragmentation scheduling starvation
     catchwords:
@@ -1612,8 +1667,8 @@ posts:
       - supply chain security
       - chain security
       - cloud fragmentation
-      - mutex semaphore
       - priority aging
+      - mutex semaphore
       - deadlock theory
     questions:
       - question: What are the four Coffman conditions, and why do they still matter for modern systems for deadlock?
@@ -1650,8 +1705,10 @@ posts:
       - appendix
       - choice
       - choices
+      - contents
       - core
       - decision
+      - definitions
       - fit
       - guide
       - rbf
@@ -1661,11 +1718,9 @@ posts:
       - theory
       - variants
       - selection
+      - aeo
       - asked
       - authoritative
-      - baseline
-      - behavior
-      - benchmark
       - support vector machine
       - machine learning
       - model tuning
@@ -1677,26 +1732,26 @@ posts:
       - vector machine
       - support vector machine
       - machine learning
-      - kernel support vector
-      - tuning kernel support
-      - model tuning kernel
-      - classification model tuning
-      - learning classification model
-      - machine learning classification
-      - machine machine learning
       - vector machine machine
+      - machine machine learning
       - kernel support
       - tuning kernel
       - model tuning
       - classification model
       - learning classification
       - machine machine
-      - margins kernels
+      - machine learning classification
       - artificial intelligence
+      - learning classification model
+      - classification model tuning
+      - model tuning kernel
+      - margins kernels
+      - tuning kernel support
+      - kernel support vector
+      - algorithm variants
       - svm strong
       - strong fit
       - svm strong fit
-      - algorithm variants
     catchwords:
       - machine
       - support
@@ -1715,7 +1770,9 @@ posts:
       - appendix
       - choice
       - choices
+      - contents
       - decision
+      - definitions
       - guide
       - reference
       - series
@@ -1724,8 +1781,6 @@ posts:
       - variants
       - selection
       - asked
-      - authoritative
-      - baseline
     search_words:
       - machine
       - svm
@@ -1748,14 +1803,14 @@ posts:
       - vector machine
       - support vector machine
       - machine learning
-      - kernel support vector
-      - tuning kernel support
-      - model tuning kernel
-      - classification model tuning
-      - learning classification model
-      - machine learning classification
-      - machine machine learning
       - vector machine machine
+      - machine machine learning
+      - kernel support
+      - tuning kernel
+      - model tuning
+      - classification model
+      - learning classification
+      - machine machine
     questions:
       - question: Why is SVM still valuable in 2026 despite dominant deep-learning workflows for support vector machine?
         answer: SVM gives a transparent optimization framework that remains highly useful for structured, medium-scale classification and for disciplined baseline construction before scaling to heavier architectures.
@@ -1792,6 +1847,8 @@ posts:
       - intelligence
       - accuracy
       - appendix
+      - contents
+      - definitions
       - forensics
       - insufficient
       - matter
@@ -1802,9 +1859,7 @@ posts:
       - implementation
       - level
       - metrics
-      - aggregate
-      - alone
-      - analyzes
+      - aeo
       - support vector machine
       - confusion matrix
       - model evaluation
@@ -1854,6 +1909,8 @@ posts:
       - intelligence
       - accuracy
       - appendix
+      - contents
+      - definitions
       - forensics
       - insufficient
       - matter
@@ -1861,8 +1918,6 @@ posts:
       - analysis
       - class
       - diagnostics
-      - implementation
-      - level
     search_words:
       - benchmark
       - machine
@@ -1929,20 +1984,20 @@ posts:
       - appendix
       - benchmark
       - cadence
+      - contents
       - decision
+      - definitions
       - playbook
       - retraining
       - selection
       - snapshot
       - series
       - actions
+      - aeo
       - asked
       - baseline
       - behavior
       - best
-      - beyond
-      - blueprint
-      - checks
       - support vector machine
       - model tuning
       - model governance
@@ -1956,7 +2011,7 @@ posts:
       - model governance
       - deployment model
       - deployment model governance
-      - monitoring support
+      - artificial intelligence
       - tuning workflow
       - deployment svm
       - vector machine model
@@ -1967,11 +2022,11 @@ posts:
       - governance monitoring support
       - monitoring support vector
       - machine deployment svm
-      - governance monitoring
-      - artificial intelligence
       - deployment governance
       - machine model
       - model tuning
+      - tuning deployment
+      - monitoring support
     catchwords:
       - deployment
       - machine
@@ -1994,13 +2049,13 @@ posts:
       - appendix
       - benchmark
       - cadence
+      - contents
       - decision
+      - definitions
       - playbook
       - retraining
       - selection
       - snapshot
-      - series
-      - actions
     search_words:
       - deployment
       - machine
@@ -2028,7 +2083,7 @@ posts:
       - model governance
       - deployment model
       - deployment model governance
-      - monitoring support
+      - artificial intelligence
       - tuning workflow
       - deployment svm
       - vector machine model
@@ -2077,10 +2132,10 @@ posts:
       - capability
       - collaboration
       - considerations
+      - contents
       - deployment
       - fit
       - human-in-the-loop
-      - matter
       - agent interoperability
       - protocol design
       - multi-agent system
@@ -2091,8 +2146,8 @@ posts:
       - mcp a2a acp
       - orchestration mcp a2a
       - orchestration mcp
-      - acp mcp
       - a2a acp mcp
+      - acp mcp
       - a2a acp agent
       - acp agent interoperability
       - trust boundaries
@@ -2137,8 +2192,8 @@ posts:
       - capability
       - collaboration
       - considerations
+      - contents
       - deployment
-      - human-in-the-loop
     search_words:
       - a2a
       - mcp
@@ -2163,8 +2218,8 @@ posts:
       - mcp a2a acp
       - orchestration mcp a2a
       - orchestration mcp
-      - acp mcp
       - a2a acp mcp
+      - acp mcp
       - a2a acp agent
       - acp agent interoperability
       - trust boundaries
@@ -2241,15 +2296,16 @@ posts:
       - a2a acp
       - mcp a2a acp
       - langgraph langchain
-      - acp langgraph
       - acp langgraph langchain
+      - acp langgraph
       - a2a acp langgraph
-      - agentic orchestration mcp
       - orchestration mcp a2a
+      - agentic orchestration mcp
       - orchestration mcp
       - langchain deployment observability
       - langchain fastapi
       - langgraph langchain deployment
+      - langgraph langchain fastapi
       - deployment observability
       - langchain deployment
       - platform engineering
@@ -2257,7 +2313,6 @@ posts:
       - artificial intelligence
       - intelligence platform engineering
       - artificial intelligence platform
-      - langgraph langchain fastapi
     catchwords:
       - orchestration
       - agentic
@@ -2313,11 +2368,11 @@ posts:
       - a2a acp
       - mcp a2a acp
       - langgraph langchain
-      - acp langgraph
       - acp langgraph langchain
+      - acp langgraph
       - a2a acp langgraph
-      - agentic orchestration mcp
       - orchestration mcp a2a
+      - agentic orchestration mcp
     questions:
       - question: What is the simplest deployable architecture for MCP, A2A, and ACP interoperability for agentic orchestration framework?
         answer: One orchestrator service plus two or three specialist agents is enough. The orchestrator uses A2A to delegate tasks. Each specialist agent uses MCP to reach concrete tools and resources. ACP-compatible facades can be added at partner-facing boundaries where REST-native interoperability is required.
@@ -2368,13 +2423,13 @@ posts:
       - multi-kernel
       - alignment
       - appendix
+      - contents
       - critical
       - definitions
       - evidence
       - geometry
       - lessons
       - performance
-      - practitioners
       - representation learning
       - quantum computing
       - semantic communication
@@ -2432,9 +2487,9 @@ posts:
       - multi-kernel
       - alignment
       - appendix
+      - contents
       - critical
       - definitions
-      - evidence
     search_words:
       - learning
       - representation
@@ -2476,8 +2531,8 @@ posts:
         answer: DMKCN learns adaptive kernel mixes and optimizes clustering and representation quality together. Standard pipelines often use one fixed kernel or reconstruction-heavy goals. The trade-off is better separability with more tuning work.
       - question: Is high quantum circuit fidelity equivalent to strong semantic understanding in QNLP for representation learning?
         answer: No. Circuit fidelity measures state accuracy. Semantic adequacy measures whether meaning is preserved for the task. Teams should evaluate both at the same time.
-      - question: What is the safest way to translate these five papers into real project decisions for representation learning?
-        answer: Use staged evidence gates. Start with simulation validation. Move to a constrained pilot. Scale to production only after stability, uncertainty, and cost checks pass. This matches the mixed maturity of the five sources.
+      - question: What is the safest way to translate the reviewed papers into real project decisions for representation learning?
+        answer: Use staged evidence gates. Start with simulation validation. Move to a constrained pilot. Scale to production only after stability, uncertainty, and cost checks pass. This matches the mixed maturity of the reviewed sources.
   lightning-network-cross-border-micropayments-systematic-exploratory-literature-review:
     title: "Lightning Network for Cross-Border Micropayments: A Systematic Exploratory Literature Review for Agentic Commerce"
     url: "/lightning-cross-border-micropayments-evidence-review"
@@ -2487,35 +2542,35 @@ posts:
       - micropayments
       - network
       - review
+      - literature
       - blockchain
       - agentic
       - architecture
-      - literature
+      - evidence
       - payment
       - practical
       - teams
       - implementation
       - autonomous
       - autonomy
-      - evidence
       - first
       - governance
       - identity
       - iot
-      - papers
-      - six-paper
       - technical
       - artificial
       - commerce
       - fintech
       - intelligence
       - appendix
+      - contents
       - controls
       - corpus
       - decisions
       - definitions
       - early
       - graduated
+      - guidance
       - lightning network
       - cross-border payments
       - agentic ai
@@ -2531,68 +2586,68 @@ posts:
       - literature review
       - micropayments agentic
       - blockchain artificial intelligence
-      - network cross-border payments
-      - cross-border payments micropayments
-      - payments micropayments agentic
       - micropayments agentic blockchain
       - agentic blockchain literature
       - blockchain literature review
+      - fintech blockchain artificial
+      - payments micropayments agentic
+      - cross-border payments micropayments
       - blockchain literature
       - agentic blockchain
-      - fintech blockchain artificial
+      - network cross-border payments
       - agentic commerce
       - fintech blockchain
       - blockchain artificial
       - artificial intelligence
-      - payments micropayments
       - cross-border payments
-      - micropayments six-paper
+      - payments micropayments
+      - micropayments evidence review
     catchwords:
       - lightning
       - cross-border
       - micropayments
       - network
       - review
+      - literature
       - blockchain
       - agentic
       - architecture
-      - literature
+      - evidence
       - payment
       - practical
       - teams
       - implementation
       - autonomous
       - autonomy
-      - evidence
       - first
       - governance
       - identity
-      - papers
-      - six-paper
       - technical
       - artificial
       - commerce
       - fintech
       - intelligence
       - appendix
+      - contents
       - controls
+      - corpus
     search_words:
       - lightning
       - cross-border
       - micropayments
       - network
       - review
+      - literature
       - blockchain
       - agentic
       - architecture
-      - literature
+      - evidence
       - payment
       - practical
       - teams
       - implementation
       - autonomous
       - autonomy
-      - evidence
       - first
       - lightning network
       - network cross-border
@@ -2602,10 +2657,10 @@ posts:
       - literature review
       - micropayments agentic
       - blockchain artificial intelligence
-      - network cross-border payments
-      - cross-border payments micropayments
-      - payments micropayments agentic
       - micropayments agentic blockchain
+      - agentic blockchain literature
+      - blockchain literature review
+      - fintech blockchain artificial
     questions:
       - question: What is a realistic first milestone for a Lightning micropayment pilot for lightning network cross-border micropayments?
         answer: Start with one corridor, one policy set, one reconciliation flow, and one rollback plan. This scope is small enough to run fast and large enough to test the core risks. You can validate identity mapping, route behavior, and failure recovery without mixing many variables in one pilot.
@@ -2625,7 +2680,7 @@ posts:
         answer: No. Stablecoins may help with some settlement paths, but they do not replace identity controls or governance duties. Teams still need clear authorization, policy checks, and audit logs. Regulatory obligations also remain, including jurisdiction-specific controls around financial integrity, user protection, and record keeping.
       - question: How should teams validate research claims before production decisions for lightning network cross-border micropayments?
         answer: Turn each research claim into a testable pilot hypothesis. Measure latency, fee behavior, route reliability, recovery success, and policy compliance in one real corridor. Keep test conditions explicit and repeatable. Make architecture decisions only after results stay stable across multiple runs, not after one successful demonstration.
-      - question: Is this six-paper synthesis enough for final architecture lock-in for lightning network cross-border micropayments?
+      - question: Is this evidence review enough for final architecture lock-in for lightning network cross-border micropayments?
         answer: No. This synthesis is strong for shortlisting options and shaping a pilot plan, but it is not enough for final lock-in. Final architecture should follow measured outcomes from production-like tests, including failure behavior, operator workload, and policy enforcement quality over time.
   lightning-network-agentic-micropayments-open-source-implementation-playbook:
     title: "Lightning Network Agentic Micropayments: Open-Source End-to-End Implementation Playbook"
@@ -2657,6 +2712,7 @@ posts:
       - agentic
       - appendix
       - author
+      - contents
       - control
       - definitions
       - lock-in
@@ -2670,32 +2726,31 @@ posts:
       - lightning network implementation guide
       - open source micropayment stack
       - bitcoin lightning production deployment
-      - autonomous agent payments architecture
     key_phrases:
       - lightning network
-      - network implementation
       - lightning network implementation
+      - network implementation
       - implementation guide
       - network implementation guide
-      - implementation playbook
       - lightning network micropayments
-      - fintech engineering
       - network micropayments open
       - micropayments open deployment
-      - network micropayments
-      - micropayments open
-      - open deployment
-      - deployment software
-      - software architecture
-      - architecture testing
       - open deployment software
       - deployment software architecture
       - software architecture testing
-      - testing lightning network
-      - architecture testing lightning
+      - architecture testing
+      - software architecture
+      - deployment software
+      - implementation playbook
+      - fintech engineering
+      - network micropayments
+      - open deployment
+      - micropayments open
       - fintech engineering fintech
       - engineering fintech engineering
       - corridor lightning
+      - pilot corridor
+      - engineering fintech
     catchwords:
       - lightning
       - implementation
@@ -2722,9 +2777,9 @@ posts:
       - agentic
       - appendix
       - author
+      - contents
       - control
       - definitions
-      - lock-in
     search_words:
       - lightning
       - implementation
@@ -2745,17 +2800,17 @@ posts:
       - engineering
       - first
       - lightning network
-      - network implementation
       - lightning network implementation
+      - network implementation
       - implementation guide
       - network implementation guide
-      - implementation playbook
       - lightning network micropayments
-      - fintech engineering
       - network micropayments open
       - micropayments open deployment
-      - network micropayments
-      - micropayments open
+      - open deployment software
+      - deployment software architecture
+      - software architecture testing
+      - architecture testing
     questions:
       - question: Which Lightning runtime should teams choose first for lightning network implementation guide?
         answer: Choose the runtime that best fits your team skills, operations model, and support plan. LND, Core Lightning, Eclair, and LDK can all work when used with clear boundaries. Keep node access behind adapters so migration risk stays low if reliability, ecosystem support, or governance needs change later.
@@ -2787,6 +2842,306 @@ posts:
         answer: Define pilot thresholds before go-live. Include settlement latency, recovery time, intervention rate, and audit completeness against a baseline window. Keep targets realistic and tied to business risk, not only technical preference. Review thresholds after each pilot cycle and adjust only with documented evidence.
       - question: Which governance data should be retained for expansion decisions for lightning network implementation guide?
         answer: Retain policy-change history, failure and recovery evidence, intervention trends by autonomy tier, and reconciliation variance across pilot windows. Keep this data queryable and time-stamped. Expansion decisions are safer when teams can prove control behavior over time instead of relying on anecdotal success.
+  retrieval-augmented-generation-evidence-review:
+    title: "Retrieval-Augmented Generation: An Evidence Review of Architecture, Retrieval Strategy, and Production Readiness"
+    url: "/retrieval-augmented-generation-evidence-review"
+    keywords:
+      - retrieval
+      - rag
+      - review
+      - evidence
+      - architecture
+      - generation
+      - literature
+      - healthcare
+      - language
+      - generative
+      - pipeline
+      - deployment
+      - model
+      - augmented
+      - fusion
+      - map
+      - practical
+      - retrieval-augmented
+      - strategy
+      - teams
+      - artificial
+      - intelligence
+      - large
+      - natural
+      - processing
+      - production
+      - accuracy
+      - appendix
+      - applications
+      - architectural
+      - contents
+      - corpus
+      - definitions
+      - domain-specific
+      - evolution
+      - fine-tuning
+      - retrieval augmented generation
+      - large language model
+      - information retrieval
+      - literature review
+    key_phrases:
+      - evidence review
+      - augmented generation
+      - retrieval augmented
+      - retrieval augmented generation
+      - retrieval-augmented generation
+      - literature review natural
+      - retrieval literature review
+      - healthcare deployment
+      - model retrieval literature
+      - language model retrieval
+      - review natural language
+      - large language model
+      - language processing
+      - natural language
+      - review natural
+      - natural language processing
+      - literature review
+      - retrieval literature
+      - model retrieval
+      - language model
+      - large language
+      - generation large
+      - generation large language
+      - augmented generation large
+    catchwords:
+      - retrieval
+      - review
+      - evidence
+      - architecture
+      - generation
+      - literature
+      - healthcare
+      - language
+      - generative
+      - pipeline
+      - deployment
+      - model
+      - augmented
+      - fusion
+      - practical
+      - retrieval-augmented
+      - strategy
+      - teams
+      - artificial
+      - intelligence
+      - large
+      - natural
+      - processing
+      - production
+      - accuracy
+      - appendix
+      - applications
+      - architectural
+    search_words:
+      - retrieval
+      - rag
+      - review
+      - evidence
+      - architecture
+      - generation
+      - literature
+      - healthcare
+      - language
+      - generative
+      - pipeline
+      - deployment
+      - model
+      - augmented
+      - fusion
+      - map
+      - practical
+      - retrieval-augmented
+      - evidence review
+      - augmented generation
+      - retrieval augmented
+      - retrieval augmented generation
+      - retrieval-augmented generation
+      - literature review natural
+      - retrieval literature review
+      - healthcare deployment
+      - model retrieval literature
+      - language model retrieval
+      - review natural language
+      - large language model
+    questions:
+      - question: What is the most important finding from this RAG evidence review?
+        answer: Cuconasu et al.'s discovery that semantically similar but non-answer-containing documents (distractors) degrade LLM accuracy more than completely random documents. This counter-intuitive finding challenges the assumption that higher retrieval scores produce better RAG outputs and has direct implications for how retrieval pipelines should be designed.
+      - question: Should I use dense retrieval or sparse retrieval for my RAG system?
+        answer: Use both. Huang and Huang's survey finds that hybrid retrieval — combining sparse methods like BM25 with dense methods like DPR or Contriever — consistently outperforms either method alone. BM25 handles exact terminology; dense retrieval captures semantic relationships. The combination covers both failure modes.
+      - question: How should I evaluate my RAG system's quality?
+        answer: Separate retrieval evaluation from generation evaluation. Measure retrieval with precision, recall, and mean reciprocal rank (MRR). Measure generation with accuracy, faithfulness (does the output match retrieved evidence?), and relevance (does it answer the question?). When performance drops, this separation tells you which component to fix.
+      - question: Is RAG sufficient on its own, or should I also fine-tune my model?
+        answer: For general knowledge tasks, RAG alone can be effective. For domain-specific applications (healthcare, legal, finance), combining RAG with parameter-efficient fine-tuning produces better results. Meng et al. show that the fusion pattern — retrieval provides current context, fine-tuning adapts generation style — reaches 90%+ accuracy in domain-specific Q&A.
+      - question: Why do random documents sometimes improve RAG accuracy?
+        answer: Cuconasu et al. hypothesise that random documents act as an attention regularisation mechanism. When only one gold document is present, the LLM may over-attend to any semantically similar content. Random noise reduces this over-reliance by distributing attention, potentially helping the model focus more carefully on the genuinely relevant passage. The mechanism is hypothesised, not mechanistically proven.
+      - question: What are the biggest risks when deploying RAG in healthcare?
+        answer: "Amugongo et al. identify four: language bias (78.9% English-only datasets), proprietary model dependency (GPT-3.5/4 dominance), evaluation fragmentation (no standard framework), and ethics gaps (most studies omit ethical considerations). Teams deploying healthcare RAG must address all four to meet clinical safety requirements."
+      - question: How does generative information retrieval (GenIR) relate to RAG?
+        answer: RAG and GenIR are complementary strategies. RAG augments generation with retrieved external knowledge using explicit indexes. GenIR replaces index-based retrieval with parametric memory — models directly generate document identifiers or responses from their parameters. Production systems may eventually combine both, but GenIR remains largely experimental.
+      - question: What retrieval document positioning gives the best RAG accuracy?
+        answer: Place the most relevant document adjacent to the query in the prompt. Cuconasu et al. show that "near" positioning (relevant document closest to query) consistently outperforms "mid" (middle of context) and "far" (beginning of context) placements across all tested LLMs. This confirms the "lost in the middle" effect from prior research.
+      - question: What is the RAG maturity progression and where should my team start?
+        answer: "Kimothi describes three maturity levels: Naïve RAG (basic retrieve-and-generate), Advanced RAG (query rewriting, re-ranking, iterative retrieval), and Modular RAG (composable pipeline with pluggable components). Start with Naïve RAG, measure evaluation metrics, and progress only when evidence from those metrics justifies the added complexity."
+      - question: Can I use this evidence review as the sole basis for my RAG architecture?
+        answer: No. This review is strong for identifying retrieval pipeline priorities, evaluation strategies, and failure modes. Final architecture decisions should follow measured outcomes from your own domain-specific evaluation, including retrieval quality, generation faithfulness, and domain safety requirements. Use this synthesis as a starting map, not a destination.
+  retrieval-augmented-generation-implementation-playbook:
+    title: "Retrieval-Augmented Generation: Open-Source Implementation Playbook for Production RAG Systems"
+    url: "/retrieval-augmented-generation-implementation-playbook"
+    keywords:
+      - rag
+      - retrieval
+      - stage
+      - implementation
+      - deployment
+      - generation
+      - open-source
+      - production
+      - chunking
+      - language
+      - model
+      - document
+      - evaluation
+      - hybrid
+      - re-ranking
+      - pipeline
+      - playbook
+      - processing
+      - vector
+      - context
+      - embedding
+      - fine-tuning
+      - guide
+      - open
+      - artificial
+      - augmented
+      - cross-encoder
+      - dense
+      - engineering
+      - intelligence
+      - large
+      - libraries
+      - natural
+      - software
+      - store
+      - systems
+      - retrieval augmented generation
+      - large language model
+      - open source
+      - implementation guide
+    key_phrases:
+      - hybrid retrieval
+      - production rag
+      - implementation guide
+      - rag pipeline
+      - guide natural
+      - natural language
+      - language processing
+      - vector store
+      - natural language processing
+      - guide natural language
+      - implementation guide natural
+      - open implementation guide
+      - model open implementation
+      - language model open
+      - large language model
+      - generation large language
+      - augmented generation large
+      - retrieval augmented generation
+      - intelligence software engineering
+      - artificial intelligence software
+      - production rag systems
+      - generation open-source
+      - implementation playbook
+      - rag systems
+    catchwords:
+      - retrieval
+      - stage
+      - implementation
+      - deployment
+      - generation
+      - open-source
+      - production
+      - chunking
+      - language
+      - model
+      - document
+      - evaluation
+      - hybrid
+      - re-ranking
+      - pipeline
+      - playbook
+      - processing
+      - vector
+      - context
+      - embedding
+      - fine-tuning
+      - guide
+      - artificial
+      - augmented
+      - cross-encoder
+      - dense
+      - engineering
+      - intelligence
+    search_words:
+      - rag
+      - retrieval
+      - stage
+      - implementation
+      - deployment
+      - generation
+      - open-source
+      - production
+      - chunking
+      - language
+      - model
+      - document
+      - evaluation
+      - hybrid
+      - re-ranking
+      - pipeline
+      - playbook
+      - processing
+      - hybrid retrieval
+      - production rag
+      - implementation guide
+      - rag pipeline
+      - guide natural
+      - natural language
+      - language processing
+      - vector store
+      - natural language processing
+      - guide natural language
+      - implementation guide natural
+      - open implementation guide
+    questions:
+      - question: Which open-source vector database should I choose for RAG?
+        answer: Choose **FAISS** for ultra-fast performance during local prototyping. Use **Chroma** for lightweight disk persistence with structured metadata filtering. Transition to **Qdrant** for true large-scale multi-node orchestration requiring advanced data storage, payload management, and horizontal scaling. Start with FAISS or Chroma for development; migrate to Qdrant when you need production persistence and filtering.
+      - question: What chunk size should I use for RAG document processing?
+        answer: Target 256–512 tokens per chunk. Smaller chunks (128 tokens) improve retrieval precision but lose surrounding context. Larger chunks (1024+ tokens) preserve context but reduce retrieval accuracy because irrelevant content dilutes the embedding signal. Use sentence-level splitting with paragraph awareness for the best balance.
+      - question: How do I handle documents that update frequently in a RAG system?
+        answer: "Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. Li et al.'s survey of generative retrieval includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well."
+      - question: Is cross-encoder re-ranking worth the additional latency?
+        answer: Absolutely. While cross-encoders introduce a minor latency cost (50–200ms depending on hardware), they eliminate high-scoring semantic distractors. Given that distractor contamination can degrade generation accuracy by over 25%, a re-ranking layer is a required safety gate for production RAG, not an optional enhancement.
+      - question: Can I use RAG without a GPU?
+        answer: Yes, for small-scale deployments. CPU-based embedding models (all-MiniLM-L6-v2) and quantised LLMs (via Ollama or llama.cpp) can run on standard servers. For production throughput, a GPU accelerates both embedding computation and LLM inference. The RAG infrastructure itself (vector store, BM25 index, re-ranker) can run on CPU.
+      - question: How do I evaluate whether my RAG system is production-ready?
+        answer: "Run the separated evaluation pipeline described in Stage 7. Production readiness requires: retrieval precision@5 > 0.7, context recall@20 > 0.9, generation faithfulness > 0.85, and answer relevancy > 0.8. Also verify latency targets (p95 < 2s for most applications) and error rates (< 1% failed queries)."
+      - question: Should I fine-tune my LLM in addition to using RAG?
+        answer: Do not treat them as mutually exclusive choices. RAG provides an external, volatile memory bank — ideal for real-time, updatable data. Fine-tuning teaches the model domain-specific formatting, structural constraints, and industry vocabulary. For domain-specific deployments where the model needs to adopt specialised citation styles or conventions, add LoRA fine-tuning. Meng et al. show that the combination outperforms either technique alone.
+      - question: What is the minimum viable RAG pipeline I can deploy quickly?
+        answer: A simple directory reader, sentence splitter (512-token chunks), all-MiniLM-L6-v2 embeddings, FAISS index, Ollama with Llama 3.1 8B, and a basic prompt template. This can be built in under a day with LlamaIndex or LangChain. Add hybrid retrieval and re-ranking as your first optimisation.
+      - question: How do I handle multilingual documents in a RAG system?
+        answer: Use multilingual embedding models (e.g., `multilingual-e5-large` or `paraphrase-multilingual-MiniLM-L12-v2`). Note that Amugongo et al. found 78.9% of healthcare RAG studies use English-only datasets, so evaluate multilingual retrieval quality carefully before deploying in non-English clinical or critical settings.
+      - question: What is the most common failure mode in production RAG?
+        answer: Distractor contamination — retrieving documents that are semantically similar to the query but do not contain the correct answer. This is the most harmful retrieval artefact, worse than completely random documents. Implement cross-encoder re-ranking and monitor retrieval precision to detect and prevent this failure mode.
 pages:
   zenith-law:
     title: Zenith Law Profile | Engineering Strategy and AI Governance
