@@ -23,12 +23,12 @@ references_style: ieee
 references_data_file: references
 references:
   - rag-2026-ref1
-  - rag-2026-ref2
-  - rag-2026-ref3
-  - rag-2026-ref4
-  - rag-2026-ref5
-  - rag-2026-ref6
-  - rag-2026-ref7
+  - zhao2026
+  - 10.1145/3805774
+  - 10.1145/3626772.3657834
+  - 10.1371/journal.pdig.0000877
+  - 10.1145/3722552
+  - 11009349
 howto_name: "How to build and deploy a production RAG system with open-source tools"
 howto_description: "An eight-step playbook covering document ingestion, chunking, embedding, hybrid retrieval, re-ranking, prompt construction, evaluation, and deployment."
 howto_total_time: "PT8H"
@@ -70,7 +70,7 @@ The goal is a deployable RAG pipeline that handles document ingestion, hybrid re
 
 ## Architecture Overview
 
-A production RAG system follows Huang and Huang's four-phase decomposition {% include references/cite.html key="rag-2026-ref3" %}:
+A production RAG system follows Huang and Huang's four-phase decomposition {% include references/cite.html key="10.1145/3805774" %}:
 
 <figure markdown="1">
 
@@ -186,7 +186,7 @@ collection.add(
 
 ## Stage 3: Hybrid Retrieval
 
-Empirical data confirms that hybrid retrieval consistently outperforms standalone methods {% include references/cite.html key="rag-2026-ref3" %}. Implement both pipelines and fuse their outputs:
+Empirical data confirms that hybrid retrieval consistently outperforms standalone methods {% include references/cite.html key="10.1145/3805774" %}. Implement both pipelines and fuse their outputs:
 
 ### BM25 Sparse Retrieval
 
@@ -242,7 +242,7 @@ fused_ids = reciprocal_rank_fusion([sparse_results, dense_results], top_n=10)
 
 ## Stage 4: Distractor Filtering with Cross-Encoder Re-ranking
 
-A single distracting context, highly vector-similar but non-answer-containing, degrades accuracy by up to **25%**. Multiple distractors sink accuracy by **67%** {% include references/cite.html key="rag-2026-ref4" %}. A cross-encoder re-ranker acts as your primary production gatekeeper:
+A single distracting context, highly vector-similar but non-answer-containing, degrades accuracy by up to **25%**. Multiple distractors sink accuracy by **67%** {% include references/cite.html key="10.1145/3626772.3657834" %}. A cross-encoder re-ranker acts as your primary production gatekeeper:
 
 ```python
 from sentence_transformers import CrossEncoder
@@ -264,11 +264,11 @@ def rerank_and_filter(
     return [idx for idx, score in scored[:top_k] if score > threshold]
 ```
 
-> **Key Evidence Grounding:** Cross-encoder re-ranking is not an optional optimisation. It is a safety control that protects downstream LLM reasoning from distractor failure modes {% include references/cite.html key="rag-2026-ref4" %}.
+> **Key Evidence Grounding:** Cross-encoder re-ranking is not an optional optimisation. It is a safety control that protects downstream LLM reasoning from distractor failure modes {% include references/cite.html key="10.1145/3626772.3657834" %}.
 
 ## Stage 5: Prompt Construction and Context Positioning
 
-To mitigate the "lost in the middle" effect, explicitly position your highest-scoring, post-filtered nodes adjacent to the user query {% include references/cite.html key="rag-2026-ref4" %}:
+To mitigate the "lost in the middle" effect, explicitly position your highest-scoring, post-filtered nodes adjacent to the user query {% include references/cite.html key="10.1145/3626772.3657834" %}:
 
 ```python
 def build_prompt(query: str, context_docs: list[str]) -> str:
@@ -353,7 +353,7 @@ def generate_production(prompt: str) -> str:
 
 ## Stage 7: Evaluation Pipeline
 
-Decouple your validation loops into separate retrieval and generation evaluations to isolate systemic failures, as recommended by Huang and Huang {% include references/cite.html key="rag-2026-ref3" %} and demonstrated by Kimothi {% include references/cite.html key="rag-2026-ref1" %}:
+Decouple your validation loops into separate retrieval and generation evaluations to isolate systemic failures, as recommended by Huang and Huang {% include references/cite.html key="10.1145/3805774" %} and demonstrated by Kimothi {% include references/cite.html key="rag-2026-ref1" %}:
 
 ### Retrieval Metrics
 
@@ -400,7 +400,7 @@ result = evaluate(
 
 ## Stage 8: RAG + Fine-Tuning Fusion
 
-Teach your base model domain layout compliance using Low-Rank Adaptation (LoRA) while relying on RAG to fetch live data. Meng et al. demonstrate that this fusion produces the best results for domain-specific deployments {% include references/cite.html key="rag-2026-ref7" %}:
+Teach your base model domain layout compliance using Low-Rank Adaptation (LoRA) while relying on RAG to fetch live data. Meng et al. demonstrate that this fusion produces the best results for domain-specific deployments {% include references/cite.html key="11009349" %}:
 
 ### LoRA Fine-Tuning with PEFT
 
@@ -429,7 +429,7 @@ model = get_peft_model(model, lora_config)
 
 ### QLoRA for Consumer Hardware
 
-Reduce memory footprints to allow training or adaptation runs on consumer-grade GPUs {% include references/cite.html key="rag-2026-ref7" %}:
+Reduce memory footprints to allow training or adaptation runs on consumer-grade GPUs {% include references/cite.html key="11009349" %}:
 
 ```python
 from transformers import BitsAndBytesConfig
@@ -495,7 +495,7 @@ Log the full retrieval chain for every production query to enable post-hoc audit
 - Which documents were included in the final prompt context.
 - The generated response and any post-processing applied.
 
-This logging is essential for debugging quality regressions, investigating user complaints, and meeting audit requirements in regulated domains {% include references/cite.html key="rag-2026-ref5" %}.
+This logging is essential for debugging quality regressions, investigating user complaints, and meeting audit requirements in regulated domains {% include references/cite.html key="10.1371/journal.pdig.0000877" %}.
 
 ### Regression Testing After Corpus Updates
 
@@ -557,11 +557,11 @@ Target 256–512 tokens per chunk. Smaller chunks (128 tokens) improve retrieval
 
 ### How do I handle documents that update frequently in a RAG system?
 
-Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. Li et al.'s survey of generative retrieval includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well {% include references/cite.html key="rag-2026-ref6" %}.
+Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. Li et al.'s survey of generative retrieval includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well {% include references/cite.html key="10.1145/3722552" %}.
 
 ### Is cross-encoder re-ranking worth the additional latency?
 
-Yes. While cross-encoders introduce a minor latency cost (50–200ms depending on hardware), they eliminate high-scoring semantic distractors. Given that distractor contamination can degrade generation accuracy by over 25% {% include references/cite.html key="rag-2026-ref4" %}, a re-ranking layer is a required safety gate for production RAG, not an optional enhancement.
+Yes. While cross-encoders introduce a minor latency cost (50–200ms depending on hardware), they eliminate high-scoring semantic distractors. Given that distractor contamination can degrade generation accuracy by over 25% {% include references/cite.html key="10.1145/3626772.3657834" %}, a re-ranking layer is a required safety gate for production RAG, not an optional enhancement.
 
 ### Can I use RAG without a GPU?
 
@@ -573,7 +573,7 @@ Run the separated evaluation pipeline described in Stage 7. Production readiness
 
 ### Should I fine-tune my LLM in addition to using RAG?
 
-Do not treat them as mutually exclusive choices. RAG provides an external, volatile memory bank, ideal for real-time, updatable data. Fine-tuning teaches the model domain-specific formatting, structural constraints, and industry vocabulary. For domain-specific deployments where the model needs to adopt specialised citation styles or conventions, add LoRA fine-tuning. Meng et al. show that the combination outperforms either technique alone {% include references/cite.html key="rag-2026-ref7" %}.
+Do not treat them as mutually exclusive choices. RAG provides an external, volatile memory bank, ideal for real-time, updatable data. Fine-tuning teaches the model domain-specific formatting, structural constraints, and industry vocabulary. For domain-specific deployments where the model needs to adopt specialised citation styles or conventions, add LoRA fine-tuning. Meng et al. show that the combination outperforms either technique alone {% include references/cite.html key="11009349" %}.
 
 ### What is the minimum viable RAG pipeline I can deploy quickly?
 
@@ -581,25 +581,16 @@ A simple directory reader, sentence splitter (512-token chunks), all-MiniLM-L6-v
 
 ### How do I handle multilingual documents in a RAG system?
 
-Use multilingual embedding models (e.g., `multilingual-e5-large` or `paraphrase-multilingual-MiniLM-L12-v2`). Note that Amugongo et al. found 78.9% of healthcare RAG studies use English-only datasets {% include references/cite.html key="rag-2026-ref5" %}, so evaluate multilingual retrieval quality carefully before deploying in non-English clinical or critical settings.
+Use multilingual embedding models (e.g., `multilingual-e5-large` or `paraphrase-multilingual-MiniLM-L12-v2`). Note that Amugongo et al. found 78.9% of healthcare RAG studies use English-only datasets {% include references/cite.html key="10.1371/journal.pdig.0000877" %}, so evaluate multilingual retrieval quality carefully before deploying in non-English clinical or critical settings.
 
 ### What is the most common failure mode in production RAG?
 
-Distractor contamination: retrieving documents that are semantically similar to the query but do not contain the correct answer. This is the most harmful retrieval artefact, worse than completely random documents {% include references/cite.html key="rag-2026-ref4" %}. Implement cross-encoder re-ranking and monitor retrieval precision to detect and prevent this failure mode.
+Distractor contamination: retrieving documents that are semantically similar to the query but do not contain the correct answer. This is the most harmful retrieval artefact, worse than completely random documents {% include references/cite.html key="10.1145/3626772.3657834" %}. Implement cross-encoder re-ranking and monitor retrieval precision to detect and prevent this failure mode.
 
 ## Technical Appendix
 
 <details markdown="1" class="appendix-callout group">
-<summary class="appendix-summary">
-  <span class="appendix-summary-title"><strong>Library Versions, Deployment Checklist, and Technical Reference</strong></span>
-  <span class="inline-flex items-center gap-2">
-    <span class="appendix-state-chip inline-flex group-open:hidden" aria-hidden="true">Collapsed</span>
-    <span class="appendix-state-chip hidden group-open:inline-flex" aria-hidden="true">Expanded</span>
-    <svg class="appendix-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false">
-      <path fill="currentColor" d="M7.05 4.55a.75.75 0 0 1 1.06 0l4.4 4.4a.75.75 0 0 1 0 1.06l-4.4 4.4a.75.75 0 1 1-1.06-1.06L10.92 10 7.05 6.11a.75.75 0 0 1 0-1.06Z" />
-    </svg>
-  </span>
-</summary>
+{% include appendix-summary.html title="Library Versions, Deployment Checklist, and Technical Reference" %}
 
 ### Appendix Table of Contents
 

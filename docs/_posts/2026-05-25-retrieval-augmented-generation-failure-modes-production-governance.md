@@ -21,12 +21,12 @@ references_style: ieee
 references_data_file: references
 references:
   - rag-2026-ref1
-  - rag-2026-ref2
-  - rag-2026-ref3
-  - rag-2026-ref4
-  - rag-2026-ref5
-  - rag-2026-ref6
-  - rag-2026-ref7
+  - zhao2026
+  - 10.1145/3805774
+  - 10.1145/3626772.3657834
+  - 10.1371/journal.pdig.0000877
+  - 10.1145/3722552
+  - 11009349
 howto_name: "How to identify and mitigate RAG failure modes in production"
 howto_description: "A structured approach to diagnosing retrieval-augmented generation failure modes, implementing confidence calibration, and establishing production governance controls."
 howto_total_time: "PT3H"
@@ -64,7 +64,7 @@ The [companion evidence review](/retrieval-augmented-generation-evidence-review)
 
 ## Failure Mode 1: Distractor Contamination
 
-The most empirically documented RAG failure mode comes from Cuconasu et al.'s SIGIR 2024 experiments {% include references/cite.html key="rag-2026-ref4" %}. A **distracting document**, one that scores highly in vector similarity but does not contain the correct answer, is more harmful to LLM accuracy than a completely random, unrelated document.
+The most empirically documented RAG failure mode comes from Cuconasu et al.'s SIGIR 2024 experiments {% include references/cite.html key="10.1145/3626772.3657834" %}. A **distracting document**, one that scores highly in vector similarity but does not contain the correct answer, is more harmful to LLM accuracy than a completely random, unrelated document.
 
 ### Why This Happens
 
@@ -72,8 +72,8 @@ Dense retrieval models optimise for semantic similarity, not answer containment.
 
 ### Measured Impact
 
-- A single distractor reduces accuracy by up to **25%** {% include references/cite.html key="rag-2026-ref4" %}.
-- With 18 distractors in the context window, accuracy degrades by up to **67%** {% include references/cite.html key="rag-2026-ref4" %}.
+- A single distractor reduces accuracy by up to **25%** {% include references/cite.html key="10.1145/3626772.3657834" %}.
+- With 18 distractors in the context window, accuracy degrades by up to **67%** {% include references/cite.html key="10.1145/3626772.3657834" %}.
 - This effect was consistent across all four tested LLMs (Llama2, MPT, Phi-2, Falcon) at the 2.7B–7B parameter scale with 4-bit quantisation.
 
 ### Evidence Boundaries
@@ -95,7 +95,7 @@ A RAG system can produce a cited response that:
 - **Over-generalises** from a narrow finding, presenting a domain-specific result as a universal claim.
 - **Fabricates a plausible synthesis** by blending fragments from multiple documents into a statement that none of them individually support.
 
-None of the reviewed papers provide a production-ready mechanism for detecting these failures automatically. The evidence review notes that retrieval quality and generation quality must be measured independently {% include references/cite.html key="rag-2026-ref3" %}, but existing evaluation frameworks (including RAGAS) measure faithfulness at a coarse level that may not catch subtle misrepresentation.
+None of the reviewed papers provide a production-ready mechanism for detecting these failures automatically. The evidence review notes that retrieval quality and generation quality must be measured independently {% include references/cite.html key="10.1145/3805774" %}, but existing evaluation frameworks (including RAGAS) measure faithfulness at a coarse level that may not catch subtle misrepresentation.
 
 ### What This Means in Practice
 
@@ -113,7 +113,7 @@ A RAG system's knowledge is only as current and authoritative as its corpus. Unl
 - **Authority drift** occurs when the corpus accumulates documents of declining quality over time: user-generated content, outdated blog posts, or superseded versions of official documentation.
 - **Contradictory additions** introduce opposing claims without any mechanism to flag the conflict.
 
-Li et al. position continual learning as a requirement for reliable information retrieval systems {% include references/cite.html key="rag-2026-ref6" %}, but the practical mechanisms for maintaining corpus integrity over months and years of production operation are not addressed in the reviewed literature.
+Li et al. position continual learning as a requirement for reliable information retrieval systems {% include references/cite.html key="10.1145/3722552" %}, but the practical mechanisms for maintaining corpus integrity over months and years of production operation are not addressed in the reviewed literature.
 
 ### Governance Controls
 
@@ -140,7 +140,7 @@ Production systems should detect contradictions before they reach the generator:
 
 ## Failure Mode 5: Domain-Safety Gaps
 
-Amugongo et al.'s systematic review of healthcare RAG demonstrates that domain-specific safety requirements are systematically under-addressed in the literature {% include references/cite.html key="rag-2026-ref5" %}:
+Amugongo et al.'s systematic review of healthcare RAG demonstrates that domain-specific safety requirements are systematically under-addressed in the literature {% include references/cite.html key="10.1371/journal.pdig.0000877" %}:
 
 - **78.9%** of healthcare RAG studies use English-only datasets. Deploying these systems for non-English clinical populations introduces unmeasured risk.
 - The majority of reviewed studies omit ethical considerations: bias auditing, consent mechanisms, explainability requirements, and human oversight are absent.
@@ -197,7 +197,7 @@ Standard evaluation pipelines measure average-case performance. Red-team testing
 2. **Staleness probes:** Queries about topics where the corpus contains outdated information alongside current data. Does the system prefer the current version?
 3. **Scope-boundary probes:** Queries that fall outside the corpus domain. Does the system acknowledge its boundary or hallucinate an answer?
 4. **Prompt injection probes:** Adversarial content injected into corpus documents that attempts to override system instructions through the retrieved context.
-5. **Distractor saturation:** Deliberately populate the retrieval results with high-scoring distractors (per Cuconasu et al.'s taxonomy {% include references/cite.html key="rag-2026-ref4" %}) and measure accuracy degradation.
+5. **Distractor saturation:** Deliberately populate the retrieval results with high-scoring distractors (per Cuconasu et al.'s taxonomy {% include references/cite.html key="10.1145/3626772.3657834" %}) and measure accuracy degradation.
 
 ### Frequency
 
@@ -214,11 +214,11 @@ In regulated domains (healthcare, legal, financial), the ability to reconstruct 
 5. **Response generated**: the raw model output before any post-processing.
 6. **Post-processing applied**: any filtering, formatting, or safety checks applied to the final response.
 
-This chain enables root-cause analysis when users report incorrect answers and provides the audit trail that compliance frameworks (HIPAA, GDPR, financial regulatory bodies) require for automated decision-support systems {% include references/cite.html key="rag-2026-ref5" %}.
+This chain enables root-cause analysis when users report incorrect answers and provides the audit trail that compliance frameworks (HIPAA, GDPR, financial regulatory bodies) require for automated decision-support systems {% include references/cite.html key="10.1371/journal.pdig.0000877" %}.
 
 ## The Maturity Gap: What the Literature Does Not Yet Cover
 
-The reviewed corpus provides strong architectural foundations (Kimothi {% include references/cite.html key="rag-2026-ref1" %}, Zhao et al. {% include references/cite.html key="rag-2026-ref2" %}, Huang and Huang {% include references/cite.html key="rag-2026-ref3" %}), critical retrieval-level evidence (Cuconasu et al. {% include references/cite.html key="rag-2026-ref4" %}), and domain-specific gap analysis (Amugongo et al. {% include references/cite.html key="rag-2026-ref5" %}). What it does not yet provide is:
+The reviewed corpus provides strong architectural foundations (Kimothi {% include references/cite.html key="rag-2026-ref1" %}, Zhao et al. {% include references/cite.html key="zhao2026" %}, Huang and Huang {% include references/cite.html key="10.1145/3805774" %}), critical retrieval-level evidence (Cuconasu et al. {% include references/cite.html key="10.1145/3626772.3657834" %}), and domain-specific gap analysis (Amugongo et al. {% include references/cite.html key="10.1371/journal.pdig.0000877" %}). What it does not yet provide is:
 
 - **Longitudinal production data** on how RAG system quality evolves over months of operation with changing corpora.
 - **Standardised evaluation frameworks** for domain-specific RAG deployments beyond general-purpose metrics.
@@ -232,7 +232,7 @@ These gaps are not criticisms of the reviewed papers; each addresses its declare
 
 ### What is the most dangerous RAG failure mode?
 
-Distractor contamination: retrieving documents that are semantically similar to the query but do not contain the correct answer. Cuconasu et al. show that a single distractor can reduce accuracy by 25%, and this is more harmful than completely random noise because the generator treats high-scoring but misleading documents as authoritative {% include references/cite.html key="rag-2026-ref4" %}. This evidence comes from NQ-open at small model scales; the effect at larger scales is plausible but untested.
+Distractor contamination: retrieving documents that are semantically similar to the query but do not contain the correct answer. Cuconasu et al. show that a single distractor can reduce accuracy by 25%, and this is more harmful than completely random noise because the generator treats high-scoring but misleading documents as authoritative {% include references/cite.html key="10.1145/3626772.3657834" %}. This evidence comes from NQ-open at small model scales; the effect at larger scales is plausible but untested.
 
 ### Does RAG eliminate hallucination?
 
@@ -256,15 +256,15 @@ Before initial production launch, after significant corpus updates, and on a reg
 
 ### What should I log for RAG audit compliance?
 
-The full retrieval chain: query text, retrieved document IDs with scores, which documents survived filtering, the constructed prompt, the raw model output, and any post-processing applied. This enables root-cause analysis and meets the audit trail requirements of regulatory frameworks like HIPAA and GDPR {% include references/cite.html key="rag-2026-ref5" %}.
+The full retrieval chain: query text, retrieved document IDs with scores, which documents survived filtering, the constructed prompt, the raw model output, and any post-processing applied. This enables root-cause analysis and meets the audit trail requirements of regulatory frameworks like HIPAA and GDPR {% include references/cite.html key="10.1371/journal.pdig.0000877" %}.
 
 ### Can general-purpose RAG evaluation metrics catch domain-specific failures?
 
-No. Amugongo et al. document that general-purpose metrics do not capture clinical safety, language equity, ethical considerations, or regulatory compliance {% include references/cite.html key="rag-2026-ref5" %}. The same gap applies to legal and financial domains. Domain-specific evaluation criteria must be added on top of general frameworks like RAGAS.
+No. Amugongo et al. document that general-purpose metrics do not capture clinical safety, language equity, ethical considerations, or regulatory compliance {% include references/cite.html key="10.1371/journal.pdig.0000877" %}. The same gap applies to legal and financial domains. Domain-specific evaluation criteria must be added on top of general frameworks like RAGAS.
 
 ### What is the difference between retrieval failure and generation failure in RAG?
 
-Retrieval failure means the correct document was not retrieved or was ranked below distractors. Generation failure means the correct document was retrieved and included in the prompt, but the model produced an incorrect or unfaithful response. Huang and Huang emphasise that these are independent failure modes requiring separate metrics and diagnostic pipelines {% include references/cite.html key="rag-2026-ref3" %}.
+Retrieval failure means the correct document was not retrieved or was ranked below distractors. Generation failure means the correct document was retrieved and included in the prompt, but the model produced an incorrect or unfaithful response. Huang and Huang emphasise that these are independent failure modes requiring separate metrics and diagnostic pipelines {% include references/cite.html key="10.1145/3805774" %}.
 
 ### How do I handle queries that fall outside my RAG corpus scope?
 
@@ -273,16 +273,7 @@ Implement scope-boundary detection: when all retrieved documents score below a c
 ## Technical Appendix
 
 <details markdown="1" class="appendix-callout group">
-<summary class="appendix-summary">
-  <span class="appendix-summary-title"><strong>Failure Mode Taxonomy, Evidence Boundaries, and Technical Reference</strong></span>
-  <span class="inline-flex items-center gap-2">
-    <span class="appendix-state-chip inline-flex group-open:hidden" aria-hidden="true">Collapsed</span>
-    <span class="appendix-state-chip hidden group-open:inline-flex" aria-hidden="true">Expanded</span>
-    <svg class="appendix-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false">
-      <path fill="currentColor" d="M7.05 4.55a.75.75 0 0 1 1.06 0l4.4 4.4a.75.75 0 0 1 0 1.06l-4.4 4.4a.75.75 0 1 1-1.06-1.06L10.92 10 7.05 6.11a.75.75 0 0 1 0-1.06Z" />
-    </svg>
-  </span>
-</summary>
+{% include appendix-summary.html title="Failure Mode Taxonomy, Evidence Boundaries, and Technical Reference" %}
 
 ### Appendix Table of Contents
 
