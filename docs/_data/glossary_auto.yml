@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-05-31T14:44:29Z"
-total_candidates: 949
+generated_at: "2026-05-31T15:47:25Z"
+total_candidates: 959
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -1654,6 +1654,34 @@ candidates:
         url: "/legal/privacy-cookies-data-protection/"
       - title: Legal Notices
         url: "/legal/"
+  - term: Corpus
+    status: candidate
+    confidence: 9
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Digital Sovereignty in Practice: Ten Engineering Lessons from China's
+          Cloud Access Fragmentation, 2014 to 2026"
+        url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
+      - title:
+          "Lightning Network for Cross-Border Micropayments: A Systematic Exploratory
+          Literature Review for Agentic Commerce"
+        url: "/lightning-cross-border-micropayments-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: An Evidence Review of Architecture, Retrieval
+          Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages: []
   - term: Data Provenance Model
     status: candidate
     confidence: 9
@@ -2332,6 +2360,30 @@ candidates:
         url: "/legal/privacy-cookies-data-protection/"
       - title: Legal Notices
         url: "/legal/"
+  - term: Definitions SEO
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages: []
+  - term: Definitions SEO GEO
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages: []
   - term: Domain Adaptation
     status: candidate
     confidence: 8
@@ -2616,6 +2668,26 @@ candidates:
         url: "/legal/privacy-cookies-data-protection/"
       - title: Terms of Use
         url: "/legal/terms-of-use/"
+  - term: Production Governance
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+      - title:
+          "Retrieval-Augmented Generation: Failure Modes, Confidence Calibration,
+          and Production Governance"
+        url: "/retrieval-augmented-generation-failure-modes-production-governance"
+    related_pages: []
   - term: Representation Learning
     status: candidate
     confidence: 8
@@ -7484,6 +7556,30 @@ candidates:
           Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Augmented
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: An Evidence Review of Architecture, Retrieval
+          Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+      - title:
+          "Retrieval-Augmented Generation: Failure Modes, Confidence Calibration,
+          and Production Governance"
+        url: "/retrieval-augmented-generation-failure-modes-production-governance"
+    related_pages: []
   - term: Augmented Generation
     status: candidate
     confidence: 6
@@ -7755,6 +7851,26 @@ candidates:
           "MCP, A2A, and ACP: Practical Protocol Boundaries for Enterprise Agentic
           AI Systems"
         url: "/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems"
+    related_pages: []
+  - term: Calibration
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment
+          Governance"
+        url: "/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance"
+      - title:
+          "Retrieval-Augmented Generation: Failure Modes, Confidence Calibration,
+          and Production Governance"
+        url: "/retrieval-augmented-generation-failure-modes-production-governance"
     related_pages: []
   - term: Chain Compromise Evidence-based
     status: candidate
@@ -8241,6 +8357,22 @@ candidates:
     related_posts:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
+    related_pages: []
+  - term: Confidence Calibration
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: Failure Modes, Confidence Calibration,
+          and Production Governance"
+        url: "/retrieval-augmented-generation-failure-modes-production-governance"
     related_pages: []
   - term: Confusion Matrix Model
     status: candidate
@@ -9168,6 +9300,22 @@ candidates:
     related_pages:
       - title: Disclaimer
         url: "/legal/disclaimer/"
+  - term: Failure Mode
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: Failure Modes, Confidence Calibration,
+          and Production Governance"
+        url: "/retrieval-augmented-generation-failure-modes-production-governance"
+    related_pages: []
   - term: Faq Hub Questions
     status: candidate
     confidence: 6
@@ -9837,6 +9985,22 @@ candidates:
     related_posts:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
+    related_pages: []
+  - term: Intelligence Software Engineering
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
     related_pages: []
   - term: Interoperability Architecture
     status: candidate
@@ -11527,6 +11691,34 @@ candidates:
           "Deadlock and Resource Contention: Operating Systems Theory Applied to
           Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: Processing
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Data Provenance in Machine Learning: Traceability, Graph Methods, and
+          Governance Lessons"
+        url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
+      - title:
+          "Retrieval-Augmented Generation: An Evidence Review of Architecture, Retrieval
+          Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+      - title:
+          "Retrieval-Augmented Generation: Failure Modes, Confidence Calibration,
+          and Production Governance"
+        url: "/retrieval-augmented-generation-failure-modes-production-governance"
     related_pages: []
   - term: Production-ready Enterprise
     status: candidate
