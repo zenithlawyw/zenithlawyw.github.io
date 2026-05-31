@@ -2016,6 +2016,67 @@ video {
   --tw-text-opacity: 1;
   color: rgb(147 197 253 / var(--tw-text-opacity, 1));
 }
+.progression-flow {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+.progression-flow__step {
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity, 1));
+}
+.progression-flow__step:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity, 1));
+}
+.progression-flow__arrow {
+  font-size: 1.125rem;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
+.progression-flow__arrow:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+.progression-flow__arrow--horizontal {
+  display: none !important;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.progression-flow__arrow--vertical {
+  display: inline !important;
+}
+@media (min-width: 640px) {
+  .progression-flow {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+  .progression-flow__arrow--horizontal {
+    display: inline !important;
+  }
+  .progression-flow__arrow--vertical {
+    display: none !important;
+  }
+}
 .sr-only {
   position: absolute;
   width: 1px;

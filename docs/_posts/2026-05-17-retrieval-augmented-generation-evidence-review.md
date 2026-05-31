@@ -60,6 +60,23 @@ tags:
 
 ## Why This Review Matters
 
+<style>
+.progression-flow{display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center;margin:1.5rem 0}
+.progression-flow__step{border-radius:0.5rem;border:1px solid #e5e7eb;background:#f9fafb;padding:0.5rem 1rem;font-size:0.875rem;font-weight:500;color:#1f2937}
+.progression-flow__arrow{font-size:1.125rem;color:#9ca3af}
+.progression-flow__arrow--horizontal{display:none}
+.progression-flow__arrow--vertical{display:inline}
+@media(min-width:640px){
+  .progression-flow{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:0}
+  .progression-flow__arrow--horizontal{display:inline;padding:0 0.5rem}
+  .progression-flow__arrow--vertical{display:none}
+}
+@media(prefers-color-scheme:dark){
+  .progression-flow__step{border-color:#4b5563;background:#1f2937;color:#e5e7eb}
+  .progression-flow__arrow{color:#6b7280}
+}
+</style>
+
 Retrieval-augmented generation has moved from a research concept to a widely adopted architecture pattern for knowledge-intensive AI applications. Yet the gap between "RAG works in demos" and "RAG works in production" remains wide. The reviewed literature exposes exactly where that gap comes from: retrieval noise sensitivity, evaluation fragmentation, domain-specific safety requirements, and the open question of whether retrieval alone is sufficient or needs to be fused with fine-tuning.
 
 The practical question behind this review is direct: **If you are building a RAG system for production use, what should your retrieval pipeline look like, how should you evaluate it, where will it likely fail, and what does the current evidence actually support?**
@@ -103,7 +120,16 @@ Papers were then compared along shared axes: retrieval method, augmentation stra
 Kimothi's practitioner guide decomposes RAG into two distinct workloads: an **offline indexing pipeline** (source connection, extraction, chunking, embedding, storage) and a **real-time generation pipeline** (query processing, retrieval, augmentation, LLM response) {% include references/cite.html key="rag-2026-ref1" %}. This two-pipeline model is pedagogically effective and maps directly to software engineering team boundaries.
 
 The book introduces a useful RAG maturity progression:
-$$\text{Naïve RAG} \longrightarrow \text{Advanced RAG} \longrightarrow \text{Modular RAG}$$
+
+<div class="progression-flow" role="img" aria-label="RAG maturity progression: Naïve RAG to Advanced RAG to Modular RAG">
+  <span class="progression-flow__step">Naïve RAG</span>
+  <span class="progression-flow__arrow progression-flow__arrow--horizontal" aria-hidden="true">→</span>
+  <span class="progression-flow__arrow progression-flow__arrow--vertical" aria-hidden="true">↓</span>
+  <span class="progression-flow__step">Advanced RAG</span>
+  <span class="progression-flow__arrow progression-flow__arrow--horizontal" aria-hidden="true">→</span>
+  <span class="progression-flow__arrow progression-flow__arrow--vertical" aria-hidden="true">↓</span>
+  <span class="progression-flow__step">Modular RAG</span>
+</div>
 
 This progression helps engineering teams calibrate their architectural investments against measured evaluation outcomes rather than over-engineering prematurely.
 
@@ -185,7 +211,19 @@ This PRISMA-compliant systematic review maps the RAG landscape in clinical healt
 ### Li et al. (2025): The Generative IR Evolution Map
 
 Li et al. place RAG within a broader evolutionary continuum of information retrieval:
-$$\text{Sparse Retrieval} \longrightarrow \text{Dense Retrieval} \longrightarrow \text{Generative Retrieval (GR)} \longrightarrow \text{Reliable Response Generation}$$
+
+<div class="progression-flow" role="img" aria-label="IR evolution: Sparse Retrieval to Dense Retrieval to Generative Retrieval to Reliable Response Generation">
+  <span class="progression-flow__step">Sparse Retrieval</span>
+  <span class="progression-flow__arrow progression-flow__arrow--horizontal" aria-hidden="true">→</span>
+  <span class="progression-flow__arrow progression-flow__arrow--vertical" aria-hidden="true">↓</span>
+  <span class="progression-flow__step">Dense Retrieval</span>
+  <span class="progression-flow__arrow progression-flow__arrow--horizontal" aria-hidden="true">→</span>
+  <span class="progression-flow__arrow progression-flow__arrow--vertical" aria-hidden="true">↓</span>
+  <span class="progression-flow__step">Generative Retrieval (GR)</span>
+  <span class="progression-flow__arrow progression-flow__arrow--horizontal" aria-hidden="true">→</span>
+  <span class="progression-flow__arrow progression-flow__arrow--vertical" aria-hidden="true">↓</span>
+  <span class="progression-flow__step">Reliable Response Generation</span>
+</div>
 
 Their survey covers Generative Retrieval (GR), where models internalize document identifiers natively within their parameters {% include references/cite.html key="rag-2026-ref6" %}. However, the authors note that while RAG and GR are structurally complementary, GR suffers from an inability to scale or update dynamically without expensive parameter retraining.
 
