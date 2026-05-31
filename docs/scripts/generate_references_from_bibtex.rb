@@ -126,6 +126,72 @@ def split_authors(author_field)
   clean_value(author_field).split(/\s+and\s+/i).map(&:strip).reject(&:empty?)
 end
 
+# Convert "Surname, Firstname Middlename" → "Surname, F.M."
+# or "Firstname Surname" (no comma) → "Surname, F."
+def harvard_author_name(name)
+  name = name.strip
+  if name.include?(",")
+    parts = name.split(",", 2)
+    surname = parts[0].strip
+    given = parts[1].to_s.strip
+    initials = given.split(/[\s.-]+/).reject(&:empty?).map { |g| "#{g[0]}." }.join("")
+    initials.empty? ? surname : "#{surname}, #{initials}"
+  else
+    tokens = name.split(/\s+/)
+    return name if tokens.length < 2
+
+    surname = tokens.last
+    initials = tokens[0..-2].map { |g| "#{g[0]}." }.join("")
+    "#{surname}, #{initials}"
+  end
+end
+
+# Convert "Surname, Firstname" → "F. Surname"
+# or "Firstname Surname" → "F. Surname"
+def ieee_author_name(name)
+  name = name.strip
+  if name.include?(",")
+    parts = name.split(",", 2)
+    surname = parts[0].strip
+    given = parts[1].to_s.strip
+    initials = given.split(/[\s.-]+/).reject(&:empty?).map { |g| "#{g[0]}." }.join(" ")
+    initials.empty? ? surname : "#{initials} #{surname}"
+  else
+    tokens = name.split(/\s+/)
+    return name if tokens.length < 2
+
+    surname = tokens.last
+    initials = tokens[0..-2].map { |g| "#{g[0]}." }.join(" ")
+    "#{initials} #{surname}"
+  end
+end
+
+# Format author list for Harvard style:
+# 1-3 authors: list all as Surname, F.
+# 4+ authors:  first author et al.
+def format_authors_harvard(author_field)
+  names = split_authors(author_field).map { |n| harvard_author_name(n) }
+  return "" if names.empty?
+  return names.first if names.length == 1
+  return "#{names[0]} and #{names[1]}" if names.length == 2
+  return "#{names[0..-2].join(', ')} and #{names.last}" if names.length <= 3
+
+  "#{names.first} et al."
+end
+
+# Format author list for IEEE style:
+# 1-6 authors: list all as F. Surname
+# 7+ authors:  first author et al.
+def format_authors_ieee(author_field)
+  names = split_authors(author_field).map { |n| ieee_author_name(n) }
+  return "" if names.empty?
+  return names.first if names.length == 1
+  return "#{names[0]} and #{names[1]}" if names.length == 2
+  return "#{names[0..-2].join(', ')} and #{names.last}" if names.length <= 6
+
+  "#{names.first} et al."
+end
+
 def short_author_from(authors)
   return nil if authors.empty?
 
@@ -299,8 +365,10 @@ end
 def ieee_base(entry)
   fields = entry["fields"]
   entry_type = canonical_entry_type(entry["type"])
-  authors = clean_value(fields["author"])
-  editors = clean_value(fields["editor"])
+  authors_raw = clean_value(fields["author"])
+  editors_raw = clean_value(fields["editor"])
+  authors = authors_raw.empty? ? "" : format_authors_ieee(fields["author"])
+  editors = editors_raw.empty? ? "" : format_authors_ieee(fields["editor"])
   title = clean_value(fields["title"])
   year = entry_year(fields)
   publisher = clean_value(fields["publisher"])
@@ -351,8 +419,10 @@ end
 def harvard_base(entry)
   fields = entry["fields"]
   entry_type = canonical_entry_type(entry["type"])
-  authors = clean_value(fields["author"])
-  editors = clean_value(fields["editor"])
+  authors_raw = clean_value(fields["author"])
+  editors_raw = clean_value(fields["editor"])
+  authors = authors_raw.empty? ? "" : format_authors_harvard(fields["author"])
+  editors = editors_raw.empty? ? "" : format_authors_harvard(fields["editor"])
   title = clean_value(fields["title"])
   year = entry_year(fields)
   publisher = clean_value(fields["publisher"])
@@ -369,7 +439,7 @@ def harvard_base(entry)
   principal_names = authors.empty? ? editors : authors
 
   parts = []
-  parts << principal_names unless principal_names.empty?
+  parts << principal_names.sub(/\.$/, '') unless principal_names.empty?
   parts << "(#{year})" unless year.empty?
 
   case entry_type

@@ -1714,6 +1714,8 @@ video {
   }
 }
 .appendix-state-chip {
+  display: none;
+  white-space: nowrap;
   border-radius: 9999px;
   border-width: 1px;
   border-color: rgba(203, 213, 225, 0.8);
@@ -1729,6 +1731,11 @@ video {
   background-color: rgba(30, 41, 59, 0.7);
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity, 1));
+}
+@media (min-width: 640px) {
+  .appendix-state-chip {
+    display: inline-flex;
+  }
 }
 .appendix-chevron {
   height: 1rem;

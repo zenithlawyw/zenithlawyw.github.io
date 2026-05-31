@@ -23,12 +23,12 @@ references_style: ieee
 references_data_file: references
 references:
   - rag-2026-ref1
-  - rag-2026-ref2
-  - rag-2026-ref3
-  - rag-2026-ref4
-  - rag-2026-ref5
-  - rag-2026-ref6
-  - rag-2026-ref7
+  - zhao2026
+  - 10.1145/3805774
+  - 10.1145/3626772.3657834
+  - 10.1371/journal.pdig.0000877
+  - 10.1145/3722552
+  - 11009349
 howto_name: "How to design a production-ready RAG pipeline"
 howto_description: "Use a six-step method to structure retrieval, evaluate augmentation quality, handle noise sensitivity, and deploy a reliable RAG system."
 howto_total_time: "PT4H"
@@ -139,7 +139,7 @@ This progression helps engineering teams calibrate their architectural investmen
 
 ### Zhao et al. (2026): The Cross-Modal Taxonomy
 
-Zhao et al. deliver a comprehensive RAG survey covering text, code, audio, images, video, 3D, and scientific applications {% include references/cite.html key="rag-2026-ref2" %}. Their key taxonomic contribution is a four-paradigm classification of how retrieved results interact with the generator:
+Zhao et al. deliver a comprehensive RAG survey covering text, code, audio, images, video, 3D, and scientific applications {% include references/cite.html key="zhao2026" %}. Their key taxonomic contribution is a four-paradigm classification of how retrieved results interact with the generator:
 
 <figure markdown="1">
 
@@ -159,7 +159,7 @@ Zhao et al. deliver a comprehensive RAG survey covering text, code, audio, image
 
 ### Huang and Huang (2026): The IR-Centric Pipeline Guide
 
-Published in _ACM Computing Surveys_, Huang and Huang organise RAG into four processing phases from an information retrieval perspective {% include references/cite.html key="rag-2026-ref3" %}. This phase decomposition is highly actionable because it maps directly to discrete microservices or pipeline components:
+Published in _ACM Computing Surveys_, Huang and Huang organise RAG into four processing phases from an information retrieval perspective {% include references/cite.html key="10.1145/3805774" %}. This phase decomposition is highly actionable because it maps directly to discrete microservices or pipeline components:
 
 1. **Pre-retrieval:** Query expansion, hypothetical document embeddings (HyDE), reformulation, and index routing.
 2. **Retrieval:** Execution of sparse (BM25), dense (DPR, Contriever), or hybrid methods.
@@ -174,7 +174,7 @@ Published in _ACM Computing Surveys_, Huang and Huang organise RAG into four pro
 
 ### Cuconasu et al. (2024): The Counter-Intuitive Retrieval Evidence
 
-This SIGIR 2024 paper provides the most surprising and critical empirical findings for production systems {% include references/cite.html key="rag-2026-ref4" %}. Through rigorous experimentation across multiple open-weight LLMs (Llama2, MPT, Phi-2, Falcon), the authors demonstrate three major anomalies:
+This SIGIR 2024 paper provides the most surprising and critical empirical findings for production systems {% include references/cite.html key="10.1145/3626772.3657834" %}. Through rigorous experimentation across multiple open-weight LLMs (Llama2, MPT, Phi-2, Falcon), the authors demonstrate three major anomalies:
 
 <figure markdown="1">
 
@@ -197,7 +197,7 @@ These findings challenge the naive assumption that higher retrieval recall autom
 
 ### Amugongo et al. (2025): The Healthcare Reality Check
 
-This PRISMA-compliant systematic review maps the RAG landscape in clinical healthcare and identifies four severe industry-wide blind spots {% include references/cite.html key="rag-2026-ref5" %}:
+This PRISMA-compliant systematic review maps the RAG landscape in clinical healthcare and identifies four severe industry-wide blind spots {% include references/cite.html key="10.1371/journal.pdig.0000877" %}:
 
 - **Language Bias:** **78.9%** of healthcare RAG studies rely exclusively on English datasets, while **21.1%** use Chinese. No other languages are significantly represented.
 - **Proprietary Dependency:** GPT-3.5 and GPT-4 dominate the research landscape, raising massive data privacy, compliance (HIPAA), and reproducibility concerns in clinical settings.
@@ -225,7 +225,7 @@ Li et al. place RAG within a broader evolutionary continuum of information retri
   <span class="progression-flow__step">Reliable Response Generation</span>
 </div>
 
-Their survey covers Generative Retrieval (GR), where models internalize document identifiers natively within their parameters {% include references/cite.html key="rag-2026-ref6" %}. However, the authors note that while RAG and GR are structurally complementary, GR suffers from an inability to scale or update dynamically without expensive parameter retraining.
+Their survey covers Generative Retrieval (GR), where models internalize document identifiers natively within their parameters {% include references/cite.html key="10.1145/3722552" %}. However, the authors note that while RAG and GR are structurally complementary, GR suffers from an inability to scale or update dynamically without expensive parameter retraining.
 
 **Study limitations:** Broad scope means RAG-specific depth is limited. Generative retrieval techniques remain largely experimental with no demonstrated production-scale viability. Some cited techniques are recent preprints with limited independent validation.
 
@@ -233,7 +233,7 @@ Their survey covers Generative Retrieval (GR), where models internalize document
 
 ### Meng et al. (2025): The Fusion Strategy Pattern
 
-Meng et al. demonstrate that combining RAG with parameter-efficient fine-tuning (PEFT) produces far superior domain-specific generation than relying on either technique in isolation {% include references/cite.html key="rag-2026-ref7" %}. Their core architectural pattern establishes a clear division of labor: **Retrieval provides dynamic, up-to-date context; fine-tuning adapts the model's tone, syntax, and structural constraints.**
+Meng et al. demonstrate that combining RAG with parameter-efficient fine-tuning (PEFT) produces far superior domain-specific generation than relying on either technique in isolation {% include references/cite.html key="11009349" %}. Their core architectural pattern establishes a clear division of labor: **Retrieval provides dynamic, up-to-date context; fine-tuning adapts the model's tone, syntax, and structural constraints.**
 
 <figure markdown="1">
 
@@ -284,11 +284,11 @@ Isolate your system modules into **Pre-Retrieval**, **Retrieval**, **Post-Retrie
 
 ### 2. Implement Hybrid Retrieval + Re-ranking as a Baseline
 
-Do not rely solely on dense vector databases. Combine dense embeddings with lexical BM25 search using Reciprocal Rank Fusion (RRF). Critically, pass the top results through a **Cross-Encoder Re-ranker** model. The cross-encoder serves as your primary defense against the harmful distractors highlighted by Cuconasu et al. {% include references/cite.html key="rag-2026-ref3" %}.
+Do not rely solely on dense vector databases. Combine dense embeddings with lexical BM25 search using Reciprocal Rank Fusion (RRF). Critically, pass the top results through a **Cross-Encoder Re-ranker** model. The cross-encoder serves as your primary defense against the harmful distractors highlighted by Cuconasu et al. {% include references/cite.html key="10.1145/3805774" %}.
 
 ### 3. Enforce Strict Context Positioning Rules
 
-When assembling your final LLM prompt context window, programmatically sort your documents so that the most relevant, highest-confidence sources are placed **directly adjacent to the user query** {% include references/cite.html key="rag-2026-ref4" %}. This is a zero-cost optimization with measurable accuracy benefits.
+When assembling your final LLM prompt context window, programmatically sort your documents so that the most relevant, highest-confidence sources are placed **directly adjacent to the user query** {% include references/cite.html key="10.1145/3626772.3657834" %}. This is a zero-cost optimization with measurable accuracy benefits.
 
 ### 4. Separate Your Metrics
 
@@ -301,11 +301,11 @@ When the system underperforms, this separation tells you whether retrieval or ge
 
 ### 5. Combine RAG with Fine-Tuning for Domain-Specific Applications
 
-For vertical deployments (healthcare, legal, finance), RAG alone may not adapt the model's generation style sufficiently. Add LoRA or QLoRA fine-tuning on domain-specific data to bridge the gap between generic generation and domain-appropriate responses {% include references/cite.html key="rag-2026-ref7" %}.
+For vertical deployments (healthcare, legal, finance), RAG alone may not adapt the model's generation style sufficiently. Add LoRA or QLoRA fine-tuning on domain-specific data to bridge the gap between generic generation and domain-appropriate responses {% include references/cite.html key="11009349" %}.
 
 ### 6. Add Domain-Specific Safety Gates for Critical Applications
 
-For healthcare and similarly critical domains, add human oversight, bias auditing, explainability requirements, and multilingual evaluation before deployment {% include references/cite.html key="rag-2026-ref5" %}. General-purpose RAG evaluation metrics do not capture clinical safety.
+For healthcare and similarly critical domains, add human oversight, bias auditing, explainability requirements, and multilingual evaluation before deployment {% include references/cite.html key="10.1371/journal.pdig.0000877" %}. General-purpose RAG evaluation metrics do not capture clinical safety.
 
 ## New Knowledge and Skills from the Combined Corpus
 
@@ -323,35 +323,35 @@ Teams that build reliable RAG systems typically develop five capabilities early:
 
 ### What is the most important finding from this RAG evidence review?
 
-Cuconasu et al.'s discovery that semantically similar but non-answer-containing documents (distractors) degrade LLM accuracy more than completely random documents {% include references/cite.html key="rag-2026-ref4" %}. This counter-intuitive finding challenges the assumption that higher retrieval scores produce better RAG outputs and has direct implications for how retrieval pipelines should be designed.
+Cuconasu et al.'s discovery that semantically similar but non-answer-containing documents (distractors) degrade LLM accuracy more than completely random documents {% include references/cite.html key="10.1145/3626772.3657834" %}. This counter-intuitive finding challenges the assumption that higher retrieval scores produce better RAG outputs and has direct implications for how retrieval pipelines should be designed.
 
 ### Should I use dense retrieval or sparse retrieval for my RAG system?
 
-Use both. Huang and Huang's survey finds that hybrid retrieval, combining sparse methods like BM25 with dense methods like DPR or Contriever, consistently outperforms either method alone {% include references/cite.html key="rag-2026-ref3" %}. BM25 handles exact terminology; dense retrieval captures semantic relationships. The combination covers both failure modes.
+Use both. Huang and Huang's survey finds that hybrid retrieval, combining sparse methods like BM25 with dense methods like DPR or Contriever, consistently outperforms either method alone {% include references/cite.html key="10.1145/3805774" %}. BM25 handles exact terminology; dense retrieval captures semantic relationships. The combination covers both failure modes.
 
 ### How should I evaluate my RAG system's quality?
 
-Separate retrieval evaluation from generation evaluation. Measure retrieval with precision, recall, and mean reciprocal rank (MRR). Measure generation with accuracy, faithfulness (does the output match retrieved evidence?), and relevance (does it answer the question?). When performance drops, this separation tells you which component to fix {% include references/cite.html key="rag-2026-ref1" %} {% include references/cite.html key="rag-2026-ref3" %}.
+Separate retrieval evaluation from generation evaluation. Measure retrieval with precision, recall, and mean reciprocal rank (MRR). Measure generation with accuracy, faithfulness (does the output match retrieved evidence?), and relevance (does it answer the question?). When performance drops, this separation tells you which component to fix {% include references/cite.html key="rag-2026-ref1" %} {% include references/cite.html key="10.1145/3805774" %}.
 
 ### Is RAG sufficient on its own, or should I also fine-tune my model?
 
-For general knowledge tasks, RAG alone can be effective. For domain-specific applications (healthcare, legal, finance), combining RAG with parameter-efficient fine-tuning produces better results. Meng et al. show that the fusion pattern, where retrieval provides current context and fine-tuning adapts generation style, reaches 90%+ accuracy in domain-specific Q&A {% include references/cite.html key="rag-2026-ref7" %}.
+For general knowledge tasks, RAG alone can be effective. For domain-specific applications (healthcare, legal, finance), combining RAG with parameter-efficient fine-tuning produces better results. Meng et al. show that the fusion pattern, where retrieval provides current context and fine-tuning adapts generation style, reaches 90%+ accuracy in domain-specific Q&A {% include references/cite.html key="11009349" %}.
 
 ### Why do random documents sometimes improve RAG accuracy?
 
-Cuconasu et al. hypothesise that random documents act as an attention regularisation mechanism {% include references/cite.html key="rag-2026-ref4" %}. When only one gold document is present, the LLM may over-attend to any semantically similar content. Random noise reduces this over-reliance by distributing attention, potentially helping the model focus more carefully on the genuinely relevant passage. The mechanism is hypothesised, not mechanistically proven.
+Cuconasu et al. hypothesise that random documents act as an attention regularisation mechanism {% include references/cite.html key="10.1145/3626772.3657834" %}. When only one gold document is present, the LLM may over-attend to any semantically similar content. Random noise reduces this over-reliance by distributing attention, potentially helping the model focus more carefully on the genuinely relevant passage. The mechanism is hypothesised, not mechanistically proven.
 
 ### What are the biggest risks when deploying RAG in healthcare?
 
-Amugongo et al. identify four: language bias (78.9% English-only datasets), proprietary model dependency (GPT-3.5/4 dominance), evaluation fragmentation (no standard framework), and ethics gaps (most studies omit ethical considerations) {% include references/cite.html key="rag-2026-ref5" %}. Teams deploying healthcare RAG must address all four to meet clinical safety requirements.
+Amugongo et al. identify four: language bias (78.9% English-only datasets), proprietary model dependency (GPT-3.5/4 dominance), evaluation fragmentation (no standard framework), and ethics gaps (most studies omit ethical considerations) {% include references/cite.html key="10.1371/journal.pdig.0000877" %}. Teams deploying healthcare RAG must address all four to meet clinical safety requirements.
 
 ### How does generative information retrieval (GenIR) relate to RAG?
 
-RAG and GenIR are complementary strategies. RAG augments generation with retrieved external knowledge using explicit indexes. GenIR replaces index-based retrieval with parametric memory: models directly generate document identifiers or responses from their parameters {% include references/cite.html key="rag-2026-ref6" %}. Production systems may eventually combine both, but GenIR remains largely experimental.
+RAG and GenIR are complementary strategies. RAG augments generation with retrieved external knowledge using explicit indexes. GenIR replaces index-based retrieval with parametric memory: models directly generate document identifiers or responses from their parameters {% include references/cite.html key="10.1145/3722552" %}. Production systems may eventually combine both, but GenIR remains largely experimental.
 
 ### What retrieval document positioning gives the best RAG accuracy?
 
-Place the most relevant document adjacent to the query in the prompt. Cuconasu et al. show that "near" positioning (relevant document closest to query) consistently outperforms "mid" (middle of context) and "far" (beginning of context) placements across all tested LLMs {% include references/cite.html key="rag-2026-ref4" %}. This confirms the "lost in the middle" effect from prior research.
+Place the most relevant document adjacent to the query in the prompt. Cuconasu et al. show that "near" positioning (relevant document closest to query) consistently outperforms "mid" (middle of context) and "far" (beginning of context) placements across all tested LLMs {% include references/cite.html key="10.1145/3626772.3657834" %}. This confirms the "lost in the middle" effect from prior research.
 
 ### What is the RAG maturity progression and where should my team start?
 
@@ -364,16 +364,7 @@ No. This review is strong for identifying retrieval pipeline priorities, evaluat
 ## Technical Appendix
 
 <details markdown="1" class="appendix-callout group">
-<summary class="appendix-summary">
-  <span class="appendix-summary-title"><strong>Corpus, Evidence Limits, Citability Metrics, and Technical Definitions</strong></span>
-  <span class="inline-flex items-center gap-2">
-    <span class="appendix-state-chip inline-flex group-open:hidden" aria-hidden="true">Collapsed</span>
-    <span class="appendix-state-chip hidden group-open:inline-flex" aria-hidden="true">Expanded</span>
-    <svg class="appendix-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false">
-      <path fill="currentColor" d="M7.05 4.55a.75.75 0 0 1 1.06 0l4.4 4.4a.75.75 0 0 1 0 1.06l-4.4 4.4a.75.75 0 1 1-1.06-1.06L10.92 10 7.05 6.11a.75.75 0 0 1 0-1.06Z" />
-    </svg>
-  </span>
-</summary>
+{% include appendix-summary.html title="Corpus, Evidence Limits, Citability Metrics, and Technical Definitions" %}
 
 ### Appendix Table of Contents
 
@@ -415,7 +406,7 @@ Authoritative baseline links used in this review include:
 <figure markdown="1">
   <img src="/assets/images/retrieval-augmented-generation-evidence-review.png" alt="Cross-paper synthesis map for RAG showing retrieval pipeline, evaluation, and deployment as primary engineering controls" loading="lazy" decoding="async" width="1600" height="900" />
   <figcaption>
-    Figure 1. Citation-ready synthesis map: cross-paper synthesis with recurring themes and practical RAG pipeline guidance for production engineering teams {% include references/cite.html key="rag-2026-ref1" %} {% include references/cite.html key="rag-2026-ref2" %} {% include references/cite.html key="rag-2026-ref3" %} {% include references/cite.html key="rag-2026-ref4" %} {% include references/cite.html key="rag-2026-ref5" %} {% include references/cite.html key="rag-2026-ref6" %} {% include references/cite.html key="rag-2026-ref7" %}.
+    Figure 1. Citation-ready synthesis map: cross-paper synthesis with recurring themes and practical RAG pipeline guidance for production engineering teams {% include references/cite.html key="rag-2026-ref1" %} {% include references/cite.html key="zhao2026" %} {% include references/cite.html key="10.1145/3805774" %} {% include references/cite.html key="10.1145/3626772.3657834" %} {% include references/cite.html key="10.1371/journal.pdig.0000877" %} {% include references/cite.html key="10.1145/3722552" %} {% include references/cite.html key="11009349" %}.
   </figcaption>
 </figure>
 

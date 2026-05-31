@@ -8,8 +8,8 @@ qsc-2026-ref1:
   doi: 10.1109/ACCESS.2024.0429000
   published_iso: "2025-01-01"
   published_date: 1 January 2025
-  ieee_base: "Andreou, Andreas and Mavromoustakis, Constandinos X. and Mastorakis, George and Bourdena, Athina and Markakis, Evangelos, Quantum Computing in Semantic Communications: Overcoming Optimization Challenges with High-Dimensional {Hilbert} Spaces, 2025, Accepted for publication."
-  harvard_base: "Andreou, Andreas and Mavromoustakis, Constandinos X. and Mastorakis, George and Bourdena, Athina and Markakis, Evangelos. (2025). Quantum Computing in Semantic Communications: Overcoming Optimization Challenges with High-Dimensional {Hilbert} Spaces. Accepted for publication."
+  ieee_base: "A. Andreou, C. X. Mavromoustakis, G. Mastorakis, A. Bourdena and E. Markakis, Quantum Computing in Semantic Communications: Overcoming Optimization Challenges with High-Dimensional {Hilbert} Spaces, 2025, Accepted for publication."
+  harvard_base: "Andreou, A. et al. (2025). Quantum Computing in Semantic Communications: Overcoming Optimization Challenges with High-Dimensional {Hilbert} Spaces. Accepted for publication."
   note: Accepted for publication
   source_format: bibtex
 qsc-2026-ref2:
@@ -22,8 +22,8 @@ qsc-2026-ref2:
   number: "4"
   pages: 803--807
   doi: 10.1109/LCOMM.2024.3361831
-  ieee_base: Chehimi, Mahdi and Thomas, Christo Kurisummoottil and Chaccour, Christina and Saad, Walid, Quantum Semantic Communications for Resource-Efficient Quantum Networking, vol. 28, no. 4, pp. 803--807, n.d.
-  harvard_base: Chehimi, Mahdi and Thomas, Christo Kurisummoottil and Chaccour, Christina and Saad, Walid. (n.d.). Quantum Semantic Communications for Resource-Efficient Quantum Networking. vol. 28, no. 4, pp. 803--807.
+  ieee_base: M. Chehimi, C. K. Thomas, C. Chaccour and W. Saad, Quantum Semantic Communications for Resource-Efficient Quantum Networking, vol. 28, no. 4, pp. 803--807, n.d.
+  harvard_base: Chehimi, M. et al. (n.d.). Quantum Semantic Communications for Resource-Efficient Quantum Networking. vol. 28, no. 4, pp. 803--807.
   source_format: bibtex
 qsc-2026-ref3:
   entry_type: article
@@ -35,8 +35,8 @@ qsc-2026-ref3:
   number: "5"
   pages: 4983--4998
   doi: 10.1109/TPAMI.2025.3649294
-  ieee_base: Qiang, Wenwen and Gu, Ziyin and Si, Lingyu and Li, Jiangmeng and Sun, Fuchun and Xiong, Hui and Zheng, Changwen, On the Transferability and Discriminability of Representation Learning in Unsupervised Domain Adaptation, vol. 48, no. 5, pp. 4983--4998, n.d.
-  harvard_base: Qiang, Wenwen and Gu, Ziyin and Si, Lingyu and Li, Jiangmeng and Sun, Fuchun and Xiong, Hui and Zheng, Changwen. (n.d.). On the Transferability and Discriminability of Representation Learning in Unsupervised Domain Adaptation. vol. 48, no. 5, pp. 4983--4998.
+  ieee_base: W. Qiang et al., On the Transferability and Discriminability of Representation Learning in Unsupervised Domain Adaptation, vol. 48, no. 5, pp. 4983--4998, n.d.
+  harvard_base: Qiang, W. et al. (n.d.). On the Transferability and Discriminability of Representation Learning in Unsupervised Domain Adaptation. vol. 48, no. 5, pp. 4983--4998.
   source_format: bibtex
 qsc-2026-ref4:
   entry_type: inproceedings
@@ -48,8 +48,8 @@ qsc-2026-ref4:
   doi: 10.1109/ICDM58522.2023.00062
   published_iso: "2023-01-01"
   published_date: 1 January 2023
-  ieee_base: Ren, Lina and Huang, Ruizhang and Ma, Shengwei and Qin, Yongbin and Chen, Yanping and Lin, Chuan, Deep Multi-Kernel Clustering Network, in 2023 IEEE International Conference on Data Mining (ICDM), 2023.
-  harvard_base: Ren, Lina and Huang, Ruizhang and Ma, Shengwei and Qin, Yongbin and Chen, Yanping and Lin, Chuan. (2023). Deep Multi-Kernel Clustering Network. In 2023 IEEE International Conference on Data Mining (ICDM).
+  ieee_base: L. Ren, R. Huang, S. Ma, Y. Qin, Y. Chen and C. Lin, Deep Multi-Kernel Clustering Network, in 2023 IEEE International Conference on Data Mining (ICDM), 2023.
+  harvard_base: Ren, L. et al. (2023). Deep Multi-Kernel Clustering Network. In 2023 IEEE International Conference on Data Mining (ICDM).
   source_format: bibtex
 qsc-2026-ref5:
   entry_type: inproceedings
@@ -61,8 +61,8 @@ qsc-2026-ref5:
   doi: 10.1109/ICSCDS65426.2025.11167678
   published_iso: "2025-01-01"
   published_date: 1 January 2025
-  ieee_base: "Sreedhar, Anjali and others, Towards Scalable and Accurate {QNLP} Models: A {ZX}-Calculus and {Hilbert} Space Approach, in Proceedings of the 3rd International Conference on Sustainable Computing and Data Communication Systems (ICSCDS-2025), 2025."
-  harvard_base: "Sreedhar, Anjali and others. (2025). Towards Scalable and Accurate {QNLP} Models: A {ZX}-Calculus and {Hilbert} Space Approach. In Proceedings of the 3rd International Conference on Sustainable Computing and Data Communication Systems (ICSCDS-2025)."
+  ieee_base: "A. Sreedhar and others, Towards Scalable and Accurate {QNLP} Models: A {ZX}-Calculus and {Hilbert} Space Approach, in Proceedings of the 3rd International Conference on Sustainable Computing and Data Communication Systems (ICSCDS-2025), 2025."
+  harvard_base: "Sreedhar, A. and others. (2025). Towards Scalable and Accurate {QNLP} Models: A {ZX}-Calculus and {Hilbert} Space Approach. In Proceedings of the 3rd International Conference on Sustainable Computing and Data Communication Systems (ICSCDS-2025)."
   source_format: bibtex
 axios-2026-ref1:
   entry_type: misc
@@ -103,8 +103,8 @@ axios-2026-ref3:
   accessed_iso: "2026-04-09"
   published_date: 1 January 2026
   accessed_date: 9 April 2026
-  ieee_base: CTU, Sophos, Axios npm package compromised to deploy malware, 2026.
-  harvard_base: CTU, Sophos. (2026). Axios npm package compromised to deploy malware.
+  ieee_base: S. CTU, Axios npm package compromised to deploy malware, 2026.
+  harvard_base: CTU, S. (2026). Axios npm package compromised to deploy malware.
   source_format: bibtex
 axios-2026-ref4:
   entry_type: misc
@@ -117,8 +117,8 @@ axios-2026-ref4:
   accessed_iso: "2026-04-09"
   published_date: 1 January 2026
   accessed_date: 9 April 2026
-  ieee_base: Intelligence, Microsoft Threat, Mitigating the Axios npm supply chain compromise, 2026.
-  harvard_base: Intelligence, Microsoft Threat. (2026). Mitigating the Axios npm supply chain compromise.
+  ieee_base: M. T. Intelligence, Mitigating the Axios npm supply chain compromise, 2026.
+  harvard_base: Intelligence, M.T. (2026). Mitigating the Axios npm supply chain compromise.
   source_format: bibtex
 axios-2026-ref5:
   entry_type: misc
@@ -171,8 +171,8 @@ axios-2026-ref8:
   accessed_iso: "2026-04-09"
   published_date: 1 January 2026
   accessed_date: 9 April 2026
-  ieee_base: et al., Larsen, North Korea-Nexus Threat Actor Compromises Widely Used Axios NPM Package in Supply Chain Attack, 2026.
-  harvard_base: et al., Larsen. (2026). North Korea-Nexus Threat Actor Compromises Widely Used Axios NPM Package in Supply Chain Attack.
+  ieee_base: L. et al., North Korea-Nexus Threat Actor Compromises Widely Used Axios NPM Package in Supply Chain Attack, 2026.
+  harvard_base: et al., L. (2026). North Korea-Nexus Threat Actor Compromises Widely Used Axios NPM Package in Supply Chain Attack.
   source_format: bibtex
 deadlock-2026-ref1:
   entry_type: article
@@ -198,8 +198,8 @@ deadlock-2026-ref2:
   accessed_iso: "2026-04-14"
   published_date: 1 January 1964
   accessed_date: 14 April 2026
-  ieee_base: Dijkstra, Edsger Wybe, Een algorithme ter voorkoming van de dodelijke omarming, 1964.
-  harvard_base: Dijkstra, Edsger Wybe. (1964). Een algorithme ter voorkoming van de dodelijke omarming.
+  ieee_base: E. W. Dijkstra, Een algorithme ter voorkoming van de dodelijke omarming, 1964.
+  harvard_base: Dijkstra, E.W. (1964). Een algorithme ter voorkoming van de dodelijke omarming.
   source_format: bibtex
 deadlock-2026-ref3:
   entry_type: incollection
@@ -214,8 +214,8 @@ deadlock-2026-ref3:
   accessed_iso: "2026-04-14"
   published_date: 1 January 2002
   accessed_date: 14 April 2026
-  ieee_base: "Dijkstra, Edsger W, Cooperating sequential processes, in The origin of concurrent programming: from semaphores to remote procedure calls, pp. 65--138, Springer, 2002."
-  harvard_base: "Dijkstra, Edsger W. (2002). Cooperating sequential processes. In The origin of concurrent programming: from semaphores to remote procedure calls. pp. 65--138. Springer."
+  ieee_base: "E. W. Dijkstra, Cooperating sequential processes, in The origin of concurrent programming: from semaphores to remote procedure calls, pp. 65--138, Springer, 2002."
+  harvard_base: "Dijkstra, E.W. (2002). Cooperating sequential processes. In The origin of concurrent programming: from semaphores to remote procedure calls. pp. 65--138. Springer."
   source_format: bibtex
 deadlock-2026-ref4:
   entry_type: inproceedings
@@ -229,8 +229,8 @@ deadlock-2026-ref4:
   url: https://repositories.lib.utexas.edu/server/api/core/bitstreams/0f06c11e-9be7-4182-810d-4d5507f2d276/content
   published_iso: "2001-01-01"
   published_date: 1 January 2001
-  ieee_base: "Dijkstra, Edsger W, Solution of a problem in concurrent programming control, in Pioneers and Their Contributions to Software Engineering: Conference on Software Pioneers, Bonn, June 28/29, 2001, Original Historic Contributions, pp. 289--294, Springer, 2001."
-  harvard_base: "Dijkstra, Edsger W. (2001). Solution of a problem in concurrent programming control. In Pioneers and Their Contributions to Software Engineering: Conference on Software Pioneers, Bonn, June 28/29, 2001, Original Historic Contributions. pp. 289--294. Springer."
+  ieee_base: "E. W. Dijkstra, Solution of a problem in concurrent programming control, in Pioneers and Their Contributions to Software Engineering: Conference on Software Pioneers, Bonn, June 28/29, 2001, Original Historic Contributions, pp. 289--294, Springer, 2001."
+  harvard_base: "Dijkstra, E.W. (2001). Solution of a problem in concurrent programming control. In Pioneers and Their Contributions to Software Engineering: Conference on Software Pioneers, Bonn, June 28/29, 2001, Original Historic Contributions. pp. 289--294. Springer."
   source_format: bibtex
 deadlock-2026-ref5:
   entry_type: article
@@ -244,8 +244,8 @@ deadlock-2026-ref5:
   pages: 341--346
   url: https://doi.org/10.1145/363095.363143
   doi: 10.1145/363095.363143
-  ieee_base: Dijkstra, Edsger W., The structure of the “THE”-multiprogramming system, vol. 11, no. 5, pp. 341--346, n.d.
-  harvard_base: Dijkstra, Edsger W.. (n.d.). The structure of the “THE”-multiprogramming system. vol. 11, no. 5, pp. 341--346.
+  ieee_base: E. W. Dijkstra, The structure of the “THE”-multiprogramming system, vol. 11, no. 5, pp. 341--346, n.d.
+  harvard_base: Dijkstra, E.W. (n.d.). The structure of the “THE”-multiprogramming system. vol. 11, no. 5, pp. 341--346.
   source_format: bibtex
 deadlock-2026-ref6:
   entry_type: book
@@ -256,8 +256,8 @@ deadlock-2026-ref6:
   publisher: Wiley
   published_iso: "2013-01-01"
   published_date: 1 January 2013
-  ieee_base: A. Silberschatz, P. B. Galvin and Gagne, G., Operating System Concepts, 9th ed., Wiley, 2013.
-  harvard_base: A. Silberschatz, P. B. Galvin and Gagne, G.. (2013). Operating System Concepts, 9th ed.. Wiley.
+  ieee_base: P. B. G. A. Silberschatz and G. Gagne, Operating System Concepts, 9th ed., Wiley, 2013.
+  harvard_base: A. Silberschatz, P.B.G. and Gagne, G. (2013). Operating System Concepts, 9th ed.. Wiley.
   source_format: bibtex
 deadlock-2026-ref7:
   entry_type: misc
@@ -282,8 +282,8 @@ deadlock-2026-ref8:
   publisher: Pearson
   published_iso: "2015-01-01"
   published_date: 1 January 2015
-  ieee_base: Tanenbaum, A. S. and Bos, H., Modern Operating Systems, 4th ed., Pearson, 2015.
-  harvard_base: Tanenbaum, A. S. and Bos, H.. (2015). Modern Operating Systems, 4th ed.. Pearson.
+  ieee_base: A. S. Tanenbaum and H. Bos, Modern Operating Systems, 4th ed., Pearson, 2015.
+  harvard_base: Tanenbaum, A.S. and Bos, H. (2015). Modern Operating Systems, 4th ed.. Pearson.
   source_format: bibtex
 ds-2026-ref1:
   entry_type: misc
@@ -296,8 +296,8 @@ ds-2026-ref1:
   accessed_iso: "2026-04-10"
   published_date: 1 January 2019
   accessed_date: 10 April 2026
-  ieee_base: Clouder, Alibaba, Alibaba now exclusive provider of Salesforce CRM in Greater China, 2019.
-  harvard_base: Clouder, Alibaba. (2019). Alibaba now exclusive provider of Salesforce CRM in Greater China.
+  ieee_base: A. Clouder, Alibaba now exclusive provider of Salesforce CRM in Greater China, 2019.
+  harvard_base: Clouder, A. (2019). Alibaba now exclusive provider of Salesforce CRM in Greater China.
   source_format: bibtex
 ds-2026-ref10:
   entry_type: misc
@@ -311,8 +311,8 @@ ds-2026-ref10:
   accessed_iso: "2026-04-10"
   published_date: 1 January 2025
   accessed_date: 10 April 2026
-  ieee_base: Freelancer, CRN Asia, Anthropic tightens AI access rules, targeting Chinese-controlled companies globally, CRN Asia, 2025.
-  harvard_base: Freelancer, CRN Asia. (2025). Anthropic tightens AI access rules, targeting Chinese-controlled companies globally. CRN Asia.
+  ieee_base: C. A. Freelancer, Anthropic tightens AI access rules, targeting Chinese-controlled companies globally, CRN Asia, 2025.
+  harvard_base: Freelancer, C.A. (2025). Anthropic tightens AI access rules, targeting Chinese-controlled companies globally. CRN Asia.
   source_format: bibtex
 ds-2026-ref11:
   entry_type: misc
@@ -326,8 +326,8 @@ ds-2026-ref11:
   accessed_iso: "2026-04-10"
   published_date: 10 July 2024
   accessed_date: 10 April 2026
-  ieee_base: Qin'en, Q. and Yeung, L. H., OpenAI cuts off access to users in China, Hong Kong and Macau, Radio Free Asia, 2024.
-  harvard_base: Qin'en, Q. and Yeung, L. H.. (2024). OpenAI cuts off access to users in China, Hong Kong and Macau. Radio Free Asia.
+  ieee_base: Q. Qin'en and L. H. Yeung, OpenAI cuts off access to users in China, Hong Kong and Macau, Radio Free Asia, 2024.
+  harvard_base: Qin'en, Q. and Yeung, L.H. (2024). OpenAI cuts off access to users in China, Hong Kong and Macau. Radio Free Asia.
   source_format: bibtex
 ds-2026-ref12:
   entry_type: misc
@@ -341,8 +341,8 @@ ds-2026-ref12:
   accessed_iso: "2026-04-10"
   published_date: 2 April 2026
   accessed_date: 10 April 2026
-  ieee_base: "grapeot and 4.6, Claude Opus, Slack's removal of China-region workspaces: What actually deserves your attention, yage.ai, 2026."
-  harvard_base: "grapeot and 4.6, Claude Opus. (2026). Slack's removal of China-region workspaces: What actually deserves your attention. yage.ai."
+  ieee_base: "grapeot and C. O. 4.6, Slack's removal of China-region workspaces: What actually deserves your attention, yage.ai, 2026."
+  harvard_base: "grapeot and 4.6, C.O. (2026). Slack's removal of China-region workspaces: What actually deserves your attention. yage.ai."
   source_format: bibtex
 ds-2026-ref13:
   entry_type: misc
@@ -371,8 +371,8 @@ ds-2026-ref14:
   accessed_iso: "2026-04-10"
   published_date: 30 June 2025
   accessed_date: 10 April 2026
-  ieee_base: IT, Cornell, Adobe restricts access to Acrobat Sign in China on June 30, 2025, IT@Cornell News, 2025.
-  harvard_base: IT, Cornell. (2025). Adobe restricts access to Acrobat Sign in China on June 30, 2025. IT@Cornell News.
+  ieee_base: C. IT, Adobe restricts access to Acrobat Sign in China on June 30, 2025, IT@Cornell News, 2025.
+  harvard_base: IT, C. (2025). Adobe restricts access to Acrobat Sign in China on June 30, 2025. IT@Cornell News.
   source_format: bibtex
 ds-2026-ref15:
   entry_type: misc
@@ -401,8 +401,8 @@ ds-2026-ref2:
   accessed_iso: "2026-04-10"
   published_date: 27 March 2014
   accessed_date: 10 April 2026
-  ieee_base: APAC, Microsoft, Microsoft Azure now generally available in China, Microsoft APAC News Center, 2014.
-  harvard_base: APAC, Microsoft. (2014). Microsoft Azure now generally available in China. Microsoft APAC News Center.
+  ieee_base: M. APAC, Microsoft Azure now generally available in China, Microsoft APAC News Center, 2014.
+  harvard_base: APAC, M. (2014). Microsoft Azure now generally available in China. Microsoft APAC News Center.
   source_format: bibtex
 ds-2026-ref3:
   entry_type: misc
@@ -476,8 +476,8 @@ ds-2026-ref7:
   accessed_iso: "2026-04-10"
   published_date: 25 July 2019
   accessed_date: 10 April 2026
-  ieee_base: Writer, CBR Staff, Salesforce turns to Alibaba for Chinese foothold, TechMonitor, 2019.
-  harvard_base: Writer, CBR Staff. (2019). Salesforce turns to Alibaba for Chinese foothold. TechMonitor.
+  ieee_base: C. S. Writer, Salesforce turns to Alibaba for Chinese foothold, TechMonitor, 2019.
+  harvard_base: Writer, C.S. (2019). Salesforce turns to Alibaba for Chinese foothold. TechMonitor.
   source_format: bibtex
 ds-2026-ref8:
   entry_type: misc
@@ -520,8 +520,8 @@ llm-2026-ref1:
   url: https://www.youtube.com/watch?v=1aM1KYvl4Dw
   accessed_iso: "2026-04-11"
   accessed_date: 11 April 2026
-  ieee_base: Search, AI, You don't understand AI until you watch this, YouTube, n.d.
-  harvard_base: Search, AI. (n.d.). You don't understand AI until you watch this. YouTube.
+  ieee_base: A. Search, You don't understand AI until you watch this, YouTube, n.d.
+  harvard_base: Search, A. (n.d.). You don't understand AI until you watch this. YouTube.
   source_format: bibtex
 llm-2026-ref10:
   entry_type: article
@@ -536,8 +536,8 @@ llm-2026-ref10:
   accessed_iso: "2026-04-12"
   published_date: 1 January 2017
   accessed_date: 12 April 2026
-  ieee_base: et al., Vaswani, Attention Is All You Need, vol. 30, pp. 5998--6008, 2017.
-  harvard_base: et al., Vaswani. (2017). Attention Is All You Need. vol. 30, pp. 5998--6008.
+  ieee_base: V. et al., Attention Is All You Need, vol. 30, pp. 5998--6008, 2017.
+  harvard_base: et al., V. (2017). Attention Is All You Need. vol. 30, pp. 5998--6008.
   source_format: bibtex
 llm-2026-ref11:
   entry_type: article
@@ -552,8 +552,8 @@ llm-2026-ref11:
   accessed_iso: "2026-04-12"
   published_date: 1 January 2020
   accessed_date: 12 April 2026
-  ieee_base: et al., Brown, Language Models Are Few-Shot Learners, vol. 33, pp. 1877--1901, 2020.
-  harvard_base: et al., Brown. (2020). Language Models Are Few-Shot Learners. vol. 33, pp. 1877--1901.
+  ieee_base: B. et al., Language Models Are Few-Shot Learners, vol. 33, pp. 1877--1901, 2020.
+  harvard_base: et al., B. (2020). Language Models Are Few-Shot Learners. vol. 33, pp. 1877--1901.
   source_format: bibtex
 llm-2026-ref12:
   entry_type: article
@@ -568,8 +568,8 @@ llm-2026-ref12:
   doi: 10.1145/3777382
   accessed_iso: "2026-04-12"
   accessed_date: 12 April 2026
-  ieee_base: "et al., Ferdaus, Towards Trustworthy AI: A Review of Ethical and Robust Large Language Models, vol. 58, no. 7, pp. 1--43, n.d."
-  harvard_base: "et al., Ferdaus. (n.d.). Towards Trustworthy AI: A Review of Ethical and Robust Large Language Models. vol. 58, no. 7, pp. 1--43."
+  ieee_base: "F. et al., Towards Trustworthy AI: A Review of Ethical and Robust Large Language Models, vol. 58, no. 7, pp. 1--43, n.d."
+  harvard_base: "et al., F. (n.d.). Towards Trustworthy AI: A Review of Ethical and Robust Large Language Models. vol. 58, no. 7, pp. 1--43."
   source_format: bibtex
 llm-2026-ref13:
   entry_type: inproceedings
@@ -582,8 +582,8 @@ llm-2026-ref13:
   doi: 10.1109/CSITSS64042.2024.10817070
   accessed_iso: "2026-04-12"
   accessed_date: 12 April 2026
-  ieee_base: et al., Sanu, Limitations of Large Language Models, in 2024 8th International Conference on Computational System and Information Technology for Sustainable Solutions (CSITSS), n.d.
-  harvard_base: et al., Sanu. (n.d.). Limitations of Large Language Models. In 2024 8th International Conference on Computational System and Information Technology for Sustainable Solutions (CSITSS).
+  ieee_base: S. et al., Limitations of Large Language Models, in 2024 8th International Conference on Computational System and Information Technology for Sustainable Solutions (CSITSS), n.d.
+  harvard_base: et al., S. (n.d.). Limitations of Large Language Models. In 2024 8th International Conference on Computational System and Information Technology for Sustainable Solutions (CSITSS).
   source_format: bibtex
 llm-2026-ref14:
   entry_type: article
@@ -599,8 +599,8 @@ llm-2026-ref14:
   accessed_iso: "2026-04-12"
   published_date: 1 January 2025
   accessed_date: 12 April 2026
-  ieee_base: et al., Ren, Advances and Open Challenges in Federated Foundation Models, vol. 28, pp. 2087--2126, 2025.
-  harvard_base: et al., Ren. (2025). Advances and Open Challenges in Federated Foundation Models. vol. 28, pp. 2087--2126.
+  ieee_base: R. et al., Advances and Open Challenges in Federated Foundation Models, vol. 28, pp. 2087--2126, 2025.
+  harvard_base: et al., R. (2025). Advances and Open Challenges in Federated Foundation Models. vol. 28, pp. 2087--2126.
   source_format: bibtex
 llm-2026-ref15:
   entry_type: article
@@ -617,8 +617,8 @@ llm-2026-ref15:
   accessed_iso: "2026-04-12"
   published_date: 1 January 2025
   accessed_date: 12 April 2026
-  ieee_base: "et al., Yang, Survey on Knowledge Distillation for Large Language Models: Methods, Evaluation, and Application, vol. 16, no. 6, pp. 1--27, 2025."
-  harvard_base: "et al., Yang. (2025). Survey on Knowledge Distillation for Large Language Models: Methods, Evaluation, and Application. vol. 16, no. 6, pp. 1--27."
+  ieee_base: "Y. et al., Survey on Knowledge Distillation for Large Language Models: Methods, Evaluation, and Application, vol. 16, no. 6, pp. 1--27, 2025."
+  harvard_base: "et al., Y. (2025). Survey on Knowledge Distillation for Large Language Models: Methods, Evaluation, and Application. vol. 16, no. 6, pp. 1--27."
   source_format: bibtex
 llm-2026-ref16:
   entry_type: article
@@ -635,8 +635,8 @@ llm-2026-ref16:
   accessed_iso: "2026-04-12"
   published_date: 1 January 2024
   accessed_date: 12 April 2026
-  ieee_base: "et al., Yang, Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond, vol. 18, no. 6, pp. 1--32, 2024."
-  harvard_base: "et al., Yang. (2024). Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond. vol. 18, no. 6, pp. 1--32."
+  ieee_base: "Y. et al., Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond, vol. 18, no. 6, pp. 1--32, 2024."
+  harvard_base: "et al., Y. (2024). Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond. vol. 18, no. 6, pp. 1--32."
   source_format: bibtex
 llm-2026-ref17:
   entry_type: article
@@ -652,8 +652,8 @@ llm-2026-ref17:
   accessed_iso: "2026-04-12"
   published_date: 1 January 2025
   accessed_date: 12 April 2026
-  ieee_base: "et al., Wu, Knowledge-Empowered, Collaborative, and Co-Evolving AI Models: The Post-LLM Roadmap, vol. 44, pp. 87--100, 2025."
-  harvard_base: "et al., Wu. (2025). Knowledge-Empowered, Collaborative, and Co-Evolving AI Models: The Post-LLM Roadmap. vol. 44, pp. 87--100."
+  ieee_base: "W. et al., Knowledge-Empowered, Collaborative, and Co-Evolving AI Models: The Post-LLM Roadmap, vol. 44, pp. 87--100, 2025."
+  harvard_base: "et al., W. (2025). Knowledge-Empowered, Collaborative, and Co-Evolving AI Models: The Post-LLM Roadmap. vol. 44, pp. 87--100."
   source_format: bibtex
 llm-2026-ref18:
   entry_type: inproceedings
@@ -666,8 +666,8 @@ llm-2026-ref18:
   doi: 10.1109/KSE68178.2025.11309521
   accessed_iso: "2026-04-12"
   accessed_date: 12 April 2026
-  ieee_base: et al., Hai, Multimodal Large Language Model for Out-of-Context Problems in Fake News Detection, in 2025 17th International Conference on Knowledge and System Engineering (KSE), n.d.
-  harvard_base: et al., Hai. (n.d.). Multimodal Large Language Model for Out-of-Context Problems in Fake News Detection. In 2025 17th International Conference on Knowledge and System Engineering (KSE).
+  ieee_base: H. et al., Multimodal Large Language Model for Out-of-Context Problems in Fake News Detection, in 2025 17th International Conference on Knowledge and System Engineering (KSE), n.d.
+  harvard_base: et al., H. (n.d.). Multimodal Large Language Model for Out-of-Context Problems in Fake News Detection. In 2025 17th International Conference on Knowledge and System Engineering (KSE).
   source_format: bibtex
 llm-2026-ref19:
   entry_type: misc
@@ -726,8 +726,8 @@ llm-2026-ref21:
   accessed_iso: "2026-04-12"
   published_date: 1 January 2023
   accessed_date: 12 April 2026
-  ieee_base: v. Avianca, Mata, Sanctions order under Fed. R. Civ. P. 11 (No. 22-cv-1461, S.D.N.Y.), CourtListener, 2023.
-  harvard_base: v. Avianca, Mata. (2023). Sanctions order under Fed. R. Civ. P. 11 (No. 22-cv-1461, S.D.N.Y.). CourtListener.
+  ieee_base: M. v. Avianca, Sanctions order under Fed. R. Civ. P. 11 (No. 22-cv-1461, S.D.N.Y.), CourtListener, 2023.
+  harvard_base: v. Avianca, M. (2023). Sanctions order under Fed. R. Civ. P. 11 (No. 22-cv-1461, S.D.N.Y.). CourtListener.
   source_format: bibtex
 llm-2026-ref22:
   entry_type: misc
@@ -810,8 +810,8 @@ ln-2026-ref1:
   url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6305840
   published_iso: "2026-01-01"
   published_date: 1 January 2026
-  ieee_base: "Dham, Vikram, The Identity Gap in Machine-to-Machine Payments: Why Current Infrastructure Cannot Support Autonomous Agent Commerce, 2026."
-  harvard_base: "Dham, Vikram. (2026). The Identity Gap in Machine-to-Machine Payments: Why Current Infrastructure Cannot Support Autonomous Agent Commerce."
+  ieee_base: "V. Dham, The Identity Gap in Machine-to-Machine Payments: Why Current Infrastructure Cannot Support Autonomous Agent Commerce, 2026."
+  harvard_base: "Dham, V. (2026). The Identity Gap in Machine-to-Machine Payments: Why Current Infrastructure Cannot Support Autonomous Agent Commerce."
   source_format: bibtex
 ln-2026-ref2:
   entry_type: misc
@@ -825,8 +825,8 @@ ln-2026-ref2:
   doi: 10.7753/IJCATR1402.1022
   published_iso: "2025-01-01"
   published_date: 1 January 2025
-  ieee_base: Fapohunda, Oluwaseun and Akoka, Lagos Nigeria, Development of a Blockchain-Integrated Micro-Transaction Engine for Cross-Border Payments, 2025.
-  harvard_base: Fapohunda, Oluwaseun and Akoka, Lagos Nigeria. (2025). Development of a Blockchain-Integrated Micro-Transaction Engine for Cross-Border Payments.
+  ieee_base: O. Fapohunda and L. N. Akoka, Development of a Blockchain-Integrated Micro-Transaction Engine for Cross-Border Payments, 2025.
+  harvard_base: Fapohunda, O. and Akoka, L.N. (2025). Development of a Blockchain-Integrated Micro-Transaction Engine for Cross-Border Payments.
   source_format: bibtex
 ln-2026-ref3:
   entry_type: inproceedings
@@ -837,8 +837,8 @@ ln-2026-ref3:
   book: 2021 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)
   pages: 1--3
   doi: 10.1109/ICBC51069.2021.9461096
-  ieee_base: Kurt, Ahmet and Mercana, Suat and Erdin, Enes and Akkaya, Kemal, Enabling Micro-payments on IoT Devices using Bitcoin Lightning Network, in 2021 IEEE International Conference on Blockchain and Cryptocurrency (ICBC), pp. 1--3, n.d.
-  harvard_base: Kurt, Ahmet and Mercana, Suat and Erdin, Enes and Akkaya, Kemal. (n.d.). Enabling Micro-payments on IoT Devices using Bitcoin Lightning Network. In 2021 IEEE International Conference on Blockchain and Cryptocurrency (ICBC). pp. 1--3.
+  ieee_base: A. Kurt, S. Mercana, E. Erdin and K. Akkaya, Enabling Micro-payments on IoT Devices using Bitcoin Lightning Network, in 2021 IEEE International Conference on Blockchain and Cryptocurrency (ICBC), pp. 1--3, n.d.
+  harvard_base: Kurt, A. et al. (n.d.). Enabling Micro-payments on IoT Devices using Bitcoin Lightning Network. In 2021 IEEE International Conference on Blockchain and Cryptocurrency (ICBC). pp. 1--3.
   source_format: bibtex
 ln-2026-ref4:
   entry_type: misc
@@ -850,8 +850,8 @@ ln-2026-ref4:
   arxiv: "2603.28727"
   published_iso: "2026-01-01"
   published_date: 1 January 2026
-  ieee_base: "Larsen, Oliver Aleksander and Larsen, Rasmus Thorsen and Moghaddam, Mahyar T., BitSov: A Composable Bitcoin-Native Architecture for Sovereign Internet Infrastructure, 2026."
-  harvard_base: "Larsen, Oliver Aleksander and Larsen, Rasmus Thorsen and Moghaddam, Mahyar T.. (2026). BitSov: A Composable Bitcoin-Native Architecture for Sovereign Internet Infrastructure."
+  ieee_base: "O. A. Larsen, R. T. Larsen and M. T. Moghaddam, BitSov: A Composable Bitcoin-Native Architecture for Sovereign Internet Infrastructure, 2026."
+  harvard_base: "Larsen, O.A., Larsen, R.T. and Moghaddam, M.T. (2026). BitSov: A Composable Bitcoin-Native Architecture for Sovereign Internet Infrastructure."
   source_format: bibtex
 ln-2026-ref5:
   entry_type: misc
@@ -863,8 +863,8 @@ ln-2026-ref5:
   number: "2"
   pages: 97--103
   doi: 10.1109/MCE.2021.3060720
-  ieee_base: Mercan, Suat and Kurt, Ahmet and Akkaya, Kemal and Erdin, Enes, Cryptocurrency Solutions to Enable Micropayments in Consumer IoT, n.d.
-  harvard_base: Mercan, Suat and Kurt, Ahmet and Akkaya, Kemal and Erdin, Enes. (n.d.). Cryptocurrency Solutions to Enable Micropayments in Consumer IoT.
+  ieee_base: S. Mercan, A. Kurt, K. Akkaya and E. Erdin, Cryptocurrency Solutions to Enable Micropayments in Consumer IoT, n.d.
+  harvard_base: Mercan, S. et al. (n.d.). Cryptocurrency Solutions to Enable Micropayments in Consumer IoT.
   source_format: bibtex
 ln-2026-ref6:
   entry_type: misc
@@ -874,8 +874,8 @@ ln-2026-ref6:
   title: Purpose-Built Payment Infrastructure for Autonomous AI Agents
   published_iso: "2026-01-01"
   published_date: 1 January 2026
-  ieee_base: Noel, Tony, Purpose-Built Payment Infrastructure for Autonomous AI Agents, 2026.
-  harvard_base: Noel, Tony. (2026). Purpose-Built Payment Infrastructure for Autonomous AI Agents.
+  ieee_base: T. Noel, Purpose-Built Payment Infrastructure for Autonomous AI Agents, 2026.
+  harvard_base: Noel, T. (2026). Purpose-Built Payment Infrastructure for Autonomous AI Agents.
   source_format: bibtex
 llm-2026-ref6:
   entry_type: misc
@@ -948,8 +948,8 @@ prov-2026-ref1:
   accessed_iso: "2026-04-13"
   published_date: 1 January 2024
   accessed_date: 13 April 2026
-  ieee_base: et al., Karuna, Enhancing Financial Data Traceability Using Graph Neural Networks for Provenance Methods, in 2024 International Conference on IoT, Communication and Automation Technology (ICICAT), pp. 1334--1339, IEEE, 2024.
-  harvard_base: et al., Karuna. (2024). Enhancing Financial Data Traceability Using Graph Neural Networks for Provenance Methods. In 2024 International Conference on IoT, Communication and Automation Technology (ICICAT). pp. 1334--1339. IEEE.
+  ieee_base: K. et al., Enhancing Financial Data Traceability Using Graph Neural Networks for Provenance Methods, in 2024 International Conference on IoT, Communication and Automation Technology (ICICAT), pp. 1334--1339, IEEE, 2024.
+  harvard_base: et al., K. (2024). Enhancing Financial Data Traceability Using Graph Neural Networks for Provenance Methods. In 2024 International Conference on IoT, Communication and Automation Technology (ICICAT). pp. 1334--1339. IEEE.
   source_format: bibtex
 prov-2026-ref2:
   entry_type: inproceedings
@@ -966,8 +966,8 @@ prov-2026-ref2:
   accessed_iso: "2026-04-13"
   published_date: 1 January 2023
   accessed_date: 13 April 2026
-  ieee_base: "et al., Pina, Deep Learning Provenance Data Integration: a Practical Approach, in Companion Proceedings of the ACM Web Conference 2023 (WWW '23 Companion), pp. 1542--1550, ACM, 2023."
-  harvard_base: "et al., Pina. (2023). Deep Learning Provenance Data Integration: a Practical Approach. In Companion Proceedings of the ACM Web Conference 2023 (WWW '23 Companion). pp. 1542--1550. ACM."
+  ieee_base: "P. et al., Deep Learning Provenance Data Integration: a Practical Approach, in Companion Proceedings of the ACM Web Conference 2023 (WWW '23 Companion), pp. 1542--1550, ACM, 2023."
+  harvard_base: "et al., P. (2023). Deep Learning Provenance Data Integration: a Practical Approach. In Companion Proceedings of the ACM Web Conference 2023 (WWW '23 Companion). pp. 1542--1550. ACM."
   source_format: bibtex
 prov-2026-ref3:
   entry_type: inproceedings
@@ -982,8 +982,8 @@ prov-2026-ref3:
   accessed_iso: "2026-04-13"
   published_date: 1 January 2019
   accessed_date: 13 April 2026
-  ieee_base: et al., Souza, Provenance Data in the Machine Learning Lifecycle in Computational Science and Engineering, in 14th Workshop on Workflows in Support of Large-Scale Science (WORKS), co-located with SC 2019, 2019.
-  harvard_base: et al., Souza. (2019). Provenance Data in the Machine Learning Lifecycle in Computational Science and Engineering. In 14th Workshop on Workflows in Support of Large-Scale Science (WORKS), co-located with SC 2019.
+  ieee_base: S. et al., Provenance Data in the Machine Learning Lifecycle in Computational Science and Engineering, in 14th Workshop on Workflows in Support of Large-Scale Science (WORKS), co-located with SC 2019, 2019.
+  harvard_base: et al., S. (2019). Provenance Data in the Machine Learning Lifecycle in Computational Science and Engineering. In 14th Workshop on Workflows in Support of Large-Scale Science (WORKS), co-located with SC 2019.
   source_format: bibtex
 svm-2026-ref1:
   entry_type: article
@@ -1036,8 +1036,8 @@ svm-2026-ref11:
   accessed_iso: "2026-04-17"
   published_date: 1 January 2009
   accessed_date: 17 April 2026
-  ieee_base: et al., Mammone, Support Vector Machines, vol. 1, no. 3, pp. 283--289, 2009.
-  harvard_base: et al., Mammone. (2009). Support Vector Machines. vol. 1, no. 3, pp. 283--289.
+  ieee_base: M. et al., Support Vector Machines, vol. 1, no. 3, pp. 283--289, 2009.
+  harvard_base: et al., M. (2009). Support Vector Machines. vol. 1, no. 3, pp. 283--289.
   source_format: bibtex
 svm-2026-ref12:
   entry_type: article
@@ -1052,8 +1052,8 @@ svm-2026-ref12:
   accessed_iso: "2026-04-17"
   published_date: 1 January 2008
   accessed_date: 17 April 2026
-  ieee_base: "et al., Fan, LIBLINEAR: A Library for Large Linear Classification, vol. 9, pp. 1871--1874, 2008."
-  harvard_base: "et al., Fan. (2008). LIBLINEAR: A Library for Large Linear Classification. vol. 9, pp. 1871--1874."
+  ieee_base: "F. et al., LIBLINEAR: A Library for Large Linear Classification, vol. 9, pp. 1871--1874, 2008."
+  harvard_base: "et al., F. (2008). LIBLINEAR: A Library for Large Linear Classification. vol. 9, pp. 1871--1874."
   source_format: bibtex
 svm-2026-ref13:
   entry_type: article
@@ -1117,8 +1117,8 @@ svm-2026-ref16:
   accessed_iso: "2026-04-17"
   published_date: 1 January 2012
   accessed_date: 17 April 2026
-  ieee_base: HAR, UCI, Human Activity Recognition Using Smartphones, UCI Machine Learning Repository, 2012.
-  harvard_base: HAR, UCI. (2012). Human Activity Recognition Using Smartphones. UCI Machine Learning Repository.
+  ieee_base: U. HAR, Human Activity Recognition Using Smartphones, UCI Machine Learning Repository, 2012.
+  harvard_base: HAR, U. (2012). Human Activity Recognition Using Smartphones. UCI Machine Learning Repository.
   source_format: bibtex
 svm-2026-ref17:
   entry_type: misc
@@ -1178,8 +1178,8 @@ svm-2026-ref2:
   accessed_iso: "2026-04-17"
   published_date: 1 January 1998
   accessed_date: 17 April 2026
-  ieee_base: et al., Hearst, Support Vector Machines, vol. 13, no. 4, pp. 18--28, 1998.
-  harvard_base: et al., Hearst. (1998). Support Vector Machines. vol. 13, no. 4, pp. 18--28.
+  ieee_base: H. et al., Support Vector Machines, vol. 13, no. 4, pp. 18--28, 1998.
+  harvard_base: et al., H. (1998). Support Vector Machines. vol. 13, no. 4, pp. 18--28.
   source_format: bibtex
 svm-2026-ref20:
   entry_type: misc
@@ -1211,8 +1211,8 @@ svm-2026-ref3:
   accessed_iso: "2026-04-17"
   published_date: 1 January 2000
   accessed_date: 17 April 2026
-  ieee_base: et al., Scholkopf, New Support Vector Algorithms, vol. 12, no. 5, pp. 1207--1245, 2000.
-  harvard_base: et al., Scholkopf. (2000). New Support Vector Algorithms. vol. 12, no. 5, pp. 1207--1245.
+  ieee_base: S. et al., New Support Vector Algorithms, vol. 12, no. 5, pp. 1207--1245, 2000.
+  harvard_base: et al., S. (2000). New Support Vector Algorithms. vol. 12, no. 5, pp. 1207--1245.
   source_format: bibtex
 svm-2026-ref4:
   entry_type: article
@@ -1261,8 +1261,8 @@ svm-2026-ref6:
   accessed_iso: "2026-04-17"
   published_date: 1 January 2004
   accessed_date: 17 April 2026
-  ieee_base: Wu, Lin and Weng, Probability Estimates for Multi-Class Classification by Pairwise Coupling, vol. 5, pp. 975--1005, 2004.
-  harvard_base: Wu, Lin and Weng. (2004). Probability Estimates for Multi-Class Classification by Pairwise Coupling. vol. 5, pp. 975--1005.
+  ieee_base: L. Wu and Weng, Probability Estimates for Multi-Class Classification by Pairwise Coupling, vol. 5, pp. 975--1005, 2004.
+  harvard_base: Wu, L. and Weng. (2004). Probability Estimates for Multi-Class Classification by Pairwise Coupling. vol. 5, pp. 975--1005.
   source_format: bibtex
 svm-2026-ref7:
   entry_type: article
@@ -1327,8 +1327,8 @@ mcpa2a-2026-ref1:
   accessed_iso: "2026-04-28"
   published_date: 1 January 2026
   accessed_date: 28 April 2026
-  ieee_base: Protocol, Model Context, What is the Model Context Protocol (MCP)?, Model Context Protocol documentation, 2026.
-  harvard_base: Protocol, Model Context. (2026). What is the Model Context Protocol (MCP)?. Model Context Protocol documentation.
+  ieee_base: M. C. Protocol, What is the Model Context Protocol (MCP)?, Model Context Protocol documentation, 2026.
+  harvard_base: Protocol, M.C. (2026). What is the Model Context Protocol (MCP)?. Model Context Protocol documentation.
   source_format: bibtex
 mcpa2a-2026-ref2:
   entry_type: online
@@ -1342,8 +1342,8 @@ mcpa2a-2026-ref2:
   accessed_iso: "2026-04-28"
   published_date: 1 January 2026
   accessed_date: 28 April 2026
-  ieee_base: Protocol, Model Context, Specification, Model Context Protocol specification, 2026.
-  harvard_base: Protocol, Model Context. (2026). Specification. Model Context Protocol specification.
+  ieee_base: M. C. Protocol, Specification, Model Context Protocol specification, 2026.
+  harvard_base: Protocol, M.C. (2026). Specification. Model Context Protocol specification.
   source_format: bibtex
 mcpa2a-2026-ref3:
   entry_type: online
@@ -1357,8 +1357,8 @@ mcpa2a-2026-ref3:
   accessed_iso: "2026-04-30"
   published_date: 1 January 2026
   accessed_date: 30 April 2026
-  ieee_base: Protocol, Model Context, MCP Python SDK, GitHub repository README, 2026.
-  harvard_base: Protocol, Model Context. (2026). MCP Python SDK. GitHub repository README.
+  ieee_base: M. C. Protocol, MCP Python SDK, GitHub repository README, 2026.
+  harvard_base: Protocol, M.C. (2026). MCP Python SDK. GitHub repository README.
   source_format: bibtex
 mcpa2a-2026-ref4:
   entry_type: online
@@ -1372,8 +1372,8 @@ mcpa2a-2026-ref4:
   accessed_iso: "2026-04-30"
   published_date: 1 January 2026
   accessed_date: 30 April 2026
-  ieee_base: Protocol, Model Context, MCP TypeScript SDK, GitHub repository README, 2026.
-  harvard_base: Protocol, Model Context. (2026). MCP TypeScript SDK. GitHub repository README.
+  ieee_base: M. C. Protocol, MCP TypeScript SDK, GitHub repository README, 2026.
+  harvard_base: Protocol, M.C. (2026). MCP TypeScript SDK. GitHub repository README.
   source_format: bibtex
 mcpa2a-2026-ref5:
   entry_type: online
@@ -1387,8 +1387,8 @@ mcpa2a-2026-ref5:
   accessed_iso: "2026-04-28"
   published_date: 1 January 2026
   accessed_date: 28 April 2026
-  ieee_base: Group, A2A Protocol Working, Agent2Agent (A2A) Protocol Specification, A2A Protocol v1.0.0, 2026.
-  harvard_base: Group, A2A Protocol Working. (2026). Agent2Agent (A2A) Protocol Specification. A2A Protocol v1.0.0.
+  ieee_base: A. P. W. Group, Agent2Agent (A2A) Protocol Specification, A2A Protocol v1.0.0, 2026.
+  harvard_base: Group, A.P.W. (2026). Agent2Agent (A2A) Protocol Specification. A2A Protocol v1.0.0.
   source_format: bibtex
 mcpa2a-2026-ref6:
   entry_type: online
@@ -1402,8 +1402,8 @@ mcpa2a-2026-ref6:
   accessed_iso: "2026-04-28"
   published_date: 1 January 2026
   accessed_date: 28 April 2026
-  ieee_base: "Group, A2A Protocol Working, A2A and MCP: Detailed Comparison, A2A Protocol documentation, 2026."
-  harvard_base: "Group, A2A Protocol Working. (2026). A2A and MCP: Detailed Comparison. A2A Protocol documentation."
+  ieee_base: "A. P. W. Group, A2A and MCP: Detailed Comparison, A2A Protocol documentation, 2026."
+  harvard_base: "Group, A.P.W. (2026). A2A and MCP: Detailed Comparison. A2A Protocol documentation."
   source_format: bibtex
 mcpa2a-2026-ref7:
   entry_type: online
@@ -1417,8 +1417,8 @@ mcpa2a-2026-ref7:
   accessed_iso: "2026-04-28"
   published_date: 1 January 2026
   accessed_date: 28 April 2026
-  ieee_base: Project, A2A, Agent2Agent (A2A) Protocol, GitHub repository README, 2026.
-  harvard_base: Project, A2A. (2026). Agent2Agent (A2A) Protocol. GitHub repository README.
+  ieee_base: A. Project, Agent2Agent (A2A) Protocol, GitHub repository README, 2026.
+  harvard_base: Project, A. (2026). Agent2Agent (A2A) Protocol. GitHub repository README.
   source_format: bibtex
 mcpa2a-2026-ref8:
   entry_type: online
@@ -1462,8 +1462,8 @@ mcpa2a-2026-ref10:
   accessed_iso: "2026-04-30"
   published_date: 1 January 2026
   accessed_date: 30 April 2026
-  ieee_base: Ramirez, S., FastAPI, FastAPI documentation, 2026.
-  harvard_base: Ramirez, S.. (2026). FastAPI. FastAPI documentation.
+  ieee_base: S. Ramirez, FastAPI, FastAPI documentation, 2026.
+  harvard_base: Ramirez, S. (2026). FastAPI. FastAPI documentation.
   source_format: bibtex
 mcpa2a-2026-ref11:
   entry_type: online
@@ -1477,8 +1477,8 @@ mcpa2a-2026-ref11:
   accessed_iso: "2026-04-30"
   published_date: 1 January 2026
   accessed_date: 30 April 2026
-  ieee_base: Inc., Pydantic Services, Welcome to Pydantic, Pydantic documentation v2.13.3, 2026.
-  harvard_base: Inc., Pydantic Services. (2026). Welcome to Pydantic. Pydantic documentation v2.13.3.
+  ieee_base: P. S. Inc., Welcome to Pydantic, Pydantic documentation v2.13.3, 2026.
+  harvard_base: Inc., P.S. (2026). Welcome to Pydantic. Pydantic documentation v2.13.3.
   source_format: bibtex
 mcpa2a-2026-ref12:
   entry_type: online
@@ -1507,8 +1507,8 @@ mcpa2a-2026-ref13:
   accessed_iso: "2026-04-30"
   published_date: 1 January 2025
   accessed_date: 30 April 2026
-  ieee_base: Authors, OpenTelemetry, Documentation, OpenTelemetry documentation, 2025.
-  harvard_base: Authors, OpenTelemetry. (2025). Documentation. OpenTelemetry documentation.
+  ieee_base: O. Authors, Documentation, OpenTelemetry documentation, 2025.
+  harvard_base: Authors, O. (2025). Documentation. OpenTelemetry documentation.
   source_format: bibtex
 mcpa2a-2026-ref14:
   entry_type: online
@@ -1522,8 +1522,8 @@ mcpa2a-2026-ref14:
   accessed_iso: "2026-04-30"
   published_date: 1 January 2026
   accessed_date: 30 April 2026
-  ieee_base: Inc., Docker, What is Docker?, Docker documentation, 2026.
-  harvard_base: Inc., Docker. (2026). What is Docker?. Docker documentation.
+  ieee_base: D. Inc., What is Docker?, Docker documentation, 2026.
+  harvard_base: Inc., D. (2026). What is Docker?. Docker documentation.
   source_format: bibtex
 mcpa2a-2026-ref15:
   entry_type: online
@@ -1567,8 +1567,8 @@ mcpa2a-2026-ref17:
   accessed_iso: "2026-04-28"
   published_date: 1 January 2026
   accessed_date: 28 April 2026
-  ieee_base: Protocol, Agent Communication, Welcome, ACP documentation, 2026.
-  harvard_base: Protocol, Agent Communication. (2026). Welcome. ACP documentation.
+  ieee_base: A. C. Protocol, Welcome, ACP documentation, 2026.
+  harvard_base: Protocol, A.C. (2026). Welcome. ACP documentation.
   source_format: bibtex
 mcpa2a-2026-ref18:
   entry_type: online
@@ -1582,8 +1582,8 @@ mcpa2a-2026-ref18:
   accessed_iso: "2026-04-28"
   published_date: 1 January 2026
   accessed_date: 28 April 2026
-  ieee_base: Protocol, Agent Communication, ACP OpenAPI specification, ACP documentation, 2026.
-  harvard_base: Protocol, Agent Communication. (2026). ACP OpenAPI specification. ACP documentation.
+  ieee_base: A. C. Protocol, ACP OpenAPI specification, ACP documentation, 2026.
+  harvard_base: Protocol, A.C. (2026). ACP OpenAPI specification. ACP documentation.
   source_format: bibtex
 mcpa2a-2026-ref19:
   entry_type: online
@@ -1597,8 +1597,8 @@ mcpa2a-2026-ref19:
   accessed_iso: "2026-04-28"
   published_date: 25 August 2025
   accessed_date: 28 April 2026
-  ieee_base: i-am-bee maintainers, ACP Joins Forces with A2A Under the Linux Foundation, i-am-bee Discussions, 2025.
-  harvard_base: i-am-bee maintainers. (2025). ACP Joins Forces with A2A Under the Linux Foundation. i-am-bee Discussions.
+  ieee_base: i. maintainers, ACP Joins Forces with A2A Under the Linux Foundation, i-am-bee Discussions, 2025.
+  harvard_base: maintainers, i. (2025). ACP Joins Forces with A2A Under the Linux Foundation. i-am-bee Discussions.
   source_format: bibtex
 mcpa2a-2026-ref20:
   entry_type: online
@@ -1612,8 +1612,8 @@ mcpa2a-2026-ref20:
   accessed_iso: "2026-04-28"
   published_date: 1 January 2026
   accessed_date: 28 April 2026
-  ieee_base: Besen, S. and Gutowska, A., What is Agent Communication Protocol (ACP)?, IBM Think, 2026.
-  harvard_base: Besen, S. and Gutowska, A.. (2026). What is Agent Communication Protocol (ACP)?. IBM Think.
+  ieee_base: S. Besen and A. Gutowska, What is Agent Communication Protocol (ACP)?, IBM Think, 2026.
+  harvard_base: Besen, S. and Gutowska, A. (2026). What is Agent Communication Protocol (ACP)?. IBM Think.
   source_format: bibtex
 rag-2026-ref1:
   entry_type: book
@@ -1621,87 +1621,96 @@ rag-2026-ref1:
   year: "2025"
   authors: Kimothi, Abhinav
   title: A Simple Guide to Retrieval Augmented Generation
-  publisher: Manning Publications
+  publisher: Simon and Schuster
   published_iso: "2025-01-01"
   published_date: 1 January 2025
-  ieee_base: Kimothi, Abhinav, A Simple Guide to Retrieval Augmented Generation, Manning Publications, 2025.
-  harvard_base: Kimothi, Abhinav. (2025). A Simple Guide to Retrieval Augmented Generation. Manning Publications.
+  ieee_base: A. Kimothi, A Simple Guide to Retrieval Augmented Generation, Simon and Schuster, 2025.
+  harvard_base: Kimothi, A. (2025). A Simple Guide to Retrieval Augmented Generation. Simon and Schuster.
   source_format: bibtex
-rag-2026-ref2:
+zhao2026:
   entry_type: article
   short_author: Zhao et al.
   year: "2026"
   authors: Zhao, Penghao and Zhang, Hailin and Yu, Qinhan and Wang, Zhengren and Geng, Yunteng and Fu, Fangcheng and Yang, Ling and Zhang, Wentao and Jiang, Jie and Cui, Bin
-  title: "Retrieval-Augmented Generation for {AI}-Generated Content: A Survey"
+  title: "Retrieval-Augmented Generation for AI-Generated Content: A Survey"
   volume: "11"
+  number: "1"
   pages: 1--29
+  url: https://doi.org/10.1007/s41019-025-00335-5
   doi: 10.1007/s41019-025-00335-5
-  published_iso: "2026-01-01"
-  published_date: 1 January 2026
-  ieee_base: "Zhao, Penghao and Zhang, Hailin and Yu, Qinhan and Wang, Zhengren and Geng, Yunteng and Fu, Fangcheng and Yang, Ling and Zhang, Wentao and Jiang, Jie and Cui, Bin, Retrieval-Augmented Generation for {AI}-Generated Content: A Survey, vol. 11, pp. 1--29, 2026."
-  harvard_base: "Zhao, Penghao and Zhang, Hailin and Yu, Qinhan and Wang, Zhengren and Geng, Yunteng and Fu, Fangcheng and Yang, Ling and Zhang, Wentao and Jiang, Jie and Cui, Bin. (2026). Retrieval-Augmented Generation for {AI}-Generated Content: A Survey. vol. 11, pp. 1--29."
+  published_iso: "2026-03-01"
+  published_date: 1 March 2026
+  ieee_base: "P. Zhao et al., Retrieval-Augmented Generation for AI-Generated Content: A Survey, vol. 11, no. 1, pp. 1--29, 2026."
+  harvard_base: "Zhao, P. et al. (2026). Retrieval-Augmented Generation for AI-Generated Content: A Survey. vol. 11, no. 1, pp. 1--29."
   source_format: bibtex
-rag-2026-ref3:
+10.1145/3805774:
   entry_type: article
   short_author: Huang et al.
   year: n.d.
   authors: Huang, Yizheng and Huang, Jimmy Xiangji
   title: A Survey on Retrieval-Augmented Text Generation for Large Language Models
+  publisher: Association for Computing Machinery
   volume: "58"
   number: "12"
-  pages: 300:1--300:38
+  url: https://doi.org/10.1145/3805774
   doi: 10.1145/3805774
-  ieee_base: Huang, Yizheng and Huang, Jimmy Xiangji, A Survey on Retrieval-Augmented Text Generation for Large Language Models, vol. 58, no. 12, pp. 300:1--300:38, n.d.
-  harvard_base: Huang, Yizheng and Huang, Jimmy Xiangji. (n.d.). A Survey on Retrieval-Augmented Text Generation for Large Language Models. vol. 58, no. 12, pp. 300:1--300:38.
+  ieee_base: Y. Huang and J. X. Huang, A Survey on Retrieval-Augmented Text Generation for Large Language Models, vol. 58, no. 12, n.d.
+  harvard_base: Huang, Y. and Huang, J.X. (n.d.). A Survey on Retrieval-Augmented Text Generation for Large Language Models. vol. 58, no. 12.
   source_format: bibtex
-rag-2026-ref4:
+10.1145/3626772.3657834:
   entry_type: inproceedings
   short_author: Cuconasu et al.
-  year: n.d.
+  year: "2024"
   authors: Cuconasu, Florin and Trappolini, Giovanni and Siciliano, Federico and Filice, Simone and Campagnano, Cesare and Maarek, Yoelle and Tonellotto, Nicola and Silvestri, Fabrizio
-  title: "The Power of Noise: Redefining Retrieval for {RAG} Systems"
-  book: Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '24)
+  title: "The Power of Noise: Redefining Retrieval for RAG Systems"
+  book: Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval
+  publisher: Association for Computing Machinery
   pages: 719--729
+  url: https://doi.org/10.1145/3626772.3657834
   doi: 10.1145/3626772.3657834
-  ieee_base: "Cuconasu, Florin and Trappolini, Giovanni and Siciliano, Federico and Filice, Simone and Campagnano, Cesare and Maarek, Yoelle and Tonellotto, Nicola and Silvestri, Fabrizio, The Power of Noise: Redefining Retrieval for {RAG} Systems, in Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '24), pp. 719--729, n.d."
-  harvard_base: "Cuconasu, Florin and Trappolini, Giovanni and Siciliano, Federico and Filice, Simone and Campagnano, Cesare and Maarek, Yoelle and Tonellotto, Nicola and Silvestri, Fabrizio. (n.d.). The Power of Noise: Redefining Retrieval for {RAG} Systems. In Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '24). pp. 719--729."
+  published_iso: "2024-01-01"
+  published_date: 1 January 2024
+  ieee_base: "F. Cuconasu et al., The Power of Noise: Redefining Retrieval for RAG Systems, in Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval, pp. 719--729, Association for Computing Machinery, 2024."
+  harvard_base: "Cuconasu, F. et al. (2024). The Power of Noise: Redefining Retrieval for RAG Systems. In Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval. pp. 719--729. Association for Computing Machinery."
   source_format: bibtex
-rag-2026-ref5:
+10.1371/journal.pdig.0000877:
   entry_type: article
   short_author: Amugongo et al.
   year: n.d.
   authors: Amugongo, Lameck Mbangula and Mascheroni, Pietro and Brooks, Steven and Doering, Stefan and Seidel, Jan
-  title: "Retrieval Augmented Generation for Large Language Models in Healthcare: A Systematic Review"
+  title: "Retrieval augmented generation for large language models in healthcare: A systematic review"
+  publisher: Public Library of Science
   volume: "4"
   number: "6"
+  pages: 1--33
+  url: https://doi.org/10.1371/journal.pdig.0000877
   doi: 10.1371/journal.pdig.0000877
-  ieee_base: "Amugongo, Lameck Mbangula and Mascheroni, Pietro and Brooks, Steven and Doering, Stefan and Seidel, Jan, Retrieval Augmented Generation for Large Language Models in Healthcare: A Systematic Review, vol. 4, no. 6, n.d."
-  harvard_base: "Amugongo, Lameck Mbangula and Mascheroni, Pietro and Brooks, Steven and Doering, Stefan and Seidel, Jan. (n.d.). Retrieval Augmented Generation for Large Language Models in Healthcare: A Systematic Review. vol. 4, no. 6."
+  ieee_base: "L. M. Amugongo, P. Mascheroni, S. Brooks, S. Doering and J. Seidel, Retrieval augmented generation for large language models in healthcare: A systematic review, vol. 4, no. 6, pp. 1--33, n.d."
+  harvard_base: "Amugongo, L.M. et al. (n.d.). Retrieval augmented generation for large language models in healthcare: A systematic review. vol. 4, no. 6, pp. 1--33."
   source_format: bibtex
-rag-2026-ref6:
+10.1145/3722552:
   entry_type: article
   short_author: Li et al.
   year: n.d.
   authors: Li, Xiaoxi and Jin, Jiajie and Zhou, Yujia and Zhang, Yuyao and Zhang, Peitian and Zhu, Yutao and Dou, Zhicheng
   title: "From Matching to Generation: A Survey on Generative Information Retrieval"
+  publisher: Association for Computing Machinery
   volume: "43"
   number: "3"
-  pages: 83:1--83:62
+  url: https://doi.org/10.1145/3722552
   doi: 10.1145/3722552
-  ieee_base: "Li, Xiaoxi and Jin, Jiajie and Zhou, Yujia and Zhang, Yuyao and Zhang, Peitian and Zhu, Yutao and Dou, Zhicheng, From Matching to Generation: A Survey on Generative Information Retrieval, vol. 43, no. 3, pp. 83:1--83:62, n.d."
-  harvard_base: "Li, Xiaoxi and Jin, Jiajie and Zhou, Yujia and Zhang, Yuyao and Zhang, Peitian and Zhu, Yutao and Dou, Zhicheng. (n.d.). From Matching to Generation: A Survey on Generative Information Retrieval. vol. 43, no. 3, pp. 83:1--83:62."
+  ieee_base: "X. Li et al., From Matching to Generation: A Survey on Generative Information Retrieval, vol. 43, no. 3, n.d."
+  harvard_base: "Li, X. et al. (n.d.). From Matching to Generation: A Survey on Generative Information Retrieval. vol. 43, no. 3."
   source_format: bibtex
-rag-2026-ref7:
+"11009349":
   entry_type: inproceedings
   short_author: Meng et al.
-  year: "2025"
+  year: n.d.
   authors: Meng, Qi and Wu, Zhenglong and Zhao, Zhongshi and Lian, Xi'nan
-  title: Analysis of Text Generation System Design Combining Retrieval Augmented Generation and Fine-tuning Strategy
+  title: Analysis of Text Generation System Design Combining Retrieval Augmented Generation and Fine-Tuning Strategy
   book: 2025 2nd International Conference on Smart Grid and Artificial Intelligence (SGAI)
   pages: 204--208
   doi: 10.1109/SGAI64825.2025.11009349
-  published_iso: "2025-01-01"
-  published_date: 1 January 2025
-  ieee_base: Meng, Qi and Wu, Zhenglong and Zhao, Zhongshi and Lian, Xi'nan, Analysis of Text Generation System Design Combining Retrieval Augmented Generation and Fine-tuning Strategy, in 2025 2nd International Conference on Smart Grid and Artificial Intelligence (SGAI), pp. 204--208, 2025.
-  harvard_base: Meng, Qi and Wu, Zhenglong and Zhao, Zhongshi and Lian, Xi'nan. (2025). Analysis of Text Generation System Design Combining Retrieval Augmented Generation and Fine-tuning Strategy. In 2025 2nd International Conference on Smart Grid and Artificial Intelligence (SGAI). pp. 204--208.
+  ieee_base: Q. Meng, Z. Wu, Z. Zhao and X. Lian, Analysis of Text Generation System Design Combining Retrieval Augmented Generation and Fine-Tuning Strategy, in 2025 2nd International Conference on Smart Grid and Artificial Intelligence (SGAI), pp. 204--208, n.d.
+  harvard_base: Meng, Q. et al. (n.d.). Analysis of Text Generation System Design Combining Retrieval Augmented Generation and Fine-Tuning Strategy. In 2025 2nd International Conference on Smart Grid and Artificial Intelligence (SGAI). pp. 204--208.
   source_format: bibtex
