@@ -60,11 +60,11 @@ tags:
 
 The [theoretical foundations](/post-quantum-cryptography-theoretical-foundations-reconceptualisation) and [migration pathways](/post-quantum-cryptography-standards-migration-workforce-readiness) of post-quantum cryptography are documented. The deployment challenge, however, is not generic; it is sector-specific. An IoT sensor with 64 KB of RAM faces different constraints from a cloud CSPM platform processing terabytes of telemetry. An energy grid with 30-year operational lifetimes has different migration urgency from an automotive OTA update channel.
 
-This article synthesises findings from the reviewed literature on how PQC is being integrated into specific sectors, extracting convergent patterns, documenting performance trade-offs, and assessing how far each domain has progressed from concept to production readiness.
+This article examines how PQC is being integrated into specific sectors, extracting convergent patterns, documenting performance trade-offs, and assessing how far each domain has progressed from concept to production readiness. A consistent finding, worth stating at the outset: no reviewed paper reports a production deployment. The field is earlier than its volume of publication activity suggests.
 
 ## Convergent Pattern: Kyber/Dilithium Dominance
 
-Across all reviewed applied papers, one pattern is universal: CRYSTALS-Kyber (ML-KEM) for key encapsulation and CRYSTALS-Dilithium (ML-DSA) for digital signatures are the default choices. No applied paper evaluates or deploys a non-lattice primary PQC algorithm.
+Across all reviewed applied papers, one pattern is universal: CRYSTALS-Kyber (ML-KEM) for key encapsulation and CRYSTALS-Dilithium (ML-DSA) for digital signatures are the default choices. No applied paper evaluates or deploys a non-lattice primary PQC algorithm. This uniformity is rational (NIST standardisation, library availability, performance characteristics) but it creates a concentration risk that none of the papers acknowledge.
 
 <figure markdown="1">
 
@@ -235,26 +235,22 @@ Zhao et al. apply lattice-based PQC to covert communication channels, legitimate
 | No key lifecycle management              | All                | PQC key rotation, revocation, and escrow unaddressed |
 | No latency impact on real-time systems   | Energy, automotive | SCADA and ECU timing constraints unvalidated         |
 
-<figcaption>Table 5: Cross-sector deployment gaps identified in the reviewed literature.</figcaption>
+<figcaption>Table 5: Cross-sector deployment gaps identified across the reviewed papers.</figcaption>
 </figure>
 
 ### The Prototype-to-Production Gap
 
 The most significant finding across the sector-specific literature is the consistent absence of production deployments. Every reviewed paper presents conceptual frameworks, simulation results, or small-scale prototypes. None reports a production deployment with real users, real adversaries, or real operational constraints.
 
-This gap is not unique to PQC. It reflects the general maturity level of a field that received its first formal standards only in 2024. But it means that the performance claims, security assurances, and integration architectures in the reviewed literature remain unvalidated under production conditions.
+This gap is not unique to PQC. It reflects the general maturity level of a field that received its first formal standards only in 2024. But it means that the performance claims, security assurances, and integration architectures presented in these papers remain unvalidated under production conditions.
 
 ## Takeaways
 
-1. **Kyber/Dilithium dominate applied PQC,** creating pragmatic convergence but systemic concentration risk on lattice assumptions. Crypto-agility is a strategic necessity, not a theoretical concern.
+Kyber and Dilithium dominate applied PQC across every sector examined. This convergence is pragmatic (library support, NIST endorsement, hardware performance) but it concentrates systemic risk on lattice assumptions. If lattice problems weaken, the entire deployed portfolio is exposed simultaneously. Crypto-agility at the deployment architecture level is the mitigation, and none of the reviewed implementations demonstrate it.
 
-2. **IoT and blockchain integration is the most active deployment area,** with multiple independent proposals for quantum-resistant distributed trust. But no production deployment exists.
+The prototype-to-production gap is universal and should be treated as the field's primary bottleneck. IoT and blockchain integration is the most active area of proposal, but no paper reports a production deployment. Energy grids face the most acute urgency (30-year asset lifetimes, Mosca's inequality already exceeded) yet have the least validated benchmarks on actual SCADA hardware. Automotive OTA channels fit within existing ECU constraints technically, but vehicle lifespans of 15–20 years mean that design decisions made today lock in quantum vulnerability or resistance for a generation.
 
-3. **Energy grids face the most acute migration urgency** due to multi-decade infrastructure lifetimes and cascading failure potential, yet have the least validated PQC benchmarks on actual SCADA hardware.
-
-4. **Automotive OTA channels are a high-impact target** where PQC fits within existing ECU constraints (Kyber + Dilithium). Vehicle lifespans of 15–20 years make quantum resistance a present design requirement.
-
-5. **The prototype-to-production gap is universal.** Every sector needs validated production deployments, cross-vendor interoperability testing, and constrained-device benchmarks before PQC can be considered deployment-ready.
+What the sector evidence reveals, consistently, is that algorithm selection is the solved problem. Integration architecture, constrained-device performance validation, and cross-vendor interoperability testing are the unsolved problems.
 
 ---
 
@@ -274,7 +270,7 @@ NIST standardisation creates strong incentive alignment: library support, regula
 
 ### Are there production deployments of post-quantum cryptography?
 
-Among the reviewed literature, no. All papers present conceptual frameworks, simulations, or small-scale prototypes. Production deployments with real users, real adversaries, and real operational constraints are absent. Broader industry efforts (Google's CECPQ2 experiment, Cloudflare's PQ TLS deployment) exist but are outside the scope of this academic review.
+Among the papers reviewed here, no. All papers present conceptual frameworks, simulations, or small-scale prototypes. Production deployments with real users, real adversaries, and real operational constraints are absent. Broader industry efforts (Google's CECPQ2 experiment, Cloudflare's PQ TLS deployment) exist but are outside the scope of this academic review.
 
 ### How does PQC affect network performance?
 
@@ -297,7 +293,7 @@ PQC key encapsulation adds approximately 1–3 ms to TLS handshakes depending on
 
 ### Author and Source Credibility
 
-This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from the reviewed literature on sector-specific PQC deployment. Papers span IEEE Access, Springer, and ACM venues. Evidence quality varies: Fahomida et al. (2025) provide simulation benchmarks; Krishnan et al. (2025) offer a threat-modelling framework without performance data; Nakka et al. (2024) present an architectural proposal with constraint analysis but no prototype; Joseph et al. (2025) combine PQC with CSPM conceptually. Raju et al. (2025) and Zhao et al. (2025) address niche applications with experimental validation.
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings on sector-specific PQC deployment from papers spanning IEEE Access, Springer, and ACM venues. Evidence quality varies: Fahomida et al. (2025) provide simulation benchmarks; Krishnan et al. (2025) offer a threat-modelling framework without performance data; Nakka et al. (2024) present an architectural proposal with constraint analysis but no prototype; Joseph et al. (2025) combine PQC with CSPM conceptually. Raju et al. (2025) and Zhao et al. (2025) address niche applications with experimental validation.
 
 ### A. Evidence Boundary Notes
 

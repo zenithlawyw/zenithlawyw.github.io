@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-06-02T23:10:15Z"
+generated_at: "2026-06-02T23:28:01Z"
 signal_weights:
   title: 3
   categories: 5
@@ -24,8 +24,8 @@ keywords:
   - deployment
   - network
   - implementation
-  - production
   - model
+  - production
   - appendix
   - architecture
   - evidence
@@ -39,12 +39,12 @@ keywords:
   - practical
   - language
   - questions
-  - cryptography
   - supply
   - mcp
   - svm
   - chain
   - learning
+  - cryptography
   - teams
   - acp
   - artificial
@@ -53,29 +53,29 @@ keywords:
   - pqc
   - orchestration
   - cross-border
-  - security
   - agentic
   - cloud
   - controls
   - review
   - frequently
   - asked
-  - literature
-  - post-quantum
+  - security
   - large
   - guide
+  - post-quantum
   - quantum
   - author
   - lessons
   - micropayments
   - notes
   - seo
+  - literature
   - aeo
   - geo
   - table
+  - design
   - china
   - contents
-  - design
   - credibility
   - deadlock
   - agent
@@ -88,11 +88,11 @@ keywords:
   - generation
   - npm
   - boundaries
-  - migration
   - snapshot
   - software
   - practice
   - sovereignty
+  - migration
   - protocol
   - corpus
   - evaluation
@@ -191,9 +191,9 @@ key_phrases:
   - large language
   - seo geo
   - geo aeo
-  - post-quantum cryptography
   - seo geo aeo
   - table contents
+  - post-quantum cryptography
   - author credibility
   - implementation guide
   - aeo optimisation
@@ -324,8 +324,8 @@ catchwords:
   - deployment
   - network
   - implementation
-  - production
   - model
+  - production
   - appendix
   - architecture
   - evidence
@@ -338,36 +338,36 @@ catchwords:
   - practical
   - language
   - questions
-  - cryptography
   - supply
   - chain
   - learning
+  - cryptography
   - teams
   - artificial
   - intelligence
   - systems
   - orchestration
   - cross-border
-  - security
   - agentic
   - cloud
   - controls
   - review
   - frequently
   - asked
-  - literature
-  - post-quantum
+  - security
   - large
   - guide
+  - post-quantum
   - quantum
   - author
   - lessons
   - micropayments
   - notes
+  - literature
   - table
+  - design
   - china
   - contents
-  - design
   - credibility
   - deadlock
   - agent
@@ -378,11 +378,11 @@ catchwords:
   - axios
   - generation
   - boundaries
-  - migration
   - snapshot
   - software
   - practice
   - sovereignty
+  - migration
   - protocol
   - corpus
   - evaluation
@@ -567,8 +567,8 @@ search_words:
   - deployment
   - network
   - implementation
-  - production
   - model
+  - production
   - appendix
   - architecture
   - evidence
@@ -582,12 +582,12 @@ search_words:
   - practical
   - language
   - questions
-  - cryptography
   - supply
   - mcp
   - svm
   - chain
   - learning
+  - cryptography
   - teams
   - acp
   - artificial
@@ -596,29 +596,29 @@ search_words:
   - pqc
   - orchestration
   - cross-border
-  - security
   - agentic
   - cloud
   - controls
   - review
   - frequently
   - asked
-  - literature
-  - post-quantum
+  - security
   - large
   - guide
+  - post-quantum
   - quantum
   - author
   - lessons
   - micropayments
   - notes
   - seo
+  - literature
   - aeo
   - geo
   - table
+  - design
   - china
   - contents
-  - design
   - credibility
   - deadlock
   - agent
@@ -631,11 +631,11 @@ search_words:
   - generation
   - npm
   - boundaries
-  - migration
   - snapshot
   - software
   - practice
   - sovereignty
+  - migration
   - protocol
   - corpus
   - evaluation
@@ -663,9 +663,9 @@ search_words:
   - large language
   - seo geo
   - geo aeo
-  - post-quantum cryptography
   - seo geo aeo
   - table contents
+  - post-quantum cryptography
   - author credibility
   - implementation guide
   - aeo optimisation
@@ -830,7 +830,7 @@ global_questions:
   - question: What makes post-quantum cryptography different from quantum cryptography?
     answer: Post-quantum cryptography uses classical algorithms designed to resist quantum attacks, running on conventional hardware. Quantum cryptography (QKD) uses quantum mechanical properties of photons for key distribution, requiring specialised quantum hardware. PQC replaces vulnerable algorithms; QKD provides a fundamentally different security mechanism based on physics rather than computational hardness.
   - question: What programming languages does automated PQC code migration support?
-    answer: As of the reviewed literature, only Python is covered by ccPASTpqc. Production cryptographic code in C/C++, Java, Go, and Rust requires manual migration or purpose-built tooling that does not yet exist. This is a significant research and tooling gap.
+    answer: As of the papers reviewed here, only Python is covered by ccPASTpqc. Production cryptographic code in C/C++, Java, Go, and Rust requires manual migration or purpose-built tooling that does not yet exist. This is a significant research and tooling gap.
   - question: What retrieval document positioning gives the best RAG accuracy?
     answer: Place the most relevant document adjacent to the query in the prompt. Cuconasu et al. show that "near" positioning (relevant document closest to query) consistently outperforms "mid" (middle of context) and "far" (beginning of context) placements across all tested LLMs. This confirms the "lost in the middle" effect from prior research.
   - question: What should I log for RAG audit compliance?
@@ -874,7 +874,7 @@ global_questions:
   - question: Why is target discriminability as critical as alignment in unsupervised domain adaptation for representation learning?
     answer: Alignment can make domains look similar while classes still overlap. Qiang et al. show that this hurts prediction quality in target data. Adding discriminability constraints helps keep class boundaries clear.
   - question: Are there production deployments of post-quantum cryptography?
-    answer: Among the reviewed literature, no. All papers present conceptual frameworks, simulations, or small-scale prototypes. Production deployments with real users, real adversaries, and real operational constraints are absent. Broader industry efforts (Google's CECPQ2 experiment, Cloudflare's PQ TLS deployment) exist but are outside the scope of this academic review.
+    answer: Among the papers reviewed here, no. All papers present conceptual frameworks, simulations, or small-scale prototypes. Production deployments with real users, real adversaries, and real operational constraints are absent. Broader industry efforts (Google's CECPQ2 experiment, Cloudflare's PQ TLS deployment) exist but are outside the scope of this academic review.
   - question: Can A2A replace MCP for tool invocation and capability exposure for MCP vs A2A vs ACP?
     answer: It can, but it is usually wasteful. Simple tools do not benefit much from peer-agent ceremony. A2A shines when the remote side behaves like a collaborator, not just a callable capability. ACP-style REST wrappers can expose those collaborators to existing API ecosystems, but they do not remove the need for MCP when local tool boundaries and consent controls are required.
   - question: Can I use RAG without a GPU?
@@ -923,8 +923,6 @@ global_questions:
     answer: No. Post-quantum cryptography uses classical (non-quantum) algorithms designed to resist attacks from quantum computers. Quantum cryptography uses quantum mechanical phenomena (photon polarisation) for key distribution. The terminology confusion is documented in the educational literature. "Quantum-Resistant Cryptography" is a clearer term.
   - question: Is ACP obsolete, or still useful during A2A convergence and migration for MCP vs A2A vs ACP?
     answer: ACP remains important for architecture learning and for existing deployments. New strategy should account for announced convergence and migration direction toward A2A to reduce future integration churn.
-  - question: Is AES-256 safe against quantum computers?
-    answer: Yes, for practical purposes. Grover's algorithm halves the effective key length, reducing AES-256 to 128-bit equivalent security against a quantum adversary. AES-128 equivalent strength remains far beyond practical brute-force attack. The vulnerability is in asymmetric (public-key) cryptography, not symmetric encryption.
   - question: Is RAG sufficient on its own, or should I also fine-tune my model?
     answer: For general knowledge tasks, RAG alone can be effective. For domain-specific applications (healthcare, legal, finance), combining RAG with parameter-efficient fine-tuning produces better results. Meng et al. show that the fusion pattern, where retrieval provides current context and fine-tuning adapts generation style, reaches 90%+ accuracy in domain-specific Q&A.
   - question: Is cross-encoder re-ranking worth the additional latency?
@@ -1005,6 +1003,8 @@ global_questions:
     answer: No. Privacy, transfer, residency, and sector-specific obligations vary by jurisdiction and industry. Use these practices as technical design guidance and validate legal and regulatory requirements for each operating context.
   - question: Do these protocol recommendations transfer uniformly across UK, EU, US, Canada, Hong Kong, China, and Australia for MCP vs A2A vs ACP?
     answer: No. Privacy, transfer, and sector-specific obligations vary by jurisdiction and industry. Treat protocol guidance as architecture input and confirm legal and regulatory requirements for the specific operating context.
+  - question: Is AES-256 safe against quantum computers?
+    answer: For practical purposes, yes. Grover's algorithm provides a quadratic speedup that, in the idealised brute-force model, reduces AES-256 to approximately 128-bit equivalent security against a quantum adversary. This level of resistance remains computationally infeasible to attack with foreseeable resources. The actual quantum cost may be higher still, since Grover's algorithm faces depth constraints and error-correction overhead on real hardware. The genuine vulnerability lies in asymmetric (public-key) cryptography, not symmetric encryption.
   - question: Is MCP more secure than A2A, or are they securing different boundaries for MCP vs A2A vs ACP?
     answer: Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services. ACP-oriented deployments additionally depend on API gateway policy, token scope, and run-endpoint governance quality, so security posture is a composition problem, not a single-protocol verdict.
   - question: Should I fine-tune my LLM in addition to using RAG?
@@ -3358,11 +3358,11 @@ posts:
       - quantum
       - pqc
       - post-quantum
-      - security
       - lattice-based
       - code-based
       - hybrid
       - models
+      - security
       - acceleration
       - cryptographic
       - foundations
@@ -3370,7 +3370,7 @@ posts:
       - nist
       - primitives
       - reconceptualisation
-      - algorithm
+      - crypto-agility
       - applied
       - computing
       - cybersecurity
@@ -3378,11 +3378,11 @@ posts:
       - mathematics
       - standards
       - theoretical
+      - algorithm
       - appendix
       - computers
       - constructions
-      - crypto-agility
-      - literature
+      - defence
       - notes
       - public-key
       - questions
@@ -3423,18 +3423,18 @@ posts:
       - cryptography
       - quantum
       - post-quantum
-      - security
       - lattice-based
       - code-based
       - hybrid
       - models
+      - security
       - acceleration
       - cryptographic
       - foundations
       - hardware
       - primitives
       - reconceptualisation
-      - algorithm
+      - crypto-agility
       - applied
       - computing
       - cybersecurity
@@ -3442,22 +3442,22 @@ posts:
       - mathematics
       - standards
       - theoretical
+      - algorithm
       - appendix
       - computers
       - constructions
-      - crypto-agility
-      - literature
+      - defence
       - notes
     search_words:
       - cryptography
       - quantum
       - pqc
       - post-quantum
-      - security
       - lattice-based
       - code-based
       - hybrid
       - models
+      - security
       - acceleration
       - cryptographic
       - foundations
@@ -3465,7 +3465,7 @@ posts:
       - nist
       - primitives
       - reconceptualisation
-      - algorithm
+      - crypto-agility
       - applied
       - post-quantum cryptography
       - lattice-based cryptography
@@ -3485,7 +3485,7 @@ posts:
       - question: Why were SIKE and Rainbow broken, and what does that mean for other PQC algorithms?
         answer: SIKE was broken by a classical mathematical attack exploiting the structure of supersingular isogeny graphs. Rainbow was broken by a key-recovery attack using classical computation. Both were NIST-evaluated candidates that survived years of scrutiny before fatal weaknesses were found. This demonstrates that PQC algorithms are significantly less battle-tested than RSA/ECC and reinforces the need for crypto-agility in any deployment.
       - question: Is AES-256 safe against quantum computers?
-        answer: Yes, for practical purposes. Grover's algorithm halves the effective key length, reducing AES-256 to 128-bit equivalent security against a quantum adversary. AES-128 equivalent strength remains far beyond practical brute-force attack. The vulnerability is in asymmetric (public-key) cryptography, not symmetric encryption.
+        answer: For practical purposes, yes. Grover's algorithm provides a quadratic speedup that, in the idealised brute-force model, reduces AES-256 to approximately 128-bit equivalent security against a quantum adversary. This level of resistance remains computationally infeasible to attack with foreseeable resources. The actual quantum cost may be higher still, since Grover's algorithm faces depth constraints and error-correction overhead on real hardware. The genuine vulnerability lies in asymmetric (public-key) cryptography, not symmetric encryption.
       - question: What is crypto-agility and why is it critical for PQC migration?
         answer: Crypto-agility is the architectural property that allows cryptographic algorithms to be replaced without redesigning the system. Given that PQC algorithms have survived only a few years of scrutiny (compared to decades for RSA), algorithm-level surprises are expected. Systems without crypto-agility face emergency migration under time pressure, exactly the scenario Mosca's inequality warns against.
       - question: How does hardware acceleration affect PQC deployment decisions?
@@ -3511,7 +3511,6 @@ posts:
       - network
       - standardisation
       - architectures
-      - literature
       - technical
       - cryptographic
       - cybersecurity
@@ -3526,10 +3525,11 @@ posts:
       - open
       - outcomes
       - problem
-      - reviewed
-      - settled
+      - remains
       - tooling
       - architecture
+      - ccpastpqc
+      - modular
       - post-quantum cryptography
       - nist standards
       - cryptographic migration
@@ -3539,26 +3539,26 @@ posts:
       - workforce readiness
       - software engineering
       - code migration
-      - network architectures
       - automated code migration
       - automated code
-      - cybersecurity software engineering
+      - network architectures
+      - tls pqc
       - software engineering post-quantum
       - engineering post-quantum cryptography
+      - post-quantum cryptography nist
       - qkd pqc
       - hybrid qkd
-      - post-quantum cryptography nist
       - cryptography nist standards
       - nist standards cryptographic
-      - standards cryptographic migration
       - development software engineering
       - workforce development software
-      - cryptographic migration workforce
       - migration workforce development
-      - tls pqc
-      - development software
-      - workforce development
-      - migration workforce
+      - cryptographic migration workforce
+      - standards cryptographic migration
+      - hybrid qkd pqc
+      - cybersecurity software
+      - engineering post-quantum
+      - cryptography nist
     catchwords:
       - migration
       - workforce
@@ -3574,7 +3574,6 @@ posts:
       - network
       - standardisation
       - architectures
-      - literature
       - technical
       - cryptographic
       - cybersecurity
@@ -3585,9 +3584,10 @@ posts:
       - notes
       - outcomes
       - problem
-      - reviewed
-      - settled
+      - remains
       - tooling
+      - architecture
+      - ccpastpqc
     search_words:
       - migration
       - pqc
@@ -3606,26 +3606,26 @@ posts:
       - network
       - standardisation
       - architectures
-      - literature
+      - technical
       - post-quantum cryptography
       - workforce readiness
       - software engineering
       - code migration
-      - network architectures
       - automated code migration
       - automated code
-      - cybersecurity software engineering
+      - network architectures
+      - tls pqc
       - software engineering post-quantum
       - engineering post-quantum cryptography
+      - post-quantum cryptography nist
       - qkd pqc
-      - hybrid qkd
     questions:
       - question: How long does a typical PQC migration take for an enterprise?
         answer: Migration timelines depend on codebase size, cryptographic dependency count, and organisational readiness. Wahlang and Vidhani's automated tooling can accelerate Python migrations, but manual review remains necessary. For large enterprises, expect multi-year migration programmes with phased rollout. The critical first step, cryptographic inventory, can begin immediately.
       - question: Can I use TLS 1.3 for PQC deployment without protocol changes?
         answer: Yes. TLS 1.3 supports PQC through its extensible `key_share` and `signature_algorithms` mechanisms. PQC key encapsulation and signatures can be negotiated within the existing handshake framework. This is one of PQC's major practical advantages over QKD, which requires entirely new infrastructure.
       - question: What programming languages does automated PQC code migration support?
-        answer: As of the reviewed literature, only Python is covered by ccPASTpqc. Production cryptographic code in C/C++, Java, Go, and Rust requires manual migration or purpose-built tooling that does not yet exist. This is a significant research and tooling gap.
+        answer: As of the papers reviewed here, only Python is covered by ccPASTpqc. Production cryptographic code in C/C++, Java, Go, and Rust requires manual migration or purpose-built tooling that does not yet exist. This is a significant research and tooling gap.
       - question: Should I train my team on PQC before starting migration?
         answer: Yes. The reviewed educational programmes consistently show that hands-on understanding of PQC operations improves migration quality and reduces errors. Deploy awareness-level training immediately for all technical staff, and proficiency-level training for security teams before they begin migration work.
       - question: Is "Post-Quantum Cryptography" the same as "quantum cryptography"?
@@ -3767,7 +3767,7 @@ posts:
       - question: Why does every applied PQC paper use Kyber and Dilithium?
         answer: "NIST standardisation creates strong incentive alignment: library support, regulatory compliance, and interoperability expectations all favour the standardised algorithms. Kyber and Dilithium also offer the best performance on commodity hardware. The risk is systemic: if lattice assumptions weaken, the entire deployed portfolio is affected."
       - question: Are there production deployments of post-quantum cryptography?
-        answer: Among the reviewed literature, no. All papers present conceptual frameworks, simulations, or small-scale prototypes. Production deployments with real users, real adversaries, and real operational constraints are absent. Broader industry efforts (Google's CECPQ2 experiment, Cloudflare's PQ TLS deployment) exist but are outside the scope of this academic review.
+        answer: Among the papers reviewed here, no. All papers present conceptual frameworks, simulations, or small-scale prototypes. Production deployments with real users, real adversaries, and real operational constraints are absent. Broader industry efforts (Google's CECPQ2 experiment, Cloudflare's PQ TLS deployment) exist but are outside the scope of this academic review.
       - question: How does PQC affect network performance?
         answer: PQC key encapsulation adds approximately 1–3 ms to TLS handshakes depending on security level and hardware. PQC signatures (Dilithium) are larger than ECDSA signatures, increasing bandwidth consumption. For most applications, the overhead is negligible. For latency-sensitive systems (SCADA, real-time automotive), validated benchmarks on target hardware are essential before deployment.
 pages:

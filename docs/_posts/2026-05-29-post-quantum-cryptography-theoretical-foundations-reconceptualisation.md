@@ -4,7 +4,7 @@ title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisati
 author: Zenith Law
 description: "A systematic exploratory review of post-quantum cryptographic primitives (lattice-based, code-based, hash-based, and hybrid QC/PQC constructions) examining the mathematical foundations, hardware acceleration strategies, and reconceptualisation of security models for the quantum era."
 permalink: /post-quantum-cryptography-theoretical-foundations-reconceptualisation
-intro: "Quantum computers threaten to dismantle the public-key infrastructure that underpins digital commerce, governance, and communication. This article synthesises findings from the reviewed literature on the theoretical foundations of post-quantum cryptography, from lattice and code-based constructions to hybrid quantum/classical defence models, and identifies the reconceptualisation of security models that the quantum transition demands."
+intro: "Quantum computers threaten to dismantle the public-key infrastructure that underpins digital commerce, governance, and communication. This article examines the theoretical foundations of post-quantum cryptography, from lattice and code-based constructions to hybrid quantum/classical defence models, and identifies the reconceptualisation of security models that the quantum transition demands."
 related_posts:
   - title: "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce Readiness"
     url: /post-quantum-cryptography-standards-migration-workforce-readiness
@@ -62,23 +62,23 @@ The timeline remains contested. Estimates for cryptographically relevant quantum
 
 ### Symmetric Cryptography: A Relative Safe Harbour
 
-Grover's algorithm provides a quadratic speedup for brute-force search, effectively halving symmetric key lengths. AES-256 becomes AES-128 in effective strength against a quantum adversary, still beyond practical attack {% include references/cite.html key="10543513" %}. The asymmetric key infrastructure, not symmetric encryption, is the critical vulnerability.
+Grover's algorithm provides a quadratic speedup for unstructured search, which in the brute-force model halves the effective bit-security of symmetric keys. Under this model, AES-256 retains approximately 128 bits of security against a quantum adversary, a level that remains computationally infeasible to attack. The precise operational cost depends on assumptions about Grover oracle depth, error correction overhead, and parallelisation constraints that remain subjects of active research {% include references/cite.html key="10543513" %}. The practical conclusion holds: the asymmetric key infrastructure, not symmetric encryption, is the critical vulnerability.
 
 <figure markdown="1">
 
-| Algorithm Family | Classical Security             | Quantum Vulnerability                         | Mitigation             |
-| :--------------- | :----------------------------- | :-------------------------------------------- | :--------------------- |
-| RSA / DSA        | Integer factorisation hardness | Shor's algorithm (broken in polynomial time)  | Replace with PQC       |
-| ECC / ECDH       | Discrete logarithm hardness    | Shor's algorithm (broken in polynomial time)  | Replace with PQC       |
-| AES-256          | Brute-force resistance         | Grover halves effective key length to 128-bit | Double key sizes       |
-| SHA-256          | Collision resistance           | Grover provides quadratic speedup             | Increase output length |
+| Algorithm Family | Classical Security             | Quantum Vulnerability                        | Mitigation             |
+| :--------------- | :----------------------------- | :------------------------------------------- | :--------------------- |
+| RSA / DSA        | Integer factorisation hardness | Shor's algorithm (broken in polynomial time) | Replace with PQC       |
+| ECC / ECDH       | Discrete logarithm hardness    | Shor's algorithm (broken in polynomial time) | Replace with PQC       |
+| AES-256          | Brute-force resistance         | Grover: ~128-bit effective (idealised model) | Double key sizes       |
+| SHA-256          | Collision resistance           | Grover provides quadratic speedup            | Increase output length |
 
 <figcaption>Table 1: Quantum vulnerability of major cryptographic families and their respective mitigation strategies.</figcaption>
 </figure>
 
 ## The Four PQC Algorithm Families
 
-Post-quantum cryptography replaces the mathematical problems broken by Shor's algorithm with problems believed to resist both classical and quantum attack. Four families dominate the landscape {% include references/cite.html key="10543513" %} {% include references/cite.html key="11325571" %}:
+Post-quantum cryptography replaces the mathematical problems broken by Shor's algorithm with problems believed to resist both classical and quantum attack. Four families dominate current standardisation efforts {% include references/cite.html key="10543513" %} {% include references/cite.html key="11325571" %}:
 
 ### Lattice-Based Cryptography
 
@@ -132,7 +132,7 @@ Hash-based signatures are considered the safest PQC family because their securit
 <dd>Based on the hardness of solving systems of multivariate polynomial equations over finite fields. Rainbow was a NIST finalist before being broken by a classical attack in 2022.</dd>
 </dl>
 
-The Rainbow break is a cautionary tale for the entire PQC field. Ward Beullens demonstrated a classical attack that recovered Rainbow secret keys "over the weekend on a laptop" {% include references/cite.html key="10.1145/3575664.11325571" %}. This was not a quantum attack; classical cryptanalysis invalidated a NIST finalist. Similarly, SIKE (Supersingular Isogeny Key Encapsulation) was broken "in about one hour on a single core" {% include references/cite.html key="11325571" %}.
+The Rainbow break is a cautionary tale for the entire PQC field. Ward Beullens demonstrated a classical attack that recovered Rainbow secret keys "over the weekend on a laptop" {% include references/cite.html key="10.1145/3575664" %} {% include references/cite.html key="11325571" %}. This was not a quantum attack; classical cryptanalysis invalidated a NIST finalist. SIKE (Supersingular Isogeny Key Encapsulation) suffered a similar fate: Castryck and Decru broke it "in about one hour on a single core" using a genus-2 Richelot isogeny attack {% include references/cite.html key="11325571" %}.
 
 > **Lesson:** PQC algorithms are young. The mathematical problems they rely on have received far less scrutiny than RSA's integer factorisation. Crypto-agility (the ability to swap algorithms without system redesign) is not optional; it is a survival requirement.
 
@@ -187,34 +187,23 @@ For typical enterprise applications, PQC alone is sufficient and far more practi
 
 ## Reconceptualising Security Models
 
-The quantum transition forces a reconceptualisation of how security is defined, measured, and maintained:
+The quantum transition forces a reconceptualisation of how security is defined, measured, and maintained.
 
-### From Static to Agile Cryptography
+### Crypto-Agility as a Design Primitive
 
 Classical cryptographic deployment assumed algorithms would last decades. RSA-2048 was expected to remain secure until at least 2030. PQC algorithms, by contrast, have survived at most a few years of scrutiny. The SIKE and Rainbow breaks demonstrate that even expert-vetted, multi-year evaluation processes can miss fatal weaknesses {% include references/cite.html key="10.1145/3575664" %}.
 
-Systems must be designed for algorithm replacement as a routine maintenance operation, not an emergency migration:
+The implication is that algorithm replacement must become a routine maintenance operation rather than an emergency migration. TLS 1.3 already supports algorithm negotiation with PQC extensions available; hybrid certificates (PQ/T) allow dual-signing during transition periods; key encapsulation mechanisms can be abstracted behind interfaces that support swapping. The engineering patterns exist. What is missing is the organisational discipline to treat cryptographic components as replaceable modules rather than permanent infrastructure.
 
-- **Protocol-level agility:** TLS 1.3 already supports algorithm negotiation; PQC extensions exist
-- **Certificate agility:** Hybrid certificates (PQ/T) allow dual-signing during transition periods
-- **Key management agility:** Key encapsulation mechanisms should be abstracted behind interfaces that support algorithm swapping
+### Layered Defence and System-Level Thinking
 
-### From Single-Layer to Defence-in-Depth
+The classical assumption that "one good algorithm is enough" does not survive contact with PQC's uncertainty profile. Layered defence becomes rational when individual algorithm confidence is lower: PQC for computational resistance, QKD for physics-based resistance where feasible, forward secrecy to bound the blast radius of key compromise, and aggressive key rotation to limit exposure windows.
 
-The classical model of "one good algorithm is enough" gives way to layered defences:
-
-1. PQC for computational resistance
-2. QKD for physics-based resistance (where feasible)
-3. Forward secrecy to limit the blast radius of key compromise
-4. Key rotation to bound the exposure window
-
-### From Algorithm Security to System Security
-
-An algorithm's theoretical security means little if the implementation leaks timing information, the key management system is vulnerable, or the migration process introduces compatibility gaps. The reviewed literature consistently shows that PQC algorithm research far outpaces deployment engineering, a gap that practitioners must close {% include references/cite.html key="11325571" %}.
+More fundamentally, an algorithm's theoretical security means little if the implementation leaks timing information, the key management system is vulnerable, or the migration process introduces compatibility gaps. PQC algorithm research has outpaced deployment engineering by a wide margin. The gap is not surprising given the field's youth, but it is the gap that will determine whether migration succeeds or stalls {% include references/cite.html key="11325571" %}.
 
 ## Research Gaps and Open Questions
 
-The reviewed literature reveals several areas where theoretical foundations remain incomplete:
+Four areas stand out where the theoretical foundations remain incomplete or contested:
 
 - **Tight security reductions for lattice-based schemes:** The worst-case to average-case reductions that underpin Kyber and Dilithium security proofs have gaps in tightness that affect concrete security parameter selection
 - **Formal hybrid security models:** No rigorous framework exists for proving that hybrid QC/PQC systems provide security strictly greater than either component alone {% include references/cite.html key="11011628" %}
@@ -223,15 +212,15 @@ The reviewed literature reveals several areas where theoretical foundations rema
 
 ## Takeaways
 
-1. **The quantum threat to public-key cryptography is categorical, not gradual.** Shor's algorithm does not weaken RSA; it eliminates it. Migration is not optimisation; it is replacement.
+The quantum threat to public-key cryptography is categorical. Shor's algorithm does not weaken RSA; it eliminates it. Migration is replacement, not optimisation.
 
-2. **Lattice-based schemes (Kyber, Dilithium) are the pragmatic default** for most deployments, but crypto-agility is essential given the field's youth and the history of unexpected breaks.
+For most deployments, lattice-based schemes (Kyber, Dilithium) are the pragmatic starting point. They offer the best performance on commodity hardware and have the broadest library support. But crypto-agility remains essential: SIKE and Rainbow both survived years of expert evaluation before being broken by classical attacks. The mathematical problems underlying lattice cryptography have received far less adversarial scrutiny than integer factorisation.
 
-3. **Code-based PQC is viable with hardware acceleration.** The HSPA accelerators demonstrate that FPGA implementations can achieve practical performance for HQC and BIKE, expanding the viable PQC algorithm portfolio.
+Three additional observations warrant attention:
 
-4. **Hybrid QC/PQC provides genuine defence-in-depth** for high-value targets, but the engineering complexity and cost restrict it to critical applications.
-
-5. **Crypto-agility is the single most important architectural decision.** The ability to swap algorithms without system redesign protects against the inevitable surprises that a young cryptographic field will produce.
+- Code-based PQC is becoming viable for constrained environments. The HSPA accelerators demonstrate 57–80% ADP improvement on FPGA, expanding the algorithm portfolio beyond lattice-only deployments.
+- Hybrid QC/PQC provides genuine defence-in-depth for high-value targets, but the engineering complexity and cost restrict it to critical applications where "harvest now, decrypt later" threats are existential.
+- Crypto-agility is the single most important architectural decision. The ability to swap algorithms without system redesign protects against the inevitable surprises that a young cryptographic field will produce.
 
 ---
 
@@ -247,7 +236,7 @@ SIKE was broken by a classical mathematical attack exploiting the structure of s
 
 ### Is AES-256 safe against quantum computers?
 
-Yes, for practical purposes. Grover's algorithm halves the effective key length, reducing AES-256 to 128-bit equivalent security against a quantum adversary. AES-128 equivalent strength remains far beyond practical brute-force attack. The vulnerability is in asymmetric (public-key) cryptography, not symmetric encryption.
+For practical purposes, yes. Grover's algorithm provides a quadratic speedup that, in the idealised brute-force model, reduces AES-256 to approximately 128-bit equivalent security against a quantum adversary. This level of resistance remains computationally infeasible to attack with foreseeable resources. The actual quantum cost may be higher still, since Grover's algorithm faces depth constraints and error-correction overhead on real hardware. The genuine vulnerability lies in asymmetric (public-key) cryptography, not symmetric encryption.
 
 ### What is crypto-agility and why is it critical for PQC migration?
 
@@ -274,7 +263,7 @@ Code-based PQC schemes (HQC, BIKE) require sparse polynomial multiplication that
 
 ### Author and Source Credibility
 
-This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from the reviewed literature on post-quantum cryptographic primitives. The papers span IEEE conference proceedings, ACM transactions, and Communications of the ACM. He et al. (2024) provide peer-reviewed experimental results with FPGA benchmarks. Monroe (2023) draws on expert interviews with leading cryptographers including Bruce Schneier. Tiwari et al. (2024) and Sharma et al. (2025) provide survey-level coverage. Kavitha et al. (2025) present a conceptual hybrid framework without experimental validation.
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from five peer-reviewed sources on post-quantum cryptographic primitives. The papers span IEEE conference proceedings, ACM transactions, and Communications of the ACM. He et al. (2024) provide peer-reviewed experimental results with FPGA benchmarks. Monroe (2023) draws on expert interviews with leading cryptographers including Bruce Schneier. Tiwari et al. (2024) and Sharma et al. (2025) provide survey-level coverage. Kavitha et al. (2025) present a conceptual hybrid framework without experimental validation.
 
 **Retraction note:** Zhang (2019) on "Black Hole Keypad Compression" was retracted by IEEE Access ("accepted in error and will not be published in its final form"). Its claims contradict Shannon's foundational proof on one-time pad key length requirements and are excluded from this synthesis.
 
@@ -283,7 +272,7 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - **Hardware acceleration results** (He et al.) are FPGA-specific; no ASIC validation exists. Performance numbers are for sparse polynomial multiplication in isolation, not full cryptosystem operation.
 - **Hybrid QC/PQC analysis** (Kavitha et al.) is conceptual only; no prototype, simulation, or performance benchmarks were produced.
 - **Algorithm vulnerability assessments** are based on the cryptanalytic state of the art at time of publication. New attacks may invalidate any assessment.
-- **NIST standardisation status** reflects the published standards as of the literature review period; ongoing fourth-round evaluations may change the landscape.
+- **NIST standardisation status** reflects the published standards as of the literature review period; ongoing fourth-round evaluations may alter the algorithm portfolio.
 
 ### B. Technical Term Definitions
 
