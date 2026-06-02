@@ -2,9 +2,9 @@
 layout: post
 title: "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce Readiness"
 author: Zenith Law
-description: "NIST PQC standardisation outcomes, automated code migration tooling, hybrid QKD/PQC network architectures, modular education frameworks, and workforce readiness strategies for the post-quantum transition: an evidence-graded synthesis of the reviewed literature."
+description: "NIST PQC standardisation outcomes, automated code migration tooling, hybrid QKD/PQC network architectures, modular education frameworks, and workforce readiness strategies for the post-quantum transition: an evidence-graded synthesis."
 permalink: /post-quantum-cryptography-standards-migration-workforce-readiness
-intro: "The theoretical case for post-quantum cryptography is settled; the migration challenge is not. This article examines what the reviewed literature reveals about standardisation outcomes, automated migration tooling, hybrid network architectures, and the acute workforce readiness gap that threatens to delay PQC adoption regardless of technical maturity."
+intro: "The threat model is clear and the algorithm selections are published; what remains unresolved is how organisations actually migrate. This article examines standardisation outcomes, automated migration tooling, hybrid network architectures, and the acute workforce readiness gap that threatens to delay PQC adoption regardless of technical maturity."
 related_posts:
   - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
     url: /post-quantum-cryptography-theoretical-foundations-reconceptualisation
@@ -178,7 +178,7 @@ This means PQC can be deployed within the existing TLS protocol framework withou
 
 ## The Workforce Readiness Gap
 
-Three independent studies from the reviewed literature converge on the same conclusion: the technical tools for PQC migration exist, but trained personnel to deploy them do not.
+Three independent studies converge on the same conclusion: the technical tools for PQC migration exist, but trained personnel to deploy them do not.
 
 ### Evidence from Three Educational Programmes
 
@@ -190,7 +190,7 @@ Three independent studies from the reviewed literature converge on the same conc
 | Modular PQC | RIT + U. Rochester | High school to graduate | Embeddable modules   | Lowers adoption barrier; no curriculum approval needed {% include references/cite.html key="10.1145/3770761.3777201" %}       |
 | PQCIP       | Monash (Australia) | Industry professionals  | 3-module programme   | Exposing individual crypto operations improves understanding {% include references/cite.html key="10.1145/3770762.3772573" %} |
 
-<figcaption>Table 5: PQC educational programmes in the reviewed literature.</figcaption>
+<figcaption>Table 5: PQC educational programmes assessed in this review.</figcaption>
 </figure>
 
 ### Key Pedagogical Insights
@@ -220,7 +220,7 @@ Based on the convergent evidence from these three programmes:
 
 ## Migration Planning Framework
 
-Synthesising the migration-related findings across the reviewed literature yields a practical framework:
+Synthesising the migration-related findings yields a practical framework:
 
 ### Phase 1: Inventory and Assess
 
@@ -251,15 +251,13 @@ Synthesising the migration-related findings across the reviewed literature yield
 
 ## Takeaways
 
-1. **NIST standardisation is necessary but not sufficient.** The algorithms are ready; the organisational capability to deploy them is not. Workforce readiness is the binding constraint.
+NIST standardisation resolved the algorithm selection question but left the harder problem untouched: organisational capacity to deploy. The binding constraint is workforce readiness, not algorithm availability. Three programmes demonstrate that modular, bottom-up education reaches practitioners faster than traditional curriculum reform, but coverage remains limited to awareness-level content and a single programming language.
 
-2. **Automated migration tooling is promising but immature.** ccPASTpqc achieves 0.925 BLEU on Python code migration, but execution testing is absent and production languages (C/C++, Java, Go) are unsupported.
+Automated migration tooling (ccPASTpqc) achieves 0.925 BLEU on Python conversions. This is promising but incomplete: no execution testing validates the generated code, and production languages (C/C++, Java, Go, Rust) lack equivalent tooling entirely.
 
-3. **Hybrid QKD/PQC networks are architecturally feasible** using TLS 1.3 extensions, but require zone-based deployment and QKMS bridge infrastructure.
+Hybrid QKD/PQC network integration works within TLS 1.3's extensibility model, removing the protocol-redesign concern. What remains is the practical engineering: zone-based deployment, QKMS bridge infrastructure, and validated interoperability with existing certificate authorities.
 
-4. **Modular education is the scalable path** to workforce readiness. Awareness modules require no prerequisites and can be deployed immediately; proficiency modules build on existing cryptography curricula.
-
-5. **The migration timeline is governed by Mosca's inequality,** not by quantum computer arrival. Organisations should assess $D + T$ for their data categories and act on the result.
+The migration timeline is governed by Mosca's inequality, not by quantum computer arrival dates. Organisations should compute $D + T$ for their data categories and treat the result as a deadline, not a target.
 
 ---
 
@@ -275,7 +273,7 @@ Yes. TLS 1.3 supports PQC through its extensible `key_share` and `signature_algo
 
 ### What programming languages does automated PQC code migration support?
 
-As of the reviewed literature, only Python is covered by ccPASTpqc. Production cryptographic code in C/C++, Java, Go, and Rust requires manual migration or purpose-built tooling that does not yet exist. This is a significant research and tooling gap.
+As of the papers reviewed here, only Python is covered by ccPASTpqc. Production cryptographic code in C/C++, Java, Go, and Rust requires manual migration or purpose-built tooling that does not yet exist. This is a significant research and tooling gap.
 
 ### Should I train my team on PQC before starting migration?
 
@@ -302,7 +300,7 @@ No. Post-quantum cryptography uses classical (non-quantum) algorithms designed t
 
 ### Author and Source Credibility
 
-This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from the reviewed literature on PQC standards, migration, and education. Borrelli et al. (2024) is published at SIGCSE, the premier CS education venue. Steinfeld et al. (2026) bring hands-on professional training experience from Monash University and industry partnerships. Wahlang and Vidhani (2026) present the first dedicated PQC code migration tool using language models. Song and Kim (2023) provide quantitative research landscape mapping via topic modelling. Shim et al. (2024) present a hybrid network architecture aligned with South Korea's KISTI infrastructure.
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings on PQC standards, migration, and education from six papers spanning SIGCSE, IEEE, and ACM venues. Borrelli et al. (2024) is published at SIGCSE, the premier CS education venue. Steinfeld et al. (2026) bring hands-on professional training experience from Monash University and industry partnerships. Wahlang and Vidhani (2026) present the first dedicated PQC code migration tool using language models. Song and Kim (2023) provide quantitative research landscape mapping via topic modelling. Shim et al. (2024) present a hybrid network architecture aligned with South Korea's KISTI infrastructure.
 
 ### A. Evidence Boundary Notes
 
