@@ -154,7 +154,7 @@ embeddings = embed_model.encode(
 
 ### Vector Store Setup
 
-FAISS provides ultra-fast local in-memory search. For persistent storage with metadata filtering, leverage Chroma or Qdrant:
+FAISS provides ultra-fast local in-memory search. For persistent storage with metadata filtering, use Chroma or Qdrant:
 
 ```python
 import faiss

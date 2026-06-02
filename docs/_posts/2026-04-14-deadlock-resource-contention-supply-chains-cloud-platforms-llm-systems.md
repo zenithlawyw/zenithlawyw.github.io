@@ -50,7 +50,7 @@ tags:
 
 ## Introduction
 
-Operating systems textbooks dedicate chapters to a simple question: when can concurrent processes waiting for resources lock each other in permanent obstruction? The answer is the [Coffman conditions](<https://en.wikipedia.org/wiki/Deadlock_(computer_science)#Conditions>), four necessary and sufficient conditions for [deadlock](<https://en.wikipedia.org/wiki/Deadlock_(computer_science)>): mutual exclusion, hold and wait, no preemption, and circular wait. When all four hold simultaneously, deadlock risk reaches its highest structural state. The same logic can be used outside the kernel as a diagnostic model. In 2026, supply-chain incidents, cloud platform fragmentation, and AI scheduling contention all illustrated recurring patterns that align with these conditions.
+Operating systems textbooks dedicate chapters to a simple question: when can concurrent processes waiting for resources lock each other in permanent obstruction? The answer is the [Coffman conditions](<https://en.wikipedia.org/wiki/Deadlock_(computer_science)#Conditions>), four necessary and sufficient conditions for [deadlock](<https://en.wikipedia.org/wiki/Deadlock_(computer_science)>): mutual exclusion, hold and wait, no preemption, and circular wait. When all four hold simultaneously, deadlock risk reaches its highest structural state. The same logic can be used outside the kernel as a diagnostic model. In 2026, supply-chain incidents, cloud platform fragmentation, and AI scheduling contention all illustrated recurring patterns that match these conditions.
 
 On 30 to 31 March 2026, malicious axios package versions propagated through npm's dependency resolution workflow because a maintainer credential was compromised. A detailed reconstruction of this incident appears in the companion article on the [Axios npm supply-chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience). The incident cascades through hold-and-wait behavior: each build held a lock on developer identity while waiting for upstream package access. On 25 July 2019 and across the intervening years, SaaS platforms withdrew localized versions in jurisdictions like China, creating a platform-fragmentation pattern where service bifurcation introduced circular dependencies that no single vendor could resolve autonomously. The structural dimensions of this fragmentation are examined in the article on [digital sovereignty and fragmented cloud realities](/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons). More recently, LLM deployment in distributed systems exhibits similar contention: concurrent inference requests compete for token-generation slots, and resource starvation under priority-flat scheduling leaves lower-priority jobs indefinitely suspended. The architectural evolution that produced these scheduling challenges is traced in the companion article on [large language models in practice](/large-language-models-practice-from-transformer-to-present-frontier).
 
@@ -93,7 +93,7 @@ Mutual exclusion is not optional. Without it, concurrent modification leads to d
 
 A [semaphore](<https://en.wikipedia.org/wiki/Semaphore_(programming)>) generalizes mutual exclusion from one resource to N identical copies. [Edsger Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) invented the semaphore construct in 1962-1963 while developing the [THE multiprogramming system](https://en.wikipedia.org/wiki/THE_multiprogramming_system) at Eindhoven. A semaphore initialized to N allows up to N concurrent acquisitions. The first N threads pass. The (N+1)th thread waits. A (N+1)th thread waiting indefinitely reveals [starvation](https://en.wikipedia.org/wiki/Resource_starvation), a failure state where a thread is denied access indefinitely even though the resource becomes available repeatedly.
 
-Tanenbaum and Bos (2015) stress that modern operating systems coordinate locks, schedulers, and memory managers across multicore processors and virtualized workloads. The deadlock model remains the same, but the operational impact grows because one blocked path can cascade across many execution contexts.
+Tanenbaum and Bos (2015) stress that modern operating systems coordinate locks, schedulers, and memory managers across multicore processors and virtualized workloads. The deadlock model remains the same, but the operational impact grows because one blocked path can cascade across all dependent execution contexts.
 
 In supply chains, think of maintainer credentials as semaphores with N=1. In 2026, the axios maintainer's credential was compromised, and normal package publication became a blocked operation for all consumers. In cloud regions, semaphores represent compute capacity. If a region's data-processing quota is exhausted by one application, other applications starve. In LLM inference pipelines, token-slot semaphores control parallelism. If higher-priority inference requests hold all slots indefinitely, lower-priority jobs experience indefinite starvation.
 
@@ -379,8 +379,13 @@ Token slots in LLM inference are mutual-exclusion resources: exactly one inferen
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Concurrency Term Reference" %}
 
+### Author and Source Credibility
+
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from foundational academic literature on concurrency theory, including Dijkstra's seminal work on mutual exclusion, Coffman et al.'s deadlock conditions taxonomy in ACM Computing Surveys, and established OS textbooks by Silberschatz and Tanenbaum. The cross-domain mappings to supply-chain security, cloud platforms, and LLM inference scheduling draw on the SLSA v1.0 framework specification alongside these classical computer science sources.
+
 ### Appendix Table of Contents
 
+- [Author and Source Credibility](#author-and-source-credibility)
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Concurrency Term Reference](#concurrency-term-reference)

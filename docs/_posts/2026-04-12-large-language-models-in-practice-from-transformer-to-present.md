@@ -320,8 +320,13 @@ Use short quotations only when wording precision matters. Prefer paraphrase for 
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Scope Boundary and Claim Taxonomy" %}
 
+### Author and Source Credibility
+
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from peer-reviewed literature published in NeurIPS, ICML, ACL, and arXiv pre-print venues. The referenced corpus includes foundational papers on the Transformer architecture, GPT-series scaling studies, alignment and RLHF research, and distillation techniques from leading AI research laboratories including Google Brain, OpenAI, and DeepMind.
+
 ### Appendix Table of Contents
 
+- [Author and Source Credibility](#author-and-source-credibility)
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Terminology Definitions](#terminology-definitions)

@@ -211,7 +211,7 @@ Recent records show AI access decisions integrating strategic and ownership crit
 
 ### What is the first practical control for sovereign-aware enterprise cloud programs for digital sovereignty China?
 
-Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority aligns with observed access and notification disruptions in the corpus {% include references/cite.html key="ds-2026-ref5" %}, {% include references/cite.html key="ds-2026-ref6" %}, {% include references/cite.html key="ds-2026-ref12" %}, {% include references/cite.html key="ds-2026-ref14" %}, {% include references/cite.html key="ds-2026-ref15" %}.
+Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority is consistent with observed access and notification disruptions in the corpus {% include references/cite.html key="ds-2026-ref5" %}, {% include references/cite.html key="ds-2026-ref6" %}, {% include references/cite.html key="ds-2026-ref12" %}, {% include references/cite.html key="ds-2026-ref14" %}, {% include references/cite.html key="ds-2026-ref15" %}.
 
 ### How should teams use community incident reports without amplifying false signals for digital sovereignty China?
 
@@ -226,8 +226,13 @@ Success appears when regional legal constraints, technical controls, communicati
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Corpus Scope, Claim Classes, and Operational Definitions" %}
 
+### Author and Source Credibility
+
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from regulatory texts, industry analyst reports, and cloud-provider documentation spanning the period from 2014 to 2026. Sources include China's Cybersecurity Law and Data Security Law, provider-specific compliance disclosures, and cross-border data-transfer analyses from established technology policy outlets. The evidence base prioritises primary regulatory instruments and first-party operational disclosures over secondary commentary.
+
 ### Appendix Table of Contents
 
+- [Author and Source Credibility](#author-and-source-credibility)
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Operational Definitions](#operational-definitions)

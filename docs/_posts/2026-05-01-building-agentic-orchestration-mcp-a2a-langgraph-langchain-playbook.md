@@ -360,8 +360,13 @@ The most valuable agentic stacks are not the ones with the most moving parts. Th
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Scope and Claim Taxonomy" %}
 
+### Author and Source Credibility
+
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from official protocol specifications (MCP, A2A, ACP), framework documentation (LangGraph, LangChain), and government standards including NIST AI RMF, NIST SSDF, and CISA Secure by Design. The evidence base combines first-party protocol and SDK documentation with institutional security and governance frameworks, providing an implementation-oriented reference grounded in authoritative specification sources.
+
 ### Appendix Table of Contents
 
+- [Author and Source Credibility](#author-and-source-credibility)
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Protocol Glossary](#protocol-glossary)

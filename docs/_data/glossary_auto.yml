@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-06-01T12:42:13Z"
-total_candidates: 959
+generated_at: "2026-06-02T23:10:11Z"
+total_candidates: 973
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -736,6 +736,28 @@ candidates:
         url: "/literature-reviews/crammer-and-singer-2001-on-the-algorithmic-implementation-of-multiclass-kernel-based-vector-machines.html"
       - title: ""
         url: "/literature-reviews/hearst-et-al-1998-support-vector-machines.html"
+  - term: Post-quantum Cryptography
+    status: candidate
+    confidence: 14
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+        url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+      - title:
+          "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce
+          Readiness"
+        url: "/post-quantum-cryptography-standards-migration-workforce-readiness"
+      - title:
+          "Post-Quantum Cryptography in Practice: Sector-Specific Deployment and
+          Integration Patterns"
+        url: "/post-quantum-cryptography-sector-deployment-integration-patterns"
+    related_pages: []
   - term: Vector
     status: candidate
     confidence: 14
@@ -3834,6 +3856,28 @@ candidates:
           Literature Review for Agentic Commerce"
         url: "/lightning-network-cross-border-micropayments-systematic-exploratory-literature-review"
     related_pages: []
+  - term: Cryptography
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+        url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+      - title:
+          "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce
+          Readiness"
+        url: "/post-quantum-cryptography-standards-migration-workforce-readiness"
+      - title:
+          "Post-Quantum Cryptography in Practice: Sector-Specific Deployment and
+          Integration Patterns"
+        url: "/post-quantum-cryptography-sector-deployment-integration-patterns"
+    related_pages: []
   - term: Cybersecurity Digital Sovereignty
     status: candidate
     confidence: 7
@@ -4520,6 +4564,28 @@ candidates:
     related_pages:
       - title: Privacy, Cookies and Data Protection
         url: "/legal/privacy-cookies-data-protection/"
+  - term: Hybrid
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+      - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+        url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+      - title:
+          "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce
+          Readiness"
+        url: "/post-quantum-cryptography-standards-migration-workforce-readiness"
+    related_pages: []
   - term: Implementation Planning
     status: candidate
     confidence: 7
@@ -5664,6 +5730,28 @@ candidates:
     related_pages:
       - title: ""
         url: "/literature-reviews/wu-et-al-2025-knowledge-empowered-collaborative-and-co-evolving-ai-models-the-post-llm-roadmap.html"
+  - term: Post-quantum
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+        url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+      - title:
+          "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce
+          Readiness"
+        url: "/post-quantum-cryptography-standards-migration-workforce-readiness"
+      - title:
+          "Post-Quantum Cryptography in Practice: Sector-Specific Deployment and
+          Integration Patterns"
+        url: "/post-quantum-cryptography-sector-deployment-integration-patterns"
+    related_pages: []
   - term: Practical Insights
     status: candidate
     confidence: 7
@@ -6037,6 +6125,32 @@ candidates:
           "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on
           Trust, Provenance, and Resilient Engineering"
         url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
+    related_pages: []
+  - term: Quantum
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+      - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+        url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+      - title:
+          "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce
+          Readiness"
+        url: "/post-quantum-cryptography-standards-migration-workforce-readiness"
+      - title:
+          "Post-Quantum Cryptography in Practice: Sector-Specific Deployment and
+          Integration Patterns"
+        url: "/post-quantum-cryptography-sector-deployment-integration-patterns"
     related_pages: []
   - term: Reliability
     status: candidate
@@ -11822,6 +11936,24 @@ candidates:
           Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Quantum Computing
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+      - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+        url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+    related_pages: []
   - term: Quantum Semantics
     status: candidate
     confidence: 6
@@ -12456,6 +12588,26 @@ candidates:
           Adaptation, and Deep Clustering"
         url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
     related_pages: []
+  - term: Standards
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+        url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+      - title:
+          "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce
+          Readiness"
+        url: "/post-quantum-cryptography-standards-migration-workforce-readiness"
+    related_pages:
+      - title: "FAQ Hub: Across Engineering, Governance, Legal, and AI Domains"
+        url: "/faq/"
   - term: Supply
     status: candidate
     confidence: 6
@@ -12940,6 +13092,22 @@ candidates:
         url: "/legal/privacy-cookies-data-protection/"
       - title: Terms of Use
         url: "/legal/terms-of-use/"
+  - term: Workforce Readiness
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce
+          Readiness"
+        url: "/post-quantum-cryptography-standards-migration-workforce-readiness"
+    related_pages: []
   - term: Zenith Law
     status: candidate
     confidence: 6
@@ -13058,6 +13226,34 @@ candidates:
       tier: Internal synthesis (automated candidate)
     related_posts: []
     related_pages: []
+  - term: Appendix Author
+    status: candidate
+    confidence: 5
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Lightning Network Agentic Micropayments: Open-Source End-to-End Implementation
+          Playbook"
+        url: "/lightning-agentic-micropayments-playbook"
+    related_pages: []
+  - term: Appendix Author Credibility
+    status: candidate
+    confidence: 5
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages: []
   - term: Appendix Table
     status: candidate
     confidence: 5
@@ -13081,6 +13277,28 @@ candidates:
       url: "/faq/"
       tier: Internal synthesis (automated candidate)
     related_posts: []
+    related_pages: []
+  - term: Applied
+    status: candidate
+    confidence: 5
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Deadlock and Resource Contention: Operating Systems Theory Applied to
+          Supply Chains, Cloud Platforms, and LLM Systems"
+        url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+      - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+        url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+      - title:
+          "Post-Quantum Cryptography in Practice: Sector-Specific Deployment and
+          Integration Patterns"
+        url: "/post-quantum-cryptography-sector-deployment-integration-patterns"
     related_pages: []
   - term: Apply
     status: candidate
@@ -13163,6 +13381,30 @@ candidates:
           "Large Language Models in Practice: From the Transformer to the Present
           Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
+    related_pages: []
+  - term: Author Credibility
+    status: candidate
+    confidence: 5
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
+    related_pages: []
+  - term: Author Credibility Appendix
+    status: candidate
+    confidence: 5
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts: []
     related_pages: []
   - term: Autonomous
     status: candidate
@@ -13289,6 +13531,26 @@ candidates:
           "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment
           Governance"
         url: "/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance"
+    related_pages: []
+  - term: Blockchain
+    status: candidate
+    confidence: 5
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Lightning Network for Cross-Border Micropayments: A Systematic Exploratory
+          Literature Review for Agentic Commerce"
+        url: "/lightning-cross-border-micropayments-evidence-review"
+      - title:
+          "Post-Quantum Cryptography in Practice: Sector-Specific Deployment and
+          Integration Patterns"
+        url: "/post-quantum-cryptography-sector-deployment-integration-patterns"
     related_pages: []
   - term: Blocked
     status: candidate

@@ -253,8 +253,13 @@ SVM can remain a high-quality production option when teams operationalize it as 
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Scope, Claim Taxonomy, and Maintenance Notes" %}
 
+### Author and Source Credibility
+
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from peer-reviewed SVM literature, including foundational papers by Cortes and Vapnik (1995) and Kecman (2005), alongside ML operations and governance references. The evidence base combines established statistical learning theory with practical deployment guidance drawn from academic textbooks and edited volumes on machine learning systems.
+
 ### Appendix Table of Contents
 
+- [Author and Source Credibility](#author-and-source-credibility)
 - [Citability Snapshot](#citability-snapshot)
 - [Governance Definitions](#governance-definitions)
 - [Scope and Claim Classification](#scope-and-claim-classification)

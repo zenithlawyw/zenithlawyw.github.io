@@ -1714,3 +1714,252 @@ zhao2026:
   ieee_base: Q. Meng, Z. Wu, Z. Zhao and X. Lian, Analysis of Text Generation System Design Combining Retrieval Augmented Generation and Fine-Tuning Strategy, in 2025 2nd International Conference on Smart Grid and Artificial Intelligence (SGAI), pp. 204--208, n.d.
   harvard_base: Meng, Q. et al. (n.d.). Analysis of Text Generation System Design Combining Retrieval Augmented Generation and Fine-Tuning Strategy. In 2025 2nd International Conference on Smart Grid and Artificial Intelligence (SGAI). pp. 204--208.
   source_format: bibtex
+10.1145/3703837:
+  entry_type: article
+  short_author: He et al.
+  year: n.d.
+  authors: He, Pengzhou and Tu, Yazheng and Bao, Tianyou and Koç, Çetin Çetin and Xie, Jiafeng
+  title: "HSPA: High-Throughput Sparse Polynomial Multiplication for Code-based Post-Quantum Cryptography"
+  publisher: Association for Computing Machinery
+  volume: "24"
+  number: "1"
+  doi: 10.1145/3703837
+  ieee_base: "P. He, Y. Tu, T. Bao, Ç. Ç. Koç and J. Xie, HSPA: High-Throughput Sparse Polynomial Multiplication for Code-based Post-Quantum Cryptography, vol. 24, no. 1, n.d."
+  harvard_base: "He, P. et al. (n.d.). HSPA: High-Throughput Sparse Polynomial Multiplication for Code-based Post-Quantum Cryptography. vol. 24, no. 1."
+  source_format: bibtex
+"11011628":
+  entry_type: inproceedings
+  short_author: Kavitha et al.
+  year: n.d.
+  authors: Kavitha, A.R and R, Balachandhar and K, Harikrishna
+  title: "Synergizing Quantum Cryptography and Post-Quantum Cryptography: A New Era of Ultra-Secure Data Transmission"
+  book: 2025 International Conference on Data Science, Agents, and Artificial Intelligence (ICDSAAI 2025)
+  pages: 1--6
+  doi: 10.1109/ICDSAAI65575.2025.11011628
+  ieee_base: "A. R. Kavitha, B. R and H. K, Synergizing Quantum Cryptography and Post-Quantum Cryptography: A New Era of Ultra-Secure Data Transmission, in 2025 International Conference on Data Science, Agents, and Artificial Intelligence (ICDSAAI 2025), pp. 1--6, n.d."
+  harvard_base: "Kavitha, A.R., R, B. and K, H. (n.d.). Synergizing Quantum Cryptography and Post-Quantum Cryptography: A New Era of Ultra-Secure Data Transmission. In 2025 International Conference on Data Science, Agents, and Artificial Intelligence (ICDSAAI 2025). pp. 1--6."
+  source_format: bibtex
+"10543513":
+  entry_type: inproceedings
+  short_author: Tiwari et al.
+  year: n.d.
+  authors: Tiwari, Amritansh and Chauhan, Rahul and Joshi, Nischay and Devliyal, Swati and Aluvala, Srinivas and Kumar, Amit
+  title: "The Quantum Threat: Implications for Data Security and the Rise of Post-Quantum Cryptography"
+  book: 2024 IEEE 9th International Conference for Convergence in Technology (I2CT)
+  pages: 1--7
+  doi: 10.1109/I2CT61223.2024.10543513
+  ieee_base: "A. Tiwari, R. Chauhan, N. Joshi, S. Devliyal, S. Aluvala and A. Kumar, The Quantum Threat: Implications for Data Security and the Rise of Post-Quantum Cryptography, in 2024 IEEE 9th International Conference for Convergence in Technology (I2CT), pp. 1--7, n.d."
+  harvard_base: "Tiwari, A. et al. (n.d.). The Quantum Threat: Implications for Data Security and the Rise of Post-Quantum Cryptography. In 2024 IEEE 9th International Conference for Convergence in Technology (I2CT). pp. 1--7."
+  source_format: bibtex
+"11325571":
+  entry_type: inproceedings
+  short_author: Sharma et al.
+  year: n.d.
+  authors: Sharma, Aastha and Prakash, Ayushi and Dixit, Ashish and Gupta, Avdhesh and Parihar, Dhanshri
+  title: NIST-Post Quantum Cryptography Algorithm Optimization and Scarcity
+  book: 2025 IEEE 7th International Conference on Computing, Communication and Automation (ICCCA)
+  pages: 1--6
+  doi: 10.1109/ICCCA66364.2025.11325571
+  ieee_base: A. Sharma, A. Prakash, A. Dixit, A. Gupta and D. Parihar, NIST-Post Quantum Cryptography Algorithm Optimization and Scarcity, in 2025 IEEE 7th International Conference on Computing, Communication and Automation (ICCCA), pp. 1--6, n.d.
+  harvard_base: Sharma, A. et al. (n.d.). NIST-Post Quantum Cryptography Algorithm Optimization and Scarcity. In 2025 IEEE 7th International Conference on Computing, Communication and Automation (ICCCA). pp. 1--6.
+  source_format: bibtex
+10.1145/3575664:
+  entry_type: article
+  short_author: Monroe
+  year: n.d.
+  authors: Monroe, Don
+  title: Post-Quantum Cryptography
+  publisher: Association for Computing Machinery
+  volume: "66"
+  number: "2"
+  pages: 15--17
+  url: https://doi.org/10.1145/3575664
+  doi: 10.1145/3575664
+  ieee_base: D. Monroe, Post-Quantum Cryptography, vol. 66, no. 2, pp. 15--17, n.d.
+  harvard_base: Monroe, D. (n.d.). Post-Quantum Cryptography. vol. 66, no. 2, pp. 15--17.
+  source_format: bibtex
+10.1145/3626252.3630823:
+  entry_type: inproceedings
+  short_author: Borrelli et al.
+  year: "2024"
+  authors: Borrelli, Thomas J. and Polak, Monika and Radziszowski, Stanisław
+  title: Designing and Delivering a Post-Quantum Cryptography Course
+  book: Proceedings of the 55th {{ACM}} Technical Symposium on Computer Science Education V. 1
+  publisher: Association for Computing Machinery
+  pages: 137--143
+  url: https://doi.org/10.1145/3626252.3630823
+  doi: 10.1145/3626252.3630823
+  published_iso: "2024-01-01"
+  published_date: 1 January 2024
+  ieee_base: T. J. Borrelli, M. Polak and S. Radziszowski, Designing and Delivering a Post-Quantum Cryptography Course, in Proceedings of the 55th {{ACM}} Technical Symposium on Computer Science Education V. 1, pp. 137--143, Association for Computing Machinery, 2024.
+  harvard_base: Borrelli, T.J., Polak, M. and Radziszowski, S. (2024). Designing and Delivering a Post-Quantum Cryptography Course. In Proceedings of the 55th {{ACM}} Technical Symposium on Computer Science Education V. 1. pp. 137--143. Association for Computing Machinery.
+  source_format: bibtex
+10.1145/3770761.3777201:
+  entry_type: inproceedings
+  short_author: Borrelli et al.
+  year: "2026"
+  authors: Borrelli, Thomas J. and Mishra, Sumita and Polak, Monika K and Radziszowski, Stanislaw
+  title: Modular Approach to Teaching Post-Quantum Cryptography
+  book: Proceedings of the 57th ACM Technical Symposium on Computer Science Education V.2
+  publisher: Association for Computing Machinery
+  pages: 1241--1242
+  url: https://doi.org/10.1145/3770761.3777201
+  doi: 10.1145/3770761.3777201
+  published_iso: "2026-01-01"
+  published_date: 1 January 2026
+  ieee_base: T. J. Borrelli, S. Mishra, M. K. Polak and S. Radziszowski, Modular Approach to Teaching Post-Quantum Cryptography, in Proceedings of the 57th ACM Technical Symposium on Computer Science Education V.2, pp. 1241--1242, Association for Computing Machinery, 2026.
+  harvard_base: Borrelli, T.J. et al. (2026). Modular Approach to Teaching Post-Quantum Cryptography. In Proceedings of the 57th ACM Technical Symposium on Computer Science Education V.2. pp. 1241--1242. Association for Computing Machinery.
+  source_format: bibtex
+10.1145/3770762.3772573:
+  entry_type: inproceedings
+  short_author: Steinfeld et al.
+  year: "2026"
+  authors: Steinfeld, Ron and Esgin, Muhammed F. and Jagganath, Nikai and Sakzad, Amin and Rudolph, Carsten and Boorman, James
+  title: "PQCIP: A Post-Quantum Cryptography Educational Program for Cybersecurity Professionals"
+  book: Proceedings of the 57th ACM Technical Symposium on Computer Science Education V.1
+  publisher: Association for Computing Machinery
+  pages: 1026--1032
+  url: https://doi.org/10.1145/3770762.3772573
+  doi: 10.1145/3770762.3772573
+  published_iso: "2026-01-01"
+  published_date: 1 January 2026
+  ieee_base: "R. Steinfeld, M. F. Esgin, N. Jagganath, A. Sakzad, C. Rudolph and J. Boorman, PQCIP: A Post-Quantum Cryptography Educational Program for Cybersecurity Professionals, in Proceedings of the 57th ACM Technical Symposium on Computer Science Education V.1, pp. 1026--1032, Association for Computing Machinery, 2026."
+  harvard_base: "Steinfeld, R. et al. (2026). PQCIP: A Post-Quantum Cryptography Educational Program for Cybersecurity Professionals. In Proceedings of the 57th ACM Technical Symposium on Computer Science Education V.1. pp. 1026--1032. Association for Computing Machinery."
+  source_format: bibtex
+"10392726":
+  entry_type: inproceedings
+  short_author: Song et al.
+  year: n.d.
+  authors: Song, Boyeon and Kim, Tae Jong
+  title: Identifying Recent Research Topics in Post-Quantum Cryptography via Topic Modelling
+  book: 2023 14th International Conference on Information and Communication Technology Convergence (ICTC)
+  pages: 181--184
+  doi: 10.1109/ICTC58733.2023.10392726
+  ieee_base: B. Song and T. J. Kim, Identifying Recent Research Topics in Post-Quantum Cryptography via Topic Modelling, in 2023 14th International Conference on Information and Communication Technology Convergence (ICTC), pp. 181--184, n.d.
+  harvard_base: Song, B. and Kim, T.J. (n.d.). Identifying Recent Research Topics in Post-Quantum Cryptography via Topic Modelling. In 2023 14th International Conference on Information and Communication Technology Convergence (ICTC). pp. 181--184.
+  source_format: bibtex
+10.1145/3799830.3799836:
+  entry_type: inproceedings
+  short_author: Wahlang et al.
+  year: "2026"
+  authors: Wahlang, Roisan and Vidhani, Kumar
+  title: "ccPASTpqc: Post Quantum Cryptography Migration of Programs Using Code Language Models"
+  book: Proceedings of the 13th ACM IKDD International Conference on Data Science
+  publisher: Association for Computing Machinery
+  pages: 52--61
+  url: https://doi.org/10.1145/3799830.3799836
+  doi: 10.1145/3799830.3799836
+  published_iso: "2026-01-01"
+  published_date: 1 January 2026
+  ieee_base: "R. Wahlang and K. Vidhani, ccPASTpqc: Post Quantum Cryptography Migration of Programs Using Code Language Models, in Proceedings of the 13th ACM IKDD International Conference on Data Science, pp. 52--61, Association for Computing Machinery, 2026."
+  harvard_base: "Wahlang, R. and Vidhani, K. (2026). ccPASTpqc: Post Quantum Cryptography Migration of Programs Using Code Language Models. In Proceedings of the 13th ACM IKDD International Conference on Data Science. pp. 52--61. Association for Computing Machinery."
+  source_format: bibtex
+"10747171":
+  entry_type: article
+  short_author: Shim et al.
+  year: n.d.
+  authors: Shim, Kyu-Seok and Kim, Boseon and Lee, Wonhyuk
+  title: Research on Quantum Key, Distribution Key and Post-Quantum Cryptography Key Applied Protocols for Data Science and Web Security
+  volume: "23"
+  number: "6"
+  pages: 813--830
+  doi: 10.13052/jwe1540-9589.2365
+  ieee_base: K. S. Shim, B. Kim and W. Lee, Research on Quantum Key, Distribution Key and Post-Quantum Cryptography Key Applied Protocols for Data Science and Web Security, vol. 23, no. 6, pp. 813--830, n.d.
+  harvard_base: Shim, K.S., Kim, B. and Lee, W. (n.d.). Research on Quantum Key, Distribution Key and Post-Quantum Cryptography Key Applied Protocols for Data Science and Web Security. vol. 23, no. 6, pp. 813--830.
+  source_format: bibtex
+"11491399":
+  entry_type: inproceedings
+  short_author: Fahomida et al.
+  year: n.d.
+  authors: Fahomida, Maiesha and Nafis, Farhan Ahmad
+  title: "Post Quantum Cryptography Framework for Secure Data Transmission: Enhancing Confidentiality and Integrity with Kyber, Dilithium, and DNA-Keys"
+  book: 2025 28th International Conference on Computer and Information Technology (ICCIT)
+  pages: 5287--5292
+  doi: 10.1109/ICCIT68739.2025.11491399
+  ieee_base: "M. Fahomida and F. A. Nafis, Post Quantum Cryptography Framework for Secure Data Transmission: Enhancing Confidentiality and Integrity with Kyber, Dilithium, and DNA-Keys, in 2025 28th International Conference on Computer and Information Technology (ICCIT), pp. 5287--5292, n.d."
+  harvard_base: "Fahomida, M. and Nafis, F.A. (n.d.). Post Quantum Cryptography Framework for Secure Data Transmission: Enhancing Confidentiality and Integrity with Kyber, Dilithium, and DNA-Keys. In 2025 28th International Conference on Computer and Information Technology (ICCIT). pp. 5287--5292."
+  source_format: bibtex
+"11398533":
+  entry_type: inproceedings
+  short_author: Huang et al.
+  year: n.d.
+  authors: Huang, Kaitian and Pan, Yuan
+  title: "Research on the Commercial Cryptography Protection Framework for the Power Sector: A Roadmap from Legacy Cryptography to Post-Quantum Migration"
+  book: 2025 5th International Conference on Computer Science, Electronic Information Engineering and Intelligent Control Technology (CEI)
+  pages: 350--356
+  doi: 10.1109/CEI66465.2025.11398533
+  ieee_base: "K. Huang and Y. Pan, Research on the Commercial Cryptography Protection Framework for the Power Sector: A Roadmap from Legacy Cryptography to Post-Quantum Migration, in 2025 5th International Conference on Computer Science, Electronic Information Engineering and Intelligent Control Technology (CEI), pp. 350--356, n.d."
+  harvard_base: "Huang, K. and Pan, Y. (n.d.). Research on the Commercial Cryptography Protection Framework for the Power Sector: A Roadmap from Legacy Cryptography to Post-Quantum Migration. In 2025 5th International Conference on Computer Science, Electronic Information Engineering and Intelligent Control Technology (CEI). pp. 350--356."
+  source_format: bibtex
+"11324504":
+  entry_type: inproceedings
+  short_author: Joseph et al.
+  year: n.d.
+  authors: Joseph, Jaiby Mariya and Sreeja, C.S. and Vinod, Smitha
+  title: Integrating Post-Quantum Cryptography with DNA-Based Data Storage for Secure and Robust Data Preservation
+  book: 2025 IEEE International Conference on Communication, Networks and Satellite (COMNETSAT)
+  pages: 122--129
+  doi: 10.1109/COMNETSAT68601.2025.11324504
+  ieee_base: J. M. Joseph, C. S. Sreeja and S. Vinod, Integrating Post-Quantum Cryptography with DNA-Based Data Storage for Secure and Robust Data Preservation, in 2025 IEEE International Conference on Communication, Networks and Satellite (COMNETSAT), pp. 122--129, n.d.
+  harvard_base: Joseph, J.M., Sreeja, C.S. and Vinod, S. (n.d.). Integrating Post-Quantum Cryptography with DNA-Based Data Storage for Secure and Robust Data Preservation. In 2025 IEEE International Conference on Communication, Networks and Satellite (COMNETSAT). pp. 122--129.
+  source_format: bibtex
+"11212458":
+  entry_type: inproceedings
+  short_author: Krishnan et al.
+  year: n.d.
+  authors: Krishnan, Anguraju and Arunachalam, Rajesh
+  title: Implementing Post-Quantum Cryptography in Blockchain for Securing IoT Data Transmission
+  book: 2025 6th International Conference on Electronics and Sustainable Communication Systems (ICESC)
+  pages: 685--690
+  doi: 10.1109/ICESC65114.2025.11212458
+  ieee_base: A. Krishnan and R. Arunachalam, Implementing Post-Quantum Cryptography in Blockchain for Securing IoT Data Transmission, in 2025 6th International Conference on Electronics and Sustainable Communication Systems (ICESC), pp. 685--690, n.d.
+  harvard_base: Krishnan, A. and Arunachalam, R. (n.d.). Implementing Post-Quantum Cryptography in Blockchain for Securing IoT Data Transmission. In 2025 6th International Conference on Electronics and Sustainable Communication Systems (ICESC). pp. 685--690.
+  source_format: bibtex
+"10454235":
+  entry_type: inproceedings
+  short_author: Nakka et al.
+  year: n.d.
+  authors: Nakka, Kalyan and Ahmad, Seerin and Kim, Taesic and Atkinson, Logan and Ammari, Habib M.
+  title: Post-Quantum Cryptography (PQC)-Grade IEEE 2030.5 for Quantum Secure Distributed Energy Resources Networks
+  book: 2024 IEEE Power & Energy Society Innovative Smart Grid Technologies Conference (ISGT)
+  pages: 1--5
+  doi: 10.1109/ISGT59692.2024.10454235
+  ieee_base: K. Nakka, S. Ahmad, T. Kim, L. Atkinson and H. M. Ammari, Post-Quantum Cryptography (PQC)-Grade IEEE 2030.5 for Quantum Secure Distributed Energy Resources Networks, in 2024 IEEE Power & Energy Society Innovative Smart Grid Technologies Conference (ISGT), pp. 1--5, n.d.
+  harvard_base: Nakka, K. et al. (n.d.). Post-Quantum Cryptography (PQC)-Grade IEEE 2030.5 for Quantum Secure Distributed Energy Resources Networks. In 2024 IEEE Power & Energy Society Innovative Smart Grid Technologies Conference (ISGT). pp. 1--5.
+  source_format: bibtex
+"10866709":
+  entry_type: inproceedings
+  short_author: Rajkumar et al.
+  year: n.d.
+  authors: Rajkumar, N and Kumar, K Kishore and Gokul, M. and Durai, S.
+  title: Post-Quantum Cryptography Security with CSPM for Secure Data Transmission in Cloud Environments
+  book: 2024 4th International Conference on Ubiquitous Computing and Intelligent Information Systems (ICUIS)
+  pages: 1456--1462
+  doi: 10.1109/ICUIS64676.2024.10866709
+  ieee_base: N. Rajkumar, K. K. Kumar, M. Gokul and S. Durai, Post-Quantum Cryptography Security with CSPM for Secure Data Transmission in Cloud Environments, in 2024 4th International Conference on Ubiquitous Computing and Intelligent Information Systems (ICUIS), pp. 1456--1462, n.d.
+  harvard_base: Rajkumar, N. et al. (n.d.). Post-Quantum Cryptography Security with CSPM for Secure Data Transmission in Cloud Environments. In 2024 4th International Conference on Ubiquitous Computing and Intelligent Information Systems (ICUIS). pp. 1456--1462.
+  source_format: bibtex
+"11414715":
+  entry_type: inproceedings
+  short_author: Raju et al.
+  year: n.d.
+  authors: Raju, K Krishnam and Rao, R Hemasundara and Behara, B Neelima and Kumar, G S Santhosh and Harshitha, M and Varshney, Abhishek
+  title: Blockchain-Based Secure IoT Data Transmission Leveraging Post-Quantum Cryptography
+  book: 2025 3rd International Conference on IoT, Communication and Automation Technology (ICICAT)
+  pages: 1--6
+  doi: 10.1109/ICICAT68430.2025.11414715
+  ieee_base: K. K. Raju, R. H. Rao, B. N. Behara, G. S. S. Kumar, M. Harshitha and A. Varshney, Blockchain-Based Secure IoT Data Transmission Leveraging Post-Quantum Cryptography, in 2025 3rd International Conference on IoT, Communication and Automation Technology (ICICAT), pp. 1--6, n.d.
+  harvard_base: Raju, K.K. et al. (n.d.). Blockchain-Based Secure IoT Data Transmission Leveraging Post-Quantum Cryptography. In 2025 3rd International Conference on IoT, Communication and Automation Technology (ICICAT). pp. 1--6.
+  source_format: bibtex
+"11171168":
+  entry_type: inproceedings
+  short_author: Zhao et al.
+  year: n.d.
+  authors: Zhao, Wanli and Zhang, Wang and Zhao, Lian and Yu, Zhengyang
+  title: Research on Security for Software Updates of Intelligent Connected Vehicles Based on Post-Quantum Cryptography
+  book: 2025 International Conference on Electrical Engineering, Automation and Information Science (EEAIS)
+  pages: 160--164
+  doi: 10.1109/EEAIS66172.2025.11171168
+  ieee_base: W. Zhao, W. Zhang, L. Zhao and Z. Yu, Research on Security for Software Updates of Intelligent Connected Vehicles Based on Post-Quantum Cryptography, in 2025 International Conference on Electrical Engineering, Automation and Information Science (EEAIS), pp. 160--164, n.d.
+  harvard_base: Zhao, W. et al. (n.d.). Research on Security for Software Updates of Intelligent Connected Vehicles Based on Post-Quantum Cryptography. In 2025 International Conference on Electrical Engineering, Automation and Information Science (EEAIS). pp. 160--164.
+  source_format: bibtex
