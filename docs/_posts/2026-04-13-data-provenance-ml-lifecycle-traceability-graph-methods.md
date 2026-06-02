@@ -208,8 +208,13 @@ A second priority is contradiction-seeking: identify studies where provenance in
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Source Inventory and Evidence Grading" %}
 
+### Author and Source Credibility
+
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from peer-reviewed conference papers published at IEEE ICICAT, ACM WWW, and the WORKS workshop at SC. The sources report experimental results on graph neural network–based provenance tracking, provenance integration prototypes, and the PROV-ML standardisation effort for ML pipeline metadata.
+
 ### Appendix Table of Contents
 
+- [Author and Source Credibility](#author-and-source-credibility)
 - [Source Inventory and Evidence Grading](#source-inventory-and-evidence-grading)
 - [Scope and Verification Boundary](#scope-and-verification-boundary)
 - [Source-Level Assessment](#source-level-assessment)

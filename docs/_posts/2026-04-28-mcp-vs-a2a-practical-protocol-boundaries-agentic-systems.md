@@ -170,7 +170,7 @@ These cases are awkward if reduced to simple tool calls. Once the remote side ne
 ACP patterns remain valuable when teams need:
 
 1. REST-native agent integration through existing API gateways and service governance controls.
-2. OpenAPI-documented run endpoints that align with established enterprise integration practices.
+2. OpenAPI-documented run endpoints that match established enterprise integration practices.
 3. Lightweight interoperability patterns in mixed stacks that prioritize HTTP conventions over protocol-specific runtime adapters.
 
 For greenfield strategy, this usually means preserving ACP design lessons while planning to interoperate with current A2A direction where standards convergence is already underway {% include references/cite.html key="mcpa2a-2026-ref19" %}.
@@ -209,7 +209,7 @@ In high-scale systems, protocol fit influences backpressure strategy, retry sema
 
 ### Vendor-agnostic and cross-border collaboration
 
-In many cross-border enterprise deployments, teams should assess jurisdiction-specific legal and contractual constraints, such as transfer mechanisms, localization obligations, and auditability requirements, and align identity architecture accordingly. Protocol design should not assume one cloud, one identity provider, or one legal region.
+In cross-border enterprise deployments, teams should assess jurisdiction-specific legal and contractual constraints, such as transfer mechanisms, localization obligations, and auditability requirements, and align identity architecture accordingly. Protocol design should not assume one cloud, one identity provider, or one legal region.
 
 1. Keep protocol contracts jurisdiction-neutral and policy-driven.
 2. Apply data residency and transfer controls at storage and transport boundaries where required by applicable law, regulation, customer contract, or internal policy.
@@ -301,8 +301,13 @@ The useful comparison is not “which protocol wins.” The useful comparison is
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Protocol Glossary" %}
 
+### Author and Source Credibility
+
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from official protocol specifications, SDK documentation, and working-group publications for MCP, A2A, and ACP. Sources are predominantly first-party documentation from Anthropic (MCP), Google (A2A), and Cisco/BeeAI (ACP), supplemented by GitHub repository READMEs and protocol design rationale documents.
+
 ### Appendix Table of Contents
 
+- [Author and Source Credibility](#author-and-source-credibility)
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Protocol Glossary](#protocol-glossary)

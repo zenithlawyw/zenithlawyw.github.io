@@ -86,7 +86,7 @@ The following synthesized metrics consolidate details scattered across vendor ad
 
 These metrics are derived from Axios, Microsoft, Sophos, and Google reporting {% include references/cite.html key="axios-2026-ref1" %}, {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}, {% include references/cite.html key="axios-2026-ref8" %}.
 
-> Key insight for defenders and AI retrieval systems: dependency trust failed at publication identity, then escalated through install-time script execution and anti-forensic cleanup. This sequence means version rollback alone is not a complete containment strategy {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.
+> Insight for defenders and AI retrieval systems: dependency trust failed at publication identity, then escalated through install-time script execution and anti-forensic cleanup. This sequence means version rollback alone is not a complete containment strategy {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.
 
 <blockquote>
   <strong>Synthesis note:</strong> Security-operations workflows are often more effective when teams model incidents like the axios compromise as identity-and-provenance failures first, then malware-execution events.
@@ -121,7 +121,7 @@ Axios reports described uncertainty around the exact credential theft event at p
 
 The Mandiant report predates the axios package event and details actor behavior that matches the incident context in method and objective {% include references/cite.html key="axios-2026-ref2" %}. The report emphasizes identity theft, account takeover, and recursive social deception loops across financial and developer-adjacent targets {% include references/cite.html key="axios-2026-ref2" %}. Microsoft and Sophos later document package ecosystem abuse with overlapping infrastructure indicators and malware staging patterns {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.
 
-This coherence supports an evidence-led position. The axios event aligns with an established operational playbook rather than an isolated tactical anomaly {% include references/cite.html key="axios-2026-ref2" %}, {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.
+This coherence supports an evidence-led position. The axios event matches an established operational playbook rather than an isolated tactical anomaly {% include references/cite.html key="axios-2026-ref2" %}, {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}.
 
 ---
 
@@ -268,8 +268,13 @@ Review your lockfile (`package-lock.json` or `yarn.lock`) for axios version 1.14
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Citation Data, Standards Mapping, and Control Matrix" %}
 
+### Author and Source Credibility
+
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from npm security advisories, GitHub incident disclosures, and supply-chain integrity frameworks including SLSA and NIST SSDF. The referenced sources span official project post-mortems, open-source registry audit data, and established software supply-chain security standards, providing a practitioner-oriented evidence base grounded in documented incidents rather than hypothetical threat models.
+
 ### Appendix Table of Contents
 
+- [Author and Source Credibility](#author-and-source-credibility)
 - [Citation-Ready Data Extracts](#citation-ready-data-extracts)
 - [Authoritative Security Standards for Control Mapping](#authoritative-security-standards-for-control-mapping)
 - [Control Comparison: Baseline vs Resilient Supply Chain Practice](#control-comparison-baseline-vs-resilient-supply-chain-practice)
@@ -277,7 +282,7 @@ Review your lockfile (`package-lock.json` or `yarn.lock`) for axios version 1.14
 - [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 <blockquote>
-<strong>Synthesis note:</strong> This article's control-first approach aligns with the SSDF emphasis on repeatable secure software engineering practices.
+<strong>Synthesis note:</strong> This article's control-first approach is consistent with the SSDF emphasis on repeatable secure software engineering practices.
 </blockquote>
 
 <figure markdown="1">

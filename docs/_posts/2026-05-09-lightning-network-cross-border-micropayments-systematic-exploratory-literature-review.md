@@ -116,7 +116,7 @@ What it does not prove is regulatory-operational equivalence in live jurisdictio
 
 This paper is valuable because it deals with constrained devices honestly {% include references/cite.html key="ln-2026-ref3" %}. Full Lightning operation at the edge is often unrealistic. A gateway-assisted model with stronger signature controls is more feasible.
 
-The prototype scope is small, but the deployment lesson is robust: use delegated execution while preserving cryptographic accountability at the originating endpoint.
+The prototype scope is small, but the deployment lesson holds: use delegated execution while preserving cryptographic accountability at the originating endpoint.
 
 ### Larsen et al. (2026): Composability as a Strategic Constraint
 

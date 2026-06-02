@@ -284,7 +284,7 @@ Isolate your system modules into **Pre-Retrieval**, **Retrieval**, **Post-Retrie
 
 ### 2. Implement Hybrid Retrieval + Re-ranking as a Baseline
 
-Do not rely solely on dense vector databases. Combine dense embeddings with lexical BM25 search using Reciprocal Rank Fusion (RRF). Critically, pass the top results through a **Cross-Encoder Re-ranker** model. The cross-encoder serves as your primary defense against the harmful distractors highlighted by Cuconasu et al. {% include references/cite.html key="10.1145/3805774" %}.
+Do not rely solely on dense vector databases. Combine dense embeddings with lexical BM25 search using Reciprocal Rank Fusion (RRF). Critically, pass the top results through a **Cross-Encoder Re-ranker** model. The cross-encoder is your primary defence against the harmful distractors highlighted by Cuconasu et al. {% include references/cite.html key="10.1145/3805774" %}.
 
 ### 3. Enforce Strict Context Positioning Rules
 

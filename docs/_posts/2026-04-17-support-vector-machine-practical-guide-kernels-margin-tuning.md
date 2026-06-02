@@ -286,11 +286,14 @@ Part 2 applies this framework to a full HAR benchmark and error-forensics workfl
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Scope, Claim Taxonomy, and Maintenance Notes" %}
 
+### Author and Source Credibility
+
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from foundational peer-reviewed literature on support vector machines, including the seminal Cortes and Vapnik (1995) paper in Machine Learning, Boser et al. (1992) from the COLT workshop, and Kecman's contributions in Springer edited volumes. The referenced corpus spans journal articles, conference proceedings, and academic monographs that collectively established the theoretical and practical foundations of SVM methodology.
+
 ### Appendix Table of Contents
 
+- [Author and Source Credibility](#author-and-source-credibility)
 - [Citability Snapshot](#citability-snapshot)
-- [Authoritative Reference Set](#authoritative-reference-set)
-- [Terminology Definitions](#terminology-definitions)
 - [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot

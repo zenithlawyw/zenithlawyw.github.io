@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-06-01T12:42:19Z"
+generated_at: "2026-06-02T23:10:15Z"
 signal_weights:
   title: 3
   categories: 5
@@ -15,116 +15,135 @@ signal_weight_rationale:
   intro_description_headings: Medium weight for context enrichment without dominating keyword extraction.
   keywords_catchwords: Low weight to avoid over-amplifying manually supplied or potentially noisy token lists.
 keywords:
-  - governance
   - engineering
+  - governance
   - rag
   - machine
   - lightning
   - data
-  - implementation
-  - network
   - deployment
-  - model
+  - network
+  - implementation
   - production
+  - model
+  - appendix
+  - architecture
+  - evidence
+  - technical
   - retrieval
+  - support
+  - definitions
   - provenance
   - vector
   - a2a
-  - architecture
-  - support
-  - language
   - practical
+  - language
+  - questions
+  - cryptography
   - supply
-  - definitions
   - mcp
-  - evidence
   - svm
-  - appendix
   - chain
   - learning
   - teams
-  - technical
   - acp
   - artificial
   - intelligence
-  - questions
+  - systems
+  - pqc
   - orchestration
   - cross-border
+  - security
   - agentic
+  - cloud
   - controls
   - review
+  - frequently
+  - asked
+  - literature
+  - post-quantum
   - large
   - guide
-  - frequently
+  - quantum
+  - author
   - lessons
   - micropayments
-  - asked
-  - systems
-  - china
-  - cloud
-  - deadlock
+  - notes
   - seo
-  - design
-  - literature
   - aeo
-  - agent
-  - benchmark
-  - failure
   - geo
   - table
+  - china
+  - contents
+  - design
+  - credibility
+  - deadlock
+  - agent
+  - benchmark
+  - digital
+  - failure
+  - optimisation
   - llm
   - axios
-  - contents
-  - digital
   - generation
   - npm
   - boundaries
-  - notes
+  - migration
   - snapshot
+  - software
+  - practice
   - sovereignty
-  - optimisation
+  - protocol
   - corpus
   - evaluation
   - legal
   - platform
-  - practice
-  - protocol
   - quick
   - reference
   - scope
-  - security
+  - cybersecurity
   - first
+  - hybrid
   - representation
-  - attack
-  - citability
   - trust
+  - analysis
+  - attack
+  - open
+  - blockchain
+  - citability
   - calibration
+  - critical
   - deep
   - domain
+  - framework
   - glossary
   - playbook
+  - iot
+  - monitoring
   - open-source
-  - software
   - tuning
-  - framework
+  - patterns
   - clustering
   - introduction
-  - monitoring
+  - readiness
   - resource
+  - strategy
+  - enterprise
   - hub
-  - open
   - operational
   - papers
+  - decisions
   - incident
   - langchain
-  - quantum
+  - nist
   - starvation
-  - strategy
+  - theory
   - adaptation
-  - analysis
+  - communication
   - confidence
-  - enterprise
   - fragmentation
+  - infrastructure
+  - integration
   - knowledge
   - metrics
   - processing
@@ -132,18 +151,18 @@ keywords:
   - testing
   - traceability
   - access
-  - author
   - authoritative
   - compromise
-  - decisions
   - guidance
   - langgraph
   - matter
   - stage
-  - theory
+  - standards
+  - workforce
   - augmented
   - compliance
   - context
+  - gap
   - har
   - law
   - natural
@@ -151,30 +170,11 @@ keywords:
   - resilience
   - risk
   - claim
-  - communication
   - conditions
-  - critical
   - early
   - graph
   - inference
   - kernel
-  - layer
-  - limits
-  - map
-  - mode
-  - profile
-  - semantic
-  - set
-  - transformer
-  - classification
-  - management
-  - patterns
-  - coffman
-  - cybersecurity
-  - geometry
-  - maturity
-  - pilot
-  - search
 key_phrases:
   - lightning network
   - support vector
@@ -184,31 +184,30 @@ key_phrases:
   - artificial intelligence
   - a2a acp
   - mcp a2a
-  - mcp a2a acp
-  - large language
   - asked questions
   - frequently asked
   - frequently asked questions
-  - implementation guide
+  - mcp a2a acp
+  - large language
   - seo geo
   - geo aeo
+  - post-quantum cryptography
   - seo geo aeo
-  - engineering governance
   - table contents
-  - data provenance
-  - lightning network implementation
-  - network implementation
+  - author credibility
+  - implementation guide
   - aeo optimisation
   - aeo optimisation notes
-  - agentic orchestration
-  - appendix appendix
-  - appendix appendix table
   - appendix table
   - appendix table contents
   - geo aeo optimisation
   - optimisation notes
   - technical appendix
-  - technical appendix appendix
+  - engineering governance
+  - data provenance
+  - lightning network implementation
+  - network implementation
+  - agentic orchestration
   - digital sovereignty
   - network cross-border
   - network implementation guide
@@ -227,9 +226,16 @@ key_phrases:
   - supply chain attack
   - axios npm supply
   - representation learning
+  - appendix author
+  - appendix author credibility
+  - author credibility appendix
+  - credibility appendix
+  - credibility appendix table
+  - technical appendix author
   - artificial intelligence artificial
   - intelligence artificial
   - intelligence artificial intelligence
+  - software engineering
   - agentic orchestration framework
   - digital sovereignty china
   - domain adaptation
@@ -240,6 +246,7 @@ key_phrases:
   - orchestration mcp
   - orchestration mcp a2a
   - table contents citability
+  - technical definitions
   - augmented generation
   - chain security
   - evidence review
@@ -249,10 +256,16 @@ key_phrases:
   - retrieval augmented
   - retrieval augmented generation
   - supply chain security
+  - appendix appendix
+  - appendix appendix table
+  - contents author
+  - contents author credibility
   - deep clustering
   - failure mode
   - machine benchmark
   - platform engineering
+  - table contents author
+  - technical appendix appendix
   - vector machine benchmark
   - augmented generation large
   - engineering lessons
@@ -270,7 +283,6 @@ key_phrases:
   - machine deployment
   - production governance
   - vector machine deployment
-  - author credibility
   - authoritative reference
   - authoritative reference set
   - citability snapshot authoritative
@@ -286,7 +298,6 @@ key_phrases:
   - scope claim
   - snapshot authoritative
   - snapshot authoritative reference
-  - technical definitions
   - a2a acp langgraph
   - acp langgraph
   - acp langgraph langchain
@@ -299,120 +310,125 @@ key_phrases:
   - optimisation notes introduction
   - provenance machine
   - provenance machine learning
+  - workforce readiness
   - artificial intelligence software
   - conclusion technical
   - conclusion technical appendix
-  - contents author
-  - contents author credibility
   - definitions seo
   - definitions seo geo
-  - graph neural
-  - hybrid retrieval
-  - incident response
-  - intelligence software
-  - intelligence software engineering
-  - llm inference
-  - model tuning
-  - resource contention
-  - social engineering
-  - software engineering
 catchwords:
-  - governance
   - engineering
+  - governance
   - machine
   - lightning
-  - implementation
-  - network
   - deployment
-  - model
+  - network
+  - implementation
   - production
+  - model
+  - appendix
+  - architecture
+  - evidence
+  - technical
   - retrieval
+  - support
+  - definitions
   - provenance
   - vector
-  - architecture
-  - support
-  - language
   - practical
+  - language
+  - questions
+  - cryptography
   - supply
-  - definitions
-  - evidence
-  - appendix
   - chain
   - learning
   - teams
-  - technical
   - artificial
   - intelligence
-  - questions
+  - systems
   - orchestration
   - cross-border
+  - security
   - agentic
+  - cloud
   - controls
   - review
+  - frequently
+  - asked
+  - literature
+  - post-quantum
   - large
   - guide
-  - frequently
+  - quantum
+  - author
   - lessons
   - micropayments
-  - asked
-  - systems
+  - notes
+  - table
   - china
-  - cloud
-  - deadlock
+  - contents
   - design
-  - literature
+  - credibility
+  - deadlock
   - agent
   - benchmark
-  - failure
-  - table
-  - axios
-  - contents
   - digital
+  - failure
+  - optimisation
+  - axios
   - generation
   - boundaries
-  - notes
+  - migration
   - snapshot
+  - software
+  - practice
   - sovereignty
-  - optimisation
+  - protocol
   - corpus
   - evaluation
   - legal
   - platform
-  - practice
-  - protocol
   - quick
   - reference
   - scope
-  - security
+  - cybersecurity
   - first
+  - hybrid
   - representation
-  - attack
-  - citability
   - trust
+  - analysis
+  - attack
+  - blockchain
+  - citability
   - calibration
+  - critical
   - domain
+  - framework
   - glossary
   - playbook
+  - monitoring
   - open-source
-  - software
   - tuning
-  - framework
+  - patterns
   - clustering
   - introduction
-  - monitoring
+  - readiness
   - resource
+  - strategy
+  - enterprise
   - operational
   - papers
+  - decisions
   - incident
   - langchain
-  - quantum
   - starvation
-  - strategy
+  - theory
   - adaptation
-  - analysis
+  - communication
   - confidence
-  - enterprise
   - fragmentation
+  - infrastructure
+  - integration
   - knowledge
   - metrics
   - processing
@@ -420,15 +436,14 @@ catchwords:
   - testing
   - traceability
   - access
-  - author
   - authoritative
   - compromise
-  - decisions
   - guidance
   - langgraph
   - matter
   - stage
-  - theory
+  - standards
+  - workforce
   - augmented
   - compliance
   - context
@@ -436,33 +451,18 @@ catchwords:
   - pipeline
   - resilience
   - claim
-  - communication
   - conditions
-  - critical
   - early
   - graph
   - inference
   - kernel
-  - layer
-  - limits
-  - profile
-  - semantic
-  - transformer
-  - classification
-  - management
-  - patterns
-  - coffman
-  - cybersecurity
-  - geometry
-  - maturity
-  - pilot
-  - search
 catchphrases:
   - frequently asked questions
   - technical appendix
   - quick definitions
   - citability snapshot
   - authoritative reference set
+  - c literature analysis summary
   - terminology definitions
   - agent card
   - agent manifest
@@ -478,8 +478,12 @@ catchphrases:
   - 4 semantic versioning convenience systematically enables supply chain propagation
   - 6 communication infrastructure carries hidden regulatory friction
   - acceptable conduct
+  - architecture design
   - architecture overview
   - automated candidate moderation
+  - automated code migration ccpastpqc
+  - automotive over-the-air update security
+  - automotive-specific constraints
   - b authoritative baselines
   - b deployment readiness checklist
   - b evidence boundary notes
@@ -489,17 +493,23 @@ catchphrases:
   - chunking strategy
   - citation-ready data extracts
   - claim taxonomy
+  - cloud security pqc-enhanced threat detection
+  - code-based cryptography
   - common design mistakes
   - conflicting evidence handling
   - container packaging
   - containerised deployment
   - context compression
   - control comparison baseline vs resilient supply chain practice
+  - convergent pattern kyber dilithium dominance
   - corpus scope
   - coverage snapshot
+  - covert communications
   - cross-paper pattern controlled hybridization wins
+  - cross-sector analysis
   - current website-specific practices
   - dense retrieval
+  - dna-based data storage
   - document loading
   - durable execution
   - embedding model selection
@@ -512,7 +522,10 @@ catchphrases:
   - glossary overview
   - governance controls
   - governance definitions
+  - hash-based signatures
   - homepage overview
+  - hybrid qc pqc belt-and-suspenders security
+  - hybrid qkd pqc network architectures
   - hyperparameter stability signal
   - implement graduated autonomy early
   - implementation pattern
@@ -520,6 +533,7 @@ catchphrases:
   - interpretation limits
   - jurisdiction map
   - jurisdiction note
+  - lattice-based cryptography
   - layer 1 orchestrator service
   - layer 2b optional acp-compatible interop edge
   - layer 3 tooling behind mcp
@@ -528,7 +542,10 @@ catchphrases:
   - liability allocation
   - liability boundary
   - measured impact
+  - migration planning framework
   - monitoring checklist
+  - multi-cloud integration architecture
+  - multivariate cryptography
   - observability requirements
   - official reference points
   - operational definitions
@@ -537,118 +554,100 @@ catchphrases:
   - persona-driven requirements
   - phase 1 local deterministic sandbox
   - phase 2 controlled corridor pilot
+  - phase 3 gradual rollout
   - phase 3 production hardening
   - practical decision framework
-  - practical takeaways
-  - production governance controls
-  - profile overview
-  - provenance logging
-  - reciprocal rank fusion
-  - red-team testing
-  - retrieval metrics
-  - role-based implementation focus
-  - semaphores counter-based access control
-  - series roadmap
-  - source-level assessment
-  - stage 3 hybrid retrieval
-  - stage 7 evaluation pipeline
-  - stage 8 rag fine-tuning fusion
-  - start vllm server
-  - step-by-step tuning workflow
-  - structured validation
-  - suggested repository shape
-  - tenant-aware operation
 search_words:
-  - governance
   - engineering
+  - governance
   - rag
   - machine
   - lightning
   - data
-  - implementation
-  - network
   - deployment
-  - model
+  - network
+  - implementation
   - production
+  - model
+  - appendix
+  - architecture
+  - evidence
+  - technical
   - retrieval
+  - support
+  - definitions
   - provenance
   - vector
   - a2a
-  - architecture
-  - support
-  - language
   - practical
+  - language
+  - questions
+  - cryptography
   - supply
-  - definitions
   - mcp
-  - evidence
   - svm
-  - appendix
   - chain
   - learning
   - teams
-  - technical
   - acp
   - artificial
   - intelligence
-  - questions
+  - systems
+  - pqc
   - orchestration
   - cross-border
+  - security
   - agentic
+  - cloud
   - controls
   - review
+  - frequently
+  - asked
+  - literature
+  - post-quantum
   - large
   - guide
-  - frequently
+  - quantum
+  - author
   - lessons
   - micropayments
-  - asked
-  - systems
-  - china
-  - cloud
-  - deadlock
+  - notes
   - seo
-  - design
-  - literature
   - aeo
-  - agent
-  - benchmark
-  - failure
   - geo
   - table
+  - china
+  - contents
+  - design
+  - credibility
+  - deadlock
+  - agent
+  - benchmark
+  - digital
+  - failure
+  - optimisation
   - llm
   - axios
-  - contents
-  - digital
   - generation
   - npm
   - boundaries
-  - notes
+  - migration
   - snapshot
+  - software
+  - practice
   - sovereignty
-  - optimisation
+  - protocol
   - corpus
   - evaluation
   - legal
   - platform
-  - practice
-  - protocol
   - quick
   - reference
   - scope
-  - security
+  - cybersecurity
   - first
+  - hybrid
   - representation
-  - attack
-  - citability
-  - trust
-  - calibration
-  - deep
-  - domain
-  - glossary
-  - playbook
-  - open-source
-  - software
   - lightning network
   - support vector
   - support vector machine
@@ -657,31 +656,30 @@ search_words:
   - artificial intelligence
   - a2a acp
   - mcp a2a
-  - mcp a2a acp
-  - large language
   - asked questions
   - frequently asked
   - frequently asked questions
-  - implementation guide
+  - mcp a2a acp
+  - large language
   - seo geo
   - geo aeo
+  - post-quantum cryptography
   - seo geo aeo
-  - engineering governance
   - table contents
-  - data provenance
-  - lightning network implementation
-  - network implementation
+  - author credibility
+  - implementation guide
   - aeo optimisation
   - aeo optimisation notes
-  - agentic orchestration
-  - appendix appendix
-  - appendix appendix table
   - appendix table
   - appendix table contents
   - geo aeo optimisation
   - optimisation notes
   - technical appendix
-  - technical appendix appendix
+  - engineering governance
+  - data provenance
+  - lightning network implementation
+  - network implementation
+  - agentic orchestration
   - digital sovereignty
   - network cross-border
   - network implementation guide
@@ -700,9 +698,16 @@ search_words:
   - supply chain attack
   - axios npm supply
   - representation learning
+  - appendix author
+  - appendix author credibility
+  - author credibility appendix
+  - credibility appendix
+  - credibility appendix table
+  - technical appendix author
   - artificial intelligence artificial
   - intelligence artificial
   - intelligence artificial intelligence
+  - software engineering
   - agentic orchestration framework
   - digital sovereignty china
   - domain adaptation
@@ -713,12 +718,6 @@ search_words:
   - orchestration mcp
   - orchestration mcp a2a
   - table contents citability
-  - augmented generation
-  - chain security
-  - evidence review
-  - language processing
-  - natural language
-  - natural language processing
 global_questions:
   - question: How do I handle documents that update frequently in a RAG system?
     answer: "Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. Li et al.'s survey of generative retrieval includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well."
@@ -766,12 +765,18 @@ global_questions:
     answer: Avoid lock-in by hiding node-specific logic behind internal adapters, versioning schemas explicitly, and keeping external APIs neutral. Do not expose implementation-specific payload fields to clients. This design lets teams swap runtimes or change routing logic later with less disruption and lower migration risk.
   - question: How do tenant-aware and cross-border controls reshape protocol design choices for agentic orchestration framework?
     answer: They require explicit policy partitioning, region-aware data handling, and identity federation choices that remain portable across clouds and partner ecosystems. In practice, teams should align MCP tool policy, A2A task authorization, and ACP-compatible gateway policy so tenant and jurisdiction controls remain consistent across every protocol boundary.
+  - question: How does PQC affect network performance?
+    answer: PQC key encapsulation adds approximately 1–3 ms to TLS handshakes depending on security level and hardware. PQC signatures (Dilithium) are larger than ECDSA signatures, increasing bandwidth consumption. For most applications, the overhead is negligible. For latency-sensitive systems (SCADA, real-time automotive), validated benchmarks on target hardware are essential before deployment.
   - question: How does generative information retrieval (GenIR) relate to RAG?
     answer: "RAG and GenIR are complementary strategies. RAG augments generation with retrieved external knowledge using explicit indexes. GenIR replaces index-based retrieval with parametric memory: models directly generate document identifiers or responses from their parameters. Production systems may eventually combine both, but GenIR remains largely experimental."
+  - question: How does hardware acceleration affect PQC deployment decisions?
+    answer: Code-based PQC schemes (HQC, BIKE) require sparse polynomial multiplication that is computationally expensive in software. FPGA-based accelerators like HSPA reduce area-delay product by 57-80%, making these schemes viable for embedded and IoT deployments. Without hardware acceleration, code-based schemes may be impractical for resource-constrained environments.
   - question: How does multi-kernel deep clustering differ from standard deep clustering pipelines for representation learning?
     answer: DMKCN learns adaptive kernel mixes and optimizes clustering and representation quality together. Standard pipelines often use one fixed kernel or reconstruction-heavy goals. The trade-off is better separability with more tuning work.
   - question: How is one-class SVM different from unsupervised clustering objectives for support vector machine?
     answer: No. One-class SVM estimates support for a target distribution and is mainly used for novelty/outlier detection rather than multi-cluster partitioning.
+  - question: How long does a typical PQC migration take for an enterprise?
+    answer: Migration timelines depend on codebase size, cryptographic dependency count, and organisational readiness. Wahlang and Vidhani's automated tooling can accelerate Python migrations, but manual review remains necessary. For large enterprises, expect multi-year migration programmes with phased rollout. The critical first step, cryptographic inventory, can begin immediately.
   - question: How often should I red-team test my RAG system?
     answer: Before initial production launch, after significant corpus updates, and on a regular schedule. For high-stakes domains (healthcare, legal, financial), monthly testing is a reasonable starting point. For lower-stakes applications, quarterly testing combined with continuous monitoring may suffice.
   - question: How should SVM retraining cadence be set using drift and corridor triggers for support vector machine deployment?
@@ -806,10 +811,12 @@ global_questions:
     answer: A common mistake is tuning throughput dashboards before identity controls, policy enforcement, and reconciliation reliability are stable. Fast charts can hide weak foundations. Start by proving correctness and recovery under failure, then optimize speed and cost once control quality is consistent.
   - question: What is a realistic first milestone for a Lightning micropayment pilot for lightning network cross-border micropayments?
     answer: Start with one corridor, one policy set, one reconciliation flow, and one rollback plan. This scope is small enough to run fast and large enough to test the core risks. You can validate identity mapping, route behavior, and failure recovery without mixing many variables in one pilot.
+  - question: What is crypto-agility and why is it critical for PQC migration?
+    answer: Crypto-agility is the architectural property that allows cryptographic algorithms to be replaced without redesigning the system. Given that PQC algorithms have survived only a few years of scrutiny (compared to decades for RSA), algorithm-level surprises are expected. Systems without crypto-agility face emergency migration under time pressure, exactly the scenario Mosca's inequality warns against.
   - question: What is the difference between retrieval failure and generation failure in RAG?
     answer: Retrieval failure means the correct document was not retrieved or was ranked below distractors. Generation failure means the correct document was retrieved and included in the prompt, but the model produced an incorrect or unfaithful response. Huang and Huang emphasise that these are independent failure modes requiring separate metrics and diagnostic pipelines.
   - question: What is the first practical control for sovereign-aware enterprise cloud programs for digital sovereignty China?
-    answer: Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority aligns with observed access and notification disruptions in the corpus.
+    answer: Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority is consistent with observed access and notification disruptions in the corpus.
   - question: What is the minimum viable RAG pipeline I can deploy quickly?
     answer: A simple directory reader, sentence splitter (512-token chunks), all-MiniLM-L6-v2 embeddings, FAISS index, Ollama with Llama 3.1 8B, and a basic prompt template. This can be built in under a day with LlamaIndex or LangChain. Add hybrid retrieval and re-ranking as your first optimisation.
   - question: What is the most common failure mode in production RAG?
@@ -820,6 +827,10 @@ global_questions:
     answer: Idempotent payment intents are among the most important reliability primitives. They prevent duplicate settlement when retries, delayed callbacks, or replay events occur. Pair them with deterministic state transitions so every event lands in a known state. Together, these patterns make reconciliation faster and reduce hidden failure loops in production operations.
   - question: What is the simplest deployable architecture for MCP, A2A, and ACP interoperability for agentic orchestration framework?
     answer: One orchestrator service plus two or three specialist agents is enough. The orchestrator uses A2A to delegate tasks. Each specialist agent uses MCP to reach concrete tools and resources. ACP-compatible facades can be added at partner-facing boundaries where REST-native interoperability is required.
+  - question: What makes post-quantum cryptography different from quantum cryptography?
+    answer: Post-quantum cryptography uses classical algorithms designed to resist quantum attacks, running on conventional hardware. Quantum cryptography (QKD) uses quantum mechanical properties of photons for key distribution, requiring specialised quantum hardware. PQC replaces vulnerable algorithms; QKD provides a fundamentally different security mechanism based on physics rather than computational hardness.
+  - question: What programming languages does automated PQC code migration support?
+    answer: As of the reviewed literature, only Python is covered by ccPASTpqc. Production cryptographic code in C/C++, Java, Go, and Rust requires manual migration or purpose-built tooling that does not yet exist. This is a significant research and tooling gap.
   - question: What retrieval document positioning gives the best RAG accuracy?
     answer: Place the most relevant document adjacent to the query in the prompt. Cuconasu et al. show that "near" positioning (relevant document closest to query) consistently outperforms "mid" (middle of context) and "far" (beginning of context) placements across all tested LLMs. This confirms the "lost in the middle" effect from prior research.
   - question: What should I log for RAG audit compliance?
@@ -852,6 +863,8 @@ global_questions:
     answer: Recent records show AI access decisions integrating strategic and ownership criteria in addition to geography. This creates faster policy asymmetry across regions and legal entities. Engineering teams need provider abstraction and contingency model pathways.
   - question: Why do random documents sometimes improve RAG accuracy?
     answer: Cuconasu et al. hypothesise that random documents act as an attention regularisation mechanism. When only one gold document is present, the LLM may over-attend to any semantically similar content. Random noise reduces this over-reliance by distributing attention, potentially helping the model focus more carefully on the genuinely relevant passage. The mechanism is hypothesised, not mechanistically proven.
+  - question: Why does every applied PQC paper use Kyber and Dilithium?
+    answer: "NIST standardisation creates strong incentive alignment: library support, regulatory compliance, and interoperability expectations all favour the standardised algorithms. Kyber and Dilithium also offer the best performance on commodity hardware. The risk is systemic: if lattice assumptions weaken, the entire deployed portfolio is affected."
   - question: Why is SVM still valuable in 2026 despite dominant deep-learning workflows for support vector machine?
     answer: SVM gives a transparent optimization framework that remains highly useful for structured, medium-scale classification and for disciplined baseline construction before scaling to heavier architectures.
   - question: Why is identity governance still necessary for autonomous agents for lightning network cross-border micropayments?
@@ -860,10 +873,16 @@ global_questions:
     answer: Macro F1 averages class behavior and can hide concentrated failure corridors that dominate real-world risk, especially in near-neighbor class pairs.
   - question: Why is target discriminability as critical as alignment in unsupervised domain adaptation for representation learning?
     answer: Alignment can make domains look similar while classes still overlap. Qiang et al. show that this hurts prediction quality in target data. Adding discriminability constraints helps keep class boundaries clear.
+  - question: Are there production deployments of post-quantum cryptography?
+    answer: Among the reviewed literature, no. All papers present conceptual frameworks, simulations, or small-scale prototypes. Production deployments with real users, real adversaries, and real operational constraints are absent. Broader industry efforts (Google's CECPQ2 experiment, Cloudflare's PQ TLS deployment) exist but are outside the scope of this academic review.
   - question: Can A2A replace MCP for tool invocation and capability exposure for MCP vs A2A vs ACP?
     answer: It can, but it is usually wasteful. Simple tools do not benefit much from peer-agent ceremony. A2A shines when the remote side behaves like a collaborator, not just a callable capability. ACP-style REST wrappers can expose those collaborators to existing API ecosystems, but they do not remove the need for MCP when local tool boundaries and consent controls are required.
   - question: Can I use RAG without a GPU?
     answer: Yes, for small-scale deployments. CPU-based embedding models (all-MiniLM-L6-v2) and quantised LLMs (via Ollama or llama.cpp) can run on standard servers. For production throughput, a GPU accelerates both embedding computation and LLM inference. The RAG infrastructure itself (vector store, BM25 index, re-ranker) can run on CPU.
+  - question: Can I use TLS 1.3 for PQC deployment without protocol changes?
+    answer: Yes. TLS 1.3 supports PQC through its extensible `key_share` and `signature_algorithms` mechanisms. PQC key encapsulation and signatures can be negotiated within the existing handshake framework. This is one of PQC's major practical advantages over QKD, which requires entirely new infrastructure.
+  - question: Can IoT devices with limited memory support post-quantum cryptography?
+    answer: Kyber-768 requires approximately 2.4 KB of memory for public and private keys combined, which fits within the constraints of most 32-bit microcontrollers. However, no peer-reviewed benchmark validates PQC performance on production IoT hardware. Devices with less than 32 KB of available RAM may require hardware-accelerated PQC or lighter-weight constructions.
   - question: Can MCP replace A2A for multi-agent collaboration scenarios for MCP vs A2A vs ACP?
     answer: Only in narrow cases. If the remote side is really a bounded capability, MCP can be sufficient. Once the remote side owns task state, asynchronous progress, artifact delivery, or agent discovery, A2A is usually the cleaner fit. If the integration boundary is HTTP-governed and partner-facing, ACP-style contracts may still be the practical edge pattern during A2A migration planning.
   - question: Can general-purpose RAG evaluation metrics catch domain-specific failures?
@@ -900,8 +919,12 @@ global_questions:
     answer: "Data provenance and data lineage both trace data through a pipeline, but they differ in focus. Lineage records where data moved, which inputs fed which outputs. Provenance adds agent information: who or what performed each transformation, under what conditions, for what purpose, and with what authorization. The [W3C PROV](https://www.w3.org/TR/prov-overview/) standard formalizes this distinction using the entity-activity-agent model that Souza et al. extend in PROV-ML."
   - question: How should researchers and educators reuse these materials with legal and ethical care for large language models?
     answer: Use short quotations only when wording precision matters. Prefer paraphrase for interpretation. Maintain explicit attribution. Preserve links to original context. Where applicable under UK law, assess whether CDPA 1988 ss. 29 (research/private study) and 31A (text and data analysis for non-commercial research) conditions are genuinely satisfied before reuse. This applies equally to video content and to published scholarly works.
+  - question: Is "Post-Quantum Cryptography" the same as "quantum cryptography"?
+    answer: No. Post-quantum cryptography uses classical (non-quantum) algorithms designed to resist attacks from quantum computers. Quantum cryptography uses quantum mechanical phenomena (photon polarisation) for key distribution. The terminology confusion is documented in the educational literature. "Quantum-Resistant Cryptography" is a clearer term.
   - question: Is ACP obsolete, or still useful during A2A convergence and migration for MCP vs A2A vs ACP?
     answer: ACP remains important for architecture learning and for existing deployments. New strategy should account for announced convergence and migration direction toward A2A to reduce future integration churn.
+  - question: Is AES-256 safe against quantum computers?
+    answer: Yes, for practical purposes. Grover's algorithm halves the effective key length, reducing AES-256 to 128-bit equivalent security against a quantum adversary. AES-128 equivalent strength remains far beyond practical brute-force attack. The vulnerability is in asymmetric (public-key) cryptography, not symmetric encryption.
   - question: Is RAG sufficient on its own, or should I also fine-tune my model?
     answer: For general knowledge tasks, RAG alone can be effective. For domain-specific applications (healthcare, legal, finance), combining RAG with parameter-efficient fine-tuning produces better results. Meng et al. show that the fusion pattern, where retrieval provides current context and fine-tuning adapts generation style, reaches 90%+ accuracy in domain-specific Q&A.
   - question: Is cross-encoder re-ranking worth the additional latency?
@@ -912,6 +935,8 @@ global_questions:
     answer: No. It is a paper-reported result in one evaluation context. This review does not treat it as a universal benchmark.
   - question: Is this evidence review enough for final architecture lock-in for lightning network cross-border micropayments?
     answer: No. This synthesis is strong for shortlisting options and shaping a pilot plan, but it is not enough for final lock-in. Final architecture should follow measured outcomes from production-like tests, including failure behavior, operator workload, and policy enforcement quality over time.
+  - question: Should I train my team on PQC before starting migration?
+    answer: Yes. The reviewed educational programmes consistently show that hands-on understanding of PQC operations improves migration quality and reduces errors. Deploy awareness-level training immediately for all technical staff, and proficiency-level training for security teams before they begin migration work.
   - question: Should I use dense retrieval or sparse retrieval for my RAG system?
     answer: Use both. Huang and Huang's survey finds that hybrid retrieval, combining sparse methods like BM25 with dense methods like DPR or Contriever, consistently outperforms either method alone. BM25 handles exact terminology; dense retrieval captures semantic relationships. The combination covers both failure modes.
   - question: Should constrained devices run full Lightning clients directly for lightning network cross-border micropayments?
@@ -964,10 +989,14 @@ global_questions:
     answer: Choose **FAISS** for ultra-fast performance during local prototyping. Use **Chroma** for lightweight disk persistence with structured metadata filtering. Transition to **Qdrant** for true large-scale multi-node orchestration requiring advanced data storage, payload management, and horizontal scaling. Start with FAISS or Chroma for development; migrate to Qdrant when you need production persistence and filtering.
   - question: Which references are most useful for implementation-focused engineering teams for large language models?
     answer: Google Cloud Tech and AI Search provide direct implementation value for teams that need prompt design guidance and user-facing framing for model behavior. Yang et al.'s practitioner survey on ChatGPT and beyond adds empirical guidance on when to use LLMs versus fine-tuned models for specific NLP tasks.
+  - question: Which sector is most urgently affected by the quantum threat?
+    answer: Energy grid infrastructure, due to the combination of multi-decade operational lifetimes (30+ years), cascading failure potential, and the use of legacy SCADA/ICS authentication mechanisms. The "harvest now, decrypt later" threat model means encrypted SCADA traffic captured today may be decryptable within the infrastructure's operational lifespan.
   - question: Which threat groups are linked to the axios compromise by major vendors for axios npm supply chain attack?
     answer: Microsoft attributes the activity to Sapphire Sleet, Sophos maps related activity to NICKEL GLADSTONE, and Mandiant tracks overlapping tradecraft under UNC1069.
   - question: Why are ChatGPT and related AI services restricted in mainland China contexts for digital sovereignty China?
     answer: OpenAI has blocked API and web access for users in mainland China, Hong Kong, and Macau. The block was widely reported in July 2024. Anthropic has applied additional ownership-structure screening beyond geography. Both decisions reflect a combination of US export-control considerations, OpenAI's own usage policies, and the regulatory environment in China. Engineering teams cannot rely on direct OpenAI or Anthropic model access for China-deployed applications and must plan for approved domestic alternatives or allowlisted API routes.
+  - question: Why were SIKE and Rainbow broken, and what does that mean for other PQC algorithms?
+    answer: SIKE was broken by a classical mathematical attack exploiting the structure of supersingular isogeny graphs. Rainbow was broken by a key-recovery attack using classical computation. Both were NIST-evaluated candidates that survived years of scrutiny before fatal weaknesses were found. This demonstrates that PQC algorithms are significantly less battle-tested than RSA/ECC and reinforces the need for crypto-agility in any deployment.
   - question: Can I use this evidence review as the sole basis for my RAG architecture?
     answer: No. This review is strong for identifying retrieval pipeline priorities, evaluation strategies, and failure modes, but its empirical depth is concentrated in a single study (Cuconasu et al.) using one dataset at small model scales. Final architecture decisions should follow measured outcomes from your own domain-specific evaluation, including retrieval quality, generation faithfulness, and domain safety requirements. Use this synthesis as a starting map, not a destination.
   - question: Can fully autonomous micropayments be deployed in regulated contexts for lightning network implementation guide?
@@ -1036,24 +1065,24 @@ posts:
       - axios npm
       - npm supply
       - npm supply chain
-      - chain attack
-      - axios npm supply
       - supply chain attack
+      - axios npm supply
+      - chain attack
       - social engineering
-      - incident response
       - trust provenance
-      - chain security
+      - incident response
       - supply chain security
+      - chain security
       - supply chain compromise
       - chain compromise
-      - incident response trust
-      - engineering incident response
-      - response trust provenance
-      - social engineering incident
-      - security social engineering
-      - chain security social
-      - software supply
       - software supply chain
+      - software supply
+      - chain security social
+      - security social engineering
+      - social engineering incident
+      - engineering incident response
+      - incident response trust
+      - response trust provenance
       - security social
       - engineering incident
     catchwords:
@@ -1108,14 +1137,14 @@ posts:
       - axios npm
       - npm supply
       - npm supply chain
-      - chain attack
-      - axios npm supply
       - supply chain attack
+      - axios npm supply
+      - chain attack
       - social engineering
-      - incident response
       - trust provenance
-      - chain security
+      - incident response
       - supply chain security
+      - chain security
     questions:
       - question: What happened in the 2026 axios npm supply chain compromise for axios npm supply chain attack?
         answer: Attackers published malicious axios versions on npm that introduced `plain-crypto-js@4.2.1`, which executed install-time malware delivery across multiple operating systems.
@@ -1187,21 +1216,21 @@ posts:
       - governance digital
       - digital sovereignty cloud
       - sovereignty cloud
-      - management governance
-      - governance data
+      - risk management governance
       - engineering risk management
+      - management governance data
+      - governance data residency
       - platform engineering risk
+      - governance data
+      - management governance
+      - risk management
+      - engineering risk
+      - platform engineering
+      - compliance platform
+      - cloud compliance
+      - digital governance
       - compliance platform engineering
       - cloud compliance platform
-      - sovereignty cloud compliance
-      - digital governance digital
-      - governance data residency
-      - management governance data
-      - risk management governance
-      - digital governance
-      - cloud compliance
-      - compliance platform
-      - platform engineering
     catchwords:
       - china
       - digital
@@ -1259,9 +1288,9 @@ posts:
       - governance digital
       - digital sovereignty cloud
       - sovereignty cloud
-      - management governance
-      - governance data
+      - risk management governance
       - engineering risk management
+      - management governance data
     questions:
       - question: How does Azure China under 21Vianet differ operationally from global Azure for digital sovereignty China?
         answer: Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within China's borders and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014.
@@ -1276,7 +1305,7 @@ posts:
       - question: Why do AI access restrictions often change faster than other SaaS restrictions for digital sovereignty China?
         answer: Recent records show AI access decisions integrating strategic and ownership criteria in addition to geography. This creates faster policy asymmetry across regions and legal entities. Engineering teams need provider abstraction and contingency model pathways.
       - question: What is the first practical control for sovereign-aware enterprise cloud programs for digital sovereignty China?
-        answer: Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority aligns with observed access and notification disruptions in the corpus.
+        answer: Start with dependency classification by irreversibility of failure. Services that hold communication records, identity control, payment flow, or regulated data require prebuilt export and fallback pathways. This priority is consistent with observed access and notification disruptions in the corpus.
       - question: How should teams use community incident reports without amplifying false signals for digital sovereignty China?
         answer: Treat community reports as intake signals. Require independent corroboration through status pages, policy documents, support records, or contractual notices before escalation. This method preserves speed without sacrificing evidence quality.
       - question: What defines success for a sovereign-aware cloud strategy across legal and technical layers for digital sovereignty China?
@@ -1332,22 +1361,22 @@ posts:
       - engineering governance
       - prompt engineering
       - knowledge distillation
-      - prompt engineering governance
-      - artificial intelligence
-      - transformer prompt engineering
+      - language model transformer
       - model transformer prompt
+      - artificial intelligence
       - model transformer
       - transformer prompt
-      - language model transformer
-      - federated learning
-      - recurring themes
-      - lessons engineering
-      - governance trustworthy
-      - hallucination controls
-      - alignment knowledge distillation
-      - lessons engineering governance
-      - artificial intelligence artificial
+      - transformer prompt engineering
+      - prompt engineering governance
       - intelligence artificial intelligence
+      - artificial intelligence artificial
+      - lessons engineering
+      - recurring themes
+      - engineering governance large
+      - governance large language
+      - lessons engineering governance
+      - federated learning
+      - governance trustworthy
     catchwords:
       - language
       - large
@@ -1401,10 +1430,10 @@ posts:
       - engineering governance
       - prompt engineering
       - knowledge distillation
-      - prompt engineering governance
-      - artificial intelligence
-      - transformer prompt engineering
+      - language model transformer
       - model transformer prompt
+      - artificial intelligence
+      - model transformer
     questions:
       - question: What is a large language model in practical engineering terms for large language models?
         answer: A large language model (LLM) is a neural network trained to predict the next token in a sequence of text. "Large" refers to the parameter count (hundreds of billions for frontier models) and the scale of training data (internet-scale corpora). The key architectural insight, introduced by [Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762) in "Attention Is All You Need," is that self-attention replaces sequential recurrence, allowing parallel computation across all positions in a sequence. This parallelism is what made billion-parameter pretraining tractable.
@@ -1478,20 +1507,21 @@ posts:
       - provenance machine learning
       - graph neural
       - traceability graph
-      - learning traceability
-      - machine learning traceability
       - learning traceability graph
+      - machine learning traceability
+      - learning traceability
       - graph methods
       - data lineage
-      - neural networks
       - traceability graph neural
       - graph neural network
       - neural network reproducibility
       - network reproducibility governance
       - reproducibility governance data
       - governance data provenance
-      - governance data
+      - neural networks
+      - artificial intelligence
       - governance lessons
+      - network reproducibility
       - reproducibility governance
     catchwords:
       - provenance
@@ -1548,9 +1578,9 @@ posts:
       - provenance machine learning
       - graph neural
       - traceability graph
-      - learning traceability
-      - machine learning traceability
       - learning traceability graph
+      - machine learning traceability
+      - learning traceability
       - graph methods
       - data lineage
     questions:
@@ -1750,8 +1780,8 @@ posts:
       - selection
       - aeo
       - asked
+      - author
       - authoritative
-      - baseline
       - support vector machine
       - machine learning
       - model tuning
@@ -1763,26 +1793,26 @@ posts:
       - vector machine
       - support vector machine
       - machine learning
-      - kernel support vector
-      - tuning kernel support
-      - model tuning kernel
-      - classification model tuning
-      - learning classification model
-      - machine learning classification
-      - machine machine learning
       - vector machine machine
+      - machine machine learning
+      - machine learning classification
       - kernel support
       - tuning kernel
       - model tuning
       - classification model
       - learning classification
       - machine machine
+      - learning classification model
       - artificial intelligence
+      - classification model tuning
+      - model tuning kernel
+      - tuning kernel support
       - margins kernels
-      - intelligence artificial intelligence
-      - artificial intelligence artificial
+      - kernel support vector
       - algorithm variants
-      - intelligence artificial
+      - svm strong
+      - strong fit
+      - svm strong fit
     catchwords:
       - machine
       - support
@@ -1811,7 +1841,7 @@ posts:
       - variants
       - selection
       - asked
-      - authoritative
+      - author
     search_words:
       - machine
       - svm
@@ -1834,14 +1864,14 @@ posts:
       - vector machine
       - support vector machine
       - machine learning
-      - kernel support vector
-      - tuning kernel support
-      - model tuning kernel
-      - classification model tuning
-      - learning classification model
-      - machine learning classification
-      - machine machine learning
       - vector machine machine
+      - machine machine learning
+      - machine learning classification
+      - kernel support
+      - tuning kernel
+      - model tuning
+      - classification model
+      - learning classification
     questions:
       - question: Why is SVM still valuable in 2026 despite dominant deep-learning workflows for support vector machine?
         answer: SVM gives a transparent optimization framework that remains highly useful for structured, medium-scale classification and for disciplined baseline construction before scaling to heavier architectures.
@@ -1915,11 +1945,11 @@ posts:
       - model evaluation uci
       - evaluation uci har
       - evaluation uci
-      - artificial intelligence
       - matrix model
-      - confusion corridors
-      - pca geometry
-      - error forensics
+      - artificial intelligence
+      - intelligence artificial
+      - artificial intelligence artificial
+      - intelligence artificial intelligence
     catchwords:
       - benchmark
       - machine
@@ -2025,10 +2055,10 @@ posts:
       - actions
       - aeo
       - asked
+      - author
       - baseline
       - behavior
       - best
-      - beyond
       - support vector machine
       - model tuning
       - model governance
@@ -2042,7 +2072,7 @@ posts:
       - model governance
       - deployment model
       - deployment model governance
-      - monitoring support
+      - deployment governance
       - tuning workflow
       - deployment svm
       - vector machine model
@@ -2053,11 +2083,11 @@ posts:
       - governance monitoring support
       - monitoring support vector
       - machine deployment svm
-      - governance monitoring
       - artificial intelligence
-      - deployment governance
       - machine model
       - model tuning
+      - tuning deployment
+      - monitoring support
     catchwords:
       - deployment
       - machine
@@ -2114,7 +2144,7 @@ posts:
       - model governance
       - deployment model
       - deployment model governance
-      - monitoring support
+      - deployment governance
       - tuning workflow
       - deployment svm
       - vector machine model
@@ -2178,24 +2208,24 @@ posts:
       - orchestration mcp a2a
       - orchestration mcp
       - acp mcp
-      - a2a acp mcp
       - a2a acp agent
       - acp agent interoperability
       - trust boundaries
       - protocol design
-      - agent interoperability
+      - a2a acp mcp
       - acp agent
-      - boundaries enterprise
-      - enterprise agentic
-      - agent interoperability protocol
+      - agent interoperability
       - protocol boundaries
-      - acp practical
-      - interoperability protocol design
-      - protocol design multi-agent
-      - design multi-agent tool
-      - multi-agent tool orchestration
       - tool orchestration mcp
+      - multi-agent tool orchestration
+      - design multi-agent tool
+      - protocol design multi-agent
+      - interoperability protocol design
+      - agent interoperability protocol
+      - artificial intelligence design
+      - acp practical
       - tool orchestration
+      - boundaries enterprise
     catchwords:
       - protocol
       - agent
@@ -2250,12 +2280,12 @@ posts:
       - orchestration mcp a2a
       - orchestration mcp
       - acp mcp
-      - a2a acp mcp
       - a2a acp agent
       - acp agent interoperability
       - trust boundaries
       - protocol design
-      - agent interoperability
+      - a2a acp mcp
+      - acp agent
     questions:
       - question: What boundary-level differences matter most between MCP, A2A, and ACP for MCP vs A2A vs ACP?
         answer: MCP connects models or hosts to tools, resources, and prompts. A2A connects autonomous agents through task lifecycle collaboration. ACP defines a REST-oriented agent interoperability model with manifest and run semantics.
@@ -3320,6 +3350,426 @@ posts:
         answer: Retrieval failure means the correct document was not retrieved or was ranked below distractors. Generation failure means the correct document was retrieved and included in the prompt, but the model produced an incorrect or unfaithful response. Huang and Huang emphasise that these are independent failure modes requiring separate metrics and diagnostic pipelines.
       - question: How do I handle queries that fall outside my RAG corpus scope?
         answer: 'Implement scope-boundary detection: when all retrieved documents score below a confidence threshold, return an explicit "this question is outside the system''s knowledge scope" response rather than generating an answer. Systems that generate answers for out-of-scope queries are more dangerous than systems that refuse, because the user has no signal that the response is ungrounded.'
+  post-quantum-cryptography-theoretical-foundations-reconceptualisation:
+    title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+    url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+    keywords:
+      - cryptography
+      - quantum
+      - pqc
+      - post-quantum
+      - security
+      - lattice-based
+      - code-based
+      - hybrid
+      - models
+      - acceleration
+      - cryptographic
+      - foundations
+      - hardware
+      - nist
+      - primitives
+      - reconceptualisation
+      - algorithm
+      - applied
+      - computing
+      - cybersecurity
+      - hash-based
+      - mathematics
+      - standards
+      - theoretical
+      - appendix
+      - computers
+      - constructions
+      - crypto-agility
+      - literature
+      - notes
+      - public-key
+      - questions
+      - safe
+      - technical
+      - threat
+      - signatures
+      - post-quantum cryptography
+      - lattice-based cryptography
+      - quantum computing
+      - cryptographic primitives
+    key_phrases:
+      - post-quantum cryptography
+      - lattice-based cryptography
+      - hardware acceleration
+      - cryptographic primitives
+      - post-quantum cryptography lattice-based
+      - cryptography quantum
+      - cryptography lattice-based
+      - security models
+      - cryptography lattice-based cryptography
+      - primitives nist
+      - nist standards
+      - computing cryptographic primitives
+      - quantum computing cryptographic
+      - cryptography quantum computing
+      - lattice-based cryptography quantum
+      - cybersecurity applied mathematics
+      - hybrid pqc
+      - computing cryptographic
+      - quantum computing
+      - cryptographic primitives nist
+      - primitives nist standards
+      - applied mathematics
+      - cybersecurity applied
+      - theoretical foundations
+    catchwords:
+      - cryptography
+      - quantum
+      - post-quantum
+      - security
+      - lattice-based
+      - code-based
+      - hybrid
+      - models
+      - acceleration
+      - cryptographic
+      - foundations
+      - hardware
+      - primitives
+      - reconceptualisation
+      - algorithm
+      - applied
+      - computing
+      - cybersecurity
+      - hash-based
+      - mathematics
+      - standards
+      - theoretical
+      - appendix
+      - computers
+      - constructions
+      - crypto-agility
+      - literature
+      - notes
+    search_words:
+      - cryptography
+      - quantum
+      - pqc
+      - post-quantum
+      - security
+      - lattice-based
+      - code-based
+      - hybrid
+      - models
+      - acceleration
+      - cryptographic
+      - foundations
+      - hardware
+      - nist
+      - primitives
+      - reconceptualisation
+      - algorithm
+      - applied
+      - post-quantum cryptography
+      - lattice-based cryptography
+      - hardware acceleration
+      - cryptographic primitives
+      - post-quantum cryptography lattice-based
+      - cryptography quantum
+      - cryptography lattice-based
+      - security models
+      - cryptography lattice-based cryptography
+      - primitives nist
+      - nist standards
+      - computing cryptographic primitives
+    questions:
+      - question: What makes post-quantum cryptography different from quantum cryptography?
+        answer: Post-quantum cryptography uses classical algorithms designed to resist quantum attacks, running on conventional hardware. Quantum cryptography (QKD) uses quantum mechanical properties of photons for key distribution, requiring specialised quantum hardware. PQC replaces vulnerable algorithms; QKD provides a fundamentally different security mechanism based on physics rather than computational hardness.
+      - question: Why were SIKE and Rainbow broken, and what does that mean for other PQC algorithms?
+        answer: SIKE was broken by a classical mathematical attack exploiting the structure of supersingular isogeny graphs. Rainbow was broken by a key-recovery attack using classical computation. Both were NIST-evaluated candidates that survived years of scrutiny before fatal weaknesses were found. This demonstrates that PQC algorithms are significantly less battle-tested than RSA/ECC and reinforces the need for crypto-agility in any deployment.
+      - question: Is AES-256 safe against quantum computers?
+        answer: Yes, for practical purposes. Grover's algorithm halves the effective key length, reducing AES-256 to 128-bit equivalent security against a quantum adversary. AES-128 equivalent strength remains far beyond practical brute-force attack. The vulnerability is in asymmetric (public-key) cryptography, not symmetric encryption.
+      - question: What is crypto-agility and why is it critical for PQC migration?
+        answer: Crypto-agility is the architectural property that allows cryptographic algorithms to be replaced without redesigning the system. Given that PQC algorithms have survived only a few years of scrutiny (compared to decades for RSA), algorithm-level surprises are expected. Systems without crypto-agility face emergency migration under time pressure, exactly the scenario Mosca's inequality warns against.
+      - question: How does hardware acceleration affect PQC deployment decisions?
+        answer: Code-based PQC schemes (HQC, BIKE) require sparse polynomial multiplication that is computationally expensive in software. FPGA-based accelerators like HSPA reduce area-delay product by 57-80%, making these schemes viable for embedded and IoT deployments. Without hardware acceleration, code-based schemes may be impractical for resource-constrained environments.
+  post-quantum-cryptography-standards-migration-workforce-readiness:
+    title: "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce Readiness"
+    url: "/post-quantum-cryptography-standards-migration-workforce-readiness"
+    keywords:
+      - migration
+      - pqc
+      - workforce
+      - post-quantum
+      - cryptography
+      - nist
+      - readiness
+      - automated
+      - engineering
+      - software
+      - standards
+      - code
+      - hybrid
+      - phase
+      - network
+      - standardisation
+      - architectures
+      - literature
+      - technical
+      - cryptographic
+      - cybersecurity
+      - development
+      - qkd
+      - tls
+      - appendix
+      - education
+      - evidence
+      - gap
+      - notes
+      - open
+      - outcomes
+      - problem
+      - reviewed
+      - settled
+      - tooling
+      - architecture
+      - post-quantum cryptography
+      - nist standards
+      - cryptographic migration
+      - workforce development
+    key_phrases:
+      - post-quantum cryptography
+      - workforce readiness
+      - software engineering
+      - code migration
+      - network architectures
+      - automated code migration
+      - automated code
+      - cybersecurity software engineering
+      - software engineering post-quantum
+      - engineering post-quantum cryptography
+      - qkd pqc
+      - hybrid qkd
+      - post-quantum cryptography nist
+      - cryptography nist standards
+      - nist standards cryptographic
+      - standards cryptographic migration
+      - development software engineering
+      - workforce development software
+      - cryptographic migration workforce
+      - migration workforce development
+      - tls pqc
+      - development software
+      - workforce development
+      - migration workforce
+    catchwords:
+      - migration
+      - workforce
+      - post-quantum
+      - cryptography
+      - readiness
+      - automated
+      - engineering
+      - software
+      - standards
+      - hybrid
+      - phase
+      - network
+      - standardisation
+      - architectures
+      - literature
+      - technical
+      - cryptographic
+      - cybersecurity
+      - development
+      - appendix
+      - education
+      - evidence
+      - notes
+      - outcomes
+      - problem
+      - reviewed
+      - settled
+      - tooling
+    search_words:
+      - migration
+      - pqc
+      - workforce
+      - post-quantum
+      - cryptography
+      - nist
+      - readiness
+      - automated
+      - engineering
+      - software
+      - standards
+      - code
+      - hybrid
+      - phase
+      - network
+      - standardisation
+      - architectures
+      - literature
+      - post-quantum cryptography
+      - workforce readiness
+      - software engineering
+      - code migration
+      - network architectures
+      - automated code migration
+      - automated code
+      - cybersecurity software engineering
+      - software engineering post-quantum
+      - engineering post-quantum cryptography
+      - qkd pqc
+      - hybrid qkd
+    questions:
+      - question: How long does a typical PQC migration take for an enterprise?
+        answer: Migration timelines depend on codebase size, cryptographic dependency count, and organisational readiness. Wahlang and Vidhani's automated tooling can accelerate Python migrations, but manual review remains necessary. For large enterprises, expect multi-year migration programmes with phased rollout. The critical first step, cryptographic inventory, can begin immediately.
+      - question: Can I use TLS 1.3 for PQC deployment without protocol changes?
+        answer: Yes. TLS 1.3 supports PQC through its extensible `key_share` and `signature_algorithms` mechanisms. PQC key encapsulation and signatures can be negotiated within the existing handshake framework. This is one of PQC's major practical advantages over QKD, which requires entirely new infrastructure.
+      - question: What programming languages does automated PQC code migration support?
+        answer: As of the reviewed literature, only Python is covered by ccPASTpqc. Production cryptographic code in C/C++, Java, Go, and Rust requires manual migration or purpose-built tooling that does not yet exist. This is a significant research and tooling gap.
+      - question: Should I train my team on PQC before starting migration?
+        answer: Yes. The reviewed educational programmes consistently show that hands-on understanding of PQC operations improves migration quality and reduces errors. Deploy awareness-level training immediately for all technical staff, and proficiency-level training for security teams before they begin migration work.
+      - question: Is "Post-Quantum Cryptography" the same as "quantum cryptography"?
+        answer: No. Post-quantum cryptography uses classical (non-quantum) algorithms designed to resist attacks from quantum computers. Quantum cryptography uses quantum mechanical phenomena (photon polarisation) for key distribution. The terminology confusion is documented in the educational literature. "Quantum-Resistant Cryptography" is a clearer term.
+  post-quantum-cryptography-sector-deployment-integration-patterns:
+    title: "Post-Quantum Cryptography in Practice: Sector-Specific Deployment and Integration Patterns"
+    url: "/post-quantum-cryptography-sector-deployment-integration-patterns"
+    keywords:
+      - iot
+      - post-quantum
+      - cryptography
+      - blockchain
+      - pqc
+      - security
+      - systems
+      - cloud
+      - integration
+      - infrastructure
+      - deployment
+      - sector-specific
+      - automotive
+      - energy
+      - patterns
+      - covert
+      - critical
+      - engineering
+      - performance
+      - communications
+      - grid
+      - production
+      - threat
+      - cybersecurity
+      - gap
+      - analysis
+      - appendix
+      - applied
+      - architecture
+      - challenge
+      - convergent
+      - dilithium
+      - evidence
+      - kyber
+      - notes
+      - quantum
+      - post-quantum cryptography
+      - iot security
+      - critical infrastructure
+      - cloud security
+    key_phrases:
+      - post-quantum cryptography
+      - iot blockchain
+      - cloud security
+      - critical infrastructure
+      - covert communications
+      - post-quantum cryptography iot
+      - cryptography iot security
+      - iot security blockchain
+      - security blockchain critical
+      - blockchain critical infrastructure
+      - systems integration
+      - security systems
+      - cybersecurity systems engineering
+      - infrastructure cloud
+      - blockchain critical
+      - security blockchain
+      - iot security
+      - cryptography iot
+      - critical infrastructure cloud
+      - infrastructure cloud security
+      - systems engineering
+      - cybersecurity systems
+      - cloud security systems
+      - security systems integration
+    catchwords:
+      - post-quantum
+      - cryptography
+      - blockchain
+      - security
+      - systems
+      - cloud
+      - integration
+      - infrastructure
+      - deployment
+      - sector-specific
+      - automotive
+      - energy
+      - patterns
+      - covert
+      - critical
+      - engineering
+      - performance
+      - communications
+      - production
+      - threat
+      - cybersecurity
+      - analysis
+      - appendix
+      - applied
+      - architecture
+      - challenge
+      - convergent
+      - dilithium
+    search_words:
+      - iot
+      - post-quantum
+      - cryptography
+      - blockchain
+      - pqc
+      - security
+      - systems
+      - cloud
+      - integration
+      - infrastructure
+      - deployment
+      - sector-specific
+      - automotive
+      - energy
+      - patterns
+      - covert
+      - critical
+      - engineering
+      - post-quantum cryptography
+      - iot blockchain
+      - cloud security
+      - critical infrastructure
+      - covert communications
+      - post-quantum cryptography iot
+      - cryptography iot security
+      - iot security blockchain
+      - security blockchain critical
+      - blockchain critical infrastructure
+      - systems integration
+      - security systems
+    questions:
+      - question: Can IoT devices with limited memory support post-quantum cryptography?
+        answer: Kyber-768 requires approximately 2.4 KB of memory for public and private keys combined, which fits within the constraints of most 32-bit microcontrollers. However, no peer-reviewed benchmark validates PQC performance on production IoT hardware. Devices with less than 32 KB of available RAM may require hardware-accelerated PQC or lighter-weight constructions.
+      - question: Which sector is most urgently affected by the quantum threat?
+        answer: Energy grid infrastructure, due to the combination of multi-decade operational lifetimes (30+ years), cascading failure potential, and the use of legacy SCADA/ICS authentication mechanisms. The "harvest now, decrypt later" threat model means encrypted SCADA traffic captured today may be decryptable within the infrastructure's operational lifespan.
+      - question: Why does every applied PQC paper use Kyber and Dilithium?
+        answer: "NIST standardisation creates strong incentive alignment: library support, regulatory compliance, and interoperability expectations all favour the standardised algorithms. Kyber and Dilithium also offer the best performance on commodity hardware. The risk is systemic: if lattice assumptions weaken, the entire deployed portfolio is affected."
+      - question: Are there production deployments of post-quantum cryptography?
+        answer: Among the reviewed literature, no. All papers present conceptual frameworks, simulations, or small-scale prototypes. Production deployments with real users, real adversaries, and real operational constraints are absent. Broader industry efforts (Google's CECPQ2 experiment, Cloudflare's PQ TLS deployment) exist but are outside the scope of this academic review.
+      - question: How does PQC affect network performance?
+        answer: PQC key encapsulation adds approximately 1–3 ms to TLS handshakes depending on security level and hardware. PQC signatures (Dilithium) are larger than ECDSA signatures, increasing bandwidth consumption. For most applications, the overhead is negligible. For latency-sensitive systems (SCADA, real-time automotive), validated benchmarks on target hardware are essential before deployment.
 pages:
   zenith-law:
     title: Zenith Law Profile | Engineering Strategy and AI Governance

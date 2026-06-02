@@ -210,8 +210,13 @@ These limits apply to the synthesis itself, not only to the source papers. Both 
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Paper Metadata and Reference Details" %}
 
+### Author and Source Credibility
+
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from peer-reviewed papers published in IEEE Access, IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), IEEE ICDM, and IEEE ICSCDS proceedings. All referenced works are DOI-linked journal articles or conference papers reporting experimental results on representation learning across quantum semantic communications, unsupervised domain adaptation, and deep multi-kernel clustering.
+
 ### Appendix Table of Contents
 
+- [Author and Source Credibility](#author-and-source-credibility)
 - [Citability Snapshot](#citability-snapshot)
 - [Paper Metadata and Reference Details](#paper-metadata-and-reference-details)
 - [Terminology Definitions](#terminology-definitions)

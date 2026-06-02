@@ -221,15 +221,20 @@ Parity checks still matter because they expose silent preprocessing or CV mismat
 
 ## Conclusion
 
-The HAR benchmark shows a clear but nuanced result: SVM is robust and informative, while RF is stronger for the overlap profile in this run. The key outcome is diagnostic clarity about where and why each model family wins. Part 3 turns these diagnostics into a deployment governance playbook with explicit tuning, monitoring, and escalation controls.
+The HAR benchmark shows a clear but nuanced result: SVM is stable and informative, while RF is stronger for the overlap profile in this run. The main outcome is diagnostic clarity about where and why each model family wins. Part 3 turns these diagnostics into a deployment governance playbook with explicit tuning, monitoring, and escalation controls.
 
 ## Technical Appendix
 
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Scope, Claim Taxonomy, and Maintenance Notes" %}
 
+### Author and Source Credibility
+
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from peer-reviewed academic literature on support vector machines and human activity recognition. Sources include foundational SVM papers (Cortes and Vapnik 1995), benchmark dataset documentation from the UCI Machine Learning Repository, and conference and journal publications reporting classification experiments on inertial sensor data.
+
 ### Appendix Table of Contents
 
+- [Author and Source Credibility](#author-and-source-credibility)
 - [Citability Snapshot](#citability-snapshot)
 - [Benchmark Definitions](#benchmark-definitions)
 - [Scope and Claim Classification](#scope-and-claim-classification)
