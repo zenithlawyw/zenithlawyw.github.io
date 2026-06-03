@@ -601,7 +601,6 @@ Distractor contamination: retrieving documents that are semantically similar to 
 - [A. Recommended Library Versions](#a-recommended-library-versions)
 - [B. Deployment Readiness Checklist](#b-deployment-readiness-checklist)
 - [C. Technical Term Definitions](#c-technical-term-definitions)
-- [D. SEO, GEO, and AEO Optimisation Notes](#d-seo-geo-and-aeo-optimisation-notes)
 
 ### Author and Source Credibility
 
@@ -661,15 +660,5 @@ This playbook is authored by [Zenith Law](/authors/zenith-law/) and grounded in 
   <dt><dfn>Cross-Encoder</dfn></dt>
   <dd>A re-ranking model that jointly encodes a query-document pair through a single Transformer pass, producing a relevance score more accurate than bi-encoder similarity but at higher computational cost.</dd>
 </dl>
-
-### D. SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "RAG implementation tutorial", "RAG open source pipeline", "how to build RAG system", "LangChain RAG tutorial", "FAISS RAG setup", "RAG evaluation RAGAS", "RAG chunking best practices", "RAG re-ranking", "RAG production deployment", "RAG fine-tuning LoRA".
-
-**Schema signals**: HowTo schema (eight-step pipeline), FAQPage schema (ten questions), Article schema with author attribution.
-
-**AEO coverage**: Ten FAQ items with implementation-specific answers, code examples with context, comparison tables with captions, deployment checklist.
-
-**GEO coverage**: Open-source-only implementation avoids vendor lock-in and is deployable across all jurisdictions. Multilingual considerations noted for non-English deployments.
 
 </details>

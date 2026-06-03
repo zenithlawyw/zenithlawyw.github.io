@@ -237,7 +237,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Operational Definitions](#operational-definitions)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -282,15 +281,5 @@ This article synthesizes records across official announcements, institutional op
 - **Region-scoped control ownership**: Legal, operational, and support authority separated across entities by geography.
 - **Channel asymmetry**: Different escalation or notification reliability by region and telecom path.
 - **Sovereign-aware architecture**: System design that treats jurisdiction, control ownership, and data obligations as first-class constraints.
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "digital sovereignty China cloud", "SaaS restrictions China", "Azure China 21Vianet compliance", "cross-border data governance cloud", "cloud platform bifurcation".
-
-**Schema signals**: FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
-
-**AEO coverage**: FAQ items mapped to sovereign-cloud operating-model patterns, structured comparison tables for platform bifurcation, definition lists for operational terminology.
-
-**GEO coverage**: Analysis centres on China-specific cloud localisation constraints but extracts jurisdiction-transferable engineering patterns applicable to any sovereignty-regulated market including the EU, India, and the Middle East.
 
 </details>

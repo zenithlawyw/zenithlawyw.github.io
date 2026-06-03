@@ -390,7 +390,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Concurrency Term Reference](#concurrency-term-reference)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -445,16 +444,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 **Circular Wait**: A cycle in the resource-request graph in which thread T₁ waits for a resource held by thread T₂, thread T₂ waits for a resource held by thread T₃, …, thread Tₙ waits for a resource held by thread T₁.
 
 **Hold and Wait**: A condition in which a thread holds a resource while waiting for another resource. Breaking this condition prevents deadlock but requires either atomic multi-resource acquisition or forced release of all held resources before waiting.
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "deadlock prevention techniques", "Coffman conditions explained", "deadlock vs starvation", "resource contention cloud platforms", "LLM inference scheduling deadlock".
-
-**Schema signals**: FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
-
-**AEO coverage**: FAQ entries with prevention guidance, structured concurrency term reference, cross-domain Coffman-condition analysis across supply chains, cloud platforms, and LLM systems.
-
-**GEO coverage**: Deadlock theory and concurrency controls are universally applicable across computing environments; the cross-domain analysis covers supply-chain, cloud-platform, and LLM-inference contexts without geographic restriction.
 
 </details>
 

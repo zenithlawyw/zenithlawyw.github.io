@@ -370,7 +370,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Protocol Glossary](#protocol-glossary)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -445,15 +444,5 @@ An ACP-oriented description surface for discovery and interoperability, includin
 #### Structured validation
 
 Type-driven input or output validation, commonly implemented with Pydantic models or typed schemas to reduce ambiguity across service boundaries {% include references/cite.html key="mcpa2a-2026-ref11" %}.
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "agentic orchestration MCP A2A tutorial", "LangGraph LangChain multi-agent playbook", "open source AI agent stack", "Docker deployment for AI agents", "tenant-aware agent architecture".
-
-**Schema signals**: FAQPage schema with evidence-grounded answers, HowTo schema for implementation steps, Article schema with author attribution and datePublished.
-
-**AEO coverage**: FAQ implementation prompts, structured protocol glossary, citability snapshot with measurable deployment criteria, and package-level component references.
-
-**GEO coverage**: The open-source stack (FastAPI, LangGraph, Docker, OpenTelemetry) and protocol layers are globally available; cross-border orchestration controls and tenant isolation are explicitly addressed as design requirements.
 
 </details>

@@ -274,7 +274,6 @@ Retain policy-change history, failure and recovery evidence, intervention trends
 - [E. Example Component Matrix](#e-example-component-matrix)
 - [F. Initial Backlog for First 30 Days](#f-initial-backlog-for-first-30-days)
 - [G. Known Uncertainty Log](#g-known-uncertainty-log)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Author and Source Credibility
 
@@ -362,15 +361,5 @@ This playbook is authored by [Zenith Law](/authors/zenith-law/) and should be re
 2. Policy thresholds for autonomous spend require iterative calibration.
 3. Production key-management model depends on governance maturity.
 4. Several source items are preprint or non-peer-reviewed; pilot evidence is required before hard lock-in decisions.
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "Lightning Network implementation guide", "open source micropayment stack", "bitcoin lightning production deployment", "autonomous agent payments architecture", "LND vs Core Lightning comparison".
-
-**Schema signals**: HowTo schema for implementation workflow steps, FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
-
-**AEO coverage**: Implementation citability snapshot, control comparison matrix for early production, technical term definitions for idempotent payment intent and autonomy tiering, component matrix and 30-day backlog.
-
-**GEO coverage**: The playbook addresses cross-border corridor design with explicit references to FATF, BIS, and NIST standards; implementation patterns are jurisdiction-neutral with policy-externalised compliance hooks for regional adaptation.
 
 </details>

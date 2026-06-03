@@ -367,7 +367,6 @@ No. This review is strong for identifying retrieval pipeline priorities, evaluat
 - [D. Corpus Reviewed](#d-corpus-reviewed)
 - [E. Evidence Maturity Snapshot](#e-evidence-maturity-snapshot)
 - [F. Practical Translation Map](#f-practical-translation-map)
-- [G. SEO, GEO, and AEO Optimisation Notes](#g-seo-geo-and-aeo-optimisation-notes)
 
 ### Author and Source Credibility
 
@@ -458,15 +457,5 @@ Authoritative baseline links used in this review include:
 4. Healthcare deployment gap findings → domain-specific safety gate requirements.
 5. Fusion strategy findings → RAG + PEFT combined deployment pattern.
 6. GenIR evolution findings → strategic monitoring of generative retrieval developments.
-
-### G. SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "retrieval augmented generation guide", "RAG pipeline architecture", "RAG retrieval strategy", "RAG evaluation framework", "RAG noise sensitivity", "RAG healthcare", "RAG fine-tuning", "dense vs sparse retrieval RAG", "RAG production deployment".
-
-**Schema signals**: HowTo schema (six-step pipeline design), FAQPage schema (ten questions), Article schema with author attribution.
-
-**AEO coverage**: Ten FAQ items grounded in paper evidence, structured definition lists, comparison tables with captions, evidence confidence map.
-
-**GEO coverage**: Jurisdiction-neutral technical guidance applicable across deployment regions. Healthcare findings note language bias relevant to global deployment equity.
 
 </details>

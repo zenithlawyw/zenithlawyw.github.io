@@ -221,7 +221,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - [Citability Snapshot](#citability-snapshot)
 - [Paper Metadata and Reference Details](#paper-metadata-and-reference-details)
 - [Terminology Definitions](#terminology-definitions)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -307,15 +306,5 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
   <dt><dfn>Kernel mixing</dfn></dt>
   <dd>An adaptive approach that combines multiple kernels to better model heterogeneous manifold structures.</dd>
 </dl>
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "representation learning Hilbert spaces", "quantum NLP ZX-calculus", "unsupervised domain adaptation discriminability", "deep clustering kernel methods", "quantum semantic communications".
-
-**Schema signals**: Article schema with author attribution and datePublished, structured DOI-linked metadata table.
-
-**AEO coverage**: FAQ items with implementation guidance, structured paper-metadata table with DOI links, terminology definitions for semantic fidelity, target discriminability, and kernel mixing.
-
-**GEO coverage**: The synthesis covers international research venues (IEEE TPAMI, ACM, IEEE ICDM, IEEE ICSCDS) and addresses representation-learning methods that are domain-neutral and globally applicable across quantum computing, NLP, and computer vision research communities.
 
 </details>

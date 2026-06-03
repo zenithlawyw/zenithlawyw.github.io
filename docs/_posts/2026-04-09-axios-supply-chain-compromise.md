@@ -280,7 +280,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - [Authoritative Security Standards for Control Mapping](#authoritative-security-standards-for-control-mapping)
 - [Control Comparison: Baseline vs Resilient Supply Chain Practice](#control-comparison-baseline-vs-resilient-supply-chain-practice)
 - [Technical Term Definitions](#technical-term-definitions)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 <blockquote>
 <strong>Synthesis note:</strong> This article's control-first approach is consistent with the SSDF emphasis on repeatable secure software engineering practices.
@@ -344,15 +343,5 @@ These authoritative references provide governance-grade control baselines for te
   <dt><dfn>Quarantine dependency mirror</dfn></dt>
   <dd>A controlled internal package repository where new dependencies are held for policy checks, malware scanning, and human review before production use.</dd>
 </dl>
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "axios npm supply chain attack", "npm supply chain compromise prevention", "malicious npm package detection", "software supply chain security best practices", "npm postinstall malware defense".
-
-**Schema signals**: FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
-
-**AEO coverage**: FAQ items mapping incident forensics to actionable controls, structured IOC tables, control comparison matrix for baseline vs resilient supply chain practice.
-
-**GEO coverage**: Supply chain attack patterns and npm ecosystem defenses are jurisdiction-neutral; guidance applies globally to any organisation consuming open-source JavaScript dependencies.
 
 </details>

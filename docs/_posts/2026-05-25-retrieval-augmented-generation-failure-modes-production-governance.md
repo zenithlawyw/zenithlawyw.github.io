@@ -284,7 +284,6 @@ Implement scope-boundary detection: when all retrieved documents score below a c
 - [A. Failure Mode Summary Table](#a-failure-mode-summary-table)
 - [B. Evidence Boundary Notes](#b-evidence-boundary-notes)
 - [C. Technical Term Definitions](#c-technical-term-definitions)
-- [D. SEO, GEO, and AEO Optimisation Notes](#d-seo-geo-and-aeo-optimisation-notes)
 
 ### Author and Source Credibility
 
@@ -335,15 +334,5 @@ The empirical evidence in this article is concentrated in Cuconasu et al.'s expe
   <dt><dfn>Citation verification</dfn></dt>
   <dd>Comparing a generated claim against the specific retrieved passage to verify that the claim accurately represents the source, rather than merely confirming that a passage was retrieved.</dd>
 </dl>
-
-### D. SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "RAG failure modes", "RAG production governance", "RAG hallucination limitations", "RAG confidence calibration", "RAG corpus governance", "RAG red team testing", "RAG distractor contamination", "RAG audit compliance", "retrieval augmented generation risks", "RAG production deployment risks".
-
-**Schema signals**: HowTo schema (five-step failure mode mitigation), FAQPage schema (ten questions), Article schema with author attribution.
-
-**AEO coverage**: Ten FAQ items grounded in evidence-bounded findings, failure mode taxonomy table, confidence calibration signals table, technical definitions.
-
-**GEO coverage**: Jurisdiction-neutral governance guidance applicable across deployment regions. Regulatory references (HIPAA, GDPR) noted for domain-specific compliance.
 
 </details>

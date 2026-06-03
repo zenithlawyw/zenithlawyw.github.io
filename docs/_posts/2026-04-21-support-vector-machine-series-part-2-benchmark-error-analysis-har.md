@@ -242,7 +242,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - [Citability Snapshot](#citability-snapshot)
 - [Benchmark Definitions](#benchmark-definitions)
 - [Scope and Claim Classification](#scope-and-claim-classification)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -290,15 +289,5 @@ Results are intentionally scoped to the dataset, feature pipeline, split assumpt
 ### Reference and Maintenance Note
 
 Benchmark conclusions should be revisited when key dependencies, preprocessing contracts, or dataset distributions change. Re-run parity checks and class-corridor diagnostics after material library, feature-engineering, or data-governance updates.
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "SVM confusion matrix analysis", "UCI HAR SVM benchmark results", "SVM vs random forest HAR", "SVM error analysis class-level", "SVM misclassification corridor analysis".
-
-**Schema signals**: FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
-
-**AEO coverage**: Structured benchmark definitions, confusion-corridor diagnostics, class-level metric tables, and scope-bounded claim classification for retrieval precision.
-
-**GEO coverage**: Benchmark methodology and error-analysis techniques apply to any HAR or classification context globally; the UCI HAR dataset is publicly available without geographic restriction.
 
 </details>

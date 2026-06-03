@@ -266,7 +266,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - [Citability Snapshot](#citability-snapshot)
 - [Governance Definitions](#governance-definitions)
 - [Scope and Claim Classification](#scope-and-claim-classification)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -314,15 +313,5 @@ The workflow is designed as a practical baseline. Teams should adapt thresholds,
 ### Reference and Maintenance Note
 
 Production controls remain reliable only when they are continuously maintained. Revalidate thresholds, calibration behavior, drift triggers, and comparator performance on a regular cadence, and update runbooks when data contracts or tooling assumptions materially change.
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "SVM deployment production checklist", "SVM calibration monitoring strategy", "SVM retraining drift detection", "model governance SVM", "SVM incident response workflow".
-
-**Schema signals**: FAQPage schema with evidence-grounded answers, HowTo schema for tuning workflow steps, Article schema with author attribution and datePublished.
-
-**AEO coverage**: FAQ items with deployment and governance guidance, structured governance definitions, monitoring-layer and readiness-gate matrices, scope-bounded claim classification.
-
-**GEO coverage**: SVM deployment governance and MLOps controls are applicable across industries and regions; risk-management recommendations are designed to complement jurisdiction-specific regulatory requirements rather than replace them.
 
 </details>

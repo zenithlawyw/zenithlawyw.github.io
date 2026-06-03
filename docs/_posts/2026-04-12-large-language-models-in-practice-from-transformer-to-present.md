@@ -341,7 +341,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Terminology Definitions](#terminology-definitions)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -398,16 +397,6 @@ This synthesis is built from the video and scholarly corpus declared in the fron
 - This is a qualitative, non-systematic synthesis rather than a formal meta-analysis.
 - Frontier claims remain time-sensitive and may be revised by later empirical work.
 - Legal references are included for context and require jurisdiction-specific professional verification before use in formal advice or filings.
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "how LLMs work", "transformer architecture explained", "LLM alignment and governance", "prompt engineering best practices", "LLM hallucination prevention".
-
-**Schema signals**: FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
-
-**AEO coverage**: FAQ entries with direct practice guidance across five lifecycle stages, structured terminology definitions, citability snapshot with metric counts.
-
-**GEO coverage**: LLM engineering and governance guidance is jurisdiction-neutral; responsible-AI considerations reference international frameworks including the NIST AI RMF and the EU AI Act where applicable.
 
 </details>
 
