@@ -49,15 +49,15 @@ tags:
 
 ## Introduction
 
-Agentic AI systems are pushing enterprise software toward large-scale distributed coordination among models, tools, services, and humans. Protocol boundaries now shape delivery speed, operational risk, and cross-vendor interoperability as much as model quality does. Perhaps more.
+Enterprise software is drifting toward large-scale distributed coordination among models, tools, services, and humans. That drift is not gradual. Protocol boundaries now shape delivery speed, operational risk, and cross-vendor interoperability as much as model quality does; in practice, a poor protocol choice can neutralise a superior model entirely.
 
-[Model Context Protocol](https://modelcontextprotocol.io/) (MCP) standardizes model-to-capability access {% include references/cite.html key="mcpa2a-2026-ref1" %}, {% include references/cite.html key="mcpa2a-2026-ref2" %}. [Agent2Agent](https://a2a-protocol.org/latest/) (A2A) standardizes peer-agent collaboration with task lifecycle semantics {% include references/cite.html key="mcpa2a-2026-ref5" %}, {% include references/cite.html key="mcpa2a-2026-ref6" %}. [Agent Communication Protocol](https://agentcommunicationprotocol.dev/introduction/welcome) (ACP) introduced a REST-oriented agent interoperability model with async-first behavior, discovery, and multimodal messaging {% include references/cite.html key="mcpa2a-2026-ref17" %}, {% include references/cite.html key="mcpa2a-2026-ref18" %}. Three protocols. Three different answers to the question of how autonomous systems should talk to each other.
+[Model Context Protocol](https://modelcontextprotocol.io/) (MCP) standardizes model-to-capability access {% include references/cite.html key="mcpa2a-2026-ref1" %}, {% include references/cite.html key="mcpa2a-2026-ref2" %}. [Agent2Agent](https://a2a-protocol.org/latest/) (A2A) standardizes peer-agent collaboration with task lifecycle semantics {% include references/cite.html key="mcpa2a-2026-ref5" %}, {% include references/cite.html key="mcpa2a-2026-ref6" %}. [Agent Communication Protocol](https://agentcommunicationprotocol.dev/introduction/welcome) (ACP) introduced a REST-oriented agent interoperability model with async-first behavior, discovery, and multimodal messaging {% include references/cite.html key="mcpa2a-2026-ref17" %}, {% include references/cite.html key="mcpa2a-2026-ref18" %}. Three protocols, three fundamentally incompatible assumptions about how autonomous systems should negotiate with each other.
 
 ACP is historically important in this comparison and still useful for architecture reasoning. It is also in transition. As of May 2026, ACP maintainers publicly described merger work into A2A under Linux Foundation collaboration, with migration guidance for existing ACP adopters {% include references/cite.html key="mcpa2a-2026-ref19" %}, {% include references/cite.html key="mcpa2a-2026-ref20" %}.
 
 ## Scope and Method
 
-This review compares MCP, A2A, and ACP against enterprise deployment constraints rather than protocol marketing claims. Source inputs include official specifications, protocol documentation, ACP OpenAPI materials, and ACP-to-A2A transition notices {% include references/cite.html key="mcpa2a-2026-ref2" %}, {% include references/cite.html key="mcpa2a-2026-ref5" %}, {% include references/cite.html key="mcpa2a-2026-ref18" %}, {% include references/cite.html key="mcpa2a-2026-ref19" %}.
+Marketing claims are plentiful. This review ignores them. Instead, MCP, A2A, and ACP are compared against enterprise deployment constraints: what actually breaks when you ship. Source inputs include official specifications, protocol documentation, ACP OpenAPI materials, and ACP-to-A2A transition notices {% include references/cite.html key="mcpa2a-2026-ref2" %}, {% include references/cite.html key="mcpa2a-2026-ref5" %}, {% include references/cite.html key="mcpa2a-2026-ref18" %}, {% include references/cite.html key="mcpa2a-2026-ref19" %}.
 
 Comparison dimensions:
 
@@ -96,19 +96,19 @@ Three claim classes are used throughout:
 
 ## MCP in Practical Terms
 
-MCP is a model-to-capability integration protocol. It uses [JSON-RPC](https://www.jsonrpc.org/) 2.0 between hosts, clients, and servers, treating servers as providers of resources, prompts, and tools. Clients can expose sampling, roots, and elicitation features back to servers {% include references/cite.html key="mcpa2a-2026-ref2" %}. The core design question is deceptively simple: what capabilities should the model-facing application make available to the model, under explicit user control?
+MCP is a model-to-capability integration protocol built on [JSON-RPC](https://www.jsonrpc.org/) 2.0. Hosts, clients, and servers occupy distinct roles: servers provide resources, prompts, and tools; clients can expose sampling, roots, and elicitation features back to servers {% include references/cite.html key="mcpa2a-2026-ref2" %}. The core design question sounds almost trivial. What capabilities should the model-facing application make available to the model, under explicit user control? In practice, answering that question correctly is where most MCP deployments succeed or fail.
 
 The answer becomes clearer when the primitives are separated. **Resources** are contextual data surfaces: safe, inspectable inputs to model reasoning. **Prompts** are reusable interaction templates and workflows. **Tools** are executable capabilities that may produce side effects and therefore require sharper consent and safety controls.
 
-That three-way separation is not cosmetic. The specification reinforces it with explicit security principles: user consent, privacy protection, tool safety, and approval for sampling requests are all first-order requirements {% include references/cite.html key="mcpa2a-2026-ref2" %}. MCP assumes that exposing capabilities to an LLM is powerful enough to deserve a protocol-level safety posture. Not an afterthought. Not optional UX polish. A design constraint.
+That three-way separation is not cosmetic. The specification reinforces it with explicit security principles: user consent, privacy protection, tool safety, and approval for sampling requests are all first-order requirements {% include references/cite.html key="mcpa2a-2026-ref2" %}. Why this rigidity? Because exposing capabilities to an LLM is powerful enough to deserve a protocol-level safety posture. Bolting safety onto a capability bus after launch is expensive, error-prone, and almost always incomplete.
 
 ## A2A in Practical Terms
 
-A2A is a peer-agent collaboration protocol. Its design question differs from MCP's: how should one autonomous system coordinate with another autonomous system without revealing internal reasoning, memory, or tool implementation?
+A2A solves a different problem. Where MCP asks "what should a model be allowed to call," A2A asks "how should one autonomous system coordinate with another autonomous system without revealing internal reasoning, memory, or tool implementation?"
 
 The answer centres on discovery, task creation, streaming updates, push notifications, multi-turn continuation, authenticated capability disclosure, and artifact delivery between independent agents {% include references/cite.html key="mcpa2a-2026-ref5" %}. The specification makes the posture explicit. A2A treats the **Task** as the central unit of work, uses **Messages** for communication turns, uses **Artifacts** for task outputs, and uses the **Agent Card** as the discovery manifest that advertises supported interfaces, skills, security schemes, and optional capabilities {% include references/cite.html key="mcpa2a-2026-ref5" %}. Long-running work gets a stronger built-in story than MCP provides.
 
-The protocol is also intentionally async-first. A task may complete immediately, continue in the background, pause in `TASK_STATE_INPUT_REQUIRED`, or move into `TASK_STATE_AUTH_REQUIRED` while another human or agent resolves authorization {% include references/cite.html key="mcpa2a-2026-ref5" %}. That makes A2A structurally well-suited to collaborative service workflows, approval chains, and multi-agent delegation trees where synchronous request-response would collapse under its own weight.
+The protocol is intentionally async-first. A task may complete immediately, continue in the background, pause in `TASK_STATE_INPUT_REQUIRED`, or stall in `TASK_STATE_AUTH_REQUIRED` while another human or agent resolves authorization {% include references/cite.html key="mcpa2a-2026-ref5" %}. Synchronous request-response collapses under multi-agent delegation trees. Anyone who has tried knows this viscerally. A2A's state machine gives collaborative service workflows, approval chains, and multi-step delegations a structural backbone that ad hoc polling cannot replicate.
 
 ## ACP in Practical Terms
 
@@ -124,7 +124,7 @@ Current status matters for architecture choices. As of May 2026, ACP contributor
 
 ## Scope of Comparison: Capability Bus, Task Bus, or REST Interop Bus
 
-The clearest design question is not “which protocol is the best.” The question is “which interaction boundary are you standardizing.”
+"Which protocol is the best" is the wrong question. It invites vendor allegiance, not engineering clarity. The productive question: which interaction boundary are you standardizing?
 
 | Dimension                    | MCP                                    | A2A                                                   | ACP                                                        |
 | ---------------------------- | -------------------------------------- | ----------------------------------------------------- | ---------------------------------------------------------- |
@@ -176,11 +176,11 @@ For greenfield strategy, this usually means preserving ACP design lessons while 
 
 ### Mistake 1: Treating agents as tools by default
 
-This usually looks attractive at prototype stage because a single tool call appears simpler than an agent handshake. The cost arrives later. The caller now has to invent task IDs, retries, continuation semantics, progress handling, artifact chunking, and permission boundaries that A2A already models natively.
+This looks attractive at prototype stage. A single tool call feels simpler than an agent handshake. Ship it. The cost surfaces later, sometimes months later, when the caller has to invent task IDs, retries, continuation semantics, progress handling, artifact chunking, and permission boundaries that A2A already models natively. By then the workarounds have calcified into production load-bearing code that nobody wants to rewrite.
 
 ### Mistake 2: Treating simple tools as mini-agents
 
-This introduces the opposite problem. If a remote action is basically “query this API” or “run this transformation,” wrapping it in agent discovery, task tracking, and peer negotiation can add latency and cognitive overhead without adding meaningful autonomy.
+The opposite failure mode. If a remote action is basically "query this API" or "run this transformation," wrapping it in agent discovery, task tracking, and peer negotiation adds latency and cognitive overhead without adding meaningful autonomy. Over-ceremony kills throughput.
 
 ### Mistake 3: Ignoring different trust boundaries
 
@@ -234,7 +234,7 @@ Use this rule set when choosing MCP, A2A, ACP, or hybrid layering:
 
 ## A Combined Architecture Is Usually the Strongest Outcome
 
-A common production pattern is layered, not exclusive. A front-door orchestrator or user-facing assistant communicates with specialist agents over A2A, each specialist uses MCP internally for tools and context, and REST-compatible ACP-style interfaces can bridge legacy integration surfaces where needed.
+The strongest production pattern is layered, not exclusive. A front-door orchestrator communicates with specialist agents over A2A; each specialist uses MCP internally for tool access and context retrieval; REST-compatible ACP-style interfaces bridge legacy integration surfaces where protocol-native adapters do not yet exist. Protocol monoculture is a liability. Layered composition is the pragmatic default.
 
 The article on [building agentic orchestration with MCP, A2A, LangGraph, and LangChain](/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook) turns this comparison into a concrete open-source stack, testing plan, and deployment blueprint.
 
@@ -291,7 +291,7 @@ Prototype the smallest honest boundary. Start with MCP if you are exposing a con
 
 ## Conclusion
 
-The useful comparison is not “which protocol wins.” The useful comparison is “which interaction boundary is being standardized for your enterprise context.” MCP standardizes controlled capability access, A2A standardizes peer-agent collaboration, and ACP contributes REST-oriented interoperability patterns that remain relevant during standards convergence. Systems that preserve these boundaries while designing for tenant awareness, cloud-native scale, vendor neutrality, cross-border operation, and human-in-the-loop clarity are better positioned for resilient agentic AI adoption.
+Pick the boundary, not the winner. MCP standardizes controlled capability access. A2A standardizes peer-agent collaboration. ACP contributes REST-oriented interoperability patterns that remain relevant during standards convergence. Systems that preserve these distinct boundaries while designing for tenant awareness, cloud-native scale, vendor neutrality, cross-border operation, and human-in-the-loop clarity are better positioned for resilient agentic AI adoption. Collapse the boundaries into a single protocol and you will spend the next two years untangling the consequences.
 
 ## Technical Appendix
 

@@ -47,7 +47,7 @@ tags:
 
 Models decay. Quietly, continuously, without raising exceptions. The SVM you validated last quarter is not the SVM serving predictions today: not because the code changed, but because the world underneath it did.
 
-Part 1 established the theory; Part 2 dissected benchmark diagnostics. This third instalment builds the operational scaffold: tuning workflows that are repeatable (not artisanal), calibration checks that catch probability drift before downstream systems act on stale confidence, monitoring corridors that distinguish healthy variance from silent degradation, and governance controls that make model retirement a planned event rather than an emergency.
+Part 1 established the theory. Part 2 dissected benchmark diagnostics. This third instalment builds the operational scaffold: tuning workflows that are repeatable rather than artisanal, calibration checks that catch probability drift before downstream systems act on stale confidence, and monitoring corridors that distinguish healthy variance from silent degradation. Governance controls belong here too, because model retirement should be a planned event, not a 2 a.m. incident call.
 
 This article provides technical operational guidance only and does not constitute legal advice; compliance obligations vary by jurisdiction, sector, and use context.
 This article is not legal advice.
@@ -80,7 +80,7 @@ For broader AI lifecycle controls, see [data provenance traceability](/data-prov
 
 ## Deployment Principle: Treat SVM as a Controlled System
 
-SVM quality in production depends heavily on control loops and not only on static hyperparameters. The most consistent teams formalize SVM operations as an iterative system:
+Static hyperparameters are not enough. SVM quality in production depends on control loops, and the teams that ship reliably tend to formalise SVM operations as an iterative system:
 
 1. Data-contract checks.
 2. Tuning and calibration gates.
@@ -88,7 +88,7 @@ SVM quality in production depends heavily on control loops and not only on stati
 4. Drift-triggered retraining.
 5. Post-release audit and learning capture.
 
-This pattern supports reproducibility and lowers institutional memory loss during handoffs.
+Why bother? Because reproducibility survives team turnover. Institutional memory evaporates during handoffs; explicit control loops do not.
 
 ## Step-by-Step Tuning Workflow
 
@@ -115,17 +115,17 @@ Select by a constrained metric set, not a single score:
 
 ### 4. Record stability, not only best score
 
-Capture fold variance and near-best regions. If performance only exists in a narrow peak, treat the model as high-maintenance under retraining.
+Capture fold variance and near-best regions. A narrow performance peak is a warning sign. If the best score vanishes with a small hyperparameter perturbation, expect high maintenance costs every time you retrain.
 
 ## Calibration and Decision Reliability
 
-Raw SVM margins are not calibrated probabilities by default. If downstream decisions use risk thresholds, add explicit calibration workflow ({% include references/cite.html key="svm-2026-ref5" %}; {% include references/cite.html key="svm-2026-ref6" %}).
+SVM margins look like scores. They are not probabilities. That distinction matters the moment downstream logic applies a risk threshold, because an uncalibrated 0.7 can mean wildly different things across classes. Add explicit calibration ({% include references/cite.html key="svm-2026-ref5" %}; {% include references/cite.html key="svm-2026-ref6" %}).
 
-Minimum calibration checks:
+Three calibration checks, minimum:
 
-1. Reliability by class, not only global.
+1. Reliability per class, not only global.
 2. Threshold sensitivity under scenario perturbations.
-3. Drift impact on confidence intervals after retraining.
+3. Confidence-interval stability after retraining (drift can silently widen intervals that previously looked tight).
 
 ## Monitoring Blueprint for Production
 
@@ -151,7 +151,7 @@ Track three layers.
 
 ## Governance Controls for Sustainable Operational Value
 
-A benchmark delivers value once. A reusable governance artifact delivers value over repeated releases. For sustained operational reliability, disclose records required by applicable law, then share additional records where organizational policy permits, while preserving non-waivable user and consumer rights:
+A benchmark delivers value once. Governance artifacts deliver value across every subsequent release. For sustained operational reliability, disclose records required by applicable law, then share additional records where organisational policy permits, while preserving non-waivable user and consumer rights:
 
 1. Dataset and split protocol.
 2. Hyperparameter search space and selected region.
@@ -159,7 +159,7 @@ A benchmark delivers value once. A reusable governance artifact delivers value o
 4. Calibration artifacts.
 5. Known failure corridors and mitigations.
 
-This shifts quality from isolated results to reproducible practice.
+The payoff is concrete: quality stops being a snapshot and becomes a reproducible practice that survives personnel changes.
 
 ## Deployment Readiness Gates Before Promotion
 
@@ -170,30 +170,32 @@ Before release, define non-negotiable gates that tie model behavior to operation
 3. Calibration reliability bounds for threshold-driven actions.
 4. Drift budget limits that trigger rollback or constrained rollout.
 
-These gates reduce the chance of approving models that look acceptable in aggregate but fail in classes that drive user harm or support cost.
+Skip these gates and you will eventually ship a model that looks fine in aggregate while silently failing in the exact classes that drive user harm or support cost. I have seen it happen with a single overlooked minority class.
 
 ## Comparator Retention and Model-Risk Management
 
-Production governance improves when at least one comparator model is retained in scheduled retraining. This avoids silent lock-in to a degraded inductive bias and preserves evidence for architecture changes when data geometry shifts.
+Lock-in is the quiet killer. When retraining runs only one architecture, there is no signal that the inductive bias has degraded; everything looks stable until it isn't. Retaining at least one comparator model in scheduled retraining preserves the evidence base for architecture changes when data geometry shifts.
 
-A practical pattern is:
+A practical pattern:
 
 1. Keep SVM and one non-SVM comparator in recurring evaluation.
 2. Track delta by class, not only global metrics.
 3. Require explicit rationale when retiring a comparator.
 
-This aligns model operations with established reliability practice: maintain alternatives until evidence justifies consolidation.
+Maintain alternatives until evidence justifies consolidation. This is not theoretical caution; it is standard reliability engineering applied to ML.
 
 ## Post-Incident Review Loop for Classifier Systems
 
-When a corridor breach or calibration incident occurs, use a structured review loop:
+Something broke. Now what?
+
+When a corridor breach or calibration incident occurs, resist the urge to patch and move on. Use a structured review loop instead:
 
 1. Reconstruct the data slice and preprocessing state for the incident window.
 2. Recompute class-level diagnostics under the prior and current model versions.
 3. Identify whether failure was caused by geometry shift, threshold policy, or pipeline drift.
 4. Document permanent controls (feature change, threshold change, retraining trigger, or rollback rule).
 
-This review discipline converts incidents into measurable controls rather than ad hoc one-time fixes.
+Ad hoc fixes accumulate technical debt. Structured reviews convert incidents into measurable, durable controls.
 
 ## Model Selection Rule Under Operational Constraints
 
@@ -227,7 +229,7 @@ To keep user engagement sustainable and reduce cognitive burden for multidimensi
 3. Add explicit cross-links so you can enter at any level.
 4. Provide stable reference anchors and change logs between parts.
 
-This cadence supports you regardless of background or time budget while preserving analytical depth.
+Read in sequence or jump to whichever layer matches your current problem. Either way, each piece stands on its own while linking back to the full evidence chain.
 
 ## Practitioner Questions
 
@@ -249,7 +251,7 @@ Publish reproducible artifacts, versioned diagnostics, and post-release failure 
 
 ## Conclusion
 
-SVM can remain a high-quality production option when teams operationalize it as a governed system: controlled preprocessing, evidence-driven tuning, explicit calibration, and class-level monitoring. Long-term value comes from transparent iteration and reproducible diagnostics, not from one benchmark snapshot.
+SVM can remain a high-quality production option, but only when teams treat it as a governed system. Controlled preprocessing, evidence-driven tuning, explicit calibration, class-level monitoring: none of these is optional if you want durable performance. Long-term value comes from transparent iteration and reproducible diagnostics. One benchmark snapshot proves nothing six months later.
 
 ## Technical Appendix
 

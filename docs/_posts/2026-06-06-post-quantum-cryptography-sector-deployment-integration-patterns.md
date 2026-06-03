@@ -61,13 +61,13 @@ tags:
 
 Standards are finalised. Algorithms are selected. Nobody is deployed.
 
-That gap is what this article maps. The [theoretical foundations](/post-quantum-cryptography-theoretical-foundations-reconceptualisation) and [migration pathways](/post-quantum-cryptography-standards-migration-workforce-readiness) are documented elsewhere in this series, but documentation is not deployment. An IoT sensor running on 64 KB of RAM, a cloud CSPM platform processing terabytes of security telemetry, an energy grid engineered to operate for 30 years, a vehicle OTA channel pushing firmware at motorway speeds: each of these operates under constraints so different from the others that "deploy PQC" is not one engineering problem. It is a family of problems sharing an algorithm portfolio.
+That gap is what this article maps. The [theoretical foundations](/post-quantum-cryptography-theoretical-foundations-reconceptualisation) and [migration pathways](/post-quantum-cryptography-standards-migration-workforce-readiness) are documented elsewhere in this series, but documentation is not deployment. Consider the spread: an IoT sensor running on 64 KB of RAM, a cloud CSPM platform ingesting terabytes of security telemetry, an energy grid engineered to survive thirty years of service, a vehicle OTA channel pushing firmware at motorway speeds. These environments share nothing except a need for quantum-resistant cryptography. "Deploy PQC" is not one engineering problem. It is a family of problems that happen to draw from the same algorithm portfolio.
 
-What follows is a sector-by-sector examination of how those constraints shape integration decisions. One finding needs to be stated upfront, because it colours everything that follows: no reviewed paper reports a live production deployment. Every result is from a simulation, a prototype, or a conceptual framework. The publication volume is impressive. The operational footprint is zero.
+What follows is a sector-by-sector examination of how those constraints shape real integration decisions. But one finding needs stating upfront because it colours everything else: no reviewed paper reports a live production deployment. Not one. Every result comes from a simulation, a prototype, or a conceptual framework. Publication volume? Impressive. Operational footprint? Zero.
 
 ## Convergent Pattern: Kyber/Dilithium Dominance
 
-Across all reviewed applied papers, one pattern is universal: CRYSTALS-Kyber (ML-KEM) for key encapsulation and CRYSTALS-Dilithium (ML-DSA) for digital signatures are the default choices. No applied paper evaluates or deploys a non-lattice primary PQC algorithm. This uniformity is rational (NIST standardisation, library availability, performance characteristics) but it creates a concentration risk that none of the papers acknowledge.
+One pattern is universal across every applied paper reviewed here: CRYSTALS-Kyber (ML-KEM) for key encapsulation, CRYSTALS-Dilithium (ML-DSA) for digital signatures. Full stop. No applied paper evaluates or deploys a non-lattice primary PQC algorithm. The uniformity makes sense (NIST standardisation, library availability, solid performance characteristics), but it also creates a concentration risk. None of the papers acknowledge this.
 
 <figure markdown="1">
 
@@ -83,15 +83,15 @@ Across all reviewed applied papers, one pattern is universal: CRYSTALS-Kyber (ML
 <figcaption>Table 1: PQC algorithm selection across reviewed sector-specific deployments.</figcaption>
 </figure>
 
-This convergence is pragmatic. Kyber and Dilithium offer the best performance-to-security ratio on commodity hardware, and NIST endorsement removes procurement and compliance friction. But there is a systemic risk that none of the reviewed papers acknowledge: the entire applied PQC deployment ecosystem sits on a single mathematical family. Lattice problems. If a lattice-breaking technique emerges, whether from quantum or classical cryptanalysis, the entire portfolio is compromised at once. Not just one sector. All of them.
+This convergence is pragmatic. Kyber and Dilithium offer the strongest performance-to-security ratio on commodity hardware; NIST endorsement removes procurement and compliance friction. But look at what that convergence means systemically: the entire applied PQC deployment ecosystem sits on a single mathematical family. Lattice problems. If a lattice-breaking technique emerges (quantum or classical, it does not matter which), the entire portfolio collapses at once. Not just one sector. All of them, simultaneously.
 
-This is worth dwelling on because the lesson from SIKE and Rainbow is recent enough that the community should know better. Those breaks came from classical mathematics, not quantum computing. The lattice community's response has been, essentially, "our problems are different and better studied." Maybe. But the time horizon over which these algorithms must survive is measured in decades, and the number of mathematicians who have seriously tried to break Module-LWE is a tiny fraction of those who spent careers attacking integer factorisation. Confidence in lattice security is rational but provisional, and provisionally confident is not the same thing as safe.
+The lesson from SIKE and Rainbow is recent enough that the community should know better. Those breaks came from classical mathematics, not quantum computing. The lattice community's response has been, essentially, "our problems are different and better studied." Maybe so. But consider the timescales: these algorithms must survive decades, and the number of mathematicians who have seriously attempted to break Module-LWE remains a tiny fraction of those who spent entire careers attacking integer factorisation. Rational confidence? Yes. Provisional confidence? Also yes. And provisionally confident is not the same thing as safe.
 
 > **Strategic implication:** Crypto-agility at the deployment architecture level, not just the library level, is the mitigation. None of the reviewed implementations demonstrate it.
 
 ## IoT and Blockchain: Quantum-Resistant Distributed Trust
 
-IoT systems face a compound security problem. The devices are resource-constrained. The communication channels are wireless and often unauthenticated at the physical layer. The trust models tend toward centralisation, which creates single points of failure that a sufficiently motivated attacker can target. Several research groups have proposed blockchain as a decentralised trust anchor, with PQC protecting both on-chain and off-chain operations {% include references/cite.html key="11491399" %} {% include references/cite.html key="10866709" %} {% include references/cite.html key="11398533" %}.
+IoT security is a compound problem, and every piece of it is hard. Devices are resource-constrained. Communication channels are wireless, often unauthenticated at the physical layer. Trust models lean toward centralisation, creating exactly the single points of failure that a motivated attacker will target. Several research groups have responded by proposing blockchain as a decentralised trust anchor, with PQC protecting both on-chain and off-chain operations {% include references/cite.html key="11491399" %} {% include references/cite.html key="10866709" %} {% include references/cite.html key="11398533" %}.
 
 ### Fahomida et al.: CertiSense-PQ
 
@@ -111,7 +111,7 @@ The practical motivation is straightforward. If smart contracts manage property 
 
 ## Energy Grid: The Most Urgent Case
 
-Krishnan et al. make a case that the power grid is uniquely vulnerable to quantum attack, and it is a persuasive one {% include references/cite.html key="11212458" %}. Three factors converge. Grid infrastructure deployed today must remain secure for 30 years or more, which puts it well inside any plausible quantum timeline. SCADA and ICS protocols use authentication mechanisms designed in an era when computing threats to physical infrastructure seemed remote. And compromise in a power grid is not a data breach; it cascades into physical damage across interconnected networks.
+Krishnan et al. make a case that the power grid is uniquely vulnerable to quantum attack {% include references/cite.html key="11212458" %}. It is a persuasive one. Three factors converge: grid infrastructure deployed today must remain secure for 30 years or more, placing it well inside any plausible quantum timeline; SCADA and ICS protocols use authentication mechanisms designed in an era when computing threats to physical infrastructure seemed remote; and compromise in a power grid is not a data breach. It cascades into physical damage across interconnected networks. Blackouts, equipment destruction, cascading faults.
 
 ### The STRIDE-Guided Assessment
 
@@ -161,9 +161,9 @@ Nakka et al. focus on a specific, high-consequence problem: securing over-the-ai
 
 ## Cloud Security: Quantum-Resistant Posture Management
 
-Joseph et al. take a different angle entirely {% include references/cite.html key="11324504" %}. Rather than replacing encryption in transit, they propose integrating PQC into cloud security posture management (CSPM) systems: Kyber-encrypted threat intelligence sharing between agents across multi-cloud environments, PQC-authenticated security events for quantum-resistant audit trails, and LWE-derived feature extraction for detecting cryptographic downgrade attacks.
+Joseph et al. take a different angle {% include references/cite.html key="11324504" %}. Forget replacing encryption in transit; they propose integrating PQC into cloud security posture management (CSPM) systems: Kyber-encrypted threat intelligence sharing between agents across multi-cloud environments, PQC-authenticated security events for quantum-resistant audit trails, and LWE-derived feature extraction for detecting cryptographic downgrade attacks.
 
-Cloud environments face fewer resource constraints than IoT or automotive, so the mechanical difficulty of deploying PQC is lower. The challenge is operational. Coordinating PQC across multi-cloud CSPM agents means getting multiple cloud vendors to agree on implementation details, interoperability testing, and timeline. That kind of coordination does not exist at scale today.
+Cloud environments face fewer resource constraints than IoT or automotive, so the mechanical difficulty of deploying PQC drops considerably. The challenge is operational, not computational. Coordinating PQC across multi-cloud CSPM agents means getting multiple cloud vendors to agree on implementation details, interoperability testing, and timeline. Anyone who has attempted multi-vendor security coordination knows how realistic that sounds.
 
 ### Multi-Cloud Integration Architecture
 
@@ -211,17 +211,17 @@ Kyber and Dilithium as default selection is a pragmatic choice backed by NIST st
 
 ### The Prototype-to-Production Gap
 
-This is the single most important finding across the sector-specific literature, and it deserves direct language. Every paper reviewed here presents a conceptual framework, a simulation, or a small-scale prototype. None reports a production deployment. No real users, no real adversaries, no real operational constraints.
+This is the single most important finding across the sector-specific literature. Every paper reviewed here presents a conceptual framework, a simulation, or a small-scale prototype. None reports a production deployment. No real users. No real adversaries. No real operational constraints pushing back against elegant diagrams.
 
-The gap is not unique to PQC; the field received its first formal standards only in 2024. But the implication for practitioners is that performance claims, security assurances, and integration architectures from these papers have not been stress-tested in environments where things actually break.
+Is this unique to PQC? No; the field received its first formal standards only in 2024. But for practitioners the implication is blunt: performance claims, security assurances, and integration architectures from these papers have not been stress-tested in environments where things actually break. Simulated success is not operational success.
 
 ## Takeaways
 
-Kyber and Dilithium dominate every sector examined here. The reason is straightforward: NIST endorsement, library availability, and competitive performance on commodity hardware. But universal adoption of a single mathematical family creates a concentration risk that the applied literature has not confronted. If lattice assumptions weaken, every sector loses its PQC portfolio at once. Crypto-agility at the architecture level, not merely the library API level, is the only hedge, and none of the reviewed implementations provide it.
+Kyber and Dilithium dominate every sector examined here. Why? NIST endorsement, library availability, competitive performance on commodity hardware. Straightforward incentives, rational outcomes. But universal adoption of a single mathematical family creates a concentration risk that the applied literature has simply refused to confront. If lattice assumptions weaken, every sector loses its PQC portfolio at once; not sequentially, but simultaneously. The only hedge is crypto-agility at the architecture level (not merely the library API level), and none of the reviewed implementations provide it.
 
-The prototype-to-production gap is the field's primary bottleneck. IoT and blockchain generate the most proposals. Energy grids face the most acute urgency, with 30-year asset lifetimes that already exceed Mosca's inequality for many data categories, yet they have the least validated benchmarks on actual SCADA hardware. Automotive OTA channels fit within ECU memory and latency constraints on paper, but vehicle lifespans of 15 to 20 years mean that PQC decisions made in the next few model years will determine whether those vehicles are quantum-vulnerable or quantum-resistant for their entire service life.
+The prototype-to-production gap remains the field's primary bottleneck. IoT and blockchain generate the most proposals; energy grids face the most acute urgency, with 30-year asset lifetimes that already exceed Mosca's inequality for many data categories. Yet energy has the least validated benchmarks on actual SCADA hardware. Automotive OTA channels fit within ECU memory and latency constraints on paper, but vehicle lifespans of 15 to 20 years mean that PQC decisions made in the next two or three model years will lock in whether those vehicles are quantum-vulnerable or quantum-resistant for their entire service life. The window for getting this right is closing.
 
-Algorithm selection is the solved problem. Integration architecture, constrained-device performance, and cross-vendor interoperability are not.
+Algorithm selection? Solved. Integration architecture, constrained-device performance, cross-vendor interoperability? Not even close.
 
 ---
 
