@@ -46,7 +46,7 @@ The objective is practical explainability. Each lesson connects observable evide
 
 This article distinguishes incident-confirmed observations, cross-source inferences, and open questions. Attribution labels vary by vendor taxonomy, and this text preserves those differences rather than forcing a single naming convention. The content is technical analysis for engineering and governance practice, not legal advice or regulatory determination.
 
-## Quick Definitions
+## Key Terms
 
 <dl>
   <dt><dfn>Supply chain compromise</dfn></dt>
@@ -125,13 +125,13 @@ This coherence supports an evidence-led position. The axios event matches an est
 
 ---
 
-## Ten Lessons from the axios npm Supply Chain Attack
+## Engineering Lessons from the axios Compromise
 
 ### 1. Maintainer Credential Security Is the Weakest Link in Open-Source Trust
 
 High-distribution packages concentrate systemic risk in a small identity surface. Reporting on the axios event shows how a maintainer credential compromise can bypass consumer assumptions that popularity implies safety {% include references/cite.html key="axios-2026-ref1" %}, {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}. Explainability improves when release provenance checks become mandatory during dependency intake, because teams can distinguish workflow-bound releases from opaque publication events {% include references/cite.html key="axios-2026-ref4" %}.
 
-**<ins>Actionable recommendation</ins>**: Enforce maintainers and consuming organizations to validate publication provenance metadata before promotion into production dependency mirrors. Gate high-impact package updates behind human review and signed pipeline evidence.
+**Recommendation**: Enforce maintainers and consuming organizations to validate publication provenance metadata before promotion into production dependency mirrors. Gate high-impact package updates behind human review and signed pipeline evidence.
 
 ---
 
@@ -139,7 +139,7 @@ High-distribution packages concentrate systemic risk in a small identity surface
 
 The injected dependency pattern demonstrates that manifest trust must be verified at resolution time, not assumed at declaration time {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}. Interpretability comes from comparing lockfile changes, transitive graph deltas, and script execution surfaces before deployment.
 
-**<ins>Actionable recommendation</ins>**: Pin versions for production builds, generate an SBOM for every build, and block promotion when transitive dependency diffs include unknown packages or newly introduced install scripts.
+**Recommendation**: Pin versions for production builds, generate an SBOM for every build, and block promotion when transitive dependency diffs include unknown packages or newly introduced install scripts.
 
 ---
 
@@ -147,7 +147,7 @@ The injected dependency pattern demonstrates that manifest trust must be verifie
 
 Microsoft and Sophos both describe install-time execution as the effective initial access stage after dependency resolution {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}. Trustworthy policy design treats lifecycle scripts as privileged execution events. A package install that runs code with network egress behaves like remote code execution from a risk perspective.
 
-**<ins>Actionable recommendation</ins>**: Default CI to script-disabled installs, then enforce an allowlist for packages that require lifecycle scripts for deterministic build reasons.
+**Recommendation**: Default CI to script-disabled installs, then enforce an allowlist for packages that require lifecycle scripts for deterministic build reasons.
 
 ---
 
@@ -155,7 +155,7 @@ Microsoft and Sophos both describe install-time execution as the effective initi
 
 Source reports explain that dependency ranges allowed malicious versions to resolve automatically in affected version bands {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}. This dynamic clarifies why speed of detection alone does not cap impact. Resolution policy defines exposure window.
 
-**<ins>Actionable recommendation</ins>**: Split dependency automation into two tracks. Use tightly controlled emergency security updates for critical packages and slower reviewed updates for all other packages.
+**Recommendation**: Split dependency automation into two tracks. Use tightly controlled emergency security updates for critical packages and slower reviewed updates for all other packages.
 
 ---
 
@@ -163,7 +163,7 @@ Source reports explain that dependency ranges allowed malicious versions to reso
 
 The second-stage payload behavior across operating systems confirms that endpoint and pipeline boundaries do not isolate risk once install-time execution begins {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}. Defenders should model developer systems as identity-bearing infrastructure with equivalent protection requirements.
 
-**<ins>Actionable recommendation</ins>**: Apply production-grade EDR controls to developer endpoints and hosted runners, then enforce rapid credential rotation playbooks when malicious dependency execution is confirmed.
+**Recommendation**: Apply production-grade EDR controls to developer endpoints and hosted runners, then enforce rapid credential rotation playbooks when malicious dependency execution is confirmed.
 
 ---
 
@@ -171,7 +171,7 @@ The second-stage payload behavior across operating systems confirms that endpoin
 
 Anti-forensic behavior reduces confidence in local artifact inspection alone. Reported self-deletion and manifest cleanup behavior in this incident exemplify that constraint {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}. Mandiant reporting on related actor tradecraft further supports reliance on independent telemetry planes for reconstruction {% include references/cite.html key="axios-2026-ref2" %}.
 
-**<ins>Actionable recommendation</ins>**: Preserve process, network, and file telemetry outside build workspaces. Trigger incident workflows from telemetry correlation, not from package directory inspection alone.
+**Recommendation**: Preserve process, network, and file telemetry outside build workspaces. Trigger incident workflows from telemetry correlation, not from package directory inspection alone.
 
 ---
 
@@ -179,7 +179,7 @@ Anti-forensic behavior reduces confidence in local artifact inspection alone. Re
 
 Mandiant documents social engineering that exploited live trust channels and induced command execution under collaboration pretexts {% include references/cite.html key="axios-2026-ref2" %}. The maintainer response adds practitioner-level evidence that such deception patterns can defeat experienced technical users under realistic pressure {% include references/cite.html key="axios-2026-ref5" %}.
 
-**<ins>Actionable recommendation</ins>**: Redesign training around execution refusal protocols. Any request to run terminal commands during a call should trigger verification by an independent channel before action.
+**Recommendation**: Redesign training around execution refusal protocols. Any request to run terminal commands during a call should trigger verification by an independent channel before action.
 
 ---
 
@@ -187,7 +187,7 @@ Mandiant documents social engineering that exploited live trust channels and ind
 
 Public takedown speed reduced further spread, yet did not reverse completed execution on already affected systems {% include references/cite.html key="axios-2026-ref1" %}, {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}. This distinction matters for trustworthiness metrics. Registry cleanup measures publication risk. It does not measure host compromise already in progress.
 
-**<ins>Actionable recommendation</ins>**: Start incident response at detection time, not at package removal time. Hunt all systems that resolved or installed affected versions during the exposure interval.
+**Recommendation**: Start incident response at detection time, not at package removal time. Hunt all systems that resolved or installed affected versions during the exposure interval.
 
 ---
 
@@ -195,7 +195,7 @@ Public takedown speed reduced further spread, yet did not reverse completed exec
 
 The event illustrates a structural issue in ecosystem trust. Credentials can remain valid while behavior turns malicious {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}. Better interpretability requires post-publication controls that can quarantine suspicious versions before production adoption.
 
-**<ins>Actionable recommendation</ins>**: Operate a private dependency mirror with quarantine promotion rules and behavioral scanning before release to production consumers. Provenance frameworks such as the Supply-chain Levels for Software Artifacts (SLSA) can support this model {% include references/cite.html key="axios-2026-ref7" %}.
+**Recommendation**: Operate a private dependency mirror with quarantine promotion rules and behavioral scanning before release to production consumers. Provenance frameworks such as the Supply-chain Levels for Software Artifacts (SLSA) can support this model {% include references/cite.html key="axios-2026-ref7" %}.
 
 ---
 
@@ -203,7 +203,7 @@ The event illustrates a structural issue in ecosystem trust. Credentials can rem
 
 Microsoft guidance and vendor reporting emphasize package-manager-specific investigation patterns, including dependency inventory hunting, pipeline log review, and indicator-led endpoint triage {% include references/cite.html key="axios-2026-ref3" %}, {% include references/cite.html key="axios-2026-ref4" %}. Response quality improves when software, platform, and security teams work from one playbook with shared evidence standards.
 
-**<ins>Actionable recommendation</ins>**: Maintain a dedicated npm compromise runbook and exercise it in tabletop drills that include engineering, platform, and SOC roles.
+**Recommendation**: Maintain a dedicated npm compromise runbook and exercise it in tabletop drills that include engineering, platform, and SOC roles.
 
 ---
 
@@ -229,7 +229,7 @@ The following indicators originate from Microsoft Threat Intelligence and Sophos
 
 ---
 
-## Frequently Asked Questions
+## Common Questions
 
 ### What happened in the 2026 axios npm supply chain compromise for axios npm supply chain attack?
 

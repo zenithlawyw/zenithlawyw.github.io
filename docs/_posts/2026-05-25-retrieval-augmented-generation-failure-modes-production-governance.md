@@ -4,7 +4,7 @@ title: "Retrieval-Augmented Generation: Failure Modes, Confidence Calibration, a
 author: Zenith Law
 description: "RAG failure modes and production governance: distractor contamination, confidence calibration, corpus authority, conflicting evidence handling, provenance logging, and the gap between demo-quality and production-quality RAG systems."
 permalink: /retrieval-augmented-generation-failure-modes-production-governance
-intro: "The companion evidence review established what the RAG literature supports; the implementation playbook translated those findings into code. This third article addresses what can go wrong: the failure modes that standard RAG tutorials omit, the governance controls that production systems require, and the confidence calibration practices that separate reliable systems from dangerously plausible ones."
+intro: "The evidence review established what the RAG literature supports; the implementation playbook translated those findings into code. This third article addresses what can go wrong: the failure modes that standard RAG tutorials omit, the governance controls that production systems require, and the confidence calibration practices that separate reliable systems from dangerously plausible ones."
 related_posts:
   - title: "Retrieval-Augmented Generation: An Evidence Review"
     url: /retrieval-augmented-generation-evidence-review
@@ -58,7 +58,7 @@ tags:
 
 Most RAG tutorials end where production problems begin. A demonstration system that retrieves relevant documents and generates plausible answers can be built in an afternoon. A production system that handles contradictory evidence, communicates uncertainty, maintains corpus integrity over time, and fails gracefully under adversarial conditions requires a fundamentally different engineering posture.
 
-The [companion evidence review](/retrieval-augmented-generation-evidence-review) synthesised findings from the reviewed literature and noted their limitations. The [implementation playbook](/retrieval-augmented-generation-implementation-playbook) translated those findings into code. This article addresses the territory that both pieces deliberately flag but do not fully resolve: where RAG systems fail, how to detect those failures, and what governance structures prevent them from reaching users undetected.
+The [evidence review](/retrieval-augmented-generation-evidence-review) synthesised findings from the corpus and noted their limitations. The [implementation playbook](/retrieval-augmented-generation-implementation-playbook) translated those findings into code. This article addresses the territory that both pieces deliberately flag but do not fully resolve: where RAG systems fail, how to detect those failures, and what governance structures prevent them from reaching users undetected.
 
 > **Scope note:** The failure modes discussed here are grounded in the same corpus of reviewed literature. Where evidence is empirical, that is stated with the study's constraints. Where the discussion extends beyond what the papers directly measure (particularly governance, confidence calibration, and organisational controls), this is framed as engineering practice derived from the evidence rather than independently validated finding.
 
@@ -113,7 +113,7 @@ A RAG system's knowledge is only as current and authoritative as its corpus. Unl
 - **Authority drift** occurs when the corpus accumulates documents of declining quality over time: user-generated content, outdated blog posts, or superseded versions of official documentation.
 - **Contradictory additions** introduce opposing claims without any mechanism to flag the conflict.
 
-Li et al. position continual learning as a requirement for reliable information retrieval systems {% include references/cite.html key="10.1145/3722552" %}, but the practical mechanisms for maintaining corpus integrity over months and years of production operation are not addressed in the reviewed literature.
+Li et al. position continual learning as a requirement for reliable information retrieval systems {% include references/cite.html key="10.1145/3722552" %}, but the practical mechanisms for maintaining corpus integrity over months and years of production operation are not addressed in the literature reviewed here.
 
 ### Governance Controls
 
@@ -228,7 +228,7 @@ The reviewed corpus provides strong architectural foundations (Kimothi {% includ
 
 These gaps are not criticisms of the reviewed papers; each addresses its declared scope effectively. They are areas where production engineering practice must extend beyond what the literature currently validates, and teams should treat their own solutions to these problems as provisional until independent evidence accumulates.
 
-## Frequently Asked Questions
+## Questions on Failure Modes and Governance
 
 ### What is the most dangerous RAG failure mode?
 
@@ -285,7 +285,7 @@ Implement scope-boundary detection: when all retrieved documents score below a c
 
 ### Author and Source Credibility
 
-This article is authored by [Zenith Law](/authors/zenith-law/) and grounded in the same corpus of reviewed literature as the companion [evidence review](/retrieval-augmented-generation-evidence-review) and [implementation playbook](/retrieval-augmented-generation-implementation-playbook). Where the discussion extends beyond what the papers directly measure, this is stated explicitly.
+This article is authored by [Zenith Law](/authors/zenith-law/) and grounded in the same corpus as the [evidence review](/retrieval-augmented-generation-evidence-review) and [implementation playbook](/retrieval-augmented-generation-implementation-playbook). Where the discussion extends beyond what the papers directly measure, this is stated explicitly.
 
 ### A. Failure Mode Summary Table
 

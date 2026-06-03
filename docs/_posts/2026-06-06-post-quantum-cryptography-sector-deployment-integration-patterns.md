@@ -254,7 +254,7 @@ What the sector evidence reveals, consistently, is that algorithm selection is t
 
 ---
 
-## Frequently Asked Questions
+## Questions on Sector Deployment
 
 ### Can IoT devices with limited memory support post-quantum cryptography?
 

@@ -45,14 +45,14 @@ tags:
 
 This article performs a close, source-graded reading of the cited records that span corporate announcements, vendor documentation, university operational advisories, industry media, and community incident discussions. A clear pattern emerges. Foreign platforms operating in China move from globally uniform delivery models toward localized control models shaped by legal jurisdiction, data governance constraints, and market-access design {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}. Later records show this pattern extending into product-line divergence, region-specific service withdrawal, communication-channel asymmetry, and fragmented user access conditions {% include references/cite.html key="ds-2026-ref3" %}, {% include references/cite.html key="ds-2026-ref4" %}, {% include references/cite.html key="ds-2026-ref5" %}, {% include references/cite.html key="ds-2026-ref6" %}, {% include references/cite.html key="ds-2026-ref9" %}, {% include references/cite.html key="ds-2026-ref12" %}, {% include references/cite.html key="ds-2026-ref14" %}, {% include references/cite.html key="ds-2026-ref15" %}.
 
-The analysis applies qualitative NLP techniques to the corpus, including sentiment profiling, semantic clustering, and constrained counterfactual framing. The practical output is a ten-lesson framework for engineering, security, legal compliance, platform operations, and governance teams. Each lesson incorporates explainability, interpretability, and trustworthiness as embedded operational criteria, not as detached theory.
+The analysis applies qualitative NLP techniques to the corpus, including sentiment profiling, semantic clustering, and constrained counterfactual framing. The practical output is a lesson framework for engineering, security, legal compliance, platform operations, and governance teams. Each lesson incorporates explainability, interpretability, and trustworthiness as embedded operational criteria, not as detached theory.
 
 ### Jurisdiction and Interpretation Boundary
 
 This article evaluates operating-model evidence and user-impact reports across multiple source tiers. It does not infer political intent from a single event and does not treat community posts as standalone proof. Where records conflict or remain incomplete, the analysis preserves uncertainty and flags the gap.
 This article is not legal advice.
 
-## Quick Definitions
+## Terminology
 
 <dl>
   <dt><dfn>Digital sovereignty</dfn></dt>
@@ -71,7 +71,7 @@ This article is not legal advice.
   <dd>A system design that treats legal jurisdiction, data residency, and operator accountability as first-class architectural dimensions rather than deployment-time exceptions.</dd>
 </dl>
 
-## Why This Matters
+## Operational Context
 
 Cross-border cloud planning for China now requires jurisdiction-aware architecture by default. Earlier assumptions treated global SaaS as one coherent operating surface. The current record shows a segmented reality where service availability, feature parity, escalation pathways, and data handling behavior can diverge by billing region, control ownership, and legal exposure {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref6" %}, {% include references/cite.html key="ds-2026-ref10" %}, {% include references/cite.html key="ds-2026-ref11" %}, {% include references/cite.html key="ds-2026-ref14" %}.
 
@@ -121,69 +121,69 @@ Community discussions are valuable for rapid detection of user-impact surfaces a
 
 The linked yage.ai draft offers coherent synthesis scaffolding and explicit uncertainty notation {% include references/cite.html key="ds-2026-ref12" %}. AI-assisted composition, however, can produce fluent overreach if claims are not checked line by line. This analysis therefore treats that source as an interpretive aid rather than a primary factual anchor.
 
-## Ten Lessons for Engineering, Security, and Governance
+## Lessons for Engineering, Security, and Governance
 
 ### 1. Architectures Need Jurisdiction as a First-Class Dimension
 
 Global-default cloud design fails when legal domains impose divergent control requirements. Azure through 21Vianet and Salesforce through Alibaba show that regional entry can require structural operating redesign {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}. Explainability improves when architecture artifacts make legal boundary, data boundary, and operator boundary explicit.
 
-**<ins>Actionable recommendation</ins>**: define jurisdiction-aware reference architectures with mandatory controls for data placement, key custody path, and operator responsibility matrix before workload onboarding begins.
+**Practical step**: define jurisdiction-aware reference architectures with mandatory controls for data placement, key custody path, and operator responsibility matrix before workload onboarding begins.
 
 ### 2. Partnership Models Shift Accountability Maps
 
 Localization partnerships can preserve market access while fragmenting accountability for availability, incident response, and compliance attestation {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}. Interpretability depends on clear control mapping across legal entity, infrastructure operator, and customer-facing support responsibility.
 
-**<ins>Actionable recommendation</ins>**: maintain a living responsibility crosswalk that aligns contractual clauses, technical controls, and escalation paths for every partner-operated region.
+**Practical step**: maintain a living responsibility crosswalk that aligns contractual clauses, technical controls, and escalation paths for every partner-operated region.
 
 ### 3. Data Residency Must Be Engineered, Not Declared
 
 The corpus repeatedly links service viability to data localization and transfer-control obligations {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}, {% include references/cite.html key="ds-2026-ref14" %}. Trustworthiness increases when data lineage, replication policy, and egress authorization remain auditable across regions.
 
-**<ins>Actionable recommendation</ins>**: implement policy-driven data routing with immutable lineage logs and periodic legal-control reconciliation against jurisdiction-specific obligations.
+**Practical step**: implement policy-driven data routing with immutable lineage logs and periodic legal-control reconciliation against jurisdiction-specific obligations.
 
 ### 4. Product-Line Forking Requires Release Governance Discipline
 
 Unity records show region-specific engine divergence and ecosystem partitioning between global and China-specific channels {% include references/cite.html key="ds-2026-ref3" %}, {% include references/cite.html key="ds-2026-ref4" %}, {% include references/cite.html key="ds-2026-ref13" %}. Explainability for downstream teams requires explicit disclosure of parity gaps, deprecations, and compatibility limits.
 
-**<ins>Actionable recommendation</ins>**: run dual release trains with a formal divergence register and regression tests that detect behavior drift between region branches.
+**Practical step**: run dual release trains with a formal divergence register and regression tests that detect behavior drift between region branches.
 
 ### 5. Ecosystem Dependencies Can Fail Before Core Platform Access Fails
 
 Asset-store restrictions show that ecosystem dependencies may fail earlier than core engine access {% include references/cite.html key="ds-2026-ref4" %}. Interpretability improves when dependency inventories include legal availability tags, support lifecycle windows, and region-level distribution status.
 
-**<ins>Actionable recommendation</ins>**: add geo-availability and compliance attributes to software bill of materials workflows and block deployment when critical dependencies lack lawful regional distribution.
+**Practical step**: add geo-availability and compliance attributes to software bill of materials workflows and block deployment when critical dependencies lack lawful regional distribution.
 
 ### 6. Communication Infrastructure Carries Hidden Regulatory Friction
 
 Opsgenie support matrices and China-specific SMS caveats show that alert pathways can degrade under telecom and policy constraints {% include references/cite.html key="ds-2026-ref6" %}. Trustworthiness in incident response depends on tested channel diversity, not contractual entitlement alone.
 
-**<ins>Actionable recommendation</ins>**: design alerting with jurisdiction-scoped channel redundancy and quarterly failover drills that simulate provider-level SMS or voice interruption.
+**Practical step**: design alerting with jurisdiction-scoped channel redundancy and quarterly failover drills that simulate provider-level SMS or voice interruption.
 
 ### 7. User-Visible Access Continuity Requires Multi-Channel Notice Design
 
 Slack-related synthesis and incident narratives indicate that email-only notification can fail users during regional exits, especially when lockout precedes data export recovery {% include references/cite.html key="ds-2026-ref12" %}. Explainability requires transparent, user-verifiable communication inside the product interface.
 
-**<ins>Actionable recommendation</ins>**: enforce deprecation protocols that combine in-product notices, signed email notices, account-level timeline dashboards, and export checkpoints before suspension windows.
+**Practical step**: enforce deprecation protocols that combine in-product notices, signed email notices, account-level timeline dashboards, and export checkpoints before suspension windows.
 
 ### 8. AI Access Governance Now Extends Beyond Geolocation
 
 Anthropic reporting points to ownership-structure screening, while OpenAI reporting emphasizes location-based access blocking {% include references/cite.html key="ds-2026-ref10" %}, {% include references/cite.html key="ds-2026-ref11" %}. Interpretability now requires identity architecture that can evaluate legal control structure, billing region, and policy eligibility together.
 
-**<ins>Actionable recommendation</ins>**: build model-provider abstraction layers with preflight compliance checks and tested model-switch procedures for sudden policy denial events.
+**Practical step**: build model-provider abstraction layers with preflight compliance checks and tested model-switch procedures for sudden policy denial events.
 
 ### 9. Community Threads Function as Early Warning Sensors, Not Final Truth
 
 GitLab and GitHub community threads capture rapid field signals, including user-observed access patterns and quoted notices {% include references/cite.html key="ds-2026-ref9" %}, {% include references/cite.html key="ds-2026-ref15" %}. Trustworthiness requires a disciplined validation ladder that separates signal intake from formal confirmation.
 
-**<ins>Actionable recommendation</ins>**: integrate community-source monitoring into risk intelligence pipelines with mandatory corroboration gates before executive or customer communication.
+**Practical step**: integrate community-source monitoring into risk intelligence pipelines with mandatory corroboration gates before executive or customer communication.
 
 ### 10. Governance Maturity Depends on Region-Specific Trust Contracts
 
 The corpus shows persistent fragmentation pressure across cloud, collaboration, AI, and communication tooling {% include references/cite.html key="ds-2026-ref1" %}-{% include references/cite.html key="ds-2026-ref15" %}. Explainability, interpretability, and trustworthiness converge only when each region has explicit trust contracts that tie legal posture to technical safeguards, operational transparency, and user recourse.
 
-**<ins>Actionable recommendation</ins>**: publish region-specific trust playbooks that define service guarantees, data rights, migration rights, and incident response commitments in language mapped to technical enforcement controls.
+**Practical step**: publish region-specific trust playbooks that define service guarantees, data rights, migration rights, and incident response commitments in language mapped to technical enforcement controls.
 
-## Frequently Asked Questions
+## Questions and Clarifications
 
 ### How does Azure China under 21Vianet differ operationally from global Azure for digital sovereignty China?
 
@@ -199,7 +199,7 @@ Start by treating jurisdiction as a first-class architectural dimension rather t
 
 ### What does cloud platform bifurcation mean for enterprise reliability and governance for digital sovereignty China?
 
-Cloud bifurcation means a vendor maintains two structurally separate operating models for the same product: a global version and a localized version. For enterprise teams, this creates parity gaps in features, compliance attestations, security controls, and support coverage. It also introduces circular failure risk where a service withdrawal by either the global vendor or the regional partner cannot be resolved without both parties acting. The analysis in this article is grounded in documented operating structures from Microsoft, Salesforce, and Unity, mapped to OS-level circular-wait theory in the companion article on [deadlock and resource contention](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm) {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}.
+Cloud bifurcation means a vendor maintains two structurally separate operating models for the same product: a global version and a localized version. For enterprise teams, this creates parity gaps in features, compliance attestations, security controls, and support coverage. It also introduces circular failure risk where a service withdrawal by either the global vendor or the regional partner cannot be resolved without both parties acting. The analysis in this article is grounded in documented operating structures from Microsoft, Salesforce, and Unity, mapped to OS-level circular-wait theory in [deadlock and resource contention](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm) {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}.
 
 ### Does localization inherently reduce service quality, or expose architecture gaps for digital sovereignty China?
 

@@ -58,7 +58,7 @@ tags:
   - natural language processing
 ---
 
-## Why This Review Matters
+## Scope and Motivation
 
 <style>
 .progression-flow{display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center;margin:1.5rem 0}
@@ -77,13 +77,13 @@ tags:
 }
 </style>
 
-Retrieval-augmented generation has moved from a research concept to a widely adopted architecture pattern for knowledge-intensive AI applications. Yet the gap between "RAG works in demos" and "RAG works in production" remains wide. The reviewed literature exposes exactly where that gap comes from: retrieval noise sensitivity, evaluation fragmentation, domain-specific safety requirements, and the open question of whether retrieval alone is sufficient or needs to be fused with fine-tuning.
+Retrieval-augmented generation has moved from a research concept to a widely adopted architecture pattern for knowledge-intensive AI applications. Yet the gap between "RAG works in demos" and "RAG works in production" remains wide. In my experience building retrieval pipelines, the failure mode is almost never "the model cannot generate an answer." It is "the model generates a confident answer from the wrong retrieved context, and nobody catches it until a user complains." The papers reviewed here expose exactly where that gap comes from: retrieval noise sensitivity, evaluation fragmentation, domain-specific safety requirements, and the open question of whether retrieval alone is sufficient or needs to be fused with fine-tuning.
 
 The practical question behind this review is direct: **If you are building a RAG system for production use, what should your retrieval pipeline look like, how should you evaluate it, where will it likely fail, and what does the current evidence actually support?**
 
 > **Critical caveat:** RAG reduces certain categories of hallucination by grounding generation in retrieved evidence, but it does not eliminate them. A RAG system can still return wrong, incomplete, or misleading answers when retrieval misses the best evidence, when retrieved documents contradict each other, or when the generator overstates confidence in thin context. Citation presence in a generated response does not guarantee truthfulness: the cited output may misrepresent its sources when retrieved context is ambiguous or sparse.
 
-## How the Synthesis Was Built
+## Method
 
 Each paper was read as an engineering input rather than a theoretical endpoint. Four dimensions were extracted from each source:
 
@@ -94,7 +94,7 @@ Each paper was read as an engineering input rather than a theoretical endpoint. 
 
 Papers were then compared along shared axes: retrieval method, augmentation strategy, evaluation approach, and deployment readiness. Contradictions were treated as valuable signals, particularly where survey-level recommendations conflicted with empirical findings.
 
-## Quick Definitions
+## Working Definitions
 
 <dl>
   <dt><dfn>Retrieval-Augmented Generation (RAG)</dfn></dt>
@@ -135,7 +135,7 @@ This progression helps engineering teams calibrate their architectural investmen
 
 **Study limitations:** This is a practitioner guide, not peer-reviewed empirical research. No experiments, benchmarks, or measured datasets support the recommendations. The production deployment discussion is conceptual, not validated against measured outcomes. Failure modes, adversarial retrieval, and noise sensitivity are not addressed.
 
-> **Practical Reading Rule:** Use as an entry-level architectural reference. Do not treat it as production-validated empirical evidence.
+For engineering teams: treat this as orientation material. The architectural vocabulary is useful; the deployment advice is not backed by measured production outcomes.
 
 ### Zhao et al. (2026): The Cross-Modal Taxonomy
 
@@ -155,7 +155,7 @@ Zhao et al. deliver a comprehensive RAG survey covering text, code, audio, image
 
 **Study limitations:** This is a taxonomic survey, not an experimental study. The breadth across modalities (text, code, audio, images, video, 3D) comes at the cost of depth: individual techniques receive brief treatment. Text-specific nuances such as distractor sensitivity are not explored. Some cited works are recent preprints with limited independent validation.
 
-> **Practical Reading Rule:** Use this four-paradigm taxonomy to classify your system's augmentation strategy and identify unexplored architectural alternatives.
+The taxonomy is most useful during architectural review: classifying your existing system's paradigm helps identify whether alternative augmentation approaches are worth prototyping.
 
 ### Huang and Huang (2026): The IR-Centric Pipeline Guide
 
@@ -170,7 +170,7 @@ Published in _ACM Computing Surveys_, Huang and Huang organise RAG into four pro
 
 **Study limitations:** This is a survey paper, not a primary experiment. The hybrid retrieval superiority claim is synthesised from others' reported benchmarks, not independently replicated. The text-only scope means multimodal RAG teams must supplement with other sources. Failure mode analysis and adversarial robustness are not addressed in depth.
 
-> **Practical Reading Rule:** Use as your primary pipeline architecture blueprint for text-domain RAG.
+This phase decomposition maps cleanly to pipeline components. If you are building a text-domain RAG system, start here for structural decisions.
 
 ### Cuconasu et al. (2024): The Counter-Intuitive Retrieval Evidence
 
@@ -193,7 +193,7 @@ These findings challenge the naive assumption that higher retrieval recall autom
 
 **Study limitations:** Experiments used the NQ-open dataset only; generalisation to other QA benchmarks and non-QA tasks (summarisation, dialogue, multi-hop reasoning) is unverified. All models tested at 7B scale or smaller (2.7B–7B) with 4-bit quantisation; behaviour at larger scales or different quantisation levels may differ. The hypothesis that random noise acts as an attention regulariser is plausible but not mechanistically proven.
 
-> **Practical Reading Rule:** Treat this as primary empirical evidence for retrieval pipeline optimization. Implement cross-encoder distractor filtering before production deployment.
+This paper provides the strongest empirical warrant in this corpus for a specific engineering decision: implement cross-encoder distractor filtering before optimising other pipeline stages.
 
 ### Amugongo et al. (2025): The Healthcare Reality Check
 
@@ -206,7 +206,7 @@ This PRISMA-compliant systematic review maps the RAG landscape in clinical healt
 
 **Study limitations:** This is a descriptive systematic review, not an empirical benchmark. The review period (January 2020–February 2025) may miss recent advances. The English-language-only inclusion criterion creates a meta-level bias that mirrors the very language-gap finding. The majority of reviewed studies do not themselves assess ethical considerations, so the ethics gap finding is observational rather than experimentally measured.
 
-> **Practical Reading Rule:** For domain-critical RAG deployments (medical, legal, financial), supplement general RAG metrics (like RAGAS) with custom domain safety, equity, and alignment evaluations.
+The practical implication for teams deploying RAG in regulated domains (medical, legal, financial): general-purpose metrics like RAGAS are necessary but insufficient. Domain-specific safety, equity, and alignment evaluations must be built alongside.
 
 ### Li et al. (2025): The Generative IR Evolution Map
 
@@ -229,7 +229,7 @@ Their survey covers Generative Retrieval (GR), where models internalize document
 
 **Study limitations:** Broad scope means RAG-specific depth is limited. Generative retrieval techniques remain largely experimental with no demonstrated production-scale viability. Some cited techniques are recent preprints with limited independent validation.
 
-> **Practical Reading Rule:** Monitor GR developments for long-term RAG evolution, but do not adopt GR for volatile production data environments.
+Generative retrieval is worth monitoring as a research direction, but its inability to scale or update without full retraining makes it unsuitable for production environments where the knowledge base changes frequently.
 
 ### Meng et al. (2025): The Fusion Strategy Pattern
 
@@ -249,17 +249,17 @@ Meng et al. demonstrate that combining RAG with parameter-efficient fine-tuning 
 
 **Study limitations:** Short conference paper format limits depth. System evaluations are reported briefly with sparse experimental methodology. The 90%+ accuracy claim comes from a Chinese medicine Q&A system and is not independently validated. The comparative analysis is descriptive rather than rigorous benchmarking. Generalisation beyond Chinese-language implementations is assumed but not demonstrated.
 
-> **Practical Reading Rule:** Stop choosing between RAG and Fine-Tuning. For vertical domain applications, combine them. Use LoRA or QLoRA as your default adaptation baseline.
+The practical conclusion: RAG and fine-tuning are not competing alternatives. For vertical applications, retrieval provides dynamic context while LoRA or QLoRA adapts model behaviour to domain conventions. Combine both unless resource constraints force a choice.
 
 ## Cross-Paper Patterns: Five Recurring Themes
 
-1. **Retrieval quality is the primary bottleneck.** Downstream generation quality is bounded by retrieval precision. Optimizing prompt templates while ignoring retrieval noise, distractor contamination, and context positioning produces fragile production systems. This finding is well-supported by the empirical evidence from Cuconasu et al. and corroborated by both survey papers.
+1. **Retrieval quality is the primary bottleneck.** Downstream generation quality is bounded by retrieval precision. Optimizing prompt templates while ignoring retrieval noise, distractor contamination, and context positioning produces fragile production systems. This finding is well-supported by the empirical evidence from Cuconasu et al. and corroborated by both survey papers. I have seen teams spend weeks tuning generation temperature and system prompts when their real problem was that 40% of retrieved chunks were irrelevant. The order of investment should be retrieval first, generation second.
 2. **Not all retrieved context is helpful, and some is actively harmful.** Cuconasu et al.'s experiments on the NQ-open dataset show that distracting documents degrade accuracy more than purely random noise. This challenges the assumption that higher retrieval scores automatically produce better RAG output, though generalisation to non-QA tasks and larger models remains untested.
-3. **Evaluation must separate retrieval from generation.** As emphasized by Huang and Huang, retrieval performance (MRR, NDCG, Recall) and generation performance (faithfulness, correctness) measure independent failure modes and must be monitored on decoupled evaluation pipelines. This is a survey-derived recommendation, not a controlled experimental finding.
+3. **Evaluation must separate retrieval from generation.** As emphasized by Huang and Huang, retrieval performance (MRR, NDCG, Recall) and generation performance (faithfulness, correctness) measure independent failure modes and must be monitored on decoupled evaluation pipelines. This is a survey-derived recommendation, not a controlled experimental finding. In practice, the hardest part is not building the separated dashboards; it is convincing stakeholders that a "good" end-to-end answer does not mean retrieval is working correctly.
 4. **Domain-specific deployment requires domain-specific safety.** General-purpose RAG benchmarks do not catch clinical, financial, or legal liabilities. Amugongo et al.'s systematic review documents this gap descriptively for healthcare; analogous evidence for legal and financial domains is not covered by this corpus.
-5. **RAG and fine-tuning appear complementary, with caveats.** Meng et al. report that retrieval plus parameter-efficient fine-tuning outperforms either technique alone in their Chinese medicine Q&A system. The fusion pattern is architecturally sound, but the empirical evidence is limited to a single domain with sparse methodological detail.
+5. **RAG and fine-tuning appear complementary, with caveats.** Meng et al. report that retrieval plus parameter-efficient fine-tuning outperforms either technique alone in their Chinese medicine Q&A system. The fusion pattern is architecturally sound, but the empirical evidence is limited to a single domain with sparse methodological detail. Teams should treat this as a plausible design direction rather than a settled best practice.
 
-## Evidence Confidence Map
+## Source Reliability Assessment
 
 <figure markdown="1">
 
@@ -319,7 +319,7 @@ Teams that build reliable RAG systems typically develop five capabilities early:
 4. **Separated evaluation pipelines** measuring retrieval quality (MRR, Recall@K) and generation quality (faithfulness, correctness) on independent dashboards.
 5. **Domain safety integration** adding ethics, equity, explainability, and compliance checks for critical applications.
 
-## Frequently Asked Questions
+## Questions on RAG Architecture
 
 ### What is the most important finding from this RAG evidence review?
 

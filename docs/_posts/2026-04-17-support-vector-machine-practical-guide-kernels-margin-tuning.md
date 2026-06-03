@@ -68,7 +68,7 @@ The discussion is evidence-led rather than benchmark-led: each section ties impl
 
 For adjacent continuity topics, see [data provenance in machine learning](/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons) and [deadlock and resource contention patterns](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm).
 
-## Quick Definitions
+## Key Terms
 
 <dl>
   <dt><dfn>Support vector machine (SVM)</dfn></dt>
@@ -255,7 +255,7 @@ Continue with:
 1. [Part 2: Benchmark, Confusions, and Error Forensics on UCI HAR](/support-vector-machine-series-part-2-benchmark-error-analysis-har)
 2. [Part 3: Tuning, Monitoring, and Deployment Governance Playbook](/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance)
 
-## Frequently Asked Questions
+## Questions on SVM Practice
 
 ### Why is SVM still valuable in 2026 despite dominant deep-learning workflows for support vector machine?
 

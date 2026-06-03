@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-06-02T23:27:57Z"
-total_candidates: 973
+generated_at: "2026-06-03T07:06:48Z"
+total_candidates: 975
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -7576,6 +7576,22 @@ candidates:
           A Deployable Open-Source Playbook"
         url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
     related_pages: []
+  - term: Artificial Intelligence Software
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages: []
   - term: Arxiv Openalex
     status: candidate
     confidence: 6
@@ -11247,6 +11263,30 @@ candidates:
           "Deadlock and Resource Contention: Operating Systems Theory Applied to
           Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: Natural
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: An Evidence Review of Architecture, Retrieval
+          Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+      - title:
+          "Retrieval-Augmented Generation: Failure Modes, Confidence Calibration,
+          and Production Governance"
+        url: "/retrieval-augmented-generation-failure-modes-production-governance"
     related_pages: []
   - term: Networks Reproducibility
     status: candidate

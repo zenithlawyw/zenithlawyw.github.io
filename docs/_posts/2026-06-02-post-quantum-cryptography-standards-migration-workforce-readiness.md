@@ -133,7 +133,7 @@ Enterprise codebases contain thousands of cryptographic call sites: `from Crypto
 <figcaption>Table 3: ccPASTpqc performance metrics (Wahlang and Vidhani, 2026).</figcaption>
 </figure>
 
-**Critical caveat:** The 0.925 BLEU score measures textual similarity, not functional correctness. Translated GitHub code was not execution-tested {% include references/cite.html key="10.1145/3799830.3799836" %}. In production migration, execution testing and security auditing of translated code are non-negotiable.
+**Critical caveat:** The 0.925 BLEU score measures textual similarity, not functional correctness. A high BLEU score tells you the output text looks like correct code; it does not tell you the code compiles, passes tests, or preserves the security properties of the original implementation. Translated GitHub code was not execution-tested {% include references/cite.html key="10.1145/3799830.3799836" %}. In production migration, execution testing and security auditing of translated code are non-negotiable. Anyone who has worked with LLM-generated code knows the output can be syntactically plausible while silently breaking invariants that a human developer would never violate.
 
 **Practical gap:** Most production cryptographic code lives in C/C++, Java, and Go, languages ccPASTpqc does not yet support. Python migration tooling is a proof of concept, not a production solution.
 
@@ -261,7 +261,7 @@ The migration timeline is governed by Mosca's inequality, not by quantum compute
 
 ---
 
-## Frequently Asked Questions
+## Migration Questions
 
 ### How long does a typical PQC migration take for an enterprise?
 

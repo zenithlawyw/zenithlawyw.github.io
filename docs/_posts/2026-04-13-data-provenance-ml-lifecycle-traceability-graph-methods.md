@@ -38,7 +38,7 @@ This review examines each paper's claims, methods, and limitations, then derives
 
 This article is designed for technical and governance learning. It does not provide legal, regulatory, or procurement advice. It is not legal advice. Readers should validate applicability against their own jurisdiction, risk model, and production constraints.
 
-## Quick Definitions
+## Definitions
 
 <dl>
   <dt><dfn>Data provenance</dfn></dt>
@@ -101,7 +101,7 @@ The 48-GPU evaluation in an oil and gas application is the strongest practical e
 
 ---
 
-## Ten Lessons for Practice (Scoped to This Source Set)
+## Lessons for Practice (Scoped to This Source Set)
 
 These lessons are meant for practitioners and learners reading this blog. They are evidence-informed but intentionally scoped: three papers can support useful guidance, not universal claims.
 
@@ -157,7 +157,7 @@ A strong synthesis is not only accumulation of supportive findings. It also look
 
 **Replication.** Public availability of datasets and code for independent replication could not be confirmed from the reviewed text for any of the three papers.
 
-## Frequently Asked Questions
+## Common Questions
 
 ### What is data provenance in the machine-learning lifecycle, beyond basic lineage?
 

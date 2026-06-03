@@ -57,15 +57,15 @@ tags:
   - literature review
 ---
 
-## Why This Review Matters
+## The Practical Question Behind This Review
 
-Lightning is often discussed as a speed-and-fee story. The reviewed literature shows a different reality: teams usually succeed or fail on identity design, policy controls, and operational recovery long before they hit scaling limits.
+Lightning is often discussed as a speed-and-fee story. The papers reviewed here show a different reality: teams usually succeed or fail on identity design, policy controls, and operational recovery long before they hit scaling limits.
 
 The practical question behind this review is simple. If you are building a real cross-border micropayment platform for autonomous agents, what should you implement first, what can wait, and where is the evidence still weak?
 
 This is a directional review, not legal advice and not a formal meta-analysis. Regulatory treatment differs by jurisdiction, product model, and legal-entity role. Licensing, AML/CFT, sanctions, consumer rules, and reporting obligations need jurisdiction-specific legal review before launch.
 
-## Quick Definitions
+## Definitions
 
 <dl>
   <dt><dfn>Lightning Network</dfn></dt>
@@ -84,13 +84,13 @@ This is a directional review, not legal advice and not a formal meta-analysis. R
   <dd>The total amount of funds locked in a payment channel, determining the maximum single-payment size and the directional liquidity available for routing.</dd>
 </dl>
 
-## How the Synthesis Was Built
+## Review Approach and Evidence Grading
 
 Each paper was read as an engineering input rather than a theoretical endpoint. I extracted four things from each source: the claim, the mechanism, the evidence quality, and the implementation implication.
 
 I then compared the papers along shared dimensions: settlement model, identity model, trust boundary, and deployability under operational constraints. Contradictions were treated as valuable signals, especially where performance claims were strong but field validation was limited.
 
-## Quick Definitions
+## Terms Used in This Review
 
 A Lightning corridor is a defined cross-border payment path with fixed route, policy, and reconciliation scope.
 
@@ -149,9 +149,9 @@ The tension is equally important. Strong performance claims often come from synt
 
 The most deployable strategy today is controlled hybridization: Lightning-first micro-settlement, explicit identity overlays, and graduated autonomy gates.
 
-## Evidence Confidence Map
+## Per-Source Confidence and Applicability
 
-| Paper                      | Evidence type                           | Confidence for direct production use                                      | Practical reading rule                                                                    |
+| Paper                      | Evidence type                           | Confidence for direct production use                                      | Reading guidance                                                                          |
 | -------------------------- | --------------------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | Dham (2026)                | Conceptual architecture argument        | Medium for problem framing, low for direct implementation                 | Use for identity and accountability framing, not for final platform design details        |
 | Fapohunda and Akoka (2025) | Prototype with synthetic corridor tests | Medium for performance direction, low for legal-operational certainty     | Reproduce claims in corridor pilots before committing major architecture choices          |
@@ -194,7 +194,7 @@ Teams that move faster usually develop five skills early:
 4. Replay-safe reconciliation and rollback logic.
 5. Governance observability that links decisions to accountable actors.
 
-## Frequently Asked Questions
+## Questions on Lightning Micropayments
 
 ### What is a realistic first milestone for a Lightning micropayment pilot for lightning network cross-border micropayments?
 

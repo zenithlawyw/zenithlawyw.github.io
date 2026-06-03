@@ -52,7 +52,7 @@ tags:
 
 Operating systems textbooks dedicate chapters to a simple question: when can concurrent processes waiting for resources lock each other in permanent obstruction? The answer is the [Coffman conditions](<https://en.wikipedia.org/wiki/Deadlock_(computer_science)#Conditions>), four necessary and sufficient conditions for [deadlock](<https://en.wikipedia.org/wiki/Deadlock_(computer_science)>): mutual exclusion, hold and wait, no preemption, and circular wait. When all four hold simultaneously, deadlock risk reaches its highest structural state. The same logic can be used outside the kernel as a diagnostic model. In 2026, supply-chain incidents, cloud platform fragmentation, and AI scheduling contention all illustrated recurring patterns that match these conditions.
 
-On 30 to 31 March 2026, malicious axios package versions propagated through npm's dependency resolution workflow because a maintainer credential was compromised. A detailed reconstruction of this incident appears in the companion article on the [Axios npm supply-chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience). The incident cascades through hold-and-wait behavior: each build held a lock on developer identity while waiting for upstream package access. On 25 July 2019 and across the intervening years, SaaS platforms withdrew localized versions in jurisdictions like China, creating a platform-fragmentation pattern where service bifurcation introduced circular dependencies that no single vendor could resolve autonomously. The structural dimensions of this fragmentation are examined in the article on [digital sovereignty and fragmented cloud realities](/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons). More recently, LLM deployment in distributed systems exhibits similar contention: concurrent inference requests compete for token-generation slots, and resource starvation under priority-flat scheduling leaves lower-priority jobs indefinitely suspended. The architectural evolution that produced these scheduling challenges is traced in the companion article on [large language models in practice](/large-language-models-practice-from-transformer-to-present-frontier).
+On 30 to 31 March 2026, malicious axios package versions propagated through npm's dependency resolution workflow because a maintainer credential was compromised. A detailed reconstruction of this incident appears in [Axios npm supply-chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience). The incident cascades through hold-and-wait behavior: each build held a lock on developer identity while waiting for upstream package access. On 25 July 2019 and across the intervening years, SaaS platforms withdrew localized versions in jurisdictions like China, creating a platform-fragmentation pattern where service bifurcation introduced circular dependencies that no single vendor could resolve autonomously. The structural dimensions of this fragmentation are examined in [digital sovereignty and fragmented cloud realities](/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons). More recently, LLM deployment in distributed systems exhibits similar contention: concurrent inference requests compete for token-generation slots, and resource starvation under priority-flat scheduling leaves lower-priority jobs indefinitely suspended. The architectural evolution that produced these scheduling challenges is traced in [large language models in practice](/large-language-models-practice-from-transformer-to-present-frontier).
 
 This article reconstructs these three domains, supply chain security, platform operations, and AI systems, through the lens of concurrency theory. The objective is not metaphor. It is interpretability through structure. By mapping incident patterns onto Coffman's conditions and classical resource scheduling algorithms, engineering teams can apply decades of OS mitigation strategies to domains where contention is often treated as inevitable rather than engineered away.
 {% include references/cite.html key="deadlock-2026-ref1" %}
@@ -62,7 +62,7 @@ This article is not legal advice.
 
 This article combines three claim classes to preserve analytical precision. The supply-chain section is incident-confirmed and anchored to a timestamped compromise with independently corroborated technical artifacts. The cloud-platform section uses documented policy and operating-model evidence, and it also includes illustrative composite continuity flows where no single outage report captures the full dependency cycle. The LLM section is pattern-driven and models recurrent production scheduling behavior rather than attributing deadlock risk to one named 2026 outage. This separation keeps the framework operational without overstating evidentiary certainty.
 
-## Quick Definitions
+## Core Concepts
 
 <dl>
   <dt><dfn>Deadlock</dfn></dt>
@@ -136,7 +136,7 @@ From a deadlock prevention perspective, this incident exemplifies the failure to
 
 ## Platform Fragmentation: Circular Dependencies in Regional Control
 
-Cloud platform operations present a second recursive pattern. When foreign vendors enter jurisdictions with regulatory sovereignty requirements, they often partition global service delivery into region-scoped operating units. Microsoft's Azure through 21Vianet (China), Salesforce through Alibaba Cloud (China), and Unity's region-specific engine paths show this pattern. The policy and engineering dimensions of this fragmentation are examined in the companion article on [digital sovereignty and cloud access fragmentation](/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons). The resulting architecture embeds hold-and-wait cycles at the platform level.
+Cloud platform operations present a second recursive pattern. When foreign vendors enter jurisdictions with regulatory sovereignty requirements, they often partition global service delivery into region-scoped operating units. Microsoft's Azure through 21Vianet (China), Salesforce through Alibaba Cloud (China), and Unity's region-specific engine paths show this pattern. The policy and engineering dimensions of this fragmentation are examined in [digital sovereignty and cloud access fragmentation](/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons). The resulting architecture embeds hold-and-wait cycles at the platform level.
 
 ### Data Residency as a Holding Pattern
 
@@ -156,7 +156,7 @@ This is starvation by the OS definition: a resource (notification delivery) is r
 
 ## LLM Inference and Token Schedulers: Priority Starvation
 
-Modern LLM inference introduces a third deadlock pattern specific to token-generation scheduling. The transformer architecture and attention mechanisms that underpin these inference pipelines are examined in the [companion article on large language models](/large-language-models-practice-from-transformer-to-present-frontier). The analysis in this section is intentionally pattern-based: it models known scheduler behavior in production inference systems without claiming one canonical named outage as the sole evidence anchor.
+Modern LLM inference introduces a third deadlock pattern specific to token-generation scheduling. The transformer architecture and attention mechanisms that underpin these inference pipelines are examined in [large language models in practice](/large-language-models-practice-from-transformer-to-present-frontier). The analysis in this section is intentionally pattern-based: it models known scheduler behavior in production inference systems without claiming one canonical named outage as the sole evidence anchor.
 
 ### The Token Slot as a Bottleneck Resource
 
@@ -174,7 +174,7 @@ Defenses exist. Operating systems implement priority aging: as a thread waits lo
 
 A deadlock could emerge in an LLM system serving multiple models. Request A holds a slot on Model-X and waits for Model-Y. Request B holds a slot on Model-Y and waits for Model-X (for example, in a multi-step reasoning pipeline where one model's output feeds into another). If both models have bounded concurrent-access limits, a deadlock can form. Mitigation requires either (1) allowing preemption (kill one request to free slots), (2) enforcing a resource-acquisition order globally (always acquire Model-X before Model-Y), or (3) breaking the wait cycle through admission control (reject Request B if it would create a cycle).
 
-## Ten Actionable Lessons: Breaking the Cycle
+## Actionable Lessons: Breaking the Cycle
 
 ### Lesson 1: Make Circular Wait Visible Through Static Resource Ordering
 
@@ -342,11 +342,11 @@ The underlying principle is consistent: design systems to prevent, detect, and r
 
 ---
 
-Detailed domain evidence is available in companion articles: the [Axios supply chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience), [digital sovereignty and cloud fragmentation](/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons), [large language models in practice](/large-language-models-practice-from-transformer-to-present-frontier), and [data provenance in the ML lifecycle](/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons).
+Detailed domain evidence is available in related articles: the [Axios supply chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience), [digital sovereignty and cloud fragmentation](/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons), [large language models in practice](/large-language-models-practice-from-transformer-to-present-frontier), and [data provenance in the ML lifecycle](/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons).
 
 ---
 
-## Frequently Asked Questions
+## Questions on Deadlock and Contention
 
 ### What are the four Coffman conditions, and why do they still matter for modern systems for deadlock?
 
@@ -354,7 +354,7 @@ Deadlock occurs when, and only when, all four of the following hold simultaneous
 
 ### How does deadlock theory map to software supply chain security failures?
 
-Supply chain attacks exhibit all four Coffman conditions at the credential and dependency level. A maintainer credential enforces mutual exclusion over package publication; a compromised developer holds a build environment while waiting for npm packages (hold and wait); once a malicious version is downloaded it cannot be universally recalled (no preemption); and transitive dependency cycles create circular wait across build graphs. The companion article on the [Axios npm supply chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience) reconstructs a confirmed March 2026 incident through this exact framework.
+Supply chain attacks exhibit all four Coffman conditions at the credential and dependency level. A maintainer credential enforces mutual exclusion over package publication; a compromised developer holds a build environment while waiting for npm packages (hold and wait); once a malicious version is downloaded it cannot be universally recalled (no preemption); and transitive dependency cycles create circular wait across build graphs. The [Axios npm supply chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience) article reconstructs a confirmed March 2026 incident through this exact framework.
 
 ### How do deadlock and starvation differ in distributed and AI-serving systems?
 

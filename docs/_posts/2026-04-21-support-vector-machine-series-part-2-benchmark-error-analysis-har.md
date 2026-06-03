@@ -53,7 +53,7 @@ This article is not legal advice.
 
 If you have not read the conceptual foundation, start with [Part 1: Margins, Kernels, and Core Algorithms](/support-vector-machine-practical-guide-kernels-margin-tuning). For system-level reliability analogies in resource contention, see [deadlock and resource contention lessons](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm).
 
-## Quick Definitions
+## Terminology
 
 <dl>
   <dt><dfn>Benchmark evaluation</dfn></dt>
@@ -201,7 +201,7 @@ For a broader model-governance continuity perspective, connect this with [data p
 
 For implementation playbooks and deployment controls, continue with [Part 3: Tuning, Monitoring, and Deployment Governance Playbook](/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance).
 
-## Frequently Asked Questions
+## Common Questions
 
 ### Why is macro F1 alone insufficient for SVM evaluation in HAR benchmarking for support vector machine benchmark?
 

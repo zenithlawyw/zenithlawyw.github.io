@@ -224,7 +224,7 @@ Three additional observations warrant attention:
 
 ---
 
-## Frequently Asked Questions
+## Questions on PQC Foundations
 
 ### What makes post-quantum cryptography different from quantum cryptography?
 

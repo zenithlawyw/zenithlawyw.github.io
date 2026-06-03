@@ -63,7 +63,7 @@ ACP status requires planning discipline. As of May 2026, ACP maintainers publicl
 
 That package combination is not the only viable one, but it is a coherent one. It yields a simple but sophisticated outcome: a coordinator agent that delegates work to specialist agents over A2A, while each specialist uses MCP to reach local tools and contextual resources. The stack is small enough for a single team to understand and strong enough to support progressive hardening.
 
-## Quick Definitions
+## Key Terms
 
 <dl>
   <dt><dfn>Agentic orchestration</dfn></dt>
@@ -313,7 +313,7 @@ Use MCP transports appropriate to deployment mode. The official Python SDK recom
 11. Use ACP-compatible REST seams when they reduce integration friction, but keep standards convergence in roadmap planning.
 12. Design every critical workflow with explicit human approval and override paths.
 
-## Frequently Asked Questions
+## Implementation Questions
 
 ### What is the simplest deployable architecture for MCP, A2A, and ACP interoperability for agentic orchestration framework?
 
