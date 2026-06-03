@@ -1,5 +1,6 @@
 ---
 layout: post
+last_modified_at: 2026-06-03
 title: "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce Readiness"
 author: Zenith Law
 description: "NIST PQC standardisation outcomes, automated code migration tooling, hybrid QKD/PQC network architectures, modular education frameworks, and workforce readiness strategies for the post-quantum transition: an evidence-graded synthesis."
@@ -56,9 +57,11 @@ tags:
 
 ## The Migration Problem
 
-NIST published its first post-quantum cryptographic standards in 2024: ML-KEM (CRYSTALS-Kyber) for key encapsulation, ML-DSA (CRYSTALS-Dilithium) for digital signatures, and SLH-DSA (SPHINCS+) for hash-based signatures {% include references/cite.html key="11325571" %}. The algorithms exist. The standards exist. What does not yet exist at scale is the organisational capability to deploy them.
+The algorithms exist. NIST published its first post-quantum cryptographic standards in 2024: ML-KEM (CRYSTALS-Kyber) for key encapsulation, ML-DSA (CRYSTALS-Dilithium) for digital signatures, and SLH-DSA (SPHINCS+) for hash-based signatures {% include references/cite.html key="11325571" %}. The standards exist. What does not exist at scale is the organisational capability to deploy them.
 
-The [companion theoretical review](/post-quantum-cryptography-theoretical-foundations-reconceptualisation) established the mathematical foundations. This article addresses the engineering, educational, and organisational dimensions of the post-quantum transition: the factors that will determine whether migration happens in time.
+This is not a cryptographic problem anymore. It is a people problem, an education problem, and a software engineering problem wearing a cryptography hat.
+
+The [companion theoretical review](/post-quantum-cryptography-theoretical-foundations-reconceptualisation) established the mathematical foundations. This article turns to what will actually determine whether migration happens in time: the engineering, educational, and organisational dimensions of the post-quantum transition.
 
 ## NIST Standardisation: What It Settled and What It Left Open
 
@@ -110,7 +113,7 @@ The most novel contribution in the migration space comes from Wahlang and Vidhan
 
 ### The Problem
 
-Enterprise codebases contain thousands of cryptographic call sites: `from Crypto.PublicKey import RSA`, `nacl.public.PrivateKey()`, `ec.generate_private_key(ec.SECP256R1())`. Manual migration is error-prone, expensive, and slow. Mosca's inequality tells us the migration time (T) is the variable organisations can control, and ccPASTpqc aims to compress it.
+Enterprise codebases contain thousands of cryptographic call sites. `from Crypto.PublicKey import RSA`. `nacl.public.PrivateKey()`. `ec.generate_private_key(ec.SECP256R1())`. Each one is a migration target. Manual migration across all of them is error-prone, expensive, and slow enough to be measured in years rather than sprints. Mosca's inequality tells us that migration time (T) is the variable organisations can actually control, and ccPASTpqc aims to compress it.
 
 ### The Approach
 
@@ -133,9 +136,9 @@ Enterprise codebases contain thousands of cryptographic call sites: `from Crypto
 <figcaption>Table 3: ccPASTpqc performance metrics (Wahlang and Vidhani, 2026).</figcaption>
 </figure>
 
-**Critical caveat:** The 0.925 BLEU score measures textual similarity, not functional correctness. A high BLEU score tells you the output text looks like correct code; it does not tell you the code compiles, passes tests, or preserves the security properties of the original implementation. Translated GitHub code was not execution-tested {% include references/cite.html key="10.1145/3799830.3799836" %}. In production migration, execution testing and security auditing of translated code are non-negotiable. Anyone who has worked with LLM-generated code knows the output can be syntactically plausible while silently breaking invariants that a human developer would never violate.
+**Critical caveat:** The 0.925 BLEU score measures textual similarity, not functional correctness. A high BLEU score tells you the output text looks like correct code. It does not tell you the code compiles. It does not tell you it passes tests. It certainly does not tell you it preserves the security properties of the original implementation. Translated GitHub code was not execution-tested {% include references/cite.html key="10.1145/3799830.3799836" %}. Anyone who has worked with LLM-generated code knows the gap between "syntactically plausible" and "silently breaks invariants that a human developer would never violate." For production migration, execution testing and security auditing of translated code are non-negotiable.
 
-**Practical gap:** Most production cryptographic code lives in C/C++, Java, and Go, languages ccPASTpqc does not yet support. Python migration tooling is a proof of concept, not a production solution.
+**Practical gap:** Most production cryptographic code lives in C/C++, Java, and Go. ccPASTpqc supports Python only. This is a proof of concept, not a production solution.
 
 ### What Practitioners Should Do Now
 
@@ -178,7 +181,7 @@ This means PQC can be deployed within the existing TLS protocol framework withou
 
 ## The Workforce Readiness Gap
 
-Three independent studies converge on the same conclusion: the technical tools for PQC migration exist, but trained personnel to deploy them do not.
+Three independent studies converge on the same uncomfortable conclusion: the technical tools for PQC migration exist, but the people trained to use them do not. Not in sufficient numbers. Not yet.
 
 ### Evidence from Three Educational Programmes
 
@@ -195,16 +198,13 @@ Three independent studies converge on the same conclusion: the technical tools f
 
 ### Key Pedagogical Insights
 
-**Bottom-up teaching outperforms top-down.** Borrelli et al. found that starting with simple worked examples and building toward complex cryptosystems was more effective than presenting abstract definitions first {% include references/cite.html key="10.1145/3626252.3630823" %}. However, graduate students with mathematical maturity benefited from top-down presentations. This suggests differentiated pedagogy is needed.
+**Bottom-up teaching outperforms top-down.** Start with simple worked examples; build toward complex cryptosystems. Borrelli et al. found this more effective than presenting abstract definitions first {% include references/cite.html key="10.1145/3626252.3630823" %}. One exception: graduate students with mathematical maturity benefited from top-down presentations. The implication is clear: differentiated pedagogy is necessary, not optional.
 
-**The name "Post-Quantum Cryptography" is misleading.** Students consistently interpreted it as "cryptography that uses quantum computers" rather than "cryptography that resists quantum computers." Borrelli et al. suggest "Quantum-Resistant Cryptography" as a clearer alternative {% include references/cite.html key="10.1145/3626252.3630823" %}.
+**The name "Post-Quantum Cryptography" actively misleads.** Students consistently interpreted it as "cryptography that uses quantum computers" rather than "cryptography that resists quantum computers" {% include references/cite.html key="10.1145/3626252.3630823" %}. A small nomenclature problem with large pedagogical consequences. Borrelli et al. suggest "Quantum-Resistant Cryptography" as an alternative.
 
-**Exposing individual operations matters.** Steinfeld et al. developed a custom software interface for CRYSTALS-Kyber that exposes individual KEM operations (key generation, encapsulation, decapsulation) separately {% include references/cite.html key="10.1145/3770762.3772573" %}. Standard tools like GPG and OpenSSL abstract these operations behind protocol-level interfaces, making it impossible for learners to understand what each step does. The PQCIP custom tool uses Open Quantum Safe (OQS) and OpenSSL libraries and is designed for non-programmer cybersecurity professionals.
+**Exposing individual operations matters more than you would expect.** Standard tools like GPG and OpenSSL abstract cryptographic operations behind protocol-level interfaces. Learners never see what each step does. Steinfeld et al. built a custom software interface for CRYSTALS-Kyber that exposes key generation, encapsulation, and decapsulation separately {% include references/cite.html key="10.1145/3770762.3772573" %}. The result: non-programmer cybersecurity professionals could understand operations they had previously treated as black boxes.
 
-**Modular embedding is the scalable path.** Full PQC courses require curriculum approval processes that can take years. Borrelli et al.'s modular approach defines two tiers {% include references/cite.html key="10.1145/3770761.3777201" %}:
-
-- **Awareness modules:** No cryptographic prerequisites; suitable for high school and non-specialist students. Cover the quantum threat, why current cryptography is vulnerable, and what PQC is.
-- **Proficiency modules:** Require existing cryptography background; cover algorithm design, implementation, and NIST standard evaluation.
+**Modular embedding is the scalable path forward.** Full PQC courses require curriculum approval processes that can take years. The modular approach sidesteps this entirely. Borrelli et al. define two tiers {% include references/cite.html key="10.1145/3770761.3777201" %}: awareness modules (no prerequisites, suitable for high school onward, covering why current cryptography is vulnerable) and proficiency modules (requiring existing cryptography background, covering algorithm design, implementation, and NIST standard evaluation).
 
 ### Workforce Strategy Recommendations
 

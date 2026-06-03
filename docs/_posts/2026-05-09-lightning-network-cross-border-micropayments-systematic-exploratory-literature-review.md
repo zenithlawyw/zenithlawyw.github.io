@@ -1,5 +1,6 @@
 ---
 layout: post
+last_modified_at: 2026-06-03
 title: "Lightning Network for Cross-Border Micropayments: A Systematic Exploratory Literature Review for Agentic Commerce"
 author: Zenith Law
 description: "Lightning cross-border micropayments: evidence review with architecture priorities, risk controls, and pilot-ready implementation guidance."
@@ -59,9 +60,9 @@ tags:
 
 ## The Practical Question Behind This Review
 
-Lightning is often discussed as a speed-and-fee story. The papers reviewed here show a different reality: teams usually succeed or fail on identity design, policy controls, and operational recovery long before they hit scaling limits.
+Speed is not the hard part. Lightning can settle in milliseconds; everyone knows this. What the literature actually reveals is that teams fail on identity architecture, policy enforcement, and recovery choreography long before throughput becomes the constraint. The speed-and-fee narrative is a distraction; the engineering challenge is operational.
 
-The practical question behind this review is simple. If you are building a real cross-border micropayment platform for autonomous agents, what should you implement first, what can wait, and where is the evidence still weak?
+One question drives this review: if you are building a cross-border micropayment platform for autonomous agents, what must you implement first, what safely defers, and where does the evidence simply run out?
 
 This is a directional review, not legal advice and not a formal meta-analysis. Regulatory treatment differs by jurisdiction, product model, and legal-entity role. Licensing, AML/CFT, sanctions, consumer rules, and reporting obligations need jurisdiction-specific legal review before launch.
 

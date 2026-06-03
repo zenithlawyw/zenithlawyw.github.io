@@ -1,5 +1,6 @@
 ---
 layout: post
+last_modified_at: 2026-06-03
 title: "Post-Quantum Cryptography in Practice: Sector-Specific Deployment and Integration Patterns"
 author: Zenith Law
 description: "How post-quantum cryptography is being integrated into IoT, blockchain, energy grids, automotive systems, cloud infrastructure, and covert communications: a sector-by-sector evidence synthesis identifying deployment patterns, performance trade-offs, and production readiness gaps."
@@ -58,9 +59,11 @@ tags:
 
 ## From Theory to Sector-Specific Engineering
 
-The [theoretical foundations](/post-quantum-cryptography-theoretical-foundations-reconceptualisation) and [migration pathways](/post-quantum-cryptography-standards-migration-workforce-readiness) of post-quantum cryptography are documented. The deployment challenge, however, is not generic; it is sector-specific. An IoT sensor with 64 KB of RAM faces different constraints from a cloud CSPM platform processing terabytes of telemetry. An energy grid with 30-year operational lifetimes has different migration urgency from an automotive OTA update channel.
+Standards are finalised. Algorithms are selected. Nobody is deployed.
 
-This article examines how PQC is being integrated into specific sectors, extracting convergent patterns, documenting performance trade-offs, and assessing how far each domain has progressed from concept to production readiness. A consistent finding, worth stating at the outset: no reviewed paper reports a production deployment. The field is earlier than its volume of publication activity suggests.
+That is the uncomfortable gap this article maps. The [theoretical foundations](/post-quantum-cryptography-theoretical-foundations-reconceptualisation) and [migration pathways](/post-quantum-cryptography-standards-migration-workforce-readiness) are documented, yet an IoT sensor with 64 KB of RAM, a cloud CSPM platform digesting terabytes of telemetry, an energy grid engineered for 30-year operational lifetimes, and an automotive OTA channel pushing firmware at motorway speeds each face constraints so divergent that "deploy PQC" is not a single engineering problem but a family of them.
+
+What follows is a sector-by-sector examination: convergent patterns, performance trade-offs, and an honest assessment of distance from production. One finding deserves front-loading: no reviewed paper reports a live deployment. Publication volume has outpaced operational reality.
 
 ## Convergent Pattern: Kyber/Dilithium Dominance
 

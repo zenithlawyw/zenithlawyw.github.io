@@ -1,5 +1,6 @@
 ---
 layout: post
+last_modified_at: 2026-06-03
 title: "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment Governance"
 author: Zenith Law
 description: "Support Vector Machine deployment playbook with tuning workflow, calibration checks, monitoring corridors, and governance controls for reliable production use."
@@ -44,7 +45,9 @@ tags:
 
 ## Introduction
 
-This final article translates the SVM series into an execution playbook. Part 1 covered theory and fit boundaries. Part 2 covered benchmark diagnostics. Part 3 defines a practical workflow for tuning, calibration, monitoring, and governance so teams can sustain model quality over time rather than treating model release as a one-off event.
+Models decay. Quietly, continuously, without raising exceptions. The SVM you validated last quarter is not the SVM serving predictions today: not because the code changed, but because the world underneath it did.
+
+Part 1 established the theory; Part 2 dissected benchmark diagnostics. This third instalment builds the operational scaffold: tuning workflows that are repeatable (not artisanal), calibration checks that catch probability drift before downstream systems act on stale confidence, monitoring corridors that distinguish healthy variance from silent degradation, and governance controls that make model retirement a planned event rather than an emergency.
 
 This article provides technical operational guidance only and does not constitute legal advice; compliance obligations vary by jurisdiction, sector, and use context.
 This article is not legal advice.

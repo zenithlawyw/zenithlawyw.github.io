@@ -1,5 +1,6 @@
 ---
 layout: post
+last_modified_at: 2026-06-03
 title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
 author: Zenith Law
 description: "A systematic exploratory review of post-quantum cryptographic primitives (lattice-based, code-based, hash-based, and hybrid QC/PQC constructions) examining the mathematical foundations, hardware acceleration strategies, and reconceptualisation of security models for the quantum era."
@@ -54,9 +55,9 @@ tags:
 
 ## The Quantum Threat to Public-Key Cryptography
 
-The security of RSA, elliptic curve Diffie-Hellman, and DSA rests on the computational hardness of integer factorisation and the discrete logarithm problem. Shor's algorithm, running on a fault-tolerant quantum computer, reduces both problems to polynomial time {% include references/cite.html key="10543513" %}. This is not a gradual erosion of security margins; it is a categorical break. A sufficiently capable quantum computer renders these schemes as insecure as plaintext transmission.
+RSA, ECDH, DSA: all of them depend on problems that a fault-tolerant quantum computer solves in polynomial time. Shor's algorithm does not weaken these schemes; it annihilates them {% include references/cite.html key="10543513" %}. No gradual erosion. No reduced security margin. Categorical collapse to plaintext-equivalent exposure.
 
-The timeline remains contested. Estimates for cryptographically relevant quantum computers range from a decade to several decades, but the "harvest now, decrypt later" threat model makes the arrival date less important than it initially appears. Adversaries collecting encrypted traffic today can store it and decrypt it when quantum capability materialises {% include references/cite.html key="11325571" %}. For data with sensitivity lifetimes measured in decades (state secrets, medical records, infrastructure designs), the migration deadline is already past.
+When does this happen? Contested. A decade, perhaps several. But the question is malformed. "Harvest now, decrypt later" inverts the chronology: adversaries already vacuum-storing encrypted traffic need only wait {% include references/cite.html key="11325571" %}. State secrets, genomic records, infrastructure blueprints: anything with a sensitivity lifetime measured in decades is already at risk. The migration deadline, for these assets, has passed.
 
 > **Mosca's Inequality:** If the time to migrate (T) plus the data sensitivity lifetime (D) exceeds the time until quantum capability arrives (Q), then the data is already at risk. $D + T > Q$ implies immediate action is required {% include references/cite.html key="10543513" %}.
 

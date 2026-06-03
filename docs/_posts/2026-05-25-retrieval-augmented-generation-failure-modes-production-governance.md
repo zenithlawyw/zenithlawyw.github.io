@@ -1,5 +1,6 @@
 ---
 layout: post
+last_modified_at: 2026-06-03
 title: "Retrieval-Augmented Generation: Failure Modes, Confidence Calibration, and Production Governance"
 author: Zenith Law
 description: "RAG failure modes and production governance: distractor contamination, confidence calibration, corpus authority, conflicting evidence handling, provenance logging, and the gap between demo-quality and production-quality RAG systems."
@@ -56,9 +57,11 @@ tags:
 
 ## The Gap Between Demo and Production
 
-Most RAG tutorials end where production problems begin. A demonstration system that retrieves relevant documents and generates plausible answers can be built in an afternoon. A production system that handles contradictory evidence, communicates uncertainty, maintains corpus integrity over time, and fails gracefully under adversarial conditions requires a fundamentally different engineering posture.
+An afternoon. That is how long it takes to build a RAG system that looks impressive in a slide deck: retrieves documents, generates fluent answers, passes the demo. Ship it? Absolutely not.
 
-The [evidence review](/retrieval-augmented-generation-evidence-review) synthesised findings from the corpus and noted their limitations. The [implementation playbook](/retrieval-augmented-generation-implementation-playbook) translated those findings into code. This article addresses the territory that both pieces deliberately flag but do not fully resolve: where RAG systems fail, how to detect those failures, and what governance structures prevent them from reaching users undetected.
+Production is a different animal entirely: contradictory evidence in the corpus, confidence scores that lie, stale documents that poison fresh queries, adversarial inputs designed to exploit retrieval similarity rather than answer correctness. The engineering posture required is not "make it work" but "make it fail safely, visibly, and recoverably."
+
+The [evidence review](/retrieval-augmented-generation-evidence-review) synthesised findings and noted their limits; the [implementation playbook](/retrieval-augmented-generation-implementation-playbook) translated those findings into code. This article occupies the territory both pieces deliberately flagged but did not resolve: where RAG systems break, how to catch those breaks before users encounter them, and what governance structures make silence-on-failure impossible.
 
 > **Scope note:** The failure modes discussed here are grounded in the same corpus of reviewed literature. Where evidence is empirical, that is stated with the study's constraints. Where the discussion extends beyond what the papers directly measure (particularly governance, confidence calibration, and organisational controls), this is framed as engineering practice derived from the evidence rather than independently validated finding.
 
