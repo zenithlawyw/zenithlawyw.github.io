@@ -56,7 +56,7 @@ tags:
   - testing
 ---
 
-## From Research to Buildable Architecture
+## Design Premises and Source Grounding
 
 This playbook uses the cited literature as directional inputs on Lightning micropayment design, routing, and operational tradeoffs {% include references/cite.html key="ln-2026-ref1" %} {% include references/cite.html key="ln-2026-ref2" %} {% include references/cite.html key="ln-2026-ref3" %} {% include references/cite.html key="ln-2026-ref4" %} {% include references/cite.html key="ln-2026-ref5" %} {% include references/cite.html key="ln-2026-ref6" %}. Where specific claims are directly supported by those sources, inline citations mark them. Recommendations without a citation are implementation judgment and should be validated through pilot evidence before scale-up.
 
@@ -78,7 +78,7 @@ This post is a synthesis of the cited literature, with uneven evidence maturity 
 
 Treat this as a pilot-planning document, not production proof for regulated autonomous settlement at scale. Any production decision should be tied to measured outcomes in your own corridor tests.
 
-## Quick Definitions
+## Terminology
 
 <dl>
   <dt><dfn>Agentic micropayment</dfn></dt>
@@ -105,7 +105,7 @@ If you are an engineer, start with architecture and the phased build plan. If yo
 
 For a 10-minute read, focus on three blocks: minimum deployable flow, reliability metrics, and expansion criteria.
 
-## Quick Definitions
+## Working Terms
 
 The following terms are used throughout this playbook. They are working definitions for this guide, not universal industry standards.
 
@@ -196,7 +196,7 @@ A practical artifact set should include Dockerfiles, local compose topology, con
 
 Platform teams should preserve runtime replaceability through adapters. For each processing activity, document the legal role split among controller, processor, and service provider or third-party operator as applicable, then map role-specific obligations into design and runbooks. Role mapping may vary by workflow stage, such as onboarding versus merchant-initiated processing. Application teams should keep payment-intent schemas stable and retries deterministic. Security and governance teams should treat delegated signing as high-risk and maintain event-level accountability mapping. Product and operations teams should expand only after pilot thresholds are sustained and jurisdiction-specific sign-off is documented.
 
-## Frequently Asked Questions
+## Design Questions
 
 ### Which Lightning runtime should teams choose first for lightning network implementation guide?
 

@@ -74,7 +74,7 @@ Three claim classes are used throughout:
 2. Implementation-oriented synthesis connects those protocol details to practical system design choices.
 3. Critical evaluation highlights where a protocol is a poor fit even when it is technically possible to make it work.
 
-## Quick Definitions
+## Core Concepts
 
 <dl>
   <dt><dfn>Model Context Protocol (MCP)</dfn></dt>
@@ -239,7 +239,7 @@ Use this rule set when choosing MCP, A2A, ACP, or hybrid layering:
 
 A common production pattern is layered, not exclusive. A front-door orchestrator or user-facing assistant communicates with specialist agents over A2A, each specialist uses MCP internally for tools and context, and REST-compatible ACP-style interfaces can bridge legacy integration surfaces where needed.
 
-The companion article on [building agentic orchestration with MCP, A2A, LangGraph, and LangChain](/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook) turns this comparison into a concrete open-source stack, testing plan, and deployment blueprint.
+The article on [building agentic orchestration with MCP, A2A, LangGraph, and LangChain](/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook) turns this comparison into a concrete open-source stack, testing plan, and deployment blueprint.
 
 ## Ten Learning Points
 
@@ -254,7 +254,7 @@ The companion article on [building agentic orchestration with MCP, A2A, LangGrap
 9. Hybrid layering usually outperforms protocol monoculture in enterprise settings.
 10. Protocol choice should be judged by lifecycle cost, observability quality, and migration resilience.
 
-## Frequently Asked Questions
+## Questions on Protocol Selection
 
 ### What boundary-level differences matter most between MCP, A2A, and ACP for MCP vs A2A vs ACP?
 

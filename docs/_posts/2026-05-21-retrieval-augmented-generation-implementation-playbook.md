@@ -62,9 +62,9 @@ tags:
   - natural language processing
 ---
 
-## From Evidence to Implementation
+## Translating Findings into Working Code
 
-The [companion evidence review](/retrieval-augmented-generation-evidence-review) identified five recurring themes across production RAG literature: retrieval quality as the primary bottleneck, distractor contamination, evaluation separation, domain-specific safety, and RAG-plus-fine-tuning complementarity. This playbook translates those architectural findings into a concrete implementation path using proven open-source tools.
+The [evidence review](/retrieval-augmented-generation-evidence-review) identified five recurring themes across production RAG literature: retrieval quality as the primary bottleneck, distractor contamination, evaluation separation, domain-specific safety, and RAG-plus-fine-tuning complementarity. This playbook translates those architectural findings into a concrete implementation path using proven open-source tools.
 
 The goal is a deployable RAG pipeline that handles document ingestion, hybrid retrieval, distractor filtering, prompt construction, and separated evaluation, built with libraries you can fully inspect, modify, and host without vendor lock-in. Importantly, this playbook treats RAG as a production pipeline requiring corpus governance, provenance logging, and regression testing, not merely a retrieval-and-generate loop.
 
@@ -450,7 +450,7 @@ model = AutoModelForCausalLM.from_pretrained(
 
 ## Production Governance Controls
 
-The implementation stages above build a functional RAG pipeline. Production deployment requires additional governance controls that the reviewed literature identifies as gaps but does not resolve with ready-made solutions.
+The implementation stages above build a functional RAG pipeline. Production deployment requires additional governance controls that the source papers identify as gaps but do not resolve with ready-made solutions.
 
 ### Corpus Authority and Update Governance
 
@@ -545,7 +545,7 @@ Track these operational metrics in production:
 - **Context window utilisation**: Percentage of available context consumed per query
 - **Error rate**: Failed retrievals, generation timeouts, empty responses
 
-## Frequently Asked Questions
+## Deployment Questions
 
 ### Which open-source vector database should I choose for RAG?
 
@@ -602,7 +602,7 @@ Distractor contamination: retrieving documents that are semantically similar to 
 
 ### Author and Source Credibility
 
-This playbook is authored by [Zenith Law](/authors/zenith-law/) and grounded in the companion evidence review published as the [companion article](/retrieval-augmented-generation-evidence-review). Implementation patterns are derived from peer-reviewed findings and validated open-source library documentation.
+This playbook is authored by [Zenith Law](/authors/zenith-law/) and grounded in the evidence review published as the [RAG evidence review article](/retrieval-augmented-generation-evidence-review). Implementation patterns are derived from peer-reviewed findings and validated open-source library documentation.
 
 ### A. Recommended Library Versions
 

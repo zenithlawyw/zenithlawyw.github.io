@@ -50,7 +50,7 @@ Read together, the papers form two streams. Three papers are quantum-oriented an
 
 This article is technical commentary for education and engineering analysis. It is not legal, regulatory, procurement, or investment advice. It is not legal advice. Any metric quoted here is paper-reported unless explicitly stated otherwise.
 
-## Quick Definitions
+## Key Terms
 
 <dl>
   <dt><dfn>Representation learning</dfn></dt>
@@ -121,7 +121,7 @@ These takeaways are where readers can extract immediate value. They are concrete
 
 ---
 
-## Quick Definitions
+## Notation and Terminology
 
 Representation geometry is the shape of the feature space that decides what data points stay close or far apart.
 
@@ -165,7 +165,7 @@ These are actionable next questions that can turn a promising research direction
 
 ---
 
-## Frequently Asked Questions
+## Common Questions
 
 ### What does representation learning in high-dimensional Hilbert spaces mean in practice?
 
