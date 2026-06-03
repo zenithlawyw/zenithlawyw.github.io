@@ -1,5 +1,6 @@
 ---
 layout: post
+last_modified_at: 2026-06-03
 title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Deployable Open-Source Playbook"
 author: Zenith Law
 description: "Build an enterprise agentic orchestration stack with MCP, A2A, ACP, LangGraph, LangChain, FastAPI, and OpenTelemetry using a deployable cloud-native blueprint."
@@ -61,7 +62,7 @@ A deployable agentic orchestration stack succeeds or fails on separation of conc
 
 ACP status requires planning discipline. As of May 2026, ACP maintainers publicly described active convergence into A2A under Linux Foundation collaboration, so architecture choices should preserve migration-friendly boundaries {% include references/cite.html key="mcpa2a-2026-ref19" %}, {% include references/cite.html key="mcpa2a-2026-ref20" %}.
 
-That package combination is not the only viable one, but it is a coherent one. It yields a simple but sophisticated outcome: a coordinator agent that delegates work to specialist agents over A2A, while each specialist uses MCP to reach local tools and contextual resources. The stack is small enough for a single team to understand and strong enough to support progressive hardening.
+Other stacks exist. This one coheres. One coordinator delegates over A2A; specialists reach tools and context through MCP; the whole thing fits in a single team's head while remaining strong enough to harden incrementally under production pressure.
 
 ## Key Terms
 
@@ -84,17 +85,16 @@ That package combination is not the only viable one, but it is a coherent one. I
 
 ## The Design Objective
 
-The target outcome is not “maximum framework usage.” The target outcome is a system that can do five things without ad hoc glue:
+Framework maximalism is not the goal. Governability is. Six properties, all present simultaneously, distinguish a system you can defend in production from one that merely demos well:
 
-1. Accept a user request and convert it into a durable workflow.
-2. Delegate portions of that workflow to specialist agents with explicit task state.
-3. Expose tools and resources to those agents through structured, typed capability boundaries.
-4. Produce traces, logs, metrics, and test evidence that make failures explainable.
-5. Ship as a portable artifact with verifiable provenance.
+1. User requests become durable workflows, not ephemeral prompt-response pairs.
+2. Workflow fragments delegate to specialist agents carrying explicit task state.
+3. Tools and resources surface through typed, structured capability boundaries.
+4. Failures become explainable via traces, logs, metrics, and test evidence.
+5. Artifacts ship portable with verifiable provenance.
+6. Human approval checkpoints remain visible and explicit across every protocol boundary.
 
-6. Keep human approval checkpoints and operator-visible controls explicit across protocol boundaries.
-
-When those six properties are present together, the system becomes governable rather than merely impressive.
+Miss any one of these, and the system reverts to impressive-but-ungovernable.
 
 ## A Reference Architecture That Stays Small
 

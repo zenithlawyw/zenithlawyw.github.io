@@ -1,5 +1,6 @@
 ---
 layout: post
+last_modified_at: 2026-06-03
 title: "Support Vector Machine Series Part 2: Benchmark and Error Forensics on UCI HAR"
 author: Zenith Law
 description: "Support Vector Machine benchmark deep dive on UCI HAR with class-level errors, confusion corridors, PCA geometry, and R versus Python implementation parity."
@@ -48,7 +49,10 @@ tags:
 
 ## Introduction
 
-This second article in the SVM series focuses on one question: what do benchmark results actually say about model behavior once we move beyond aggregate accuracy? Using the [UCI Human Activity Recognition dataset](https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones) {% include references/cite.html key="svm-2026-ref16" %}, we compare an RBF SVM pipeline against a Random Forest baseline and inspect class-level precision, recall, F1, confusion corridors, tuning stability, and PCA geometry signals.
+Ninety-six percent accuracy. Impressive headline; useless diagnostic. Aggregate metrics conceal exactly the failure modes that matter in deployment: which classes bleed into each other, where the decision boundary wobbles under minor perturbation, and whether your geometry is genuinely separating activities or merely memorising sensor artefacts.
+
+This article strips the [UCI Human Activity Recognition dataset](https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones) {% include references/cite.html key="svm-2026-ref16" %} down to class-level forensics: precision, recall, F1, confusion corridors, tuning stability, and PCA geometry signals, comparing an RBF SVM pipeline against a Random Forest baseline. The question is narrow: what do these numbers actually reveal once you stop celebrating the aggregate?
+
 This article is not legal advice.
 
 If you have not read the conceptual foundation, start with [Part 1: Margins, Kernels, and Core Algorithms](/support-vector-machine-practical-guide-kernels-margin-tuning). For system-level reliability analogies in resource contention, see [deadlock and resource contention lessons](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm).

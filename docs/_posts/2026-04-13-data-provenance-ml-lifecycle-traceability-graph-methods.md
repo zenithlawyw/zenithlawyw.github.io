@@ -1,5 +1,6 @@
 ---
 layout: post
+last_modified_at: 2026-06-03
 title: "Data Provenance in Machine Learning: Traceability, Graph Methods, and Governance Lessons"
 author: Zenith Law
 description: "Graph neural networks, PROV-ML, and data lineage in machine learning. Evidence-graded review with ten practical governance lessons for ML practitioners."
@@ -30,11 +31,11 @@ tags:
 
 ## Introduction
 
-Three recent works address the problem of tracking data transformations across the machine learning lifecycle. Each approaches provenance from a different application context and proposes a different technical strategy.
+Where did the training data come from? Who transformed it, and when, and into what? Three papers converge on these questions from incompatible starting points, and that divergence is itself a finding.
 
-Karuna et al. report a study that applies Graph Neural Networks to financial transaction data, representing entities as nodes and transactions as edges, and comparing GNN-based traceability against logistic regression and random forest baselines {% include references/cite.html key="prov-2026-ref1" %}. Pina et al. describe a prototype for integrating provenance data captured by separate tools at different stages of the deep learning lifecycle, connecting preprocessing records with training outcomes {% include references/cite.html key="prov-2026-ref2" %}. Souza et al. propose PROV-ML, a provenance data representation that extends W3C PROV with ML Schema vocabulary, and evaluate it through ProvLake system extensions in an oil and gas application using 48 GPUs {% include references/cite.html key="prov-2026-ref3" %}.
+Karuna et al. wire financial transactions into a graph (entities as nodes, transfers as edges) and pit GNN-based traceability against logistic regression and random forest baselines {% include references/cite.html key="prov-2026-ref1" %}. Pina et al. build a stitching layer: separate tools capture provenance at separate lifecycle stages, and their prototype forces those fragments to talk {% include references/cite.html key="prov-2026-ref2" %}. Souza et al. go formal: PROV-ML extends W3C PROV with ML Schema vocabulary, pressure-tested through ProvLake on a 48-GPU oil-and-gas pipeline {% include references/cite.html key="prov-2026-ref3" %}.
 
-This review examines each paper's claims, methods, and limitations, then derives scoped implications from those results. It is intentionally narrow: three papers are not treated as a representative sample of the provenance ecosystem. Where a claim rests directly on a paper's reported results, the text says so. Where the review draws inferences beyond what any single paper demonstrates, that boundary is marked. Several details could not be independently corroborated and are flagged accordingly.
+Three papers do not constitute a field survey. This review is deliberately narrow. Claims anchored to reported results say so; inferences drawn beyond any single paper's evidence are marked at the boundary. Several details resist independent corroboration and are flagged rather than silently absorbed.
 
 This article is designed for technical and governance learning. It does not provide legal, regulatory, or procurement advice. It is not legal advice. Readers should validate applicability against their own jurisdiction, risk model, and production constraints.
 

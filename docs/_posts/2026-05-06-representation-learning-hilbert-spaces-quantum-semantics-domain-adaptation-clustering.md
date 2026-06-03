@@ -1,5 +1,6 @@
 ---
 layout: post
+last_modified_at: 2026-06-03
 title: "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain Adaptation, and Deep Clustering"
 author: Zenith Law
 description: "A critical synthesis of recent papers on high-dimensional representation learning, covering quantum-enhanced semantic communications, unsupervised domain adaptation, and deep multi-kernel clustering, with evidence-graded lessons for researchers and practitioners."
@@ -44,9 +45,9 @@ tags:
 
 ## Introduction
 
-Recent papers from different subfields make the same core point: model quality is often a geometry problem before it becomes a deployment problem. If the representation space is well-structured, downstream tasks improve. If it is not, performance gains tend to be fragile.
+Geometry first. Everything else (accuracy, transferability, robustness) follows from how your representation space is shaped. Get the structure wrong and no amount of downstream engineering rescues you; get it right and tasks you never optimised for start working anyway.
 
-Read together, the papers form two streams. Three papers are quantum-oriented and focus on semantic communication and language representation {% include references/cite.html key="qsc-2026-ref1" %}, {% include references/cite.html key="qsc-2026-ref2" %}, {% include references/cite.html key="qsc-2026-ref5" %}. Two are classical and focus on domain adaptation and clustering geometry {% include references/cite.html key="qsc-2026-ref3" %}, {% include references/cite.html key="qsc-2026-ref4" %}. The common thread is not just better scores. It is how representation structure controls what the model can preserve, separate, and generalize.
+Five papers, two intellectual streams, one shared conviction. The quantum-oriented papers {% include references/cite.html key="qsc-2026-ref1" %}, {% include references/cite.html key="qsc-2026-ref2" %}, {% include references/cite.html key="qsc-2026-ref5" %} treat Hilbert-space design as a semantic fidelity problem: how much meaning survives the encoding. The classical pair {% include references/cite.html key="qsc-2026-ref3" %}, {% include references/cite.html key="qsc-2026-ref4" %} treat it as a discriminability-versus-transferability trade-off in domain adaptation and deep clustering. What unites them is not a shared benchmark; it is the assertion that representation structure determines what a model can preserve, separate, and generalise.
 
 This article is technical commentary for education and engineering analysis. It is not legal, regulatory, procurement, or investment advice. It is not legal advice. Any metric quoted here is paper-reported unless explicitly stated otherwise.
 

@@ -1,5 +1,6 @@
 ---
 layout: post
+last_modified_at: 2026-06-03
 title: "Lightning Network Agentic Micropayments: Open-Source End-to-End Implementation Playbook"
 author: Zenith Law
 description: "Lightning network implementation playbook for open-source micropayments with architecture options, reliability tests, observability controls, and pilot gates."
@@ -58,11 +59,11 @@ tags:
 
 ## Design Premises and Source Grounding
 
-This playbook uses the cited literature as directional inputs on Lightning micropayment design, routing, and operational tradeoffs {% include references/cite.html key="ln-2026-ref1" %} {% include references/cite.html key="ln-2026-ref2" %} {% include references/cite.html key="ln-2026-ref3" %} {% include references/cite.html key="ln-2026-ref4" %} {% include references/cite.html key="ln-2026-ref5" %} {% include references/cite.html key="ln-2026-ref6" %}. Where specific claims are directly supported by those sources, inline citations mark them. Recommendations without a citation are implementation judgment and should be validated through pilot evidence before scale-up.
+No architecture diagram survives first contact with production traffic. This playbook does not pretend otherwise.
 
-For source-grounded context, read the paired [Lightning cross-border evidence review](/lightning-cross-border-micropayments-evidence-review). For orchestration boundary design between payment flows and multi-agent systems, see the [agentic orchestration playbook](/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook) and the [MCP, A2A, and ACP boundary guide](/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems).
+What it does: translate directional findings from the cited literature {% include references/cite.html key="ln-2026-ref1" %} {% include references/cite.html key="ln-2026-ref2" %} {% include references/cite.html key="ln-2026-ref3" %} {% include references/cite.html key="ln-2026-ref4" %} {% include references/cite.html key="ln-2026-ref5" %} {% include references/cite.html key="ln-2026-ref6" %} into build steps a mixed team can execute, test, break, and repair, with reliability, accountability, and recovery risk visible at every stage. Inline citations mark claims drawn directly from those sources; unmarked recommendations are implementation judgment, validated only through pilot evidence.
 
-The goal is not a perfect architecture diagram. The goal is a platform a mixed team can build, test, operate, and improve while keeping reliability, accountability, and recovery risk visible.
+For the source-grounded context behind these choices, read the paired [Lightning cross-border evidence review](/lightning-cross-border-micropayments-evidence-review). For orchestration boundary design between payment flows and multi-agent systems, see the [agentic orchestration playbook](/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook) and the [MCP, A2A, and ACP boundary guide](/mcp-vs-a2a-practical-protocol-boundaries-agentic-systems).
 
 The central design choice is straightforward: use [Lightning Network](https://en.wikipedia.org/wiki/Lightning_Network) for high-frequency, low-value payment events, while treating identity, policy, and recovery controls as first-class concerns from the first sprint. Lightning is designed for fast, low-cost off-chain transactions {% include references/cite.html key="ln-2026-ref1" %}, but its suitability for production cross-border micropayment platforms remains an emerging design possibility rather than a broadly proven operational fact.
 

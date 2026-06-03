@@ -1,5 +1,6 @@
 ---
 layout: post
+last_modified_at: 2026-06-03
 title: "Retrieval-Augmented Generation: Open-Source Implementation Playbook for Production RAG Systems"
 author: Zenith Law
 description: "RAG implementation playbook: open-source libraries, chunking strategies, hybrid retrieval, re-ranking, evaluation frameworks, production governance controls, and end-to-end deployment guidance for production RAG systems."
@@ -64,9 +65,11 @@ tags:
 
 ## Translating Findings into Working Code
 
-The [evidence review](/retrieval-augmented-generation-evidence-review) identified five recurring themes across production RAG literature: retrieval quality as the primary bottleneck, distractor contamination, evaluation separation, domain-specific safety, and RAG-plus-fine-tuning complementarity. This playbook translates those architectural findings into a concrete implementation path using proven open-source tools.
+RAG is not a feature toggle. You do not "enable RAG" and ship; you build a pipeline (messy, stateful, failure-prone) and then you govern it.
 
-The goal is a deployable RAG pipeline that handles document ingestion, hybrid retrieval, distractor filtering, prompt construction, and separated evaluation, built with libraries you can fully inspect, modify, and host without vendor lock-in. Importantly, this playbook treats RAG as a production pipeline requiring corpus governance, provenance logging, and regression testing, not merely a retrieval-and-generate loop.
+The [evidence review](/retrieval-augmented-generation-evidence-review) surfaced five themes that recur across the production literature: retrieval quality as the binding constraint, distractor contamination as the silent accuracy killer, the necessity of separating retrieval evaluation from generation evaluation, domain-specific safety gaps, and the complementarity (not competition) between RAG and fine-tuning. This playbook converts those findings into an implementation path using open-source tools you can inspect, fork, and self-host without vendor lock-in.
+
+What emerges is not a demo; it is a deployable pipeline with corpus governance, provenance logging, and regression testing baked in from the first commit.
 
 ## Architecture Overview
 

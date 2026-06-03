@@ -1,5 +1,6 @@
 ---
 layout: post
+last_modified_at: 2026-06-03
 title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
 author: Zenith Law
 description: "Cloud localization in China: how SaaS platforms bifurcate, AI services get blocked, and compliance forces platform fragmentation. Ten engineering lessons."
@@ -43,9 +44,9 @@ tags:
 
 ## Introduction
 
-This article performs a close, source-graded reading of the cited records that span corporate announcements, vendor documentation, university operational advisories, industry media, and community incident discussions. A clear pattern emerges. Foreign platforms operating in China move from globally uniform delivery models toward localized control models shaped by legal jurisdiction, data governance constraints, and market-access design {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}. Later records show this pattern extending into product-line divergence, region-specific service withdrawal, communication-channel asymmetry, and fragmented user access conditions {% include references/cite.html key="ds-2026-ref3" %}, {% include references/cite.html key="ds-2026-ref4" %}, {% include references/cite.html key="ds-2026-ref5" %}, {% include references/cite.html key="ds-2026-ref6" %}, {% include references/cite.html key="ds-2026-ref9" %}, {% include references/cite.html key="ds-2026-ref12" %}, {% include references/cite.html key="ds-2026-ref14" %}, {% include references/cite.html key="ds-2026-ref15" %}.
+Global SaaS was never global. The corpus assembled here (corporate announcements, vendor documentation, university advisories, industry reportage, community incident threads) tells a single story in accelerating pitch: foreign platforms entering China fracture {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}. First the delivery model splits. Then the product line diverges. Then entire feature surfaces vanish behind region gates, communication channels atrophy, and user access conditions fragment into jurisdictional shards that no single engineering playbook anticipated {% include references/cite.html key="ds-2026-ref3" %}, {% include references/cite.html key="ds-2026-ref4" %}, {% include references/cite.html key="ds-2026-ref5" %}, {% include references/cite.html key="ds-2026-ref6" %}, {% include references/cite.html key="ds-2026-ref9" %}, {% include references/cite.html key="ds-2026-ref12" %}, {% include references/cite.html key="ds-2026-ref14" %}, {% include references/cite.html key="ds-2026-ref15" %}.
 
-The analysis applies qualitative NLP techniques to the corpus, including sentiment profiling, semantic clustering, and constrained counterfactual framing. The practical output is a lesson framework for engineering, security, legal compliance, platform operations, and governance teams. Each lesson incorporates explainability, interpretability, and trustworthiness as embedded operational criteria, not as detached theory.
+Sentiment profiling, semantic clustering, and constrained counterfactual framing expose the structural joints. The output is ten lessons: not theory, but operational controls for engineering, security, legal compliance, and governance teams who must treat explainability and trustworthiness as load-bearing architecture, not ornamental rhetoric.
 
 ### Jurisdiction and Interpretation Boundary
 
