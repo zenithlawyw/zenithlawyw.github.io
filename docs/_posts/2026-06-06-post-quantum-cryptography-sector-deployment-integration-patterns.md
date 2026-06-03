@@ -61,9 +61,9 @@ tags:
 
 Standards are finalised. Algorithms are selected. Nobody is deployed.
 
-That is the uncomfortable gap this article maps. The [theoretical foundations](/post-quantum-cryptography-theoretical-foundations-reconceptualisation) and [migration pathways](/post-quantum-cryptography-standards-migration-workforce-readiness) are documented, yet an IoT sensor with 64 KB of RAM, a cloud CSPM platform digesting terabytes of telemetry, an energy grid engineered for 30-year operational lifetimes, and an automotive OTA channel pushing firmware at motorway speeds each face constraints so divergent that "deploy PQC" is not a single engineering problem but a family of them.
+That gap is what this article maps. The [theoretical foundations](/post-quantum-cryptography-theoretical-foundations-reconceptualisation) and [migration pathways](/post-quantum-cryptography-standards-migration-workforce-readiness) are documented elsewhere in this series, but documentation is not deployment. An IoT sensor running on 64 KB of RAM, a cloud CSPM platform processing terabytes of security telemetry, an energy grid engineered to operate for 30 years, a vehicle OTA channel pushing firmware at motorway speeds: each of these operates under constraints so different from the others that "deploy PQC" is not one engineering problem. It is a family of problems sharing an algorithm portfolio.
 
-What follows is a sector-by-sector examination: convergent patterns, performance trade-offs, and an honest assessment of distance from production. One finding deserves front-loading: no reviewed paper reports a live deployment. Publication volume has outpaced operational reality.
+What follows is a sector-by-sector examination of how those constraints shape integration decisions. One finding needs to be stated upfront, because it colours everything that follows: no reviewed paper reports a live production deployment. Every result is from a simulation, a prototype, or a conceptual framework. The publication volume is impressive. The operational footprint is zero.
 
 ## Convergent Pattern: Kyber/Dilithium Dominance
 
@@ -83,47 +83,33 @@ Across all reviewed applied papers, one pattern is universal: CRYSTALS-Kyber (ML
 <figcaption>Table 1: PQC algorithm selection across reviewed sector-specific deployments.</figcaption>
 </figure>
 
-This convergence is pragmatic: Kyber and Dilithium offer the best performance-to-security ratio on commodity hardware. But it creates a systemic risk: the entire PQC deployment ecosystem is concentrated on a single mathematical family (lattice problems). If a lattice-breaking technique emerges, the entire portfolio is compromised simultaneously.
+This convergence is pragmatic. Kyber and Dilithium offer the best performance-to-security ratio on commodity hardware, and NIST endorsement removes procurement and compliance friction. But there is a systemic risk that none of the reviewed papers acknowledge: the entire applied PQC deployment ecosystem sits on a single mathematical family. Lattice problems. If a lattice-breaking technique emerges, whether from quantum or classical cryptanalysis, the entire portfolio is compromised at once. Not just one sector. All of them.
 
-> **Strategic implication:** Organisations should maintain crypto-agility to pivot to code-based (HQC/BIKE) or hash-based (SPHINCS+) alternatives if lattice assumptions weaken.
+> **Strategic implication:** Crypto-agility at the deployment architecture level, not just the library level, is the mitigation. None of the reviewed implementations demonstrate it.
 
 ## IoT and Blockchain: Quantum-Resistant Distributed Trust
 
-### The Triple Challenge
-
-IoT systems face a compound security challenge: resource-constrained devices, wireless communication channels, and centralised trust models vulnerable to single-point compromise. Several papers propose blockchain as a decentralised trust anchor, with PQC protecting both on-chain and off-chain operations {% include references/cite.html key="11491399" %} {% include references/cite.html key="10866709" %} {% include references/cite.html key="11398533" %}.
+IoT systems face a compound security problem. The devices are resource-constrained. The communication channels are wireless and often unauthenticated at the physical layer. The trust models tend toward centralisation, which creates single points of failure that a sufficiently motivated attacker can target. Several research groups have proposed blockchain as a decentralised trust anchor, with PQC protecting both on-chain and off-chain operations {% include references/cite.html key="11491399" %} {% include references/cite.html key="10866709" %} {% include references/cite.html key="11398533" %}.
 
 ### Fahomida et al.: CertiSense-PQ
 
-CertiSense-PQ provides a quantum-resistant certificate management framework for IoT devices {% include references/cite.html key="11491399" %}:
+CertiSense-PQ provides a quantum-resistant certificate management framework for IoT {% include references/cite.html key="11491399" %}. Certificates are issued and revoked on a distributed ledger (removing the CA single-point-of-failure), device certificates are signed with Dilithium, and session keys are exchanged via Kyber. The consensus mechanism is adapted for IoT networks where full Proof-of-Work would be computationally absurd.
 
-- **Blockchain-anchored PKI:** Certificate issuance and revocation recorded on a distributed ledger, removing CA single-point-of-failure
-- **Kyber + Dilithium:** Device certificates signed with Dilithium; session keys exchanged via Kyber
-- **Lightweight consensus:** Adapted for IoT networks where full Proof-of-Work is computationally infeasible
+The performance cost is not negligible: certificate verification latency increased by roughly 40% compared to ECDSA-based certificates. For non-real-time IoT applications (environmental monitoring, asset tracking), that overhead sits within acceptable bounds. For anything with hard latency requirements, it might not.
 
-**Performance finding:** Certificate verification latency increased by ~40% compared to ECDSA-based certificates, but remained within acceptable bounds for non-real-time IoT applications.
+### Rajkumar et al.: Blockchain Authentication
 
-### Rajkumar et al.: Blockchain Authentication for IoT
-
-Rajkumar et al. combine lattice-based PQC with blockchain for IoT device authentication, reporting 97.8% accuracy in device identity verification {% include references/cite.html key="10866709" %}. Their contribution focuses on the authentication protocol rather than the underlying PQC performance.
+Rajkumar et al. combine lattice-based PQC with blockchain for IoT device authentication and report 97.8% accuracy in device identity verification {% include references/cite.html key="10866709" %}. The paper focuses on the authentication protocol design; the underlying PQC performance characteristics are not benchmarked independently.
 
 ### Huang et al.: Confidential Smart Contracts
 
-Huang et al. target a specific gap: smart contract execution on quantum-vulnerable blockchains {% include references/cite.html key="11398533" %}. Their framework combines:
+Huang et al. address a more specific problem: executing smart contracts on quantum-vulnerable blockchains while maintaining input and output confidentiality {% include references/cite.html key="11398533" %}. Their framework uses lattice-based encryption for contract confidentiality, threshold PQC for multi-party execution, and PQC-compatible zero-knowledge arguments for on-chain verification.
 
-- **Lattice-based encryption** for contract input/output confidentiality
-- **Threshold PQC** for multi-party contract execution
-- **On-chain verification** using PQC-compatible zero-knowledge arguments
+The practical motivation is straightforward. If smart contracts manage property titles, derivatives, or insurance policies with lifetimes measured in decades, quantum resistance is not a future design consideration; it is a present one. Whether this particular framework survives contact with production smart contract platforms remains to be seen.
 
-**Practical relevance:** If smart contracts manage assets with multi-decade value (property, derivatives, insurance), quantum resistance is not a future concern; it is a present design requirement.
+## Energy Grid: The Most Urgent Case
 
-## Energy Grid: Critical Infrastructure Under Quantum Threat
-
-Krishnan et al. identify the power grid as uniquely vulnerable to quantum attack due to three converging factors {% include references/cite.html key="11212458" %}:
-
-1. **Multi-decade operational lifetimes:** Grid infrastructure deployed today must remain secure for 30+ years, well beyond plausible quantum computer timelines
-2. **SCADA/ICS protocols:** Industrial control systems use authentication mechanisms designed when computing threats were negligible
-3. **Cascading failure potential:** Compromising grid control systems can cause physical damage across interconnected networks
+Krishnan et al. make a case that the power grid is uniquely vulnerable to quantum attack, and it is a persuasive one {% include references/cite.html key="11212458" %}. Three factors converge. Grid infrastructure deployed today must remain secure for 30 years or more, which puts it well inside any plausible quantum timeline. SCADA and ICS protocols use authentication mechanisms designed in an era when computing threats to physical infrastructure seemed remote. And compromise in a power grid is not a data breach; it cascades into physical damage across interconnected networks.
 
 ### The STRIDE-Guided Assessment
 
@@ -145,21 +131,13 @@ Krishnan et al. apply Microsoft's STRIDE threat model (Spoofing, Tampering, Repu
 
 ### Smart Grid Architecture Recommendations
 
-The paper proposes PQC integration at three grid layers:
+The paper proposes PQC integration at three grid layers: PQC-authenticated SCADA commands between control centres and generation units at the generation layer; PQC-encrypted inter-substation communication replacing IEC 62351 classical profiles at the transmission layer; and PQC certificate management for smart meters and distributed energy resources at the distribution layer.
 
-- **Generation layer:** PQC-authenticated SCADA commands between control centres and generation units
-- **Transmission layer:** PQC-encrypted inter-substation communication replacing IEC 62351 classical profiles
-- **Distribution layer:** PQC certificate management for smart meters and distributed energy resources (DERs)
+**Gap noted:** Krishnan et al. provide no performance benchmarks for PQC on actual SCADA hardware. This is a significant omission. SCADA systems typically run on embedded processors with limited computational headroom, and the question of whether Kyber key encapsulation or Dilithium signature verification can complete within real-time control loop deadlines remains unanswered.
 
-**Gap noted:** No performance benchmarks are provided for PQC on actual SCADA hardware, which typically uses embedded processors with limited computational capability.
+## Automotive: Firmware Security Over Vehicle Lifetimes
 
-## Automotive: Over-the-Air Update Security
-
-Nakka et al. address the specific problem of securing over-the-air (OTA) firmware updates for connected vehicles {% include references/cite.html key="10454235" %}:
-
-- **Threat model:** A compromised OTA update channel enables remote vehicle takeover, the highest-severity automotive cybersecurity risk
-- **Current weakness:** OTA channels rely on RSA/ECDSA code signing and TLS key exchange, both quantum-vulnerable
-- **Proposed solution:** PQC-signed firmware images verified by vehicle ECUs before installation
+Nakka et al. focus on a specific, high-consequence problem: securing over-the-air firmware updates for connected vehicles {% include references/cite.html key="10454235" %}. A compromised OTA channel is the highest-severity attack in automotive cybersecurity because it enables remote vehicle takeover at scale. Current OTA channels depend on RSA/ECDSA code signing and TLS key exchange. Both are quantum-vulnerable, and vehicles designed today will be on roads for 15 to 20 years.
 
 ### Automotive-Specific Constraints
 
@@ -177,13 +155,11 @@ Nakka et al. address the specific problem of securing over-the-air (OTA) firmwar
 
 > **Key finding:** Kyber + Dilithium fit within automotive ECU constraints. SPHINCS+ (larger signatures) is acceptable as a conservative backup for vehicles with longer planned lifespans, at the cost of increased OTA bandwidth consumption.
 
-## Cloud Security: PQC-Enhanced Threat Detection
+## Cloud Security: Quantum-Resistant Posture Management
 
-Joseph et al. take a different approach to PQC deployment: rather than replacing encryption in transit, they integrate PQC into cloud security posture management (CSPM) systems {% include references/cite.html key="11324504" %}:
+Joseph et al. take a different angle entirely {% include references/cite.html key="11324504" %}. Rather than replacing encryption in transit, they propose integrating PQC into cloud security posture management (CSPM) systems: Kyber-encrypted threat intelligence sharing between agents across multi-cloud environments, PQC-authenticated security events for quantum-resistant audit trails, and LWE-derived feature extraction for detecting cryptographic downgrade attacks.
 
-- **Kyber-encrypted threat intelligence sharing** between CSPM agents across multi-cloud environments
-- **PQC-authenticated security events** ensuring audit trail integrity against future quantum compromise
-- **Lattice-based anomaly detection** using LWE-derived features for identifying cryptographic downgrade attacks
+Cloud environments face fewer resource constraints than IoT or automotive, so the mechanical difficulty of deploying PQC is lower. The challenge is operational. Coordinating PQC across multi-cloud CSPM agents means getting multiple cloud vendors to agree on implementation details, interoperability testing, and timeline. That kind of coordination does not exist at scale today.
 
 ### Multi-Cloud Integration Architecture
 
@@ -199,31 +175,19 @@ Joseph et al. take a different approach to PQC deployment: rather than replacing
 <figcaption>Table 4: CSPM enhancement through PQC integration (Joseph et al., 2025).</figcaption>
 </figure>
 
-**Practical observation:** Cloud environments have fewer resource constraints than IoT or automotive, making PQC adoption mechanically straightforward. The challenge is operational: coordinating PQC deployment across multi-cloud CSPM agents requires vendor cooperation and interoperability testing that does not yet exist at scale.
-
 ## Unconventional Applications
 
-Two papers apply PQC to domains less commonly associated with cryptographic migration:
+Two papers push PQC into domains that rarely appear in migration discussions.
 
-### DNA-Based Data Storage
+Raju et al. apply Kyber-1024 encryption to data encoded in synthetic DNA sequences {% include references/cite.html key="11414715" %}. The use case has its own logic. DNA storage offers extreme longevity (thousands of years) and extreme density (1 exabyte per cubic millimetre). If the storage medium will outlast the encryption, and it will, the data is eventually exposed unless the encryption is quantum-resistant from the start. Their approach encrypts data before DNA encoding and stores decryption keys in a separate PQC-protected key management system.
 
-Raju et al. apply Kyber-1024 encryption to data encoded in synthetic DNA sequences {% include references/cite.html key="11414715" %}. DNA storage offers extreme longevity (thousands of years) and density (1 exabyte per cubic millimetre), making quantum-resistant encryption essential. If the storage medium outlasts the useful lifespan of the encryption, the data is eventually exposed.
-
-**Integration approach:** Data is encrypted with Kyber-1024 before DNA encoding. Decryption keys are stored in PQC-protected key management systems separate from the DNA medium.
-
-### Covert Communications
-
-Zhao et al. apply lattice-based PQC to covert communication channels, legitimate-looking transmissions that conceal hidden messages {% include references/cite.html key="11171168" %}. Their construction replaces classical Diffie-Hellman key exchange with a lattice-based equivalent, maintaining covertness properties while resisting quantum cryptanalysis.
-
-**Significance:** Covert communication has applications in censorship circumvention, secure diplomatic channels, and intelligence operations. Quantum computers that break classical covert channels would expose both the content and the existence of hidden communications.
+Zhao et al. apply lattice-based PQC to covert communications: legitimate-looking transmissions that conceal hidden messages {% include references/cite.html key="11171168" %}. They replace classical Diffie-Hellman key exchange with a lattice-based equivalent, preserving covertness properties while adding quantum resistance. The applications (censorship circumvention, diplomatic channels, intelligence) are obvious. Less obvious is that a quantum adversary breaking classical covert channels would expose not just the message content but the very existence of the hidden communication. That is a different threat profile from ordinary encryption failure.
 
 ## Cross-Sector Analysis
 
 ### What Works
 
-- **Kyber/Dilithium as default selection:** The pragmatic choice, justified by NIST standardisation and strong performance-to-security ratios
-- **Hybrid migration strategies:** Dual classical + PQC deployment during transition periods, maintaining backward compatibility
-- **Blockchain as decentralised trust:** Removing certificate authority single points of failure for IoT and distributed systems
+Kyber and Dilithium as default selection is a pragmatic choice backed by NIST standardisation, library availability, and competitive performance characteristics. Hybrid migration strategies (dual classical + PQC during transition) maintain backward compatibility without forcing a cliff-edge cutover. Blockchain-anchored PKI removes certificate authority single points of failure in IoT architectures where centralised trust is a design liability.
 
 ### What Is Missing
 
@@ -243,41 +207,37 @@ Zhao et al. apply lattice-based PQC to covert communication channels, legitimate
 
 ### The Prototype-to-Production Gap
 
-The most significant finding across the sector-specific literature is the consistent absence of production deployments. Every reviewed paper presents conceptual frameworks, simulation results, or small-scale prototypes. None reports a production deployment with real users, real adversaries, or real operational constraints.
+This is the single most important finding across the sector-specific literature, and it deserves direct language. Every paper reviewed here presents a conceptual framework, a simulation, or a small-scale prototype. None reports a production deployment. No real users, no real adversaries, no real operational constraints.
 
-This gap is not unique to PQC. It reflects the general maturity level of a field that received its first formal standards only in 2024. But it means that the performance claims, security assurances, and integration architectures presented in these papers remain unvalidated under production conditions.
+The gap is not unique to PQC; the field received its first formal standards only in 2024. But the implication for practitioners is that performance claims, security assurances, and integration architectures from these papers have not been stress-tested in environments where things actually break.
 
 ## Takeaways
 
-Kyber and Dilithium dominate applied PQC across every sector examined. This convergence is pragmatic (library support, NIST endorsement, hardware performance) but it concentrates systemic risk on lattice assumptions. If lattice problems weaken, the entire deployed portfolio is exposed simultaneously. Crypto-agility at the deployment architecture level is the mitigation, and none of the reviewed implementations demonstrate it.
+Kyber and Dilithium dominate every sector examined here. The reason is straightforward: NIST endorsement, library availability, and competitive performance on commodity hardware. But universal adoption of a single mathematical family creates a concentration risk that the applied literature has not confronted. If lattice assumptions weaken, every sector loses its PQC portfolio at once. Crypto-agility at the architecture level, not merely the library API level, is the only hedge, and none of the reviewed implementations provide it.
 
-The prototype-to-production gap is universal and should be treated as the field's primary bottleneck. IoT and blockchain integration is the most active area of proposal, but no paper reports a production deployment. Energy grids face the most acute urgency (30-year asset lifetimes, Mosca's inequality already exceeded) yet have the least validated benchmarks on actual SCADA hardware. Automotive OTA channels fit within existing ECU constraints technically, but vehicle lifespans of 15–20 years mean that design decisions made today lock in quantum vulnerability or resistance for a generation.
+The prototype-to-production gap is the field's primary bottleneck. IoT and blockchain generate the most proposals. Energy grids face the most acute urgency, with 30-year asset lifetimes that already exceed Mosca's inequality for many data categories, yet they have the least validated benchmarks on actual SCADA hardware. Automotive OTA channels fit within ECU memory and latency constraints on paper, but vehicle lifespans of 15 to 20 years mean that PQC decisions made in the next few model years will determine whether those vehicles are quantum-vulnerable or quantum-resistant for their entire service life.
 
-What the sector evidence reveals, consistently, is that algorithm selection is the solved problem. Integration architecture, constrained-device performance validation, and cross-vendor interoperability testing are the unsolved problems.
+Algorithm selection is the solved problem. Integration architecture, constrained-device performance, and cross-vendor interoperability are not.
 
 ---
 
 ## Questions on Sector Deployment
 
-### Can IoT devices with limited memory support post-quantum cryptography?
+### Can IoT devices with limited memory run post-quantum cryptography?
 
-Kyber-768 requires approximately 2.4 KB of memory for public and private keys combined, which fits within the constraints of most 32-bit microcontrollers. However, no peer-reviewed benchmark validates PQC performance on production IoT hardware. Devices with less than 32 KB of available RAM may require hardware-accelerated PQC or lighter-weight constructions.
+Kyber-768 needs roughly 2.4 KB for public and private keys combined, which fits on most 32-bit microcontrollers. But "fits" is not the same as "works well." No peer-reviewed benchmark validates PQC on production IoT hardware with real workloads. Devices below 32 KB of available RAM may need hardware-accelerated PQC, lighter constructions, or offloaded key operations.
 
-### Which sector is most urgently affected by the quantum threat?
+### Which sector faces the most urgent quantum threat?
 
-Energy grid infrastructure, due to the combination of multi-decade operational lifetimes (30+ years), cascading failure potential, and the use of legacy SCADA/ICS authentication mechanisms. The "harvest now, decrypt later" threat model means encrypted SCADA traffic captured today may be decryptable within the infrastructure's operational lifespan.
+Energy grid infrastructure. The combination of 30-year-plus operational lifetimes, cascading failure potential, and legacy SCADA authentication makes the case almost self-evident. Encrypted SCADA traffic captured today may well be decryptable within the operational lifespan of grid equipment being installed right now. Mosca's inequality is already in the red for this sector.
 
-### Why does every applied PQC paper use Kyber and Dilithium?
+### Why does every applied PQC paper default to Kyber and Dilithium?
 
-NIST standardisation creates strong incentive alignment: library support, regulatory compliance, and interoperability expectations all favour the standardised algorithms. Kyber and Dilithium also offer the best performance on commodity hardware. The risk is systemic: if lattice assumptions weaken, the entire deployed portfolio is affected.
+Incentive alignment. NIST standardisation brings library support, regulatory compliance, and interoperability expectations. Kyber and Dilithium also happen to perform well on commodity hardware. The downside is systemic: one mathematical family, one failure mode. If lattice assumptions weaken, every sector loses protection simultaneously.
 
-### Are there production deployments of post-quantum cryptography?
+### Are there any production deployments of PQC?
 
-Among the papers reviewed here, no. All papers present conceptual frameworks, simulations, or small-scale prototypes. Production deployments with real users, real adversaries, and real operational constraints are absent. Broader industry efforts (Google's CECPQ2 experiment, Cloudflare's PQ TLS deployment) exist but are outside the scope of this academic review.
-
-### How does PQC affect network performance?
-
-PQC key encapsulation adds approximately 1–3 ms to TLS handshakes depending on security level and hardware. PQC signatures (Dilithium) are larger than ECDSA signatures, increasing bandwidth consumption. For most applications, the overhead is negligible. For latency-sensitive systems (SCADA, real-time automotive), validated benchmarks on target hardware are essential before deployment.
+Not among the papers reviewed here. Broader industry experiments exist (Google's CECPQ2, Cloudflare's post-quantum TLS rollout), but they sit outside the scope of this academic review. The applied research community is still at the conceptual and prototype stage. Production deployment with real adversaries and real operational constraints has not been reported in the peer-reviewed literature.
 
 ---
 
@@ -300,12 +260,7 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 
 ### A. Evidence Boundary Notes
 
-- **No production deployments** are reported in any reviewed paper. All findings are from simulation, prototype, or conceptual analysis.
-- **IoT performance claims** are based on simulation or desktop-class hardware, not constrained devices. Real-world IoT PQC performance is unvalidated.
-- **Energy grid analysis** (Krishnan et al.) provides threat modelling only; no PQC benchmarks on SCADA hardware are presented.
-- **Automotive OTA analysis** (Nakka et al.) derives constraint compatibility from algorithm specifications, not empirical ECU testing.
-- **Cloud CSPM integration** (Joseph et al.) is an architectural proposal without implementation or evaluation.
-- **Blockchain consensus overhead** from PQC integration is acknowledged but not quantified in the reviewed papers.
+No production deployments are reported in any reviewed paper; all findings come from simulation, prototype, or conceptual analysis. IoT performance claims are based on simulation or desktop-class hardware rather than constrained devices, so real-world IoT PQC performance remains an open question. The energy grid analysis from Krishnan et al. provides threat modelling without PQC benchmarks on SCADA hardware. Nakka et al.'s automotive analysis derives constraint compatibility from algorithm specifications rather than empirical ECU testing. Joseph et al.'s cloud CSPM proposal is architectural only, with no implementation or evaluation. Blockchain consensus overhead from PQC is acknowledged in the reviewed papers but never quantified.
 
 ### B. Technical Term Definitions
 
@@ -346,10 +301,10 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 
 ### D. SEO, GEO, and AEO Optimisation Notes
 
-**Target keywords:** PQC deployment IoT, post-quantum blockchain, quantum-resistant energy grid, automotive PQC OTA, cloud CSPM post-quantum, DNA storage encryption, covert communication lattice, CRYSTALS-Kyber deployment, sector-specific PQC, quantum-resistant infrastructure.
+**Primary search terms:** PQC deployment IoT, post-quantum blockchain, quantum-resistant energy grid, automotive PQC, cloud CSPM post-quantum, sector-specific PQC.
 
-**Structured data:** HowTo schema implemented for sector-specific PQC readiness assessment. FAQ schema covers deployment feasibility questions. Article schema with author attribution and citation metadata.
+**Structured data:** HowTo and FAQ schemas are implemented. Article schema includes author attribution and citation metadata.
 
-**Internal linking:** Cross-linked to companion PQC theoretical and migration articles, and to the data provenance article for traceability context in IoT and blockchain applications.
+**Cross-references:** Linked to companion PQC theoretical and migration articles.
 
 </details>

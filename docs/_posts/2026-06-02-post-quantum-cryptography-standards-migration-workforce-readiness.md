@@ -57,11 +57,9 @@ tags:
 
 ## The Migration Problem
 
-The algorithms exist. NIST published its first post-quantum cryptographic standards in 2024: ML-KEM (CRYSTALS-Kyber) for key encapsulation, ML-DSA (CRYSTALS-Dilithium) for digital signatures, and SLH-DSA (SPHINCS+) for hash-based signatures {% include references/cite.html key="11325571" %}. The standards exist. What does not exist at scale is the organisational capability to deploy them.
+The algorithms exist. NIST published its first post-quantum cryptographic standards in 2024: ML-KEM (CRYSTALS-Kyber) for key encapsulation, ML-DSA (CRYSTALS-Dilithium) for digital signatures, and SLH-DSA (SPHINCS+) for hash-based signatures {% include references/cite.html key="11325571" %}. Standards exist. What does not exist, at any meaningful scale, is the organisational capability to deploy them.
 
-This is not a cryptographic problem anymore. It is a people problem, an education problem, and a software engineering problem wearing a cryptography hat.
-
-The [companion theoretical review](/post-quantum-cryptography-theoretical-foundations-reconceptualisation) established the mathematical foundations. This article turns to what will actually determine whether migration happens in time: the engineering, educational, and organisational dimensions of the post-quantum transition.
+This has stopped being a cryptographic problem. It is a people problem and a software engineering problem that happens to wear a cryptography hat. The [companion theoretical review](/post-quantum-cryptography-theoretical-foundations-reconceptualisation) covered the mathematical foundations. This article turns to the harder question: whether the engineering, educational, and organisational infrastructure can be built in time.
 
 ## NIST Standardisation: What It Settled and What It Left Open
 
@@ -78,14 +76,16 @@ The NIST PQC competition (2016–2024) resolved the primary algorithm selection 
 | SPHINCS+           | SLH-DSA (FIPS 205) | Hash-based signature    | Conservative signatures | 64 (pub) / 128 (priv)      |
 | Falcon             | FN-DSA (draft)     | Lattice-based signature | Compact signatures      | 1,793 (pub) / 2,305 (priv) |
 
-<figcaption>Table 1: NIST-standardised PQC algorithms with key sizes at Security Level 3 (192-bit equivalent).</figcaption>
+<figcaption>Table 1: NIST-standardised PQC algorithms. Key sizes shown at Security Level 3 (192-bit classical equivalent). Note: "Security Level 3" maps to different parameter sets per algorithm; direct key-size comparison across schemes should account for differing internal structures. The Falcon private key figure (2,305 bytes) is taken from specification documents and should be verified against the final FIPS 206 publication when available.</figcaption>
 </figure>
 
 ### What Remains Open
 
-- **Code-based KEM candidates** (HQC, BIKE) remain under fourth-round evaluation. If standardised, they provide algorithm diversity beyond lattice-based schemes {% include references/cite.html key="11325571" %}.
-- **Post-quantum zero-knowledge proofs** are identified as an emerging research area accounting for 13% of recent PQC publications {% include references/cite.html key="10392726" %}.
-- **Interoperability testing** across implementations (liboqs, BouncyCastle, AWS-LC, wolfSSL) remains ad-hoc rather than systematic.
+Code-based KEM candidates (HQC, BIKE) remain under fourth-round evaluation. If standardised, they would provide algorithm diversity beyond the lattice family, which matters for systemic risk management {% include references/cite.html key="11325571" %}.
+
+Post-quantum zero-knowledge proofs account for roughly 13% of recent PQC publications {% include references/cite.html key="10392726" %}, but mature constructions ready for standardisation do not yet exist.
+
+Interoperability testing across implementations (liboqs, BouncyCastle, AWS-LC, wolfSSL) is still ad-hoc. No systematic cross-implementation validation programme exists.
 
 ### Research Landscape Mapping
 
@@ -113,7 +113,7 @@ The most novel contribution in the migration space comes from Wahlang and Vidhan
 
 ### The Problem
 
-Enterprise codebases contain thousands of cryptographic call sites. `from Crypto.PublicKey import RSA`. `nacl.public.PrivateKey()`. `ec.generate_private_key(ec.SECP256R1())`. Each one is a migration target. Manual migration across all of them is error-prone, expensive, and slow enough to be measured in years rather than sprints. Mosca's inequality tells us that migration time (T) is the variable organisations can actually control, and ccPASTpqc aims to compress it.
+Enterprise codebases are littered with cryptographic call sites. `from Crypto.PublicKey import RSA`. `nacl.public.PrivateKey()`. `ec.generate_private_key(ec.SECP256R1())`. Each one needs to be found, understood, and replaced. Manual migration at enterprise scale is slow enough to be measured in years rather than sprints, and Mosca's inequality tells us that migration time (T) is the one variable organisations can actually compress. That is ccPASTpqc's target.
 
 ### The Approach
 
@@ -136,9 +136,9 @@ Enterprise codebases contain thousands of cryptographic call sites. `from Crypto
 <figcaption>Table 3: ccPASTpqc performance metrics (Wahlang and Vidhani, 2026).</figcaption>
 </figure>
 
-**Critical caveat:** The 0.925 BLEU score measures textual similarity, not functional correctness. A high BLEU score tells you the output text looks like correct code. It does not tell you the code compiles. It does not tell you it passes tests. It certainly does not tell you it preserves the security properties of the original implementation. Translated GitHub code was not execution-tested {% include references/cite.html key="10.1145/3799830.3799836" %}. Anyone who has worked with LLM-generated code knows the gap between "syntactically plausible" and "silently breaks invariants that a human developer would never violate." For production migration, execution testing and security auditing of translated code are non-negotiable.
+**Critical caveat:** A 0.925 BLEU score tells you the output text looks like correct code. It does not tell you whether the code compiles, passes tests, or preserves the security properties of the original implementation. The translated GitHub code was never execution-tested {% include references/cite.html key="10.1145/3799830.3799836" %}. Anyone who has spent time debugging LLM-generated code knows the gap between "syntactically plausible" and "silently violates an invariant that a human developer would catch by instinct." For production migration, execution testing and security auditing of every translated function are non-negotiable.
 
-**Practical gap:** Most production cryptographic code lives in C/C++, Java, and Go. ccPASTpqc supports Python only. This is a proof of concept, not a production solution.
+**Practical gap:** Most production cryptographic code lives in C, C++, Java, and Go. ccPASTpqc covers Python only. This is a proof of concept, not a migration tool you can hand to your engineering team and walk away.
 
 ### What Practitioners Should Do Now
 
@@ -181,7 +181,7 @@ This means PQC can be deployed within the existing TLS protocol framework withou
 
 ## The Workforce Readiness Gap
 
-Three independent studies converge on the same uncomfortable conclusion: the technical tools for PQC migration exist, but the people trained to use them do not. Not in sufficient numbers. Not yet.
+Three independent studies, from different countries and targeting different audiences, arrive at the same uncomfortable finding: the technical tools for PQC migration exist, but trained practitioners do not. Not at scale. The evidence comes from small programmes, and the confidence we can place in their generalisability is limited, but the consistency of direction across uncoordinated efforts is worth noting.
 
 ### Evidence from Three Educational Programmes
 
@@ -208,15 +208,15 @@ Three independent studies converge on the same uncomfortable conclusion: the tec
 
 ### Workforce Strategy Recommendations
 
-Based on the convergent evidence from these three programmes:
+The evidence base here is thin. Three programmes at three institutions, with the largest cohort numbering 21 students. Generalisability beyond these specific contexts is unvalidated. That said, the directional findings are consistent enough to inform early planning, with the caveat that these are hypotheses worth testing at scale rather than proven prescriptions:
 
-1. **Immediate:** Deploy awareness-level PQC training across all IT and security teams. This requires no curriculum restructuring and can be delivered in half-day workshops.
+1. **Immediate:** Deploy awareness-level PQC training across IT and security teams. This requires no curriculum restructuring and can be run as half-day workshops. The bar is low: staff should understand what the quantum threat changes and what it does not.
 
-2. **Short-term:** Establish proficiency-level training for cryptographic engineers and security architects. Use the PQCIP model of hands-on tool interaction with individual operations exposed.
+2. **Short-term:** Establish proficiency-level training for cryptographic engineers and security architects, using hands-on tool interaction with individual operations exposed (the PQCIP model). Whether the custom-tool approach from Steinfeld et al. transfers to other institutions and audiences is an open question.
 
-3. **Medium-term:** Embed PQC modules into existing computer science and cybersecurity degree programmes. The modular approach avoids the curriculum approval bottleneck.
+3. **Medium-term:** Embed PQC modules into existing computer science and cybersecurity degree programmes. The modular approach sidesteps curriculum approval bottlenecks, which is its primary advantage.
 
-4. **Ongoing:** Maintain crypto-agility competency (the ability to respond to algorithm breaks or new standardisation outcomes) as a core organisational capability.
+4. **Ongoing:** Maintain crypto-agility as an organisational competency, not just a technical property. When NIST publishes a deprecation notice or a new attack surfaces, the response time should be measured in weeks, not quarters.
 
 ## Migration Planning Framework
 
@@ -251,13 +251,13 @@ Synthesising the migration-related findings yields a practical framework:
 
 ## Takeaways
 
-NIST standardisation resolved the algorithm selection question but left the harder problem untouched: organisational capacity to deploy. The binding constraint is workforce readiness, not algorithm availability. Three programmes demonstrate that modular, bottom-up education reaches practitioners faster than traditional curriculum reform, but coverage remains limited to awareness-level content and a single programming language.
+NIST resolved the algorithm question. The harder problem, organisational readiness, remains largely untouched. Workforce capacity, not algorithm availability, is the binding constraint on migration timelines. Three educational programmes point in a consistent direction (modular, bottom-up, hands-on), but the evidence base is narrow: small cohorts at single institutions, one programming language, no longitudinal outcome data.
 
-Automated migration tooling (ccPASTpqc) achieves 0.925 BLEU on Python conversions. This is promising but incomplete: no execution testing validates the generated code, and production languages (C/C++, Java, Go, Rust) lack equivalent tooling entirely.
+Automated migration tooling shows promise. ccPASTpqc achieves 0.925 BLEU on Python conversions, which is encouraging for draft generation but tells us nothing about functional correctness. No execution testing validates the output, and production languages (C, C++, Java, Go, Rust) lack equivalent tooling entirely. Treat it as a starting point for human review, not a substitute for it.
 
-Hybrid QKD/PQC network integration works within TLS 1.3's extensibility model, removing the protocol-redesign concern. What remains is the practical engineering: zone-based deployment, QKMS bridge infrastructure, and validated interoperability with existing certificate authorities.
+Hybrid QKD/PQC network integration works within the TLS 1.3 extensibility model, which removes the protocol-redesign concern. The remaining work is practical engineering: zone-based deployment, QKMS bridge infrastructure, interoperability testing with existing certificate authorities. None of this has been validated at production scale.
 
-The migration timeline is governed by Mosca's inequality, not by quantum computer arrival dates. Organisations should compute $D + T$ for their data categories and treat the result as a deadline, not a target.
+The migration timeline is governed by Mosca's inequality. Organisations should compute $D + T$ for each data category and treat the result as a deadline, not a planning target.
 
 ---
 
@@ -265,23 +265,19 @@ The migration timeline is governed by Mosca's inequality, not by quantum compute
 
 ### How long does a typical PQC migration take for an enterprise?
 
-Migration timelines depend on codebase size, cryptographic dependency count, and organisational readiness. Wahlang and Vidhani's automated tooling can accelerate Python migrations, but manual review remains necessary. For large enterprises, expect multi-year migration programmes with phased rollout. The critical first step, cryptographic inventory, can begin immediately.
+There is no typical case yet. Migration timelines depend on codebase size, cryptographic dependency count, and how deeply classical algorithms are embedded in the architecture. Automated tooling can accelerate the Python fraction, but manual review is still necessary for every converted function. For large enterprises with heterogeneous stacks, expect a multi-year programme. The first step, inventorying cryptographic dependencies, can start immediately and is worth doing regardless of migration timeline.
 
-### Can I use TLS 1.3 for PQC deployment without protocol changes?
+### Can TLS 1.3 support PQC without protocol changes?
 
-Yes. TLS 1.3 supports PQC through its extensible `key_share` and `signature_algorithms` mechanisms. PQC key encapsulation and signatures can be negotiated within the existing handshake framework. This is one of PQC's major practical advantages over QKD, which requires entirely new infrastructure.
+Yes. TLS 1.3 was designed with extensibility in mind; the `key_share` and `signature_algorithms` extensions can carry PQC KEM ciphertexts and digital signatures within the existing handshake. No protocol redesign is required. This is one of PQC's genuine practical advantages: the transport layer can evolve without breaking the protocol itself.
 
-### What programming languages does automated PQC code migration support?
+### What programming languages does automated PQC code migration cover?
 
-As of the papers reviewed here, only Python is covered by ccPASTpqc. Production cryptographic code in C/C++, Java, Go, and Rust requires manual migration or purpose-built tooling that does not yet exist. This is a significant research and tooling gap.
-
-### Should I train my team on PQC before starting migration?
-
-Yes. The reviewed educational programmes consistently show that hands-on understanding of PQC operations improves migration quality and reduces errors. Deploy awareness-level training immediately for all technical staff, and proficiency-level training for security teams before they begin migration work.
+As of the papers reviewed here, only Python, through ccPASTpqc. Production cryptographic code in C, C++, Java, Go, and Rust requires manual migration or purpose-built tooling that does not yet exist. Given that most security-critical cryptographic implementations live in C and C++, the tooling gap is substantial.
 
 ### Is "Post-Quantum Cryptography" the same as "quantum cryptography"?
 
-No. Post-quantum cryptography uses classical (non-quantum) algorithms designed to resist attacks from quantum computers. Quantum cryptography uses quantum mechanical phenomena (photon polarisation) for key distribution. The terminology confusion is documented in the educational literature. "Quantum-Resistant Cryptography" is a clearer term.
+No, and the confusion is not academic. Borrelli et al. found that students consistently misread "post-quantum" as meaning "cryptography that uses quantum computers" rather than "cryptography that resists quantum computers." PQC runs on classical hardware with algorithms designed to survive quantum attacks. Quantum cryptography (QKD) uses quantum physics for key distribution. The term "Quantum-Resistant Cryptography" has been suggested as a clearer alternative.
 
 ---
 
@@ -304,11 +300,7 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 
 ### A. Evidence Boundary Notes
 
-- **ccPASTpqc results** use BLEU/CodeBLEU metrics that measure textual similarity, not functional correctness. No execution testing was performed on translated code.
-- **Educational programme evaluations** are based on small cohorts at single institutions (Borrelli: 14 and 21 students at RIT; Steinfeld: not quantified). Generalisability to other contexts is unvalidated.
-- **Hybrid network architecture** (Shim et al.) is a protocol-level design without performance benchmarks or scale testing.
-- **Topic modelling** (Song and Kim) covers one year of data using bag-of-words LDA, which misses contextual nuance and cannot assess paper quality.
-- **Modular curriculum** (Borrelli et al. 2026) is a 2-page poster paper with no assessment data or student outcomes.
+The ccPASTpqc results use BLEU and CodeBLEU, metrics that measure textual similarity rather than functional correctness; the authors did not execution-test their translated code on real projects. Educational programme evaluations rest on small cohorts at individual institutions (Borrelli: 14 and 21 students at RIT; Steinfeld: cohort size not reported), and the modular curriculum paper from Borrelli et al. (2026) is a 2-page poster with no assessment data. Generalising from these to workforce-wide strategy involves a significant inferential leap. The hybrid network architecture from Shim et al. is a protocol-level design; no performance benchmarks or scale testing accompany it. Song and Kim's topic modelling covers a single year of data using bag-of-words LDA, which captures surface-level thematic distribution but cannot assess paper quality or methodological rigour.
 
 ### B. Technical Term Definitions
 
@@ -344,10 +336,10 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 
 ### D. SEO, GEO, and AEO Optimisation Notes
 
-**Target keywords:** PQC migration planning, NIST PQC standards, post-quantum cryptography education, automated code migration PQC, hybrid QKD PQC network, TLS 1.3 post-quantum, Mosca inequality, crypto-agility enterprise, ccPASTpqc, CRYSTALS-Kyber deployment.
+**Primary search terms:** PQC migration, NIST PQC standards, post-quantum cryptography education, automated code migration, hybrid QKD PQC network, TLS 1.3 post-quantum, Mosca inequality, crypto-agility.
 
-**Structured data:** HowTo schema implemented for enterprise PQC migration planning. FAQ schema covers practical migration and training questions. Article schema with author attribution and citation metadata.
+**Structured data:** HowTo and FAQ schemas are implemented. Article schema includes author attribution and citation metadata.
 
-**Internal linking:** Cross-linked to companion PQC theoretical foundations and sector deployment articles, and to the MCP/A2A agentic orchestration article for automated tooling context.
+**Cross-references:** Linked to companion PQC theoretical foundations and sector deployment articles.
 
 </details>
