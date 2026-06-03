@@ -67,9 +67,9 @@ tags:
 
 RAG is not a feature toggle. You do not "enable RAG" and ship; you build a pipeline (messy, stateful, failure-prone) and then you govern it.
 
-The [evidence review](/retrieval-augmented-generation-evidence-review) surfaced five themes that recur across the production literature: retrieval quality as the binding constraint, distractor contamination as the silent accuracy killer, the necessity of separating retrieval evaluation from generation evaluation, domain-specific safety gaps, and the complementarity (not competition) between RAG and fine-tuning. This playbook converts those findings into an implementation path using open-source tools you can inspect, fork, and self-host without vendor lock-in.
+Five themes recur across the production literature. The [evidence review](/retrieval-augmented-generation-evidence-review) surfaced them all: retrieval quality as the binding constraint, distractor contamination as the silent accuracy killer, the necessity of separating retrieval evaluation from generation evaluation, domain-specific safety gaps, and the complementarity (not competition) between RAG and fine-tuning. None of these are optional concerns. This playbook converts those findings into an implementation path using open-source tools you can inspect, fork, and self-host without vendor lock-in.
 
-What emerges is not a demo; it is a deployable pipeline with corpus governance, provenance logging, and regression testing baked in from the first commit.
+What emerges is not a demo. It is a deployable pipeline: corpus governance, provenance logging, and regression testing baked in from the first commit. Skip any of those three and you will discover the gap in production, under load, at the worst possible moment.
 
 ## Architecture Overview
 
@@ -107,7 +107,7 @@ Both frameworks support PDF, HTML, Markdown, CSV, and JSON out of the box. For s
 
 ### Chunking Strategy
 
-Chunking strategies directly dictate retrieval quality. Production data supports these guidelines:
+Get chunking wrong and everything downstream suffers. Retrieval quality is dictated here, not at the embedding stage, not at the re-ranker. Production data supports these guidelines:
 
 - **Target chunk size**: 256–512 tokens for dense retrieval compatibility. Larger chunks dilute embedding context; smaller chunks drop relational data.
 - **Overlap**: A 10–20% token overlap between adjacent chunks preserves continuity across boundaries.
@@ -130,7 +130,7 @@ nodes = splitter.get_nodes_from_documents(documents)
 
 ### Embedding Model Selection
 
-For production RAG, select models that optimise the balance between semantic capture and inference latency:
+Model selection is a trade-off you cannot dodge. Semantic capture pulls toward larger dimensions; inference latency pushes back. For production RAG, choose deliberately:
 
 <figure markdown="1">
 
@@ -189,7 +189,7 @@ collection.add(
 
 ## Stage 3: Hybrid Retrieval
 
-Empirical data confirms that hybrid retrieval consistently outperforms standalone methods {% include references/cite.html key="10.1145/3805774" %}. Implement both pipelines and fuse their outputs:
+Why use two retrieval paths when one seems simpler? Because neither path alone catches everything. BM25 excels at exact keyword matches; dense search captures paraphrases and semantic drift. Empirical data confirms that hybrid retrieval consistently outperforms standalone methods {% include references/cite.html key="10.1145/3805774" %}. Implement both and fuse their outputs:
 
 ### BM25 Sparse Retrieval
 
@@ -245,7 +245,7 @@ fused_ids = reciprocal_rank_fusion([sparse_results, dense_results], top_n=10)
 
 ## Stage 4: Distractor Filtering with Cross-Encoder Re-ranking
 
-A single distracting context, highly vector-similar but non-answer-containing, degrades accuracy by up to **25%**. Multiple distractors sink accuracy by **67%** {% include references/cite.html key="10.1145/3626772.3657834" %}. A cross-encoder re-ranker acts as your primary production gatekeeper:
+One distractor document. That is all it takes. A single passage, highly vector-similar but containing no actual answer, degrades generation accuracy by up to **25%**. Stack multiple distractors and accuracy collapses by **67%** {% include references/cite.html key="10.1145/3626772.3657834" %}. The cross-encoder re-ranker is not a nice-to-have; it is your primary production gatekeeper:
 
 ```python
 from sentence_transformers import CrossEncoder
@@ -356,7 +356,7 @@ def generate_production(prompt: str) -> str:
 
 ## Stage 7: Evaluation Pipeline
 
-Decouple your validation loops into separate retrieval and generation evaluations to isolate systemic failures, as recommended by Huang and Huang {% include references/cite.html key="10.1145/3805774" %} and demonstrated by Kimothi {% include references/cite.html key="rag-2026-ref1" %}:
+Separate your evaluation loops. Retrieval metrics and generation metrics must live in distinct dashboards, distinct alert channels, distinct failure taxonomies. Conflating them obscures root cause. Huang and Huang {% include references/cite.html key="10.1145/3805774" %} and Kimothi {% include references/cite.html key="rag-2026-ref1" %} both demonstrate why this decoupling is non-negotiable:
 
 ### Retrieval Metrics
 
@@ -403,7 +403,7 @@ result = evaluate(
 
 ## Stage 8: RAG + Fine-Tuning Fusion
 
-Teach your base model domain layout compliance using Low-Rank Adaptation (LoRA) while relying on RAG to fetch live data. Meng et al. demonstrate that this fusion produces the best results for domain-specific deployments {% include references/cite.html key="11009349" %}:
+RAG fetches. Fine-tuning teaches. They solve different problems. Use Low-Rank Adaptation (LoRA) to teach your base model domain layout compliance: citation styles, output formatting, and specialised vocabulary. Let RAG handle the volatile, updatable knowledge layer. Meng et al. demonstrate that this fusion produces stronger results than either technique alone for domain-specific deployments {% include references/cite.html key="11009349" %}:
 
 ### LoRA Fine-Tuning with PEFT
 
@@ -453,7 +453,7 @@ model = AutoModelForCausalLM.from_pretrained(
 
 ## Production Governance Controls
 
-The implementation stages above build a functional RAG pipeline. Production deployment requires additional governance controls that the source papers identify as gaps but do not resolve with ready-made solutions.
+Everything above builds a functional RAG pipeline. Functional, not production-ready. The gap between "works on my laptop" and "serves real users under load" is governance: the controls that the source papers identify as critical gaps but never resolve with ready-made solutions.
 
 ### Corpus Authority and Update Governance
 
@@ -475,7 +475,7 @@ CORPUS_METADATA = {
 
 ### Conflicting Evidence Handling
 
-When retrieved documents contradict each other, the generator may silently prefer one version or blend both into a misleading composite. Production systems must detect and surface contradictions rather than hiding them:
+What happens when your top-ranked documents disagree? The generator picks a side, or worse, blends contradictory claims into a confidently stated composite that matches neither source. Production systems must detect and surface contradictions rather than concealing them:
 
 - Flag queries where top-ranked documents contain opposing claims.
 - Present contradictions explicitly to users rather than generating a false synthesis.
@@ -483,7 +483,7 @@ When retrieved documents contradict each other, the generator may silently prefe
 
 ### Uncertainty Display
 
-RAG systems should communicate confidence boundaries to users. When retrieval returns thin or ambiguous context, the generated response should signal reduced confidence rather than maintaining the same assertive tone:
+Confidence display matters more than most teams realise. When retrieval returns thin or ambiguous context, the generated response must signal reduced confidence. A system that speaks with identical assertiveness regardless of evidence quality is not trustworthy; it is dangerous:
 
 - Implement a retrieval confidence threshold below which responses include an explicit uncertainty qualifier.
 - Distinguish between "the corpus does not contain an answer" and "the corpus contains conflicting or low-confidence answers."
@@ -502,7 +502,7 @@ This logging is essential for debugging quality regressions, investigating user 
 
 ### Regression Testing After Corpus Updates
 
-Corpus changes can silently degrade retrieval quality. Implement automated regression testing:
+Corpus changes break things silently. No exception thrown, no error log entry; just slightly worse answers that accumulate user distrust over weeks. Implement automated regression testing:
 
 - Maintain a labelled evaluation set of queries with known correct answers.
 - Run the evaluation set after every corpus update and compare retrieval and generation metrics against the previous baseline.

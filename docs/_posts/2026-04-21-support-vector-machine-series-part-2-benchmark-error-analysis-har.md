@@ -51,7 +51,7 @@ tags:
 
 Ninety-six percent accuracy. Impressive headline; useless diagnostic. Aggregate metrics conceal exactly the failure modes that matter in deployment: which classes bleed into each other, where the decision boundary wobbles under minor perturbation, and whether your geometry is genuinely separating activities or merely memorising sensor artefacts.
 
-This article strips the [UCI Human Activity Recognition dataset](https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones) {% include references/cite.html key="svm-2026-ref16" %} down to class-level forensics: precision, recall, F1, confusion corridors, tuning stability, and PCA geometry signals, comparing an RBF SVM pipeline against a Random Forest baseline. The question is narrow: what do these numbers actually reveal once you stop celebrating the aggregate?
+This article strips the [UCI Human Activity Recognition dataset](https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones) {% include references/cite.html key="svm-2026-ref16" %} down to class-level forensics. Precision, recall, F1, confusion corridors, tuning stability, PCA geometry signals: all compared across an RBF SVM pipeline and a Random Forest baseline. The question is deliberately narrow. What do these numbers actually reveal once you stop celebrating the aggregate?
 
 This article is not legal advice.
 
@@ -99,7 +99,7 @@ Top-level outcomes from this run:
 | Macro F1 | 0.8808 | 0.9370 |
 | Kappa    | 0.8595 | 0.9274 |
 
-At first glance, RF is the stronger overall fit. In this run, that is supported by higher accuracy, macro F1, and kappa. The conclusion is still incomplete, because operational risk sits in specific class transitions, not in averages.
+RF looks stronger. Every aggregate metric favours it in this run: accuracy, macro F1, kappa. But the conclusion is incomplete, because operational risk does not live in averages; it concentrates in specific class transitions that aggregates actively obscure.
 
 ## Class-Level Diagnostics: Where SVM Holds and Slips
 
@@ -109,13 +109,9 @@ Selected class profile:
 - SITTING and STANDING: dominant static-class confusion corridor.
 - WALKING-related subclasses: overlap-driven dynamic-class spillovers.
 
-SVM class asymmetry in this run:
+SVM class asymmetry in this run tells a specific story. SITTING recall is high while precision drops: the classifier over-assigns this label, pulling in STANDING instances that share nearly identical accelerometer profiles. STANDING shows the inverse; precision holds but recall erodes, pointing to conservative boundary placement that sacrifices coverage for purity. Meanwhile, WALKING_UPSTAIRS and WALKING_DOWNSTAIRS bleed into each other bidirectionally. Not random scatter. Structured spillover.
 
-1. SITTING recall is high while precision drops, signaling over-assignment pressure.
-2. STANDING precision is high while recall drops, signaling conservative boundary placement.
-3. WALKING_UPSTAIRS and WALKING_DOWNSTAIRS show structured bidirectional errors.
-
-This pattern is coherent with kernel locality behavior and neighborhood overlap in transformed space ({% include references/cite.html key="svm-2026-ref18" %}; {% include references/cite.html key="svm-2026-ref19" %}; {% include references/cite.html key="svm-2026-ref15" %}).
+This pattern is coherent with kernel locality behaviour and neighbourhood overlap in transformed space ({% include references/cite.html key="svm-2026-ref18" %}; {% include references/cite.html key="svm-2026-ref19" %}; {% include references/cite.html key="svm-2026-ref15" %}).
 
 ## Error Corridors, Not Random Noise
 
@@ -125,33 +121,25 @@ Largest SVM confusion transitions in this run:
 2. WALKING -> WALKING_DOWNSTAIRS.
 3. WALKING_UPSTAIRS -> WALKING.
 
-RF reduces the same corridors, which indicates shared ambiguity zones with stronger suppression by tree-based partitioning in this feature geometry.
+RF reduces the same corridors. That is telling: the ambiguity zones are shared, but tree-based partitioning suppresses them more aggressively in this particular feature geometry.
 
-Operational implication: treat these corridors as monitoring units. In production dashboards, pairwise transition counts are often more actionable than global F1.
+So what do you actually track? Pairwise transition counts. In any production dashboard worth its screen real estate, corridor-specific drift metrics will catch degradation long before a global F1 tick reveals the problem.
 
 ## Error Topology and Boundary Geometry
 
-The confusion pattern indicates a geometry mismatch, not random instability. LAYING remains easy, while posture-adjacent and stair-adjacent classes concentrate most errors. This is consistent with the theory that margin methods perform best when local neighborhoods retain separability under the selected kernel width {% include references/cite.html key="svm-2026-ref1" %} {% include references/cite.html key="svm-2026-ref2" %}.
+The confusion pattern is geometric, not stochastic. LAYING? Trivially separable. The errors cluster where they should: posture-adjacent pairs (SITTING/STANDING) and stair-adjacent pairs (UPSTAIRS/DOWNSTAIRS), exactly the regions where inertial signal overlap is densest. Margin methods perform best when local neighbourhoods retain separability under the selected kernel width {% include references/cite.html key="svm-2026-ref1" %} {% include references/cite.html key="svm-2026-ref2" %}.
 
-The practical takeaway is that class-pair topology should be treated as a first-class artifact:
-
-1. Static posture pairs often require feature redesign around orientation and transition context.
-2. Gait subclasses often require windowing or frequency features that reduce local overlap.
-3. Aggregate metrics should be interpreted as summaries, not deployment decisions.
+Class-pair topology deserves first-class status in any evaluation artefact. Static posture pairs (SITTING vs STANDING) almost certainly need feature redesign: orientation histograms, postural transition indicators, or gravity-axis decomposition rather than raw accelerometer statistics. Gait subclasses respond better to windowing or frequency-domain features that attenuate the local overlap. And aggregate metrics? Treat them as summaries. Never as deployment decisions.
 
 ## Why RF Wins Here Without Invalidating SVM Theory
 
-This benchmark does not contradict large-margin foundations. It shows that tree ensembles can better absorb overlap-heavy feature neighborhoods in this dataset. SVM remains theoretically coherent and operationally useful, but not the strongest empirical fit for these class corridors in this run.
+Nothing here contradicts large-margin theory. Tree ensembles absorb overlap-heavy feature neighbourhoods more readily in this dataset; that is an empirical observation about data geometry, not a theoretical refutation. SVM remains coherent and operationally useful. Just not the strongest fit for these corridors in this run.
 
-Model selection therefore becomes conditional:
-
-1. Use SVM when boundary control and disciplined regularization are priorities.
-2. Use RF when local overlap dominates despite careful SVM tuning.
-3. Keep both in the candidate set until class-level risk criteria are met.
+Model selection is therefore conditional, which is the boring-but-correct conclusion that benchmarking should produce. Reach for SVM when you need explicit boundary control and disciplined regularisation. Reach for RF when local overlap persists despite careful kernel tuning. Keep both in the candidate pool until class-level risk criteria are satisfied.
 
 ## Calibration and Decision-Threshold Implications
 
-Where outputs feed thresholded actions, margin quality and probability quality must be audited separately. Platt-style calibration and pairwise coupling literature provide workable pathways, but calibration quality should be tested per class because corridor classes can remain overconfident even when macro metrics are strong {% include references/cite.html key="svm-2026-ref5" %} {% include references/cite.html key="svm-2026-ref6" %}.
+Margins and probabilities are different beasts. Where outputs feed thresholded actions (fall detection alerts, activity-gated medication reminders), both must be audited separately. Platt-style calibration and pairwise coupling give workable pathways, but corridor classes can remain stubbornly overconfident even when macro calibration looks adequate {% include references/cite.html key="svm-2026-ref5" %} {% include references/cite.html key="svm-2026-ref6" %}.
 
 ## Robustness Checks Before Promotion
 
@@ -164,33 +152,21 @@ Before promoting this benchmark pattern into production policy, add four checks:
 
 ## Hyperparameter Stability Signal
 
-SVM reached its best CV region around $\gamma=0.001$ and $C=50$, then softened at higher $C$. RF response across tested mtry values was flatter.
+SVM reached its best CV region around $\gamma=0.001$ and $C=50$, then softened at higher $C$. The performance surface has a ridge: useful but narrow. RF's response across tested mtry values was flatter; a plateau rather than a ridge.
 
-Interpretation:
-
-1. SVM delivered competitive quality but with a narrower stable region.
-2. RF delivered stronger quality with broader tuning tolerance.
-
-Under frequent retraining, that difference changes operational burden and drift risk.
+What this means in practice: SVM can match RF's territory with careful tuning, but the stable region is smaller. RF offers broader tolerance. For teams retraining weekly against shifting sensor populations, that plateau is worth something tangible. Narrow ridges amplify drift risk every time hyperparameters are re-selected.
 
 ## PCA Geometry Reading
 
-PCA analysis showed:
+PCA tells its own story here. The first few components gobble variance quickly (the easy global structure), but the tail compresses slowly; you need many dimensions to capture the residual discriminative signal. Static versus dynamic regimes separate partially at the macro level. Walking subclasses? They overlap persistently, even after projection.
 
-- Rapid early variance capture.
-- Slow tail compression for higher variance thresholds.
-- Partial macro-separation of static versus dynamic regimes.
-- Persistent local overlap among walking-related subclasses.
-
-This explains why SVM can remain strong on easy global separations while repeating specific local confusions.
+That geometry explains the SVM behaviour precisely. Global separations are clean; local confusions repeat because the kernel cannot resolve what the feature space itself does not separate.
 
 ## R and Python Parity: Why It Matters
 
-Closely aligned results across this run's R and Python pipelines, under matched preprocessing and split assumptions, suggest that observed performance differences were driven by model-data interaction rather than language artifacts. This is valuable for reproducible engineering:
+R and Python produced closely aligned results under matched preprocessing and split assumptions. Good. That means the performance patterns are driven by model-data interaction, not by language artefacts or hidden numerical divergences in LAPACK bindings.
 
-1. It reduces toolchain tribalism.
-2. It improves reproducibility across teams.
-3. It keeps methodological critique focused on data, assumptions, and evaluation design.
+Why belabour this point? Because toolchain tribalism still wastes engineering hours in practice. When your R pipeline and your Python pipeline agree to the third decimal on class-level F1, the conversation shifts to where it belongs: data quality, feature design, and evaluation protocol. Not which language is "better."
 
 For a broader model-governance continuity perspective, connect this with [data provenance and traceability methods](/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons).
 
@@ -225,7 +201,7 @@ Parity checks still matter because they expose silent preprocessing or CV mismat
 
 ## Conclusion
 
-The HAR benchmark shows a clear but nuanced result: SVM is stable and informative, while RF is stronger for the overlap profile in this run. The main outcome is diagnostic clarity about where and why each model family wins. Part 3 turns these diagnostics into a deployment governance playbook with explicit tuning, monitoring, and escalation controls.
+SVM is stable. SVM is informative. RF is stronger for this overlap profile in this run. The real outcome of the benchmark is not the ranking; it is the diagnostic clarity about where each model family wins, why it wins there, and what that implies for production monitoring. Part 3 converts these diagnostics into a deployment governance playbook: tuning schedules, corridor-specific monitoring, and escalation triggers that connect class-level behaviour to operational decisions.
 
 ## Technical Appendix
 

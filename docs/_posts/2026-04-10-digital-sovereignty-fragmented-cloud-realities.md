@@ -74,9 +74,9 @@ This article is not legal advice.
 
 ## Operational Context
 
-Cross-border cloud planning for China now requires jurisdiction-aware architecture by default. Earlier assumptions treated global SaaS as one coherent operating surface. The current record shows a segmented reality where service availability, feature parity, escalation pathways, and data handling behavior can diverge by billing region, control ownership, and legal exposure {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref6" %}, {% include references/cite.html key="ds-2026-ref10" %}, {% include references/cite.html key="ds-2026-ref11" %}, {% include references/cite.html key="ds-2026-ref14" %}.
+Cross-border cloud planning for China now requires jurisdiction-aware architecture by default. The old assumption (global SaaS as one coherent operating surface) is dead. The current record shows a segmented reality: service availability, feature parity, escalation pathways, and data handling behaviour can all diverge by billing region, control ownership, and legal exposure {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref6" %}, {% include references/cite.html key="ds-2026-ref10" %}, {% include references/cite.html key="ds-2026-ref11" %}, {% include references/cite.html key="ds-2026-ref14" %}.
 
-This study treats the provided links as a unified corpus. The method stays conservative. It separates documented facts from plausible inference and then maps the result to practical controls.
+This study treats the provided links as a unified corpus. The method stays conservative: documented facts first, plausible inference second, then practical controls.
 
 ## Evidence Base and Method
 
@@ -126,19 +126,19 @@ The linked yage.ai draft offers coherent synthesis scaffolding and explicit unce
 
 ### 1. Architectures Need Jurisdiction as a First-Class Dimension
 
-Global-default cloud design fails when legal domains impose divergent control requirements. Azure through 21Vianet and Salesforce through Alibaba show that regional entry can require structural operating redesign {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}. Explainability improves when architecture artifacts make legal boundary, data boundary, and operator boundary explicit.
+Global-default cloud design fails at the border. Azure through 21Vianet and Salesforce through Alibaba make this concrete: regional entry can require structural operating redesign, not merely a configuration flag {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}. When architecture artifacts make legal boundary, data boundary, and operator boundary explicit, teams can reason about compliance before the first migration ticket is filed.
 
 **Practical step**: define jurisdiction-aware reference architectures with mandatory controls for data placement, key custody path, and operator responsibility matrix before workload onboarding begins.
 
 ### 2. Partnership Models Shift Accountability Maps
 
-Localization partnerships can preserve market access while fragmenting accountability for availability, incident response, and compliance attestation {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}. Interpretability depends on clear control mapping across legal entity, infrastructure operator, and customer-facing support responsibility.
+Who is responsible when the service goes down at 2 a.m.? Localization partnerships can preserve market access while quietly fragmenting accountability for availability, incident response, and compliance attestation {% include references/cite.html key="ds-2026-ref1" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}. Without clear control mapping across legal entity, infrastructure operator, and customer-facing support, the answer to that 2 a.m. question is: nobody knows.
 
 **Practical step**: maintain a living responsibility crosswalk that aligns contractual clauses, technical controls, and escalation paths for every partner-operated region.
 
 ### 3. Data Residency Must Be Engineered, Not Declared
 
-The corpus repeatedly links service viability to data localization and transfer-control obligations {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}, {% include references/cite.html key="ds-2026-ref14" %}. Trustworthiness increases when data lineage, replication policy, and egress authorization remain auditable across regions.
+A compliance slide deck is not an architecture. The corpus repeatedly links service viability to data localization and transfer-control obligations {% include references/cite.html key="ds-2026-ref2" %}, {% include references/cite.html key="ds-2026-ref7" %}, {% include references/cite.html key="ds-2026-ref8" %}, {% include references/cite.html key="ds-2026-ref14" %}; trustworthiness increases only when data lineage, replication policy, and egress authorization remain auditable across every region where the system operates.
 
 **Practical step**: implement policy-driven data routing with immutable lineage logs and periodic legal-control reconciliation against jurisdiction-specific obligations.
 
@@ -150,13 +150,13 @@ Unity records show region-specific engine divergence and ecosystem partitioning 
 
 ### 5. Ecosystem Dependencies Can Fail Before Core Platform Access Fails
 
-Asset-store restrictions show that ecosystem dependencies may fail earlier than core engine access {% include references/cite.html key="ds-2026-ref4" %}. Interpretability improves when dependency inventories include legal availability tags, support lifecycle windows, and region-level distribution status.
+The engine still runs. The asset store does not. Asset-store restrictions show ecosystem dependencies failing earlier and more silently than core access {% include references/cite.html key="ds-2026-ref4" %}. Dependency inventories need legal availability tags, support lifecycle windows, and region-level distribution status to catch these fractures before they reach a sprint retrospective.
 
 **Practical step**: add geo-availability and compliance attributes to software bill of materials workflows and block deployment when critical dependencies lack lawful regional distribution.
 
 ### 6. Communication Infrastructure Carries Hidden Regulatory Friction
 
-Opsgenie support matrices and China-specific SMS caveats show that alert pathways can degrade under telecom and policy constraints {% include references/cite.html key="ds-2026-ref6" %}. Trustworthiness in incident response depends on tested channel diversity, not contractual entitlement alone.
+Your SMS alert will not arrive. Opsgenie's support matrices and China-specific SMS caveats show that alert pathways degrade under telecom and policy constraints that no application-level retry logic can overcome {% include references/cite.html key="ds-2026-ref6" %}. Incident response trustworthiness depends on tested channel diversity, not contractual entitlement.
 
 **Practical step**: design alerting with jurisdiction-scoped channel redundancy and quarterly failover drills that simulate provider-level SMS or voice interruption.
 
@@ -168,13 +168,13 @@ Slack-related synthesis and incident narratives indicate that email-only notific
 
 ### 8. AI Access Governance Now Extends Beyond Geolocation
 
-Anthropic reporting points to ownership-structure screening, while OpenAI reporting emphasizes location-based access blocking {% include references/cite.html key="ds-2026-ref10" %}, {% include references/cite.html key="ds-2026-ref11" %}. Interpretability now requires identity architecture that can evaluate legal control structure, billing region, and policy eligibility together.
+Location is no longer the only gate. Anthropic reporting points to ownership-structure screening; OpenAI reporting emphasizes location-based access blocking {% include references/cite.html key="ds-2026-ref10" %}, {% include references/cite.html key="ds-2026-ref11" %}. Identity architecture must now evaluate legal control structure, billing region, and policy eligibility in a single preflight check, because any one of those dimensions can independently deny access.
 
 **Practical step**: build model-provider abstraction layers with preflight compliance checks and tested model-switch procedures for sudden policy denial events.
 
 ### 9. Community Threads Function as Early Warning Sensors, Not Final Truth
 
-GitLab and GitHub community threads capture rapid field signals, including user-observed access patterns and quoted notices {% include references/cite.html key="ds-2026-ref9" %}, {% include references/cite.html key="ds-2026-ref15" %}. Trustworthiness requires a disciplined validation ladder that separates signal intake from formal confirmation.
+Signal is cheap; verification is expensive. GitLab and GitHub community threads capture rapid field signals (user-observed access patterns, quoted notices, screenshots of lockout screens) but trustworthiness requires a disciplined validation ladder that separates signal intake from formal confirmation {% include references/cite.html key="ds-2026-ref9" %}, {% include references/cite.html key="ds-2026-ref15" %}.
 
 **Practical step**: integrate community-source monitoring into risk intelligence pipelines with mandatory corroboration gates before executive or customer communication.
 
