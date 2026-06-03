@@ -308,7 +308,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Protocol Glossary](#protocol-glossary)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -361,15 +360,5 @@ The central A2A unit of work. Tasks carry state, optional history, and artifacts
 ### Agent Manifest
 
 An ACP-oriented discovery artifact describing agent identity, capabilities, content types, and metadata for interoperable routing and integration {% include references/cite.html key="mcpa2a-2026-ref18" %}.
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "MCP vs A2A protocol comparison", "model context protocol explained", "agent2agent protocol explained", "agentic AI protocol selection", "multi-agent interoperability protocols".
-
-**Schema signals**: FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
-
-**AEO coverage**: FAQ items mapping protocol boundary decisions to implementation choices, structured protocol glossary, comparison tables across MCP, A2A, and ACP dimensions.
-
-**GEO coverage**: Protocol specifications (MCP, A2A, ACP) are open standards with global applicability; cross-border orchestration patterns are addressed as a first-class design concern throughout the analysis.
 
 </details>

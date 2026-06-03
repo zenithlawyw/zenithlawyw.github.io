@@ -85,6 +85,8 @@ Across all reviewed applied papers, one pattern is universal: CRYSTALS-Kyber (ML
 
 This convergence is pragmatic. Kyber and Dilithium offer the best performance-to-security ratio on commodity hardware, and NIST endorsement removes procurement and compliance friction. But there is a systemic risk that none of the reviewed papers acknowledge: the entire applied PQC deployment ecosystem sits on a single mathematical family. Lattice problems. If a lattice-breaking technique emerges, whether from quantum or classical cryptanalysis, the entire portfolio is compromised at once. Not just one sector. All of them.
 
+This is worth dwelling on because the lesson from SIKE and Rainbow is recent enough that the community should know better. Those breaks came from classical mathematics, not quantum computing. The lattice community's response has been, essentially, "our problems are different and better studied." Maybe. But the time horizon over which these algorithms must survive is measured in decades, and the number of mathematicians who have seriously tried to break Module-LWE is a tiny fraction of those who spent careers attacking integer factorisation. Confidence in lattice security is rational but provisional, and provisionally confident is not the same thing as safe.
+
 > **Strategic implication:** Crypto-agility at the deployment architecture level, not just the library level, is the mitigation. None of the reviewed implementations demonstrate it.
 
 ## IoT and Blockchain: Quantum-Resistant Distributed Trust
@@ -134,6 +136,8 @@ Krishnan et al. apply Microsoft's STRIDE threat model (Spoofing, Tampering, Repu
 The paper proposes PQC integration at three grid layers: PQC-authenticated SCADA commands between control centres and generation units at the generation layer; PQC-encrypted inter-substation communication replacing IEC 62351 classical profiles at the transmission layer; and PQC certificate management for smart meters and distributed energy resources at the distribution layer.
 
 **Gap noted:** Krishnan et al. provide no performance benchmarks for PQC on actual SCADA hardware. This is a significant omission. SCADA systems typically run on embedded processors with limited computational headroom, and the question of whether Kyber key encapsulation or Dilithium signature verification can complete within real-time control loop deadlines remains unanswered.
+
+From a practitioner perspective, this omission is worse than it sounds. SCADA control loops in power systems often have sub-second timing constraints. A Dilithium signature verification that takes 2 ms on a desktop processor might take 200 ms on an embedded ARM core running at 100 MHz with no hardware multiplier. If that verification sits in the critical path of a protection relay decision, the delay could mean the difference between isolating a fault and cascading it across the grid. Threat modelling without performance profiling on target hardware is architectural fiction, not engineering guidance.
 
 ## Automotive: Firmware Security Over Vehicle Lifetimes
 
@@ -221,7 +225,7 @@ Algorithm selection is the solved problem. Integration architecture, constrained
 
 ---
 
-## Questions on Sector Deployment
+## Applied Questions on PQC Deployment
 
 ### Can IoT devices with limited memory run post-quantum cryptography?
 
@@ -248,21 +252,20 @@ Not among the papers reviewed here. Broader industry experiments exist (Google's
 
 ### Appendix Table of Contents
 
-- [Author and Source Credibility](#author-and-source-credibility)
-- [A. Evidence Boundary Notes](#a-evidence-boundary-notes)
-- [B. Technical Term Definitions](#b-technical-term-definitions)
-- [C. Literature Analysis Summary](#c-literature-analysis-summary)
-- [D. SEO, GEO, and AEO Optimisation Notes](#d-seo-geo-and-aeo-optimisation-notes)
+- [Cited Work and Venue Context](#cited-work-and-venue-context)
+- [A. What the Evidence Does and Does Not Cover](#a-what-the-evidence-does-and-does-not-cover)
+- [B. Domain Terminology](#b-domain-terminology)
+- [C. Per-Paper Evaluation Notes](#c-per-paper-evaluation-notes)
 
-### Author and Source Credibility
+### Cited Work and Venue Context
 
 This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings on sector-specific PQC deployment from papers spanning IEEE Access, Springer, and ACM venues. Evidence quality varies: Fahomida et al. (2025) provide simulation benchmarks; Krishnan et al. (2025) offer a threat-modelling framework without performance data; Nakka et al. (2024) present an architectural proposal with constraint analysis but no prototype; Joseph et al. (2025) combine PQC with CSPM conceptually. Raju et al. (2025) and Zhao et al. (2025) address niche applications with experimental validation.
 
-### A. Evidence Boundary Notes
+### A. What the Evidence Does and Does Not Cover
 
 No production deployments are reported in any reviewed paper; all findings come from simulation, prototype, or conceptual analysis. IoT performance claims are based on simulation or desktop-class hardware rather than constrained devices, so real-world IoT PQC performance remains an open question. The energy grid analysis from Krishnan et al. provides threat modelling without PQC benchmarks on SCADA hardware. Nakka et al.'s automotive analysis derives constraint compatibility from algorithm specifications rather than empirical ECU testing. Joseph et al.'s cloud CSPM proposal is architectural only, with no implementation or evaluation. Blockchain consensus overhead from PQC is acknowledged in the reviewed papers but never quantified.
 
-### B. Technical Term Definitions
+### B. Domain Terminology
 
 <dl>
 <dt><dfn>CSPM (Cloud Security Posture Management)</dfn></dt>
@@ -281,30 +284,22 @@ No production deployments are reported in any reviewed paper; all findings come 
 <dd>Small-scale electricity generation or storage units connected to the distribution grid (solar panels, batteries, wind turbines). Each DER requires authenticated communication with grid management systems.</dd>
 </dl>
 
-### C. Literature Analysis Summary
+### C. Per-Paper Evaluation Notes
 
 <figure markdown="1">
 
-| Paper           | Year | Type         | Sector         | Key Contribution                        | Evidence Quality       |
-| :-------------- | :--- | :----------- | :------------- | :-------------------------------------- | :--------------------- |
-| Fahomida et al. | 2025 | Framework    | IoT            | CertiSense-PQ certificate management    | Medium (simulated)     |
-| Huang et al.    | 2025 | Framework    | Blockchain     | Confidential smart contracts with PQC   | Medium (prototype)     |
-| Joseph et al.   | 2025 | Architecture | Cloud          | PQC-enhanced CSPM                       | Low (conceptual)       |
-| Krishnan et al. | 2025 | Threat model | Energy         | STRIDE-guided power grid PQC assessment | Low (no benchmarks)    |
-| Nakka et al.    | 2024 | Architecture | Automotive     | PQC-secured OTA firmware updates        | Low (no prototype)     |
-| Rajkumar et al. | 2024 | Framework    | IoT            | Blockchain + PQC device authentication  | Medium (experimental)  |
-| Raju et al.     | 2025 | Experimental | Storage        | DNA-based storage with Kyber-1024       | Medium (lab-validated) |
-| Zhao et al.     | 2025 | Experimental | Communications | Lattice-based covert channel            | Medium (simulated)     |
+| Paper           | Year | Type         | Sector         | Key Contribution                        | Confidence and Caveats                              |
+| :-------------- | :--- | :----------- | :------------- | :-------------------------------------- | :-------------------------------------------------- |
+| Fahomida et al. | 2025 | Framework    | IoT            | CertiSense-PQ certificate management    | Simulated only; no constrained-device testing       |
+| Huang et al.    | 2025 | Framework    | Blockchain     | Confidential smart contracts with PQC   | Prototype exists; consensus overhead not quantified |
+| Joseph et al.   | 2025 | Architecture | Cloud          | PQC-enhanced CSPM                       | Conceptual architecture; no implementation          |
+| Krishnan et al. | 2025 | Threat model | Energy         | STRIDE-guided power grid PQC assessment | Threat mapping only; no SCADA benchmarks            |
+| Nakka et al.    | 2024 | Architecture | Automotive     | PQC-secured OTA firmware updates        | Constraint analysis from specs; no prototype        |
+| Rajkumar et al. | 2024 | Framework    | IoT            | Blockchain + PQC device authentication  | Experimental results reported                       |
+| Raju et al.     | 2025 | Experimental | Storage        | DNA-based storage with Kyber-1024       | Lab-validated encoding/decoding pipeline            |
+| Zhao et al.     | 2025 | Experimental | Communications | Lattice-based covert channel            | Simulated covertness metrics                        |
 
 <figcaption>Table A1: Summary of reviewed literature for the sector-specific deployment domain.</figcaption>
 </figure>
-
-### D. SEO, GEO, and AEO Optimisation Notes
-
-**Primary search terms:** PQC deployment IoT, post-quantum blockchain, quantum-resistant energy grid, automotive PQC, cloud CSPM post-quantum, sector-specific PQC.
-
-**Structured data:** HowTo and FAQ schemas are implemented. Article schema includes author attribution and citation metadata.
-
-**Cross-references:** Linked to companion PQC theoretical and migration articles.
 
 </details>

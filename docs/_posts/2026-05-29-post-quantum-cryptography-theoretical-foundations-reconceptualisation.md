@@ -92,6 +92,8 @@ Among PQC families, lattice-based schemes come closest to drop-in replacements f
 
 The key size increase is real but manageable: a Kyber-768 public key weighs in at 1,184 bytes compared to 64 bytes for ECDH P-256. Whether that matters depends on the deployment context. For a TLS handshake on a modern server, the difference is negligible. For a constrained IoT sensor transmitting over a low-bandwidth radio link, it might not be. The deeper concern is that lattice security proofs rely on worst-case to average-case reductions whose tightness is still debated. The schemes work, the implementations are fast, but the theoretical guarantees are not as airtight as we might like.
 
+Here is something none of the surveyed papers say directly, but that anyone working on migration planning will encounter: the lattice monoculture problem is not just a cryptanalytic risk. It is a supply-chain risk. Every PQC library, every hardware security module vendor, every TLS stack integrator is converging on the same Module-LWE assumption. If that assumption weakens even partially (not a full break, just a meaningful reduction in concrete security), the remediation would need to propagate through every layer of the software stack simultaneously. We have seen what single-point-of-failure dependency looks like in software supply chains. Applying the same pattern to cryptographic foundations should make us uncomfortable.
+
 ### Code-Based Cryptography
 
 <dl>
@@ -137,9 +139,11 @@ SIKE (Supersingular Isogeny Key Encapsulation) collapsed even more dramatically.
 
 What should practitioners take from this? PQC algorithms are young, and the mathematical problems they rely on have received far less adversarial scrutiny than RSA's integer factorisation. Building systems that can swap algorithms without a full redesign is not a nice-to-have. It is a survival requirement.
 
+I will state something blunter than the papers do. The SIKE break should have been a field-wide wake-up call about the limits of competition-based cryptographic assurance. NIST's process is rigorous, but it evaluates submitted candidates against known attack techniques. It does not, and cannot, guarantee that a theorem from 1997 will not resurface as a complete break in 2022. The fact that the Kani theorem sat in the literature for 25 years before anyone connected it to SIDH is not an anomaly; it is a structural feature of mathematics. Results migrate across subfields unpredictably. Any security model that assumes "extensively evaluated" equals "safe" has already been falsified by SIKE.
+
 ## Hardware Acceleration for Code-Based PQC
 
-The practical viability of code-based PQC depends heavily on efficient hardware implementation. He et al. identify sparse polynomial multiplication as the computational bottleneck for HQC and BIKE, both NIST fourth-round candidates {% include references/cite.html key="10.1145/3703837" %}.
+The practical viability of code-based PQC depends heavily on efficient hardware implementation. He et al. identify sparse polynomial multiplication as the computational bottleneck for HQC and BIKE {% include references/cite.html key="10.1145/3703837" %}. NIST selected HQC for standardisation in March 2025; BIKE was not selected.
 
 Their contribution is twofold:
 
@@ -151,7 +155,7 @@ Both designs are generic across all HQC and BIKE security levels (128, 192, 256-
 
 ### Practical Significance
 
-If NIST standardises HQC or BIKE (both remain under evaluation as of mid-2026), accelerators like these become the implementation foundation for embedded systems, IoT gateways, and network appliances. Software-only PQC performance on resource-constrained hardware is often insufficient, and the gap between what software can deliver and what constrained environments demand is exactly where FPGA acceleration earns its complexity cost.
+With NIST's March 2025 selection of HQC for standardisation, accelerators like these move from speculative to directly relevant. They become the implementation foundation for embedded systems, IoT gateways, and network appliances where software-only PQC performance is often insufficient. The gap between what software can deliver and what constrained environments demand is exactly where FPGA acceleration earns its complexity cost.
 
 ## Hybrid QC/PQC: Defence in Depth, or Wishful Layering?
 
@@ -222,7 +226,7 @@ One architectural decision matters more than any algorithm selection: crypto-agi
 
 ---
 
-## Questions on PQC Foundations
+## Questions on Algorithmic Foundations and Hardware
 
 ### What makes post-quantum cryptography different from quantum cryptography?
 
@@ -249,23 +253,22 @@ Code-based PQC schemes like HQC and BIKE depend on sparse polynomial multiplicat
 
 ### Appendix Table of Contents
 
-- [Author and Source Credibility](#author-and-source-credibility)
-- [A. Evidence Boundary Notes](#a-evidence-boundary-notes)
-- [B. Technical Term Definitions](#b-technical-term-definitions)
-- [C. Literature Analysis Summary](#c-literature-analysis-summary)
-- [D. SEO, GEO, and AEO Optimisation Notes](#d-seo-geo-and-aeo-optimisation-notes)
+- [Provenance and Credibility of Cited Work](#provenance-and-credibility-of-cited-work)
+- [A. Boundary Conditions on the Evidence](#a-boundary-conditions-on-the-evidence)
+- [B. Glossary of Technical Terms](#b-glossary-of-technical-terms)
+- [C. Source-by-Source Assessment](#c-source-by-source-assessment)
 
-### Author and Source Credibility
+### Provenance and Credibility of Cited Work
 
 This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from five peer-reviewed sources on post-quantum cryptographic primitives. The papers span IEEE conference proceedings, ACM transactions, and Communications of the ACM. He et al. (2024) provide peer-reviewed experimental results with FPGA benchmarks. Monroe (2023) draws on expert interviews with leading cryptographers including Bruce Schneier. Tiwari et al. (2024) and Sharma et al. (2025) provide survey-level coverage. Kavitha et al. (2025) present a conceptual hybrid framework without experimental validation.
 
 **Retraction note:** Zhang (2019) on "Black Hole Keypad Compression" was retracted by IEEE Access ("accepted in error and will not be published in its final form"). Its claims contradict Shannon's foundational proof on one-time pad key length requirements and are excluded from this synthesis.
 
-### A. Evidence Boundary Notes
+### A. Boundary Conditions on the Evidence
 
-The hardware acceleration results from He et al. are FPGA-specific with no ASIC validation, and the performance figures apply to sparse polynomial multiplication in isolation rather than full cryptosystem operation. The hybrid QC/PQC analysis from Kavitha et al. is conceptual only; no prototype, simulation, or benchmark was produced, which limits its value to architectural inspiration rather than engineering guidance. Algorithm vulnerability assessments reflect the cryptanalytic state of the art at the time of the cited publications; subsequent attacks could invalidate any claim. NIST standardisation status reflects published standards as of mid-2026; the fourth-round evaluations of HQC and BIKE may alter the available algorithm portfolio.
+The hardware acceleration results from He et al. are FPGA-specific with no ASIC validation, and the performance figures apply to sparse polynomial multiplication in isolation rather than full cryptosystem operation. The hybrid QC/PQC analysis from Kavitha et al. is conceptual only; no prototype, simulation, or benchmark was produced, which limits its value to architectural inspiration rather than engineering guidance. Algorithm vulnerability assessments reflect the cryptanalytic state of the art at the time of the cited publications; subsequent attacks could invalidate any claim. NIST selected HQC for standardisation in March 2025, with draft FIPS development underway; the final standard may refine parameter choices or implementation guidance.
 
-### B. Technical Term Definitions
+### B. Glossary of Technical Terms
 
 <dl>
 <dt><dfn>Key Encapsulation Mechanism (KEM)</dfn></dt>
@@ -284,27 +287,19 @@ The hardware acceleration results from He et al. are FPGA-specific with no ASIC 
 <dd>The architectural property enabling cryptographic algorithms to be replaced without redesigning or redeploying the system. Essential for PQC migration given the field's immaturity.</dd>
 </dl>
 
-### C. Literature Analysis Summary
+### C. Source-by-Source Assessment
 
 <figure markdown="1">
 
-| Paper          | Year | Type         | Key Contribution                 | Evidence Quality         |
-| :------------- | :--- | :----------- | :------------------------------- | :----------------------- |
-| He et al.      | 2024 | Experimental | FPGA accelerators for HQC/BIKE   | High (ACM, benchmarked)  |
-| Kavitha et al. | 2025 | Conceptual   | Hybrid QC/PQC framework          | Low (no implementation)  |
-| Tiwari et al.  | 2024 | Survey       | Quantum threat tutorial          | Medium (IEEE conference) |
-| Sharma et al.  | 2025 | Conceptual   | NIST PQC + QNN framework         | Low (weak rigour)        |
-| Monroe         | 2023 | Journalistic | NIST process + expert interviews | Medium (CACM)            |
+| Paper          | Year | Type         | Key Contribution                 | Rigour and Limitations                                       |
+| :------------- | :--- | :----------- | :------------------------------- | :----------------------------------------------------------- |
+| He et al.      | 2024 | Experimental | FPGA accelerators for HQC/BIKE   | Peer-reviewed with FPGA benchmarks (ACM)                     |
+| Kavitha et al. | 2025 | Conceptual   | Hybrid QC/PQC framework          | No prototype, simulation, or performance data                |
+| Tiwari et al.  | 2024 | Survey       | Quantum threat tutorial          | IEEE conference; survey coverage, not original results       |
+| Sharma et al.  | 2025 | Conceptual   | NIST PQC + QNN framework         | Weak methodological rigour                                   |
+| Monroe         | 2023 | Journalistic | NIST process + expert interviews | CACM feature; expert sourcing but not peer-reviewed research |
 
 <figcaption>Table A1: Summary of reviewed literature for the theoretical foundations domain.</figcaption>
 </figure>
-
-### D. SEO, GEO, and AEO Optimisation Notes
-
-**Primary search terms:** post-quantum cryptography, lattice-based cryptography, CRYSTALS-Kyber, CRYSTALS-Dilithium, Shor's algorithm, crypto-agility, NIST PQC standards.
-
-**Structured data:** HowTo and FAQ schemas are implemented. Article schema includes author attribution and citation metadata.
-
-**Cross-references:** Linked to the companion PQC migration and sector deployment articles, and to the representation learning article for shared mathematical context.
 
 </details>

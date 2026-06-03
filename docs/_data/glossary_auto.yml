@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-06-03T10:35:18Z"
-total_candidates: 975
+generated_at: "2026-06-03T12:54:19Z"
+total_candidates: 978
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -5366,6 +5366,24 @@ candidates:
     related_pages:
       - title: ""
         url: "/literature-reviews/karuna-et-al-2024-enhancing-financial-data-traceability-using-graph-neural-networks-for-provenance-methods.html"
+  - term: Nist Standards
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+        url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+      - title:
+          "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce
+          Readiness"
+        url: "/post-quantum-cryptography-standards-migration-workforce-readiness"
+    related_pages: []
   - term: Open-source Payment
     status: candidate
     confidence: 7
@@ -8686,6 +8704,20 @@ candidates:
           Literature Review for Agentic Commerce"
         url: "/lightning-network-cross-border-micropayments-systematic-exploratory-literature-review"
     related_pages: []
+  - term: Cryptography Quantum
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+        url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+    related_pages: []
   - term: Cybersecurity Platform Engineering
     status: candidate
     confidence: 6
@@ -10115,6 +10147,26 @@ candidates:
     related_posts:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
+    related_pages: []
+  - term: Intelligence Software
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+      - title:
+          "Retrieval-Augmented Generation: Failure Modes, Confidence Calibration,
+          and Production Governance"
+        url: "/retrieval-augmented-generation-failure-modes-production-governance"
     related_pages: []
   - term: Intelligence Software Engineering
     status: candidate

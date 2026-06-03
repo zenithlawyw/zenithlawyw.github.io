@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-06-03T10:35:22Z"
+generated_at: "2026-06-03T12:54:24Z"
 signal_weights:
   title: 3
   categories: 5
@@ -28,14 +28,14 @@ keywords:
   - production
   - appendix
   - architecture
-  - technical
-  - retrieval
   - provenance
+  - retrieval
   - vector
-  - evidence
   - practical
   - support
+  - technical
   - a2a
+  - evidence
   - language
   - questions
   - svm
@@ -49,51 +49,46 @@ keywords:
   - artificial
   - intelligence
   - systems
+  - review
   - orchestration
   - cross-border
-  - review
   - agentic
   - cloud
   - controls
-  - definitions
   - pqc
   - large
   - security
+  - definitions
   - guide
   - micropayments
   - design
-  - author
   - lessons
-  - notes
   - post-quantum
   - quantum
-  - seo
-  - literature
-  - aeo
-  - geo
   - table
   - china
   - contents
   - deadlock
-  - credibility
+  - author
   - failure
+  - literature
   - agent
   - benchmark
   - digital
-  - optimisation
   - llm
   - axios
+  - credibility
   - generation
   - practice
   - boundaries
   - protocol
+  - scope
   - snapshot
   - software
   - npm
   - sovereignty
-  - scope
-  - corpus
   - evaluation
+  - corpus
   - legal
   - migration
   - platform
@@ -103,28 +98,29 @@ keywords:
   - hybrid
   - representation
   - trust
-  - analysis
+  - domain
+  - glossary
   - open
   - blockchain
   - citability
   - attack
   - calibration
   - deep
-  - domain
   - framework
-  - glossary
   - playbook
   - monitoring
   - open-source
+  - readiness
   - tuning
+  - context
   - operational
   - patterns
   - clustering
   - introduction
   - iot
-  - readiness
   - resource
   - strategy
+  - analysis
   - critical
   - enterprise
   - hub
@@ -139,7 +135,6 @@ keywords:
   - theory
   - adaptation
   - communication
-  - context
   - fragmentation
   - integration
   - knowledge
@@ -150,6 +145,7 @@ keywords:
   - access
   - authoritative
   - common
+  - conditions
   - guidance
   - langgraph
   - matter
@@ -168,13 +164,17 @@ keywords:
   - pipeline
   - resilience
   - risk
+  - terminology
+  - applied
   - claim
-  - conditions
   - early
   - graph
   - inference
   - kernel
   - layer
+  - limits
+  - maturity
+  - mode
 key_phrases:
   - lightning network
   - support vector
@@ -186,21 +186,14 @@ key_phrases:
   - mcp a2a
   - mcp a2a acp
   - large language
-  - seo geo
-  - geo aeo
-  - seo geo aeo
   - table contents
-  - author credibility
   - implementation guide
   - post-quantum cryptography
-  - aeo optimisation
-  - aeo optimisation notes
   - appendix table
   - appendix table contents
-  - geo aeo optimisation
-  - optimisation notes
   - technical appendix
   - engineering governance
+  - author credibility
   - data provenance
   - lightning network implementation
   - network implementation
@@ -242,7 +235,6 @@ key_phrases:
   - orchestration mcp
   - orchestration mcp a2a
   - table contents citability
-  - technical definitions
   - augmented generation
   - chain security
   - engineering lessons
@@ -255,13 +247,10 @@ key_phrases:
   - supply chain security
   - appendix appendix
   - appendix appendix table
-  - contents author
-  - contents author credibility
   - deep clustering
   - failure mode
   - machine benchmark
   - platform engineering
-  - table contents author
   - technical appendix appendix
   - vector machine benchmark
   - augmented generation large
@@ -295,6 +284,7 @@ key_phrases:
   - scope claim
   - snapshot authoritative
   - snapshot authoritative reference
+  - technical definitions
   - a2a acp langgraph
   - acp langgraph
   - acp langgraph langchain
@@ -303,19 +293,29 @@ key_phrases:
   - data protection
   - data provenance machine
   - data residency
-  - notes introduction
-  - optimisation notes introduction
   - provenance machine
   - provenance machine learning
   - workforce readiness
   - artificial intelligence software
   - conclusion technical
   - conclusion technical appendix
-  - definitions seo
-  - definitions seo geo
+  - contents author
+  - contents author credibility
   - graph neural
   - hybrid retrieval
   - incident response
+  - intelligence software
+  - intelligence software engineering
+  - llm inference
+  - model tuning
+  - nist standards
+  - quantum computing
+  - resource contention
+  - social engineering
+  - table contents author
+  - agentic orchestration mcp
+  - cookies data
+  - cryptography quantum
 catchwords:
   - engineering
   - governance
@@ -328,13 +328,13 @@ catchwords:
   - production
   - appendix
   - architecture
-  - technical
-  - retrieval
   - provenance
+  - retrieval
   - vector
-  - evidence
   - practical
   - support
+  - technical
+  - evidence
   - language
   - questions
   - supply
@@ -345,45 +345,43 @@ catchwords:
   - artificial
   - intelligence
   - systems
+  - review
   - orchestration
   - cross-border
-  - review
   - agentic
   - cloud
   - controls
-  - definitions
   - large
   - security
+  - definitions
   - guide
   - micropayments
   - design
-  - author
   - lessons
-  - notes
   - post-quantum
   - quantum
-  - literature
   - table
   - china
   - contents
   - deadlock
-  - credibility
+  - author
   - failure
+  - literature
   - agent
   - benchmark
   - digital
-  - optimisation
   - axios
+  - credibility
   - generation
   - practice
   - boundaries
   - protocol
+  - scope
   - snapshot
   - software
   - sovereignty
-  - scope
-  - corpus
   - evaluation
+  - corpus
   - legal
   - migration
   - platform
@@ -393,25 +391,26 @@ catchwords:
   - hybrid
   - representation
   - trust
-  - analysis
+  - domain
+  - glossary
   - blockchain
   - citability
   - attack
   - calibration
-  - domain
   - framework
-  - glossary
   - playbook
   - monitoring
   - open-source
+  - readiness
   - tuning
+  - context
   - operational
   - patterns
   - clustering
   - introduction
-  - readiness
   - resource
   - strategy
+  - analysis
   - critical
   - enterprise
   - papers
@@ -424,7 +423,6 @@ catchwords:
   - theory
   - adaptation
   - communication
-  - context
   - fragmentation
   - integration
   - knowledge
@@ -435,6 +433,7 @@ catchwords:
   - access
   - authoritative
   - common
+  - conditions
   - guidance
   - langgraph
   - matter
@@ -449,20 +448,22 @@ catchwords:
   - natural
   - pipeline
   - resilience
+  - terminology
+  - applied
   - claim
-  - conditions
   - early
   - graph
   - inference
   - kernel
   - layer
+  - limits
+  - maturity
 catchphrases:
   - technical appendix
   - citability snapshot
   - authoritative reference set
   - frequently asked questions
   - common questions
-  - c literature analysis summary
   - terminology definitions
   - agent card
   - agent manifest
@@ -487,9 +488,12 @@ catchphrases:
   - automotive-specific constraints
   - b authoritative baselines
   - b deployment readiness checklist
+  - b domain terminology
   - b evidence boundary notes
   - benchmark definitions
   - bm25 sparse retrieval
+  - c per-paper evaluation notes
+  - c source-by-source assessment
   - calibration signals
   - chunking strategy
   - citation-ready data extracts
@@ -544,7 +548,6 @@ catchphrases:
   - liability boundary
   - measured impact
   - migration planning framework
-  - migration questions
   - monitoring checklist
   - multi-cloud integration architecture
   - multivariate cryptography
@@ -556,7 +559,6 @@ catchphrases:
   - pca geometry reading
   - persona-driven requirements
   - phase 1 local deterministic sandbox
-  - phase 2 controlled corridor pilot
 search_words:
   - engineering
   - governance
@@ -571,14 +573,14 @@ search_words:
   - production
   - appendix
   - architecture
-  - technical
-  - retrieval
   - provenance
+  - retrieval
   - vector
-  - evidence
   - practical
   - support
+  - technical
   - a2a
+  - evidence
   - language
   - questions
   - svm
@@ -592,51 +594,46 @@ search_words:
   - artificial
   - intelligence
   - systems
+  - review
   - orchestration
   - cross-border
-  - review
   - agentic
   - cloud
   - controls
-  - definitions
   - pqc
   - large
   - security
+  - definitions
   - guide
   - micropayments
   - design
-  - author
   - lessons
-  - notes
   - post-quantum
   - quantum
-  - seo
-  - literature
-  - aeo
-  - geo
   - table
   - china
   - contents
   - deadlock
-  - credibility
+  - author
   - failure
+  - literature
   - agent
   - benchmark
   - digital
-  - optimisation
   - llm
   - axios
+  - credibility
   - generation
   - practice
   - boundaries
   - protocol
+  - scope
   - snapshot
   - software
   - npm
   - sovereignty
-  - scope
-  - corpus
   - evaluation
+  - corpus
   - legal
   - migration
   - platform
@@ -646,8 +643,13 @@ search_words:
   - hybrid
   - representation
   - trust
-  - analysis
+  - domain
+  - glossary
   - open
+  - blockchain
+  - citability
+  - attack
+  - calibration
   - lightning network
   - support vector
   - support vector machine
@@ -658,21 +660,14 @@ search_words:
   - mcp a2a
   - mcp a2a acp
   - large language
-  - seo geo
-  - geo aeo
-  - seo geo aeo
   - table contents
-  - author credibility
   - implementation guide
   - post-quantum cryptography
-  - aeo optimisation
-  - aeo optimisation notes
   - appendix table
   - appendix table contents
-  - geo aeo optimisation
-  - optimisation notes
   - technical appendix
   - engineering governance
+  - author credibility
   - data provenance
   - lightning network implementation
   - network implementation
@@ -714,10 +709,17 @@ search_words:
   - orchestration mcp
   - orchestration mcp a2a
   - table contents citability
-  - technical definitions
   - augmented generation
   - chain security
   - engineering lessons
+  - evidence review
+  - language processing
+  - natural language
+  - natural language processing
+  - retrieval augmented
+  - retrieval augmented generation
+  - supply chain security
+  - appendix appendix
 global_questions:
   - question: How do I handle documents that update frequently in a RAG system?
     answer: "Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. Li et al.'s survey of generative retrieval includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well."
@@ -1079,26 +1081,26 @@ posts:
       - axios npm
       - npm supply
       - npm supply chain
-      - supply chain attack
-      - chain attack
       - axios npm supply
+      - chain attack
+      - supply chain attack
       - social engineering
-      - incident response
       - trust provenance
-      - chain security
+      - incident response
       - supply chain security
+      - chain security
       - engineering lessons
       - supply chain compromise
       - chain compromise
       - chain security social
-      - software supply
       - security social engineering
       - social engineering incident
-      - software supply chain
       - engineering incident response
       - incident response trust
       - response trust provenance
-      - security social
+      - software supply
+      - software supply chain
+      - response trust
     catchwords:
       - chain
       - supply
@@ -1151,14 +1153,14 @@ posts:
       - axios npm
       - npm supply
       - npm supply chain
-      - supply chain attack
-      - chain attack
       - axios npm supply
+      - chain attack
+      - supply chain attack
       - social engineering
-      - incident response
       - trust provenance
-      - chain security
+      - incident response
       - supply chain security
+      - chain security
     questions:
       - question: What happened in the 2026 axios npm supply chain compromise for axios npm supply chain attack?
         answer: Attackers published malicious axios versions on npm that introduced `plain-crypto-js@4.2.1`, which executed install-time malware delivery across multiple operating systems.
@@ -1222,23 +1224,23 @@ posts:
       - risk management
     key_phrases:
       - digital sovereignty
-      - sovereignty china
       - digital sovereignty china
+      - sovereignty china
       - data residency
       - china cloud
       - engineering lessons
       - governance digital
-      - digital sovereignty cloud
       - sovereignty cloud
-      - governance data
-      - sovereignty cloud compliance
-      - cloud compliance platform
-      - compliance platform engineering
-      - platform engineering risk
-      - engineering risk management
-      - risk management governance
-      - management governance data
+      - digital sovereignty cloud
       - governance data residency
+      - management governance data
+      - risk management governance
+      - engineering risk management
+      - platform engineering risk
+      - compliance platform engineering
+      - cloud compliance platform
+      - sovereignty cloud compliance
+      - governance data
       - management governance
       - risk management
       - engineering risk
@@ -1294,17 +1296,17 @@ posts:
       - azure
       - risk
       - digital sovereignty
-      - sovereignty china
       - digital sovereignty china
+      - sovereignty china
       - data residency
       - china cloud
       - engineering lessons
       - governance digital
-      - digital sovereignty cloud
       - sovereignty cloud
-      - governance data
-      - sovereignty cloud compliance
-      - cloud compliance platform
+      - digital sovereignty cloud
+      - governance data residency
+      - management governance data
+      - risk management governance
     questions:
       - question: How does Azure China under 21Vianet differ operationally from global Azure for digital sovereignty China?
         answer: Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within China's borders and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014.
@@ -1375,22 +1377,22 @@ posts:
       - engineering governance
       - prompt engineering
       - knowledge distillation
-      - language model transformer
-      - model transformer prompt
       - artificial intelligence
+      - language model transformer
       - model transformer
       - transformer prompt
+      - model transformer prompt
       - transformer prompt engineering
       - prompt engineering governance
       - intelligence artificial intelligence
       - artificial intelligence artificial
+      - governance trustworthy
       - lessons engineering
       - recurring themes
       - engineering governance large
       - governance large language
-      - lessons engineering governance
       - federated learning
-      - governance trustworthy
+      - lessons engineering governance
     catchwords:
       - language
       - large
@@ -1444,10 +1446,10 @@ posts:
       - engineering governance
       - prompt engineering
       - knowledge distillation
-      - language model transformer
-      - model transformer prompt
       - artificial intelligence
+      - language model transformer
       - model transformer
+      - transformer prompt
     questions:
       - question: What is a large language model in practical engineering terms for large language models?
         answer: A large language model (LLM) is a neural network trained to predict the next token in a sequence of text. "Large" refers to the parameter count (hundreds of billions for frontier models) and the scale of training data (internet-scale corpora). The key architectural insight, introduced by [Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762) in "Attention Is All You Need," is that self-attention replaces sequential recurrence, allowing parallel computation across all positions in a sequence. This parallelism is what made billion-parameter pretraining tractable.
@@ -1516,9 +1518,9 @@ posts:
     key_phrases:
       - data provenance
       - machine learning
-      - provenance machine
       - data provenance machine
       - provenance machine learning
+      - provenance machine
       - graph neural
       - traceability graph
       - learning traceability graph
@@ -1531,12 +1533,11 @@ posts:
       - neural network reproducibility
       - network reproducibility governance
       - reproducibility governance data
-      - governance data provenance
       - neural networks
-      - artificial intelligence
-      - governance lessons
-      - network reproducibility
+      - governance data provenance
+      - governance data
       - reproducibility governance
+      - network reproducibility
     catchwords:
       - provenance
       - traceability
@@ -1587,9 +1588,9 @@ posts:
       - standard
       - data provenance
       - machine learning
-      - provenance machine
       - data provenance machine
       - provenance machine learning
+      - provenance machine
       - graph neural
       - traceability graph
       - learning traceability graph
@@ -1791,11 +1792,11 @@ posts:
       - theory
       - variants
       - selection
-      - aeo
       - author
       - authoritative
       - baseline
       - behavior
+      - benchmark
       - support vector machine
       - machine learning
       - model tuning
@@ -1936,9 +1937,9 @@ posts:
       - implementation
       - level
       - metrics
-      - aeo
       - aggregate
       - alone
+      - analyzes
       - support vector machine
       - confusion matrix
       - model evaluation
@@ -1963,11 +1964,11 @@ posts:
       - model evaluation uci
       - evaluation uci har
       - evaluation uci
-      - matrix model
       - artificial intelligence
-      - intelligence artificial
-      - artificial intelligence artificial
-      - intelligence artificial intelligence
+      - matrix model
+      - confusion corridors
+      - pca geometry
+      - error forensics
     catchwords:
       - benchmark
       - machine
@@ -2073,12 +2074,12 @@ posts:
       - snapshot
       - series
       - actions
-      - aeo
       - author
       - baseline
       - behavior
       - best
       - beyond
+      - blueprint
       - support vector machine
       - model tuning
       - model governance
@@ -2092,7 +2093,7 @@ posts:
       - model governance
       - deployment model
       - deployment model governance
-      - artificial intelligence
+      - monitoring support
       - tuning workflow
       - deployment svm
       - vector machine model
@@ -2103,11 +2104,11 @@ posts:
       - governance monitoring support
       - monitoring support vector
       - machine deployment svm
+      - governance monitoring
+      - artificial intelligence
       - deployment governance
       - machine model
       - model tuning
-      - tuning deployment
-      - monitoring support
     catchwords:
       - deployment
       - machine
@@ -2164,7 +2165,7 @@ posts:
       - model governance
       - deployment model
       - deployment model governance
-      - artificial intelligence
+      - monitoring support
       - tuning workflow
       - deployment svm
       - vector machine model
@@ -2242,10 +2243,10 @@ posts:
       - protocol design multi-agent
       - interoperability protocol design
       - agent interoperability protocol
-      - acp practical
       - artificial intelligence design
+      - acp practical
       - tool orchestration
-      - multi-agent tool
+      - boundaries enterprise
     catchwords:
       - protocol
       - agent
@@ -2976,28 +2977,28 @@ posts:
     key_phrases:
       - evidence review
       - retrieval-augmented generation
-      - retrieval augmented generation
       - augmented generation
       - retrieval augmented
+      - retrieval augmented generation
       - retrieval literature
       - literature review
       - review natural
       - natural language
       - language processing
-      - artificial intelligence retrieval
+      - augmented generation large
+      - generation large language
+      - large language model
+      - language model retrieval
+      - model retrieval literature
+      - healthcare deployment
       - natural language processing
       - review natural language
       - literature review natural
-      - healthcare deployment
       - retrieval literature review
-      - model retrieval literature
-      - language model retrieval
-      - large language model
-      - generation large language
-      - augmented generation large
       - model retrieval
       - language model
       - large language
+      - generation large
     catchwords:
       - retrieval
       - review
@@ -3048,16 +3049,16 @@ posts:
       - strategy
       - evidence review
       - retrieval-augmented generation
-      - retrieval augmented generation
       - augmented generation
       - retrieval augmented
+      - retrieval augmented generation
       - retrieval literature
       - literature review
       - review natural
       - natural language
       - language processing
-      - artificial intelligence retrieval
-      - natural language processing
+      - augmented generation large
+      - generation large language
     questions:
       - question: What is the most important finding from this RAG evidence review?
         answer: "The distractor effect. Cuconasu et al. discovered that semantically similar documents which do not contain the answer degrade LLM accuracy more than completely random documents. That finding inverts a widespread assumption: high retrieval scores do not guarantee helpful context. They can guarantee the opposite."
@@ -3390,10 +3391,10 @@ posts:
       - code-based
       - hybrid
       - foundations
+      - hardware
       - models
       - acceleration
       - cryptographic
-      - hardware
       - nist
       - primitives
       - reconceptualisation
@@ -3411,13 +3412,13 @@ posts:
       - computers
       - constructions
       - crypto-agility
-      - notes
       - public-key
       - questions
       - safe
       - technical
       - threat
       - signatures
+      - aes-256
       - post-quantum cryptography
       - lattice-based cryptography
       - quantum computing
@@ -3432,17 +3433,17 @@ posts:
       - cryptography lattice-based
       - security models
       - cryptography lattice-based cryptography
+      - primitives nist
       - nist standards
-      - cryptographic primitives nist
       - computing cryptographic primitives
       - quantum computing cryptographic
       - cryptography quantum computing
       - lattice-based cryptography quantum
       - cybersecurity applied mathematics
       - hybrid pqc
-      - primitives nist
       - computing cryptographic
       - quantum computing
+      - cryptographic primitives nist
       - primitives nist standards
       - applied mathematics
       - cybersecurity applied
@@ -3455,10 +3456,10 @@ posts:
       - code-based
       - hybrid
       - foundations
+      - hardware
       - models
       - acceleration
       - cryptographic
-      - hardware
       - primitives
       - reconceptualisation
       - defence
@@ -3475,7 +3476,7 @@ posts:
       - computers
       - constructions
       - crypto-agility
-      - notes
+      - public-key
     search_words:
       - cryptography
       - quantum
@@ -3485,10 +3486,10 @@ posts:
       - code-based
       - hybrid
       - foundations
+      - hardware
       - models
       - acceleration
       - cryptographic
-      - hardware
       - nist
       - primitives
       - reconceptualisation
@@ -3504,8 +3505,8 @@ posts:
       - cryptography lattice-based
       - security models
       - cryptography lattice-based cryptography
+      - primitives nist
       - nist standards
-      - cryptographic primitives nist
       - computing cryptographic primitives
     questions:
       - question: "Hybrid QC/PQC: Defence in Depth, or Wishful Layering?"
@@ -3541,7 +3542,6 @@ posts:
       - network
       - standardisation
       - architectures
-      - technical
       - cryptographic
       - cybersecurity
       - development
@@ -3549,17 +3549,18 @@ posts:
       - tls
       - appendix
       - education
-      - evidence
       - gap
-      - notes
       - open
       - outcomes
       - problem
       - remains
+      - technical
       - tooling
       - architecture
       - ccpastpqc
       - modular
+      - pathways
+      - planning
       - post-quantum cryptography
       - nist standards
       - cryptographic migration
@@ -3569,24 +3570,24 @@ posts:
       - workforce readiness
       - software engineering
       - code migration
-      - automated code
       - automated code migration
       - network architectures
-      - hybrid qkd
-      - qkd pqc
-      - hybrid qkd pqc
-      - development software engineering
-      - workforce development software
-      - cybersecurity software engineering
-      - software engineering post-quantum
-      - engineering post-quantum cryptography
+      - automated code
       - post-quantum cryptography nist
-      - cryptography nist standards
+      - standards cryptographic migration
       - nist standards cryptographic
       - cryptographic migration workforce
-      - cybersecurity software
+      - cryptography nist standards
       - migration workforce development
-      - standards cryptographic migration
+      - engineering post-quantum cryptography
+      - software engineering post-quantum
+      - workforce development software
+      - development software engineering
+      - cybersecurity software engineering
+      - qkd pqc
+      - hybrid qkd pqc
+      - cybersecurity software
+      - hybrid qkd
       - engineering post-quantum
       - cryptography nist
     catchwords:
@@ -3604,20 +3605,20 @@ posts:
       - network
       - standardisation
       - architectures
-      - technical
       - cryptographic
       - cybersecurity
       - development
       - appendix
       - education
-      - evidence
-      - notes
       - outcomes
       - problem
       - remains
+      - technical
       - tooling
       - architecture
       - ccpastpqc
+      - modular
+      - pathways
     search_words:
       - migration
       - pqc
@@ -3636,19 +3637,19 @@ posts:
       - network
       - standardisation
       - architectures
-      - technical
+      - cryptographic
       - post-quantum cryptography
       - workforce readiness
       - software engineering
       - code migration
-      - automated code
       - automated code migration
       - network architectures
-      - hybrid qkd
-      - qkd pqc
-      - hybrid qkd pqc
-      - development software engineering
-      - workforce development software
+      - automated code
+      - post-quantum cryptography nist
+      - standards cryptographic migration
+      - nist standards cryptographic
+      - cryptographic migration workforce
+      - cryptography nist standards
     questions:
       - question: What Practitioners Should Do Now?
         answer: "- Use ccPASTpqc-style tools for initial translation drafts, then review and test manually - Invest in cryptographic dependency inventories before migration (you cannot migrate what you have not catalogued) - Prioritise asymmetric key operations (symmetric encryption requires only key-size increases)"
@@ -3666,9 +3667,9 @@ posts:
     keywords:
       - iot
       - post-quantum
+      - pqc
       - blockchain
       - cryptography
-      - pqc
       - security
       - systems
       - cloud
@@ -3680,6 +3681,7 @@ posts:
       - energy
       - patterns
       - engineering
+      - applied
       - grid
       - production
       - covert
@@ -3688,18 +3690,17 @@ posts:
       - gap
       - performance
       - quantum-resistant
-      - analysis
       - appendix
-      - applied
       - architecture
       - communications
       - convergent
       - dilithium
       - evidence
       - kyber
-      - notes
-      - sector
       - smart
+      - urgent
+      - practice
+      - prototype-to-production
       - post-quantum cryptography
       - iot security
       - critical infrastructure
@@ -3744,26 +3745,26 @@ posts:
       - energy
       - patterns
       - engineering
+      - applied
       - production
       - covert
       - critical
       - cybersecurity
       - performance
       - quantum-resistant
-      - analysis
       - appendix
-      - applied
       - architecture
       - communications
       - convergent
       - dilithium
       - evidence
+      - kyber
     search_words:
       - iot
       - post-quantum
+      - pqc
       - blockchain
       - cryptography
-      - pqc
       - security
       - systems
       - cloud
@@ -3775,8 +3776,8 @@ posts:
       - energy
       - patterns
       - engineering
+      - applied
       - grid
-      - production
       - post-quantum cryptography
       - cloud security
       - iot blockchain

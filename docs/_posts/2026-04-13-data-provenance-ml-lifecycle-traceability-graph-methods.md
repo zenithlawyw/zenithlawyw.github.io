@@ -219,7 +219,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - [Source Inventory and Evidence Grading](#source-inventory-and-evidence-grading)
 - [Scope and Verification Boundary](#scope-and-verification-boundary)
 - [Source-Level Assessment](#source-level-assessment)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 <blockquote>
 <strong>Synthesis note:</strong> This review prioritizes entity-activity-agent traceability because that structure is foundational for portable provenance interpretation.
@@ -292,15 +291,5 @@ The paper identifies four persona types whose provenance needs motivated the PRO
 | Karuna et al. | IEEE ICICAT           | 2024 | GNN (GCN) vs baselines           | Financial traceability | Quantitative; internal evaluation; no confirmed public replication artifacts |
 | Pina et al.   | ACM WWW '23 Companion | 2023 | Provenance integration prototype | DL lifecycle (general) | Architectural; feasibility demonstrated; no overhead benchmarks              |
 | Souza et al.  | WORKS @ SC 2019       | 2019 | PROV-ML + ProvLake extensions    | O&G / CSE              | Practical; 48-GPU evaluation; single-domain validation                       |
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "data provenance machine learning", "ML traceability graph methods", "W3C PROV ML lifecycle", "data lineage vs provenance", "GNN traceability".
-
-**Schema signals**: Article schema with author attribution and datePublished, structured evidence-grading tables.
-
-**AEO coverage**: Source-level evidence assessments with explicit grading, structured comparison table across venues and methods, definition lists for traceability terminology.
-
-**GEO coverage**: Provenance standards (W3C PROV, PROV-ML) and graph-based traceability methods are internationally applicable across research and industry contexts without jurisdiction-specific constraints.
 
 </details>

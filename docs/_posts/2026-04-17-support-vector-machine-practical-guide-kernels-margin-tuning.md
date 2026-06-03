@@ -295,7 +295,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 
 - [Author and Source Credibility](#author-and-source-credibility)
 - [Citability Snapshot](#citability-snapshot)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -348,15 +347,5 @@ The source set is intentionally focused on foundational SVM papers, applied exte
 ### Reference and Maintenance Note
 
 SVM toolchains, library defaults, and benchmark conventions change over time. For production reuse, periodically re-check solver defaults, API behavior, and dataset assumptions against current documentation and release notes before carrying this guidance forward unchanged.
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "what is support vector machine", "SVM kernel selection guide", "linear SVM vs RBF SVM", "SVM margin intuition", "practical SVM classification guide".
-
-**Schema signals**: FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
-
-**AEO coverage**: FAQ items covering kernel selection, margin behaviour, and tuning decisions, structured terminology definitions, citability snapshot for retrieval systems.
-
-**GEO coverage**: SVM theory and implementation guidance is universally applicable; referenced toolchains (scikit-learn, e1071) and datasets (UCI repository) are internationally available without geographic restriction.
 
 </details>

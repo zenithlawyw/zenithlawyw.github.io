@@ -251,7 +251,6 @@ No. This synthesis is strong for shortlisting options and shaping a pilot plan, 
 - [D. Corpus Reviewed](#d-corpus-reviewed)
 - [E. Evidence Maturity Snapshot](#e-evidence-maturity-snapshot)
 - [F. Practical Translation Map](#f-practical-translation-map)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Author and Source Credibility
 
@@ -332,15 +331,5 @@ Authoritative baseline links used in this review include:
 3. Edge constraints findings -> gateway-attested payment execution.
 4. Sovereignty/composability findings -> replaceable service boundaries and explicit settlement layers.
 5. Autonomy-governance findings -> tiered authorization framework.
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "Lightning Network cross-border micropayments", "agentic commerce payment architecture", "machine to machine payment rails", "bitcoin lightning implementation guide", "IoT micropayment infrastructure".
-
-**Schema signals**: Article schema with author attribution and datePublished, structured evidence-maturity snapshot.
-
-**AEO coverage**: Multi-paper corpus review with evidence-maturity grading, practical translation map linking findings to engineering layers, technical term definitions for corridor policy and graduated autonomy.
-
-**GEO coverage**: Cross-border micropayment analysis explicitly addresses multi-jurisdictional regulatory concerns including FATF virtual-asset guidance and BIS payment-infrastructure standards, with corridor-level routing designed for international settlement paths.
 
 </details>
