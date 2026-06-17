@@ -1951,6 +1951,208 @@ zhao2026:
   ieee_base: K. K. Raju, R. H. Rao, B. N. Behara, G. S. S. Kumar, M. Harshitha and A. Varshney, Blockchain-Based Secure IoT Data Transmission Leveraging Post-Quantum Cryptography, in 2025 3rd International Conference on IoT, Communication and Automation Technology (ICICAT), pp. 1--6, n.d.
   harvard_base: Raju, K.K. et al. (n.d.). Blockchain-Based Secure IoT Data Transmission Leveraging Post-Quantum Cryptography. In 2025 3rd International Conference on IoT, Communication and Automation Technology (ICICAT). pp. 1--6.
   source_format: bibtex
+NEURIPS2023_89beb2a3:
+  entry_type: inproceedings
+  short_author: Bhalla et al.
+  year: "2023"
+  authors: Bhalla, Usha and Srinivas, Suraj and Lakkaraju, Himabindu
+  editor: A. Oh and T. Naumann and A. Globerson and K. Saenko and M. Hardt and S. Levine
+  title: "Discriminative Feature Attributions: Bridging Post Hoc Explainability and Inherent Interpretability"
+  book: Advances in Neural Information Processing Systems
+  publisher: Curran Associates, Inc.
+  volume: "36"
+  pages: 44105--44122
+  url: https://proceedings.neurips.cc/paper_files/paper/2023/file/89beb2a345269f3f9afe48cee35403aa-Paper-Conference.pdf
+  ieee_base: "U. Bhalla, S. Srinivas and H. Lakkaraju, Discriminative Feature Attributions: Bridging Post Hoc Explainability and Inherent Interpretability, in Advances in Neural Information Processing Systems, vol. 36, pp. 44105--44122, Curran Associates, Inc., 2023."
+  harvard_base: "Bhalla, U., Srinivas, S. and Lakkaraju, H. (2023). Discriminative Feature Attributions: Bridging Post Hoc Explainability and Inherent Interpretability. In Advances in Neural Information Processing Systems. vol. 36, pp. 44105--44122. Curran Associates, Inc."
+  source_format: bibtex
+bhalla2023verifiable:
+  entry_type: inproceedings
+  short_author: Usha Bhalla et al.
+  year: "2023"
+  authors: Usha Bhalla and Suraj Srinivas and Himabindu Lakkaraju
+  title: "Verifiable Feature Attributions: A Bridge between Post Hoc Explainability and Inherent Interpretability"
+  book: ICML 3rd Workshop on Interpretable Machine Learning in Healthcare (IMLH)
+  url: https://openreview.net/forum?id=BmsFZJhRZp
+  ieee_base: "U. Bhalla, S. Srinivas and H. Lakkaraju, Verifiable Feature Attributions: A Bridge between Post Hoc Explainability and Inherent Interpretability, in ICML 3rd Workshop on Interpretable Machine Learning in Healthcare (IMLH), 2023."
+  harvard_base: "Bhalla, U., Srinivas, S. and Lakkaraju, H. (2023). Verifiable Feature Attributions: A Bridge between Post Hoc Explainability and Inherent Interpretability. In ICML 3rd Workshop on Interpretable Machine Learning in Healthcare (IMLH)."
+  source_format: bibtex
+"11461829":
+  entry_type: inproceedings
+  short_author: Butler et al.
+  year: "2026"
+  authors: Butler, Kurt and Feng, Guanchao and Djurić, Petar M.
+  title: "Higher-Order Feature Attribution: Bridging Statistics, Explainable AI, and Topological Signal Processing"
+  book: ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)
+  pages: 5261-5265
+  doi: 10.1109/ICASSP55912.2026.11461829
+  ieee_base: "K. Butler, G. Feng and P. M. Djurić, Higher-Order Feature Attribution: Bridging Statistics, Explainable AI, and Topological Signal Processing, in ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 5261-5265, 2026."
+  harvard_base: "Butler, K., Feng, G. and Djurić, P.M. (2026). Higher-Order Feature Attribution: Bridging Statistics, Explainable AI, and Topological Signal Processing. In ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). pp. 5261-5265."
+  source_format: bibtex
+CARLESBOU2026108277:
+  entry_type: article
+  short_author: Jose L. Carles-Bou et al.
+  year: "2026"
+  authors: Jose L. Carles-Bou and Enrique J. Carmona
+  title: Achieving faithful explainability in feedforward neural networks through accurately computed feature attribution
+  journal: Neural Networks
+  volume: "195"
+  pages: "108277"
+  url: https://www.sciencedirect.com/science/article/pii/S089360802501158X
+  doi: 10.1016/j.neunet.2025.108277
+  ieee_base: J. L. Carles-Bou and E. J. Carmona, Achieving faithful explainability in feedforward neural networks through accurately computed feature attribution, Neural Networks, vol. 195, pp. 108277, 2026.
+  harvard_base: Carles-Bou, J.L. and Carmona, E.J. (2026). Achieving faithful explainability in feedforward neural networks through accurately computed feature attribution. Neural Networks. vol. 195, pp. 108277.
+  source_format: bibtex
+"11449430":
+  entry_type: article
+  short_author: Chen et al.
+  year: "2026"
+  authors: Chen, Lingfeng and Hu, Panhe and Liu, Zhen
+  title: "Seeing What Few-Shot Learners See: Contrastive Cross-Class Attribution for Explainability"
+  journal: IEEE Transactions on Neural Networks and Learning Systems
+  pages: 1-15
+  doi: 10.1109/TNNLS.2026.3672242
+  ieee_base: "L. Chen, P. Hu and Z. Liu, Seeing What Few-Shot Learners See: Contrastive Cross-Class Attribution for Explainability, IEEE Transactions on Neural Networks and Learning Systems, pp. 1-15, 2026."
+  harvard_base: "Chen, L., Hu, P. and Liu, Z. (2026). Seeing What Few-Shot Learners See: Contrastive Cross-Class Attribution for Explainability. IEEE Transactions on Neural Networks and Learning Systems. pp. 1-15."
+  source_format: bibtex
+CHEN2025129379:
+  entry_type: article
+  short_author: Yueshan Chen et al.
+  year: "2025"
+  authors: Yueshan Chen and Sihai Zhang
+  title: "WAE: An evaluation metric for attribution-based XAI on time series forecasting"
+  journal: Neurocomputing
+  volume: "622"
+  pages: "129379"
+  url: https://www.sciencedirect.com/science/article/pii/S0925231225000517
+  doi: 10.1016/j.neucom.2025.129379
+  ieee_base: "Y. Chen and S. Zhang, WAE: An evaluation metric for attribution-based XAI on time series forecasting, Neurocomputing, vol. 622, pp. 129379, 2025."
+  harvard_base: "Chen, Y. and Zhang, S. (2025). WAE: An evaluation metric for attribution-based XAI on time series forecasting. Neurocomputing. vol. 622, pp. 129379."
+  source_format: bibtex
+"10021127":
+  entry_type: inproceedings
+  short_author: Daley et al.
+  year: "2022"
+  authors: Daley, Brian and Ratul, Qudrat E Alahy and Serra, Edoardo and Cuzzocrea, Alfredo
+  title: "GAPS: Generality and Precision with Shapley Attribution"
+  book: 2022 IEEE International Conference on Big Data (Big Data)
+  pages: 5444-5450
+  doi: 10.1109/BigData55660.2022.10021127
+  ieee_base: "B. Daley, Q. E. A. Ratul, E. Serra and A. Cuzzocrea, GAPS: Generality and Precision with Shapley Attribution, in 2022 IEEE International Conference on Big Data (Big Data), pp. 5444-5450, 2022."
+  harvard_base: "Daley, B. et al. (2022). GAPS: Generality and Precision with Shapley Attribution. In 2022 IEEE International Conference on Big Data (Big Data). pp. 5444-5450."
+  source_format: bibtex
+pmlr-v108-janzing20a:
+  entry_type: inproceedings
+  short_author: Janzing et al.
+  year: "2020"
+  authors: Janzing, Dominik and Minorics, Lenon and Bloebaum, Patrick
+  editor: Chiappa, Silvia and Calandra, Roberto
+  title: "Feature relevance quantification in explainable AI: A causal problem"
+  book: Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics
+  publisher: PMLR
+  volume: "108"
+  pages: 2907--2916
+  url: https://proceedings.mlr.press/v108/janzing20a.html
+  ieee_base: "D. Janzing, L. Minorics and P. Bloebaum, Feature relevance quantification in explainable AI: A causal problem, in Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics, vol. 108, pp. 2907--2916, PMLR, 2020."
+  harvard_base: "Janzing, D., Minorics, L. and Bloebaum, P. (2020). Feature relevance quantification in explainable AI: A causal problem. In Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics. vol. 108, pp. 2907--2916. PMLR."
+  source_format: bibtex
+KOST2025100648:
+  entry_type: article
+  short_author: Leonard Kost et al.
+  year: "2025"
+  authors: Leonard Kost and Sarah K. Lier and Michael H. Breitner
+  title: An explainable artificial intelligence feature selection framework for transparent, trustworthy, and cost-efficient energy forecasting
+  journal: Energy and AI
+  volume: "22"
+  pages: "100648"
+  url: https://www.sciencedirect.com/science/article/pii/S2666546825001806
+  doi: 10.1016/j.egyai.2025.100648
+  ieee_base: L. Kost, S. K. Lier and M. H. Breitner, An explainable artificial intelligence feature selection framework for transparent, trustworthy, and cost-efficient energy forecasting, Energy and AI, vol. 22, pp. 100648, 2025.
+  harvard_base: Kost, L., Lier, S.K. and Breitner, M.H. (2025). An explainable artificial intelligence feature selection framework for transparent, trustworthy, and cost-efficient energy forecasting. Energy and AI. vol. 22, pp. 100648.
+  source_format: bibtex
+10.1145/3672553:
+  entry_type: article
+  short_author: Moreira et al.
+  year: "2025"
+  authors: Moreira, Catarina and Chou, Yu-Liang and Hsieh, Chihcheng and Ouyang, Chun and Pereira, Jo\~{a}o and Jorge, Joaquim
+  title: "Benchmarking Instance-Centric Counterfactual Algorithms for XAI: From White Box to Black Box"
+  journal: ACM Comput. Surv.
+  publisher: Association for Computing Machinery
+  volume: "57"
+  number: "6"
+  url: https://doi.org/10.1145/3672553
+  doi: 10.1145/3672553
+  ieee_base: "C. Moreira, Y. L. Chou, C. Hsieh, C. Ouyang, J. Pereira and J. Jorge, Benchmarking Instance-Centric Counterfactual Algorithms for XAI: From White Box to Black Box, ACM Comput. Surv., vol. 57, no. 6, 2025."
+  harvard_base: "Moreira, C. et al. (2025). Benchmarking Instance-Centric Counterfactual Algorithms for XAI: From White Box to Black Box. ACM Comput. Surv.. vol. 57, no. 6."
+  source_format: bibtex
+"11228295":
+  entry_type: inproceedings
+  short_author: Ng et al.
+  year: "2025"
+  authors: Ng, Woon Yee and Wang, Li Rong and Liu, Siyuan and Fan, Xiuyi
+  title: "Causal SHAP: Feature Attribution with Dependency Awareness through Causal Discovery"
+  book: 2025 International Joint Conference on Neural Networks (IJCNN)
+  pages: 1-8
+  doi: 10.1109/IJCNN64981.2025.11228295
+  ieee_base: "W. Y. Ng, L. R. Wang, S. Liu and X. Fan, Causal SHAP: Feature Attribution with Dependency Awareness through Causal Discovery, in 2025 International Joint Conference on Neural Networks (IJCNN), pp. 1-8, 2025."
+  harvard_base: "Ng, W.Y. et al. (2025). Causal SHAP: Feature Attribution with Dependency Awareness through Causal Discovery. In 2025 International Joint Conference on Neural Networks (IJCNN). pp. 1-8."
+  source_format: bibtex
+"11498186":
+  entry_type: inproceedings
+  short_author: Sengupta et al.
+  year: "2026"
+  authors: Sengupta, Poushali and Zhang, Yan and Eliassen, Frank and Maharjan, Sabita
+  title: Correlation-Aware Feature Attribution Based Explainable AI
+  book: 2026 International Conference on Advances in Artificial Intelligence and Machine Learning (AAIML)
+  pages: 210-219
+  doi: 10.1109/AAIML67890.2026.11498186
+  ieee_base: P. Sengupta, Y. Zhang, F. Eliassen and S. Maharjan, Correlation-Aware Feature Attribution Based Explainable AI, in 2026 International Conference on Advances in Artificial Intelligence and Machine Learning (AAIML), pp. 210-219, 2026.
+  harvard_base: Sengupta, P. et al. (2026). Correlation-Aware Feature Attribution Based Explainable AI. In 2026 International Conference on Advances in Artificial Intelligence and Machine Learning (AAIML). pp. 210-219.
+  source_format: bibtex
+"10879535":
+  entry_type: article
+  short_author: Troncoso-García et al.
+  year: "2025"
+  authors: Troncoso-García, Ángela R. and Martínez-Ballesteros, María and Martínez-Álvarez, Francisco and Troncoso, Alicia
+  title: A New Metric Based on Association Rules to Assess Feature-Attribution Explainability Techniques for Time Series Forecasting
+  journal: IEEE Transactions on Pattern Analysis and Machine Intelligence
+  volume: "47"
+  number: "5"
+  pages: 4140-4155
+  doi: 10.1109/TPAMI.2025.3540513
+  ieee_base: Á. R. Troncoso-García, M. Martínez-Ballesteros, F. Martínez-Álvarez and A. Troncoso, A New Metric Based on Association Rules to Assess Feature-Attribution Explainability Techniques for Time Series Forecasting, IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 47, no. 5, pp. 4140-4155, 2025.
+  harvard_base: Troncoso-García, Á.R. et al. (2025). A New Metric Based on Association Rules to Assess Feature-Attribution Explainability Techniques for Time Series Forecasting. IEEE Transactions on Pattern Analysis and Machine Intelligence. vol. 47, no. 5, pp. 4140-4155.
+  source_format: bibtex
+10.1145/3617380:
+  entry_type: article
+  short_author: Wang et al.
+  year: "2024"
+  authors: Wang, Ziming and Huang, Changwu and Li, Yun and Yao, Xin
+  title: Multi-objective Feature Attribution Explanation For Explainable Machine Learning
+  journal: ACM Trans. Evol. Learn. Optim.
+  publisher: Association for Computing Machinery
+  volume: "4"
+  number: "1"
+  url: https://doi.org/10.1145/3617380
+  doi: 10.1145/3617380
+  ieee_base: Z. Wang, C. Huang, Y. Li and X. Yao, Multi-objective Feature Attribution Explanation For Explainable Machine Learning, ACM Trans. Evol. Learn. Optim., vol. 4, no. 1, 2024.
+  harvard_base: Wang, Z. et al. (2024). Multi-objective Feature Attribution Explanation For Explainable Machine Learning. ACM Trans. Evol. Learn. Optim.. vol. 4, no. 1.
+  source_format: bibtex
+DEHDARIRAD2025100101:
+  entry_type: article
+  short_author: Tahereh Dehdarirad
+  year: "2025"
+  authors: Tahereh Dehdarirad
+  title: "Evaluating explainability in language classification models: A unified framework incorporating feature attribution methods and key factors affecting faithfulness"
+  journal: Data and Information Management
+  volume: "9"
+  number: "4"
+  pages: "100101"
+  url: https://www.sciencedirect.com/science/article/pii/S2543925125000099
+  doi: 10.1016/j.dim.2025.100101
+  ieee_base: "T. Dehdarirad, Evaluating explainability in language classification models: A unified framework incorporating feature attribution methods and key factors affecting faithfulness, Data and Information Management, vol. 9, no. 4, pp. 100101, 2025."
+  harvard_base: "Dehdarirad, T. (2025). Evaluating explainability in language classification models: A unified framework incorporating feature attribution methods and key factors affecting faithfulness. Data and Information Management. vol. 9, no. 4, pp. 100101."
+  source_format: bibtex
 "11171168":
   entry_type: inproceedings
   short_author: Zhao et al.
