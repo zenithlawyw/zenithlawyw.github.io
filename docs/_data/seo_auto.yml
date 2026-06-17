@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-06-03T14:59:41Z"
+generated_at: "2026-06-17T20:08:42Z"
 signal_weights:
   title: 3
   categories: 5
@@ -15,40 +15,44 @@ signal_weight_rationale:
   intro_description_headings: Medium weight for context enrichment without dominating keyword extraction.
   keywords_catchwords: Low weight to avoid over-amplifying manually supplied or potentially noisy token lists.
 keywords:
+  - attribution
   - engineering
   - governance
-  - rag
-  - lightning
   - machine
+  - rag
+  - learning
   - deployment
-  - data
-  - network
-  - implementation
   - model
+  - lightning
+  - network
+  - data
   - production
   - appendix
+  - artificial
+  - intelligence
+  - implementation
+  - practical
+  - evidence
+  - technical
   - architecture
+  - evaluation
+  - feature
+  - questions
   - provenance
   - retrieval
-  - vector
-  - practical
-  - support
-  - technical
-  - a2a
-  - evidence
   - language
-  - questions
+  - support
+  - vector
+  - a2a
   - svm
   - mcp
   - supply
-  - learning
   - chain
   - teams
   - cryptography
-  - acp
-  - artificial
-  - intelligence
   - systems
+  - acp
+  - definitions
   - review
   - orchestration
   - cross-border
@@ -56,144 +60,143 @@ keywords:
   - cloud
   - controls
   - pqc
+  - table
+  - causal
+  - contents
+  - author
+  - lessons
   - large
   - security
-  - definitions
+  - benchmark
   - guide
   - micropayments
   - design
-  - lessons
+  - papers
+  - credibility
   - post-quantum
   - quantum
-  - table
-  - china
-  - contents
-  - deadlock
-  - author
-  - failure
+  - practice
+  - domain
   - literature
+  - xai
+  - china
+  - deadlock
+  - metrics
+  - snapshot
+  - corpus
+  - failure
+  - framework
+  - software
   - agent
-  - benchmark
   - digital
   - llm
   - axios
-  - credibility
   - generation
-  - practice
   - boundaries
+  - citability
   - protocol
   - scope
-  - snapshot
-  - software
   - npm
   - sovereignty
-  - evaluation
-  - corpus
+  - introduction
+  - method
+  - reference
+  - first
   - legal
   - migration
   - platform
-  - reference
   - cybersecurity
-  - first
+  - open
+  - series
   - hybrid
   - representation
   - trust
-  - domain
-  - glossary
-  - open
-  - blockchain
-  - citability
   - attack
+  - glossary
+  - guidance
+  - limits
+  - selection
+  - theory
+  - tuning
+  - blockchain
+  - inference
+  - maturity
   - calibration
   - deep
-  - framework
+  - patterns
   - playbook
+  - conclusion
+  - map
   - monitoring
   - open-source
+  - processing
   - readiness
-  - tuning
+  - shap
+  - standard
+  - synthesis
   - context
   - operational
-  - patterns
+  - analysis
   - clustering
-  - introduction
   - iot
+  - natural
+  - quality
   - resource
   - strategy
-  - analysis
   - critical
   - enterprise
   - hub
-  - papers
+  - pipeline
   - reliability
+  - access
+  - beyond
   - compromise
   - decisions
   - incident
+  - integration
   - langchain
   - nist
+  - problem
   - starvation
-  - theory
   - adaptation
   - communication
+  - exact
   - fragmentation
-  - integration
+  - gap
+  - infrastructure
   - knowledge
-  - metrics
-  - processing
   - testing
   - traceability
-  - access
+  - applications
   - authoritative
+  - automated
   - common
-  - conditions
-  - guidance
-  - langgraph
-  - matter
-  - stage
-  - standards
-  - workforce
-  - augmented
   - compliance
-  - confidence
-  - gap
-  - har
-  - infrastructure
-  - law
-  - management
-  - natural
-  - pipeline
-  - resilience
-  - risk
-  - terminology
-  - applied
-  - claim
-  - early
-  - graph
-  - inference
-  - kernel
-  - layer
-  - limits
-  - maturity
-  - mode
+  - conditions
+  - core
+  - energy
 key_phrases:
+  - artificial intelligence
   - lightning network
   - support vector
   - support vector machine
   - vector machine
   - supply chain
-  - artificial intelligence
+  - machine learning
   - a2a acp
   - mcp a2a
-  - mcp a2a acp
-  - large language
   - table contents
-  - implementation guide
-  - post-quantum cryptography
+  - mcp a2a acp
+  - feature attribution
+  - large language
   - appendix table
   - appendix table contents
+  - author credibility
+  - implementation guide
+  - post-quantum cryptography
   - technical appendix
   - engineering governance
-  - author credibility
+  - citability snapshot
   - data provenance
   - lightning network implementation
   - network implementation
@@ -201,14 +204,16 @@ key_phrases:
   - digital sovereignty
   - network cross-border
   - network implementation guide
+  - artificial intelligence machine
+  - intelligence machine
+  - intelligence machine learning
   - lightning network cross-border
-  - machine learning
   - cross-border micropayments
   - axios npm
-  - citability snapshot
   - language models
   - large language models
   - network cross-border micropayments
+  - software engineering
   - representation learning
   - chain attack
   - npm supply
@@ -220,11 +225,20 @@ key_phrases:
   - axios npm supply
   - credibility appendix
   - credibility appendix table
+  - language processing
+  - natural language
+  - natural language processing
   - technical appendix author
+  - technical definitions
   - artificial intelligence artificial
+  - contents author
+  - contents author credibility
   - intelligence artificial
   - intelligence artificial intelligence
-  - software engineering
+  - learning artificial
+  - learning artificial intelligence
+  - machine learning artificial
+  - table contents author
   - agentic orchestration framework
   - digital sovereignty china
   - domain adaptation
@@ -239,41 +253,48 @@ key_phrases:
   - chain security
   - engineering lessons
   - evidence review
-  - language processing
-  - natural language
-  - natural language processing
   - retrieval augmented
   - retrieval augmented generation
   - supply chain security
   - appendix appendix
   - appendix appendix table
   - deep clustering
+  - engineering artificial
+  - engineering artificial intelligence
   - failure mode
   - machine benchmark
   - platform engineering
   - technical appendix appendix
   - vector machine benchmark
   - augmented generation large
+  - causal shap
   - generation large
   - generation large language
+  - attribution methods
   - coffman conditions
+  - corpus reviewed
+  - evaluation metrics
+  - evidence maturity
   - governance controls
   - langgraph langchain
+  - production governance
   - uci har
   - adaptation deep
   - asked questions
+  - attribution causal
   - domain adaptation deep
+  - exact computation
   - frequently asked
   - frequently asked questions
   - literature review
   - machine deployment
-  - production governance
   - vector machine deployment
+  - attribution xai
   - authoritative reference
   - authoritative reference set
   - citability snapshot authoritative
-  - engineering artificial
-  - engineering artificial intelligence
+  - domain applications
+  - few-shot learning
   - governance data
   - implementation playbook
   - language processing retrieval
@@ -284,184 +305,165 @@ key_phrases:
   - scope claim
   - snapshot authoritative
   - snapshot authoritative reference
-  - technical definitions
+  - software engineering artificial
   - a2a acp langgraph
   - acp langgraph
   - acp langgraph langchain
   - adaptation deep clustering
+  - attribution explainable
+  - causal discovery
   - confidence calibration
   - data protection
   - data provenance machine
   - data residency
-  - provenance machine
-  - provenance machine learning
-  - workforce readiness
-  - artificial intelligence software
-  - conclusion technical
-  - conclusion technical appendix
-  - contents author
-  - contents author credibility
-  - graph neural
-  - hybrid retrieval
-  - incident response
-  - intelligence software
-  - intelligence software engineering
-  - llm inference
-  - model tuning
-  - nist standards
-  - quantum computing
-  - resource contention
-  - social engineering
-  - table contents author
-  - agentic orchestration mcp
-  - cookies data
-  - cryptography quantum
 catchwords:
+  - attribution
   - engineering
   - governance
-  - lightning
   - machine
+  - learning
   - deployment
-  - network
-  - implementation
   - model
+  - lightning
+  - network
   - production
   - appendix
+  - artificial
+  - intelligence
+  - implementation
+  - practical
+  - evidence
+  - technical
   - architecture
+  - evaluation
+  - feature
+  - questions
   - provenance
   - retrieval
-  - vector
-  - practical
-  - support
-  - technical
-  - evidence
   - language
-  - questions
+  - support
+  - vector
   - supply
-  - learning
   - chain
   - teams
   - cryptography
-  - artificial
-  - intelligence
   - systems
+  - definitions
   - review
   - orchestration
   - cross-border
   - agentic
   - cloud
   - controls
+  - table
+  - causal
+  - contents
+  - author
+  - lessons
   - large
   - security
-  - definitions
+  - benchmark
   - guide
   - micropayments
   - design
-  - lessons
+  - papers
+  - credibility
   - post-quantum
   - quantum
-  - table
-  - china
-  - contents
-  - deadlock
-  - author
-  - failure
+  - practice
+  - domain
   - literature
+  - china
+  - deadlock
+  - metrics
+  - snapshot
+  - corpus
+  - failure
+  - framework
+  - software
   - agent
-  - benchmark
   - digital
   - axios
-  - credibility
   - generation
-  - practice
   - boundaries
+  - citability
   - protocol
   - scope
-  - snapshot
-  - software
   - sovereignty
-  - evaluation
-  - corpus
+  - introduction
+  - method
+  - reference
+  - first
   - legal
   - migration
   - platform
-  - reference
   - cybersecurity
-  - first
+  - series
   - hybrid
   - representation
   - trust
-  - domain
-  - glossary
-  - blockchain
-  - citability
   - attack
+  - glossary
+  - guidance
+  - limits
+  - selection
+  - theory
+  - tuning
+  - blockchain
+  - inference
+  - maturity
   - calibration
-  - framework
+  - patterns
   - playbook
+  - conclusion
   - monitoring
   - open-source
+  - processing
   - readiness
-  - tuning
+  - standard
+  - synthesis
   - context
   - operational
-  - patterns
+  - analysis
   - clustering
-  - introduction
+  - natural
+  - quality
   - resource
   - strategy
-  - analysis
   - critical
   - enterprise
-  - papers
+  - pipeline
   - reliability
+  - access
+  - beyond
   - compromise
   - decisions
   - incident
+  - integration
   - langchain
+  - problem
   - starvation
-  - theory
   - adaptation
   - communication
+  - exact
   - fragmentation
-  - integration
+  - infrastructure
   - knowledge
-  - metrics
-  - processing
   - testing
   - traceability
-  - access
+  - applications
   - authoritative
+  - automated
   - common
-  - conditions
-  - guidance
-  - langgraph
-  - matter
-  - stage
-  - standards
-  - workforce
-  - augmented
   - compliance
-  - confidence
-  - infrastructure
-  - management
-  - natural
-  - pipeline
-  - resilience
-  - terminology
-  - applied
-  - claim
-  - early
-  - graph
-  - inference
-  - kernel
-  - layer
-  - limits
-  - maturity
+  - conditions
+  - energy
 catchphrases:
   - technical appendix
   - citability snapshot
   - authoritative reference set
+  - corpus reviewed
+  - evidence maturity map
   - frequently asked questions
   - common questions
   - terminology definitions
@@ -509,10 +511,12 @@ catchphrases:
   - convergent pattern kyber dilithium dominance
   - corpus scope
   - coverage snapshot
+  - cross-domain patterns
   - cross-paper pattern controlled hybridization wins
   - cross-sector analysis
   - current website-specific practices
   - dense retrieval
+  - dependency-awareness spectrum
   - deployment questions
   - design questions
   - document loading
@@ -524,6 +528,7 @@ catchphrases:
   - externalize routing policy
   - failure mode 1 distractor contamination
   - failure mode 5 domain-safety gaps
+  - full series reference map
   - glossary overview
   - governance controls
   - governance definitions
@@ -547,53 +552,52 @@ catchphrases:
   - liability allocation
   - liability boundary
   - measured impact
+  - method comparison matrix
+  - metric comparison matrix
   - migration planning framework
   - monitoring checklist
   - multi-cloud integration architecture
   - multivariate cryptography
   - observability requirements
-  - official reference points
-  - operational context
-  - operational definitions
-  - operational documentation cadence
-  - pca geometry reading
-  - persona-driven requirements
-  - phase 1 local deterministic sandbox
 search_words:
+  - attribution
   - engineering
   - governance
-  - rag
-  - lightning
   - machine
+  - rag
+  - learning
   - deployment
-  - data
-  - network
-  - implementation
   - model
+  - lightning
+  - network
+  - data
   - production
   - appendix
+  - artificial
+  - intelligence
+  - implementation
+  - practical
+  - evidence
+  - technical
   - architecture
+  - evaluation
+  - feature
+  - questions
   - provenance
   - retrieval
-  - vector
-  - practical
-  - support
-  - technical
-  - a2a
-  - evidence
   - language
-  - questions
+  - support
+  - vector
+  - a2a
   - svm
   - mcp
   - supply
-  - learning
   - chain
   - teams
   - cryptography
-  - acp
-  - artificial
-  - intelligence
   - systems
+  - acp
+  - definitions
   - review
   - orchestration
   - cross-border
@@ -601,73 +605,72 @@ search_words:
   - cloud
   - controls
   - pqc
+  - table
+  - causal
+  - contents
+  - author
+  - lessons
   - large
   - security
-  - definitions
+  - benchmark
   - guide
   - micropayments
   - design
-  - lessons
+  - papers
+  - credibility
   - post-quantum
   - quantum
-  - table
-  - china
-  - contents
-  - deadlock
-  - author
-  - failure
+  - practice
+  - domain
   - literature
+  - xai
+  - china
+  - deadlock
+  - metrics
+  - snapshot
+  - corpus
+  - failure
+  - framework
+  - software
   - agent
-  - benchmark
   - digital
   - llm
   - axios
-  - credibility
   - generation
-  - practice
   - boundaries
+  - citability
   - protocol
   - scope
-  - snapshot
-  - software
   - npm
   - sovereignty
-  - evaluation
-  - corpus
+  - introduction
+  - method
+  - reference
+  - first
   - legal
   - migration
   - platform
-  - reference
-  - cybersecurity
-  - first
-  - hybrid
-  - representation
-  - trust
-  - domain
-  - glossary
-  - open
-  - blockchain
-  - citability
-  - attack
-  - calibration
+  - artificial intelligence
   - lightning network
   - support vector
   - support vector machine
   - vector machine
   - supply chain
-  - artificial intelligence
+  - machine learning
   - a2a acp
   - mcp a2a
-  - mcp a2a acp
-  - large language
   - table contents
-  - implementation guide
-  - post-quantum cryptography
+  - mcp a2a acp
+  - feature attribution
+  - large language
   - appendix table
   - appendix table contents
+  - author credibility
+  - implementation guide
+  - post-quantum cryptography
   - technical appendix
   - engineering governance
-  - author credibility
+  - citability snapshot
   - data provenance
   - lightning network implementation
   - network implementation
@@ -675,14 +678,16 @@ search_words:
   - digital sovereignty
   - network cross-border
   - network implementation guide
+  - artificial intelligence machine
+  - intelligence machine
+  - intelligence machine learning
   - lightning network cross-border
-  - machine learning
   - cross-border micropayments
   - axios npm
-  - citability snapshot
   - language models
   - large language models
   - network cross-border micropayments
+  - software engineering
   - representation learning
   - chain attack
   - npm supply
@@ -694,11 +699,20 @@ search_words:
   - axios npm supply
   - credibility appendix
   - credibility appendix table
+  - language processing
+  - natural language
+  - natural language processing
   - technical appendix author
+  - technical definitions
   - artificial intelligence artificial
+  - contents author
+  - contents author credibility
   - intelligence artificial
   - intelligence artificial intelligence
-  - software engineering
+  - learning artificial
+  - learning artificial intelligence
+  - machine learning artificial
+  - table contents author
   - agentic orchestration framework
   - digital sovereignty china
   - domain adaptation
@@ -706,20 +720,6 @@ search_words:
   - sovereignty china
   - contents citability
   - contents citability snapshot
-  - orchestration mcp
-  - orchestration mcp a2a
-  - table contents citability
-  - augmented generation
-  - chain security
-  - engineering lessons
-  - evidence review
-  - language processing
-  - natural language
-  - natural language processing
-  - retrieval augmented
-  - retrieval augmented generation
-  - supply chain security
-  - appendix appendix
 global_questions:
   - question: How do I handle documents that update frequently in a RAG system?
     answer: "Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. Li et al.'s survey of generative retrieval includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well."
@@ -743,6 +743,8 @@ global_questions:
     answer: Class-level monitoring with confusion-corridor tracking, because it reveals high-impact degradation earlier than aggregate accuracy.
   - question: What is the safest way to translate the reviewed papers into real project decisions for representation learning?
     answer: Staged evidence gates. Start with simulation validation. Move to a constrained pilot. Scale to production only after stability, uncertainty quantification, and cost modelling pass muster. This phased approach matches the mixed maturity of the sources reviewed here.
+  - question: What is the single most important thing a practitioner should do?
+    answer: Triangulate. Do not rely on a single attribution method, a single evaluation metric, or a single validation dataset. The evidence in this series consistently shows that results are conditional on choices that are easy to overlook when using a single method.
   - question: What is the strongest next step for deeper ML provenance evaluation for data provenance?
     answer: Run a broader review that includes MLflow, OpenLineage, Pachyderm, and DVC literature, then test candidate approaches against your production constraints and governance requirements.
   - question: What must every production runbook include for lightning network implementation guide?
@@ -767,16 +769,28 @@ global_questions:
     answer: Avoid lock-in by hiding node-specific logic behind internal adapters, versioning schemas explicitly, and keeping external APIs neutral. Do not expose implementation-specific payload fields to clients. This design lets teams swap runtimes or change routing logic later with less disruption and lower migration risk.
   - question: How do tenant-aware and cross-border controls reshape protocol design choices for agentic orchestration framework?
     answer: They require explicit policy partitioning, region-aware data handling, and identity federation choices that remain portable across clouds and partner ecosystems. In practice, teams should align MCP tool policy, A2A task authorization, and ACP-compatible gateway policy so tenant and jurisdiction controls remain consistent across every protocol boundary.
+  - question: How do these foundational critiques relate to the EU AI Act's explainability requirements?
+    answer: 'The EU AI Act requires that high-risk AI systems provide meaningful explanations of their decisions. The impossibility result raises a compliance question: if a standard black-box model''s attributions cannot be verified, can they constitute a "meaningful explanation" under the regulation? This tension is unresolved in the legal literature and is likely to be tested as enforcement begins.'
+  - question: How does MOFAE's Pareto front help a practitioner?
+    answer: It forces explicit trade-off decisions. A healthcare deployment might prioritise faithfulness (the explanation must accurately reflect the model) over complexity (the explanation can be long). A consumer-facing product might invert those priorities. MOFAE generates both options and lets the domain expert choose, rather than hiding the trade-off inside a single score.
   - question: How does generative information retrieval (GenIR) relate to RAG?
     answer: "RAG and GenIR are complementary strategies. RAG augments generation with retrieved external knowledge using explicit indexes. GenIR replaces index-based retrieval with parametric memory: models directly generate document identifiers or responses from their parameters. Production systems may eventually combine both, but GenIR remains largely experimental."
   - question: How does multi-kernel deep clustering differ from standard deep clustering pipelines for representation learning?
     answer: DMKCN learns adaptive kernel mixes while co-optimizing clustering quality and representation structure. Standard pipelines typically rely on a single fixed kernel or reconstruction-dominated objectives. The payoff is stronger cluster separability; the cost is a heavier tuning burden.
   - question: How is one-class SVM different from unsupervised clustering objectives for support vector machine?
     answer: No. One-class SVM estimates support for a target distribution and is mainly used for novelty/outlier detection rather than multi-cluster partitioning.
+  - question: How much should I invest in attribution infrastructure?
+    answer: Proportional to the cost of an incorrect explanation. For a product recommendation system, lightweight SHAP or LIME may suffice. For a medical diagnostic aid, invest in stronger methods (FACE or Causal SHAP), multi-paradigm evaluation, and stakeholder-specific explanation formats.
   - question: How often should I red-team test my RAG system?
     answer: Before initial production launch, after significant corpus updates, and on a regular schedule. For high-stakes domains (healthcare, legal, financial), monthly testing is a reasonable starting point. For lower-stakes applications, quarterly testing combined with continuous monitoring may suffice.
   - question: How should SVM retraining cadence be set using drift and corridor triggers for support vector machine deployment?
     answer: Use drift and corridor-trigger thresholds rather than fixed calendar frequency, then validate stability against the previous release before promotion.
+  - question: How should a practitioner choose between Causal SHAP and ExCIR?
+    answer: If causation is provably required (regulatory, medical, high-stakes), invest in Causal SHAP despite its assumptions and scalability limits. If correlation awareness is sufficient and computational efficiency matters, ExCIR offers a practical alternative. The threshold between "causation required" and "correlation sufficient" is a domain-specific policy judgement, not a technical one.
+  - question: How should a practitioner choose between evaluation metrics?
+    answer: "Start by asking: what kind of failure matters most? If false positive attributions (highlighting irrelevant features) are the main risk, use precision-oriented metrics. If false negatives (missing important features) are worse, use recall-oriented metrics or human evaluation. No single metric captures both."
+  - question: How should attribution be integrated into an ML pipeline?
+    answer: "At three points: (1) feature selection stage (Kost's XAI-FS approach), (2) model validation stage (evaluation against domain expert baselines), (3) production monitoring stage (tracking attribution stability under distribution shift). Most current practice only addresses the second stage."
   - question: How should confusion corridors be operationalized in production monitoring for support vector machine benchmark?
     answer: Track the highest-frequency class transitions as explicit alert channels and tie retraining or threshold updates to corridor-specific drift.
   - question: How should cross-border and tenant-aware controls be designed for agent orchestration for MCP vs A2A vs ACP?
@@ -827,6 +841,8 @@ global_questions:
     answer: Place the most relevant document adjacent to the query in the prompt. Cuconasu et al. show that "near" positioning (relevant document closest to query) consistently outperforms "mid" (middle of context) and "far" (beginning of context) placements across all tested LLMs. This confirms the "lost in the middle" effect from prior research.
   - question: What should I log for RAG audit compliance?
     answer: "The full retrieval chain: query text, retrieved document IDs with scores, which documents survived filtering, the constructed prompt, the raw model output, and any post-processing applied. This enables root-cause analysis and meets the audit trail requirements of regulatory frameworks like HIPAA and GDPR."
+  - question: What should I tell a regulator about my explanations?
+    answer: Be honest about what they cannot do. Standard post-hoc explanations from black-box models cannot be verified for individual cases (Bhalla). They are aggregate statistical summaries, not guarantees of model behaviour. If a regulator requires verifiable explanations, you need either an inherently interpretable model or a VerT-adapted model.
   - question: What should enterprises implement first after this LLM practice review for large language models?
     answer: Start with a minimal governance baseline. Define approved use cases. Define prompt versioning rules. Define output verification requirements. Define escalation procedures for harmful or ungrounded responses. This sequence converts theory into immediate control coverage.
   - question: Why does R-versus-Python parity still matter with similar libsvm tooling for support vector machine benchmark?
@@ -835,14 +851,20 @@ global_questions:
     answer: "Because both relevance and complexity show up there: Pina et al. identify integration gaps at that stage, and Souza et al. identify curation as difficult."
   - question: Why is target discriminability as critical as alignment in unsupervised domain adaptation for representation learning?
     answer: Because alignment can make domains look statistically similar while classes still bleed into each other. Qiang et al. demonstrate that this degrades prediction quality on target data. Discriminability constraints keep class boundaries sharp where it counts.
+  - question: Can WAE and RExQUAL be used together?
+    answer: Yes, they measure different things. WAE evaluates against data properties; RExQUAL evaluates against discovered rules. A method that scores well on both provides convergent evidence of quality.
   - question: Does RAG eliminate hallucination?
     answer: "No. RAG reduces certain categories of hallucination by grounding generation in retrieved evidence, but it introduces new failure modes: the system can misrepresent sources, blend contradictory documents into a false synthesis, or generate confidently from thin evidence. Citation presence does not guarantee truthfulness."
   - question: Does removing malicious axios versions fully remediate affected systems for axios npm supply chain attack?
     answer: No. Package removal does not guarantee host recovery after payload execution. Incident response must include endpoint validation, persistence checks, and credential hygiene measures.
+  - question: Does the impossibility result apply to inherently interpretable models?
+    answer: No. The proof assumes a black-box model where the internal decision boundary cannot be inspected. Decision trees with few leaves, sparse linear models, and rule-based systems are verifiable by construction because their decision logic is transparent. This is a direct argument for inherent interpretability in high-stakes applications.
   - question: Is PROV-ML an adopted standard or an emerging representation model for data provenance?
     answer: In this evidence set, PROV-ML is best described as a proposed representation with promising applied evidence in a specific domain context.
   - question: Should I display confidence scores to users?
     answer: Display confidence signals, not raw scores. Users cannot interpret a re-ranker score of 0.73 vs. 0.41, but they can act on "high confidence, multiple corroborating sources" vs. "limited evidence, please verify independently." The calibration table in this article provides a starting framework.
+  - question: Should I use SHAP or LIME as my default?
+    answer: The evidence in this series shows both have known failure modes. SHAP conflates correlation with causation (Janzing, Ng). LIME underperforms on time series (Troncoso-García). Use the decision framework above to select based on your specific constraints, and always validate with at least one metric from a different paradigm.
   - question: What Practitioners Should Do Now?
     answer: "- Use ccPASTpqc-style tools for initial translation drafts, then review and test manually - Invest in cryptographic dependency inventories before migration (you cannot migrate what you have not catalogued) - Prioritise asymmetric key operations (symmetric encryption requires only key-size increases)"
   - question: What This Means in Practice?
@@ -853,6 +875,8 @@ global_questions:
     answer: Cross-border controls need policy-aware routing, auditable state transitions, clear operator visibility at runtime, and explicit AML/CFT and sanctions controls, including jurisdiction-aware screening, escalation paths, and evidence retention. Teams should be able to explain why a route was selected, which rules were applied, and how exceptions were resolved. Without this visibility, reconciliation cost and governance risk increase quickly under real traffic.
   - question: What does alignment mean in LLM systems, and what are its practical limits for large language models?
     answer: Alignment is the process of training or constraining an LLM so its outputs are helpful, honest, and harmless relative to intended use. The main techniques include supervised fine-tuning (SFT) on curated question-answer pairs, reinforcement learning from human feedback (RLHF) where human raters score responses and a reward model is trained on those preferences, and constitutional AI methods where the model critiques its own outputs against stated principles. Alignment does not eliminate all failure modes; recent aligned models report improved refusal behavior on specific benchmark suites, not universal reliability. Claims about alignment effectiveness should be evaluated within the reported evaluation setup rather than generalized.
+  - question: What each paper assumes about the problem?
+    answer: "| Method | Problem framed as | Solution approach | Causal claim | |--------|-------------------|-------------------|--------------| | Causal SHAP | Need for causal graph → automation | PC algorithm + IDA | Yes: interventional |"
   - question: What is LLM hallucination, and which controls reduce it in real deployments for large language models?
     answer: Hallucination occurs when an LLM generates plausible-sounding text that is factually wrong, internally inconsistent, or unsupported by any source. The root cause is that LLMs are trained to predict likely next tokens, not to assert truth. Prevention strategies include retrieval-augmented generation (grounding responses in retrieved source documents), contradiction checks against known facts, citation gates that require the model to specify a source for each factual claim, and multi-resolution evaluation that tests factuality separately from fluency. Hallucination is identified as a primary failure mode in both Brown et al. and the synthesis in this article.
   - question: What is the most dangerous RAG failure mode?
@@ -873,6 +897,10 @@ global_questions:
     answer: Not among the papers reviewed here. Broader industry experiments exist (Google's CECPQ2, Cloudflare's post-quantum TLS rollout), but they sit outside the scope of this academic review. The applied research community is still at the conceptual and prototype stage. Production deployment with real adversaries and real operational constraints has not been reported in the peer-reviewed literature.
   - question: Can A2A replace MCP for tool invocation and capability exposure for MCP vs A2A vs ACP?
     answer: It can, but it is usually wasteful. Simple tools do not benefit much from peer-agent ceremony. A2A shines when the remote side behaves like a collaborator, not just a callable capability. ACP-style REST wrappers can expose those collaborators to existing API ecosystems, but they do not remove the need for MCP when local tool boundaries and consent controls are required.
+  - question: Can ExCIR be extended to instance-level attribution?
+    answer: "The paper focuses on global attribution: a single score per feature for the entire dataset. Instance-level attribution would require recomputing the co-movement measure per-instance, which would eliminate the computational advantage over SHAP."
+  - question: Can FACE be extended to transformers?
+    answer: Not directly. Transformers use attention mechanisms and layer normalisation, which do not produce piecewise-linear regions in the same way as ReLU-activated feedforward networks. A transformer-specific exact method would require a different mathematical approach.
   - question: Can I use RAG without a GPU?
     answer: Yes, for small-scale deployments. CPU-based embedding models (all-MiniLM-L6-v2) and quantised LLMs (via Ollama or llama.cpp) can run on standard servers. For production throughput, a GPU accelerates both embedding computation and LLM inference. The RAG infrastructure itself (vector store, BM25 index, re-ranker) can run on CPU.
   - question: Can IoT devices with limited memory run post-quantum cryptography?
@@ -887,8 +915,20 @@ global_questions:
     answer: No. Stablecoins may help with some settlement paths, but they do not replace identity controls or governance duties. Teams still need clear authorization, policy checks, and audit logs. Regulatory obligations also remain, including jurisdiction-specific controls around financial integrity, user protection, and record keeping.
   - question: Do internal agent platforms still require supply-chain security controls for agentic orchestration framework?
     answer: In most organizations, supply-chain controls are advisable even for internal agent platforms based on risk profile, regulatory exposure, and internal assurance requirements. Internal platforms still ship containers, dependencies, and artifacts that can be tampered with or misattributed.
+  - question: Does C3A require a labelled support set at explanation time?
+    answer: The contrastive metric compares query descriptors against labelled support set descriptors for each candidate class. This is standard in FSL evaluation and is available whenever the model is deployed for FSL classification.
+  - question: Does Causal SHAP's PC algorithm fail with many features?
+    answer: PC has known scalability issues beyond approximately 50 features due to the exponential growth of conditional independence tests. For high-dimensional settings, alternative causal discovery methods (e.g., NOTEARS for continuous optimisation) would be needed.
+  - question: Does Moreira et al.'s finding about model type generalise beyond counterfactuals?
+    answer: It has not been tested for attribution methods. The finding that different architectures learn similar patterns on well-represented data is plausible for attribution as well, but the counterfactual-specific nature of the benchmark means direct extrapolation is speculative.
+  - question: Does contrastive attribution generalise beyond few-shot learning?
+    answer: The contrastive principle, attributing by comparing what the model sees in the target class versus competing classes, is general. Future work could apply it to standard classification by using class-conditional feature statistics as the contrast reference, though this has not been systematically tested.
   - question: Does higher random-forest accuracy mean SVM is the wrong model family for support vector machine benchmark?
     answer: No. It means RF is the better fit for this specific dataset geometry and operating objective; SVM can still be strong in other structured regimes.
+  - question: Does higher-order attribution always improve explanation quality?
+    answer: "Not necessarily. Higher-order terms increase interpretability cost: a stakeholder who struggles to understand first-order attributions will be overwhelmed by second-order interaction maps. The value of higher-order attribution depends on whether feature interactions are materially important for the decision. This question can be answered empirically before deploying the explanation method."
+  - question: Does human evaluation correlate with automated metrics?
+    answer: Dehdarirad's results show modest correlation, suggesting that human and automated metrics capture partially overlapping but distinct constructs. Automated metrics are cheaper and more reproducible; human evaluation is necessary for deployment decisions that affect end users.
   - question: Does localization inherently reduce service quality, or expose architecture gaps for digital sovereignty China?
     answer: Localization does not automatically reduce quality. Breakdown appears when architecture, governance, and communication design remain globally uniform while constraints are region-specific. Quality depends on explicit regional control planes and migration safeguards.
   - question: Does using Lightning remove jurisdictional compliance obligations for lightning network cross-border micropayments?
@@ -919,16 +959,24 @@ global_questions:
     answer: There is no typical case yet. Migration timelines depend on codebase size, cryptographic dependency count, and how deeply classical algorithms are embedded in the architecture. Automated tooling can accelerate the Python fraction, but manual review is still necessary for every converted function. For large enterprises with heterogeneous stacks, expect a multi-year programme. The first step, inventorying cryptographic dependencies, can start immediately and is worth doing regardless of migration timeline.
   - question: How should researchers and educators reuse these materials with legal and ethical care for large language models?
     answer: Use short quotations only when wording precision matters. Prefer paraphrase for interpretation. Maintain explicit attribution. Preserve links to original context. Where applicable under UK law, assess whether CDPA 1988 ss. 29 (research/private study) and 31A (text and data analysis for non-commercial research) conditions are genuinely satisfied before reuse. This applies equally to video content and to published scholarly works.
+  - question: If standard attributions cannot be verified, why do they remain widely used?
+    answer: "Because the impossibility result applies to checking any individual attribution, not to evaluating aggregate performance across many examples. Practitioners can still compare methods on benchmarks, track consistency across similar inputs, and use domain expertise to spot implausible explanations. The result says: do not trust any single attribution you cannot cross-validate."
   - question: Is ACP obsolete, or still useful during A2A convergence and migration for MCP vs A2A vs ACP?
     answer: ACP remains important for architecture learning and for existing deployments. New strategy should account for announced convergence and migration direction toward A2A to reduce future integration churn.
+  - question: Is GAPS's reward function architecture-dependent?
+    answer: The reward function operates on model predictions, which are available for any architecture. The paper's restriction to Random Forest is a choice about experimental scope, not a limitation of the method.
   - question: Is RAG sufficient on its own, or should I also fine-tune my model?
     answer: For general knowledge tasks, RAG alone can be effective. For domain-specific applications (healthcare, legal, finance), combining RAG with parameter-efficient fine-tuning produces better results. Meng et al. show that the fusion pattern, where retrieval provides current context and fine-tuning adapts generation style, reaches 90%+ accuracy in domain-specific Q&A.
+  - question: Is VerT compatible with DiET?
+    answer: The two methods are complementary. DiET makes models robust to distractor removal, improving attribution correctness. VerT ensures that correctness can be checked. A model could be both discriminatively trained and verifiable. The papers were published independently from the same group and share training infrastructure, but the combined effect has not been empirically evaluated.
   - question: Is cross-encoder re-ranking worth the additional latency?
     answer: Yes. While cross-encoders introduce a minor latency cost (50–200ms depending on hardware), they eliminate high-scoring semantic distractors. Given that distractor contamination can degrade generation accuracy by over 25%, a re-ranking layer is a required safety gate for production RAG, not an optional enhancement.
   - question: Is high quantum circuit fidelity equivalent to strong semantic understanding in QNLP for representation learning?
     answer: No. Circuit fidelity quantifies state accuracy; semantic adequacy quantifies whether task-relevant meaning survives. Conflating the two is a common mistake. Evaluate both, simultaneously.
   - question: Is the reported 91.3% GCN result generalizable beyond its study context for data provenance?
     answer: No. It is a paper-reported result in one evaluation context. This review does not treat it as a universal benchmark.
+  - question: Is there a standardised benchmark suite for attribution evaluation?
+    answer: "No. The papers reviewed here suggest why: domain, architecture, and task interact too strongly for a single benchmark to be universally informative. The field is moving toward task-specific evaluation suites rather than a single leaderboard."
   - question: Is this evidence review enough for final architecture lock-in for lightning network cross-border micropayments?
     answer: No. This synthesis is strong for shortlisting options and shaping a pilot plan, but it is not enough for final lock-in. Final architecture should follow measured outcomes from production-like tests, including failure behavior, operator workload, and policy enforcement quality over time.
   - question: Should I use dense retrieval or sparse retrieval for my RAG system?
@@ -993,6 +1041,8 @@ global_questions:
     answer: For a practical Python-first baseline, `mcp`, `a2a-sdk`, `langgraph`, `langchain`, `fastapi`, `pydantic`, `pytest`, `httpx`, `opentelemetry-sdk`, `uvicorn`, and Docker-based packaging are sufficient for a strong first slice. If ACP-compatible REST interoperability is required on day one, add OpenAPI tooling and gateway middleware that can enforce auth, rate policy, and run-lifecycle observability at the HTTP edge.
   - question: Which metrics should be monitored first during SVM training and validation for support vector machine?
     answer: Monitor per-class recall, pairwise confusion flows, and hyperparameter stability across folds before relying on top-line accuracy.
+  - question: Which of these methods is closest to production-ready?
+    answer: FACE is the most mature for its target architecture (FNNs) and offers a clear advantage over approximations. MOFAE and higher-order IG require further scalability work. GAPS needs broader validation across model types and domains.
   - question: Which open-source vector database should I choose for RAG?
     answer: Choose **FAISS** for ultra-fast performance during local prototyping. Use **Chroma** for lightweight disk persistence with structured metadata filtering. Transition to **Qdrant** for true large-scale multi-node orchestration requiring advanced data storage, payload management, and horizontal scaling. Start with FAISS or Chroma for development; migrate to Qdrant when you need production persistence and filtering.
   - question: Which references are most useful for implementation-focused engineering teams for large language models?
@@ -1015,14 +1065,24 @@ global_questions:
     answer: No. Privacy, transfer, residency, and sector-specific obligations vary by jurisdiction and industry. Use these practices as technical design guidance and validate legal and regulatory requirements for each operating context.
   - question: Do these protocol recommendations transfer uniformly across UK, EU, US, Canada, Hong Kong, China, and Australia for MCP vs A2A vs ACP?
     answer: No. Privacy, transfer, and sector-specific obligations vary by jurisdiction and industry. Treat protocol guidance as architecture input and confirm legal and regulatory requirements for the specific operating context.
+  - question: Does the Janzing critique apply to TreeSHAP?
+    answer: "TreeSHAP uses conditional expectations by exploiting the tree structure to compute them exactly. Janzing's critique applies: conditional SHAP assigns non-zero attribution to features that are correlated with the target but causally irrelevant. Whether this is acceptable depends on whether the user wants a causal or predictive decomposition of the model's output. This is a distinction the paper argues many practitioners do not recognise."
   - question: Is "Post-Quantum Cryptography" the same as "quantum cryptography"?
     answer: No, and the confusion is not academic. Borrelli et al. found that students consistently misread "post-quantum" as meaning "cryptography that uses quantum computers" rather than "cryptography that resists quantum computers." PQC runs on classical hardware with algorithms designed to survive quantum attacks. Quantum cryptography (QKD) uses quantum physics for key distribution. The term "Quantum-Resistant Cryptography" has been suggested as a clearer alternative.
   - question: Is AES-256 safe against quantum computers?
     answer: For all practical purposes, yes. Grover's algorithm halves the effective key length in the idealised brute-force model, reducing AES-256 to roughly 128-bit equivalent security against a quantum adversary. That level of resistance remains computationally infeasible with any foreseeable resources. The real cost of running Grover on actual quantum hardware (circuit depth, error correction, parallelisation limits) may push the effective security even higher. The genuine vulnerability in most systems is asymmetric cryptography, not AES.
   - question: Is MCP more secure than A2A, or are they securing different boundaries for MCP vs A2A vs ACP?
     answer: Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services. ACP-oriented deployments additionally depend on API gateway policy, token scope, and run-endpoint governance quality, so security posture is a composition problem, not a single-protocol verdict.
+  - question: "Question 1: What model access do you have?"
+    answer: "| Access level | Available methods | Limitation | |-------------|-------------------|------------| | Black-box (API only) | LIME, SHAP (KernelSHAP), GAPS, MOFAE | Cannot use FACE, ExCIR, or C3A |"
+  - question: "Question 2: What does your domain require?"
+    answer: "| Domain requirement | Preferred approach | Methods to consider | Methods to avoid | |-------------------|-------------------|-------------------|------------------| | Causal explanation | Causal SHAP (if < 30 features), ExCIR for awareness | Causal SHAP, ExCIR | Standard SHAP, LIME |"
+  - question: "Question 3: What evaluation standard applies?"
+    answer: "- **Research publication**: Use at least two evaluation paradigms (e.g., model-centric + data-centric). Report results across multiple datasets. Follow Dehdarirad's multi-factorial approach by stratifying results by evidence type or class. - **Production deployment**: Supplement automated metrics with human evaluation on a representative sample. Use Moreira et al.'s decision-path inspection for any tree-based model. - **Regulatory compliance**: The verification impossibility is a live compliance risk. Consider Model Cards for model-level documentation and accept that individual prediction explanations from black-box models cannot be independently verified."
   - question: Should I fine-tune my LLM in addition to using RAG?
     answer: Do not treat them as mutually exclusive choices. RAG provides an external, volatile memory bank, ideal for real-time, updatable data. Fine-tuning teaches the model domain-specific formatting, structural constraints, and industry vocabulary. For domain-specific deployments where the model needs to adopt specialised citation styles or conventions, add LoRA fine-tuning. Meng et al. show that the combination outperforms either technique alone.
+  - question: When correlation awareness is enough?
+    answer: "ExCIR raises an important question that the field has not settled: for which decisions do we need causal attributions, and when is correlation awareness sufficient? The answer depends on the decision's stakes and reversibility. A low-stakes, high-volume decision (e.g., product recommendation) can tolerate correlation-aware explanations because the cost of a misattribution is low. A high-stakes decision (e.g., medical diagnosis, loan denial) demands causal attribution because regulatory and ethical accountability requires answering counterfactual questions about what would have happened if a feature had been different."
   - question: When should teams choose fine-tuning versus prompt engineering for LLM workloads for large language models?
     answer: Fine-tuning updates model weights on a curated dataset, adapting the model's internal representations and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in Yang et al.'s practitioner survey.
   - question: "Hybrid QC/PQC: Defence in Depth, or Wishful Layering?"
@@ -3799,6 +3859,713 @@ posts:
         answer: "Incentive alignment. NIST standardisation brings library support, regulatory compliance, and interoperability expectations. Kyber and Dilithium also happen to perform well on commodity hardware. The downside is systemic: one mathematical family, one failure mode. If lattice assumptions weaken, every sector loses protection simultaneously."
       - question: Are there any production deployments of PQC?
         answer: Not among the papers reviewed here. Broader industry experiments exist (Google's CECPQ2, Cloudflare's post-quantum TLS rollout), but they sit outside the scope of this academic review. The applied research community is still at the conceptual and prototype stage. Production deployment with real adversaries and real operational constraints has not been reported in the peer-reviewed literature.
+  feature-attribution-foundations-limits-verifiability:
+    title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+    url: "/feature-attribution-foundations-limits-verifiability"
+    keywords:
+      - attribution
+      - verifiability
+      - feature
+      - causal
+      - papers
+      - faithfulness
+      - limits
+      - xai
+      - critique
+      - interpretability
+      - shapley
+      - values
+      - conclusion
+      - explainable
+      - foundational
+      - foundations
+      - model
+      - artificial
+      - inference
+      - intelligence
+      - learning
+      - machine
+      - theoretical
+      - apply
+      - bhalla
+      - hard
+      - impossibility
+      - janzing
+      - lakkaraju
+      - methods
+      - questions
+      - reshape
+      - srinivas
+      - standard
+      - feature attribution
+      - explainable ai
+      - shapley values
+      - causal inference
+      - artificial intelligence
+      - machine learning
+    key_phrases:
+      - feature attribution
+      - faithfulness verifiability
+      - shapley values
+      - feature attribution explainable
+      - attribution explainable xai
+      - shapley values causal
+      - attribution explainable
+      - explainable xai
+      - values causal
+      - artificial intelligence machine
+      - intelligence machine learning
+      - explainable xai faithfulness
+      - xai faithfulness verifiability
+      - faithfulness verifiability shapley
+      - inference interpretability
+      - causal inference
+      - verifiability shapley
+      - theoretical foundations
+      - xai faithfulness
+      - verifiability shapley values
+      - machine learning
+      - intelligence machine
+      - artificial intelligence
+      - values causal inference
+    catchwords:
+      - attribution
+      - verifiability
+      - feature
+      - causal
+      - papers
+      - faithfulness
+      - limits
+      - critique
+      - interpretability
+      - shapley
+      - values
+      - conclusion
+      - explainable
+      - foundational
+      - foundations
+      - model
+      - artificial
+      - inference
+      - intelligence
+      - learning
+      - machine
+      - theoretical
+      - apply
+      - bhalla
+      - impossibility
+      - janzing
+      - lakkaraju
+      - methods
+    search_words:
+      - attribution
+      - verifiability
+      - feature
+      - causal
+      - papers
+      - faithfulness
+      - limits
+      - xai
+      - critique
+      - interpretability
+      - shapley
+      - values
+      - conclusion
+      - explainable
+      - foundational
+      - foundations
+      - model
+      - feature attribution
+      - faithfulness verifiability
+      - shapley values
+      - feature attribution explainable
+      - attribution explainable xai
+      - shapley values causal
+      - attribution explainable
+      - explainable xai
+      - values causal
+      - artificial intelligence machine
+      - intelligence machine learning
+      - explainable xai faithfulness
+    questions:
+      - question: If standard attributions cannot be verified, why do they remain widely used?
+        answer: "Because the impossibility result applies to checking any individual attribution, not to evaluating aggregate performance across many examples. Practitioners can still compare methods on benchmarks, track consistency across similar inputs, and use domain expertise to spot implausible explanations. The result says: do not trust any single attribution you cannot cross-validate."
+      - question: Does the Janzing critique apply to TreeSHAP?
+        answer: "TreeSHAP uses conditional expectations by exploiting the tree structure to compute them exactly. Janzing's critique applies: conditional SHAP assigns non-zero attribution to features that are correlated with the target but causally irrelevant. Whether this is acceptable depends on whether the user wants a causal or predictive decomposition of the model's output. This is a distinction the paper argues many practitioners do not recognise."
+      - question: Is VerT compatible with DiET?
+        answer: The two methods are complementary. DiET makes models robust to distractor removal, improving attribution correctness. VerT ensures that correctness can be checked. A model could be both discriminatively trained and verifiable. The papers were published independently from the same group and share training infrastructure, but the combined effect has not been empirically evaluated.
+      - question: Does the impossibility result apply to inherently interpretable models?
+        answer: No. The proof assumes a black-box model where the internal decision boundary cannot be inspected. Decision trees with few leaves, sparse linear models, and rule-based systems are verifiable by construction because their decision logic is transparent. This is a direct argument for inherent interpretability in high-stakes applications.
+      - question: How do these foundational critiques relate to the EU AI Act's explainability requirements?
+        answer: 'The EU AI Act requires that high-risk AI systems provide meaningful explanations of their decisions. The impossibility result raises a compliance question: if a standard black-box model''s attributions cannot be verified, can they constitute a "meaningful explanation" under the regulation? This tension is unresolved in the legal literature and is likely to be tested as enforcement begins.'
+  feature-attribution-exact-computation-higher-order-methods:
+    title: Attribution Methods for Exact Computation and Higher-Order Interactions
+    url: "/feature-attribution-exact-computation-higher-order-methods"
+    keywords:
+      - attribution
+      - exact
+      - higher-order
+      - computation
+      - multi-objective
+      - optimisation
+      - interactions
+      - feedforward
+      - methods
+      - feature
+      - gradients
+      - integrated
+      - shapley
+      - approximation
+      - gaps
+      - mofae
+      - network
+      - neural
+      - standard
+      - artificial
+      - criteria
+      - explainable
+      - intelligence
+      - learning
+      - machine
+      - trade-off
+      - beyond
+      - explanation
+      - operator
+      - papers
+      - quality
+      - rewards
+      - feature attribution
+      - explainable ai
+      - exact computation
+      - higher-order interactions
+      - integrated gradients
+      - shapley value
+      - multi-objective optimisation
+      - feedforward neural network
+    key_phrases:
+      - exact computation
+      - exact computation higher-order
+      - computation higher-order
+      - higher-order interactions
+      - integrated gradients
+      - attribution methods
+      - computation higher-order interactions
+      - multi-objective optimisation
+      - feedforward neural
+      - neural network
+      - feature attribution
+      - feedforward neural network
+      - explainable exact computation
+      - attribution explainable exact
+      - higher-order interactions integrated
+      - interactions integrated gradients
+      - integrated gradients shapley
+      - feature attribution explainable
+      - gradients shapley multi-objective
+      - shapley multi-objective optimisation
+      - intelligence machine learning
+      - artificial intelligence machine
+      - optimisation feedforward
+      - shapley multi-objective
+    catchwords:
+      - attribution
+      - exact
+      - higher-order
+      - computation
+      - multi-objective
+      - optimisation
+      - interactions
+      - feedforward
+      - methods
+      - feature
+      - gradients
+      - integrated
+      - shapley
+      - approximation
+      - mofae
+      - network
+      - neural
+      - standard
+      - artificial
+      - criteria
+      - explainable
+      - intelligence
+      - learning
+      - machine
+      - trade-off
+      - beyond
+      - explanation
+      - operator
+    search_words:
+      - attribution
+      - exact
+      - higher-order
+      - computation
+      - multi-objective
+      - optimisation
+      - interactions
+      - feedforward
+      - methods
+      - feature
+      - gradients
+      - integrated
+      - shapley
+      - approximation
+      - gaps
+      - mofae
+      - network
+      - exact computation
+      - exact computation higher-order
+      - computation higher-order
+      - higher-order interactions
+      - integrated gradients
+      - attribution methods
+      - computation higher-order interactions
+      - multi-objective optimisation
+      - feedforward neural
+      - neural network
+      - feature attribution
+      - feedforward neural network
+    questions:
+      - question: Can FACE be extended to transformers?
+        answer: Not directly. Transformers use attention mechanisms and layer normalisation, which do not produce piecewise-linear regions in the same way as ReLU-activated feedforward networks. A transformer-specific exact method would require a different mathematical approach.
+      - question: How does MOFAE's Pareto front help a practitioner?
+        answer: It forces explicit trade-off decisions. A healthcare deployment might prioritise faithfulness (the explanation must accurately reflect the model) over complexity (the explanation can be long). A consumer-facing product might invert those priorities. MOFAE generates both options and lets the domain expert choose, rather than hiding the trade-off inside a single score.
+      - question: Is GAPS's reward function architecture-dependent?
+        answer: The reward function operates on model predictions, which are available for any architecture. The paper's restriction to Random Forest is a choice about experimental scope, not a limitation of the method.
+      - question: Does higher-order attribution always improve explanation quality?
+        answer: "Not necessarily. Higher-order terms increase interpretability cost: a stakeholder who struggles to understand first-order attributions will be overwhelmed by second-order interaction maps. The value of higher-order attribution depends on whether feature interactions are materially important for the decision. This question can be answered empirically before deploying the explanation method."
+      - question: Which of these methods is closest to production-ready?
+        answer: FACE is the most mature for its target architecture (FNNs) and offers a clear advantage over approximations. MOFAE and higher-order IG require further scalability work. GAPS needs broader validation across model types and domains.
+  measuring-feature-attribution-quality-metrics-benchmarks:
+    title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+    url: "/measuring-feature-attribution-quality-metrics-benchmarks"
+    keywords:
+      - evaluation
+      - attribution
+      - metrics
+      - counterfactual
+      - benchmark
+      - xai
+      - faithfulness
+      - series
+      - feature
+      - framework
+      - rexqual
+      - wae
+      - quality
+      - model
+      - moreira
+      - nlp
+      - artificial
+      - dehdarirad
+      - intelligence
+      - language
+      - learning
+      - machine
+      - multi-factorial
+      - natural
+      - processing
+      - evidence
+      - papers
+      - state
+      - type
+      - association
+      - decision-path
+      - inspection
+      - feature attribution
+      - xai evaluation
+      - time series
+      - natural language processing
+      - evaluation metrics
+      - artificial intelligence
+      - machine learning
+      - xai evaluation metrics
+    key_phrases:
+      - evaluation metrics
+      - attribution evaluation
+      - feature attribution
+      - series counterfactual
+      - xai evaluation
+      - counterfactual benchmark
+      - feature attribution xai
+      - attribution xai
+      - benchmarking faithfulness
+      - evaluation benchmarking faithfulness
+      - benchmarking faithfulness series
+      - faithfulness series counterfactual
+      - series counterfactual natural
+      - intelligence machine learning
+      - processing evaluation
+      - language processing
+      - xai evaluation benchmarking
+      - natural language
+      - counterfactual natural
+      - attribution xai evaluation
+      - faithfulness series
+      - evaluation benchmarking
+      - counterfactual natural language
+      - artificial intelligence machine
+    catchwords:
+      - evaluation
+      - attribution
+      - metrics
+      - counterfactual
+      - benchmark
+      - faithfulness
+      - series
+      - feature
+      - framework
+      - rexqual
+      - quality
+      - model
+      - moreira
+      - artificial
+      - dehdarirad
+      - intelligence
+      - language
+      - learning
+      - machine
+      - multi-factorial
+      - natural
+      - processing
+      - evidence
+      - papers
+      - state
+      - association
+      - decision-path
+      - inspection
+    search_words:
+      - evaluation
+      - attribution
+      - metrics
+      - counterfactual
+      - benchmark
+      - xai
+      - faithfulness
+      - series
+      - feature
+      - framework
+      - rexqual
+      - wae
+      - quality
+      - model
+      - moreira
+      - nlp
+      - artificial
+      - evaluation metrics
+      - attribution evaluation
+      - feature attribution
+      - series counterfactual
+      - xai evaluation
+      - counterfactual benchmark
+      - feature attribution xai
+      - attribution xai
+      - benchmarking faithfulness
+      - evaluation benchmarking faithfulness
+      - benchmarking faithfulness series
+      - faithfulness series counterfactual
+    questions:
+      - question: Can WAE and RExQUAL be used together?
+        answer: Yes, they measure different things. WAE evaluates against data properties; RExQUAL evaluates against discovered rules. A method that scores well on both provides convergent evidence of quality.
+      - question: Does Moreira et al.'s finding about model type generalise beyond counterfactuals?
+        answer: It has not been tested for attribution methods. The finding that different architectures learn similar patterns on well-represented data is plausible for attribution as well, but the counterfactual-specific nature of the benchmark means direct extrapolation is speculative.
+      - question: Is there a standardised benchmark suite for attribution evaluation?
+        answer: "No. The papers reviewed here suggest why: domain, architecture, and task interact too strongly for a single benchmark to be universally informative. The field is moving toward task-specific evaluation suites rather than a single leaderboard."
+      - question: How should a practitioner choose between evaluation metrics?
+        answer: "Start by asking: what kind of failure matters most? If false positive attributions (highlighting irrelevant features) are the main risk, use precision-oriented metrics. If false negatives (missing important features) are worse, use recall-oriented metrics or human evaluation. No single metric captures both."
+      - question: Does human evaluation correlate with automated metrics?
+        answer: Dehdarirad's results show modest correlation, suggesting that human and automated metrics capture partially overlapping but distinct constructs. Automated metrics are cheaper and more reproducible; human evaluation is necessary for deployment decisions that affect end users.
+  breaking-free-from-correlation-causal-dependency-aware-attribution:
+    title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
+    url: "/breaking-free-from-correlation-causal-dependency-aware-attribution"
+    keywords:
+      - attribution
+      - causal
+      - feature
+      - shap
+      - learning
+      - contrastive
+      - correlation
+      - few-shot
+      - correlation-aware
+      - problem
+      - discovery
+      - dependency-aware
+      - excir
+      - xai
+      - c3a
+      - artificial
+      - cross-class
+      - explainable
+      - inference
+      - intelligence
+      - machine
+      - automated
+      - domain-expert
+      - global
+      - papers
+      - produce
+      - algorithm
+      - breaking
+      - dependency
+      - efficient
+      - explainability
+      - free
+      - advances
+      - amplifies
+      - angles
+      - feature attribution
+      - causal inference
+      - correlation-aware attribution
+      - causal shap
+      - few-shot learning
+    key_phrases:
+      - causal shap
+      - attribution causal
+      - few-shot learning
+      - causal discovery
+      - feature attribution
+      - contrastive attribution
+      - correlation-aware attribution
+      - attribution causal shap
+      - attribution feature
+      - correlation-aware attribution causal
+      - discovery xai
+      - correlation problem
+      - causal discovery xai
+      - contrastive cross-class
+      - xai explainable contrastive
+      - discovery xai explainable
+      - artificial intelligence machine
+      - intelligence machine learning
+      - learning causal discovery
+      - few-shot learning causal
+      - feature attribution causal
+      - shap few-shot learning
+      - causal shap few-shot
+      - inference correlation-aware attribution
+    catchwords:
+      - attribution
+      - causal
+      - feature
+      - learning
+      - contrastive
+      - correlation
+      - few-shot
+      - correlation-aware
+      - problem
+      - discovery
+      - dependency-aware
+      - excir
+      - artificial
+      - cross-class
+      - explainable
+      - inference
+      - intelligence
+      - machine
+      - automated
+      - domain-expert
+      - global
+      - papers
+      - produce
+      - algorithm
+      - breaking
+      - dependency
+      - efficient
+      - explainability
+    search_words:
+      - attribution
+      - causal
+      - feature
+      - shap
+      - learning
+      - contrastive
+      - correlation
+      - few-shot
+      - correlation-aware
+      - problem
+      - discovery
+      - dependency-aware
+      - excir
+      - xai
+      - c3a
+      - artificial
+      - cross-class
+      - explainable
+      - causal shap
+      - attribution causal
+      - few-shot learning
+      - causal discovery
+      - feature attribution
+      - contrastive attribution
+      - correlation-aware attribution
+      - attribution causal shap
+      - attribution feature
+      - correlation-aware attribution causal
+      - discovery xai
+      - correlation problem
+    questions:
+      - question: What each paper assumes about the problem?
+        answer: "| Method | Problem framed as | Solution approach | Causal claim | |--------|-------------------|-------------------|--------------| | Causal SHAP | Need for causal graph → automation | PC algorithm + IDA | Yes: interventional |"
+      - question: When correlation awareness is enough?
+        answer: "ExCIR raises an important question that the field has not settled: for which decisions do we need causal attributions, and when is correlation awareness sufficient? The answer depends on the decision's stakes and reversibility. A low-stakes, high-volume decision (e.g., product recommendation) can tolerate correlation-aware explanations because the cost of a misattribution is low. A high-stakes decision (e.g., medical diagnosis, loan denial) demands causal attribution because regulatory and ethical accountability requires answering counterfactual questions about what would have happened if a feature had been different."
+      - question: Can ExCIR be extended to instance-level attribution?
+        answer: "The paper focuses on global attribution: a single score per feature for the entire dataset. Instance-level attribution would require recomputing the co-movement measure per-instance, which would eliminate the computational advantage over SHAP."
+      - question: Does Causal SHAP's PC algorithm fail with many features?
+        answer: PC has known scalability issues beyond approximately 50 features due to the exponential growth of conditional independence tests. For high-dimensional settings, alternative causal discovery methods (e.g., NOTEARS for continuous optimisation) would be needed.
+      - question: Does C3A require a labelled support set at explanation time?
+        answer: The contrastive metric compares query descriptors against labelled support set descriptors for each candidate class. This is standard in FSL evaluation and is available whenever the model is deployed for FSL classification.
+      - question: How should a practitioner choose between Causal SHAP and ExCIR?
+        answer: If causation is provably required (regulatory, medical, high-stakes), invest in Causal SHAP despite its assumptions and scalability limits. If correlation awareness is sufficient and computational efficiency matters, ExCIR offers a practical alternative. The threshold between "causation required" and "correlation sufficient" is a domain-specific policy judgement, not a technical one.
+      - question: Does contrastive attribution generalise beyond few-shot learning?
+        answer: The contrastive principle, attributing by comparing what the model sees in the target class versus competing classes, is general. Future work could apply it to standard classification by using class-conditional feature statistics as the contrast reference, though this has not been systematically tested.
+  feature-attribution-practice-selection-pipelines-governance:
+    title: "Feature Attribution in Practice: Selection, Pipelines, and Governance"
+    url: "/feature-attribution-practice-selection-pipelines-governance"
+    keywords:
+      - attribution
+      - feature
+      - domain
+      - selection
+      - xai
+      - governance
+      - applications
+      - energy
+      - learning
+      - machine
+      - guidance
+      - imaging
+      - medical
+      - practical
+      - practice
+      - production
+      - forecasting
+      - healthcare
+      - pipelines
+      - deployment
+      - framework
+      - kost
+      - method
+      - question
+      - series
+      - artificial
+      - engineering
+      - intelligence
+      - software
+      - core
+      - explanations
+      - integrate
+      - lessons
+      - map
+      - model
+      - papers
+      - feature attribution
+      - xai deployment
+      - production machine learning
+      - ml governance
+    key_phrases:
+      - domain applications
+      - feature attribution
+      - machine learning
+      - medical imaging
+      - feature selection
+      - energy forecasting
+      - healthcare medical imaging
+      - healthcare medical
+      - governance feature
+      - applications practical guidance
+      - domain applications practical
+      - practical guidance
+      - applications practical
+      - attribution method
+      - xai deployment
+      - forecasting healthcare medical
+      - artificial intelligence machine
+      - intelligence machine learning
+      - machine learning software
+      - energy forecasting healthcare
+      - guidance energy forecasting
+      - learning software engineering
+      - practical guidance energy
+      - feature attribution xai
+    catchwords:
+      - attribution
+      - feature
+      - domain
+      - selection
+      - governance
+      - applications
+      - energy
+      - learning
+      - machine
+      - guidance
+      - imaging
+      - medical
+      - practical
+      - practice
+      - production
+      - forecasting
+      - healthcare
+      - pipelines
+      - deployment
+      - framework
+      - method
+      - question
+      - series
+      - artificial
+      - engineering
+      - intelligence
+      - software
+      - explanations
+    search_words:
+      - attribution
+      - feature
+      - domain
+      - selection
+      - xai
+      - governance
+      - applications
+      - energy
+      - learning
+      - machine
+      - guidance
+      - imaging
+      - medical
+      - practical
+      - practice
+      - production
+      - forecasting
+      - healthcare
+      - domain applications
+      - feature attribution
+      - machine learning
+      - medical imaging
+      - feature selection
+      - energy forecasting
+      - healthcare medical imaging
+      - healthcare medical
+      - governance feature
+      - applications practical guidance
+      - domain applications practical
+      - practical guidance
+    questions:
+      - question: "Question 1: What model access do you have?"
+        answer: "| Access level | Available methods | Limitation | |-------------|-------------------|------------| | Black-box (API only) | LIME, SHAP (KernelSHAP), GAPS, MOFAE | Cannot use FACE, ExCIR, or C3A |"
+      - question: "Question 2: What does your domain require?"
+        answer: "| Domain requirement | Preferred approach | Methods to consider | Methods to avoid | |-------------------|-------------------|-------------------|------------------| | Causal explanation | Causal SHAP (if < 30 features), ExCIR for awareness | Causal SHAP, ExCIR | Standard SHAP, LIME |"
+      - question: "Question 3: What evaluation standard applies?"
+        answer: "- **Research publication**: Use at least two evaluation paradigms (e.g., model-centric + data-centric). Report results across multiple datasets. Follow Dehdarirad's multi-factorial approach by stratifying results by evidence type or class. - **Production deployment**: Supplement automated metrics with human evaluation on a representative sample. Use Moreira et al.'s decision-path inspection for any tree-based model. - **Regulatory compliance**: The verification impossibility is a live compliance risk. Consider Model Cards for model-level documentation and accept that individual prediction explanations from black-box models cannot be independently verified."
+      - question: Should I use SHAP or LIME as my default?
+        answer: The evidence in this series shows both have known failure modes. SHAP conflates correlation with causation (Janzing, Ng). LIME underperforms on time series (Troncoso-García). Use the decision framework above to select based on your specific constraints, and always validate with at least one metric from a different paradigm.
+      - question: How should attribution be integrated into an ML pipeline?
+        answer: "At three points: (1) feature selection stage (Kost's XAI-FS approach), (2) model validation stage (evaluation against domain expert baselines), (3) production monitoring stage (tracking attribution stability under distribution shift). Most current practice only addresses the second stage."
+      - question: What should I tell a regulator about my explanations?
+        answer: Be honest about what they cannot do. Standard post-hoc explanations from black-box models cannot be verified for individual cases (Bhalla). They are aggregate statistical summaries, not guarantees of model behaviour. If a regulator requires verifiable explanations, you need either an inherently interpretable model or a VerT-adapted model.
+      - question: How much should I invest in attribution infrastructure?
+        answer: Proportional to the cost of an incorrect explanation. For a product recommendation system, lightweight SHAP or LIME may suffice. For a medical diagnostic aid, invest in stronger methods (FACE or Causal SHAP), multi-paradigm evaluation, and stakeholder-specific explanation formats.
+      - question: What is the single most important thing a practitioner should do?
+        answer: Triangulate. Do not rely on a single attribution method, a single evaluation metric, or a single validation dataset. The evidence in this series consistently shows that results are conditional on choices that are easy to overlook when using a single method.
 pages:
   zenith-law:
     title: Zenith Law Profile | Engineering Strategy and AI Governance
