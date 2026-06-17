@@ -59,9 +59,9 @@ tags:
 
 An afternoon. That is how long it takes to build a RAG system that looks impressive in a slide deck: retrieves documents, generates fluent answers, passes the demo. Ship it? Absolutely not.
 
-Production is a different animal entirely: contradictory evidence in the corpus, confidence scores that lie, stale documents that poison fresh queries, adversarial inputs designed to exploit retrieval similarity rather than answer correctness. The engineering posture required is not "make it work" but "make it fail safely, visibly, and recoverably."
+Production is a different animal entirely. Contradictory evidence in the corpus. Confidence scores that lie. Stale documents poisoning fresh queries. Adversarial inputs crafted to exploit retrieval similarity rather than answer correctness. The engineering posture required is not "make it work" but "make it fail safely, visibly, and recoverably"; the difference between those two postures is roughly the difference between a weekend prototype and a system you would stake your professional reputation on.
 
-The [evidence review](/retrieval-augmented-generation-evidence-review) synthesised findings and noted their limits; the [implementation playbook](/retrieval-augmented-generation-implementation-playbook) translated those findings into code. This article occupies the territory both pieces deliberately flagged but did not resolve: where RAG systems break, how to catch those breaks before users encounter them, and what governance structures make silence-on-failure impossible.
+The [evidence review](/retrieval-augmented-generation-evidence-review) synthesised findings and noted their limits; the [implementation playbook](/retrieval-augmented-generation-implementation-playbook) translated those findings into code. This article occupies the territory both pieces deliberately flagged but did not resolve. Where do RAG systems break? How do you catch those breaks before users encounter them? What governance structures make silence-on-failure impossible?
 
 > **Scope note:** The failure modes discussed here are grounded in the same corpus of reviewed literature. Where evidence is empirical, that is stated with the study's constraints. Where the discussion extends beyond what the papers directly measure (particularly governance, confidence calibration, and organisational controls), this is framed as engineering practice derived from the evidence rather than independently validated finding.
 
@@ -71,7 +71,7 @@ The most empirically documented RAG failure mode comes from Cuconasu et al.'s SI
 
 ### Why This Happens
 
-Dense retrieval models optimise for semantic similarity, not answer containment. A document about the same topic, using the same terminology, will score highly even if it contains different facts, outdated information, or a different entity with the same name. The generator cannot reliably distinguish "semantically related and correct" from "semantically related and misleading."
+Dense retrieval models optimise for semantic similarity, not answer containment. That distinction matters enormously. A document about the same topic, using the same terminology, will score highly even if it contains different facts, outdated information, or a different entity with the same name. The generator has no mechanism to distinguish "semantically related and correct" from "semantically related and misleading": both look identical in embedding space.
 
 ### Measured Impact
 
@@ -85,11 +85,11 @@ These measurements come from the NQ-open dataset, a factoid question-answering b
 
 ### Mitigation
 
-Cross-encoder re-ranking is the primary defence. Unlike bi-encoder retrieval, a cross-encoder jointly processes the query-document pair and produces a more accurate relevance score. The [implementation playbook](/retrieval-augmented-generation-implementation-playbook) provides production-ready code for this stage. Re-ranking reduces the problem but does not eliminate it. Monitoring distractor rates in production remains necessary.
+Cross-encoder re-ranking is the primary defence. Unlike bi-encoder retrieval, a cross-encoder jointly processes the query-document pair and produces a more accurate relevance score (the [implementation playbook](/retrieval-augmented-generation-implementation-playbook) provides production-ready code for this stage). Does re-ranking solve the problem? Partially. It shrinks the distractor surface but cannot eliminate it. You still need to monitor distractor rates in production, and you still need to accept that some will slip through.
 
 ## Failure Mode 2: Citation Without Truthfulness
 
-RAG is often described as a hallucination mitigation strategy, and this framing is partially correct: grounding generation in retrieved evidence does reduce certain categories of fabrication compared to unaugmented generation. But citation presence in a generated response does not guarantee truthfulness.
+RAG is often described as a hallucination mitigation strategy. Partially correct. Grounding generation in retrieved evidence does reduce certain categories of fabrication compared to unaugmented generation. But here is the trap: citation presence in a generated response does not guarantee truthfulness. Citations create a veneer of rigour that makes the output harder to question, not easier to trust.
 
 A RAG system can produce a cited response that:
 
@@ -98,7 +98,7 @@ A RAG system can produce a cited response that:
 - **Over-generalises** from a narrow finding, presenting a domain-specific result as a universal claim.
 - **Fabricates a plausible synthesis** by blending fragments from multiple documents into a statement that none of them individually support.
 
-None of the reviewed papers provide a production-ready mechanism for detecting these failures automatically. The evidence review notes that retrieval quality and generation quality must be measured independently {% include references/cite.html key="10.1145/3805774" %}, but existing evaluation frameworks (including RAGAS) measure faithfulness at a coarse level that may not catch subtle misrepresentation.
+None of the reviewed papers provide a production-ready mechanism for detecting these failures automatically. Not one. The evidence review notes that retrieval quality and generation quality must be measured independently {% include references/cite.html key="10.1145/3805774" %}, but existing evaluation frameworks (including RAGAS) measure faithfulness at a coarse granularity; subtle misrepresentation slips through because the metrics were never designed to catch it.
 
 ### What This Means in Practice
 
@@ -110,7 +110,7 @@ Users of RAG systems tend to trust cited outputs more than uncited ones. This tr
 
 ## Failure Mode 3: Corpus Decay and Authority Drift
 
-A RAG system's knowledge is only as current and authoritative as its corpus. Unlike model parameter updates, corpus decay happens silently:
+A RAG system's knowledge is only as current and authoritative as its corpus. This sounds obvious until you realise nobody is watching. Unlike model parameter updates, corpus decay happens silently:
 
 - **Stale documents** remain in the vector store after the underlying source has been updated or superseded.
 - **Authority drift** occurs when the corpus accumulates documents of declining quality over time: user-generated content, outdated blog posts, or superseded versions of official documentation.
@@ -127,7 +127,7 @@ Li et al. position continual learning as a requirement for reliable information 
 
 ## Failure Mode 4: Conflicting Evidence Without Surfacing
 
-When retrieved documents disagree (and in any non-trivial corpus, they will), the generator faces an unresolvable ambiguity that it handles silently. Typical failure patterns include:
+When retrieved documents disagree (and in any non-trivial corpus, they will), the generator faces an unresolvable ambiguity. It does not pause. It does not flag the conflict. It picks a side, or worse, invents a middle ground. Typical failure patterns:
 
 - **Recency bias:** The generator may prefer the document that appears last in the context window, regardless of source authority.
 - **Confidence mimicry:** The generator produces an assertive answer that arbitrarily selects one side of the contradiction without signalling that a disagreement exists.
@@ -149,13 +149,13 @@ Amugongo et al.'s systematic review of healthcare RAG demonstrates that domain-s
 - The majority of reviewed studies omit ethical considerations: bias auditing, consent mechanisms, explainability requirements, and human oversight are absent.
 - No standardised evaluation framework exists for healthcare RAG, making cross-system safety comparison impossible.
 
-These findings are specific to healthcare, but the pattern generalises: general-purpose RAG evaluation metrics (retrieval precision, generation faithfulness) do not capture domain-specific liabilities. Legal RAG systems need regulatory compliance checks. Financial RAG systems need audit trails. Clinical RAG systems need patient safety gates.
+These findings are specific to healthcare, but the structural pattern generalises to any regulated domain. General-purpose RAG evaluation metrics (retrieval precision, generation faithfulness) simply do not capture domain-specific liabilities. Legal RAG systems need regulatory compliance checks. Financial RAG systems need audit trails. Clinical RAG systems need patient safety gates. No single evaluation framework spans all three, and pretending otherwise is how incidents happen.
 
 > **Evidence boundary:** The Amugongo et al. findings are observational. They describe what the literature omits, not what happens when those omissions cause harm. The causal link between these gaps and patient outcomes is not established in the reviewed corpus.
 
 ## Confidence Calibration in Practice
 
-A RAG system that answers every query with the same assertive tone, regardless of whether it retrieved one highly relevant document or five ambiguous ones, creates a false sense of reliability. Confidence calibration means communicating to the user how much the system's retrieval supports the generated answer.
+Picture this: a RAG system that answers every query with identical assertive tone, regardless of whether it retrieved one highly relevant document or five ambiguous ones. That uniformity is the problem. Confidence calibration means communicating to the user how much the system's retrieval actually supports the generated answer; it is the difference between a system that informs and one that misleads through consistent false certainty.
 
 ### Calibration Signals
 
@@ -192,7 +192,7 @@ This is a starting heuristic, not a statistically calibrated confidence model. T
 
 ## Red-Team Testing for RAG Systems
 
-Standard evaluation pipelines measure average-case performance. Red-team testing targets worst-case failure modes that averages conceal:
+Standard evaluation pipelines measure average-case performance. Averages lie. Red-team testing targets worst-case failure modes, the ones hidden beneath satisfactory aggregate metrics:
 
 ### Test Categories
 
@@ -284,7 +284,6 @@ Implement scope-boundary detection: when all retrieved documents score below a c
 - [A. Failure Mode Summary Table](#a-failure-mode-summary-table)
 - [B. Evidence Boundary Notes](#b-evidence-boundary-notes)
 - [C. Technical Term Definitions](#c-technical-term-definitions)
-- [D. SEO, GEO, and AEO Optimisation Notes](#d-seo-geo-and-aeo-optimisation-notes)
 
 ### Author and Source Credibility
 
@@ -335,15 +334,5 @@ The empirical evidence in this article is concentrated in Cuconasu et al.'s expe
   <dt><dfn>Citation verification</dfn></dt>
   <dd>Comparing a generated claim against the specific retrieved passage to verify that the claim accurately represents the source, rather than merely confirming that a passage was retrieved.</dd>
 </dl>
-
-### D. SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "RAG failure modes", "RAG production governance", "RAG hallucination limitations", "RAG confidence calibration", "RAG corpus governance", "RAG red team testing", "RAG distractor contamination", "RAG audit compliance", "retrieval augmented generation risks", "RAG production deployment risks".
-
-**Schema signals**: HowTo schema (five-step failure mode mitigation), FAQPage schema (ten questions), Article schema with author attribution.
-
-**AEO coverage**: Ten FAQ items grounded in evidence-bounded findings, failure mode taxonomy table, confidence calibration signals table, technical definitions.
-
-**GEO coverage**: Jurisdiction-neutral governance guidance applicable across deployment regions. Regulatory references (HIPAA, GDPR) noted for domain-specific compliance.
 
 </details>

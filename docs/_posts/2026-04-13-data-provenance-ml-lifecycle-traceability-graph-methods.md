@@ -35,7 +35,7 @@ Where did the training data come from? Who transformed it, and when, and into wh
 
 Karuna et al. wire financial transactions into a graph (entities as nodes, transfers as edges) and pit GNN-based traceability against logistic regression and random forest baselines {% include references/cite.html key="prov-2026-ref1" %}. Pina et al. build a stitching layer: separate tools capture provenance at separate lifecycle stages, and their prototype forces those fragments to talk {% include references/cite.html key="prov-2026-ref2" %}. Souza et al. go formal: PROV-ML extends W3C PROV with ML Schema vocabulary, pressure-tested through ProvLake on a 48-GPU oil-and-gas pipeline {% include references/cite.html key="prov-2026-ref3" %}.
 
-Three papers do not constitute a field survey. This review is deliberately narrow. Claims anchored to reported results say so; inferences drawn beyond any single paper's evidence are marked at the boundary. Several details resist independent corroboration and are flagged rather than silently absorbed.
+Three papers. Not a field survey — not even close. This review is deliberately narrow, and that narrowness is the point. Claims anchored to reported results say so; inferences drawn beyond any single paper's evidence are marked at the boundary. Several details resist independent corroboration. Rather than silently absorbing them, I flag them.
 
 This article is designed for technical and governance learning. It does not provide legal, regulatory, or procurement advice. It is not legal advice. Readers should validate applicability against their own jurisdiction, risk model, and production constraints.
 
@@ -62,17 +62,17 @@ This article is designed for technical and governance learning. It does not prov
 
 ## Thematic Analysis
 
-The three papers touch on overlapping concerns. The following observations group related findings, with explicit boundaries on how far the evidence stretches.
+The three papers circle the same territory from different altitudes. What follows groups their overlapping concerns — with hard boundaries on how far the evidence actually stretches.
 
 ### Graph-Structured Representations and Relational Provenance
 
-Karuna et al. represent financial data as a graph and report that their GCN model achieves 91.3% accuracy on traceability classification, compared with 78.4% for logistic regression and 82.1% for random forests on their dataset {% include references/cite.html key="prov-2026-ref1" %}. This is a **verified finding** within the study's conditions. It suggests graph representations can preserve relational structure that tabular models discard, though this conclusion is bounded by a single dataset in one domain. The paper does not compare against other graph-based approaches (e.g., graph attention networks), which limits the claim that GCN is the right architecture rather than merely a sufficient one.
+Karuna et al. wire financial transaction data into a graph and report their GCN hitting 91.3% accuracy on traceability classification — a meaningful jump over logistic regression at 78.4% and random forests at 82.1% on the same dataset {% include references/cite.html key="prov-2026-ref1" %}. This is a **verified finding** within the study's conditions. It suggests graph representations can preserve relational structure that tabular models discard, though this conclusion is bounded by a single dataset in one domain. The paper does not compare against other graph-based approaches (e.g., graph attention networks), which limits the claim that GCN is the right architecture rather than merely a sufficient one.
 
-Souza et al. also use a graph-based model through W3C PROV, representing provenance as relationships between entities, activities, and agents {% include references/cite.html key="prov-2026-ref3" %}. They do not apply graph neural networks. The two papers share a structural preference for graphs but serve different purposes: Karuna et al. use graph structure for classification; Souza et al. use it for provenance representation. The convergence on graph primitives should not be overstated as implying functional equivalence (**inferred synthesis**).
+Souza et al. also lean on graphs — but differently. Their W3C PROV model represents provenance as relationships between entities, activities, and agents {% include references/cite.html key="prov-2026-ref3" %}; no neural networks involved. Both teams chose graph primitives, yet for fundamentally different jobs: classification versus representation. Don't conflate the two. Structural similarity is not functional equivalence (**inferred synthesis**).
 
 ### Preprocessing Decisions and Downstream Effects
 
-Pina et al. demonstrate that their prototype can answer queries that join preprocessing provenance with training metrics {% include references/cite.html key="prov-2026-ref2" %}. This capability is a **verified finding**. The paper does not report experiments quantifying how much preprocessing choices affect model accuracy in controlled settings. Souza et al. describe data curation as the most complex lifecycle phase {% include references/cite.html key="prov-2026-ref3" %}. The broader inference that preprocessing decisions propagate into model quality is directionally supported by both papers' rationale, but neither provides a controlled experiment isolating this effect (**inferred synthesis**).
+Can you join preprocessing provenance with training metrics in a single query? Pina et al. say yes — their prototype does it {% include references/cite.html key="prov-2026-ref2" %}. That much is verified. But here's the gap: neither they nor anyone else in this source set runs a controlled experiment quantifying how much preprocessing choices actually bend model accuracy. Souza et al. call data curation the most complex lifecycle phase {% include references/cite.html key="prov-2026-ref3" %}. Both papers' rationale supports the intuition that preprocessing decisions propagate into model quality; neither nails it down with isolated evidence (**inferred synthesis**).
 
 ### Interoperability
 
@@ -88,27 +88,27 @@ Souza et al. characterize four persona types and ground their design in document
 
 ### Karuna et al.
 
-The reported accuracy gap (91.3% vs. 78.4% for logistic regression) is substantial within the study's evaluation. The scalability data, with processing time rising from 12 seconds at 10,000 transactions to 1,450 seconds at 1,000,000 and memory from 200 MB to 8,500 MB, provides useful practical bounds {% include references/cite.html key="prov-2026-ref1" %}. Three caveats matter for interpretation. First, the dataset is described in aggregate terms without confirmed public release; independent replication requires data and code access. Second, the baselines used (logistic regression, random forests) are standard ML classifiers rather than competing graph-based approaches, so the comparison establishes improvement over non-graph methods without positioning GCN against alternatives in its own class. Third, the reviewed text does not report run-to-run variance or confidence intervals, which limits statistical confidence in the magnitude of uplift.
+A 13-point accuracy gap over logistic regression is hard to ignore. The scalability numbers tell their own story: processing time balloons from 12 seconds at 10,000 transactions to 1,450 seconds at a million, while memory climbs from 200 MB to 8,500 MB {% include references/cite.html key="prov-2026-ref1" %}. Three caveats matter for interpretation. First, the dataset is described in aggregate terms without confirmed public release; independent replication requires data and code access. Second, the baselines used (logistic regression, random forests) are standard ML classifiers rather than competing graph-based approaches, so the comparison establishes improvement over non-graph methods without positioning GCN against alternatives in its own class. Third, the reviewed text does not report run-to-run variance or confidence intervals, which limits statistical confidence in the magnitude of uplift.
 
 Some sections of the paper read as polished restatements of standard GNN and blockchain concepts. The related works coverage is broad rather than deeply comparative.
 
 ### Pina et al.
 
-The prototype demonstrates that provenance data from different capture tools can be joined and queried {% include references/cite.html key="prov-2026-ref2" %}. The acknowledged scope boundary is structured data preprocessing and DNN training/evaluation. Unstructured preprocessing operations (image augmentation, text tokenization) are not covered. The absence of overhead benchmarks for the integration layer means the feasibility claim concerns correctness, not efficiency. The paper is therefore best read as architectural feasibility evidence, not a production-readiness benchmark.
+The prototype stitches provenance from different capture tools into a queryable whole {% include references/cite.html key="prov-2026-ref2" %}. Scope boundary: structured data preprocessing and DNN training/evaluation only. Image augmentation, text tokenization — untouched. And overhead benchmarks? Absent entirely. So the feasibility claim is about correctness, not speed. Read it as architectural proof-of-concept; don't mistake it for a production-readiness verdict.
 
 ### Souza et al.
 
-The 48-GPU evaluation in an oil and gas application is the strongest practical evidence in this set {% include references/cite.html key="prov-2026-ref3" %}. PROV-ML is a proposed research representation evaluated in one domain. The characterization of it as "proposed" rather than "standard" tracks the paper's own framing. Whether PROV-ML transfers to lightweight ML settings (e.g., fine-tuning a pretrained model on commodity hardware) is not demonstrated. Read as evidence of one successful deployment pattern, not field-level validation.
+Forty-eight GPUs on an oil-and-gas seismic pipeline — that's the strongest practical evidence in this source set {% include references/cite.html key="prov-2026-ref3" %}. Impressive? Sure. But PROV-ML remains a proposed research representation, evaluated in exactly one domain. The paper itself calls it "proposed," not "standard." Consider what that means: whether PROV-ML transfers to a team fine-tuning a pretrained model on a single commodity GPU is entirely untested. One successful deployment pattern; not field-level validation.
 
 ---
 
 ## Lessons for Practice (Scoped to This Source Set)
 
-These lessons are meant for practitioners and learners reading this blog. They are evidence-informed but intentionally scoped: three papers can support useful guidance, not universal claims.
+What follows is practitioner-facing. Evidence-informed, yes — but deliberately scoped. Three papers yield useful guidance; they do not yield universal truths.
 
 ### 1. Treat Provenance as Part of System Architecture
 
-All three papers position provenance as a lifecycle design issue rather than a logging add-on {% include references/cite.html key="prov-2026-ref1" %}, {% include references/cite.html key="prov-2026-ref2" %}, {% include references/cite.html key="prov-2026-ref3" %}. In practice, delaying provenance design usually increases integration cost and review friction.
+Every paper in this set treats provenance as architecture, not afterthought {% include references/cite.html key="prov-2026-ref1" %}, {% include references/cite.html key="prov-2026-ref2" %}, {% include references/cite.html key="prov-2026-ref3" %}. Bolt it on later and you pay twice: once for integration, again for the review friction nobody budgeted for.
 
 ### 2. Use Graph Methods When Relationships Are Central to the Task
 
@@ -116,7 +116,7 @@ Karuna et al. report stronger performance for GCN than two tabular baselines in 
 
 ### 3. Bring Preprocessing Lineage Into Model Review
 
-Pina et al. highlight the gap between training provenance and preprocessing provenance {% include references/cite.html key="prov-2026-ref2" %}, while Souza et al. stress curation complexity {% include references/cite.html key="prov-2026-ref3" %}. A practical takeaway is simple: model metrics without transformation history are often under-contextualized.
+Pina et al. spotlight the chasm between training provenance and preprocessing provenance {% include references/cite.html key="prov-2026-ref2" %}; Souza et al. hammer on curation complexity {% include references/cite.html key="prov-2026-ref3" %}. The practical takeaway? Model metrics without transformation history are dangerously under-contextualized.
 
 ### 4. Separate Feasibility Questions From Reliability Questions
 
@@ -144,7 +144,7 @@ This source set does not define a universal overhead threshold. Use your latency
 
 ### 10. Keep a Contradiction-Seeking Loop in the Reading Process
 
-A strong synthesis is not only accumulation of supportive findings. It also looks for failure cases and negative evidence. For this topic, next-pass reading should actively target reports where provenance integration increased complexity or failed to improve governance outcomes.
+Accumulating supportive findings is easy. Too easy. A strong synthesis hunts for failure cases and negative evidence — reports where provenance integration backfired, where lineage capture added complexity without improving governance outcomes. That's the next-pass reading priority.
 
 ---
 
@@ -219,7 +219,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - [Source Inventory and Evidence Grading](#source-inventory-and-evidence-grading)
 - [Scope and Verification Boundary](#scope-and-verification-boundary)
 - [Source-Level Assessment](#source-level-assessment)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 <blockquote>
 <strong>Synthesis note:</strong> This review prioritizes entity-activity-agent traceability because that structure is foundational for portable provenance interpretation.
@@ -292,15 +291,5 @@ The paper identifies four persona types whose provenance needs motivated the PRO
 | Karuna et al. | IEEE ICICAT           | 2024 | GNN (GCN) vs baselines           | Financial traceability | Quantitative; internal evaluation; no confirmed public replication artifacts |
 | Pina et al.   | ACM WWW '23 Companion | 2023 | Provenance integration prototype | DL lifecycle (general) | Architectural; feasibility demonstrated; no overhead benchmarks              |
 | Souza et al.  | WORKS @ SC 2019       | 2019 | PROV-ML + ProvLake extensions    | O&G / CSE              | Practical; 48-GPU evaluation; single-domain validation                       |
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "data provenance machine learning", "ML traceability graph methods", "W3C PROV ML lifecycle", "data lineage vs provenance", "GNN traceability".
-
-**Schema signals**: Article schema with author attribution and datePublished, structured evidence-grading tables.
-
-**AEO coverage**: Source-level evidence assessments with explicit grading, structured comparison table across venues and methods, definition lists for traceability terminology.
-
-**GEO coverage**: Provenance standards (W3C PROV, PROV-ML) and graph-based traceability methods are internationally applicable across research and industry contexts without jurisdiction-specific constraints.
 
 </details>

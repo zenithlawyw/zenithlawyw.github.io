@@ -60,9 +60,9 @@ tags:
 
 ## The Practical Question Behind This Review
 
-Speed is not the hard part. Lightning can settle in milliseconds; everyone knows this. What the literature actually reveals is that teams fail on identity architecture, policy enforcement, and recovery choreography long before throughput becomes the constraint. The speed-and-fee narrative is a distraction; the engineering challenge is operational.
+Speed is not the hard part. Lightning settles in milliseconds. That fact is table stakes, not insight. What the literature actually reveals is something less comfortable: teams fail on identity architecture, policy enforcement, and recovery choreography long before throughput becomes the constraint. Latency benchmarks look impressive in slide decks; missing accountability mappings look expensive in post-mortems. The speed-and-fee narrative distracts from the real engineering challenge, which is operational.
 
-One question drives this review: if you are building a cross-border micropayment platform for autonomous agents, what must you implement first, what safely defers, and where does the evidence simply run out?
+One question drives this review. If you are building a cross-border micropayment platform for autonomous agents, what must you implement first? What safely defers? And where does the evidence simply run out?
 
 This is a directional review, not legal advice and not a formal meta-analysis. Regulatory treatment differs by jurisdiction, product model, and legal-entity role. Licensing, AML/CFT, sanctions, consumer rules, and reporting obligations need jurisdiction-specific legal review before launch.
 
@@ -87,9 +87,9 @@ This is a directional review, not legal advice and not a formal meta-analysis. R
 
 ## Review Approach and Evidence Grading
 
-Each paper was read as an engineering input rather than a theoretical endpoint. I extracted four things from each source: the claim, the mechanism, the evidence quality, and the implementation implication.
+Each paper was read as an engineering input, not a theoretical endpoint. I pulled four things from every source: the claim, the mechanism, the evidence quality, and the implementation implication.
 
-I then compared the papers along shared dimensions: settlement model, identity model, trust boundary, and deployability under operational constraints. Contradictions were treated as valuable signals, especially where performance claims were strong but field validation was limited.
+Then I compared papers along shared dimensions: settlement model, identity model, trust boundary, and deployability under real operational constraints. Contradictions were the interesting part. Where performance claims ran strong but field validation stayed thin, that gap told me more than the headline numbers did.
 
 ## Terms Used in This Review
 
@@ -103,21 +103,21 @@ A replay-safe intent is a uniquely keyed payment request that cannot settle twic
 
 ### Dham (2026): Identity is the First Bottleneck
 
-Dham argues that machine-to-machine payments fail when machine identity and institutional accountability are designed separately {% include references/cite.html key="ln-2026-ref1" %}. That insight is highly practical. Many teams optimize routing first and discover identity integration gaps late, when rework is expensive.
+Dham argues that machine-to-machine payments fail when machine identity and institutional accountability are designed separately {% include references/cite.html key="ln-2026-ref1" %}. This rings true from practice. Teams routinely optimize routing first, then discover identity integration gaps late, when rework costs spike and timelines slip.
 
-The evidence is conceptual rather than field-validated. Still, the operational takeaway is clear: design wallet ownership, delegated signing, and accountable authorization before optimizing channel strategy.
+The evidence is conceptual; no production deployment backs the claim. But the operational takeaway survives that limitation: design wallet ownership, delegated signing, and accountable authorization before you touch channel strategy. Get the accountability model wrong early and every subsequent layer inherits the defect.
 
 ### Fapohunda and Akoka (2025): Performance Direction, Not Production Proof
 
-The BIMTE prototype combines Layer-2 settlement with AI-assisted routing and reports strong speed and fee outcomes on synthetic corridor data {% include references/cite.html key="ln-2026-ref2" %}. This is useful directional evidence for modular routing design.
+The BIMTE prototype combines Layer-2 settlement with AI-assisted routing and reports strong speed and fee outcomes on synthetic corridor data {% include references/cite.html key="ln-2026-ref2" %}. Promising? Yes. Conclusive? Not yet. The numbers offer useful directional evidence for modular routing design, but synthetic corridors lack the jurisdictional friction, counterparty variability, and compliance load of live operations.
 
-What it does not prove is regulatory-operational equivalence in live jurisdictions. Treat it as a design pattern to test, not a production verdict.
+Treat BIMTE as a design pattern worth testing in a controlled pilot, not a production verdict you can adopt wholesale.
 
 ### Kurt et al. (2021): Gateway-Assisted IoT is the Practical Route
 
-This paper is valuable because it deals with constrained devices honestly {% include references/cite.html key="ln-2026-ref3" %}. Full Lightning operation at the edge is often unrealistic. A gateway-assisted model with stronger signature controls is more feasible.
+This paper earns its place because it deals with constrained devices honestly {% include references/cite.html key="ln-2026-ref3" %}. Running a full Lightning client on a sensor with 512 KB of RAM? Unrealistic. Kurt and colleagues acknowledge the constraint head-on and propose a gateway-assisted model with stronger signature controls.
 
-The prototype scope is small, but the deployment lesson holds: use delegated execution while preserving cryptographic accountability at the originating endpoint.
+Small prototype scope. Big deployment lesson: delegate execution to capable intermediaries while preserving cryptographic accountability at the originating endpoint. The device signs; the gateway routes.
 
 ### Larsen et al. (2026): Composability as a Strategic Constraint
 
@@ -127,15 +127,15 @@ For delivery teams, this translates to replaceable service boundaries and explic
 
 ### Mercan et al. (2022): A Useful Taxonomy for Early Decisions
 
-Mercan and colleagues provide a strong comparative map for IoT micropayment options: direct integration, payment channel networks, and newer protocol designs {% include references/cite.html key="ln-2026-ref5" %}. It is not a single validated architecture, but it is very good at framing trade-offs early.
+Mercan and colleagues provide a comparative map that is genuinely useful for early-stage decisions: direct integration, payment channel networks, and newer protocol designs {% include references/cite.html key="ln-2026-ref5" %}. No single validated architecture emerges. What emerges instead is clarity about trade-offs that teams typically discover too late.
 
-Use this taxonomy to structure architecture decision records before coding starts.
+Structure your architecture decision records around this taxonomy before anyone writes a line of routing code.
 
 ### Noel (2026): Autonomy Governance Must Be Designed, Not Added Later
 
-Noel's working-paper synthesis highlights the mismatch between legacy rails and agentic transaction patterns {% include references/cite.html key="ln-2026-ref6" %}. The most useful contribution is the governance framing: autonomy tiers should be explicit from day one.
+Noel's working-paper synthesis highlights a mismatch that anyone who has wrestled with legacy payment rails will recognise: traditional settlement patterns simply do not accommodate autonomous agent transaction flows {% include references/cite.html key="ln-2026-ref6" %}. The most useful contribution here is not a protocol specification; it is the governance framing. Autonomy tiers should be explicit from day one, not bolted on after the first incident.
 
-Because this is evolving research, teams should convert its ideas into measurable pilot hypotheses rather than direct production assumptions.
+This is evolving research. Convert its ideas into measurable pilot hypotheses; do not treat them as production-ready assumptions.
 
 ## Cross-Paper Pattern: Controlled Hybridization Wins
 
@@ -146,9 +146,9 @@ Across the reviewed papers, four themes repeat:
 3. Constrained endpoints need delegated execution patterns.
 4. Composable architecture preserves optionality as products evolve.
 
-The tension is equally important. Strong performance claims often come from synthetic or limited prototypes, while production environments demand reversibility, operator accountability, and policy enforcement across jurisdictions.
+The tension matters just as much. Strong performance claims frequently originate from synthetic test beds or scope-limited prototypes; production environments punish you with reversibility requirements, operator accountability expectations, and policy enforcement obligations that span multiple jurisdictions simultaneously.
 
-The most deployable strategy today is controlled hybridization: Lightning-first micro-settlement, explicit identity overlays, and graduated autonomy gates.
+So what actually works right now? Controlled hybridization. Lightning-first micro-settlement for speed, explicit identity overlays for accountability, graduated autonomy gates for risk proportionality. Nothing in the corpus contradicts this combination; nothing in the corpus proves it at scale either.
 
 ## Per-Source Confidence and Applicability
 
@@ -165,7 +165,7 @@ The most deployable strategy today is controlled hybridization: Lightning-first 
 
 ### Start with identity-trust architecture
 
-Define who can initiate, approve, co-sign, and settle each payment class before throughput tuning begins. In production, missing accountability mapping is usually harder to recover from than missed performance targets.
+Define who can initiate, approve, co-sign, and settle each payment class before throughput tuning begins. Missing an SLA by 200ms is recoverable. Missing an accountability mapping in production is not; the remediation cost compounds through every dependent service.
 
 ### Build dual-path settlement intent
 
@@ -177,7 +177,7 @@ A practical pattern is low-risk automated execution, medium-risk delayed executi
 
 ### Externalize routing policy
 
-Keep corridor, fee, liquidity, jurisdiction, and counterparty constraints in versioned policy artifacts instead of hidden runtime logic. This reduces deployment risk when rules need to change.
+Keep corridor, fee, liquidity, jurisdiction, and counterparty constraints in versioned policy artifacts. Buried runtime logic is where compliance surprises hide. When a regulator asks "which rule fired on transaction X?", you need a version-stamped answer, not a code archaeology expedition.
 
 ### Engineer for reversibility
 
@@ -185,9 +185,9 @@ Idempotent intents, deterministic state transitions, and tested compensation pat
 
 ## New Knowledge and Skills from the Combined Corpus
 
-The synthesis points to a shift in team mindset: this domain is less about raw transaction speed and more about governed execution under uncertainty.
+Here is the mindset shift the synthesis points to. This domain is less about raw transaction speed (Lightning already handles that) and more about governed execution under uncertainty. Can your system explain why it approved a payment, reverse one that failed mid-hop, and prove both to an auditor?
 
-Teams that move faster usually develop five skills early:
+Teams that ship faster usually develop five capabilities early:
 
 1. Identity-role mapping across machine, operator, and legal-entity boundaries.
 2. Corridor pilot design with explicit falsification tests.
@@ -251,7 +251,6 @@ No. This synthesis is strong for shortlisting options and shaping a pilot plan, 
 - [D. Corpus Reviewed](#d-corpus-reviewed)
 - [E. Evidence Maturity Snapshot](#e-evidence-maturity-snapshot)
 - [F. Practical Translation Map](#f-practical-translation-map)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Author and Source Credibility
 
@@ -332,15 +331,5 @@ Authoritative baseline links used in this review include:
 3. Edge constraints findings -> gateway-attested payment execution.
 4. Sovereignty/composability findings -> replaceable service boundaries and explicit settlement layers.
 5. Autonomy-governance findings -> tiered authorization framework.
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "Lightning Network cross-border micropayments", "agentic commerce payment architecture", "machine to machine payment rails", "bitcoin lightning implementation guide", "IoT micropayment infrastructure".
-
-**Schema signals**: Article schema with author attribution and datePublished, structured evidence-maturity snapshot.
-
-**AEO coverage**: Multi-paper corpus review with evidence-maturity grading, practical translation map linking findings to engineering layers, technical term definitions for corridor policy and graduated autonomy.
-
-**GEO coverage**: Cross-border micropayment analysis explicitly addresses multi-jurisdictional regulatory concerns including FATF virtual-asset guidance and BIS payment-infrastructure standards, with corridor-level routing designed for international settlement paths.
 
 </details>

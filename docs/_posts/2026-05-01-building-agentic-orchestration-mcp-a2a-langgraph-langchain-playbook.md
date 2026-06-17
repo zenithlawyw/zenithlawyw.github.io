@@ -62,7 +62,7 @@ A deployable agentic orchestration stack succeeds or fails on separation of conc
 
 ACP status requires planning discipline. As of May 2026, ACP maintainers publicly described active convergence into A2A under Linux Foundation collaboration, so architecture choices should preserve migration-friendly boundaries {% include references/cite.html key="mcpa2a-2026-ref19" %}, {% include references/cite.html key="mcpa2a-2026-ref20" %}.
 
-Other stacks exist. This one coheres. One coordinator delegates over A2A; specialists reach tools and context through MCP; the whole thing fits in a single team's head while remaining strong enough to harden incrementally under production pressure.
+Other stacks exist. This one coheres. One coordinator delegates over A2A; specialists reach tools and context through MCP. The whole thing fits in a single team's head. That matters more than feature checklists, because a stack nobody fully understands is a stack nobody can defend when something breaks at 2 a.m. under production pressure.
 
 ## Key Terms
 
@@ -85,7 +85,7 @@ Other stacks exist. This one coheres. One coordinator delegates over A2A; specia
 
 ## The Design Objective
 
-Framework maximalism is not the goal. Governability is. Six properties, all present simultaneously, distinguish a system you can defend in production from one that merely demos well:
+Framework maximalism is not the goal. Governability is. Ask yourself: could you explain every delegation edge to an incident reviewer at short notice? Six properties, all present simultaneously, separate a system you can defend in production from one that merely demos well:
 
 1. User requests become durable workflows, not ephemeral prompt-response pairs.
 2. Workflow fragments delegate to specialist agents carrying explicit task state.
@@ -94,11 +94,11 @@ Framework maximalism is not the goal. Governability is. Six properties, all pres
 5. Artifacts ship portable with verifiable provenance.
 6. Human approval checkpoints remain visible and explicit across every protocol boundary.
 
-Miss any one of these, and the system reverts to impressive-but-ungovernable.
+Drop even one. The system reverts to impressive but ungovernable.
 
 ## A Reference Architecture That Stays Small
 
-The following reference design is intentionally modest. It avoids speculative complexity while preserving the architectural seams that matter:
+The following reference design is intentionally modest. No speculative abstractions, no "we might need this later" layers. It preserves only the architectural seams that actually matter:
 
 ```text
 User / Front-End
@@ -118,7 +118,7 @@ User / Front-End
     -> Container image + signed release metadata
 ```
 
-This structure keeps agent coordination and tool coordination separate while allowing REST-native interop edges where required by legacy or partner ecosystems. It also limits the coordinator's responsibilities: it plans, routes, monitors, and aggregates. It does not pretend to be every specialist at once.
+This structure keeps agent coordination and tool coordination separate while allowing REST-native interop edges where legacy or partner ecosystems demand them. Notice what the coordinator does not do: it never pretends to be every specialist at once. It plans, routes, monitors, aggregates. Full stop.
 
 ## Why These Packages Fit Together
 
@@ -138,7 +138,7 @@ Given ACP convergence toward A2A, use ACP-compatible seams as integration adapte
 
 ### LangGraph for durable orchestration
 
-LangGraph is the strongest when workflows are stateful, long-running, and partially deterministic. Its documented strengths are durable execution, human-in-the-loop intervention, memory, and production-ready deployment for stateful agents {% include references/cite.html key="mcpa2a-2026-ref8" %}. Those properties map naturally to the orchestrator layer.
+Stateful workflows break prompt loops. LangGraph handles exactly this problem: durable execution, human-in-the-loop intervention, memory persistence, and production-ready deployment for stateful agents {% include references/cite.html key="mcpa2a-2026-ref8" %}. If your orchestrator loses state on restart, you do not have an orchestrator; you have an expensive autocomplete endpoint. Those properties map naturally to the orchestrator layer.
 
 ### LangChain for high-level agent ergonomics
 
@@ -154,7 +154,7 @@ pytest remains a strong testing surface because it scales from simple tests to c
 
 ### OpenTelemetry for system-wide visibility
 
-OpenTelemetry is vendor-neutral and standardized around traces, metrics, and logs, with a collector model that lets teams instrument many languages and export to the observability backend of their choice {% include references/cite.html key="mcpa2a-2026-ref13" %}. For multi-agent systems, this is how you stop distributed ambiguity from becoming operational blindness.
+Blind spots kill multi-agent systems quietly. OpenTelemetry is vendor-neutral and standardized around traces, metrics, and logs, with a collector model that lets teams instrument across languages and export to whatever observability backend they already trust {% include references/cite.html key="mcpa2a-2026-ref13" %}. Without trace continuity, distributed ambiguity compounds into operational blindness faster than most teams expect.
 
 ### Docker, SLSA, and Sigstore for portable and assurance-oriented delivery controls
 
@@ -162,7 +162,7 @@ Docker makes the container the unit of development, testing, and deployment {% i
 
 ## A Concrete Build Pattern
 
-The most practical implementation pattern is three-layered.
+Three layers. That is the practical minimum.
 
 ### Layer 1: Orchestrator service
 
@@ -234,11 +234,11 @@ agent-platform/
     compose.yaml
 ```
 
-This shape does two useful things. It makes service boundaries explicit, and it gives test scope names that match actual engineering concerns.
+Why this shape? Two reasons. Service boundaries become visible in the directory tree itself, not buried in import graphs. And test scope names (unit, integration, contract, e2e) map directly to actual engineering concerns rather than arbitrary folder conventions.
 
 ## Testing Strategy That Matches the Architecture
 
-Do not test an orchestration system as if it were a library with one entrypoint. Test it in layers.
+Orchestration systems are not libraries. They have no single entrypoint. Test them in layers, or accept that your test suite will lie to you about reliability.
 
 1. **Unit tests** should cover routing decisions, schema validation, and graph node behavior.
 2. **Contract tests** should verify MCP tool schemas and A2A message or task expectations.
@@ -249,7 +249,7 @@ pytest is a strong fit here because fixtures can stand up mocked MCP servers, lo
 
 ## Observability Requirements
 
-Observability in agentic systems must answer more than “did the request fail?” It should answer:
+"Did the request fail?" is the wrong first question for agentic observability. The right questions are sharper:
 
 1. Which workflow node made the routing decision?
 2. Which A2A task ID corresponds to the user-visible request?
@@ -353,7 +353,7 @@ No. Privacy, transfer, residency, and sector-specific obligations vary by jurisd
 
 ## Conclusion
 
-The most valuable agentic stacks are not the ones with the most moving parts. They are the ones where each moving part has a justified role. MCP should expose capabilities. A2A should coordinate peer agents. ACP patterns should be used where REST-native interoperability improves integration and migration outcomes. LangGraph should manage durable workflow state. LangChain should accelerate high-level agent construction where useful. FastAPI, Pydantic, pytest, OpenTelemetry, Docker, SLSA, and Sigstore can make the system more typed, testable, observable, portable, and better evidenced for release assurance.
+Complexity is cheap. Justified complexity is rare. The most valuable agentic stacks are not the ones with the most moving parts; they are the ones where every part earns its place. MCP exposes capabilities. A2A coordinates peer agents. ACP patterns fill REST-native interop gaps where they reduce real friction. LangGraph manages durable workflow state. LangChain accelerates high-level agent construction where the convenience genuinely outweighs the abstraction cost. FastAPI, Pydantic, pytest, OpenTelemetry, Docker, SLSA, and Sigstore collectively make the system typed, testable, observable, portable, and better evidenced for release assurance. Ship that. Then iterate.
 
 ## Technical Appendix
 
@@ -370,7 +370,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Protocol Glossary](#protocol-glossary)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -445,15 +444,5 @@ An ACP-oriented description surface for discovery and interoperability, includin
 #### Structured validation
 
 Type-driven input or output validation, commonly implemented with Pydantic models or typed schemas to reduce ambiguity across service boundaries {% include references/cite.html key="mcpa2a-2026-ref11" %}.
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "agentic orchestration MCP A2A tutorial", "LangGraph LangChain multi-agent playbook", "open source AI agent stack", "Docker deployment for AI agents", "tenant-aware agent architecture".
-
-**Schema signals**: FAQPage schema with evidence-grounded answers, HowTo schema for implementation steps, Article schema with author attribution and datePublished.
-
-**AEO coverage**: FAQ implementation prompts, structured protocol glossary, citability snapshot with measurable deployment criteria, and package-level component references.
-
-**GEO coverage**: The open-source stack (FastAPI, LangGraph, Docker, OpenTelemetry) and protocol layers are globally available; cross-border orchestration controls and tenant isolation are explicitly addressed as design requirements.
 
 </details>

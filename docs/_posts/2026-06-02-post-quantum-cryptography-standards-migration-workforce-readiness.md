@@ -177,7 +177,7 @@ TLS 1.3's extensible design supports PQC integration through two mechanisms:
 - **`key_share` extension:** Carries PQC KEM ciphertexts alongside or instead of classical ECDH shares
 - **`signature_algorithms` extension:** Advertises support for PQC digital signatures (ML-DSA, SLH-DSA)
 
-This means PQC can be deployed within the existing TLS protocol framework without protocol-level redesign, a critical practical advantage over QKD, which requires entirely new infrastructure.
+This means PQC slots into the existing TLS protocol framework without protocol-level redesign. No new wire format. No renegotiation of the handshake state machine. That is a critical practical advantage over QKD, which demands entirely new physical infrastructure at every hop.
 
 ## The Workforce Readiness Gap
 
@@ -200,7 +200,7 @@ Three independent studies, from different countries and targeting different audi
 
 **Bottom-up teaching outperforms top-down.** Start with simple worked examples; build toward complex cryptosystems. Borrelli et al. found this more effective than presenting abstract definitions first {% include references/cite.html key="10.1145/3626252.3630823" %}. One exception: graduate students with mathematical maturity benefited from top-down presentations. The implication is clear: differentiated pedagogy is necessary, not optional.
 
-**The name "Post-Quantum Cryptography" actively misleads.** Students consistently interpreted it as "cryptography that uses quantum computers" rather than "cryptography that resists quantum computers" {% include references/cite.html key="10.1145/3626252.3630823" %}. A small nomenclature problem with large pedagogical consequences. Borrelli et al. suggest "Quantum-Resistant Cryptography" as an alternative.
+**The name "Post-Quantum Cryptography" actively misleads.** Students consistently interpreted it as "cryptography that uses quantum computers" rather than "cryptography that resists quantum computers" {% include references/cite.html key="10.1145/3626252.3630823" %}. Small nomenclature problem; enormous pedagogical consequences. Borrelli et al. suggest "Quantum-Resistant Cryptography" as a clearer alternative, and having watched students struggle with the term myself, I suspect they are right.
 
 **Exposing individual operations matters more than you would expect.** Standard tools like GPG and OpenSSL abstract cryptographic operations behind protocol-level interfaces. Learners never see what each step does. Steinfeld et al. built a custom software interface for CRYSTALS-Kyber that exposes key generation, encapsulation, and decapsulation separately {% include references/cite.html key="10.1145/3770762.3772573" %}. The result: non-programmer cybersecurity professionals could understand operations they had previously treated as black boxes.
 
@@ -261,7 +261,7 @@ The migration timeline is governed by Mosca's inequality. Organisations should c
 
 ---
 
-## Migration Questions
+## Practitioner Questions on Migration and Readiness
 
 ### How long does a typical PQC migration take for an enterprise?
 
@@ -288,13 +288,12 @@ No, and the confusion is not academic. Borrelli et al. found that students consi
 
 ### Appendix Table of Contents
 
-- [Author and Source Credibility](#author-and-source-credibility)
-- [A. Evidence Boundary Notes](#a-evidence-boundary-notes)
-- [B. Technical Term Definitions](#b-technical-term-definitions)
-- [C. Literature Analysis Summary](#c-literature-analysis-summary)
-- [D. SEO, GEO, and AEO Optimisation Notes](#d-seo-geo-and-aeo-optimisation-notes)
+- [Source Attribution and Review Context](#source-attribution-and-review-context)
+- [A. Scope and Validity Constraints](#a-scope-and-validity-constraints)
+- [B. Key Terms](#b-key-terms)
+- [C. Reviewed Sources at a Glance](#c-reviewed-sources-at-a-glance)
 
-### Author and Source Credibility
+### Source Attribution and Review Context
 
 This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings on PQC standards, migration, and education from six papers spanning SIGCSE, IEEE, and ACM venues. Borrelli et al. (2024) is published at SIGCSE, the premier CS education venue. Steinfeld et al. (2026) bring hands-on professional training experience from Monash University and industry partnerships. Wahlang and Vidhani (2026) present the first dedicated PQC code migration tool using language models. Song and Kim (2023) provide quantitative research landscape mapping via topic modelling. Shim et al. (2024) present a hybrid network architecture aligned with South Korea's KISTI infrastructure.
 
@@ -302,7 +301,7 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 
 The ccPASTpqc results use BLEU and CodeBLEU, metrics that measure textual similarity rather than functional correctness; the authors did not execution-test their translated code on real projects. Educational programme evaluations rest on small cohorts at individual institutions (Borrelli: 14 and 21 students at RIT; Steinfeld: cohort size not reported), and the modular curriculum paper from Borrelli et al. (2026) is a 2-page poster with no assessment data. Generalising from these to workforce-wide strategy involves a significant inferential leap. The hybrid network architecture from Shim et al. is a protocol-level design; no performance benchmarks or scale testing accompany it. Song and Kim's topic modelling covers a single year of data using bag-of-words LDA, which captures surface-level thematic distribution but cannot assess paper quality or methodological rigour.
 
-### B. Technical Term Definitions
+### B. Key Terms
 
 <dl>
 <dt><dfn>Mosca's Inequality</dfn></dt>
@@ -318,18 +317,18 @@ The ccPASTpqc results use BLEU and CodeBLEU, metrics that measure textual simila
 <dd>An extension of BLEU that incorporates AST match and data-flow match scores alongside n-gram overlap, providing a more semantically aware evaluation of code generation quality.</dd>
 </dl>
 
-### C. Literature Analysis Summary
+### C. Reviewed Sources at a Glance
 
 <figure markdown="1">
 
-| Paper               | Year | Type              | Key Contribution                        | Evidence Quality                 |
-| :------------------ | :--- | :---------------- | :-------------------------------------- | :------------------------------- |
-| Borrelli et al.     | 2024 | Experience report | Full PQC course design + outcomes       | High (SIGCSE, iterative)         |
-| Borrelli et al.     | 2026 | Poster            | Modular PQC education framework         | Low (2-page, no data)            |
-| Steinfeld et al.    | 2026 | Experience report | Professional PQC training + custom tool | Medium (SIGCSE, no metrics)      |
-| Song and Kim        | 2023 | Quantitative      | Research landscape via LDA              | Medium (IEEE, one year)          |
-| Wahlang and Vidhani | 2026 | Experimental      | LLM-based PQC code migration            | Medium (BLEU only, no execution) |
-| Shim et al.         | 2024 | Architecture      | Hybrid QKD/PQC network design           | Medium (no benchmarks)           |
+| Paper               | Year | Type              | Key Contribution                        | Confidence Notes                            |
+| :------------------ | :--- | :---------------- | :-------------------------------------- | :------------------------------------------ |
+| Borrelli et al.     | 2024 | Experience report | Full PQC course design + outcomes       | Strong venue (SIGCSE), iterative refinement |
+| Borrelli et al.     | 2026 | Poster            | Modular PQC education framework         | 2-page abstract only, no assessment data    |
+| Steinfeld et al.    | 2026 | Experience report | Professional PQC training + custom tool | SIGCSE venue but no quantitative outcomes   |
+| Song and Kim        | 2023 | Quantitative      | Research landscape via LDA              | Single-year snapshot, bag-of-words method   |
+| Wahlang and Vidhani | 2026 | Experimental      | LLM-based PQC code migration            | BLEU metrics only; no execution testing     |
+| Shim et al.         | 2024 | Architecture      | Hybrid QKD/PQC network design           | Design only, no performance benchmarks      |
 
 <figcaption>Table A1: Summary of reviewed literature for the standards, migration, and education domain.</figcaption>
 </figure>

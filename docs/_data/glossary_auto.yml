@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-06-03T10:35:18Z"
-total_candidates: 975
+generated_at: "2026-06-17T20:23:13Z"
+total_candidates: 1001
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -590,6 +590,26 @@ candidates:
         url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
       - title: ""
         url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Feature Attribution
+    status: candidate
+    confidence: 20
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+      - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+        url: "/measuring-feature-attribution-quality-metrics-benchmarks"
+      - title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
+        url: "/breaking-free-from-correlation-causal-dependency-aware-attribution"
+    related_pages: []
   - term: Practices
     status: candidate
     confidence: 17
@@ -663,6 +683,50 @@ candidates:
           "Deadlock and Resource Contention: Operating Systems Theory Applied to
           Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: Artificial Intelligence Machine
+    status: candidate
+    confidence: 15
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+      - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+        url: "/measuring-feature-attribution-quality-metrics-benchmarks"
+    related_pages: []
+  - term: Intelligence Machine Learning
+    status: candidate
+    confidence: 15
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+      - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+        url: "/measuring-feature-attribution-quality-metrics-benchmarks"
     related_pages: []
   - term: Machines Focus
     status: candidate
@@ -1145,6 +1209,28 @@ candidates:
           "Large Language Models in Practice: From the Transformer to the Present
           Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
+    related_pages: []
+  - term: Attribution
+    status: candidate
+    confidence: 10
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on
+          Trust, Provenance, and Resilient Engineering"
+        url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+      - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+        url: "/measuring-feature-attribution-quality-metrics-benchmarks"
     related_pages: []
   - term: Conditions Deadlock
     status: candidate
@@ -1814,6 +1900,26 @@ candidates:
           Cloud Access Fragmentation, 2014 to 2026"
         url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
+  - term: Feature
+    status: candidate
+    confidence: 9
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+      - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+        url: "/measuring-feature-attribution-quality-metrics-benchmarks"
+      - title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
+        url: "/breaking-free-from-correlation-causal-dependency-aware-attribution"
+    related_pages: []
   - term: GEO AEO Optimisation
     status: candidate
     confidence: 9
@@ -2421,6 +2527,22 @@ candidates:
           "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
           Adaptation, and Deep Clustering"
         url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+    related_pages: []
+  - term: Feature Attribution Explainable
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
     related_pages: []
   - term: Frequently Asked Questions
     status: candidate
@@ -3474,6 +3596,20 @@ candidates:
           Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
     related_pages: []
+  - term: Causal Shap
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
+        url: "/breaking-free-from-correlation-causal-dependency-aware-attribution"
+    related_pages: []
   - term: Chain Attack
     status: candidate
     confidence: 7
@@ -4250,6 +4386,34 @@ candidates:
           Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
     related_pages: []
+  - term: Evaluation Metrics
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+        url: "/measuring-feature-attribution-quality-metrics-benchmarks"
+    related_pages: []
+  - term: Exact Computation
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+    related_pages: []
   - term: Exactly One
     status: candidate
     confidence: 7
@@ -4282,6 +4446,20 @@ candidates:
           Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
     related_pages: []
+  - term: Few-shot Learning
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
+        url: "/breaking-free-from-correlation-causal-dependency-aware-attribution"
+    related_pages: []
   - term: Four Coffman
     status: candidate
     confidence: 7
@@ -4313,6 +4491,26 @@ candidates:
           "Deadlock and Resource Contention: Operating Systems Theory Applied to
           Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: Framework
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain:
+          A Deployable Open-Source Playbook"
+        url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
+      - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+        url: "/measuring-feature-attribution-quality-metrics-benchmarks"
+      - title: "Feature Attribution in Practice: Selection, Pipelines, and Governance"
+        url: "/feature-attribution-practice-selection-pipelines-governance"
     related_pages: []
   - term: Frequently Asked
     status: candidate
@@ -4749,6 +4947,28 @@ candidates:
           "Lightning Network Agentic Micropayments: Open-Source End-to-End Implementation
           Playbook"
         url: "/lightning-network-agentic-micropayments-open-source-implementation-playbook"
+    related_pages: []
+  - term: Intelligence Machine
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
+          Adaptation, and Deep Clustering"
+        url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+      - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+        url: "/measuring-feature-attribution-quality-metrics-benchmarks"
     related_pages: []
   - term: Langchain Deployment
     status: candidate
@@ -5366,6 +5586,24 @@ candidates:
     related_pages:
       - title: ""
         url: "/literature-reviews/karuna-et-al-2024-enhancing-financial-data-traceability-using-graph-neural-networks-for-provenance-methods.html"
+  - term: Nist Standards
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+        url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+      - title:
+          "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce
+          Readiness"
+        url: "/post-quantum-cryptography-standards-migration-workforce-readiness"
+    related_pages: []
   - term: Open-source Payment
     status: candidate
     confidence: 7
@@ -7622,6 +7860,68 @@ candidates:
         url: "/faq/"
       - title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
         url: "/glossary/"
+  - term: Attribution Causal
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
+        url: "/breaking-free-from-correlation-causal-dependency-aware-attribution"
+    related_pages: []
+  - term: Attribution Explainable
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+    related_pages: []
+  - term: Attribution Methods
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+    related_pages: []
+  - term: Attribution Xai
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+        url: "/measuring-feature-attribution-quality-metrics-benchmarks"
+      - title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
+        url: "/breaking-free-from-correlation-causal-dependency-aware-attribution"
+      - title: "Feature Attribution in Practice: Selection, Pipelines, and Governance"
+        url: "/feature-attribution-practice-selection-pipelines-governance"
+    related_pages: []
   - term: Audit-ready Machine
     status: candidate
     confidence: 6
@@ -7770,6 +8070,26 @@ candidates:
         url: "/authors/zenith-law/"
       - title: Trustworthy Engineering. Resilient Platforms. Sovereign-by-Design.
         url: "/index.html"
+  - term: Automated
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce
+          Readiness"
+        url: "/post-quantum-cryptography-standards-migration-workforce-readiness"
+      - title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
+        url: "/breaking-free-from-correlation-causal-dependency-aware-attribution"
+    related_pages:
+      - title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
+        url: "/glossary/"
   - term: Autonomous Agent
     status: candidate
     confidence: 6
@@ -8001,6 +8321,52 @@ candidates:
           "Retrieval-Augmented Generation: Failure Modes, Confidence Calibration,
           and Production Governance"
         url: "/retrieval-augmented-generation-failure-modes-production-governance"
+    related_pages: []
+  - term: Causal
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
+        url: "/breaking-free-from-correlation-causal-dependency-aware-attribution"
+    related_pages: []
+  - term: Causal Discovery
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
+        url: "/breaking-free-from-correlation-causal-dependency-aware-attribution"
+    related_pages: []
+  - term: Causal Inference
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
+        url: "/breaking-free-from-correlation-causal-dependency-aware-attribution"
     related_pages: []
   - term: Chain Compromise Evidence-based
     status: candidate
@@ -8686,6 +9052,20 @@ candidates:
           Literature Review for Agentic Commerce"
         url: "/lightning-network-cross-border-micropayments-systematic-exploratory-literature-review"
     related_pages: []
+  - term: Cryptography Quantum
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+        url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+    related_pages: []
   - term: Cybersecurity Platform Engineering
     status: candidate
     confidence: 6
@@ -9056,6 +9436,20 @@ candidates:
     related_pages:
       - title: Disclaimer
         url: "/legal/disclaimer/"
+  - term: Domain Applications
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution in Practice: Selection, Pipelines, and Governance"
+        url: "/feature-attribution-practice-selection-pipelines-governance"
+    related_pages: []
   - term: Engineering Incident
     status: candidate
     confidence: 6
@@ -9460,6 +9854,22 @@ candidates:
     related_pages:
       - title: "FAQ Hub: Questions and Answers Across Published Pages"
         url: "/faq/"
+  - term: Feature Attribution Xai
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+        url: "/measuring-feature-attribution-quality-metrics-benchmarks"
+      - title: "Feature Attribution in Practice: Selection, Pipelines, and Governance"
+        url: "/feature-attribution-practice-selection-pipelines-governance"
+    related_pages: []
   - term: Federated Foundation Models
     status: candidate
     confidence: 6
@@ -10115,6 +10525,26 @@ candidates:
     related_posts:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
+    related_pages: []
+  - term: Intelligence Software
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+      - title:
+          "Retrieval-Augmented Generation: Failure Modes, Confidence Calibration,
+          and Production Governance"
+        url: "/retrieval-augmented-generation-failure-modes-production-governance"
     related_pages: []
   - term: Intelligence Software Engineering
     status: candidate
@@ -10936,6 +11366,24 @@ candidates:
         url: "/literature-reviews/karuna-et-al-2024-enhancing-financial-data-traceability-using-graph-neural-networks-for-provenance-methods.html"
       - title: ""
         url: "/literature-reviews/platt-1999-probabilistic-outputs-for-svms-and-comparisons-to-regularized-likehood-methods.html"
+  - term: Metrics
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Support Vector Machine Series Part 2: Benchmark and Error Forensics on
+          UCI HAR"
+        url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+      - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+        url: "/measuring-feature-attribution-quality-metrics-benchmarks"
+    related_pages: []
   - term: Micropayment
     status: candidate
     confidence: 6

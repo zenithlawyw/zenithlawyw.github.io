@@ -55,7 +55,7 @@ Four conditions. All four present simultaneously, and the system stops. Permanen
 
 Consider what happened in March 2026: malicious axios package versions cascaded through npm because a compromised credential created textbook hold-and-wait, where each build held a lock on developer identity while waiting for upstream package access (reconstructed in [Axios npm supply-chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience)). Or consider SaaS bifurcation in China from 2019 onward, where service withdrawal introduced circular dependencies no single vendor could unilaterally resolve (examined in [digital sovereignty and fragmented cloud realities](/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons)). Or LLM inference scheduling, where priority-flat token-slot allocation starves lower-priority jobs indefinitely (the architectural lineage traced in [large language models in practice](/large-language-models-practice-from-transformer-to-present-frontier)).
 
-This article reconstructs these three domains, supply chain security, platform operations, and AI systems, through the lens of concurrency theory. The objective is not metaphor. It is interpretability through structure. By mapping incident patterns onto Coffman's conditions and classical resource scheduling algorithms, engineering teams can apply decades of OS mitigation strategies to domains where contention is often treated as inevitable rather than engineered away.
+This article reconstructs these three domains — supply chain security, platform operations, and AI systems — through concurrency theory. Not as metaphor. As diagnostic structure. Map incident patterns onto Coffman's conditions and classical scheduling algorithms, and something striking emerges: decades of OS mitigation strategies transfer almost intact to domains where contention is typically shrugged off as inevitable rather than dismantled through deliberate engineering.
 {% include references/cite.html key="deadlock-2026-ref1" %}
 This article is not legal advice.
 
@@ -86,17 +86,17 @@ This article combines three claim classes to preserve analytical precision. The 
 
 ### Mutual Exclusion and the Locking Primitive
 
-A [mutex](https://en.wikipedia.org/wiki/Mutual_exclusion) (mutual exclusion lock) enforces the promise that exactly one thread may hold a resource at a time. In the kernel, this prevents data corruption when multiple CPUs compete for the same memory location. In supply chains, the analogous primitive is credential ownership: exactly one maintainer should hold the right to publish to a package. In cloud platforms, it is region-scoped control: exactly one legal entity should hold billing and operational authority for a geographic zone. In LLM inference, it is token-slot allocation: exactly one request should own a processing slot during the critical encoding-decoding phase.
+A [mutex](https://en.wikipedia.org/wiki/Mutual_exclusion) (mutual exclusion lock) enforces a blunt promise: exactly one thread holds a resource at a time. Period. In the kernel, this prevents data corruption when multiple CPUs compete for the same memory location. The analogous primitive surfaces everywhere, though people rarely call it by name. In supply chains, it is credential ownership — exactly one maintainer should hold the right to publish to a package. In cloud platforms, region-scoped control: one legal entity holds billing and operational authority for a geographic zone. In LLM inference, token-slot allocation during the critical encoding-decoding phase.
 
-Mutual exclusion is not optional. Without it, concurrent modification leads to data loss, authorization confusion, and failed inference. The cost of enforcing mutual exclusion, however, is resource contention. Threads queue when the mutex is held. The question is whether that queue can grow efficiently or whether it can lock the system.
+Mutual exclusion is not optional. Strip it away and concurrent modification produces data loss, authorization confusion, inference failures — pick your catastrophe. But enforcement carries its own cost: contention. Threads queue. The queue grows. Does it grow efficiently, or does it lock the entire system?
 
 ### Semaphores: Counter-Based Access Control
 
-A [semaphore](<https://en.wikipedia.org/wiki/Semaphore_(programming)>) generalizes mutual exclusion from one resource to N identical copies. [Edsger Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) invented the semaphore construct in 1962-1963 while developing the [THE multiprogramming system](https://en.wikipedia.org/wiki/THE_multiprogramming_system) at Eindhoven. A semaphore initialized to N allows up to N concurrent acquisitions. The first N threads pass. The (N+1)th thread waits. A (N+1)th thread waiting indefinitely reveals [starvation](https://en.wikipedia.org/wiki/Resource_starvation), a failure state where a thread is denied access indefinitely even though the resource becomes available repeatedly.
+A [semaphore](<https://en.wikipedia.org/wiki/Semaphore_(programming)>) generalizes mutual exclusion from one resource to N identical copies. [Edsger Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) invented the construct in 1962–1963 while building the [THE multiprogramming system](https://en.wikipedia.org/wiki/THE_multiprogramming_system) at Eindhoven — an era when a single mainframe served an entire university. Initialize a semaphore to N and the first N threads sail through; the (N+1)th waits. If that (N+1)th thread waits forever? That is [starvation](https://en.wikipedia.org/wiki/Resource_starvation): a failure state where access is denied indefinitely even though the resource keeps becoming available to others.
 
 Tanenbaum and Bos (2015) stress that modern operating systems coordinate locks, schedulers, and memory managers across multicore processors and virtualized workloads. The deadlock model remains the same, but the operational impact grows because one blocked path can cascade across all dependent execution contexts.
 
-In supply chains, think of maintainer credentials as semaphores with N=1. In 2026, the axios maintainer's credential was compromised, and normal package publication became a blocked operation for all consumers. In cloud regions, semaphores represent compute capacity. If a region's data-processing quota is exhausted by one application, other applications starve. In LLM inference pipelines, token-slot semaphores control parallelism. If higher-priority inference requests hold all slots indefinitely, lower-priority jobs experience indefinite starvation.
+Think of maintainer credentials as semaphores with N=1. When the axios maintainer's credential was compromised in 2026, normal package publication became a blocked operation for every downstream consumer — thousands of builds, stalled. In cloud regions, semaphores represent compute capacity; exhaust a region's data-processing quota with one runaway application and every other application starves. LLM inference pipelines work the same way. Token-slot semaphores gate parallelism, and if higher-priority requests monopolize every slot, lower-priority jobs wait. Indefinitely.
 
 ### The Four Coffman Conditions: Structure of Deadlock
 
@@ -117,7 +117,7 @@ The axios npm compromise of March 2026 exhibits all four Coffman conditions in a
 
 Between 30 and 31 March 2026, malicious versions of axios (1.14.1 and 0.30.4) appeared on npm and propagated through automatic dependency resolution. The attack chain combined social engineering to compromise a maintainer account, then used that credential to inject a counterfeit dependency (`plain-crypto-js@4.2.1`) into axios source repositories. During installation, the injected dependency executed obfuscated code that staged payloads to macOS, Windows, and Linux platforms and communicated with C2 infrastructure at `sfrclak[.]com`:8000.
 
-The incident pattern reveals hold-and-wait behavior. A developer building a project holds (owns) the right to use their development environment. That developer then waits for npm to return the requested packages. During that wait, if the package registry has been compromised, the developer's environment is now exposed to malicious execution. Because developers cannot easily revoke their own build-environment access (no preemption), and because multiple developers wait for the same package (circular dependency chains in complex projects), a condition forms in which one compromised credential propagates through the entire coordination system.
+The incident pattern reveals hold-and-wait behavior — textbook, almost uncomfortably clean. A developer building a project holds the right to use their development environment. That developer then waits for npm to return requested packages. During that wait, if the registry has been compromised, the developer's environment is exposed to malicious execution. Here is the trap: developers cannot easily revoke their own build-environment access (no preemption), and multiple developers wait for the same package through circular dependency chains. One compromised credential propagates through the entire coordination system. What looks like a supply-chain attack is, structurally, a four-condition deadlock playing out across organizational boundaries.
 
 ### Mapping to Coffman Conditions
 
@@ -141,7 +141,7 @@ Cloud platform operations present a second recursive pattern. When foreign vendo
 
 ### Data Residency as a Holding Pattern
 
-A platform entering China must hold data within China. This is enforced by regulation. The platform also holds responsibility for service continuity. It waits for the regional partner to provide operational capability. If the regional partner is later required to block access to the platform (for policy reasons), neither the global platform nor the regional partner can unilaterally resolve the impasse. The global platform holds data custody; the region holds operational control. Neither can preempt the other.
+A platform entering China must hold data within China — regulation demands it. The platform also holds responsibility for service continuity, and it waits for the regional partner to deliver operational capability. Now consider what happens when the regional partner is later required to block access to the platform for policy reasons. Neither party can unilaterally resolve the impasse. The global platform holds data custody. The region holds operational control. Neither can preempt the other. Classic deadlock, except the "threads" are multinational corporations and the "scheduler" is a regulatory apparatus with no rollback mechanism.
 
 From 2025 to 2026, this manifested acutely in developer tooling. Unity announced withdrawal of regional access to Unity 6 and the Asset Store for mainland China, Hong Kong, and Macau. The withdrawal was not instantaneous preemption. It was staged notification, followed by account lockout, followed by blocked features. The no-preemption principle held: once a developer's project was bound to Unity infrastructure in an affected region, that developer could not preempt the withdrawal decision. Similarly, Unity could not preempt regional regulatory constraints.
 
@@ -151,9 +151,9 @@ A Salesforce customer in China relies on Salesforce through Alibaba Cloud. Aliba
 
 ### Starvation in Communication Channels
 
-A practical consequence of this fragmented control is starvation in alert and escalation pathways. Atlassian's Opsgenie documentation notes that SMS delivery to China faces telecom level blocking. A customer in China using Opsgenie for incident alerting cannot receive SMS notifications reliably. The alert system holds the customer's configuration. The customer's telco holds SMS delivery. Neither can preempt the blockage. The result is that incident notifications starve indefinitely because they are generated but never delivered.
+Fragmented control produces a quieter failure: starvation in alert and escalation pathways. Atlassian's Opsgenie documentation notes that SMS delivery to China faces telecom-level blocking. A customer in China relying on Opsgenie for incident alerting cannot receive SMS notifications reliably. The alert system holds the customer's configuration; the customer's telco holds SMS delivery. Neither can preempt the blockage. Notifications are generated, dispatched, and then — nothing. They vanish into a telecom void.
 
-This is starvation by the OS definition: a resource (notification delivery) is repeatedly denied to a requesting thread (incident responder) even though the resource is available and allocated to other requesters.
+By the OS definition, this is starvation in its purest form. A resource (notification delivery) is repeatedly denied to a requesting thread (the incident responder) even though that same resource is being allocated to requesters in other regions without interruption.
 
 ## LLM Inference and Token Schedulers: Priority Starvation
 
@@ -161,15 +161,15 @@ Modern LLM inference introduces a third deadlock pattern specific to token-gener
 
 ### The Token Slot as a Bottleneck Resource
 
-When an LLM processes inference requests, it converts input text into tokens and generates output tokens one at a time (autoregressive generation). The bottleneck is the decoding loop: each token generation requires a forward pass through the model. On resource-constrained systems (GPUs with finite memory, inference clusters with limited parallelism), the number of concurrent decoding operations is bounded. This bound is the token slot.
+When an LLM processes inference requests, it converts input text into tokens and generates output tokens one at a time — autoregressive generation, where each token requires a full forward pass through the model. The bottleneck is the decoding loop. On resource-constrained systems (GPUs with finite memory, inference clusters with limited parallelism), the number of concurrent decoding operations is bounded. That bound is the token slot.
 
-A token slot is a mutual-exclusion resource. Exactly one inference request can occupy a slot during its decoding phase. When all slots are full, a new request must wait. If all requests have equal priority, fairness algorithms ensure no request waits indefinitely (round-robin, first-come-first-serve). If requests have priorities, a low-priority request can be starved indefinitely by repeated high-priority arrivals.
+Token slots are mutual-exclusion resources. One request per slot during decoding. Full slots mean new requests wait. So far, straightforward. But add priorities, and the dynamics shift dramatically: a low-priority request can be starved indefinitely by a continuous stream of higher-priority arrivals, each one jumping the queue before the waiting request ever reaches the front.
 
 ### Starvation Under Priority Unfairness
 
-Consider an LLM inference system serving both interactive (user-facing) and batch (offline) requests. The system allocates priority to interactive requests. As long as interactive requests arrive faster than they complete, batch requests wait indefinitely. This is starvation. The batch-scheduling system holds a queue entry. The inference scheduler waits for slot availability. But the scheduler never allocates a slot to the batch request because higher-priority interactive requests arrive continuously.
+Picture an LLM inference system serving both interactive (user-facing) and batch (offline) requests, with priority allocated to interactive traffic. As long as interactive requests arrive faster than they complete, batch requests wait. And wait. And wait. The batch-scheduling system holds a queue entry; the inference scheduler waits for slot availability — but never allocates one to the batch request because higher-priority interactive requests keep arriving. This is starvation, playing out in milliseconds rather than the months of a cloud-platform deadlock.
 
-Defenses exist. Operating systems implement priority aging: as a thread waits longer, its priority increases incrementally. When a low-priority batch request has waited for time T seconds, its effective priority increases, improving its allocation chances. Round-robin scheduling, where each request gets a time slice regardless of initial priority, provides fairness but sacrifices latency for interactive users. First-come-first-serve (FCFS) is fair but can cause turnaround-time inversion when small interactive requests queue behind large batch jobs.
+Defenses exist, borrowed directly from OS schedulers. Priority aging: as a thread waits longer, its effective priority ticks upward. After T seconds, a low-priority batch request rises high enough to compete with interactive traffic. Round-robin scheduling gives each request a time slice regardless of initial priority — fair, but it sacrifices latency for interactive users. First-come-first-serve is also fair, though it risks turnaround-time inversion when small interactive requests stack behind large batch jobs. No single policy is perfect; the right choice depends on whether your system optimizes for throughput or responsiveness.
 
 ### Ordering and Deadlock Avoidance
 
@@ -319,9 +319,9 @@ LLM systems: Document which system component owns each token-slot allocation. If
 
 ## Critical Evaluation: Where Deadlock Theory Illuminates and Where It Reaches Limits
 
-The mapping of OS-level deadlock theory onto supply chains, cloud platforms, and LLM systems is powerful but not comprehensive. The theory illuminates circular dependencies and hold-and-wait patterns with unusual clarity. The four Coffman conditions provide a diagnostic checklist that applies across domains.
+The mapping of OS-level deadlock theory onto supply chains, cloud platforms, and LLM systems is powerful. It is also incomplete — and acknowledging that gap matters more than pretending otherwise. The theory exposes circular dependencies and hold-and-wait patterns with unusual clarity; the four Coffman conditions hand engineers a diagnostic checklist that transfers across domains with minimal adaptation.
 
-A credible counterposition exists: operating-system deadlock is determined by algorithm acting on precisely defined resources, whereas the "resources" in supply-chain, cloud, and LLM contexts are often ambiguous, socially constructed, or subject to external regulatory change. Coffman et al. (1971) assumed a closed system with enumerable resources. Real supply chains are open systems where new dependencies can appear at arbitrary times. Cloud-platform contention often traces to political risk rather than resource scarcity. LLM inference contention depends on workload distributions that are non-stationary. The four-condition framework therefore serves best as a diagnostic lens rather than a formal proof system when applied outside the kernel.
+But a credible counterposition deserves attention. Operating-system deadlock is determined by algorithm acting on precisely defined resources. The "resources" in supply-chain, cloud, and LLM contexts? Often ambiguous, socially constructed, or subject to regulatory change that no scheduler can anticipate. Coffman et al. (1971) assumed a closed system with enumerable resources. Real supply chains are open systems where new dependencies materialise at arbitrary times. Cloud-platform contention frequently traces to political risk rather than resource scarcity. LLM inference contention depends on workload distributions that are non-stationary — yesterday's traffic pattern is tomorrow's irrelevant baseline. The four-condition framework therefore serves best as a diagnostic lens, not a formal proof system, when applied outside the kernel.
 
 Where the analogy reaches its limits is in the human and policy factors. Operating-system deadlock is determined by algorithm alone. Supply-chain deadlock involves vendor decisions, regulatory constraints, and social-engineering vulnerability. Cloud-platform deadlock mixes technical control with geopolitical factors that no algorithm can resolve. These domains require policy and human judgment in addition to systems theory.
 
@@ -331,9 +331,9 @@ The synthesis is qualitative by design and does not claim incident-impact quanti
 
 ## Closing Discussion: Toward Resilience-Aware Design
 
-More than five decades after Coffman, Elphick, and Shoshani formalized the conditions for deadlock, and building on Dijkstra's foundational work on [semaphores](<https://en.wikipedia.org/wiki/Semaphore_(programming)>), the [Banker's algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm), and the [dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem), the same structural patterns recur in systems that programmers and infrastructure teams do not think of as "concurrent." A supply chain developer does not initially conceive of package publication as a mutual exclusion problem. A cloud platform architect does not frame regional partnerships as a resource allocation puzzle. An LLM inference system engineer may not initially map token slots to semaphore theory.
+More than five decades after Coffman, Elphick, and Shoshani formalised the conditions for deadlock — building on Dijkstra's foundational work on [semaphores](<https://en.wikipedia.org/wiki/Semaphore_(programming)>), the [Banker's algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm), and the [dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem) — the same structural patterns keep surfacing in systems that nobody thinks of as "concurrent." A supply-chain developer does not conceive of package publication as a mutual exclusion problem. Why would they? A cloud-platform architect does not frame regional partnerships as a resource-allocation puzzle. An LLM inference engineer may never map token slots to semaphore theory until the queue locks up at 3 a.m.
 
-Yet each domain benefits from acknowledging this structure explicitly. Deadlock is not a phenomenon that only happens in low-level threading code. It is a structural pattern that emerges whenever resources are finite, threads compete for them, and acquisition order is not globally constrained. The corollary is powerful: the mitigation strategies that operating-systems researchers developed for the kernel apply with fidelity to arbitrarily higher levels of abstraction.
+And yet. Each domain benefits from acknowledging this structure explicitly. Deadlock is not confined to low-level threading code. It is a structural pattern that emerges whenever resources are finite, threads compete for them, and acquisition order is not globally constrained. The corollary cuts deeper than it first appears: mitigation strategies that OS researchers developed for the kernel apply with surprising fidelity to arbitrarily higher levels of abstraction.
 
 This article has converted Coffman's four conditions into a diagnostic and preventive framework for three domains: supply chains, cloud platforms, and LLM systems. Each domain presents versions of the same four conditions. Each can apply modern scheduling, preemption, and spooling techniques to break the cycle. The gains are operational: reduced incident severity, faster recovery, and more predictable resource behavior.
 
@@ -390,7 +390,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - [Citability Snapshot](#citability-snapshot)
 - [Authoritative Reference Set](#authoritative-reference-set)
 - [Concurrency Term Reference](#concurrency-term-reference)
-- [SEO, GEO, and AEO Optimisation Notes](#seo-geo-and-aeo-optimisation-notes)
 
 ### Citability Snapshot
 
@@ -445,16 +444,6 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 **Circular Wait**: A cycle in the resource-request graph in which thread T₁ waits for a resource held by thread T₂, thread T₂ waits for a resource held by thread T₃, …, thread Tₙ waits for a resource held by thread T₁.
 
 **Hold and Wait**: A condition in which a thread holds a resource while waiting for another resource. Breaking this condition prevents deadlock but requires either atomic multi-resource acquisition or forced release of all held resources before waiting.
-
-### SEO, GEO, and AEO Optimisation Notes
-
-**Target queries**: "deadlock prevention techniques", "Coffman conditions explained", "deadlock vs starvation", "resource contention cloud platforms", "LLM inference scheduling deadlock".
-
-**Schema signals**: FAQPage schema with evidence-grounded answers, Article schema with author attribution and datePublished.
-
-**AEO coverage**: FAQ entries with prevention guidance, structured concurrency term reference, cross-domain Coffman-condition analysis across supply chains, cloud platforms, and LLM systems.
-
-**GEO coverage**: Deadlock theory and concurrency controls are universally applicable across computing environments; the cross-domain analysis covers supply-chain, cloud-platform, and LLM-inference contexts without geographic restriction.
 
 </details>
 
