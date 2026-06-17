@@ -55,9 +55,9 @@ tags:
 
 ## The Quantum Threat to Public-Key Cryptography
 
-RSA, ECDH, DSA. All three depend on problems that a fault-tolerant quantum computer solves in polynomial time. Shor's algorithm does not gradually weaken these schemes or shave bits off their security margins; it annihilates them outright {% include references/cite.html key="10543513" %}. The result is not gradual degradation. It is categorical collapse to plaintext-equivalent exposure.
+RSA, ECDH, DSA. All three depend on problems that a fault-tolerant quantum computer solves in polynomial time. Shor's algorithm does not gradually weaken these schemes or shave bits off their security margins; it annihilates them outright {% include references/cite.html key="10543513" %}. The result is categorical collapse to plaintext-equivalent exposure.
 
-When does this actually happen? Nobody agrees. A decade, perhaps several; the estimates keep shifting and the confidence intervals remain embarrassingly wide. But focusing on arrival timelines misframes the problem entirely. "Harvest now, decrypt later" inverts the chronology. Adversaries are already collecting encrypted traffic, warehousing it for the day a sufficiently large machine can strip the ciphertext bare {% include references/cite.html key="11325571" %}. State secrets with 50-year classification windows, genomic records that remain sensitive for a patient's lifetime, infrastructure blueprints for systems that will operate for decades: for these categories of data, the migration deadline has quietly passed while the industry was still debating timelines.
+When does this actually happen? Nobody agrees. A decade, perhaps several, and the estimates keep shifting. But focusing on when quantum computers arrive misframes the problem entirely, because "harvest now, decrypt later" inverts the chronology. Adversaries are already collecting encrypted traffic and storing it for future decryption {% include references/cite.html key="11325571" %}. State secrets with 50-year classification windows, genomic records that remain sensitive for a patient's lifetime, infrastructure blueprints for systems that will operate for decades: for these categories of data, the migration deadline has quietly passed while the industry was still debating timelines.
 
 > **Mosca's Inequality:** If the time to migrate (T) plus the data sensitivity lifetime (D) exceeds the time until quantum capability arrives (Q), then the data is already at risk. $D + T > Q$ implies immediate action is required {% include references/cite.html key="10543513" %}.
 
@@ -88,11 +88,9 @@ Post-quantum cryptography replaces the mathematical problems that Shor's algorit
 <dd>Finding the shortest or closest vector in a high-dimensional lattice. The Learning With Errors (LWE) and Module-LWE variants underpin CRYSTALS-Kyber (key encapsulation) and CRYSTALS-Dilithium (digital signatures).</dd>
 </dl>
 
-Lattice schemes are the pragmatist's choice. Among PQC families, they come closest to drop-in replacements for classical public-key cryptography: encryption, key exchange, digital signatures, all on commodity hardware with key sizes that are larger than RSA/ECC equivalents but not cripplingly so. NIST selected CRYSTALS-Kyber for key encapsulation and CRYSTALS-Dilithium as one of three standardised signature algorithms {% include references/cite.html key="11325571" %}.
+Among PQC families, lattice-based schemes come closest to drop-in replacements for classical public-key cryptography. They support encryption, key exchange, and digital signatures with key sizes and operation speeds that, while larger than RSA/ECC equivalents, remain practical on commodity hardware. NIST selected CRYSTALS-Kyber for key encapsulation and CRYSTALS-Dilithium as one of three standardised signature algorithms {% include references/cite.html key="11325571" %}.
 
-The key size increase is real but manageable: a Kyber-768 public key weighs in at 1,184 bytes versus 64 bytes for ECDH P-256. Does that matter? Context decides. For a TLS handshake on a modern server, the overhead vanishes into noise. For a constrained IoT sensor transmitting over a low-bandwidth radio link at 250 kbps, every byte counts. The deeper concern is that lattice security proofs rely on worst-case to average-case reductions whose tightness is still debated. The schemes work, the implementations are fast, but the theoretical guarantees are not as airtight as we might like.
-
-Here is something none of the surveyed papers say directly, but that anyone working on migration planning will encounter: the lattice monoculture problem is not just a cryptanalytic risk. It is a supply-chain risk. Every PQC library, every hardware security module vendor, every TLS stack integrator is converging on the same Module-LWE assumption. If that assumption weakens even partially (not a full break, just a meaningful reduction in concrete security), the remediation would need to propagate through every layer of the software stack simultaneously. We have seen what single-point-of-failure dependency looks like in software supply chains. Applying the same pattern to cryptographic foundations should make us uncomfortable.
+The key size increase is real but manageable: a Kyber-768 public key weighs in at 1,184 bytes compared to 64 bytes for ECDH P-256. Whether that matters depends on the deployment context. For a TLS handshake on a modern server, the difference is negligible. For a constrained IoT sensor transmitting over a low-bandwidth radio link, it might not be. The deeper concern is that lattice security proofs rely on worst-case to average-case reductions whose tightness is still debated. The schemes work, the implementations are fast, but the theoretical guarantees are not as airtight as we might like.
 
 ### Code-Based Cryptography
 
@@ -101,8 +99,9 @@ Here is something none of the surveyed papers say directly, but that anyone work
 <dd>Built on the hardness of decoding random linear error-correcting codes. The McEliece cryptosystem (1978) is the oldest PQC candidate, and newer variants like HQC and BIKE use structured codes for improved efficiency.</dd>
 </dl>
 
-Code-based schemes own the longest track record in PQC. McEliece has survived over 45 years of sustained cryptanalytic assault (more than any lattice construction can claim, and considerably more than most cryptographers' careers). The penalty? Key size. A McEliece public key occupies roughly 1 MB, rendering it impractical for most communication protocols {% include references/cite.html key="10543513" %}. Newer code-based designs (HQC, BIKE) use structured codes to shrink keys substantially, but they trade the well-studied random-code hardness assumption for algebraic structure that could, in theory, be exploited.
+Code-based schemes have the longest track record in PQC. McEliece has survived over 45 years of cryptanalytic scrutiny, which is more than can be said for any lattice-based construction. The penalty is key size: a McEliece public key occupies roughly 1 MB, which makes it impractical for most communication protocols {% include references/cite.html key="10543513" %}. Newer code-based designs (HQC, BIKE) use structured codes to shrink keys substantially, but they trade the well-studied random-code hardness assumption for algebraic structure that could, in theory, be exploited.
 
+He et al. tackle the hardware side of this problem {% include references/cite.html key="10.1145/3703837" %}. Their two sparse polynomial multiplication accelerators for HQC and BIKE achieve 56.84% and 80.25% lower area-delay product (ADP) than previous designs, which matters if code-based PQC is ever going to run on anything smaller than a server rack.
 He et al. tackle the hardware side of this problem {% include references/cite.html key="10.1145/3703837" %}. Their two sparse polynomial multiplication accelerators for HQC and BIKE achieve 56.84% and 80.25% lower area-delay product (ADP) than previous designs, which matters if code-based PQC is ever going to run on anything smaller than a server rack.
 
 <figure markdown="1">
@@ -122,9 +121,9 @@ He et al. tackle the hardware side of this problem {% include references/cite.ht
 <dd>Digital signatures constructed from hash function properties alone. SPHINCS+ (now SLH-DSA) relies only on the collision resistance and pre-image resistance of hash functions, making it the most conservative security assumption in PQC.</dd>
 </dl>
 
-Hash-based signatures occupy the conservative extreme. No exotic algebra, no lattice assumptions, no structured codes. Their security reduces entirely to hash function properties (collision resistance, pre-image resistance), which cryptographers have stress-tested for decades and which survive Grover's speedup when output lengths are doubled. NIST selected SPHINCS+ (now SLH-DSA) as one of three standardised signature algorithms {% include references/cite.html key="11325571" %}.
+Hash-based signatures sit at the conservative end of the PQC spectrum. Their security reduces entirely to hash function properties (collision resistance, pre-image resistance), which are well understood and survive Grover's speedup when output lengths are doubled. NIST selected SPHINCS+ (now SLH-DSA) as one of three standardised signature algorithms {% include references/cite.html key="11325571" %}.
 
-The trade-off is brutal, not subtle. SPHINCS+-256s signatures balloon to 49 KB, and signing lags behind lattice alternatives by a wide margin. Worth it? For root-of-trust certificate signing and firmware attestation, where assumption strength trumps throughput: absolutely. For high-throughput TLS connections handling thousands of handshakes per second: almost certainly not.
+The trade-off is not subtle. SPHINCS+-256s signatures can reach 49 KB, and signing is slower than lattice alternatives. For applications where signature size and signing speed are secondary to the strength of the underlying security assumption (think root-of-trust certificate signing, firmware attestation), that trade-off is worth making. For high-throughput TLS connections, probably not.
 
 ### Multivariate Cryptography
 
@@ -137,9 +136,7 @@ The Rainbow break deserves attention because of what it reveals about the maturi
 
 SIKE (Supersingular Isogeny Key Encapsulation) collapsed even more dramatically. Castryck and Decru broke it "in about one hour on a single core" {% include references/cite.html key="11325571" %} by exploiting torsion-point information in the SIDH protocol, building on a theorem by Kani from 1997. The technical mechanism (a genus-2 Richelot isogeny construction) is less important than the implication: a mathematical observation from over two decades earlier, sitting in the literature unnoticed, contained the seed of a complete break.
 
-What should practitioners take from this? Two things. First: PQC algorithms are young, and the mathematical bedrock beneath them has received far less adversarial punishment than RSA's integer factorisation (which withstood four decades of concentrated effort by the world's best number theorists). Second: building systems that can swap algorithms without a full redesign is not a nice-to-have. It is a survival requirement.
-
-I will state something blunter than the papers do. The SIKE break should have been a field-wide wake-up call about the limits of competition-based cryptographic assurance. NIST's process is rigorous, but it evaluates submitted candidates against known attack techniques. It does not, and cannot, guarantee that a theorem from 1997 will not resurface as a complete break in 2022. The fact that the Kani theorem sat in the literature for 25 years before anyone connected it to SIDH is not an anomaly; it is a structural feature of mathematics. Results migrate across subfields unpredictably. Any security model that assumes "extensively evaluated" equals "safe" has already been falsified by SIKE.
+What should practitioners take from this? PQC algorithms are young, and the mathematical problems they rely on have received far less adversarial scrutiny than RSA's integer factorisation. Building systems that can swap algorithms without a full redesign is not a nice-to-have. It is a survival requirement.
 
 ## Hardware Acceleration for Code-Based PQC
 
@@ -155,12 +152,16 @@ Both designs are generic across all HQC and BIKE security levels (128, 192, 256-
 
 ### Practical Significance
 
-With NIST's March 2025 selection of HQC for standardisation, accelerators like these move from speculative to directly relevant. They become the implementation foundation for embedded systems, IoT gateways, and network appliances where software-only PQC performance is often insufficient. The gap between what software can deliver and what constrained environments demand is exactly where FPGA acceleration earns its complexity cost.
+If NIST standardises HQC or BIKE (both remain under evaluation as of mid-2026), accelerators like these become the implementation foundation for embedded systems, IoT gateways, and network appliances. Software-only PQC performance on resource-constrained hardware is often insufficient, and the gap between what software can deliver and what constrained environments demand is exactly where FPGA acceleration earns its complexity cost.
+
+## Hybrid QC/PQC: Defence in Depth, or Wishful Layering?
 
 ## Hybrid QC/PQC: Defence in Depth, or Wishful Layering?
 
 Kavitha et al. propose combining quantum key distribution (QKD) with PQC encryption as a defence-in-depth strategy {% include references/cite.html key="11011628" %}. The logic is appealing: QKD provides information-theoretic security grounded in physics, while PQC provides computational security on classical infrastructure. An attacker who needs to break _both_ faces a higher bar than either defence alone.
+Kavitha et al. propose combining quantum key distribution (QKD) with PQC encryption as a defence-in-depth strategy {% include references/cite.html key="11011628" %}. The logic is appealing: QKD provides information-theoretic security grounded in physics, while PQC provides computational security on classical infrastructure. An attacker who needs to break _both_ faces a higher bar than either defence alone.
 
+A caveat is warranted here. The Kavitha et al. proposal is conceptual. No prototype was built, no simulation was run, no performance data was collected. The architecture is plausible but entirely unvalidated, and no formal security model exists to prove that the combination actually provides strictly greater security than either component in isolation. The argument that "two layers must be better than one" sounds intuitive, but intuition is not proof.
 A caveat is warranted here. The Kavitha et al. proposal is conceptual. No prototype was built, no simulation was run, no performance data was collected. The architecture is plausible but entirely unvalidated, and no formal security model exists to prove that the combination actually provides strictly greater security than either component in isolation. The argument that "two layers must be better than one" sounds intuitive, but intuition is not proof.
 
 <figure markdown="1">
@@ -189,17 +190,17 @@ For typical enterprise applications, PQC alone is sufficient and far more practi
 
 ## Reconceptualising Security Models
 
-The quantum transition is not an algorithm swap. It forces something deeper: a rethinking of how security is defined, how it is quantified, and how long any given defence can be trusted before it decays into false assurance.
+The quantum transition does not just swap one set of algorithms for another. It forces a rethinking of how security is defined, how it is measured, and how long any given defence can be trusted.
 
 ### Crypto-Agility as a Design Primitive
 
 Classical cryptographic deployment operated on an assumption that now looks dangerously optimistic: algorithms would last decades. RSA-2048 was expected to remain secure until 2030 at a minimum. PQC algorithms have survived, at most, a few years of serious scrutiny. SIKE and Rainbow demonstrate that multi-year expert evaluation can still miss fatal weaknesses {% include references/cite.html key="10.1145/3575664" %}.
 
-So algorithm replacement needs to become ordinary. Boring, even. Not an emergency convened in a crisis room. Not a multi-year migration programme with executive sponsors and Gantt charts. A routine maintenance operation, as unremarkable as rotating certificates or patching a dependency on a Tuesday afternoon. TLS 1.3 already supports algorithm negotiation with PQC extensions; hybrid certificates (PQ/T) allow dual-signing during transition periods; key encapsulation can be abstracted behind interfaces that support swapping. The engineering patterns exist. The organisational discipline to treat cryptographic primitives as replaceable modules, rather than load-bearing permanent infrastructure, does not.
+So algorithm replacement needs to become ordinary. Not an emergency. Not a migration project. A routine maintenance operation, like rotating certificates or patching dependencies. TLS 1.3 already supports algorithm negotiation with PQC extensions; hybrid certificates (PQ/T) allow dual-signing during transition periods; key encapsulation can be abstracted behind interfaces that support swapping. The engineering patterns exist. The organisational discipline to treat cryptographic primitives as replaceable modules, rather than load-bearing permanent infrastructure, does not.
 
 ### Layered Defence and System-Level Thinking
 
-"One good algorithm is enough" was always a simplification. Now it is a dangerous one. Confidence in any single PQC algorithm sits well below where confidence in RSA sat for most of its operational life, and layered defence becomes the rational response: PQC for computational resistance, QKD where physics-based guarantees justify the expense and infrastructure overhead, forward secrecy to contain blast radius when (not if) a key is compromised, aggressive key rotation to limit exposure windows.
+The old assumption that "one good algorithm is enough" does not hold when confidence in any single algorithm is lower than it was for RSA. Layered defence becomes rational: PQC for computational resistance, QKD where physics-based guarantees are justified by the threat model and budget, forward secrecy to contain the blast radius when a key is compromised, aggressive key rotation to limit exposure windows.
 
 But here is the part that gets less attention than it should. An algorithm's theoretical security means nothing if the implementation leaks timing information through a side channel, or the key management system stores secrets in a world-readable file, or the migration process itself introduces a compatibility gap that silently downgrades connections to classical algorithms. PQC algorithm research has outpaced deployment engineering by a wide margin {% include references/cite.html key="11325571" %}. The gap is understandable in a field this young. It is also the gap that will determine whether the transition succeeds or stalls at pilot stage.
 
@@ -266,7 +267,7 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 
 ### A. Boundary Conditions on the Evidence
 
-The hardware acceleration results from He et al. are FPGA-specific with no ASIC validation, and the performance figures apply to sparse polynomial multiplication in isolation rather than full cryptosystem operation. The hybrid QC/PQC analysis from Kavitha et al. is conceptual only; no prototype, simulation, or benchmark was produced, which limits its value to architectural inspiration rather than engineering guidance. Algorithm vulnerability assessments reflect the cryptanalytic state of the art at the time of the cited publications; subsequent attacks could invalidate any claim. NIST selected HQC for standardisation in March 2025, with draft FIPS development underway; the final standard may refine parameter choices or implementation guidance.
+The hardware acceleration results from He et al. are FPGA-specific with no ASIC validation, and the performance figures apply to sparse polynomial multiplication in isolation rather than full cryptosystem operation. The hybrid QC/PQC analysis from Kavitha et al. is conceptual only; no prototype, simulation, or benchmark was produced, which limits its value to architectural inspiration rather than engineering guidance. Algorithm vulnerability assessments reflect the cryptanalytic state of the art at the time of the cited publications; subsequent attacks could invalidate any claim. NIST standardisation status reflects published standards as of mid-2026; the fourth-round evaluations of HQC and BIKE may alter the available algorithm portfolio.
 
 ### B. Glossary of Technical Terms
 
@@ -301,5 +302,13 @@ The hardware acceleration results from He et al. are FPGA-specific with no ASIC 
 
 <figcaption>Table A1: Summary of reviewed literature for the theoretical foundations domain.</figcaption>
 </figure>
+
+### D. SEO, GEO, and AEO Optimisation Notes
+
+**Primary search terms:** post-quantum cryptography, lattice-based cryptography, CRYSTALS-Kyber, CRYSTALS-Dilithium, Shor's algorithm, crypto-agility, NIST PQC standards.
+
+**Structured data:** HowTo and FAQ schemas are implemented. Article schema includes author attribution and citation metadata.
+
+**Cross-references:** Linked to the companion PQC migration and sector deployment articles, and to the representation learning article for shared mathematical context.
 
 </details>

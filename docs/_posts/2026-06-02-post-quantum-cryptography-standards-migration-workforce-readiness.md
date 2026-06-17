@@ -57,9 +57,9 @@ tags:
 
 ## The Migration Problem
 
-The algorithms exist. NIST published its first post-quantum cryptographic standards in 2024: ML-KEM (CRYSTALS-Kyber) for key encapsulation, ML-DSA (CRYSTALS-Dilithium) for digital signatures, and SLH-DSA (SPHINCS+) for hash-based signatures {% include references/cite.html key="11325571" %}. So the primitives are settled. Deployment capability? Virtually absent.
+The algorithms exist. NIST published its first post-quantum cryptographic standards in 2024: ML-KEM (CRYSTALS-Kyber) for key encapsulation, ML-DSA (CRYSTALS-Dilithium) for digital signatures, and SLH-DSA (SPHINCS+) for hash-based signatures {% include references/cite.html key="11325571" %}. Standards exist. What does not exist, at any meaningful scale, is the organisational capability to deploy them.
 
-The cryptography is, frankly, the easy part. Organisations that cannot inventory their own key material will not swap algorithms on schedule; elegance of the replacement primitives is irrelevant when you lack a reliable asset register. The [theoretical foundations article](/post-quantum-cryptography-theoretical-foundations-reconceptualisation) covered the mathematical underpinnings. This article asks the harder question: can engineering capacity, educational infrastructure, and institutional willingness converge before Mosca's inequality closes the window? History suggests probably not without deliberate intervention.
+This has stopped being a cryptographic problem. It is a people problem and a software engineering problem that happens to wear a cryptography hat. The [companion theoretical review](/post-quantum-cryptography-theoretical-foundations-reconceptualisation) covered the mathematical foundations. This article turns to the harder question: whether the engineering, educational, and organisational infrastructure can be built in time.
 
 ## NIST Standardisation: What It Settled and What It Left Open
 
@@ -81,7 +81,7 @@ The NIST PQC competition (2016–2024) resolved the primary algorithm selection 
 
 ### What Remains Open
 
-NIST selected HQC for standardisation in March 2025, adding a code-based KEM to the portfolio alongside the lattice-based ML-KEM. Draft standardisation work is ongoing. BIKE was not selected. The HQC addition provides algorithm diversity beyond the lattice family, which matters for systemic risk management {% include references/cite.html key="11325571" %}.
+Code-based KEM candidates (HQC, BIKE) remain under fourth-round evaluation. If standardised, they would provide algorithm diversity beyond the lattice family, which matters for systemic risk management {% include references/cite.html key="11325571" %}.
 
 Post-quantum zero-knowledge proofs account for roughly 13% of recent PQC publications {% include references/cite.html key="10392726" %}, but mature constructions ready for standardisation do not yet exist.
 
@@ -113,7 +113,7 @@ The most novel contribution in the migration space comes from Wahlang and Vidhan
 
 ### The Problem
 
-Enterprise codebases are littered with cryptographic call sites. `from Crypto.PublicKey import RSA`. `nacl.public.PrivateKey()`. `ec.generate_private_key(ec.SECP256R1())`. Every single one needs finding, understanding, and replacing. At enterprise scale, manual migration measures in years, not sprints. Mosca's inequality tells us migration time (T) is the one variable organisations can actually compress; ccPASTpqc targets exactly that bottleneck.
+Enterprise codebases are littered with cryptographic call sites. `from Crypto.PublicKey import RSA`. `nacl.public.PrivateKey()`. `ec.generate_private_key(ec.SECP256R1())`. Each one needs to be found, understood, and replaced. Manual migration at enterprise scale is slow enough to be measured in years rather than sprints, and Mosca's inequality tells us that migration time (T) is the one variable organisations can actually compress. That is ccPASTpqc's target.
 
 ### The Approach
 
@@ -136,11 +136,9 @@ Enterprise codebases are littered with cryptographic call sites. `from Crypto.Pu
 <figcaption>Table 3: ccPASTpqc performance metrics (Wahlang and Vidhani, 2026).</figcaption>
 </figure>
 
-**Critical caveat:** A 0.925 BLEU score tells you the output text _resembles_ correct code. Does it compile? Does it pass tests? Does it preserve the security properties of the original? Unknown. The translated GitHub code was never execution-tested {% include references/cite.html key="10.1145/3799830.3799836" %}. Anyone who has spent time debugging LLM-generated code recognises the chasm between "syntactically plausible" and "silently violates an invariant that a human developer would catch by instinct." Production migration demands execution testing and security auditing of every translated function. Full stop.
+**Critical caveat:** A 0.925 BLEU score tells you the output text looks like correct code. It does not tell you whether the code compiles, passes tests, or preserves the security properties of the original implementation. The translated GitHub code was never execution-tested {% include references/cite.html key="10.1145/3799830.3799836" %}. Anyone who has spent time debugging LLM-generated code knows the gap between "syntactically plausible" and "silently violates an invariant that a human developer would catch by instinct." For production migration, execution testing and security auditing of every translated function are non-negotiable.
 
-Let me push this further than the paper does. BLEU is the wrong instrument here. It measures n-gram overlap: how closely output text resembles a reference. Consider a translated function that calls the correct APIs in the wrong order, initialises a nonce deterministically instead of randomly, or quietly omits a key-derivation step. That function could score 0.9+ on BLEU while producing code that is functionally broken and cryptographically dangerous. What cryptographic migration tooling actually needs is semantic equivalence testing: does the output produce the same ciphertexts for the same inputs? Surface similarity metrics cannot answer that question. The fact that ccPASTpqc was evaluated without a single execution test is not merely a limitation. It is a methodological gap that undermines the central claim.
-
-**Practical gap:** Most production cryptographic code lives in C, C++, Java, and Go. ccPASTpqc covers Python only. Proof of concept, not a deployable migration tool. You cannot hand this to your engineering team and walk away.
+**Practical gap:** Most production cryptographic code lives in C, C++, Java, and Go. ccPASTpqc covers Python only. This is a proof of concept, not a migration tool you can hand to your engineering team and walk away.
 
 ### What Practitioners Should Do Now
 
@@ -183,7 +181,7 @@ This means PQC slots into the existing TLS protocol framework without protocol-l
 
 ## The Workforce Readiness Gap
 
-Three independent studies arrive at the same uncomfortable finding. Different countries. Different target audiences. Same conclusion: the technical tools for PQC migration exist, but trained practitioners do not. Not at scale. The evidence comes from small programmes, and the confidence we can place in their generalisability is limited. Still, consistency of direction across uncoordinated efforts warrants attention.
+Three independent studies, from different countries and targeting different audiences, arrive at the same uncomfortable finding: the technical tools for PQC migration exist, but trained practitioners do not. Not at scale. The evidence comes from small programmes, and the confidence we can place in their generalisability is limited, but the consistency of direction across uncoordinated efforts is worth noting.
 
 ### Evidence from Three Educational Programmes
 
@@ -220,8 +218,6 @@ The evidence base here is thin. Three programmes at three institutions, with the
 
 4. **Ongoing:** Maintain crypto-agility as an organisational competency, not just a technical property. When NIST publishes a deprecation notice or a new attack surfaces, the response time should be measured in weeks, not quarters.
 
-One observation from watching how organisations actually handle cryptographic transitions: the workforce gap is not primarily a knowledge gap. Most security engineers can learn Kyber's API in an afternoon. The real gap is operational confidence. Teams that have never rotated a production cryptographic primitive have no institutional memory of what goes wrong during the process: the certificate chains that silently downgrade, the legacy clients that negotiate away PQC, the monitoring blind spots where a hybrid handshake fails and nobody notices until the audit. That kind of operational muscle memory cannot be built from slide decks. It requires rehearsal on staging infrastructure, with deliberate failure injection, before anyone touches production.
-
 ## Migration Planning Framework
 
 Synthesising the migration-related findings yields a practical framework:
@@ -255,9 +251,9 @@ Synthesising the migration-related findings yields a practical framework:
 
 ## Takeaways
 
-NIST resolved the algorithm question. Good. Now the harder problem: organisational readiness remains largely untouched. Workforce capacity, not algorithm availability, is the binding constraint on migration timelines. Three educational programmes point in a consistent direction (modular, bottom-up, hands-on), but the evidence base is narrow. Small cohorts at single institutions, one programming language, zero longitudinal outcome data.
+NIST resolved the algorithm question. The harder problem, organisational readiness, remains largely untouched. Workforce capacity, not algorithm availability, is the binding constraint on migration timelines. Three educational programmes point in a consistent direction (modular, bottom-up, hands-on), but the evidence base is narrow: small cohorts at single institutions, one programming language, no longitudinal outcome data.
 
-Automated migration tooling shows promise but carries a dangerous gap. ccPASTpqc achieves 0.925 BLEU on Python conversions, encouraging for draft generation, meaningless for functional correctness. No execution testing validates the output. Production languages (C, C++, Java, Go, Rust) lack equivalent tooling entirely. Treat the output as raw material for human review. Not a substitute.
+Automated migration tooling shows promise. ccPASTpqc achieves 0.925 BLEU on Python conversions, which is encouraging for draft generation but tells us nothing about functional correctness. No execution testing validates the output, and production languages (C, C++, Java, Go, Rust) lack equivalent tooling entirely. Treat it as a starting point for human review, not a substitute for it.
 
 Hybrid QKD/PQC network integration works within the TLS 1.3 extensibility model, which removes the protocol-redesign concern. The remaining work is practical engineering: zone-based deployment, QKMS bridge infrastructure, interoperability testing with existing certificate authorities. None of this has been validated at production scale.
 
@@ -301,7 +297,7 @@ No, and the confusion is not academic. Borrelli et al. found that students consi
 
 This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings on PQC standards, migration, and education from six papers spanning SIGCSE, IEEE, and ACM venues. Borrelli et al. (2024) is published at SIGCSE, the premier CS education venue. Steinfeld et al. (2026) bring hands-on professional training experience from Monash University and industry partnerships. Wahlang and Vidhani (2026) present the first dedicated PQC code migration tool using language models. Song and Kim (2023) provide quantitative research landscape mapping via topic modelling. Shim et al. (2024) present a hybrid network architecture aligned with South Korea's KISTI infrastructure.
 
-### A. Scope and Validity Constraints
+### A. Evidence Boundary Notes
 
 The ccPASTpqc results use BLEU and CodeBLEU, metrics that measure textual similarity rather than functional correctness; the authors did not execution-test their translated code on real projects. Educational programme evaluations rest on small cohorts at individual institutions (Borrelli: 14 and 21 students at RIT; Steinfeld: cohort size not reported), and the modular curriculum paper from Borrelli et al. (2026) is a 2-page poster with no assessment data. Generalising from these to workforce-wide strategy involves a significant inferential leap. The hybrid network architecture from Shim et al. is a protocol-level design; no performance benchmarks or scale testing accompany it. Song and Kim's topic modelling covers a single year of data using bag-of-words LDA, which captures surface-level thematic distribution but cannot assess paper quality or methodological rigour.
 
@@ -336,5 +332,13 @@ The ccPASTpqc results use BLEU and CodeBLEU, metrics that measure textual simila
 
 <figcaption>Table A1: Summary of reviewed literature for the standards, migration, and education domain.</figcaption>
 </figure>
+
+### D. SEO, GEO, and AEO Optimisation Notes
+
+**Primary search terms:** PQC migration, NIST PQC standards, post-quantum cryptography education, automated code migration, hybrid QKD PQC network, TLS 1.3 post-quantum, Mosca inequality, crypto-agility.
+
+**Structured data:** HowTo and FAQ schemas are implemented. Article schema includes author attribution and citation metadata.
+
+**Cross-references:** Linked to companion PQC theoretical foundations and sector deployment articles.
 
 </details>

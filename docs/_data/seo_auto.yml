@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-06-17T20:08:42Z"
+generated_at: "2026-06-17T20:23:40Z"
 signal_weights:
   title: 3
   categories: 5
@@ -30,9 +30,9 @@ keywords:
   - appendix
   - artificial
   - intelligence
+  - evidence
   - implementation
   - practical
-  - evidence
   - technical
   - architecture
   - evaluation
@@ -95,12 +95,12 @@ keywords:
   - boundaries
   - citability
   - protocol
-  - scope
   - npm
   - sovereignty
   - introduction
   - method
   - reference
+  - scope
   - first
   - legal
   - migration
@@ -156,6 +156,7 @@ keywords:
   - integration
   - langchain
   - nist
+  - optimisation
   - problem
   - starvation
   - adaptation
@@ -174,7 +175,6 @@ keywords:
   - compliance
   - conditions
   - core
-  - energy
 key_phrases:
   - artificial intelligence
   - lightning network
@@ -303,6 +303,7 @@ key_phrases:
   - reference set
   - retrieval-augmented generation
   - scope claim
+  - seo geo
   - snapshot authoritative
   - snapshot authoritative reference
   - software engineering artificial
@@ -315,7 +316,6 @@ key_phrases:
   - confidence calibration
   - data protection
   - data provenance machine
-  - data residency
 catchwords:
   - attribution
   - engineering
@@ -330,9 +330,9 @@ catchwords:
   - appendix
   - artificial
   - intelligence
+  - evidence
   - implementation
   - practical
-  - evidence
   - technical
   - architecture
   - evaluation
@@ -388,11 +388,11 @@ catchwords:
   - boundaries
   - citability
   - protocol
-  - scope
   - sovereignty
   - introduction
   - method
   - reference
+  - scope
   - first
   - legal
   - migration
@@ -441,6 +441,7 @@ catchwords:
   - incident
   - integration
   - langchain
+  - optimisation
   - problem
   - starvation
   - adaptation
@@ -457,7 +458,6 @@ catchwords:
   - common
   - compliance
   - conditions
-  - energy
 catchphrases:
   - technical appendix
   - citability snapshot
@@ -575,9 +575,9 @@ search_words:
   - appendix
   - artificial
   - intelligence
+  - evidence
   - implementation
   - practical
-  - evidence
   - technical
   - architecture
   - evaluation
@@ -640,12 +640,12 @@ search_words:
   - boundaries
   - citability
   - protocol
-  - scope
   - npm
   - sovereignty
   - introduction
   - method
   - reference
+  - scope
   - first
   - legal
   - migration
@@ -876,7 +876,7 @@ global_questions:
   - question: What does alignment mean in LLM systems, and what are its practical limits for large language models?
     answer: Alignment is the process of training or constraining an LLM so its outputs are helpful, honest, and harmless relative to intended use. The main techniques include supervised fine-tuning (SFT) on curated question-answer pairs, reinforcement learning from human feedback (RLHF) where human raters score responses and a reward model is trained on those preferences, and constitutional AI methods where the model critiques its own outputs against stated principles. Alignment does not eliminate all failure modes; recent aligned models report improved refusal behavior on specific benchmark suites, not universal reliability. Claims about alignment effectiveness should be evaluated within the reported evaluation setup rather than generalized.
   - question: What each paper assumes about the problem?
-    answer: "| Method | Problem framed as | Solution approach | Causal claim | |--------|-------------------|-------------------|--------------| | Causal SHAP | Need for causal graph → automation | PC algorithm + IDA | Yes: interventional |"
+    answer: "| Method | Problem framed as | Solution approach | Causal claim | | ----------- | ------------------------------------------------- | ------------------------------ | ------------------------------ | | Causal SHAP | Need for causal graph → automation | PC algorithm + IDA | Yes: interventional |"
   - question: What is LLM hallucination, and which controls reduce it in real deployments for large language models?
     answer: Hallucination occurs when an LLM generates plausible-sounding text that is factually wrong, internally inconsistent, or unsupported by any source. The root cause is that LLMs are trained to predict likely next tokens, not to assert truth. Prevention strategies include retrieval-augmented generation (grounding responses in retrieved source documents), contradiction checks against known facts, citation gates that require the model to specify a source for each factual claim, and multi-resolution evaluation that tests factuality separately from fluency. Hallucination is identified as a primary failure mode in both Brown et al. and the synthesis in this article.
   - question: What is the most dangerous RAG failure mode?
@@ -1074,9 +1074,9 @@ global_questions:
   - question: Is MCP more secure than A2A, or are they securing different boundaries for MCP vs A2A vs ACP?
     answer: Neither is universally “more secure.” They protect different boundaries. MCP emphasizes user consent, privacy, and tool safety for model-facing capability exposure. A2A emphasizes authenticated agent discovery, scoped task access, secure push delivery, and authorization across collaborating services. ACP-oriented deployments additionally depend on API gateway policy, token scope, and run-endpoint governance quality, so security posture is a composition problem, not a single-protocol verdict.
   - question: "Question 1: What model access do you have?"
-    answer: "| Access level | Available methods | Limitation | |-------------|-------------------|------------| | Black-box (API only) | LIME, SHAP (KernelSHAP), GAPS, MOFAE | Cannot use FACE, ExCIR, or C3A |"
+    answer: "| Access level | Available methods | Limitation | | ------------------------------ | ------------------------------------------------------ | ------------------------------ | | Black-box (API only) | LIME, SHAP (KernelSHAP), GAPS, MOFAE | Cannot use FACE, ExCIR, or C3A |"
   - question: "Question 2: What does your domain require?"
-    answer: "| Domain requirement | Preferred approach | Methods to consider | Methods to avoid | |-------------------|-------------------|-------------------|------------------| | Causal explanation | Causal SHAP (if < 30 features), ExCIR for awareness | Causal SHAP, ExCIR | Standard SHAP, LIME |"
+    answer: "| Domain requirement | Preferred approach | Methods to consider | Methods to avoid | | -------------------------- | --------------------------------------------------- | --------------------------------- | ------------------------------ | | Causal explanation | Causal SHAP (if < 30 features), ExCIR for awareness | Causal SHAP, ExCIR | Standard SHAP, LIME |"
   - question: "Question 3: What evaluation standard applies?"
     answer: "- **Research publication**: Use at least two evaluation paradigms (e.g., model-centric + data-centric). Report results across multiple datasets. Follow Dehdarirad's multi-factorial approach by stratifying results by evidence type or class. - **Production deployment**: Supplement automated metrics with human evaluation on a representative sample. Use Moreira et al.'s decision-path inspection for any tree-based model. - **Regulatory compliance**: The verification impossibility is a live compliance risk. Consider Model Cards for model-level documentation and accept that individual prediction explanations from black-box models cannot be independently verified."
   - question: Should I fine-tune my LLM in addition to using RAG?
@@ -1086,7 +1086,7 @@ global_questions:
   - question: When should teams choose fine-tuning versus prompt engineering for LLM workloads for large language models?
     answer: Fine-tuning updates model weights on a curated dataset, adapting the model's internal representations and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in Yang et al.'s practitioner survey.
   - question: "Hybrid QC/PQC: Defence in Depth, or Wishful Layering?"
-    answer: 'Kavitha et al. propose combining quantum key distribution (QKD) with PQC encryption as a defence-in-depth strategy. The logic is appealing: QKD provides information-theoretic security grounded in physics, while PQC provides computational security on classical infrastructure. An attacker who needs to break _both_ faces a higher bar than either defence alone. A caveat is warranted here. The Kavitha et al. proposal is conceptual. No prototype was built, no simulation was run, no performance data was collected. The architecture is plausible but entirely unvalidated, and no formal security model exists to prove that the combination actually provides strictly greater security than either component in isolation. The argument that "two layers must be better than one" sounds intuitive, but intuition is not proof. <figure markdown="1">'
+    answer: 'Kavitha et al. propose combining quantum key distribution (QKD) with PQC encryption as a defence-in-depth strategy. The logic is appealing: QKD provides information-theoretic security grounded in physics, while PQC provides computational security on classical infrastructure. An attacker who needs to break _both_ faces a higher bar than either defence alone. Kavitha et al. propose combining quantum key distribution (QKD) with PQC encryption as a defence-in-depth strategy. The logic is appealing: QKD provides information-theoretic security grounded in physics, while PQC provides computational security on classical infrastructure. An attacker who needs to break _both_ faces a higher bar than either defence alone. A caveat is warranted here. The Kavitha et al. proposal is conceptual. No prototype was built, no simulation was run, no performance data was collected. The architecture is plausible but entirely unvalidated, and no formal security model exists to prove that the combination actually provides strictly greater security than either component in isolation. The argument that "two layers must be better than one" sounds intuitive, but intuition is not proof.'
   - question: Which controls most effectively prevent deadlock in distributed production systems?
     answer: Four primary strategies correspond directly to breaking the four Coffman conditions. First, enforce a total order on resource acquisition to eliminate circular wait. Second, require atomic multi-resource acquisition or full release before requesting new resources to eliminate hold and wait. Third, implement preemption authority so the system can forcibly reclaim a blocked resource. Fourth, run cycle-detection on the live resource-request graph and reject configurations that would complete a cycle before they execute. Lessons 1 through 3 in this article cover practical implementations for supply chains, cloud platforms, and LLM inference systems.
   - question: Which tooling patterns are most relevant for ML provenance implementation today for data provenance?
@@ -3478,7 +3478,7 @@ posts:
       - technical
       - threat
       - signatures
-      - aes-256
+      - aeo
       - post-quantum cryptography
       - lattice-based cryptography
       - quantum computing
@@ -3570,7 +3570,7 @@ posts:
       - computing cryptographic primitives
     questions:
       - question: "Hybrid QC/PQC: Defence in Depth, or Wishful Layering?"
-        answer: 'Kavitha et al. propose combining quantum key distribution (QKD) with PQC encryption as a defence-in-depth strategy. The logic is appealing: QKD provides information-theoretic security grounded in physics, while PQC provides computational security on classical infrastructure. An attacker who needs to break _both_ faces a higher bar than either defence alone. A caveat is warranted here. The Kavitha et al. proposal is conceptual. No prototype was built, no simulation was run, no performance data was collected. The architecture is plausible but entirely unvalidated, and no formal security model exists to prove that the combination actually provides strictly greater security than either component in isolation. The argument that "two layers must be better than one" sounds intuitive, but intuition is not proof. <figure markdown="1">'
+        answer: 'Kavitha et al. propose combining quantum key distribution (QKD) with PQC encryption as a defence-in-depth strategy. The logic is appealing: QKD provides information-theoretic security grounded in physics, while PQC provides computational security on classical infrastructure. An attacker who needs to break _both_ faces a higher bar than either defence alone. Kavitha et al. propose combining quantum key distribution (QKD) with PQC encryption as a defence-in-depth strategy. The logic is appealing: QKD provides information-theoretic security grounded in physics, while PQC provides computational security on classical infrastructure. An attacker who needs to break _both_ faces a higher bar than either defence alone. A caveat is warranted here. The Kavitha et al. proposal is conceptual. No prototype was built, no simulation was run, no performance data was collected. The architecture is plausible but entirely unvalidated, and no formal security model exists to prove that the combination actually provides strictly greater security than either component in isolation. The argument that "two layers must be better than one" sounds intuitive, but intuition is not proof.'
       - question: Where Hybrid Might Make Sense?
         answer: 'Despite the thin evidence base, the use cases with the strongest rationale are narrow and specific: - **Government and military communications** where "harvest now, decrypt later" threats are existential and budgets can absorb quantum hardware costs - **Financial infrastructure** where transaction integrity carries multi-decade legal significance'
       - question: What makes post-quantum cryptography different from quantum cryptography?
@@ -3609,7 +3609,9 @@ posts:
       - tls
       - appendix
       - education
+      - evidence
       - gap
+      - notes
       - open
       - outcomes
       - problem
@@ -3619,8 +3621,6 @@ posts:
       - architecture
       - ccpastpqc
       - modular
-      - pathways
-      - planning
       - post-quantum cryptography
       - nist standards
       - cryptographic migration
@@ -3630,24 +3630,24 @@ posts:
       - workforce readiness
       - software engineering
       - code migration
+      - automated code
       - automated code migration
       - network architectures
-      - automated code
-      - post-quantum cryptography nist
-      - standards cryptographic migration
-      - nist standards cryptographic
-      - cryptographic migration workforce
-      - cryptography nist standards
-      - migration workforce development
-      - engineering post-quantum cryptography
-      - software engineering post-quantum
-      - workforce development software
-      - development software engineering
-      - cybersecurity software engineering
+      - hybrid qkd
       - qkd pqc
       - hybrid qkd pqc
+      - development software engineering
+      - workforce development software
+      - cybersecurity software engineering
+      - software engineering post-quantum
+      - engineering post-quantum cryptography
+      - post-quantum cryptography nist
+      - cryptography nist standards
+      - nist standards cryptographic
+      - cryptographic migration workforce
       - cybersecurity software
-      - hybrid qkd
+      - migration workforce development
+      - standards cryptographic migration
       - engineering post-quantum
       - cryptography nist
     catchwords:
@@ -3670,6 +3670,8 @@ posts:
       - development
       - appendix
       - education
+      - evidence
+      - notes
       - outcomes
       - problem
       - remains
@@ -3677,8 +3679,6 @@ posts:
       - tooling
       - architecture
       - ccpastpqc
-      - modular
-      - pathways
     search_words:
       - migration
       - pqc
@@ -3702,14 +3702,14 @@ posts:
       - workforce readiness
       - software engineering
       - code migration
+      - automated code
       - automated code migration
       - network architectures
-      - automated code
-      - post-quantum cryptography nist
-      - standards cryptographic migration
-      - nist standards cryptographic
-      - cryptographic migration workforce
-      - cryptography nist standards
+      - hybrid qkd
+      - qkd pqc
+      - hybrid qkd pqc
+      - development software engineering
+      - workforce development software
     questions:
       - question: What Practitioners Should Do Now?
         answer: "- Use ccPASTpqc-style tools for initial translation drafts, then review and test manually - Invest in cryptographic dependency inventories before migration (you cannot migrate what you have not catalogued) - Prioritise asymmetric key operations (symmetric encryption requires only key-size increases)"
@@ -3743,6 +3743,7 @@ posts:
       - engineering
       - applied
       - grid
+      - notes
       - production
       - covert
       - critical
@@ -3760,7 +3761,6 @@ posts:
       - smart
       - urgent
       - practice
-      - prototype-to-production
       - post-quantum cryptography
       - iot security
       - critical infrastructure
@@ -3806,6 +3806,7 @@ posts:
       - patterns
       - engineering
       - applied
+      - notes
       - production
       - covert
       - critical
@@ -3818,7 +3819,6 @@ posts:
       - convergent
       - dilithium
       - evidence
-      - kyber
     search_words:
       - iot
       - post-quantum
@@ -4407,7 +4407,7 @@ posts:
       - correlation problem
     questions:
       - question: What each paper assumes about the problem?
-        answer: "| Method | Problem framed as | Solution approach | Causal claim | |--------|-------------------|-------------------|--------------| | Causal SHAP | Need for causal graph → automation | PC algorithm + IDA | Yes: interventional |"
+        answer: "| Method | Problem framed as | Solution approach | Causal claim | | ----------- | ------------------------------------------------- | ------------------------------ | ------------------------------ | | Causal SHAP | Need for causal graph → automation | PC algorithm + IDA | Yes: interventional |"
       - question: When correlation awareness is enough?
         answer: "ExCIR raises an important question that the field has not settled: for which decisions do we need causal attributions, and when is correlation awareness sufficient? The answer depends on the decision's stakes and reversibility. A low-stakes, high-volume decision (e.g., product recommendation) can tolerate correlation-aware explanations because the cost of a misattribution is low. A high-stakes decision (e.g., medical diagnosis, loan denial) demands causal attribution because regulatory and ethical accountability requires answering counterfactual questions about what would have happened if a feature had been different."
       - question: Can ExCIR be extended to instance-level attribution?
@@ -4551,9 +4551,9 @@ posts:
       - practical guidance
     questions:
       - question: "Question 1: What model access do you have?"
-        answer: "| Access level | Available methods | Limitation | |-------------|-------------------|------------| | Black-box (API only) | LIME, SHAP (KernelSHAP), GAPS, MOFAE | Cannot use FACE, ExCIR, or C3A |"
+        answer: "| Access level | Available methods | Limitation | | ------------------------------ | ------------------------------------------------------ | ------------------------------ | | Black-box (API only) | LIME, SHAP (KernelSHAP), GAPS, MOFAE | Cannot use FACE, ExCIR, or C3A |"
       - question: "Question 2: What does your domain require?"
-        answer: "| Domain requirement | Preferred approach | Methods to consider | Methods to avoid | |-------------------|-------------------|-------------------|------------------| | Causal explanation | Causal SHAP (if < 30 features), ExCIR for awareness | Causal SHAP, ExCIR | Standard SHAP, LIME |"
+        answer: "| Domain requirement | Preferred approach | Methods to consider | Methods to avoid | | -------------------------- | --------------------------------------------------- | --------------------------------- | ------------------------------ | | Causal explanation | Causal SHAP (if < 30 features), ExCIR for awareness | Causal SHAP, ExCIR | Standard SHAP, LIME |"
       - question: "Question 3: What evaluation standard applies?"
         answer: "- **Research publication**: Use at least two evaluation paradigms (e.g., model-centric + data-centric). Report results across multiple datasets. Follow Dehdarirad's multi-factorial approach by stratifying results by evidence type or class. - **Production deployment**: Supplement automated metrics with human evaluation on a representative sample. Use Moreira et al.'s decision-path inspection for any tree-based model. - **Regulatory compliance**: The verification impossibility is a live compliance risk. Consider Model Cards for model-level documentation and accept that individual prediction explanations from black-box models cannot be independently verified."
       - question: Should I use SHAP or LIME as my default?
