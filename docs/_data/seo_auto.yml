@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-06-18T02:58:51Z"
+generated_at: "2026-06-18T06:06:35Z"
 signal_weights:
   title: 3
   categories: 5
@@ -72,11 +72,11 @@ keywords:
   - micropayments
   - practice
   - design
+  - domain
   - papers
   - credibility
   - post-quantum
   - quantum
-  - domain
   - literature
   - xai
   - china
@@ -121,6 +121,7 @@ keywords:
   - blockchain
   - inference
   - maturity
+  - synthesis
   - calibration
   - deep
   - patterns
@@ -134,7 +135,6 @@ keywords:
   - readiness
   - shap
   - standard
-  - synthesis
   - context
   - operational
   - analysis
@@ -145,6 +145,7 @@ keywords:
   - strategy
   - critical
   - enterprise
+  - fragmentation
   - hub
   - pipeline
   - reliability
@@ -163,7 +164,6 @@ keywords:
   - adaptation
   - communication
   - exact
-  - fragmentation
   - gap
   - infrastructure
   - knowledge
@@ -367,11 +367,11 @@ catchwords:
   - micropayments
   - practice
   - design
+  - domain
   - papers
   - credibility
   - post-quantum
   - quantum
-  - domain
   - literature
   - china
   - deadlock
@@ -412,6 +412,7 @@ catchwords:
   - blockchain
   - inference
   - maturity
+  - synthesis
   - calibration
   - patterns
   - playbook
@@ -422,7 +423,6 @@ catchwords:
   - quality
   - readiness
   - standard
-  - synthesis
   - context
   - operational
   - analysis
@@ -432,6 +432,7 @@ catchwords:
   - strategy
   - critical
   - enterprise
+  - fragmentation
   - pipeline
   - reliability
   - testing
@@ -448,7 +449,6 @@ catchwords:
   - adaptation
   - communication
   - exact
-  - fragmentation
   - infrastructure
   - knowledge
   - traceability
@@ -617,11 +617,11 @@ search_words:
   - micropayments
   - practice
   - design
+  - domain
   - papers
   - credibility
   - post-quantum
   - quantum
-  - domain
   - literature
   - xai
   - china
@@ -789,8 +789,6 @@ global_questions:
     answer: If causation is provably required (regulatory, medical, high-stakes), invest in Causal SHAP despite its assumptions and scalability limits. If correlation awareness is sufficient and computational efficiency matters, ExCIR offers a practical alternative. The threshold between "causation required" and "correlation sufficient" is a domain-specific policy judgement, not a technical one.
   - question: How should a practitioner choose between evaluation metrics?
     answer: "Start by asking: what kind of failure matters most? If false positive attributions (highlighting irrelevant features) are the main risk, use precision-oriented metrics. If false negatives (missing important features) are worse, use recall-oriented metrics or human evaluation. No single metric captures both."
-  - question: How should attribution be integrated into an ML pipeline?
-    answer: "At three points: (1) feature selection stage (Kost's XAI-FS approach), (2) model validation stage (evaluation against domain expert baselines), (3) production monitoring stage (tracking attribution stability under distribution shift). Most current practice only addresses the second stage."
   - question: How should confusion corridors be operationalized in production monitoring for support vector machine benchmark?
     answer: Track the highest-frequency class transitions as explicit alert channels and tie retraining or threshold updates to corridor-specific drift.
   - question: How should cross-border and tenant-aware controls be designed for agent orchestration for MCP vs A2A vs ACP?
@@ -957,6 +955,8 @@ global_questions:
     answer: "Data provenance and data lineage both trace data through a pipeline, but they differ in focus. Lineage records where data moved, which inputs fed which outputs. Provenance adds agent information: who or what performed each transformation, under what conditions, for what purpose, and with what authorization. The [W3C PROV](https://www.w3.org/TR/prov-overview/) standard formalizes this distinction using the entity-activity-agent model that Souza et al. extend in PROV-ML."
   - question: How long does a typical PQC migration take for an enterprise?
     answer: There is no typical case yet. Migration timelines depend on codebase size, cryptographic dependency count, and how deeply classical algorithms are embedded in the architecture. Automated tooling can accelerate the Python fraction, but manual review is still necessary for every converted function. For large enterprises with heterogeneous stacks, expect a multi-year programme. The first step, inventorying cryptographic dependencies, can start immediately and is worth doing regardless of migration timeline.
+  - question: How should attribution be integrated into an ML pipeline?
+    answer: "At three points: (1) feature selection stage (Kost's XAI-FS approach), (2) model validation stage (evaluation against domain expert baselines), (3) production monitoring stage (tracking attribution stability under distribution shift). Production monitoring for attribution drift is analogous to data and concept drift monitoring: track the rank correlation between current and baseline feature importance distributions, and alert when it drops below a threshold. Most current practice only addresses the second stage."
   - question: How should researchers and educators reuse these materials with legal and ethical care for large language models?
     answer: Use short quotations only when wording precision matters. Prefer paraphrase for interpretation. Maintain explicit attribution. Preserve links to original context. Where applicable under UK law, assess whether CDPA 1988 ss. 29 (research/private study) and 31A (text and data analysis for non-commercial research) conditions are genuinely satisfied before reuse. This applies equally to video content and to published scholarly works.
   - question: If standard attributions cannot be verified, why do they remain widely used?
@@ -4169,10 +4169,10 @@ posts:
       - evidence
       - papers
       - state
+      - synthesis
       - type
       - association
       - decision-path
-      - inspection
       - feature attribution
       - xai evaluation
       - time series
@@ -4232,9 +4232,9 @@ posts:
       - evidence
       - papers
       - state
+      - synthesis
       - association
       - decision-path
-      - inspection
     search_words:
       - evaluation
       - attribution
@@ -4559,7 +4559,7 @@ posts:
       - question: Should I use SHAP or LIME as my default?
         answer: The evidence in this series shows both have known failure modes. SHAP conflates correlation with causation (Janzing, Ng). LIME underperforms on time series (Troncoso-García). Use the decision framework above to select based on your specific constraints, and always validate with at least one metric from a different paradigm.
       - question: How should attribution be integrated into an ML pipeline?
-        answer: "At three points: (1) feature selection stage (Kost's XAI-FS approach), (2) model validation stage (evaluation against domain expert baselines), (3) production monitoring stage (tracking attribution stability under distribution shift). Most current practice only addresses the second stage."
+        answer: "At three points: (1) feature selection stage (Kost's XAI-FS approach), (2) model validation stage (evaluation against domain expert baselines), (3) production monitoring stage (tracking attribution stability under distribution shift). Production monitoring for attribution drift is analogous to data and concept drift monitoring: track the rank correlation between current and baseline feature importance distributions, and alert when it drops below a threshold. Most current practice only addresses the second stage."
       - question: What should I tell a regulator about my explanations?
         answer: Be honest about what they cannot do. Standard post-hoc explanations from black-box models cannot be verified for individual cases (Bhalla). They are aggregate statistical summaries, not guarantees of model behaviour. If a regulator requires verifiable explanations, you need either an inherently interpretable model or a VerT-adapted model.
       - question: How much should I invest in attribution infrastructure?

@@ -76,11 +76,11 @@ This article is not legal advice.
 
 FACE (Feature Attribution Computed Exactly) exploits the piecewise-linear structure of feedforward ReLU networks to compute attributions exactly {% include references/cite.html key="CARLESBOU2026108277" %}. For any input, the activation pattern of each neuron determines which linear region the point falls into. Within that region, the network reduces to a single linear transformation of the composite weight matrices. Attribution is the Hadamard product of the composite weight matrix with the input. No sampling. No perturbation. No approximation.
 
-The result that matters most: exact computation is cheaper than approximation. FACE requires only a single forward pass plus matrix operations to build the composite weight matrix, making it 1 to 2 orders of magnitude faster than LIME and kernelSHAP, while achieving perfect fidelity (ICC2/kappa = 1.000) by construction.
+The result that matters most: exact computation is cheaper than approximation. FACE requires only a single forward pass plus matrix operations to build the composite weight matrix, making it 1 to 2 orders of magnitude faster than LIME and kernelSHAP. Perfect fidelity (ICC2/kappa = 1.000) follows necessarily from the exact computation. It is a mathematical property of the method, not an empirical achievement, and holds by construction for any input within a linear region.
 
 > **Core trade-off:** This is architecture-specific. It works for feedforward ReLU networks only. Convolutional networks, transformers, and recurrent architectures are not covered. White-box weight access is required.
 
-**Study limitations:** The mathematical derivation of exact FNN attribution is sound. The fidelity and speed advantages on comparable architectures are verified within the paper's experimental scope. Scalability to very deep networks and generalisation beyond piecewise-linear activations remain unconfirmed.
+**Study limitations:** The mathematical derivation of exact FNN attribution is sound. The fidelity and speed advantages on comparable architectures are verified within the paper's experimental scope. Two precision-related caveats apply: first, at ReLU boundaries (where the activation pattern changes discontinuously), the attribution is exact only for the chosen linear region, and infinitesimal perturbations crossing the boundary may yield different attributions; second, finite-precision arithmetic introduces numerical error in the composite weight matrix construction for very deep networks, though the paper's experiments show this is negligible at tested depths. Scalability to very deep networks and generalisation beyond piecewise-linear activations remain unconfirmed.
 
 ### Butler, Feng and Djurić (2026): Higher-Order Attribution Through Operator Theory
 
@@ -117,6 +117,8 @@ Notable limitation: on German Credit, MOFAE solutions dominate Integrated Gradie
 ---
 
 ## Cross-Paper Synthesis: Four Strategies for Better Attribution
+
+In my reading, FACE's result that exact computation is cheaper than approximation is the most underappreciated finding in this set. The usual assumption is that exactness costs more. FACE shows it can cost less, provided you are willing to commit to a specific architecture.
 
 ### The approximation spectrum
 

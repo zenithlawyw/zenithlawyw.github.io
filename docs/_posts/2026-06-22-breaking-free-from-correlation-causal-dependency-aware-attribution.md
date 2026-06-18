@@ -106,7 +106,7 @@ C3A achieves absolute gains of 19.72% in iAUC and 25.88% in dAAC over state-of-t
 
 > **Applicability:** C3A requires white-box access to feature maps and a labelled support set at explanation time. It is specific to few-shot learning in its current form.
 
-**Study limitations:** The finding that FSL feature compression degrades standard attributions is novel with implications beyond FSL XAI. The empirical gains over existing methods are substantial and validated across multiple benchmarks. Generalisability beyond few-shot image classification to other low-data regimes is unconfirmed.
+**Study limitations:** The finding that FSL feature compression degrades standard attributions is novel with implications beyond FSL XAI. The empirical gains over existing methods are substantial and validated across multiple benchmarks. Generalisability beyond few-shot image classification to other low-data regimes is unconfirmed. The robustness of C3A attributions to adversarial input manipulation has not been tested, nor has the method been adapted to non-visual modalities such as few-shot text classification.
 
 ---
 
@@ -122,6 +122,8 @@ C3A achieves absolute gains of 19.72% in iAUC and 25.88% in dAAC over state-of-t
 
 The three papers do not compete. They address distinct facets of the dependency problem, and their different starting assumptions lead to different solution properties.
 
+The C3A approach strikes me as the one most likely to generalise beyond its stated domain. The contrastive principle — attributing by comparing what the model sees in one class versus another — matches how humans naturally reason about decisions, and nothing about it is specific to few-shot image classification.
+
 ### When correlation awareness is enough
 
 ExCIR raises an important question that the field has not settled: for which decisions do we need causal attributions, and when is correlation awareness sufficient? The answer depends on the decision's stakes and reversibility. A low-stakes, high-volume decision (e.g., product recommendation) can tolerate correlation-aware explanations because the cost of a misattribution is low. A high-stakes decision (e.g., medical diagnosis, loan denial) demands causal attribution because regulatory and ethical accountability requires answering counterfactual questions about what would have happened if a feature had been different.
@@ -132,7 +134,7 @@ C3A introduces a dimension that neither Causal SHAP nor ExCIR addresses: contras
 
 ### The scalability challenge
 
-All three methods face scalability constraints that limit their applicability to large-scale models. Causal SHAP is tested only up to 31 features. ExCIR scales better but is limited to global (not instance-level) attribution. C3A requires backbone feature maps and a support set. None has been demonstrated on models with billions of parameters or on very high-dimensional inputs.
+All three methods face scalability constraints that limit their applicability to large-scale models. Causal SHAP is tested only up to 31 features; the PC algorithm's exponential growth in conditional independence tests makes higher dimensions intractable without alternative discovery methods such as GES or NOTEARS. ExCIR scales better but is limited to global (not instance-level) attribution. C3A requires backbone feature maps and a support set, and its per-pixel perturbation becomes computationally intensive at higher resolutions. None has been demonstrated on models with billions of parameters or on very high-dimensional inputs.
 
 ---
 
