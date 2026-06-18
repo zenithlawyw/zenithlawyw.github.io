@@ -50,7 +50,7 @@ The answer is not a single recommendation. It is a decision framework organised 
 
 This article is not legal advice.
 
-## Key Terms
+## Operational and Governance Vocabulary
 
 <dl>
   <dt><dfn>Feature governance</dfn></dt>

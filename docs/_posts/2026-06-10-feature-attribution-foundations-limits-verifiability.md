@@ -39,13 +39,13 @@ tags:
 
 ## Introduction
 
-Standard feature attributions carry a guarantee they cannot honour. Three papers, published between 2020 and 2023, independently proved why: Shapley-value attributions conflate correlation with causation unless the value function is chosen correctly; black-box attributions cannot be verified for individual cases without model adaptation; and the only reliable path to faithful attribution requires changing the model itself, not swapping explanation methods.
+Standard feature attributions carry a guarantee they cannot honour. Three papers, published between 2020 and 2023, each proved a different piece of the problem from complementary angles: Janzing et al. (2020) showed that Shapley-value attributions conflate correlation with causation unless the value function is chosen correctly; Bhalla et al. (2023b) proved that black-box attributions cannot be verified for individual cases without model adaptation; and Bhalla et al. (2023a) demonstrated that the only reliable path to faithful attribution requires changing the model itself, not swapping explanation methods.
 
 Each paper's core argument, formal mechanism, and evidentiary support are examined below. Together they establish hard limits that any practitioner deploying attribution methods in high-stakes settings must confront.
 
 This article is not legal advice.
 
-## Key Terms
+## Vocabulary for Attribution Theory
 
 <dl>
   <dt><dfn>Feature attribution</dfn></dt>

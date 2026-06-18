@@ -46,7 +46,7 @@ None of these methods is a drop-in replacement for standard SHAP or LIME. Each m
 
 This article is not legal advice.
 
-## Key Terms
+## Technical Terminology for Exact Methods
 
 <dl>
   <dt><dfn>Model-specific attribution</dfn></dt>

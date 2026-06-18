@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-06-18T14:29:32Z"
+generated_at: "2026-06-18T20:01:46Z"
 signal_weights:
   title: 3
   categories: 5
@@ -31,13 +31,13 @@ keywords:
   - artificial
   - intelligence
   - implementation
+  - evaluation
   - practical
   - evidence
+  - technical
   - architecture
-  - evaluation
   - feature
   - questions
-  - technical
   - provenance
   - language
   - support
@@ -57,10 +57,10 @@ keywords:
   - orchestration
   - cross-border
   - agentic
+  - causal
   - cloud
   - controls
   - pqc
-  - causal
   - table
   - author
   - contents
@@ -77,11 +77,11 @@ keywords:
   - credibility
   - post-quantum
   - quantum
+  - metrics
   - literature
   - xai
   - china
   - deadlock
-  - metrics
   - snapshot
   - corpus
   - failure
@@ -106,25 +106,26 @@ keywords:
   - migration
   - platform
   - cybersecurity
+  - glossary
   - open
   - series
+  - theory
   - tuning
   - hybrid
   - representation
   - standard
   - trust
   - attack
-  - glossary
   - guidance
   - limits
   - selection
-  - theory
   - blockchain
   - inference
   - maturity
   - synthesis
   - calibration
   - deep
+  - operational
   - patterns
   - playbook
   - conclusion
@@ -136,7 +137,6 @@ keywords:
   - readiness
   - shap
   - context
-  - operational
   - analysis
   - clustering
   - iot
@@ -146,6 +146,7 @@ keywords:
   - adaptation
   - critical
   - enterprise
+  - exact
   - fragmentation
   - hub
   - pipeline
@@ -164,17 +165,16 @@ keywords:
   - starvation
   - verifiability
   - communication
-  - exact
   - gap
   - infrastructure
   - knowledge
+  - terminology
   - traceability
   - applications
   - authoritative
   - automated
   - common
   - compliance
-  - conditions
 key_phrases:
   - artificial intelligence
   - lightning network
@@ -261,6 +261,7 @@ key_phrases:
   - deep clustering
   - engineering artificial
   - engineering artificial intelligence
+  - evaluation metrics
   - failure mode
   - machine benchmark
   - platform engineering
@@ -273,7 +274,6 @@ key_phrases:
   - attribution methods
   - coffman conditions
   - corpus reviewed
-  - evaluation metrics
   - evidence maturity
   - governance controls
   - langgraph langchain
@@ -331,13 +331,13 @@ catchwords:
   - artificial
   - intelligence
   - implementation
+  - evaluation
   - practical
   - evidence
+  - technical
   - architecture
-  - evaluation
   - feature
   - questions
-  - technical
   - provenance
   - language
   - support
@@ -353,9 +353,9 @@ catchwords:
   - orchestration
   - cross-border
   - agentic
+  - causal
   - cloud
   - controls
-  - causal
   - table
   - author
   - contents
@@ -372,10 +372,10 @@ catchwords:
   - credibility
   - post-quantum
   - quantum
+  - metrics
   - literature
   - china
   - deadlock
-  - metrics
   - snapshot
   - corpus
   - failure
@@ -398,23 +398,24 @@ catchwords:
   - migration
   - platform
   - cybersecurity
+  - glossary
   - series
+  - theory
   - tuning
   - hybrid
   - representation
   - standard
   - trust
   - attack
-  - glossary
   - guidance
   - limits
   - selection
-  - theory
   - blockchain
   - inference
   - maturity
   - synthesis
   - calibration
+  - operational
   - patterns
   - playbook
   - conclusion
@@ -424,7 +425,6 @@ catchwords:
   - quality
   - readiness
   - context
-  - operational
   - analysis
   - clustering
   - natural
@@ -433,6 +433,7 @@ catchwords:
   - adaptation
   - critical
   - enterprise
+  - exact
   - fragmentation
   - pipeline
   - reliability
@@ -449,16 +450,15 @@ catchwords:
   - starvation
   - verifiability
   - communication
-  - exact
   - infrastructure
   - knowledge
+  - terminology
   - traceability
   - applications
   - authoritative
   - automated
   - common
   - compliance
-  - conditions
 catchphrases:
   - technical appendix
   - citability snapshot
@@ -577,13 +577,13 @@ search_words:
   - artificial
   - intelligence
   - implementation
+  - evaluation
   - practical
   - evidence
+  - technical
   - architecture
-  - evaluation
   - feature
   - questions
-  - technical
   - provenance
   - language
   - support
@@ -603,10 +603,10 @@ search_words:
   - orchestration
   - cross-border
   - agentic
+  - causal
   - cloud
   - controls
   - pqc
-  - causal
   - table
   - author
   - contents
@@ -623,11 +623,11 @@ search_words:
   - credibility
   - post-quantum
   - quantum
+  - metrics
   - literature
   - xai
   - china
   - deadlock
-  - metrics
   - snapshot
   - corpus
   - failure
@@ -3889,6 +3889,7 @@ posts:
       - learning
       - machine
       - theoretical
+      - theory
       - tuning
       - apply
       - around
@@ -3898,7 +3899,6 @@ posts:
       - impossibility
       - janzing
       - lakkaraju
-      - methods
       - feature attribution
       - explainable ai
       - shapley values
@@ -3910,25 +3910,25 @@ posts:
       - shapley values
       - feature attribution explainable
       - attribution explainable xai
-      - values causal
       - explainable xai
       - attribution explainable
+      - values causal
       - shapley values causal
-      - artificial intelligence machine
-      - intelligence machine learning
-      - theoretical foundations
-      - explainable xai faithfulness
-      - xai faithfulness verifiability
-      - faithfulness verifiability shapley
-      - inference interpretability
-      - causal inference
       - verifiability shapley
-      - causal inference interpretability
+      - causal inference
+      - inference interpretability
+      - faithfulness verifiability shapley
+      - xai faithfulness verifiability
+      - explainable xai faithfulness
+      - intelligence machine learning
+      - artificial intelligence machine
       - xai faithfulness
-      - values causal inference
-      - artificial intelligence
       - verifiability shapley values
+      - machine learning
       - intelligence machine
+      - artificial intelligence
+      - values causal inference
+      - causal inference interpretability
     catchwords:
       - attribution
       - verifiability
@@ -3953,11 +3953,11 @@ posts:
       - learning
       - machine
       - theoretical
+      - theory
       - tuning
       - apply
       - around
       - bhalla
-      - constructive
     search_words:
       - attribution
       - verifiability
@@ -3981,13 +3981,13 @@ posts:
       - shapley values
       - feature attribution explainable
       - attribution explainable xai
-      - values causal
       - explainable xai
       - attribution explainable
+      - values causal
       - shapley values causal
-      - artificial intelligence machine
-      - intelligence machine learning
-      - theoretical foundations
+      - verifiability shapley
+      - causal inference
+      - inference interpretability
     questions:
       - question: If standard attributions cannot be verified, why do they remain widely used?
         answer: "Because the impossibility result applies to checking any individual attribution, not to evaluating aggregate performance across many examples. Practitioners can still compare methods on benchmarks, track consistency across similar inputs, and use domain expertise to spot implausible explanations. The result says: do not trust any single attribution you cannot cross-validate."
@@ -4009,9 +4009,9 @@ posts:
       - computation
       - multi-objective
       - optimisation
+      - methods
       - interactions
       - feedforward
-      - methods
       - feature
       - gradients
       - integrated
@@ -4075,9 +4075,9 @@ posts:
       - computation
       - multi-objective
       - optimisation
+      - methods
       - interactions
       - feedforward
-      - methods
       - feature
       - gradients
       - integrated
@@ -4104,9 +4104,9 @@ posts:
       - computation
       - multi-objective
       - optimisation
+      - methods
       - interactions
       - feedforward
-      - methods
       - feature
       - gradients
       - integrated
@@ -4298,6 +4298,7 @@ posts:
       - c3a
       - artificial
       - cross-class
+      - dependency
       - explainable
       - inference
       - intelligence
@@ -4309,7 +4310,6 @@ posts:
       - produce
       - algorithm
       - breaking
-      - dependency
       - efficient
       - explainability
       - free
@@ -4361,6 +4361,7 @@ posts:
       - excir
       - artificial
       - cross-class
+      - dependency
       - explainable
       - inference
       - intelligence
@@ -4372,7 +4373,6 @@ posts:
       - produce
       - algorithm
       - breaking
-      - dependency
       - efficient
       - explainability
     search_words:
@@ -4393,7 +4393,7 @@ posts:
       - c3a
       - artificial
       - cross-class
-      - explainable
+      - dependency
       - causal shap
       - attribution causal
       - few-shot learning
@@ -4429,8 +4429,8 @@ posts:
       - feature
       - domain
       - selection
-      - xai
       - governance
+      - xai
       - applications
       - energy
       - learning
@@ -4524,8 +4524,8 @@ posts:
       - feature
       - domain
       - selection
-      - xai
       - governance
+      - xai
       - applications
       - energy
       - learning
