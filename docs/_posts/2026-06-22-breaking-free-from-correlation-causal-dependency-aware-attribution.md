@@ -50,7 +50,7 @@ Each method's approach and evidentiary support is covered below. The dependency 
 
 This article is not legal advice.
 
-## Key Terms
+## Causal and Dependency Terms
 
 <dl>
   <dt><dfn>Causal discovery</dfn></dt>
@@ -90,7 +90,7 @@ On synthetic data with known ground truth, Causal SHAP achieves the lowest RMSE 
 
 What if you do not need causation, only correlation awareness that avoids double-counting correlated features? {% include references/cite.html key="11498186" %} ExCIR computes a global feature attribution score in a single deterministic pass. Sign-aligned co-movement scores each feature's correlation with model output after robust centring. BlockCIR handles correlated feature groups as a unit to mitigate double-counting. A lightweight transfer protocol reproduces full attribution rankings using 20% to 40% of the data, achieving 3x to 9x speedup.
 
-ExCIR achieves strong agreement with SHAP (Kendall-τ = 0.82) at 100x less computational cost, validated across 29 benchmarks spanning text, tabular, signals, images, and networks. This is the broadest empirical validation in the series. The subsampling knee at 20% to 40% data holds across all five modalities, suggesting a universal property of ranking-preserving subsampling, though independent replication is needed.
+ExCIR achieves strong agreement with SHAP (Kendall-τ = 0.82) at 100x less computational cost, validated across 29 benchmarks spanning text, tabular, signals, images, and networks. This is the broadest empirical validation in the series. The subsampling knee at 20% to 40% data holds across all five modalities, suggesting a universal property of ranking-preserving subsampling, though independent replication is needed. ExCIR also satisfies translation invariance and positive-scale invariance: scores remain unchanged under feature shift or rescaling, so model recalibrations produce consistent rankings without re-computation.
 
 > **Design boundary:** ExCIR captures association, not causation. It is explicitly correlation-aware by design choice. The correlation-causation gap means ExCIR cannot replace causal attribution when causal claims are required.
 
@@ -102,7 +102,7 @@ Few-shot learning models generalise from one to five examples per class, forcing
 
 C3A (Contrastive Cross-Class Attribution) operates in three stages: extract dense local descriptors from the backbone feature map, compute each descriptor's similarity to the target class versus competing classes via k-nearest-neighbour in the support set, and aggregate contrastive scores into a pixel-level attribution map. The contrastive framing matches how humans reason about decisions: we understand outcomes by comparison to alternatives, not by absolute scores.
 
-C3A achieves absolute gains of 19.72% in iAUC and 25.88% in dAAC over state-of-the-art FSL XAI methods across four few-shot benchmarks. The contrastive principle has the potential to generalise beyond FSL, but the method itself requires the episodic training structure and support sets that define the paradigm.
+C3A achieves absolute gains of 19.72% in iAUC and 25.88% in dAAC over leading FSL XAI methods across four few-shot benchmarks. The contrastive principle has the potential to generalise beyond FSL, but the method itself requires the episodic training structure and support sets that define the paradigm.
 
 > **Applicability:** C3A requires white-box access to feature maps and a labelled support set at explanation time. It is specific to few-shot learning in its current form.
 
@@ -122,7 +122,7 @@ C3A achieves absolute gains of 19.72% in iAUC and 25.88% in dAAC over state-of-t
 
 The three papers do not compete. They address distinct facets of the dependency problem, and their different starting assumptions lead to different solution properties.
 
-The C3A approach strikes me as the one most likely to generalise beyond its stated domain. The contrastive principle — attributing by comparing what the model sees in one class versus another — matches how humans naturally reason about decisions, and nothing about it is specific to few-shot image classification.
+The C3A approach strikes me as the one most likely to generalise beyond its stated domain. The contrastive principle, attributing by comparing what the model sees in one class versus another, matches how humans naturally reason about decisions. Nothing about it is specific to few-shot image classification.
 
 ### When correlation awareness is enough
 
