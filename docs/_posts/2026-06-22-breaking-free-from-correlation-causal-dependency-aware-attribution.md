@@ -42,13 +42,13 @@ tags:
 
 ## Introduction
 
-The correlation-causation problem in feature attribution is not a niche concern. It is a structural vulnerability that affects every attribution method based on conditional expectations, including most popular implementations of SHAP. A feature that is correlated with the true driver of a prediction will receive inflated importance, while the true driver may appear irrelevant if it is competing with its correlates.
+The correlation-causation problem in feature attribution is structural: a feature that is correlated with the true driver of a prediction receives inflated importance, while the true driver may appear irrelevant. Every attribution method based on conditional expectations inherits this vulnerability. [Feature Attribution: Foundations, Limits, and Verifiability](/feature-attribution-foundations-limits-verifiability) established the theoretical foundation; three recent papers respond with concrete methods.
 
-Article 1 of this series established the theoretical foundation for this problem through Janzing et al.'s causal critique. Three recent papers respond to the critique with concrete methods. Ng et al. integrate the PC causal discovery algorithm with SHAP, eliminating the requirement for a domain-expert-supplied causal graph. Sengupta et al. design a lightweight, correlation-aware attribution method that handles grouped features. Chen et al. address a distinct facet of the problem: feature compression in few-shot learning amplifies correlation-based misattribution. They introduce a contrastive cross-class mechanism to recover discriminative signal.
+Ng et al. integrate causal discovery with SHAP to remove the domain-expert bottleneck. Sengupta et al. design a lightweight correlation-aware method that handles grouped features. Chen et al. show that feature compression in few-shot learning amplifies misattribution, and introduce a contrastive cross-class mechanism to recover discriminative signal.
 
-Each paper accepts a different subset of the problem as given and optimises the remainder. Together, they map the solution space for dependency-aware attribution.
+Each method's approach and evidentiary support is covered below. The dependency type that dominates in a given application determines which tool fits.
 
-Technical commentary for education and research synthesis. Not legal, regulatory, or procurement advice.
+This article is not legal advice.
 
 ## Key Terms
 
@@ -78,59 +78,35 @@ Technical commentary for education and research synthesis. Not legal, regulatory
 
 ### Ng et al. (2025): Causal SHAP: Removing the Domain-Expert Bottleneck
 
-**The barrier.** Causal variants of SHAP exist, but they require a causal graph specified by a domain expert. This requirement has been the main barrier to adoption: in most practical settings, no domain expert is available, and even when one is, specifying the complete causal structure among d features is prohibitively time-consuming for d > 10.
+Causal variants of SHAP exist, but they require a causal graph specified by a domain expert. That requirement is the main adoption barrier: specifying the complete causal structure among d features is prohibitively time-consuming beyond ten features. {% include references/cite.html key="11228295" %} Causal SHAP with PC discovery automates the causal discovery step, producing a three-stage pipeline: the PC algorithm learns a causal DAG from the data, IDA quantifies causal effect sizes adjusting for confounding, and a novel causal value function replaces standard conditional expectations with a do-operator formulation that breaks the correlation between intervened and non-intervened features.
 
-Causal SHAP with PC discovery removes this bottleneck by automating the causal discovery step {% include references/cite.html key="11228295" %}.
+On synthetic data with known ground truth, Causal SHAP achieves the lowest RMSE among all compared methods and correctly assigns near-zero scores to correlated-but-non-causal features. On real biomedical datasets, it achieves best or second-best insertion scores.
 
-**The method: Causal SHAP with PC discovery.** The pipeline has three stages:
+> **Core requirement:** PC requires the causal sufficiency assumption (no unobserved confounders) and has known limitations with nonlinear relationships. Tested only up to 31 features.
 
-1. **Causal discovery**: The PC algorithm learns a causal DAG from the data by testing conditional independencies among all feature pairs. PC is chosen for its scalability to moderate-dimensional settings (tens of features) and its established theoretical properties.
-2. **Causal strength estimation**: The IDA (Intervention calculus when the DAG is Absent) algorithm quantifies the causal effect of each feature on the target, producing causal effect estimates that adjust for confounding.
-3. **Causal SHAP computation**: A novel causal value function replaces standard conditional expectations: v*c(S) = E[f(X) | do(X_S = x_S), X*{S̄} ∼ Pr(X\_{S̄} | do(X_S = x_S))]. Non-intervened features are sampled conditional on their causal parents rather than marginally, which is the key departure from standard SHAP. A normalisation step preserves SHAP's three axioms (local accuracy, missingness, consistency). The formal innovation is the causal do-operator inside the value function, which breaks the correlation between intervened and non-intervened features that causes standard SHAP to conflate correlation with causation.
-
-**Key results.** On synthetic datasets with known causal ground truth, Causal SHAP achieves the lowest RMSE among all compared methods and correctly assigns near-zero scores to features that are correlated with but non-causal for the target (e.g., the canonical "drink coffee" feature in a lung cancer prediction task, where coffee drinking is correlated with smoking but has no causal effect). On real biomedical datasets, Causal SHAP achieves best or second-best insertion scores.
-
-**The trade-off.** PC algorithm requires the causal sufficiency assumption (no unobserved confounders) and has known limitations with nonlinear relationships. The method has been tested only up to 31 features. For high-dimensional settings, the causal discovery step becomes unreliable.
-
-**Verified contribution.** The automated causal discovery pipeline removes the main practical barrier to deploying causal SHAP. The empirical demonstration on synthetic data with known ground truth convincingly shows the method's ability to distinguish correlation from causation. Scalability to high-dimensional settings (d > 100) and robustness to PC algorithm violations are **unverified**.
+**Study limitations:** The automated causal discovery pipeline removes the main practical barrier to deploying causal SHAP. The synthetic validation convincingly shows correlation-causation separation. Scalability beyond 31 features and robustness to PC algorithm violations remain unconfirmed.
 
 ### Sengupta et al. (2026): ExCIR: Correlation-Aware Global Attribution with Efficiency
 
-**The cost problem.** Causal SHAP requires causal discovery, which is computationally expensive and has strong assumptions. What if we do not need causation, but simply need to be aware of correlation and handle it correctly? ExCIR argues that for many practical applications, a correlation-aware score that avoids double-counting correlated features is sufficient {% include references/cite.html key="11498186" %}.
+What if you do not need causation, only correlation awareness that avoids double-counting correlated features? {% include references/cite.html key="11498186" %} ExCIR computes a global feature attribution score in a single deterministic pass. Sign-aligned co-movement scores each feature's correlation with model output after robust centring. BlockCIR handles correlated feature groups as a unit to mitigate double-counting. A lightweight transfer protocol reproduces full attribution rankings using 20% to 40% of the data, achieving 3x to 9x speedup.
 
-**The method: ExCIR (Correlation-Aware Feature Attribution).** ExCIR computes a global (dataset-level, not instance-level) feature attribution score in a single deterministic pass:
+ExCIR achieves strong agreement with SHAP (Kendall-τ = 0.82) at 100x less computational cost, validated across 29 benchmarks spanning text, tabular, signals, images, and networks. This is the broadest empirical validation in the series. The subsampling knee at 20% to 40% data holds across all five modalities, suggesting a universal property of ranking-preserving subsampling, though independent replication is needed.
 
-1. **Sign-aligned co-movement**: For each feature, compute its correlation with the model output after robust mid-mean centring, producing a raw score that is positive when the feature moves in the same direction as the output.
-2. **Groupwise scoring via BlockCIR**: To handle correlated feature groups, BlockCIR computes attribution for a block of correlated features as a unit, mitigating the double-counting that occurs when correlated features each receive individual credit for shared signal.
-3. **Lightweight transfer protocol**: A subsampling method reproduces full attribution rankings using 20% to 40% of the data, achieving 3x to 9x further speedup.
+> **Design boundary:** ExCIR captures association, not causation. It is explicitly correlation-aware by design choice. The correlation-causation gap means ExCIR cannot replace causal attribution when causal claims are required.
 
-**Key results.** ExCIR achieves strong agreement with SHAP (Kendall-τ = 0.82) at approximately 100× less computational cost (0.17 seconds vs. SHAP's order-of-magnitude higher runtime). The method is validated across 29 diverse benchmarks spanning text, tabular, signals, images, and networks. This is the broadest empirical validation among the papers in this series.
-
-**The subsampling frontier.** ExCIR's lightweight transfer protocol reveals a striking pattern: the Pareto frontier of accuracy versus data fraction consistently shows a knee at 20% to 40% data, and this holds across all five data modalities tested. This suggests a universal property of ranking-preserving subsampling that is independent of data type. If confirmed by independent replication, this finding would have practical value far beyond ExCIR: any method that produces global feature rankings could use 30% of the data for rapid prototyping with predictable quality degradation.
-
-**Class-conditioned extension.** For multi-class models, ExCIR can be computed per class by restricting the output to class-specific logits before computing the co-movement measure. This produces a class-conditioned attribution for each feature, revealing which features drive each class. The extension is natural given ExCIR's deterministic design and requires negligible additional computation.
-
-**The trade-off.** ExCIR fundamentally captures association, not causation. Its scores will be near zero for purely nonlinear relationships that the sign-aligned co-movement measure does not capture. The BlockCIR window size requires a heuristic selection.
-
-**Verified contribution.** The broad cross-domain validation (29 benchmarks) provides strong evidence of the method's generalisability. The computational efficiency advantage over SHAP is clearly demonstrated. The method does not address causal attribution; it is explicitly correlation-aware, not causal. This is stated honestly as a design choice. The correlation-causation gap means ExCIR cannot replace causal attribution when causal claims are required.
+**Study limitations:** The cross-domain validation (29 benchmarks) provides strong evidence of generalisability. The computational efficiency advantage is clearly demonstrated. The method does not address causal attribution, which is an honest design constraint rather than a limitation.
 
 ### Chen, Hu and Liu (2026): C3A: Contrastive Attribution for Few-Shot Learning
 
-**The regime problem.** Few-shot learning models operate in a fundamentally different regime from standard classifiers. They must generalise from one to five examples per class, which forces their backbone networks to learn compressed, highly entangled feature representations. C3A discovers that this compression causes standard attribution methods (including Grad-CAM, LIME, and SHAP) to produce over-smoothed, uninformative explanations {% include references/cite.html key="11449430" %}.
+Few-shot learning models generalise from one to five examples per class, forcing their backbones to learn compressed, highly entangled feature representations. {% include references/cite.html key="11449430" %} C3A discovers that this compression causes standard attribution methods (Grad-CAM, LIME, SHAP) to produce over-smoothed, uninformative explanations. The root cause: standard methods attribute at the image level, but FSL models decide based on local descriptors extracted from feature maps, and compression collapses the discriminative detail those methods need.
 
-The root cause is that standard methods attribute at the image level, but FSL models make decisions based on local descriptors extracted from feature maps. The compressions collapse discriminative detail, and the resulting attributions reflect the coarse feature map rather than the actual decision signal.
+C3A (Contrastive Cross-Class Attribution) operates in three stages: extract dense local descriptors from the backbone feature map, compute each descriptor's similarity to the target class versus competing classes via k-nearest-neighbour in the support set, and aggregate contrastive scores into a pixel-level attribution map. The contrastive framing matches how humans reason about decisions: we understand outcomes by comparison to alternatives, not by absolute scores.
 
-**The method: C3A (Contrastive Cross-Class Attribution).** The C3A approach strikes me as the one most likely to generalise beyond its stated domain. Contrastivity is core to how humans reason about explanations: we understand a decision not by its absolute properties but by comparison to alternatives. A method that makes this comparative reasoning explicit is operating in a space that standard attribution methods cannot reach. C3A operates in three stages:
+C3A achieves absolute gains of 19.72% in iAUC and 25.88% in dAAC over state-of-the-art FSL XAI methods across four few-shot benchmarks. The contrastive principle has the potential to generalise beyond FSL, but the method itself requires the episodic training structure and support sets that define the paradigm.
 
-1. **Local descriptor extraction**: Given a query image, extract dense local descriptors from the backbone feature map.
-2. **Contrastive metric computation**: For each descriptor, compute its similarity to the target class (via k-nearest-neighbour to target class descriptors in a support set) and to competing classes. The contrastive score is the ratio of intraclass to interclass similarity.
-3. **Attribution map construction**: Aggregate per-descriptor contrastive scores into a pixel-level attribution map, highlighting regions that are discriminative for the target class relative to competitors.
+> **Applicability:** C3A requires white-box access to feature maps and a labelled support set at explanation time. It is specific to few-shot learning in its current form.
 
-**Key results.** C3A achieves absolute gains of 19.72% in iAUC and 25.88% in dAAC over state-of-the-art FSL XAI methods across Conv64F and ResNet12 backbones on four few-shot benchmarks (miniImageNet, tieredImageNet, CIFAR-FS, FC100). The qualitative examples show that C3A recoveries fine-grained discriminative features that standard methods miss entirely.
-
-**The trade-off.** C3A is specific to few-shot learning; it exploits the episodic training structure and support-set contrast that defines the FSL paradigm. It requires access to the backbone's feature maps, which is a white-box requirement, and it requires a support set for the contrast computation.
-
-**Verified contribution.** The discovery that FSL feature compression degrades standard attributions is a novel finding with implications beyond XAI for FSL. It suggests that embedding structure itself shapes explanation quality in ways the field has not systematically studied. The empirical gains over existing FSL XAI methods are substantial and validated across multiple benchmarks. Generalisability beyond few-shot image classification to other low-data regimes (e.g., few-shot text or time series classification) is **unverified**.
+**Study limitations:** The finding that FSL feature compression degrades standard attributions is novel with implications beyond FSL XAI. The empirical gains over existing methods are substantial and validated across multiple benchmarks. Generalisability beyond few-shot image classification to other low-data regimes is unconfirmed.
 
 ---
 
@@ -186,16 +162,16 @@ The contrastive principle, attributing by comparing what the model sees in the t
 
 ## Conclusion
 
-The papers reviewed here reveal that the dependency problem has no universal solution for the same reason the original attribution problem has none: the right answer depends on what kind of dependency is causing the trouble, and different dependencies require different remedies. Correlated features that are both predictive require correlation-aware grouping. Features correlated through confounding require causal discovery. Features compressed in representation space require contrastive decoding.
+The dependency problem has no universal solution for the same reason the attribution problem has none: the right answer depends on what kind of dependency is causing the trouble. Correlated features that are both predictive need correlation-aware grouping. Features correlated through confounding need causal discovery. Features compressed in representation space need contrastive decoding.
 
-The important practical question is not which method is best but which dependency type dominates in a given application. A recommendation system with hundreds of correlated product features needs ExCIR. A medical diagnosis model with confounded risk factors needs Causal SHAP. A few-shot image classifier needs C3A. The next article in this series synthesises these findings into a decision framework for practitioners navigating the method space and deploying attribution within governance structures.
+The practical question is not which method is best but which dependency type dominates in your application. A forthcoming article on selection and governance synthesises these findings into a decision framework for practitioners.
 
 ---
 
-_Part 4 of a five-part series on feature attribution, explainability, and interpretability. Educational and research content. Not legal, regulatory, or procurement advice. Claims bounded to the cited papers' own reported results unless explicitly stated otherwise._
+_Part 4 of a series on feature attribution, explainability, and interpretability. Technical and educational content. Not legal, regulatory, or procurement advice. Claims bounded to the cited papers' own reported results unless explicitly stated otherwise._
 
 <details markdown="1" class="appendix-callout group">
-<summary>Technical Appendix</summary>
+{% include appendix-summary.html title="Technical Appendix" %}
 
 ### Appendix Table of Contents
 
@@ -268,8 +244,3 @@ All three papers appear in peer-reviewed venues: IJCNN (IEEE, Ng), AAIML (IEEE, 
 3. **Inferred synthesis**: (a) Applicability of causal attribution in high-dimensional settings; (b) generalisability of C3A beyond few-shot image classification; (c) practical decision boundary between correlation-aware and causal attribution needs.
 
 </details>
-
----
-
-_Publication: 1 July 2026_
-_License: Educational and research use. Attribution required for substantive reuse._
