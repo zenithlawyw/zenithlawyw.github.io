@@ -40,13 +40,11 @@ tags:
 
 ## Introduction
 
-The gap between theory and practice in feature attribution is not primarily a gap in accuracy. It is a gap in kind. Standard methods such as LIME, SHAP, and Integrated Gradients produce approximate scores that mix genuine model signal with artefacts of the approximation. Janzing et al. challenged the theoretical foundations. Bhalla et al. proved the approximations cannot be checked. The papers reviewed here take a different approach: instead of asking whether attributions can be trusted, they ask how to compute them better.
+Standard attribution methods approximate. They sample, perturb, and linearise because they treat the model as a black box. The four papers reviewed here abandon different dimensions of that approximation: Carles-Bou and Carmona abandon model agnosticism (exact attribution for known architectures), Butler et al. abandon first-order thinking (interactions require higher-order operators), Daley et al. abandon the passive Shapley calculation (optimise for evaluation criteria directly), and Wang et al. abandon the single-best-explanation assumption (trade-offs should be explicit).
 
-Each of the four papers in this review abandons a different simplifying assumption that made standard methods tractable. Carles-Bou and Carmona abandon model agnosticism: if you know the architecture, you can compute exact attributions. Butler et al. abandon first-order thinking: feature interactions require higher-order attribution operators. Daley et al. abandon the passive Shapley calculation: instead of computing and then evaluating, they optimise for evaluation criteria directly. Wang et al. abandon the single-best-explanation assumption: different stakeholders need different trade-offs, and those trade-offs should be explicit.
+None of these methods is a drop-in replacement for standard SHAP or LIME. Each makes deliberate trade-offs in architectural specificity, computational cost, and output interpretability. The sections below examine each method's core mechanism and evidentiary basis so you can assess which trade-offs fit your use case.
 
-None of these methods is a drop-in replacement for standard SHAP or LIME. Each makes deliberate trade-offs: architectural specificity, computational cost, interpretability of the output. Understanding those trade-offs is the purpose of the review that follows.
-
-Technical commentary for education and research synthesis. Not legal, regulatory, or procurement advice.
+This article is not legal advice.
 
 ## Key Terms
 
@@ -76,73 +74,45 @@ Technical commentary for education and research synthesis. Not legal, regulatory
 
 ### Carles-Bou and Carmona (2026): Exact Attribution Through Architecture Exploitation
 
-**The gap.** All attribution methods that treat the model as a black box are fundamentally approximate. They sample, perturb, or linearise because they have no access to the model's internal structure. A 2026 paper in Neural Networks asks a specific question: what if you do have access, and the model has a specific, well-understood architecture? {% include references/cite.html key="CARLESBOU2026108277" %}
+FACE (Feature Attribution Computed Exactly) exploits the piecewise-linear structure of feedforward ReLU networks to compute attributions exactly {% include references/cite.html key="CARLESBOU2026108277" %}. For any input, the activation pattern of each neuron determines which linear region the point falls into. Within that region, the network reduces to a single linear transformation of the composite weight matrices. Attribution is the Hadamard product of the composite weight matrix with the input. No sampling. No perturbation. No approximation.
 
-**The method: FACE (Feature Attribution Computed Exactly).** FACE exploits the piecewise-linear nature of feedforward neural networks with ReLU activations. For any given input, the activation pattern of each neuron determines which linear region of the input space the point falls into. Within that region, the entire network is a linear function of the input: the composition of learned weight matrices and activation patterns yields a single linear transformation. Attribution is then computed exactly as the Hadamard product of the composite weight matrix with the input. This is a closed-form computation requiring no sampling, no perturbation, and no approximations. In my reading, FACE's result that exact computation can be cheaper than approximation is the most underappreciated finding in this batch. The field has accepted approximation overhead as inevitable for so long that a method proving otherwise demands attention.
+The result that matters most: exact computation is cheaper than approximation. FACE requires only a single forward pass plus matrix operations to build the composite weight matrix, making it 1 to 2 orders of magnitude faster than LIME and kernelSHAP, while achieving perfect fidelity (ICC2/kappa = 1.000) by construction.
 
-**The mechanics of exactness.** FACE exploits the structure of piecewise-linear networks. For any input, each ReLU neuron's activation pattern partitions the input space into linear regions. Within a given region, the network reduces to a single linear transformation: the composition of learned weight matrices conditioned on the activation pattern. This composite weight matrix Wᵢ, when combined with the input via Hadamard product, yields the exact attribution. The critical insight is that the forward pass determines which linear region the input falls into, and within that region, the backward pass recovers the exact linear coefficients. No sampling, no perturbation, and no numerical integration is required.
+> **Core trade-off:** This is architecture-specific. It works for feedforward ReLU networks only. Convolutional networks, transformers, and recurrent architectures are not covered. White-box weight access is required.
 
-**What makes this different.** Standard attribution methods must trade computational cost against accuracy. FACE does not: it is exact by construction. The paper demonstrates perfect fidelity (ICC2/kappa = 1.000) across all datasets and architectures, which is a mathematical necessity given the method's design. FACE is also 1 to 2 orders of magnitude faster than LIME and kernelSHAP because it requires only a single forward and backward pass.
-
-**The trade-off.** FACE is architecture-specific. It works for feedforward networks with piecewise-linear activations. Convolutional networks with pooling layers, transformers with attention, and recurrent architectures are not covered. The method also requires white-box access to weights; it does not apply to API-only model access scenarios.
-
-**Verified contribution.** The mathematical derivation of exact FNN attribution is sound. The fidelity and speed advantages over model-agnostic methods on comparable architectures are verified within the paper's experimental scope. Scalability to very deep networks and generalisation to non-piecewise-linear activations are **unverified** and may face fundamental mathematical obstacles.
+**Study limitations:** The mathematical derivation of exact FNN attribution is sound. The fidelity and speed advantages on comparable architectures are verified within the paper's experimental scope. Scalability to very deep networks and generalisation beyond piecewise-linear activations remain unconfirmed.
 
 ### Butler, Feng and Djurić (2026): Higher-Order Attribution Through Operator Theory
 
-**The limitation.** Standard Integrated Gradients produces a single importance score per feature. It captures first-order effects: how much does changing this feature change the output? But features interact. The importance of one feature may depend on the value of another. Those interactions are invisible to first-order methods.
+Standard Integrated Gradients captures first-order effects: how much does changing a feature change the output? But the importance of one feature may depend on the value of another. Those interactions are invisible to first-order methods. {% include references/cite.html key="11461829" %} This paper develops an operator-theoretic framework that extends Integrated Gradients to higher orders. First-order attribution becomes a linear operator Aᵢ applied to f(x). Second-order is AᵢAⱼf(x), yielding the Integrated Hessian. Higher orders follow the same pattern.
 
-A 2026 ICASSP paper addresses this by developing an operator-theoretic framework that extends Integrated Gradients naturally to higher orders {% include references/cite.html key="11461829" %}
+The framework satisfies linearity, symmetry, marginalisation (summing second-order attributions recovers first-order), and completeness. The marginalisation property is practically important: practitioners can compute first-order attributions using standard IG, then optionally expand to higher orders without changing the base attributions. This backward-compatibility lowers the adoption barrier.
 
-**The framework.** The insight is to view first-order attribution as a linear operator Aᵢ applied to the predictive function f(x). The attribution for feature i is Aᵢf(x). Second-order attribution corresponds to the composition AᵢAⱼf(x), which yields the Integrated Hessian, measuring how the importance of feature i changes with feature j. Higher orders follow the same compositional pattern.
+The paper also draws an explicit connection between XAI and topological signal processing: first-order attributions correspond to node signals on a graph, second-order to edge signals, and higher-order terms to simplicial complexes. On a housing valuation dataset, second-order attribution graphs reveal clusters of jointly-acting features that would be invisible to first-order methods.
 
-The framework satisfies several desirable properties: linearity, symmetry (second-order attribution for i,j equals that for j,i), marginalisation (summing second-order attributions over j recovers the first-order attribution for i), and completeness (the sum of all attributions at all orders equals the prediction difference).
+> **Practical constraint:** Higher-order attributions multiply cost. Second-order requires O(d²) computations for d features.
 
-**The marginalisation property is practically important.** It means that a practitioner can compute first-order attributions using standard IG, then optionally expand to higher orders for interaction analysis without changing the base attributions. The first-order scores remain valid regardless of whether second-order terms are computed. This backward-compatibility with existing IG implementations lowers the adoption barrier.
-
-**Connection to other fields.** The paper draws an explicit connection between XAI attribution and topological signal processing: first-order attributions correspond to node signals on a graph, second-order to edge signals, and higher-order terms to simplicial complexes. This framing opens the possibility of applying graph-theoretic tools (spectral analysis, community detection, graph Laplacian methods) to attribution analysis. On a housing valuation dataset, second-order attribution graphs reveal clusters of jointly-acting features: distance to metro, number of stores, and latitude form a natural cluster that would be invisible to first-order methods.
-
-**The trade-off.** Higher-order attributions multiply the computational cost: second-order requires O(d²) computations for d features. The paper's empirical validation is limited to two small tabular experiments, and the method's behaviour on high-dimensional data (images, text) is not evaluated.
-
-**Verified contribution.** The operator-theoretic unification of first-order and higher-order attribution is mathematically elegant and connects several previously disparate literatures. The satisfaction of axiomatic properties is proven. Empirical validation beyond two small tabular datasets is **unverified**, and computational tractability at scale is an open question.
+**Study limitations:** The operator-theoretic unification is mathematically elegant and the axiomatic properties are proven. Empirical validation is limited to two small tabular experiments. Behaviour on high-dimensional data and computational tractability at scale remain unconfirmed.
 
 ### Daley et al. (2022): GAPS: Attribution as Optimisation
 
-**The framing.** Both LIME and SHAP produce attributions, but a prior study by Ratul et al. showed that they perform poorly on two specific quality criteria: generality (consistency across same-class instances) and precision (avoiding explanations that would fit a different class). GAPS takes a different approach: if we know the evaluation criteria, we should optimise for them directly rather than hoping general-purpose methods happen to satisfy them {% include references/cite.html key="10021127" %}
+If we know the evaluation criteria, why not optimise for them directly? {% include references/cite.html key="10021127" %} GAPS (Generality and Precision Shapley Attributions) introduces a reward function combining three terms: confidence expectation (how confident is the model given this feature subset?), same-class confidence reward (does the explanation produce high confidence for the correct class?), and opposite-class penalty (does it inadvertently produce high confidence for the wrong class?). The coefficients of this three-term objective become the attribution scores, computed via KernelSHAP-weighted linear regression.
 
-**The method: GAPS (Generality and Precision Shapley Attributions).** GAPS introduces a reward function for Shapley-value-style attribution that combines three terms:
+On the UNSW-NB15 cybersecurity dataset, GAPS outperforms both LIME and SHAP on generality and precision. On the ICS Power System dataset, GAPS outperforms LIME but does not consistently outperform SHAP. The benefit is domain-dependent.
 
-- Confidence expectation (how confident is the model in its prediction given this feature subset?)
-- Same-class confidence reward (does the explanation produce high confidence for the correct class?)
-- Opposite-class penalty (does the explanation inadvertently produce high confidence for the wrong class?)
-
-The coefficients of this three-term objective become the attribution scores, computed via KernelSHAP-weighted linear regression. The method directly optimises the properties that generality and precision metrics measure.
-
-**Key results.** On the UNSW-NB15 cybersecurity dataset, GAPS outperforms both LIME and SHAP on generality and precision. On the ICS Power System dataset, GAPS outperforms LIME but does not consistently outperform SHAP, suggesting that the benefit is domain-dependent.
-
-**The trade-off.** GAPS requires defining what generality and precision mean for the specific task, introduces three hyperparameters (the reward term weights), and has been evaluated only on binary classification with Random Forest classifiers. The paper lacks theoretical guarantees about convergence or uniqueness of the solution.
-
-**Verified contribution.** The framing of attribution generation as direct optimisation of evaluation criteria is conceptually important and empirically demonstrated on two datasets. The comparative advantage over LIME and SHAP is **partially verified**: it holds on one of two datasets. Generalisation to multi-class, deep learning, and regression settings is **unverified**.
+**Study limitations:** GAPS requires defining what generality and precision mean for the specific task, introduces three hyperparameters, and has been evaluated only on binary classification with Random Forest classifiers. The paper lacks theoretical guarantees about convergence or uniqueness. The comparative advantage over LIME and SHAP is partial: it holds on one of two datasets. Generalisation to multi-class, deep learning, and regression settings is unconfirmed.
 
 ### Wang et al. (2024): MOFAE: Attribution as Multi-Objective Optimisation
 
-**The challenge.** The previous papers assumed that there is a single best attribution for a given prediction. MOFAE challenges this assumption directly: what if explanation quality has multiple, conflicting dimensions, and no single explanation can maximise them all? {% include references/cite.html key="10.1145/3617380" %}
+What if explanation quality has multiple, conflicting dimensions, and no single explanation can maximise them all? {% include references/cite.html key="10.1145/3617380" %} MOFAE treats attribution as a multi-objective optimisation problem with three objectives: faithfulness (how well the explanation predicts model behaviour under feature removal), average sensitivity (stability under perturbation), and complexity (simplicity measured via entropy). The NSGA-III evolutionary algorithm evolves a population of candidate explanation vectors, producing a Pareto front of explanations rather than a single output.
 
-**The method: MOFAE (Multi-Objective Feature Attribution Explanation).** MOFAE treats feature-attribution explanation as a multi-objective optimisation problem with three objectives:
+Across 8 UCI tabular datasets, MOFAE solutions dominate competitor methods in 33.72% to 80.20% of pairwise comparisons while being dominated only 0% to 0.07% of the time. The Pareto front reveals qualitatively different explanations at its extremes: high-faithfulness explanations use many features; low-complexity ones focus on few.
 
-- **Faithfulness**: how well does the explanation predict the model's behaviour when features are removed?
-- **Average sensitivity**: how stable is the explanation to small input perturbations?
-- **Complexity**: how simple is the explanation (measured via entropy)?
+Notable limitation: on German Credit, MOFAE solutions dominate Integrated Gradients in only 0.03% of comparisons. For datasets with strong inherent structure, gradient-based methods are already near-optimal on all three objectives, and the multi-objective search has little room to improve.
 
-The NSGA-III evolutionary algorithm evolves a population of candidate explanation vectors, each representing a different trade-off among the three objectives. The result is a Pareto front of explanations rather than a single output.
+> **Deployment constraint:** Each explanation requires a full evolutionary run (~6 seconds for small tabular datasets). This limits real-time applicability. Interpreting the Pareto front also requires domain expertise.
 
-**Key results.** Across 8 UCI tabular datasets, MOFAE solutions dominate competitor methods (Gradient Descent, Integrated Gradients, Gradient\*Input, SmoothGrad, LIME, SHAP) in 33.72% to 80.20% of pairwise comparisons while being dominated only 0% to 0.07% of the time. The Pareto front reveals qualitatively different explanations at its extremes: high-faithfulness explanations use many features; low-complexity explanations focus on few.
-
-**When MOFAE struggles.** The Iris and German Credit datasets are "hard" for MOFAE. On German Credit, MOFAE solutions dominate Integrated Gradients in only 0.03% of comparisons. This suggests that for datasets with strong inherent structure or well-separated classes, gradient-based methods are already near-optimal on all three objectives, and the multi-objective search has little room for improvement. The finding is informative: MOFAE's value is greatest when the default methods are known to be incomplete, not when they already perform well.
-
-**The trade-off.** Each explanation requires a full evolutionary run (~6 seconds for small tabular datasets), which limits real-time deployment. Interpreting the Pareto front requires domain expertise; stakeholders must choose which trade-off point is acceptable for their use case.
-
-**Verified contribution.** The demonstration that explanation quality metrics are inherently conflicting is a significant empirical finding validated across multiple datasets. The Pareto-front approach gives users explicit control over trade-offs that other methods hide. Real-time applicability is **unverified**: the computational cost of NSGA-III evolutionary search is prohibitive for interactive settings.
+**Study limitations:** The finding that explanation quality metrics are inherently conflicting is a significant empirical result validated across multiple datasets. Real-time applicability is unconfirmed: the computational cost of NSGA-III is prohibitive for interactive settings.
 
 ---
 
@@ -167,7 +137,7 @@ First-order attribution, the default for LIME, SHAP, and Integrated Gradients, m
 
 ### Optimisation vs. computation
 
-A deeper distinction separates FACE and Higher-Order IG (which compute attributions) from GAPS and MOFAE (which optimise them). Computing an attribution assumes there is a ground-truth importance that the method should recover. Optimising an attribution assumes there are multiple desirable properties and the method should find a point in trade-off space. These are philosophically different positions. The evaluation literature (covered in Article 3 of this series) has not yet settled which framing is more productive.
+A deeper distinction separates FACE and Higher-Order IG (which compute attributions) from GAPS and MOFAE (which optimise them). Computing an attribution assumes there is a ground-truth importance that the method should recover. Optimising an attribution assumes there are multiple desirable properties and the method should find a point in trade-off space. These are philosophically different positions. The evaluation literature (covered in a forthcoming article on metrics and benchmarks) has not yet settled which framing is more productive.
 
 ### The missing pieces
 
@@ -203,16 +173,16 @@ FACE is the most mature for its target architecture (FNNs) and offers a clear ad
 
 ## Conclusion
 
-What unites these four papers is a shift in what a good attribution method looks like. The previous generation of methods aimed at universal applicability: SHAP and LIME work on any model, any domain, any task. The methods reviewed here accept reduced scope in exchange for stronger guarantees: exactness for specific architectures, interaction sensitivity at higher computational cost, direct optimisation of known criteria, and explicit trade-off visualisation. This is a maturing field, not a fragmenting one.
+The four papers share a common shift: away from universal applicability and toward stronger, scoped guarantees. FACE offers exactness for feedforward networks. Higher-order IG captures interactions at a cost. GAPS optimises for known criteria. MOFAE makes trade-offs explicit. This is a maturing field, not a fragmenting one.
 
-The open question for practitioners is whether the available exact and optimised methods cover their use case. For feedforward networks, FACE is a direct replacement for approximate methods. For problems requiring interaction analysis, higher-order IG provides a principled framework. For teams with known evaluation criteria, GAPS offers a bespoke alternative. The next article in this series asks how to evaluate whether any of these methods actually produces better explanations than the approximate alternatives they seek to replace.
+The open question, covered in a forthcoming article on metrics and benchmarks, is whether these methods actually produce better explanations than the approximate alternatives they seek to replace. The answer depends on evaluation, and evaluation is where the field's unresolved problems concentrate.
 
 ---
 
-_Part 2 of a five-part series on feature attribution, explainability, and interpretability. Educational and research content. Not legal, regulatory, or procurement advice. Claims bounded to the cited papers' own reported results unless explicitly stated otherwise._
+_Part 2 of a series on feature attribution, explainability, and interpretability. Technical and educational content. Not legal, regulatory, or procurement advice. Claims bounded to the cited papers' own reported results unless explicitly stated otherwise._
 
 <details markdown="1" class="appendix-callout group">
-<summary>Technical Appendix</summary>
+{% include appendix-summary.html title="Technical Appendix" %}
 
 ### Appendix Table of Contents
 
@@ -278,8 +248,3 @@ All four papers appear in peer-reviewed venues: Neural Networks (Elsevier, Carle
 4. **Inferred synthesis (not directly tested)**: (a) scalability of higher-order IG to high-dimensional data; (b) production readiness of MOFAE under latency constraints; (c) applicability of FACE beyond FNN architectures.
 
 </details>
-
----
-
-_Publication: 23 June 2026_
-_License: Educational and research use. Attribution required for substantive reuse._

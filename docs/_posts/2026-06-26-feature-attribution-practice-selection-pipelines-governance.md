@@ -44,13 +44,11 @@ tags:
 
 ## Introduction
 
-The four preceding articles established what feature attribution research can and cannot deliver. The foundational limits: attributions from black-box models cannot be verified individually. The methodological advances: exact computation is possible for specific architectures, higher-order interactions can be captured, and multi-objective trade-offs can be made explicit. The evaluation challenge: no single metric is sufficient, and results are conditional on domain, architecture, and task. The correlation problem: standard methods conflate association with causation, and different responses to this problem serve different use cases.
+Four articles established what feature attribution can and cannot deliver: individual attributions from black-box models cannot be verified; exact computation is possible for specific architectures; no single evaluation metric is sufficient; standard methods conflate association with causation. The practitioner's question follows: what should you actually do?
 
-The question: what should a practitioner actually do?
+The answer is not a single recommendation. It is a decision framework organised around the variables that matter: model access, domain stakes, regulatory requirements, computational budget, and stakeholder needs. The synthesis draws on Kost et al.'s XAI-guided feature selection framework as a worked example, a distillation of domain applications, and the major XAI surveys that establish context.
 
-The answer is not a single recommendation. It is a decision framework structured around the variables that matter: model access, domain stakes, regulatory requirements, computational budget, and stakeholder needs. The synthesis draws on Kost et al.'s XAI-guided feature selection framework as a worked example of attribution in practice, a distillation of domain applications from the wider literature, and the four major XAI surveys that establish the broader context.
-
-Technical and governance guidance for educational purposes. Not legal, regulatory, or procurement advice. Organisational deployment decisions should be reviewed under applicable professional and regulatory obligations.
+This article is not legal advice.
 
 ## Key Terms
 
@@ -77,19 +75,11 @@ Technical and governance guidance for educational purposes. Not legal, regulator
 
 The XAI-FS framework by Kost et al. is the only paper in the selected set that directly addresses how attribution methods should be used within an ML development pipeline {% include references/cite.html key="KOST2025100648" %}. It is therefore the natural starting point for practice-oriented synthesis.
 
-**The scenario.** A photovoltaic energy forecasting task with 15 features, where one feature (Global Horizontal Irradiance, GHI) dominates the model. The practitioner has two concerns: first, whether overdependence on GHI creates brittleness (what if the GHI sensor fails?); second, whether some features can be removed to reduce data acquisition costs.
+The scenario is a photovoltaic energy forecasting task with 15 features where Global Horizontal Irradiance dominates. The practitioner has two concerns: whether overdependence on GHI creates brittleness, and whether features can be removed to reduce data acquisition costs. The XAI-FS pipeline trains the model and computes attributions (SHAP, ELI5), computes a Herfindahl-Hirschman-based dominance index (GHI scores 0.365, indicating high concentration), tags each feature with acquisition cost, applies a multi-objective decision function balancing accuracy, dominance, and cost, and recommends feature removal. Removing GHI reduces R² from 0.943 to 0.934 while cutting dominance to 0.169 and improving noise robustness.
 
-**The XAI-FS pipeline.**
+The framework turns attribution into a design-stage governance tool: the question becomes not "did the model predict correctly?" but "is the model's feature reliance healthy?"
 
-1. **Train model and compute attributions**. SHAP and ELI5 generate feature importance scores for the trained model.
-2. **Compute dominance index**. A Herfindahl-Hirschman-based measure quantifies how concentrated importance is. GHI has a dominance index of 0.365, meaning feature importance is highly concentrated.
-3. **Assess cost-feasibility**. Each feature is tagged with its acquisition cost. Some features (GHI from satellite, temperature from public weather APIs) are cheap; others (on-site pyranometer measurements) are expensive.
-4. **Apply multi-objective decision function**. The framework balances three objectives: predictive accuracy, dominance (concentration), and acquisition cost.
-5. **Remove or retain features**. Removing GHI reduces R² from 0.943 to 0.934 while cutting the dominance index to 0.169 and improving noise robustness (~3× lower variance under sensor corruption).
-
-**The takeaway.** The framework turns attribution from a post-hoc explanation tool into a design-stage governance tool. The question is not "did the model make the right prediction?" but "is the model's feature reliance healthy?" This is a fundamentally different use of attribution.
-
-**Limitations.** The framework uses only SHAP and ELI5, not the newer methods (FACE, ExCIR, Causal SHAP) reviewed in this series. It validates on a single dataset with a single model type (gradient boosting). The dominance index, while useful, does not capture interaction effects or dynamic feature importance under distribution shift. If I were advising a team starting their XAI journey today, the most important guidance would be to start with the governance question, not the method question. The method choice follows from the governance objective, not the other way around.
+> **Scope:** Validated on a single dataset with gradient boosting only. Uses SHAP and ELI5 but not the newer methods reviewed in this series. The dominance index does not capture interaction effects or dynamic importance under distribution shift.
 
 ---
 
@@ -134,13 +124,13 @@ Two papers apply SHAP at scale to spatiotemporal Earth observation data: Europea
 
 Four surveys in the selection provide the broader context within which the methodological papers sit.
 
-**Ullah et al. (2025)** review 155 XAI papers and establish taxonomy dimensions (scope, stage, output shape, and domain) that are useful for any practitioner designing an XAI strategy. Their key finding: the field is heavily skewed toward image domains and gradient-based methods, with tabular and time series (the most common production formats) comparatively underserved. A practitioner building a tabular model cannot rely on the field's default recommendations.
+Ullah et al. (2025) review 155 XAI papers and establish taxonomy dimensions useful for any practitioner designing an XAI strategy. Their key finding: the field skews toward image domains and gradient-based methods, while tabular and time series (the most common production formats) are underserved. A practitioner building a tabular model cannot rely on the field's default recommendations.
 
-**Laato et al. (2022)** systematically review how to explain AI systems to end users and find that most XAI research assumes a technically literate audience. The explanation formats studied rarely match the needs of non-expert stakeholders such as patients, loan applicants, or citizens subject to algorithmic decisions. For practitioners, this means that deploying an attribution method is not the same as providing an explanation. The attribution output must be translated into a stakeholder-appropriate format, and that translation is itself a design problem.
+Laato et al. (2022) systematically review how to explain AI systems to end users and find that most XAI research assumes a technically literate audience. The explanation formats studied rarely match non-expert stakeholder needs. Deploying an attribution method is not the same as providing an explanation: the output must be translated into a stakeholder-appropriate format, and that translation is itself a design problem.
 
-**Preet et al. (2025)** provide a pedagogical survey of SHAP that is valuable for team onboarding. The survey covers SHAP's game-theoretic foundations, implementation variants (KernelSHAP, TreeSHAP, DeepSHAP), and common pitfalls including the very one Janzing et al. identified: users do not realise they are choosing between interventional and conditional Shapley values.
+Preet et al. (2025) provide a pedagogical survey of SHAP useful for team onboarding, covering foundations, implementation variants, and the common pitfall Janzing et al. identified: users do not realise they are choosing between interventional and conditional Shapley values.
 
-**Mitchell et al. (2019)** introduce Model Cards as a documentation standard. While not an XAI paper per se, Model Cards address a closely related problem: how to communicate a model's capabilities, limitations, and evaluation results to diverse stakeholders. The Model Cards framework is complementary to feature attribution: attribution explains individual decisions; Model Cards explain the model as a whole.
+Mitchell et al. (2019) introduce Model Cards as a documentation standard — complementary to feature attribution, which explains individual decisions, while Model Cards explain the model as a whole.
 
 ---
 
@@ -226,18 +216,16 @@ Triangulate. Do not rely on a single attribution method, a single evaluation met
 
 ## Conclusion
 
-The evidence across this series points to a convergent conclusion: responsible attribution practice requires accepting that the field's ambition (explain any model, any prediction, any domain) exceeded its theoretical and empirical foundations. The response is not to abandon the project but to specialise it. Practitioners who invest in understanding the specific constraints of their domain, model, and regulatory context will produce more reliable attributions than those who deploy a general-purpose method and trust its output.
+The series supports a convergent conclusion: responsible attribution requires accepting that the field's ambition exceeded its foundations. The response is not abandonment but specialisation. Practitioners who understand the specific constraints of their domain, model, and regulatory context will produce more reliable attributions than those who deploy a general-purpose method and trust its output.
 
-Attribution methods are becoming more powerful but also more conditional. Each new method comes with a sharper set of applicability conditions: exactness for FNNs only, causal discovery under sufficiency assumptions, correlation awareness at the cost of causal claims. The front of useful methods is expanding while each method's territory is shrinking. This is a sign of a field maturing, not fragmenting.
-
-The research frontier remains active. Scalability to large models, temporal attribution methods that respect sequential structure, user-centred evaluation of whether explanations improve decisions, and regulatory standards for verifiable explanations are all open problems. For now, the practitioner's best strategy is to be informed about the limits, rigorous in evaluation, and honest with stakeholders about what attribution can and cannot guarantee.
+Each new method comes with sharper applicability conditions: exactness for FNNs only, causal discovery under sufficiency assumptions, correlation awareness at the cost of causal claims. This is a sign of a field maturing. The practitioner's best strategy is to be informed about the limits, rigorous in evaluation, and honest with stakeholders about what attribution can and cannot guarantee.
 
 ---
 
-_Concludes a five-part series on feature attribution, explainability, and interpretability. Educational and research content. Not legal, regulatory, or procurement advice. Claims bounded to the cited papers' own reported results unless explicitly stated otherwise. Organisational deployment decisions should be reviewed under applicable professional and regulatory obligations._
+_Concludes a series on feature attribution, explainability, and interpretability. Technical and educational content. Not legal, regulatory, or procurement advice. Claims bounded to the cited papers' own reported results unless explicitly stated otherwise. Organisational deployment decisions should be reviewed under applicable professional and regulatory obligations._
 
 <details markdown="1" class="appendix-callout group">
-<summary>Technical Appendix</summary>
+{% include appendix-summary.html title="Technical Appendix" %}
 
 ### Appendix Table of Contents
 
@@ -264,11 +252,11 @@ The primary paper for this article (Kost et al.) appears in Energy and AI (Elsev
 
 | Article        | Date   | Papers covered                                            | Focus                 |
 | -------------- | ------ | --------------------------------------------------------- | --------------------- |
-| 1: Foundations | 19 Jun | Causal critique (2020), Verifiability (2023), DiET (2023) | Theoretical limits    |
-| 2: Methods     | 23 Jun | FACE, Higher-Order IG, GAPS, MOFAE                        | New computation       |
-| 3: Evaluation  | 27 Jun | WAE, RExQUAL, Counterfactual, Dehdarirad                  | Metrics               |
-| 4: Dependency  | 1 Jul  | Causal SHAP, ExCIR, C3A                                   | Correlation-causation |
-| 5: Practice    | 5 Jul  | Kost XAI-FS, surveys, domain apps                         | Deployment            |
+| 1: Foundations | 10 Jun | Causal critique (2020), Verifiability (2023), DiET (2023) | Theoretical limits    |
+| 2: Methods     | 14 Jun | FACE, Higher-Order IG, GAPS, MOFAE                        | New computation       |
+| 3: Evaluation  | 18 Jun | WAE, RExQUAL, Counterfactual, Dehdarirad                  | Metrics               |
+| 4: Dependency  | 22 Jun | Causal SHAP, ExCIR, C3A                                   | Correlation-causation |
+| 5: Practice    | 26 Jun | Kost XAI-FS, surveys, domain apps                         | Deployment            |
 
 ### Technical Term Definitions
 
@@ -293,8 +281,3 @@ The primary paper for this article (Kost et al.) appears in Energy and AI (Elsev
 3. **Gap (no empirical evidence in reviewed literature)**: (a) whether explanations improve end-user decision-making; (b) attribution stability monitoring in production; (c) stakeholder-appropriate explanation formats for non-technical audiences.
 
 </details>
-
----
-
-_Publication: 5 July 2026_
-_License: Educational and research use. Attribution required for substantive reuse._
