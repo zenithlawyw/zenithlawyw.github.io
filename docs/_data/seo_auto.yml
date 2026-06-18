@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-06-18T06:06:35Z"
+generated_at: "2026-06-18T14:29:32Z"
 signal_weights:
   title: 3
   categories: 5
@@ -21,8 +21,8 @@ keywords:
   - machine
   - rag
   - learning
-  - deployment
   - model
+  - deployment
   - lightning
   - network
   - data
@@ -91,8 +91,8 @@ keywords:
   - digital
   - llm
   - axios
-  - generation
   - boundaries
+  - generation
   - citability
   - protocol
   - scope
@@ -108,8 +108,10 @@ keywords:
   - cybersecurity
   - open
   - series
+  - tuning
   - hybrid
   - representation
+  - standard
   - trust
   - attack
   - glossary
@@ -117,7 +119,6 @@ keywords:
   - limits
   - selection
   - theory
-  - tuning
   - blockchain
   - inference
   - maturity
@@ -134,7 +135,6 @@ keywords:
   - quality
   - readiness
   - shap
-  - standard
   - context
   - operational
   - analysis
@@ -143,6 +143,7 @@ keywords:
   - natural
   - resource
   - strategy
+  - adaptation
   - critical
   - enterprise
   - fragmentation
@@ -161,7 +162,7 @@ keywords:
   - optimisation
   - problem
   - starvation
-  - adaptation
+  - verifiability
   - communication
   - exact
   - gap
@@ -174,7 +175,6 @@ keywords:
   - common
   - compliance
   - conditions
-  - core
 key_phrases:
   - artificial intelligence
   - lightning network
@@ -322,8 +322,8 @@ catchwords:
   - governance
   - machine
   - learning
-  - deployment
   - model
+  - deployment
   - lightning
   - network
   - production
@@ -384,8 +384,8 @@ catchwords:
   - agent
   - digital
   - axios
-  - generation
   - boundaries
+  - generation
   - citability
   - protocol
   - scope
@@ -399,8 +399,10 @@ catchwords:
   - platform
   - cybersecurity
   - series
+  - tuning
   - hybrid
   - representation
+  - standard
   - trust
   - attack
   - glossary
@@ -408,7 +410,6 @@ catchwords:
   - limits
   - selection
   - theory
-  - tuning
   - blockchain
   - inference
   - maturity
@@ -422,7 +423,6 @@ catchwords:
   - processing
   - quality
   - readiness
-  - standard
   - context
   - operational
   - analysis
@@ -430,6 +430,7 @@ catchwords:
   - natural
   - resource
   - strategy
+  - adaptation
   - critical
   - enterprise
   - fragmentation
@@ -446,7 +447,7 @@ catchwords:
   - optimisation
   - problem
   - starvation
-  - adaptation
+  - verifiability
   - communication
   - exact
   - infrastructure
@@ -566,8 +567,8 @@ search_words:
   - machine
   - rag
   - learning
-  - deployment
   - model
+  - deployment
   - lightning
   - network
   - data
@@ -636,8 +637,8 @@ search_words:
   - digital
   - llm
   - axios
-  - generation
   - boundaries
+  - generation
   - citability
   - protocol
   - scope
@@ -3880,54 +3881,54 @@ posts:
       - foundational
       - foundations
       - model
+      - path
+      - standard
       - artificial
       - inference
       - intelligence
       - learning
       - machine
       - theoretical
+      - tuning
       - apply
+      - around
       - bhalla
+      - constructive
       - hard
       - impossibility
       - janzing
       - lakkaraju
       - methods
-      - questions
-      - reshape
-      - srinivas
-      - standard
       - feature attribution
       - explainable ai
       - shapley values
       - causal inference
       - artificial intelligence
-      - machine learning
     key_phrases:
       - feature attribution
       - faithfulness verifiability
       - shapley values
       - feature attribution explainable
       - attribution explainable xai
-      - shapley values causal
-      - attribution explainable
-      - explainable xai
       - values causal
+      - explainable xai
+      - attribution explainable
+      - shapley values causal
       - artificial intelligence machine
       - intelligence machine learning
+      - theoretical foundations
       - explainable xai faithfulness
       - xai faithfulness verifiability
       - faithfulness verifiability shapley
       - inference interpretability
       - causal inference
       - verifiability shapley
-      - theoretical foundations
+      - causal inference interpretability
       - xai faithfulness
-      - verifiability shapley values
-      - machine learning
-      - intelligence machine
-      - artificial intelligence
       - values causal inference
+      - artificial intelligence
+      - verifiability shapley values
+      - intelligence machine
     catchwords:
       - attribution
       - verifiability
@@ -3945,18 +3946,18 @@ posts:
       - foundational
       - foundations
       - model
+      - standard
       - artificial
       - inference
       - intelligence
       - learning
       - machine
       - theoretical
+      - tuning
       - apply
+      - around
       - bhalla
-      - impossibility
-      - janzing
-      - lakkaraju
-      - methods
+      - constructive
     search_words:
       - attribution
       - verifiability
@@ -3980,13 +3981,13 @@ posts:
       - shapley values
       - feature attribution explainable
       - attribution explainable xai
-      - shapley values causal
-      - attribution explainable
-      - explainable xai
       - values causal
+      - explainable xai
+      - attribution explainable
+      - shapley values causal
       - artificial intelligence machine
       - intelligence machine learning
-      - explainable xai faithfulness
+      - theoretical foundations
     questions:
       - question: If standard attributions cannot be verified, why do they remain widely used?
         answer: "Because the impossibility result applies to checking any individual attribution, not to evaluating aggregate performance across many examples. Practitioners can still compare methods on benchmarks, track consistency across similar inputs, and use domain expertise to spot implausible explanations. The result says: do not trust any single attribution you cannot cross-validate."
@@ -4151,10 +4152,10 @@ posts:
       - series
       - feature
       - framework
+      - model
       - rexqual
       - wae
       - quality
-      - model
       - moreira
       - nlp
       - artificial
@@ -4168,6 +4169,7 @@ posts:
       - processing
       - evidence
       - papers
+      - standard
       - state
       - synthesis
       - type
@@ -4180,7 +4182,6 @@ posts:
       - evaluation metrics
       - artificial intelligence
       - machine learning
-      - xai evaluation metrics
     key_phrases:
       - evaluation metrics
       - attribution evaluation
@@ -4216,9 +4217,9 @@ posts:
       - series
       - feature
       - framework
+      - model
       - rexqual
       - quality
-      - model
       - moreira
       - artificial
       - dehdarirad
@@ -4231,10 +4232,10 @@ posts:
       - processing
       - evidence
       - papers
+      - standard
       - state
       - synthesis
       - association
-      - decision-path
     search_words:
       - evaluation
       - attribution
@@ -4246,10 +4247,10 @@ posts:
       - series
       - feature
       - framework
+      - model
       - rexqual
       - wae
       - quality
-      - model
       - moreira
       - nlp
       - artificial
