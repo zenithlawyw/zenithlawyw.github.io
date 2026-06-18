@@ -118,6 +118,10 @@ Three findings emerge. First, no universal best method exists: SHAP excels for c
 
 ## Cross-Paper Synthesis: The State of Attribution Evaluation
 
+### Domain fragmentation: a caveat on synthesis
+
+The four papers in this review come from different domains — time series (WAE, RExQUAL), tabular data (Moreira counterfactuals), and NLP text (Dehdarirad) — each with task-specific evaluation assumptions. A practitioner working on NLP attribution will not directly benefit from the time-series-specific findings of WAE or RExQUAL, and vice versa. The synthesis below treats them as a shared landscape, but the field lacks studies that apply multiple evaluation paradigms to the same datasets and methods. Until such convergent validity work is done, cross-domain generalisation of evaluation findings remains speculative.
+
 ### The evaluation crisis is real and structural
 
 All four papers converge on a sobering conclusion: current evaluation methodology is insufficient. Chen and Zhang show that model-centric metrics have a circular dependency problem. Troncoso-García et al. offer an alternative but acknowledge it requires further validation. Moreira et al. prove that quantitative metrics alone are broken. Dehdarirad shows that evaluation results are highly conditional on experimental choices.
@@ -134,6 +138,8 @@ The papers define three distinct evaluation paradigms, each with different guara
 | Data-centric      | WAE                                | Data predictability                | Assumes predictability = importance  |
 | Discovery-centric | RExQUAL                            | Association rules                  | Requires validation of rule quality  |
 | Human-centric     | User studies, relevance ratings    | Human judgement                    | Expensive; hard to replicate         |
+
+This finding challenged my own assumption that simpler, more theoretically grounded methods always produce better explanations. The truth is messier: method performance depends on what you are explaining, with what model, and for whom. There is no shortcut around conditional testing.
 
 ### The convergent validity gap
 

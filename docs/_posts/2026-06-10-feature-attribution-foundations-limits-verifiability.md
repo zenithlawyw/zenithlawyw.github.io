@@ -73,7 +73,7 @@ This article is not legal advice.
 
 ### Janzing, Minorics and Blöbaum (2020): The Causal Critique of Shapley-Value Attribution
 
-The choice between conditional and interventional expectations when removing features is the single most consequential decision in Shapley-value attribution, and most users never inspect it. {% include references/cite.html key="pmlr-v108-janzing20a" %} The paper's central claim is that the interventional approach is the correct one, and that the widespread adoption of conditional expectations in the SHAP literature rests on a misunderstanding of the causal structure of the problem. Lemma 1 proves that conditional expectations violate the Sensitivity axiom of Shapley-value attributions: consider a two-feature system where f(x₁, x₂) = x₁ and x₂ is causally irrelevant but correlated with x₁. Under conditional expectations, x₂ receives non-zero attribution. Under interventional (marginal) expectations, x₂ receives zero. The proof is mathematically straightforward once you commit to a causal framing, but it exposes a choice most users never inspect.
+The choice between conditional and interventional expectations when removing features is the single most consequential decision in Shapley-value attribution, and most users never inspect it. {% include references/cite.html key="pmlr-v108-janzing20a" %} The paper's central claim is that the interventional approach is the correct one, and that the widespread adoption of conditional expectations in the SHAP literature rests on a misunderstanding of the causal structure of the problem. The core demonstration, presented as a formal argument, shows that conditional expectations violate the Sensitivity axiom of Shapley-value attributions: consider a two-feature system where f(x₁, x₂) = x₁ and x₂ is causally irrelevant but correlated with x₁. Under conditional expectations, x₂ receives non-zero attribution. Under interventional (marginal) expectations, x₂ receives zero. The proof is mathematically straightforward once you commit to a causal framing, but it exposes a choice most users never inspect.
 
 > **Core claim:** The choice between conditional and interventional expectations is not a tuning parameter. It is a decision about what "attribution" means.
 
@@ -125,11 +125,17 @@ Each layer depends on the one below. Without verifiability, correctness claims c
 
 ### The model-centric turn
 
+I find this implication both compelling and unsettling. Compelling because the theoretical case is clear: you cannot explain a model that is not designed to be explainable. Unsettling because standard practice treats the model as fixed and the explanation method as the thing to improve, which the Bhalla papers show is backwards.
+
 A radical implication runs through both Bhalla papers: the problem is not the attribution method. The problem is the model. You cannot fix explanation quality without modifying what is being explained. This stance is fundamentally different from the mainstream XAI literature, which treats the model as fixed and searches for better explanation techniques.
 
 ### Three papers, one shared formalism
 
 The three papers share a deeper mathematical connection than is immediately apparent. All three rely on Q-counterfactuals: removing features and replacing them with values drawn from a distribution Q. Janzing argues that Q must be the marginal (interventional) distribution for causal correctness. Bhalla et al. show that when Q is fixed and the model is adapted to it, the Q-counterfactual evaluation becomes reliable. The choice of Q thus connects the causal, verifiability, and discriminative analyses. Changing Q changes what the attribution means. This unified perspective is rarely stated explicitly in the literature but emerges clearly when the three papers are read together.
+
+### A live debate, not a settled one
+
+The three papers present a coherent critique, but they represent one side of an active academic debate. A dissenting position holds that the impossibility result, while formally correct, applies most forcefully to toy settings with extreme OOD sensitivity, and that practitioners using SHAP in well-engineered pipelines with domain-validated features often obtain stable, practically useful attributions. Work by Rudin (2019) and others argues for inherent interpretability as the primary path, suggesting that post-hoc methods should be avoided entirely in high-stakes settings rather than patched through model adaptation. The Bhalla papers' model-centric turn offers a third way, but neither side has yet produced the large-scale, multi-domain evidence needed to resolve the debate. This series aims to inform, not adjudicate.
 
 ### Remaining open questions
 
@@ -137,6 +143,9 @@ The three papers share a deeper mathematical connection than is immediately appa
 - **Interaction effects**: The causal analysis of Shapley values is about individual features. How do interactions change the picture?
 - **Temporal attribution**: How does the verifiability framing extend to time series, where feature removal must respect temporal structure?
 - **Practical guidance**: If standard attributions cannot be verified, what should practitioners do today?
+
+- **Adversarial attribution attacks**: DiET resists gradient manipulation incidentally; whether verifiability tuning confers systematic adversarial robustness is unexamined.
+- **Multimodal and multilingual attribution**: All three papers focus on single-modality (vision or tabular) settings. How the Q-counterfactual framing extends to text, audio, or multimodal models is unexplored.
 
 These questions guide the subsequent articles in this series.
 
@@ -189,24 +198,24 @@ _Part 1 of a series on feature attribution, explainability, and interpretability
 
 ### Author and Source Credibility
 
-All three papers appear in top-tier venues: NeurIPS (DiET), ICML (VerT), and AISTATS (Janzing). Bhalla et al. are from Harvard and the University of Chicago; Janzing et al. are from the Max Planck Institute for Intelligent Systems. All three papers have been cited as foundational works in subsequent XAI literature.
+Two of the three papers appear in top-tier venues: NeurIPS (DiET) and AISTATS (Janzing). The VerT paper was presented at the ICML 2023 Workshop on Interpretable Machine Learning in Healthcare (IMLH), a more specialised venue. Bhalla et al. are from Harvard and the University of Chicago; Janzing et al. are from the Max Planck Institute for Intelligent Systems. All three papers have been cited as foundational works in subsequent XAI literature.
 
 ### Corpus Reviewed
 
 1. Janzing, D., Minorics, L. and Blöbaum, P. (2020) 'Feature relevance quantification in explainable AI: a causal problem', in _Proceedings of the 23rd International Conference on Artificial Intelligence and Statistics (AISTATS 2020)_. PMLR, 108.
 2. Bhalla, U., Srinivas, S. and Lakkaraju, H. (2023a) 'Discriminative feature attributions: bridging post hoc explainability and inherent interpretability', in _Advances in Neural Information Processing Systems 37 (NeurIPS 2023)_.
-3. Bhalla, U., Srinivas, S. and Lakkaraju, H. (2023b) 'Verifiable feature attributions: a bridge between post hoc explainability and inherent interpretability', in _Proceedings of the 40th International Conference on Machine Learning (ICML 2023)_. PMLR 202.
+3. Bhalla, U., Srinivas, S. and Lakkaraju, H. (2023b) 'Verifiable feature attributions: a bridge between post hoc explainability and inherent interpretability', in _ICML 2023 Workshop on Interpretable Machine Learning in Healthcare (IMLH)_.
 
 ### Citability Snapshot
 
-| Criterion         | Causal Critique (2020) | Verifiability (2023) | DiET (2023)         |
-| ----------------- | ---------------------- | -------------------- | ------------------- |
-| Methodology       | Causal formalisation   | Impossibility proof  | Training framework  |
-| Provenance        | AISTATS (top-tier)     | ICML (top-tier)      | NeurIPS (top-tier)  |
-| Venue type        | Conference             | Conference           | Conference          |
-| Empirical breadth | 2 datasets             | Focused on MNIST     | 3+ architectures    |
-| Replicability     | Gaussian + HAR         | Verified on MNIST    | Semi-synthetic GT   |
-| Theoretical rigor | [H] Proof-based        | [H] Proof-based      | [M] Framework-based |
+| Criterion         | Causal Critique (2020) | Verifiability (2023)        | DiET (2023)         |
+| ----------------- | ---------------------- | --------------------------- | ------------------- |
+| Methodology       | Causal formalisation   | Impossibility proof         | Training framework  |
+| Provenance        | AISTATS (top-tier)     | ICML workshop (specialised) | NeurIPS (top-tier)  |
+| Venue type        | Conference             | Workshop                    | Conference          |
+| Empirical breadth | 2 datasets             | Focused on MNIST            | 3+ architectures    |
+| Replicability     | Gaussian + HAR         | Verified on MNIST           | Semi-synthetic GT   |
+| Theoretical rigor | [H] Proof-based        | [H] Proof-based             | [M] Framework-based |
 
 [H] = High, [M] = Medium
 

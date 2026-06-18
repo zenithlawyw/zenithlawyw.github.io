@@ -79,7 +79,7 @@ The scenario is a photovoltaic energy forecasting task with 15 features where Gl
 
 The framework turns attribution into a design-stage governance tool: the question becomes not "did the model predict correctly?" but "is the model's feature reliance healthy?"
 
-> **Scope:** Validated on a single dataset with gradient boosting only. Uses SHAP and ELI5 but not the newer methods reviewed in this series. The dominance index does not capture interaction effects or dynamic importance under distribution shift.
+> **Scope:** Validated on a single dataset with gradient boosting only. Uses SHAP and ELI5 but not the newer methods reviewed in this series. The dominance index does not capture interaction effects or dynamic importance under distribution shift. The framework also does not address how attribution-based feature selection interacts with regulatory requirements such as the EU AI Act's transparency obligations, which may mandate retention of specific features for explainability regardless of predictive importance.
 
 ---
 
@@ -130,13 +130,13 @@ Laato et al. (2022) systematically review how to explain AI systems to end users
 
 Preet et al. (2025) provide a pedagogical survey of SHAP useful for team onboarding, covering foundations, implementation variants, and the common pitfall Janzing et al. identified: users do not realise they are choosing between interventional and conditional Shapley values.
 
-Mitchell et al. (2019) introduce Model Cards as a documentation standard — complementary to feature attribution, which explains individual decisions, while Model Cards explain the model as a whole.
+Mitchell et al. (2019) introduce Model Cards as a documentation standard. Model Cards are complementary to feature attribution: attribution explains individual decisions, while Model Cards explain the model as a whole.
 
 ---
 
 ## A Decision Framework for Attribution Method Selection
 
-Drawing on all 15 core papers, the domain applications, and the surveys, I propose a structured decision framework organised by three questions.
+If I were advising a team starting their XAI journey today, I would tell them to start with the decision framework below and budget at least as much for evaluation as for explanation generation. Drawing on all 15 core papers, the domain applications, and the surveys, I propose a structured decision framework organised by three questions.
 
 ### Question 1: What model access do you have?
 
@@ -198,7 +198,7 @@ The evidence in this series shows both have known failure modes. SHAP conflates 
 
 ### How should attribution be integrated into an ML pipeline?
 
-At three points: (1) feature selection stage (Kost's XAI-FS approach), (2) model validation stage (evaluation against domain expert baselines), (3) production monitoring stage (tracking attribution stability under distribution shift). Most current practice only addresses the second stage.
+At three points: (1) feature selection stage (Kost's XAI-FS approach), (2) model validation stage (evaluation against domain expert baselines), (3) production monitoring stage (tracking attribution stability under distribution shift). Production monitoring for attribution drift is analogous to data and concept drift monitoring: track the rank correlation between current and baseline feature importance distributions, and alert when it drops below a threshold. Most current practice only addresses the second stage.
 
 ### What should I tell a regulator about my explanations?
 
