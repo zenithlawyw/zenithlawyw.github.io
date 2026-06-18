@@ -75,7 +75,7 @@ Technical and governance guidance for educational purposes. Not legal, regulator
 
 ## A Worked Example: Kost, Lier and Breitner (2025)
 
-The XAI-FS framework by Kost et al. is the only paper in the selected set that directly addresses how attribution methods should be used within an ML development pipeline {% include references/cite.html key="KOST2025100648"" %}. It is therefore the natural starting point for practice-oriented synthesis.
+The XAI-FS framework by Kost et al. is the only paper in the selected set that directly addresses how attribution methods should be used within an ML development pipeline {% include references/cite.html key="KOST2025100648" %}. It is therefore the natural starting point for practice-oriented synthesis.
 
 **The scenario.** A photovoltaic energy forecasting task with 15 features, where one feature (Global Horizontal Irradiance, GHI) dominates the model. The practitioner has two concerns: first, whether overdependence on GHI creates brittleness (what if the GHI sensor fails?); second, whether some features can be removed to reduce data acquisition costs.
 

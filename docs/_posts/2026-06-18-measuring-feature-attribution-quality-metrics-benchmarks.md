@@ -78,7 +78,7 @@ Technical commentary for education and research synthesis. Not legal, regulatory
 
 ### Chen and Zhang (2025): Data-Centric Evaluation with WAE
 
-**The circularity problem.** Most faithfulness metrics work by perturbing the model: removing or masking features and measuring how the prediction changes. The WAE paper argues that this creates a circular dependency: you are evaluating an attribution method using the same model it is trying to explain {% include references/cite.html key="CHEN2025129379"" %}. If the model is brittle or OOD-sensitive (as the verifiability impossibility proof showed), the evaluation metric itself is unreliable.
+**The circularity problem.** Most faithfulness metrics work by perturbing the model: removing or masking features and measuring how the prediction changes. The WAE paper argues that this creates a circular dependency: you are evaluating an attribution method using the same model it is trying to explain {% include references/cite.html key="CHEN2025129379" %}. If the model is brittle or OOD-sensitive (as the verifiability impossibility proof showed), the evaluation metric itself is unreliable.
 
 **The method: WAE (Window-based Attribution RMSE).** WAE takes a fundamentally different approach. Instead of perturbing the model, it compares attributions against a data-inherent property: the predictability of each time window within the time series. The intuition is that more predictable segments of a time series are driven by stronger, more consistent signals, and an attribution method should assign higher importance to features that correspond to these predictable segments.
 
@@ -97,7 +97,7 @@ Two validation hypotheses are confirmed: more advanced methods (SHAP, LEMNA) ach
 
 ### Troncoso-García et al. (2025): Model-Independent Evaluation with RExQUAL
 
-**The reference problem.** Evaluating attribution methods requires comparing them against something. Most methods compare against the model (perturbation-based) or the data (data-centric). RExQUAL proposes evaluating against discovered rules: patterns that emerge from the data independent of both the model and the attribution method {% include references/cite.html key="10879535"
+**The reference problem.** Evaluating attribution methods requires comparing them against something. Most methods compare against the model (perturbation-based) or the data (data-centric). RExQUAL proposes evaluating against discovered rules: patterns that emerge from the data independent of both the model and the attribution method {% include references/cite.html key="10879535" %}.
 
 **The method: RExQUAL (Rule-based Explanation QUALity).** The metric operates in four stages:
 
@@ -118,7 +118,7 @@ The metric measures how well the features identified by an attribution method su
 
 ### Moreira et al. (2025): The Counterfactual Benchmark and Its Broken Metrics
 
-**The insufficiency problem.** Counterfactual explanation methods (which find minimal input changes to alter a prediction) are typically evaluated using quantitative metrics: proximity (how close is the counterfactual to the original?), sparsity (how many features changed?), and validity (does it actually change the prediction?). The largest counterfactual benchmark to date finds these metrics insufficient {% include references/cite.html key="10.1145/3672553"" %}.
+**The insufficiency problem.** Counterfactual explanation methods (which find minimal input changes to alter a prediction) are typically evaluated using quantitative metrics: proximity (how close is the counterfactual to the original?), sparsity (how many features changed?), and validity (does it actually change the prediction?). The largest counterfactual benchmark to date finds these metrics insufficient {% include references/cite.html key="10.1145/3672553" %}.
 
 **The benchmark.** Four counterfactual algorithms (DiCE, GrowingSpheresCF, Prototype, WatcherCF) are evaluated across three model types (Decision Tree, Random Forest, Neural Network) on 25 tabular datasets. The scale (25 datasets is unusually comprehensive for the XAI benchmarking literature) allows the authors to draw comparisons that smaller studies cannot.
 

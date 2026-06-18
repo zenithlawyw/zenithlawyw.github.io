@@ -80,7 +80,7 @@ Technical commentary for education and research synthesis. Not legal, regulatory
 
 **The barrier.** Causal variants of SHAP exist, but they require a causal graph specified by a domain expert. This requirement has been the main barrier to adoption: in most practical settings, no domain expert is available, and even when one is, specifying the complete causal structure among d features is prohibitively time-consuming for d > 10.
 
-Causal SHAP with PC discovery removes this bottleneck by automating the causal discovery step {% include references/cite.html key="11228295"
+Causal SHAP with PC discovery removes this bottleneck by automating the causal discovery step {% include references/cite.html key="11228295" %}.
 
 **The method: Causal SHAP with PC discovery.** The pipeline has three stages:
 
@@ -96,7 +96,7 @@ Causal SHAP with PC discovery removes this bottleneck by automating the causal d
 
 ### Sengupta et al. (2026): ExCIR: Correlation-Aware Global Attribution with Efficiency
 
-**The cost problem.** Causal SHAP requires causal discovery, which is computationally expensive and has strong assumptions. What if we do not need causation, but simply need to be aware of correlation and handle it correctly? ExCIR argues that for many practical applications, a correlation-aware score that avoids double-counting correlated features is sufficient {% include references/cite.html key="11498186"
+**The cost problem.** Causal SHAP requires causal discovery, which is computationally expensive and has strong assumptions. What if we do not need causation, but simply need to be aware of correlation and handle it correctly? ExCIR argues that for many practical applications, a correlation-aware score that avoids double-counting correlated features is sufficient {% include references/cite.html key="11498186" %}.
 
 **The method: ExCIR (Correlation-Aware Feature Attribution).** ExCIR computes a global (dataset-level, not instance-level) feature attribution score in a single deterministic pass:
 
@@ -116,7 +116,7 @@ Causal SHAP with PC discovery removes this bottleneck by automating the causal d
 
 ### Chen, Hu and Liu (2026): C3A: Contrastive Attribution for Few-Shot Learning
 
-**The regime problem.** Few-shot learning models operate in a fundamentally different regime from standard classifiers. They must generalise from one to five examples per class, which forces their backbone networks to learn compressed, highly entangled feature representations. C3A discovers that this compression causes standard attribution methods (including Grad-CAM, LIME, and SHAP) to produce over-smoothed, uninformative explanations {% include references/cite.html key="11449430"
+**The regime problem.** Few-shot learning models operate in a fundamentally different regime from standard classifiers. They must generalise from one to five examples per class, which forces their backbone networks to learn compressed, highly entangled feature representations. C3A discovers that this compression causes standard attribution methods (including Grad-CAM, LIME, and SHAP) to produce over-smoothed, uninformative explanations {% include references/cite.html key="11449430" %}.
 
 The root cause is that standard methods attribute at the image level, but FSL models make decisions based on local descriptors extracted from feature maps. The compressions collapse discriminative detail, and the resulting attributions reflect the coarse feature map rather than the actual decision signal.
 
