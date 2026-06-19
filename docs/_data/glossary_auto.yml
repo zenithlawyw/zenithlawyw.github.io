@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-06-18T20:01:39Z"
-total_candidates: 1002
+generated_at: "2026-06-19T21:52:18Z"
+total_candidates: 1029
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -1920,6 +1920,28 @@ candidates:
       - title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
         url: "/breaking-free-from-correlation-causal-dependency-aware-attribution"
     related_pages: []
+  - term: Foundations
+    status: candidate
+    confidence: 9
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+        url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title:
+          What Does It Mean for AI to Be Explainable? Foundations of Interpretable
+          Machine Learning
+        url: "/foundations-interpretable-machine-learning"
+      - title: Methods and Techniques for Explaining Machine Learning Models
+        url: "/methods-techniques-explaining-ml-models"
+    related_pages: []
   - term: GEO AEO Optimisation
     status: candidate
     confidence: 9
@@ -2528,6 +2550,64 @@ candidates:
           Adaptation, and Deep Clustering"
         url: "/representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering"
     related_pages: []
+  - term: Evaluation Frameworks
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+        url: "/measuring-feature-attribution-quality-metrics-benchmarks"
+      - title: "Explainability in Practice: Domains, Evaluation, and Governance"
+        url: "/explainability-practice-domains-evaluation-governance"
+    related_pages: []
+  - term: Explainability
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
+        url: "/breaking-free-from-correlation-causal-dependency-aware-attribution"
+      - title: Critical Perspectives and Limits of Current Explainability Methods
+        url: "/critical-perspectives-limits-xai"
+      - title: "Explainability in Practice: Domains, Evaluation, and Governance"
+        url: "/explainability-practice-domains-evaluation-governance"
+      - title: "XAI 2.0 and the Road Ahead: Open Challenges and Future Directions"
+        url: "/xai20-open-challenges-future-directions"
+    related_pages: []
+  - term: Explainable
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+      - title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
+        url: "/breaking-free-from-correlation-causal-dependency-aware-attribution"
+      - title:
+          What Does It Mean for AI to Be Explainable? Foundations of Interpretable
+          Machine Learning
+        url: "/foundations-interpretable-machine-learning"
+    related_pages: []
   - term: Feature Attribution Explainable
     status: candidate
     confidence: 8
@@ -2707,6 +2787,22 @@ candidates:
           "Data Provenance in Machine Learning: Traceability, Graph Methods, and
           Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
+    related_pages: []
+  - term: Medical Imaging
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution in Practice: Selection, Pipelines, and Governance"
+        url: "/feature-attribution-practice-selection-pipelines-governance"
+      - title: "Explainability in Practice: Domains, Evaluation, and Governance"
+        url: "/explainability-practice-domains-evaluation-governance"
     related_pages: []
   - term: Models Focus
     status: candidate
@@ -2970,6 +3066,30 @@ candidates:
       - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
         url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
     related_pages: []
+  - term: Synthesis
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Large Language Models in Practice: From the Transformer to the Present
+          Frontier"
+        url: "/large-language-models-practice-from-transformer-to-present-frontier"
+      - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+        url: "/measuring-feature-attribution-quality-metrics-benchmarks"
+      - title:
+          What Does It Mean for AI to Be Explainable? Foundations of Interpretable
+          Machine Learning
+        url: "/foundations-interpretable-machine-learning"
+      - title: "Explainability in Practice: Domains, Evaluation, and Governance"
+        url: "/explainability-practice-domains-evaluation-governance"
+    related_pages: []
   - term: Uci Har
     status: candidate
     confidence: 8
@@ -2985,6 +3105,22 @@ candidates:
           "Support Vector Machine Series Part 2: Benchmark and Error Forensics on
           UCI HAR"
         url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+    related_pages: []
+  - term: Xai Deployment
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution in Practice: Selection, Pipelines, and Governance"
+        url: "/feature-attribution-practice-selection-pipelines-governance"
+      - title: Critical Perspectives and Limits of Current Explainability Methods
+        url: "/critical-perspectives-limits-xai"
     related_pages: []
   - term: A-z Definitions
     status: candidate
@@ -3327,6 +3463,34 @@ candidates:
     related_posts:
       - title: "Statistical Learning: Key Concepts, Algorithms, and Practical Insights"
         url: "/statistical-learning-key-concepts-algorithms-practical-insights"
+    related_pages: []
+  - term: Alignment Evaluation
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "XAI 2.0 and the Road Ahead: Open Challenges and Future Directions"
+        url: "/xai20-open-challenges-future-directions"
+    related_pages: []
+  - term: Alignment Evaluation Standards
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "XAI 2.0 and the Road Ahead: Open Challenges and Future Directions"
+        url: "/xai20-open-challenges-future-directions"
     related_pages: []
   - term: Alignment Focus Method
     status: candidate
@@ -3804,6 +3968,36 @@ candidates:
     related_pages:
       - title: ""
         url: "/literature-reviews/wu-et-al-2025-knowledge-empowered-collaborative-and-co-evolving-ai-models-the-post-llm-roadmap.html"
+  - term: Concept-based Xai
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: Methods and Techniques for Explaining Machine Learning Models
+        url: "/methods-techniques-explaining-ml-models"
+    related_pages: []
+  - term: Conceptual Challenges
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          What Does It Mean for AI to Be Explainable? Foundations of Interpretable
+          Machine Learning
+        url: "/foundations-interpretable-machine-learning"
+    related_pages: []
   - term: Confusion Matrix
     status: candidate
     confidence: 7
@@ -4762,6 +4956,20 @@ candidates:
     related_pages:
       - title: Privacy, Cookies and Data Protection
         url: "/legal/privacy-cookies-data-protection/"
+  - term: Human-centred Regulatory Alignment
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "XAI 2.0 and the Road Ahead: Open Challenges and Future Directions"
+        url: "/xai20-open-challenges-future-directions"
+    related_pages: []
   - term: Hybrid
     status: candidate
     confidence: 7
@@ -4970,6 +5178,26 @@ candidates:
       - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
         url: "/measuring-feature-attribution-quality-metrics-benchmarks"
     related_pages: []
+  - term: Interpretability
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title:
+          What Does It Mean for AI to Be Explainable? Foundations of Interpretable
+          Machine Learning
+        url: "/foundations-interpretable-machine-learning"
+      - title: Methods and Techniques for Explaining Machine Learning Models
+        url: "/methods-techniques-explaining-ml-models"
+    related_pages: []
   - term: Langchain Deployment
     status: candidate
     confidence: 7
@@ -5063,6 +5291,50 @@ candidates:
           "Large Language Models in Practice: From the Transformer to the Present
           Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
+    related_pages: []
+  - term: Learning Artificial
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+      - title:
+          What Does It Mean for AI to Be Explainable? Foundations of Interpretable
+          Machine Learning
+        url: "/foundations-interpretable-machine-learning"
+      - title: Critical Perspectives and Limits of Current Explainability Methods
+        url: "/critical-perspectives-limits-xai"
+    related_pages: []
+  - term: Learning Artificial Intelligence
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+      - title:
+          What Does It Mean for AI to Be Explainable? Foundations of Interpretable
+          Machine Learning
+        url: "/foundations-interpretable-machine-learning"
+      - title: Critical Perspectives and Limits of Current Explainability Methods
+        url: "/critical-perspectives-limits-xai"
     related_pages: []
   - term: Learning Provenance
     status: candidate
@@ -5235,6 +5507,28 @@ candidates:
           "Support Vector Machine Series Part 3: Tuning, Monitoring, and Deployment
           Governance"
         url: "/support-vector-machine-series-part-3-tuning-monitoring-deployment-governance"
+    related_pages: []
+  - term: Machine Learning Artificial
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+      - title:
+          What Does It Mean for AI to Be Explainable? Foundations of Interpretable
+          Machine Learning
+        url: "/foundations-interpretable-machine-learning"
+      - title: Critical Perspectives and Limits of Current Explainability Methods
+        url: "/critical-perspectives-limits-xai"
     related_pages: []
   - term: Machine Learning Provenance
     status: candidate
@@ -5603,6 +5897,20 @@ candidates:
           "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce
           Readiness"
         url: "/post-quantum-cryptography-standards-migration-workforce-readiness"
+    related_pages: []
+  - term: Open Challenges
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "XAI 2.0 and the Road Ahead: Open Challenges and Future Directions"
+        url: "/xai20-open-challenges-future-directions"
     related_pages: []
   - term: Open-source Payment
     status: candidate
@@ -6390,6 +6698,34 @@ candidates:
           Integration Patterns"
         url: "/post-quantum-cryptography-sector-deployment-integration-patterns"
     related_pages: []
+  - term: Regulatory Alignment
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "XAI 2.0 and the Road Ahead: Open Challenges and Future Directions"
+        url: "/xai20-open-challenges-future-directions"
+    related_pages: []
+  - term: Regulatory Alignment Evaluation
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "XAI 2.0 and the Road Ahead: Open Challenges and Future Directions"
+        url: "/xai20-open-challenges-future-directions"
+    related_pages: []
   - term: Reliability
     status: candidate
     confidence: 7
@@ -7056,6 +7392,36 @@ candidates:
     related_pages:
       - title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
         url: "/glossary/"
+  - term: Xai Evaluation
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+        url: "/measuring-feature-attribution-quality-metrics-benchmarks"
+      - title: "Explainability in Practice: Domains, Evaluation, and Governance"
+        url: "/explainability-practice-domains-evaluation-governance"
+    related_pages: []
+  - term: Xai Practice
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Explainability in Practice: Domains, Evaluation, and Governance"
+        url: "/explainability-practice-domains-evaluation-governance"
+    related_pages: []
   - term: A2a Acp Agent
     status: candidate
     confidence: 6
@@ -7678,6 +8044,26 @@ candidates:
         url: "/legal/privacy-cookies-data-protection/"
       - title: Terms of Use
         url: "/legal/terms-of-use/"
+  - term: Applications
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: An Evidence Review of Architecture, Retrieval
+          Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title: "Feature Attribution in Practice: Selection, Pipelines, and Governance"
+        url: "/feature-attribution-practice-selection-pipelines-governance"
+      - title: "Explainability in Practice: Domains, Evaluation, and Governance"
+        url: "/explainability-practice-domains-evaluation-governance"
+    related_pages: []
   - term: Applied Supply Chains
     status: candidate
     confidence: 6
@@ -8457,6 +8843,24 @@ candidates:
           "Deadlock and Resource Contention: Operating Systems Theory Applied to
           Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: Challenges
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          What Does It Mean for AI to Be Explainable? Foundations of Interpretable
+          Machine Learning
+        url: "/foundations-interpretable-machine-learning"
+      - title: "XAI 2.0 and the Road Ahead: Open Challenges and Future Directions"
+        url: "/xai20-open-challenges-future-directions"
     related_pages: []
   - term: China Cloud
     status: candidate
@@ -9788,6 +10192,58 @@ candidates:
           Trust, Provenance, and Resilient Engineering"
         url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
     related_pages: []
+  - term: Explainable AI
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+      - title:
+          What Does It Mean for AI to Be Explainable? Foundations of Interpretable
+          Machine Learning
+        url: "/foundations-interpretable-machine-learning"
+    related_pages: []
+  - term: Explanation
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: Attribution Methods for Exact Computation and Higher-Order Interactions
+        url: "/feature-attribution-exact-computation-higher-order-methods"
+      - title: "Feature Attribution in Practice: Selection, Pipelines, and Governance"
+        url: "/feature-attribution-practice-selection-pipelines-governance"
+      - title: Methods and Techniques for Explaining Machine Learning Models
+        url: "/methods-techniques-explaining-ml-models"
+    related_pages: []
+  - term: Explanation Methods
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: Methods and Techniques for Explaining Machine Learning Models
+        url: "/methods-techniques-explaining-ml-models"
+    related_pages: []
   - term: Exploratory Literature
     status: candidate
     confidence: 6
@@ -10303,6 +10759,26 @@ candidates:
           "Support Vector Machine Series Part 2: Benchmark and Error Forensics on
           UCI HAR"
         url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
+    related_pages: []
+  - term: Healthcare
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: An Evidence Review of Architecture, Retrieval
+          Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title: "Feature Attribution in Practice: Selection, Pipelines, and Governance"
+        url: "/feature-attribution-practice-selection-pipelines-governance"
+      - title: Critical Perspectives and Limits of Current Explainability Methods
+        url: "/critical-perspectives-limits-xai"
     related_pages: []
   - term: Hilbert Spaces Quantum
     status: candidate

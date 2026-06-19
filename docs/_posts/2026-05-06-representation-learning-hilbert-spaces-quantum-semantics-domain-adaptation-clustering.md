@@ -76,7 +76,7 @@ This article is technical commentary for education and engineering analysis. It 
 
 ### Quantum semantics is becoming an engineering discipline, not just a concept
 
-Andreou et al. map the quantum semantic communication landscape and do something genuinely useful: they treat high-dimensional Hilbert-space design as a constrained optimization problem, not a theoretical curiosity {% include references/cite.html key="qsc-2026-ref1" %}. The question shifts. It moves from "can quantum methods represent meaning" to "under what resource and governance constraints can they do it repeatably." Hardware limitations and oversight requirements surface early in their analysis. That is precisely where technically impressive but operationally hollow proposals tend to collapse.
+Andreou et al. map quantum semantic communication research and do something genuinely useful: they treat high-dimensional Hilbert-space design as a constrained optimization problem, not a theoretical curiosity {% include references/cite.html key="qsc-2026-ref1" %}. The question shifts. It moves from "can quantum methods represent meaning" to "under what resource and governance constraints can they do it repeatably." Hardware limitations and oversight requirements surface early in their analysis. That is precisely where technically impressive but operationally hollow proposals tend to collapse.
 
 Chehimi et al. push further. Their resource-aware semantic communication framework reports meaningful savings in quantum communication resources under simulation conditions {% include references/cite.html key="qsc-2026-ref2" %}. Has this crossed the production threshold? No. But "semantic compression with task relevance" is now concrete enough to benchmark, stress-test, and challenge. That is a qualitative shift from the aspirational tone of earlier work in this space.
 
@@ -170,7 +170,7 @@ These are not abstract wishlist items. Each one converts a promising research di
 
 ### What does representation learning in high-dimensional Hilbert spaces mean in practice?
 
-It means learning embeddings where geometry preserves useful structure. Same-class points cluster tightly; different classes separate cleanly. In this article, that principle applies to both quantum Hilbert spaces and kernel-induced Hilbert spaces {% include references/cite.html key="qsc-2026-ref1" %}, {% include references/cite.html key="qsc-2026-ref4" %}.
+It means learning embeddings where geometry preserves useful structure. Same-class points cluster tightly; different classes separate cleanly. That principle applies to both quantum Hilbert spaces and kernel-induced Hilbert spaces {% include references/cite.html key="qsc-2026-ref1" %}, {% include references/cite.html key="qsc-2026-ref4" %}.
 
 ### Do quantum semantic communication methods currently outperform classical systems in production for representation learning?
 

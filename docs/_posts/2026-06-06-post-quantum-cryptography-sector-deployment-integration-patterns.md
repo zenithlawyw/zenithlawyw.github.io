@@ -154,7 +154,7 @@ Nakka et al. focus on a specific, high-consequence problem: securing over-the-ai
 | Signature verification time | < 2 seconds for firmware acceptance | Dilithium meets; SPHINCS+ marginal                        |
 | Certificate storage         | Limited ECU flash memory            | Kyber public keys (1,184 B) fit; McEliece (1 MB) does not |
 | Bandwidth                   | Cellular/satellite (intermittent)   | Larger PQC signatures consume more OTA bandwidth          |
-| Vehicle lifetime            | 15–20 years                         | Must resist quantum attacks through vehicle lifespan      |
+| Vehicle lifetime            | 15-20 years                         | Must resist quantum attacks through vehicle lifespan      |
 
 <figcaption>Table 3: Automotive OTA constraints and their PQC implications (Nakka et al., 2024).</figcaption>
 </figure>

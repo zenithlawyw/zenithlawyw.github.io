@@ -2171,3 +2171,251 @@ DEHDARIRAD2025100101:
   ieee_base: W. Zhao, W. Zhang, L. Zhao and Z. Yu, Research on Security for Software Updates of Intelligent Connected Vehicles Based on Post-Quantum Cryptography, in 2025 International Conference on Electrical Engineering, Automation and Information Science (EEAIS), pp. 160--164, n.d.
   harvard_base: Zhao, W. et al. (n.d.). Research on Security for Software Updates of Intelligent Connected Vehicles Based on Post-Quantum Cryptography. In 2025 International Conference on Electrical Engineering, Automation and Information Science (EEAIS). pp. 160--164.
   source_format: bibtex
+doshivelez2017rigorousscienceinterpretablemachine:
+  entry_type: misc
+  short_author: Finale Doshi-Velez et al.
+  year: "2017"
+  authors: Finale Doshi-Velez and Been Kim
+  title: Towards A Rigorous Science of Interpretable Machine Learning
+  url: https://arxiv.org/abs/1702.08608
+  arxiv: "1702.08608"
+  ieee_base: F. Doshi-Velez and B. Kim, Towards A Rigorous Science of Interpretable Machine Learning, 2017.
+  harvard_base: Doshi-Velez, F. and Kim, B. (2017). Towards A Rigorous Science of Interpretable Machine Learning.
+  source_format: bibtex
+barredoarrieta2020xai:
+  entry_type: article
+  short_author: Barredo Arrieta et al.
+  year: "2020"
+  authors: Barredo Arrieta, Alejandro and D{\'i}az-Rodr{\'i}guez, Natalia and Del Ser, Javier and Bennetot, Adrien and Tabik, Siham and Barbado, Alberto and Garcia, Salvador and Gil-Lopez, Sergio and Molina, Daniel and Benjamins, Richard and Chatila, Raja and Herrera, Francisco
+  title: "Explainable Artificial Intelligence (XAI): Concepts, Taxonomies, Opportunities and Challenges Toward Responsible {AI}"
+  volume: "58"
+  pages: 82--115
+  doi: 10.1016/j.inffus.2019.12.012
+  published_iso: "2020-01-01"
+  published_date: 1 January 2020
+  ieee_base: "A. Barredo Arrieta et al., Explainable Artificial Intelligence (XAI): Concepts, Taxonomies, Opportunities and Challenges Toward Responsible {AI}, vol. 58, pp. 82--115, 2020."
+  harvard_base: "Barredo Arrieta, A. et al. (2020). Explainable Artificial Intelligence (XAI): Concepts, Taxonomies, Opportunities and Challenges Toward Responsible {AI}. vol. 58, pp. 82--115."
+  source_format: bibtex
+"9369420":
+  entry_type: article
+  short_author: Samek et al.
+  year: "2021"
+  authors: Samek, Wojciech and Montavon, Grégoire and Lapuschkin, Sebastian and Anders, Christopher J. and Müller, Klaus-Robert
+  title: "Explaining Deep Neural Networks and Beyond: A Review of Methods and Applications"
+  journal: Proceedings of the IEEE
+  volume: "109"
+  number: "3"
+  pages: 247-278
+  doi: 10.1109/JPROC.2021.3060483
+  ieee_base: "W. Samek, G. Montavon, S. Lapuschkin, C. J. Anders and K. R. Müller, Explaining Deep Neural Networks and Beyond: A Review of Methods and Applications, Proceedings of the IEEE, vol. 109, no. 3, pp. 247-278, 2021."
+  harvard_base: "Samek, W. et al. (2021). Explaining Deep Neural Networks and Beyond: A Review of Methods and Applications. Proceedings of the IEEE. vol. 109, no. 3, pp. 247-278."
+  source_format: bibtex
+molnar2021interpretable:
+  entry_type: book
+  short_author: Molnar
+  year: "2020"
+  authors: Molnar, Christoph
+  title: Interpretable Machine Learning
+  howpublished: Lulu.com
+  url: https://christophm.github.io/interpretable-ml-book/
+  published_iso: "2020-01-01"
+  published_date: 1 January 2020
+  ieee_base: C. Molnar, Interpretable Machine Learning, 2020.
+  harvard_base: Molnar, C. (2020). Interpretable Machine Learning.
+  source_format: bibtex
+LONGO2024102301:
+  entry_type: article
+  short_author: Luca Longo et al.
+  year: "2024"
+  authors: Luca Longo and Mario Brcic and Federico Cabitza and Jaesik Choi and Roberto Confalonieri and Javier Del Ser and Riccardo Guidotti and Yoichi Hayashi and Francisco Herrera and Andreas Holzinger and Richard Jiang and Hassan Khosravi and Freddy Lecue and Gianclaudio Malgieri and Andrés Páez and Wojciech Samek and Johannes Schneider and Timo Speith and Simone Stumpf
+  title: "Explainable Artificial Intelligence (XAI) 2.0: A manifesto of open challenges and interdisciplinary research directions"
+  journal: Information Fusion
+  volume: "106"
+  pages: "102301"
+  url: https://www.sciencedirect.com/science/article/pii/S1566253524000794
+  doi: 10.1016/j.inffus.2024.102301
+  ieee_base: "L. Longo et al., Explainable Artificial Intelligence (XAI) 2.0: A manifesto of open challenges and interdisciplinary research directions, Information Fusion, vol. 106, pp. 102301, 2024."
+  harvard_base: "Longo, L. et al. (2024). Explainable Artificial Intelligence (XAI) 2.0: A manifesto of open challenges and interdisciplinary research directions. Information Fusion. vol. 106, pp. 102301."
+  source_format: bibtex
+ghassemi2021falsehope:
+  entry_type: article
+  short_author: Ghassemi et al.
+  year: "2021"
+  authors: Ghassemi, Marzyeh and Oakden-Rayner, Luke and Beam, Andrew L.
+  title: The False Hope of Current Approaches to Explainable Artificial Intelligence in Health Care
+  publisher: Elsevier
+  volume: "3"
+  number: "11"
+  pages: e745--e750
+  doi: 10.1016/S2589-7500(21)00208-9
+  published_iso: "2021-01-01"
+  published_date: 1 January 2021
+  ieee_base: M. Ghassemi, L. Oakden-Rayner and A. L. Beam, The False Hope of Current Approaches to Explainable Artificial Intelligence in Health Care, vol. 3, no. 11, pp. e745--e750, 2021.
+  harvard_base: Ghassemi, M., Oakden-Rayner, L. and Beam, A.L. (2021). The False Hope of Current Approaches to Explainable Artificial Intelligence in Health Care. vol. 3, no. 11, pp. e745--e750.
+  source_format: bibtex
+watson2022conceptual:
+  entry_type: article
+  short_author: Watson
+  year: "2022"
+  authors: Watson, David S.
+  title: Conceptual Challenges for Interpretable Machine Learning
+  volume: "200"
+  number: "2"
+  pages: "65"
+  url: https://link.springer.com/10.1007/s11229-022-03485-5
+  doi: 10.1007/s11229-022-03485-5
+  published_iso: "2022-01-01"
+  published_date: 1 January 2022
+  ieee_base: D. S. Watson, Conceptual Challenges for Interpretable Machine Learning, vol. 200, no. 2, pp. 65, 2022.
+  harvard_base: Watson, D.S. (2022). Conceptual Challenges for Interpretable Machine Learning. vol. 200, no. 2, pp. 65.
+  source_format: bibtex
+lapuschkin2019cleverhans:
+  entry_type: article
+  short_author: Lapuschkin et al.
+  year: "2019"
+  authors: Lapuschkin, Sebastian and W{\"a}ldchen, Stephan and Binder, Alexander and Montavon, Gr{\'e}goire and Samek, Wojciech and M{\"u}ller, Klaus-Robert
+  title: Unmasking Clever {H}ans Predictors and Assessing What Machines Really Learn
+  volume: "10"
+  pages: "1096"
+  doi: 10.1038/s41467-019-08987-4
+  published_iso: "2019-01-01"
+  published_date: 1 January 2019
+  ieee_base: S. Lapuschkin, S. W{\"a}ldchen, A. Binder, G. Montavon, W. Samek and K. R. M{\"u}ller, Unmasking Clever {H}ans Predictors and Assessing What Machines Really Learn, vol. 10, pp. 1096, 2019.
+  harvard_base: Lapuschkin, S. et al. (2019). Unmasking Clever {H}ans Predictors and Assessing What Machines Really Learn. vol. 10, pp. 1096.
+  source_format: bibtex
+bhatt2020deployment:
+  entry_type: inproceedings
+  short_author: Bhatt et al.
+  year: "2020"
+  authors: Bhatt, Umang and Xiang, Alice and Sharma, Shubham and Weller, Adrian and Taly, Ankur and Jia, Yunhan and Ghosh, Joydeep and Puri, Ruchir and Moura, Jos{\'e} M. F. and Eckersley, Peter
+  title: Explainable Machine Learning in Deployment
+  book: Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency (FAT* '20)
+  pages: 648--657
+  doi: 10.1145/3351095.3375624
+  published_iso: "2020-01-01"
+  published_date: 1 January 2020
+  ieee_base: U. Bhatt et al., Explainable Machine Learning in Deployment, in Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency (FAT* '20), pp. 648--657, 2020.
+  harvard_base: Bhatt, U. et al. (2020). Explainable Machine Learning in Deployment. In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency (FAT* '20). pp. 648--657.
+  source_format: bibtex
+casper2024blackbox:
+  entry_type: inproceedings
+  short_author: Casper et al.
+  year: "2024"
+  authors: Casper, Stephen and Ezell, Carson and Siegmann, Charlotte and Kolt, Noam and Curtis, Taylor Lynn and Bucknall, Benjamin and Haupt, Andreas and Wei, Kevin and Scheurer, J{\'e}r{\'e}my and Hobbhahn, Marius and Sharkey, Lee and Krishna, Satyapriya and Von Hagen, Marvin and Alberti, Silas and Chan, Alan and Sun, Qinyi and Gerovitch, Michael and Bau, David and Tegmark, Max and Krueger, David and Hadfield-Menell, Dylan
+  title: Black-Box Access is Insufficient for Rigorous {AI} Audits
+  book: Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT '24)
+  doi: 10.1145/3630106.3659037
+  published_iso: "2024-01-01"
+  published_date: 1 January 2024
+  ieee_base: S. Casper et al., Black-Box Access is Insufficient for Rigorous {AI} Audits, in Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT '24), 2024.
+  harvard_base: Casper, S. et al. (2024). Black-Box Access is Insufficient for Rigorous {AI} Audits. In Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT '24).
+  source_format: bibtex
+pawlicki2024metrics:
+  entry_type: article
+  short_author: Pawlicki et al.
+  year: "2024"
+  authors: Pawlicki, Marek and Pawlicka, Aleksandra and Uccello, Federica and Szelest, Sebastian and D'Antonio, Salvatore and Kozik, Rafa{\l} and Chora{\'s}, Micha{\l}
+  title: "Evaluating the Necessity of the Multiple Metrics for Assessing Explainable {AI}: A Critical Examination"
+  volume: "602"
+  pages: "128282"
+  doi: 10.1016/j.neucom.2024.128282
+  published_iso: "2024-01-01"
+  published_date: 1 January 2024
+  ieee_base: "M. Pawlicki et al., Evaluating the Necessity of the Multiple Metrics for Assessing Explainable {AI}: A Critical Examination, vol. 602, pp. 128282, 2024."
+  harvard_base: "Pawlicki, M. et al. (2024). Evaluating the Necessity of the Multiple Metrics for Assessing Explainable {AI}: A Critical Examination. vol. 602, pp. 128282."
+  source_format: bibtex
+li2022interpretable:
+  entry_type: misc
+  short_author: Li et al.
+  year: "2022"
+  authors: Li, Xuhong and Xiong, Haoyi and Li, Xingjian and Wu, Xuanyu and Zhang, Xiao and Liu, Ji and Bian, Jiang and Dou, Dejing
+  title: "Interpretable Deep Learning: Interpretation, Interpretability, Trustworthiness, and Beyond"
+  howpublished: arXiv:2103.10689 [cs.LG]
+  published_iso: "2022-01-01"
+  published_date: 1 January 2022
+  ieee_base: "X. Li et al., Interpretable Deep Learning: Interpretation, Interpretability, Trustworthiness, and Beyond, arXiv:2103.10689 [cs.LG], 2022."
+  harvard_base: "Li, X. et al. (2022). Interpretable Deep Learning: Interpretation, Interpretability, Trustworthiness, and Beyond. arXiv:2103.10689 [cs.LG]."
+  source_format: bibtex
+poeta2025concept:
+  entry_type: article
+  short_author: Poeta et al.
+  year: "2025"
+  authors: Poeta, Eleonora and Ciravegna, Gabriele and Pastor, Eliana and Cerquitelli, Tania and Baralis, Elena
+  title: "Concept-based Explainable Artificial Intelligence: A Survey"
+  doi: 10.1145/3774643
+  published_iso: "2025-01-01"
+  published_date: 1 January 2025
+  ieee_base: "E. Poeta, G. Ciravegna, E. Pastor, T. Cerquitelli and E. Baralis, Concept-based Explainable Artificial Intelligence: A Survey, 2025, In press."
+  harvard_base: "Poeta, E. et al. (2025). Concept-based Explainable Artificial Intelligence: A Survey. In press."
+  note: In press
+  source_format: bibtex
+zhao2024llm:
+  entry_type: article
+  short_author: Zhao et al.
+  year: "2024"
+  authors: Zhao, Haiyan and Chen, Hanjie and Yang, Fan and Liu, Ninghao and Deng, Huiqi and Cai, Hengyi and Wang, Shuaiqiang and Yin, Dawei and Du, Mengnan
+  title: "Explainability for Large Language Models: A Survey"
+  volume: "57"
+  number: "4"
+  pages: Article 82
+  doi: 10.1145/3639372
+  published_iso: "2024-01-01"
+  published_date: 1 January 2024
+  ieee_base: "H. Zhao et al., Explainability for Large Language Models: A Survey, vol. 57, no. 4, pp. Article 82, 2024."
+  harvard_base: "Zhao, H. et al. (2024). Explainability for Large Language Models: A Survey. vol. 57, no. 4, pp. Article 82."
+  source_format: bibtex
+dwivedi2023xai:
+  entry_type: article
+  short_author: Dwivedi et al.
+  year: "2023"
+  authors: Dwivedi, Rudresh and Dave, Devam and Naik, Het and Singhal, Smith and Omer, Rana and Patel, Pankesh and Qian, Bin and Wen, Zhenyu and Shah, Tejal and Morgan, Graham and Ranjan, Rajiv
+  title: "Explainable {AI} (XAI): Core Ideas, Techniques, and Solutions"
+  volume: "55"
+  number: "9"
+  pages: Article 194
+  doi: 10.1145/3561048
+  published_iso: "2023-01-01"
+  published_date: 1 January 2023
+  ieee_base: "R. Dwivedi et al., Explainable {AI} (XAI): Core Ideas, Techniques, and Solutions, vol. 55, no. 9, pp. Article 194, 2023."
+  harvard_base: "Dwivedi, R. et al. (2023). Explainable {AI} (XAI): Core Ideas, Techniques, and Solutions. vol. 55, no. 9, pp. Article 194."
+  source_format: bibtex
+salvi2025uncertainty:
+  entry_type: article
+  short_author: Salvi et al.
+  year: "2025"
+  authors: Salvi, Massimo and others
+  title: "Explainability and Uncertainty: Two Sides of the Same Coin for Enhancing the Interpretability of Deep Learning"
+  volume: "115"
+  pages: "102780"
+  published_iso: "2025-01-01"
+  published_date: 1 January 2025
+  ieee_base: "M. Salvi and others, Explainability and Uncertainty: Two Sides of the Same Coin for Enhancing the Interpretability of Deep Learning, vol. 115, pp. 102780, 2025."
+  harvard_base: "Salvi, M. and others. (2025). Explainability and Uncertainty: Two Sides of the Same Coin for Enhancing the Interpretability of Deep Learning. vol. 115, pp. 102780."
+  source_format: bibtex
+chazette2021exploring:
+  entry_type: inproceedings
+  short_author: Chazette et al.
+  year: "2021"
+  authors: Chazette, Larissa and Brunotte, Wasja and Speith, Timo
+  title: "Exploring Explainability: A Definition, a Model, and a Knowledge Catalogue"
+  book: 2021 IEEE 29th International Requirements Engineering Conference (RE)
+  doi: 10.1109/RE51729.2021.00025
+  published_iso: "2021-01-01"
+  published_date: 1 January 2021
+  ieee_base: "L. Chazette, W. Brunotte and T. Speith, Exploring Explainability: A Definition, a Model, and a Knowledge Catalogue, in 2021 IEEE 29th International Requirements Engineering Conference (RE), 2021."
+  harvard_base: "Chazette, L., Brunotte, W. and Speith, T. (2021). Exploring Explainability: A Definition, a Model, and a Knowledge Catalogue. In 2021 IEEE 29th International Requirements Engineering Conference (RE)."
+  source_format: bibtex
+hassija2024interpreting:
+  entry_type: article
+  short_author: Hassija et al.
+  year: "2024"
+  authors: Hassija, Vikas and Chamola, Vinay and Mahapatra, Atmesh and Singal, Abhishek and Goel, Divyansh and Huang, Kaizhu and Scardapane, Simone and Spinelli, Indro and Mahmud, Mufti and Hussain, Amir
+  title: "Interpreting Black-Box Models: A Review on Explainable Artificial Intelligence"
+  volume: "16"
+  pages: 45--74
+  doi: 10.1007/s12559-023-10179-8
+  published_iso: "2024-01-01"
+  published_date: 1 January 2024
+  ieee_base: "V. Hassija et al., Interpreting Black-Box Models: A Review on Explainable Artificial Intelligence, vol. 16, pp. 45--74, 2024."
+  harvard_base: "Hassija, V. et al. (2024). Interpreting Black-Box Models: A Review on Explainable Artificial Intelligence. vol. 16, pp. 45--74."
+  source_format: bibtex

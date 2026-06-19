@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-06-18T20:01:46Z"
+generated_at: "2026-06-19T21:52:25Z"
 signal_weights:
   title: 3
   categories: 5
@@ -15,32 +15,35 @@ signal_weight_rationale:
   intro_description_headings: Medium weight for context enrichment without dominating keyword extraction.
   keywords_catchwords: Low weight to avoid over-amplifying manually supplied or potentially noisy token lists.
 keywords:
-  - attribution
-  - engineering
   - governance
+  - attribution
+  - xai
+  - engineering
   - machine
-  - rag
   - learning
-  - model
+  - evaluation
   - deployment
+  - rag
+  - model
+  - artificial
+  - intelligence
+  - technical
   - lightning
   - network
   - data
-  - production
-  - appendix
-  - artificial
-  - intelligence
-  - implementation
-  - evaluation
-  - practical
-  - evidence
-  - technical
-  - architecture
-  - feature
   - questions
+  - production
+  - practical
+  - appendix
+  - evidence
+  - implementation
+  - feature
+  - architecture
+  - support
+  - methods
   - provenance
   - language
-  - support
+  - practice
   - retrieval
   - vector
   - a2a
@@ -50,153 +53,156 @@ keywords:
   - chain
   - teams
   - cryptography
+  - definitions
   - systems
   - acp
-  - definitions
+  - author
   - review
+  - domain
   - orchestration
+  - credibility
   - cross-border
   - agentic
   - causal
   - cloud
   - controls
   - pqc
+  - challenges
+  - metrics
+  - papers
+  - snapshot
   - table
-  - author
+  - guide
+  - literature
   - contents
   - lessons
+  - framework
   - large
+  - open
   - security
   - benchmark
-  - guide
   - micropayments
-  - practice
   - design
-  - domain
-  - papers
-  - credibility
+  - limits
   - post-quantum
   - quantum
-  - metrics
-  - literature
-  - xai
+  - explainability
+  - citability
+  - corpus
+  - software
   - china
   - deadlock
-  - snapshot
-  - corpus
+  - introduction
   - failure
-  - framework
-  - software
+  - foundations
+  - interpretability
+  - cybersecurity
+  - synthesis
   - agent
+  - boundaries
   - digital
+  - explanation
+  - generation
   - llm
   - axios
-  - boundaries
-  - generation
-  - citability
+  - series
+  - conclusion
   - protocol
+  - reference
   - scope
   - npm
   - sovereignty
-  - introduction
-  - method
-  - reference
+  - deep
+  - explainable
+  - trust
   - first
   - legal
   - migration
   - platform
-  - cybersecurity
+  - applications
   - glossary
-  - open
-  - series
+  - regulatory
   - theory
   - tuning
   - hybrid
+  - map
+  - maturity
   - representation
   - standard
-  - trust
   - attack
   - guidance
-  - limits
-  - selection
-  - blockchain
-  - inference
-  - maturity
-  - synthesis
-  - calibration
-  - deep
+  - healthcare
   - operational
+  - selection
+  - access
+  - blockchain
+  - calibration
+  - critical
+  - inference
+  - quality
+  - context
+  - frequently
+  - gap
   - patterns
   - playbook
-  - conclusion
-  - map
+  - shap
+  - analysis
+  - compliance
+  - knowledge
   - monitoring
   - open-source
+  - problem
   - processing
-  - quality
   - readiness
-  - shap
-  - context
-  - analysis
+  - asked
+  - conceptual
+  - decision
+  - infrastructure
+  - requirements
+  - alignment
+  - beyond
   - clustering
+  - integration
   - iot
+  - medical
   - natural
+  - reliability
   - resource
   - strategy
   - adaptation
-  - critical
+  - critique
   - enterprise
   - exact
   - fragmentation
   - hub
-  - pipeline
-  - reliability
-  - testing
-  - access
-  - beyond
-  - compromise
-  - decisions
-  - incident
-  - integration
-  - langchain
-  - nist
-  - optimisation
-  - problem
-  - starvation
-  - verifiability
-  - communication
-  - gap
-  - infrastructure
-  - knowledge
-  - terminology
-  - traceability
-  - applications
-  - authoritative
-  - automated
-  - common
-  - compliance
 key_phrases:
   - artificial intelligence
+  - machine learning
   - lightning network
   - support vector
   - support vector machine
   - vector machine
   - supply chain
-  - machine learning
+  - artificial intelligence machine
+  - intelligence machine
+  - intelligence machine learning
+  - author credibility
   - a2a acp
   - mcp a2a
+  - feature attribution
   - mcp a2a acp
   - table contents
-  - feature attribution
   - large language
   - appendix table
   - appendix table contents
-  - author credibility
+  - citability snapshot
   - implementation guide
   - post-quantum cryptography
   - technical appendix
+  - learning artificial
+  - learning artificial intelligence
+  - machine learning artificial
   - engineering governance
-  - citability snapshot
   - data provenance
   - lightning network implementation
   - network implementation
@@ -204,18 +210,19 @@ key_phrases:
   - digital sovereignty
   - network cross-border
   - network implementation guide
-  - artificial intelligence machine
-  - intelligence machine
-  - intelligence machine learning
   - lightning network cross-border
+  - software engineering
   - cross-border micropayments
   - axios npm
   - language models
   - large language models
   - network cross-border micropayments
-  - software engineering
   - representation learning
+  - technical definitions
+  - asked questions
   - chain attack
+  - frequently asked
+  - frequently asked questions
   - npm supply
   - npm supply chain
   - supply chain attack
@@ -225,19 +232,21 @@ key_phrases:
   - axios npm supply
   - credibility appendix
   - credibility appendix table
+  - evaluation frameworks
   - language processing
   - natural language
   - natural language processing
   - technical appendix author
-  - technical definitions
+  - domain applications
+  - evaluation metrics
   - artificial intelligence artificial
   - contents author
   - contents author credibility
+  - engineering artificial
+  - engineering artificial intelligence
   - intelligence artificial
   - intelligence artificial intelligence
-  - learning artificial
-  - learning artificial intelligence
-  - machine learning artificial
+  - open challenges
   - table contents author
   - agentic orchestration framework
   - digital sovereignty china
@@ -246,9 +255,11 @@ key_phrases:
   - sovereignty china
   - contents citability
   - contents citability snapshot
+  - corpus reviewed
   - orchestration mcp
   - orchestration mcp a2a
   - table contents citability
+  - xai evaluation
   - augmented generation
   - chain security
   - engineering lessons
@@ -259,213 +270,203 @@ key_phrases:
   - appendix appendix
   - appendix appendix table
   - deep clustering
-  - engineering artificial
-  - engineering artificial intelligence
-  - evaluation metrics
+  - evidence maturity
   - failure mode
   - machine benchmark
+  - medical imaging
   - platform engineering
+  - software engineering artificial
   - technical appendix appendix
   - vector machine benchmark
+  - xai deployment
   - augmented generation large
   - causal shap
   - generation large
   - generation large language
   - attribution methods
+  - author credibility corpus
   - coffman conditions
-  - corpus reviewed
-  - evidence maturity
+  - credibility corpus
+  - credibility corpus reviewed
   - governance controls
   - langgraph langchain
   - production governance
+  - theoretical foundations
   - uci har
   - adaptation deep
-  - asked questions
   - attribution causal
+  - concept-based xai
+  - conceptual challenges
   - domain adaptation deep
   - exact computation
-  - frequently asked
-  - frequently asked questions
+  - explanation methods
+  - governance structures
   - literature review
   - machine deployment
   - vector machine deployment
+  - xai practice
   - attribution xai
   - authoritative reference
   - authoritative reference set
   - citability snapshot authoritative
-  - domain applications
+  - corpus reviewed citability
+  - evidence maturity map
   - few-shot learning
   - governance data
   - implementation playbook
+  - introduction vocabulary
   - language processing retrieval
-  - processing retrieval
-  - processing retrieval augmented
-  - reference set
-  - retrieval-augmented generation
-  - scope claim
-  - seo geo
-  - snapshot authoritative
-  - snapshot authoritative reference
-  - software engineering artificial
-  - a2a acp langgraph
-  - acp langgraph
-  - acp langgraph langchain
-  - adaptation deep clustering
-  - attribution explainable
-  - causal discovery
-  - confidence calibration
-  - data protection
-  - data provenance machine
 catchwords:
+  - governance
   - attribution
   - engineering
-  - governance
   - machine
   - learning
-  - model
+  - evaluation
   - deployment
-  - lightning
-  - network
-  - production
-  - appendix
+  - model
   - artificial
   - intelligence
-  - implementation
-  - evaluation
-  - practical
-  - evidence
   - technical
-  - architecture
-  - feature
+  - lightning
+  - network
   - questions
+  - production
+  - practical
+  - appendix
+  - evidence
+  - implementation
+  - feature
+  - architecture
+  - support
+  - methods
   - provenance
   - language
-  - support
+  - practice
   - retrieval
   - vector
   - supply
   - chain
   - teams
   - cryptography
-  - systems
   - definitions
+  - systems
+  - author
   - review
+  - domain
   - orchestration
+  - credibility
   - cross-border
   - agentic
   - causal
   - cloud
   - controls
+  - challenges
+  - metrics
+  - papers
+  - snapshot
   - table
-  - author
+  - guide
+  - literature
   - contents
   - lessons
+  - framework
   - large
   - security
   - benchmark
-  - guide
   - micropayments
-  - practice
   - design
-  - domain
-  - papers
-  - credibility
+  - limits
   - post-quantum
   - quantum
-  - metrics
-  - literature
+  - explainability
+  - citability
+  - corpus
+  - software
   - china
   - deadlock
-  - snapshot
-  - corpus
+  - introduction
   - failure
-  - framework
-  - software
+  - foundations
+  - interpretability
+  - cybersecurity
+  - synthesis
   - agent
-  - digital
-  - axios
   - boundaries
+  - digital
+  - explanation
   - generation
-  - citability
+  - axios
+  - series
+  - conclusion
   - protocol
+  - reference
   - scope
   - sovereignty
-  - introduction
-  - method
-  - reference
+  - explainable
+  - trust
   - first
   - legal
   - migration
   - platform
-  - cybersecurity
+  - applications
   - glossary
-  - series
+  - regulatory
   - theory
   - tuning
   - hybrid
+  - maturity
   - representation
   - standard
-  - trust
   - attack
   - guidance
-  - limits
-  - selection
-  - blockchain
-  - inference
-  - maturity
-  - synthesis
-  - calibration
+  - healthcare
   - operational
+  - selection
+  - access
+  - blockchain
+  - calibration
+  - critical
+  - inference
+  - quality
+  - context
+  - frequently
   - patterns
   - playbook
-  - conclusion
+  - analysis
+  - compliance
+  - knowledge
   - monitoring
   - open-source
+  - problem
   - processing
-  - quality
   - readiness
-  - context
-  - analysis
+  - asked
+  - conceptual
+  - decision
+  - infrastructure
+  - requirements
+  - alignment
+  - beyond
   - clustering
+  - integration
+  - medical
   - natural
+  - reliability
   - resource
   - strategy
   - adaptation
-  - critical
+  - critique
   - enterprise
   - exact
   - fragmentation
-  - pipeline
-  - reliability
-  - testing
-  - access
-  - beyond
-  - compromise
-  - decisions
-  - incident
-  - integration
-  - langchain
-  - optimisation
-  - problem
-  - starvation
-  - verifiability
-  - communication
-  - infrastructure
-  - knowledge
-  - terminology
-  - traceability
-  - applications
-  - authoritative
-  - automated
-  - common
-  - compliance
 catchphrases:
   - technical appendix
   - citability snapshot
-  - authoritative reference set
-  - corpus reviewed
-  - evidence maturity map
   - frequently asked questions
+  - corpus reviewed
+  - authoritative reference set
+  - evidence maturity map
   - common questions
   - terminology definitions
   - agent card
@@ -473,6 +474,7 @@ catchphrases:
   - core concepts
   - e evidence maturity snapshot
   - f practical translation map
+  - full series reference map
   - practitioner questions
   - protocol glossary
   - working definitions
@@ -484,6 +486,7 @@ catchphrases:
   - 4 semantic versioning convenience systematically enables supply chain propagation
   - 6 communication infrastructure carries hidden regulatory friction
   - acceptable conduct
+  - access governance
   - ai-augmented development
   - architecture design
   - architecture overview
@@ -524,69 +527,70 @@ catchphrases:
   - design questions
   - distinguishing characteristics
   - document loading
+  - domain coverage
   - domain expertise
+  - domain-specific xai requirements
   - durable execution
   - embedding model selection
   - engagement boundary
   - engineering practice
   - enterprise architecture considerations
+  - evaluation frameworks
   - evidence boundaries
   - externalize routing policy
   - failure mode 1 distractor contamination
   - failure mode 5 domain-safety gaps
-  - full series reference map
   - full-stack scope
   - glossary overview
   - governance controls
   - governance definitions
+  - governance structures
   - hash-based signatures
   - homepage overview
+  - human-centred challenges
   - hybrid qkd pqc network architectures
   - hyperparameter stability signal
   - implement graduated autonomy early
   - implementation pattern
   - implementation questions
   - intellectual property
+  - interdisciplinary challenges
+  - interdisciplinary infrastructure
   - interpretation limits
   - jurisdiction map
   - jurisdiction note
   - lattice-based cryptography
   - layer 1 orchestrator service
-  - layer 2b optional acp-compatible interop edge
-  - layer 3 tooling behind mcp
-  - layer b decision behavior
-  - legal notices
-  - liability allocation
-  - liability boundary
-  - measured impact
-  - method comparison matrix
 search_words:
-  - attribution
-  - engineering
   - governance
+  - attribution
+  - xai
+  - engineering
   - machine
-  - rag
   - learning
-  - model
+  - evaluation
   - deployment
+  - rag
+  - model
+  - artificial
+  - intelligence
+  - technical
   - lightning
   - network
   - data
-  - production
-  - appendix
-  - artificial
-  - intelligence
-  - implementation
-  - evaluation
-  - practical
-  - evidence
-  - technical
-  - architecture
-  - feature
   - questions
+  - production
+  - practical
+  - appendix
+  - evidence
+  - implementation
+  - feature
+  - architecture
+  - support
+  - methods
   - provenance
   - language
-  - support
+  - practice
   - retrieval
   - vector
   - a2a
@@ -596,82 +600,85 @@ search_words:
   - chain
   - teams
   - cryptography
+  - definitions
   - systems
   - acp
-  - definitions
+  - author
   - review
+  - domain
   - orchestration
+  - credibility
   - cross-border
   - agentic
   - causal
   - cloud
   - controls
   - pqc
+  - challenges
+  - metrics
+  - papers
+  - snapshot
   - table
-  - author
+  - guide
+  - literature
   - contents
   - lessons
+  - framework
   - large
+  - open
   - security
   - benchmark
-  - guide
   - micropayments
-  - practice
   - design
-  - domain
-  - papers
-  - credibility
+  - limits
   - post-quantum
   - quantum
-  - metrics
-  - literature
-  - xai
+  - explainability
+  - citability
+  - corpus
+  - software
   - china
   - deadlock
-  - snapshot
-  - corpus
+  - introduction
   - failure
-  - framework
-  - software
+  - foundations
+  - interpretability
+  - cybersecurity
+  - synthesis
   - agent
+  - boundaries
   - digital
+  - explanation
+  - generation
   - llm
   - axios
-  - boundaries
-  - generation
-  - citability
-  - protocol
-  - scope
-  - npm
-  - sovereignty
-  - introduction
-  - method
-  - reference
-  - first
-  - legal
-  - migration
-  - platform
   - artificial intelligence
+  - machine learning
   - lightning network
   - support vector
   - support vector machine
   - vector machine
   - supply chain
-  - machine learning
+  - artificial intelligence machine
+  - intelligence machine
+  - intelligence machine learning
+  - author credibility
   - a2a acp
   - mcp a2a
+  - feature attribution
   - mcp a2a acp
   - table contents
-  - feature attribution
   - large language
   - appendix table
   - appendix table contents
-  - author credibility
+  - citability snapshot
   - implementation guide
   - post-quantum cryptography
   - technical appendix
+  - learning artificial
+  - learning artificial intelligence
+  - machine learning artificial
   - engineering governance
-  - citability snapshot
   - data provenance
   - lightning network implementation
   - network implementation
@@ -679,18 +686,19 @@ search_words:
   - digital sovereignty
   - network cross-border
   - network implementation guide
-  - artificial intelligence machine
-  - intelligence machine
-  - intelligence machine learning
   - lightning network cross-border
+  - software engineering
   - cross-border micropayments
   - axios npm
   - language models
   - large language models
   - network cross-border micropayments
-  - software engineering
   - representation learning
+  - technical definitions
+  - asked questions
   - chain attack
+  - frequently asked
+  - frequently asked questions
   - npm supply
   - npm supply chain
   - supply chain attack
@@ -700,32 +708,29 @@ search_words:
   - axios npm supply
   - credibility appendix
   - credibility appendix table
+  - evaluation frameworks
   - language processing
   - natural language
   - natural language processing
   - technical appendix author
-  - technical definitions
+  - domain applications
+  - evaluation metrics
   - artificial intelligence artificial
   - contents author
   - contents author credibility
+  - engineering artificial
+  - engineering artificial intelligence
   - intelligence artificial
   - intelligence artificial intelligence
-  - learning artificial
-  - learning artificial intelligence
-  - machine learning artificial
-  - table contents author
-  - agentic orchestration framework
-  - digital sovereignty china
-  - domain adaptation
-  - orchestration framework
-  - sovereignty china
-  - contents citability
-  - contents citability snapshot
 global_questions:
   - question: How do I handle documents that update frequently in a RAG system?
     answer: "Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. Li et al.'s survey of generative retrieval includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well."
   - question: How do I handle queries that fall outside my RAG corpus scope?
     answer: 'Implement scope-boundary detection: when all retrieved documents score below a confidence threshold, return an explicit "this question is outside the system''s knowledge scope" response rather than generating an answer. Systems that generate answers for out-of-scope queries are more dangerous than systems that refuse, because the user has no signal that the response is ungrounded.'
+  - question: How does Casper et al. characterise the limits of black-box audits?
+    answer: Casper et al. demonstrate that black-box access alone is insufficient for reliable auditing because adversarial inputs can be designed to produce misleading explanations, model editing can change behaviour without detection from explanation outputs, and the inherent ambiguity of post-hoc explanations means that multiple contradictory narratives can be supported by the same audit data.
+  - question: How does Salvi et al. connect explainability and uncertainty in their framework?
+    answer: Salvi et al. (2025) argue that explanations without uncertainty quantification are fundamentally incomplete because users cannot distinguish between confident model predictions and those near decision boundaries. Their framework integrates uncertainty estimates into explanation outputs by modifying attribution methods to propagate epistemic and aleatoric uncertainty through the explanation computation.
   - question: How should I evaluate my RAG system's quality?
     answer: Never evaluate retrieval and generation together. Measure retrieval with precision, recall, and MRR. Measure generation separately with accuracy, faithfulness, and relevance. Why insist on this separation? Because a correct final answer can mask broken retrieval. The model might have guessed correctly despite receiving irrelevant context. Without separated metrics, you cannot distinguish luck from engineering.
   - question: How should pilot success thresholds be defined for lightning network implementation guide?
@@ -735,7 +740,9 @@ global_questions:
   - question: How should teams use community incident reports without amplifying false signals for digital sovereignty China?
     answer: Treat community reports as intake signals. Require independent corroboration through status pages, policy documents, support records, or contractual notices before escalation. This method preserves speed without sacrificing evidence quality.
   - question: What chunk size should I use for RAG document processing?
-    answer: Target 256–512 tokens per chunk. Smaller chunks (128 tokens) improve retrieval precision but lose surrounding context. Larger chunks (1024+ tokens) preserve context but reduce retrieval accuracy because irrelevant content dilutes the embedding signal. Use sentence-level splitting with paragraph awareness for the best balance.
+    answer: Target 256-512 tokens per chunk. Smaller chunks (128 tokens) improve retrieval precision but lose surrounding context. Larger chunks (1024+ tokens) preserve context but reduce retrieval accuracy because irrelevant content dilutes the embedding signal. Use sentence-level splitting with paragraph awareness for the best balance.
+  - question: What conceptual challenges does Watson identify for post-hoc explanations?
+    answer: "Watson identifies three categories: ambiguity (the same explanation can support contradictory conclusions), inaccuracy (explanations can be systematically misleading), and product-process confusion (evaluating the explanation rather than the explanatory process). These challenges apply specifically to post-hoc methods and question whether such explanations can satisfy scientific standards of evidence."
   - question: What is corpus authority drift?
     answer: The gradual accumulation of lower-quality documents in a RAG knowledge base over time. As new documents are added without authority review, the corpus can shift from authoritative primary sources toward a mixture that includes outdated, contradictory, or user-generated content. This degrades retrieval quality silently because no single addition triggers a measurable failure.
   - question: What is the RAG maturity progression and where should my team start?
@@ -756,6 +763,8 @@ global_questions:
     answer: A versioned policy engine paired with replay-safe state transitions gives the largest trust gain in early deployments. Add end-to-end audit traces so each payment decision is explainable. This blend supports daily operations and governance review because teams can see what rule fired, who approved, and how settlement completed.
   - question: How can engineering teams verify whether their environments were exposed for axios npm supply chain attack?
     answer: Investigate systems that resolved or installed affected axios versions during the exposure window and hunt for reported indicators, including `sfrclak[.]com` and platform payload artifacts.
+  - question: How can explanation methods serve as model validation tools?
+    answer: Lapuschkin et al. (2019) demonstrate that explanation methods can detect Clever Hans behaviour where models exploit spurious correlations invisible to accuracy metrics. Their spectral relevance analysis reveals that models trained on medical images may rely on watermarks or hospital markers rather than actual pathology, making explanation methods a diagnostic tool rather than just a transparency device.
   - question: How can teams keep SVM governance useful beyond a single benchmark snapshot for support vector machine deployment?
     answer: Publish reproducible artifacts, versioned diagnostics, and post-release failure analyses so others can learn methods, not only final numbers.
   - question: How can teams test agent-to-agent workflows without introducing flaky suites for agentic orchestration framework?
@@ -802,16 +811,20 @@ global_questions:
     answer: Public reports did not conclusively publish every credential theft detail at first disclosure. Mandiant tradecraft reporting plus the maintainer post-mortem context supports social engineering as a credible precursor pattern.
   - question: What are the biggest risks when deploying RAG in healthcare?
     answer: "Amugongo et al. identify four: language bias (78.9% English-only datasets), proprietary model dependency (GPT-3.5/4 dominance), evaluation fragmentation (no standard framework), and ethics gaps (most studies omit ethical considerations). Teams deploying healthcare RAG must address all four to meet clinical safety requirements."
+  - question: What are the main dimensions of interpretability taxonomies in the literature?
+    answer: "The literature converges on several recurring dimensions: intrinsic versus post-hoc methods, model-specific versus model-agnostic approaches, and local versus global explanations (Barredo Arrieta et al., 2020). These dimensions are not orthogonal and methods can combine aspects of multiple categories. The field has not yet settled on a single standardised taxonomy but the building blocks are widely agreed."
   - question: What boundary-level differences matter most between MCP, A2A, and ACP for MCP vs A2A vs ACP?
     answer: MCP connects models or hosts to tools, resources, and prompts. A2A connects autonomous agents through task lifecycle collaboration. ACP defines a REST-oriented agent interoperability model with manifest and run semantics.
   - question: What core operational message connects the full LLM source synthesis for large language models?
     answer: LLM reliability is an engineering and governance problem, not a presentation problem. Output quality begins with probabilistic sequence modeling and improves through architecture, training stages, and disciplined prompting. Reliable use requires governance controls that address error modes directly and that keep pace with the evolutionary arc from scaling to alignment to efficiency to federated deployment.
   - question: What defines a minimum viable pilot corridor for lightning network implementation guide?
     answer: A minimum viable corridor has one route, one policy set, one API contract, and full observability from intake to settlement. Keep scope narrow so cause and effect stay clear. Expand geography or volume only after reliability, recovery, and intervention metrics remain stable across repeated pilot windows.
+  - question: What distinguishes backpropagation-based methods from perturbation-based methods?
+    answer: Backpropagation-based methods compute attributions through a single forward-backward pass and are computationally efficient but sensitive to gradient properties such as saturation and shattering. Perturbation-based methods observe output changes when inputs are modified and are more robust but require many forward passes, creating a computational cost that scales with the number of features.
   - question: What does graduated autonomy mean in payment operations for lightning network cross-border micropayments?
     answer: Graduated autonomy means matching control depth to payment risk. Low-risk requests can run automatically under strict policy. Medium-risk requests add machine policy checks and delay gates. High-risk requests require human approval before release. This model helps teams move fast while keeping stronger controls where financial harm could be higher.
   - question: What does representation learning in high-dimensional Hilbert spaces mean in practice?
-    answer: It means learning embeddings where geometry preserves useful structure. Same-class points cluster tightly; different classes separate cleanly. In this article, that principle applies to both quantum Hilbert spaces and kernel-induced Hilbert spaces.
+    answer: It means learning embeddings where geometry preserves useful structure. Same-class points cluster tightly; different classes separate cleanly. That principle applies to both quantum Hilbert spaces and kernel-induced Hilbert spaces.
   - question: What happened in the 2026 axios npm supply chain compromise for axios npm supply chain attack?
     answer: Attackers published malicious axios versions on npm that introduced `plain-crypto-js@4.2.1`, which executed install-time malware delivery across multiple operating systems.
   - question: What immediate incident-response sequence is recommended after suspected exposure for axios npm supply chain attack?
@@ -846,6 +859,8 @@ global_questions:
     answer: Start with a minimal governance baseline. Define approved use cases. Define prompt versioning rules. Define output verification requirements. Define escalation procedures for harmful or ungrounded responses. This sequence converts theory into immediate control coverage.
   - question: Why does R-versus-Python parity still matter with similar libsvm tooling for support vector machine benchmark?
     answer: Parity checks still matter because they expose silent preprocessing or CV mismatches and improve reproducibility across mixed-language teams.
+  - question: Why does Samek et al. argue for axiomatic foundations in XAI evaluation?
+    answer: Samek et al. argue that without axiomatic grounding, evaluation becomes circular or arbitrary because there is no objective ground truth for explanations. They propose that explanation methods should satisfy axioms such as sensitivity and implementation invariance, which provide a principled basis for comparing methods and detecting failures that empirical evaluation alone would miss.
   - question: Why does preprocessing provenance remain a high-risk traceability gap for data provenance?
     answer: "Because both relevance and complexity show up there: Pina et al. identify integration gaps at that stage, and Souza et al. identify curation as difficult."
   - question: Why is target discriminability as critical as alignment in unsupervised domain adaptation for representation learning?
@@ -858,6 +873,10 @@ global_questions:
     answer: No. Package removal does not guarantee host recovery after payload execution. Incident response must include endpoint validation, persistence checks, and credential hygiene measures.
   - question: Does the impossibility result apply to inherently interpretable models?
     answer: No. The proof assumes a black-box model where the internal decision boundary cannot be inspected. Decision trees with few leaves, sparse linear models, and rule-based systems are verifiable by construction because their decision logic is transparent. This is a direct argument for inherent interpretability in high-stakes applications.
+  - question: How does Doshi-Velez and Kim's three-tier framework structure XAI evaluation?
+    answer: The framework distinguishes application-grounded evaluation (real task, real users), human-grounded evaluation (simplified task, lay users), and functionally-grounded evaluation (no humans, formal proxy for interpretability). Each tier trades off cost against ecological validity. Application-grounded provides the strongest evidence but is expensive; functionally-grounded is scalable but requires validation that the proxy actually measures interpretability.
+  - question: How does the EU AI Act affect XAI deployment and governance requirements?
+    answer: The EU AI Act classifies AI systems by risk level and imposes transparency obligations that include documentation of training data, model architecture, and intended use. For high-risk systems, it requires human oversight mechanisms and technical documentation of explainability properties. The Act creates legal accountability for explanation quality without prescribing specific technical standards, creating both pressure and flexibility.
   - question: Is PROV-ML an adopted standard or an emerging representation model for data provenance?
     answer: In this evidence set, PROV-ML is best described as a proposed representation with promising applied evidence in a specific domain context.
   - question: Should I display confidence scores to users?
@@ -870,16 +889,30 @@ global_questions:
     answer: "Users of RAG systems tend to trust cited outputs more than uncited ones. This trust is rational but can be exploited by the system's own failure modes. Production systems should: - Never present citations as proof of correctness. Present them as evidence sources that the user can verify. - Implement citation verification checks that compare the generated claim against the retrieved passage, not just confirm that the passage was retrieved."
   - question: What architecture decisions should teams make first for China-compliant cloud services for digital sovereignty China?
     answer: Start by treating jurisdiction as a first-class architectural dimension rather than a deployment-time variable. Define data residency boundaries and key custody paths before selecting providers. Map every service to its legal operator (global vendor, regional partner, customer) and verify that contracts specify obligations for data export, incident escalation, and service-level restoration. Audit communication channels, because alert and notification infrastructure such as SMS can be subject to telecom-level blocking that bypasses application logic. The ten lessons in this article provide an ordered implementation guide, starting with jurisdiction-aware reference architectures in Lesson 1.
+  - question: What distinguishes interpretability from explainability in machine learning?
+    answer: Interpretability refers to the degree to which a human can consistently predict a model's output, a property of the model itself (Doshi-Velez and Kim, 2017). Explainability refers to the broader field encompassing both inherently interpretable models and post-hoc methods that generate explanations after training (Barredo Arrieta et al., 2020). The distinction matters because interpretability is a design choice while explainability is a broader research programme.
   - question: What do cross-border operational controls require at runtime for lightning network implementation guide?
     answer: Cross-border controls need policy-aware routing, auditable state transitions, clear operator visibility at runtime, and explicit AML/CFT and sanctions controls, including jurisdiction-aware screening, escalation paths, and evidence retention. Teams should be able to explain why a route was selected, which rules were applied, and how exceptions were resolved. Without this visibility, reconciliation cost and governance risk increase quickly under real traffic.
+  - question: What does Pawlicki et al. identify as the metrics crisis in XAI evaluation?
+    answer: 'Pawlicki et al. identify three problems: metric duplication where multiple metrics measure the same underlying property and create false diversity, metric inefficacy where some metrics fail to distinguish between random and meaningful explanations, and metric confusion where contradictory results across metrics make it impossible to determine which method is better for a given task. <details markdown="1" class="appendix-callout group"> <summary>Appendix: Source Material</summary>'
   - question: What does alignment mean in LLM systems, and what are its practical limits for large language models?
     answer: Alignment is the process of training or constraining an LLM so its outputs are helpful, honest, and harmless relative to intended use. The main techniques include supervised fine-tuning (SFT) on curated question-answer pairs, reinforcement learning from human feedback (RLHF) where human raters score responses and a reward model is trained on those preferences, and constitutional AI methods where the model critiques its own outputs against stated principles. Alignment does not eliminate all failure modes; recent aligned models report improved refusal behavior on specific benchmark suites, not universal reliability. Claims about alignment effectiveness should be evaluated within the reported evaluation setup rather than generalized.
   - question: What each paper assumes about the problem?
     answer: "| Method | Problem framed as | Solution approach | Causal claim | | ----------- | ------------------------------------------------- | ------------------------------ | ------------------------------ | | Causal SHAP | Need for causal graph → automation | PC algorithm + IDA | Yes: interventional |"
+  - question: What governance structures are needed for responsible XAI deployment?
+    answer: 'Effective governance requires organisational accountability mechanisms including designated explainability officers, access governance that matches explanation detail to stakeholder roles, documented decision frameworks for method selection, and regular audit cycles that verify explanations remain faithful after model updates. These structures bridge the gap between technical capability and responsible practice. <details markdown="1" class="appendix-callout group"> <summary>Appendix: Source Material</summary>'
   - question: What is LLM hallucination, and which controls reduce it in real deployments for large language models?
     answer: Hallucination occurs when an LLM generates plausible-sounding text that is factually wrong, internally inconsistent, or unsupported by any source. The root cause is that LLMs are trained to predict likely next tokens, not to assert truth. Prevention strategies include retrieval-augmented generation (grounding responses in retrieved source documents), contradiction checks against known facts, citation gates that require the model to specify a source for each factual claim, and multi-resolution evaluation that tests factuality separately from fluency. Hallucination is identified as a primary failure mode in both Brown et al. and the synthesis in this article.
+  - question: What is concept-based XAI and how does it differ from feature attribution?
+    answer: 'Concept-based XAI explains model decisions in terms of human-understandable concepts rather than raw features (Poeta et al., 2025). While feature attribution assigns importance scores to individual input dimensions such as pixels or words, concept-based methods identify whether the model recognises higher-level abstractions such as stripes, colour patterns, or medical indicators. This aligns explanations with how humans naturally reason. <details markdown="1" class="appendix-callout group"> <summary>Appendix: Source Material</summary>'
+  - question: What is the deployment gap that Bhatt et al. identify in XAI practice?
+    answer: Bhatt et al. surveyed ML practitioners and found that XAI methods are rarely deployed in production because they lack clear integration paths, standardised evaluation criteria, and actionable outputs. Practitioners reported using explanation methods for debugging during development but not for external accountability purposes. This gap between research capability and deployment reality limits the practical impact of XAI.
   - question: What is the most dangerous RAG failure mode?
     answer: "Distractor contamination: retrieving documents that are semantically similar to the query but do not contain the correct answer. Cuconasu et al. show that a single distractor can reduce accuracy by 25%, and this is more harmful than completely random noise because the generator treats high-scoring but misleading documents as authoritative. This evidence comes from NQ-open at small model scales; the effect at larger scales is plausible but untested."
+  - question: What regulatory challenges does the XAI 2.0 manifesto identify?
+    answer: 'Three regulatory challenges are identified: operationalising the right to explanation under GDPR and the EU AI Act into technically specific requirements, developing auditing frameworks that can verify explanation quality at scale, and creating standardisation mechanisms that allow different regulatory regimes to accept common evidence of explainability. These challenges are urgent because regulatory timelines are shortening while technical standards remain fluid. <details markdown="1" class="appendix-callout group"> <summary>Appendix: Source Material</summary>'
+  - question: What role do taxonomies play in structuring XAI research and practice?
+    answer: 'Taxonomies serve three functions: they create shared vocabulary for cross-study comparison, they identify gaps where no methods exist for important categories, and they help practitioners select appropriate methods for their specific task. Chazette et al. (2021) demonstrate this through a knowledge catalogue that maps user needs to technical explainability requirements. <details markdown="1" class="appendix-callout group"> <summary>Appendix: Source Material</summary>'
   - question: Why do AI access restrictions often change faster than other SaaS restrictions for digital sovereignty China?
     answer: Recent records show AI access decisions integrating strategic and ownership criteria in addition to geography. This creates faster policy asymmetry across regions and legal entities. Engineering teams need provider abstraction and contingency model pathways.
   - question: Why do random documents sometimes improve RAG accuracy?
@@ -934,8 +967,12 @@ global_questions:
     answer: No. Lightning changes how value moves, but it does not remove legal duties. Teams still need to check licensing scope, AML and CFT controls, sanctions screening, and consumer rules for each target market. Treat protocol choice as a technical decision, not a compliance waiver. Nothing in this guidance limits non-waivable statutory rights or mandatory local consumer and data-protection obligations.
   - question: For new projects, should teams prioritize A2A or ACP for agent collaboration for agentic orchestration framework?
     answer: For many long-lived greenfield collaborations, A2A is often a lower-regret default today because of active protocol momentum and documented ACP convergence direction. ACP patterns remain useful for REST-first interoperability edges and migration-minded design.
+  - question: How are explanation methods categorised in the XAI literature?
+    answer: "The dominant taxonomy groups methods into four categories based on their operational mechanism: backpropagation-based (gradients, Integrated Gradients, LRP), perturbation-based (LIME, occlusion, Shapley values), representation-based (activation maximisation, concept activation vectors), and example-based (counterfactuals, prototypes). Each category has different computational requirements and reveals different aspects of model behaviour."
   - question: How can Coffman-condition analysis improve LLM inference and token-slot design for deadlock?
     answer: "Token slots in LLM inference are mutual-exclusion resources: exactly one inference request occupies a decoding slot during autoregressive generation. In a multi-model pipeline, if Request A holds a slot on Model-X while waiting for Model-Y, and Request B holds Model-Y while waiting for Model-X, all four Coffman conditions hold and a deadlock can form. Prevention requires either a global model-acquisition ordering (always acquire Model-X before Model-Y) or full-release semantics, where Request A must complete and release all slots before acquiring resources on a second model. Lessons 1 and 2 address both strategies."
+  - question: How can evaluation become a first-class problem in XAI research?
+    answer: The manifesto argues that evaluation should shift from a post-hoc activity to a design-stage requirement. This means developing community-standard benchmarks, establishing ground-truth datasets for explanation correctness, creating reproducible evaluation protocols that span research groups, and making evaluation quality a publication criterion equivalent to methodological novelty. Currently, evaluation quality varies widely and is rarely treated as a primary contribution.
   - question: How can npm teams detect compromised versions in lockfiles, CI logs, and telemetry for axios npm supply chain attack?
     answer: Review your lockfile (`package-lock.json` or `yarn.lock`) for axios version 1.14.1 or 0.30.4, or for `plain-crypto-js@4.2.1`. Check your CI run logs for installations during the 30-31 March 2026 exposure window. Hunt for IOC domains (`sfrclak[.]com`) and platform-specific payload paths (`/Library/Caches/com.apple.act.mond` on macOS, `C:\ProgramData\wt.exe` on Windows, `/tmp/ld.py` on Linux) in EDR telemetry. The full IOC list appears in the Indicators of Compromise table in this article.
   - question: How do deadlock and starvation differ in distributed and AI-serving systems?
@@ -971,7 +1008,7 @@ global_questions:
   - question: Is VerT compatible with DiET?
     answer: The two methods are complementary. DiET makes models robust to distractor removal, improving attribution correctness. VerT ensures that correctness can be checked. A model could be both discriminatively trained and verifiable. The papers were published independently from the same group and share training infrastructure, but the combined effect has not been empirically evaluated.
   - question: Is cross-encoder re-ranking worth the additional latency?
-    answer: Yes. While cross-encoders introduce a minor latency cost (50–200ms depending on hardware), they eliminate high-scoring semantic distractors. Given that distractor contamination can degrade generation accuracy by over 25%, a re-ranking layer is a required safety gate for production RAG, not an optional enhancement.
+    answer: Yes. While cross-encoders introduce a minor latency cost (50-200ms depending on hardware), they eliminate high-scoring semantic distractors. Given that distractor contamination can degrade generation accuracy by over 25%, a re-ranking layer is a required safety gate for production RAG, not an optional enhancement.
   - question: Is high quantum circuit fidelity equivalent to strong semantic understanding in QNLP for representation learning?
     answer: No. Circuit fidelity quantifies state accuracy; semantic adequacy quantifies whether task-relevant meaning survives. Conflating the two is a common mistake. Evaluate both, simultaneously.
   - question: Is the reported 91.3% GCN result generalizable beyond its study context for data provenance?
@@ -990,10 +1027,20 @@ global_questions:
     answer: Use this article as orientation, not as a deployment checklist. Before adoption decisions, compare against your own stack, load profile, compliance obligations, and failure modes.
   - question: What are the four Coffman conditions, and why do they still matter for modern systems for deadlock?
     answer: "Deadlock occurs when, and only when, all four of the following hold simultaneously: mutual exclusion (a resource is held exclusively by one thread), hold and wait (a thread holds one resource while requesting another), no preemption (held resources cannot be forcibly reclaimed), and circular wait (a cycle exists where each thread waits for a resource held by the next). Eliminating any single condition prevents deadlock entirely. The full theoretical foundation and formal definition appear in the [Understanding Deadlock](#understanding-deadlock-mutex-semaphore-and-the-coffman-conditions) section above."
+  - question: What are the main categories of open challenges in the XAI 2.0 manifesto?
+    answer: "Longo et al. (2024) organise 22 challenges into five categories: technical challenges including formal definitions and evaluation metrics, human-centred challenges including cognitive load and trust calibration, interdisciplinary challenges spanning HCI and philosophy, regulatory challenges concerning auditing frameworks and standardisation, and methodological challenges involving longitudinal and field studies. Technical challenges are most mature while interdisciplinary challenges require structural changes."
+  - question: What are the main limitations of current XAI methods identified in the literature?
+    answer: "The literature identifies five interconnected limitations: explanation ambiguity across methods, systematic inaccuracy through gradient manipulation, a gap between research and deployment practice, structural limits on black-box auditability, and a metrics crisis where evaluation tools fail to distinguish meaningful differences between methods. These limitations are not merely technical but also conceptual and organisational."
   - question: What defines success for a sovereign-aware cloud strategy across legal and technical layers for digital sovereignty China?
     answer: Success appears when regional legal constraints, technical controls, communication guarantees, and migration rights remain aligned and auditable over time. Teams can then maintain continuity through policy change without emergency redesign -.
+  - question: What distinguishes human-centred challenges from technical challenges in XAI?
+    answer: Technical challenges focus on formal properties of explanations such as completeness, robustness, and reproducibility of attribution methods. Human-centred challenges address how explanations interact with human cognition including how much detail users can process, how explanations affect trust, and whether explanations personalise to different user expertise levels. Solving technical challenges does not automatically resolve human-centred ones.
   - question: What does cloud platform bifurcation mean for enterprise reliability and governance for digital sovereignty China?
     answer: "Cloud bifurcation means a vendor maintains two structurally separate operating models for the same product: a global version and a localized version. For enterprise teams, this creates parity gaps in features, compliance attestations, security controls, and support coverage. It also introduces circular failure risk where a service withdrawal by either the global vendor or the regional partner cannot be resolved without both parties acting. The analysis in this article is grounded in documented operating structures from Microsoft, Salesforce, and Unity, mapped to OS-level circular-wait theory in [deadlock and resource contention](/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm)."
+  - question: What domain-specific requirements exist for XAI in medical imaging and clinical settings?
+    answer: Medical imaging requires explanation methods that are robust to Clever Hans artifacts, produce spatially coherent attribution maps, and provide uncertainty quantification alongside explanations. Clinical deployment additionally demands explanations that align with medical reasoning workflows, regulatory compliance under frameworks such as the EU AI Act, and validation against established diagnostic standards rather than purely technical metrics.
+  - question: What evaluation frameworks exist for assessing explanation quality in practice?
+    answer: "Three main frameworks have emerged: functionally-grounded evaluation using formal proxies such as faithfulness and completeness (Samek et al., 2021), human-grounded evaluation through user studies that measure how explanations affect human decision-making, and application-grounded evaluation in real deployment contexts. Dwivedi et al. (2023) provide a practical synthesis linking method selection to evaluation criteria."
   - question: What is a large language model in practical engineering terms for large language models?
     answer: A large language model (LLM) is a neural network trained to predict the next token in a sequence of text. "Large" refers to the parameter count (hundreds of billions for frontier models) and the scale of training data (internet-scale corpora). The key architectural insight, introduced by [Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762) in "Attention Is All You Need," is that self-attention replaces sequential recurrence, allowing parallel computation across all positions in a sequence. This parallelism is what made billion-parameter pretraining tractable.
   - question: What is data provenance in the machine-learning lifecycle, beyond basic lineage?
@@ -1024,6 +1071,8 @@ global_questions:
     answer: In my experience, a policy-and-reliability engineer often delivers outsized quality gains in early teams. This role connects payment logic, risk controls, and observability into one operating loop, which means quicker root-cause discovery, cleaner rollback design, and stronger evidence for go or no-go pilot decisions.
   - question: Why RF Wins Here Without Invalidating SVM Theory?
     answer: Nothing here contradicts large-margin theory. Tree ensembles absorb overlap-heavy feature neighbourhoods more readily in this dataset; that is an empirical observation about data geometry, not a theoretical refutation. SVM remains coherent and operationally useful. Just not the strongest fit for these corridors in this run. Model selection is therefore conditional, which is the boring-but-correct conclusion that benchmarking should produce. Reach for SVM when you need explicit boundary control and disciplined regularisation. Reach for RF when local overlap persists despite careful kernel tuning. Keep both in the candidate pool until class-level risk criteria are satisfied.
+  - question: Why does the XAI 2.0 manifesto call for interdisciplinary infrastructure?
+    answer: The manifesto argues that no single discipline can address all 22 challenges because explanation is simultaneously a mathematical, psychological, and sociological phenomenon. Interdisciplinary infrastructure means shared experimental platforms, standardised evaluation protocols that work across disciplines, funding mechanisms that reward collaboration, and publication venues that accept hybrid contributions spanning computer science, cognitive science, and law.
   - question: Do quantum semantic communication methods currently outperform classical systems in production for representation learning?
     answer: Not yet. The evidence here is simulation-first, not production-validated. What the current work establishes is technical feasibility. Operational superiority remains undemonstrated.
   - question: When should SVM probability calibration be mandatory in downstream workflows for support vector machine deployment?
@@ -1056,6 +1105,8 @@ global_questions:
     answer: "Benchmarks tell you who won. Theory tells you why. More importantly, theory tells you whether the victory transfers to your data, your constraints, your deployment window. A leaderboard number is an endpoint; margin control, loss penalties, and kernel-induced geometry are the mechanism. The core idea is deceptively compact: SVM is structural risk minimization with the margin as capacity knob. Soft-margin optimization quantifies the tension between fitting training noise and preserving a boundary that survives perturbation. Skip this framing and you get lottery-ticket tuning, grid search without a thesis, parameter sweeps that find something but explain nothing. Convexity changes everything. Classical SVM training converges to a global optimum, which means score differences reflect data geometry and model assumptions, never optimizer initialization luck. Compare that with deep networks, where path dependence can dominate results and two identical training runs on identical data may disagree."
   - question: Why are ChatGPT and related AI services restricted in mainland China contexts for digital sovereignty China?
     answer: OpenAI has blocked API and web access for users in mainland China, Hong Kong, and Macau. The block was widely reported in July 2024. Anthropic has applied additional ownership-structure screening beyond geography. Both decisions reflect a combination of US export-control considerations, OpenAI's own usage policies, and the regulatory environment in China. Engineering teams cannot rely on direct OpenAI or Anthropic model access for China-deployed applications and must plan for approved domestic alternatives or allowlisted API routes.
+  - question: Why do Ghassemi et al. argue that explainability requirements may harm clinical AI?
+    answer: Ghassemi et al. argue that mandating explainability for clinical AI could divert resources from rigorous validation through prospective trials and deployment monitoring. They contend that a thoroughly validated model whose outputs clinicians understand through training may be safer than an explainable model whose behaviour has been less rigorously tested. This argument challenges the assumption that explainability is always a net benefit.
   - question: Why were SIKE and Rainbow broken, and what does that tell us?
     answer: SIKE fell to a classical mathematical attack that exploited torsion-point information in the SIDH protocol, building on a theorem published by Kani in 1997. Rainbow was broken by Beullens' key-recovery attack, also entirely classical. Both had survived multiple rounds of NIST evaluation. The lesson is not that NIST's process failed; it is that PQC algorithms sit on mathematical foundations that have received far less adversarial attention than RSA or ECC. Expect more surprises. Design for algorithm replacement.
   - question: Can I use this evidence review as the sole basis for my RAG architecture?
@@ -2671,7 +2722,7 @@ posts:
       - unsupervised domain adaptation
     questions:
       - question: What does representation learning in high-dimensional Hilbert spaces mean in practice?
-        answer: It means learning embeddings where geometry preserves useful structure. Same-class points cluster tightly; different classes separate cleanly. In this article, that principle applies to both quantum Hilbert spaces and kernel-induced Hilbert spaces.
+        answer: It means learning embeddings where geometry preserves useful structure. Same-class points cluster tightly; different classes separate cleanly. That principle applies to both quantum Hilbert spaces and kernel-induced Hilbert spaces.
       - question: Do quantum semantic communication methods currently outperform classical systems in production for representation learning?
         answer: Not yet. The evidence here is simulation-first, not production-validated. What the current work establishes is technical feasibility. Operational superiority remains undemonstrated.
       - question: Why is target discriminability as critical as alignment in unsupervised domain adaptation for representation learning?
@@ -3274,11 +3325,11 @@ posts:
       - question: Which open-source vector database should I choose for RAG?
         answer: Choose **FAISS** for ultra-fast performance during local prototyping. Use **Chroma** for lightweight disk persistence with structured metadata filtering. Transition to **Qdrant** for true large-scale multi-node orchestration requiring advanced data storage, payload management, and horizontal scaling. Start with FAISS or Chroma for development; migrate to Qdrant when you need production persistence and filtering.
       - question: What chunk size should I use for RAG document processing?
-        answer: Target 256–512 tokens per chunk. Smaller chunks (128 tokens) improve retrieval precision but lose surrounding context. Larger chunks (1024+ tokens) preserve context but reduce retrieval accuracy because irrelevant content dilutes the embedding signal. Use sentence-level splitting with paragraph awareness for the best balance.
+        answer: Target 256-512 tokens per chunk. Smaller chunks (128 tokens) improve retrieval precision but lose surrounding context. Larger chunks (1024+ tokens) preserve context but reduce retrieval accuracy because irrelevant content dilutes the embedding signal. Use sentence-level splitting with paragraph awareness for the best balance.
       - question: How do I handle documents that update frequently in a RAG system?
         answer: "Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. Li et al.'s survey of generative retrieval includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well."
       - question: Is cross-encoder re-ranking worth the additional latency?
-        answer: Yes. While cross-encoders introduce a minor latency cost (50–200ms depending on hardware), they eliminate high-scoring semantic distractors. Given that distractor contamination can degrade generation accuracy by over 25%, a re-ranking layer is a required safety gate for production RAG, not an optional enhancement.
+        answer: Yes. While cross-encoders introduce a minor latency cost (50-200ms depending on hardware), they eliminate high-scoring semantic distractors. Given that distractor contamination can degrade generation accuracy by over 25%, a re-ranking layer is a required safety gate for production RAG, not an optional enhancement.
       - question: Can I use RAG without a GPU?
         answer: Yes, for small-scale deployments. CPU-based embedding models (all-MiniLM-L6-v2) and quantised LLMs (via Ollama or llama.cpp) can run on standard servers. For production throughput, a GPU accelerates both embedding computation and LLM inference. The RAG infrastructure itself (vector store, BM25 index, re-ranker) can run on CPU.
       - question: How do I evaluate whether my RAG system is production-ready?
@@ -3631,26 +3682,26 @@ posts:
       - workforce readiness
       - software engineering
       - code migration
-      - automated code
       - automated code migration
       - network architectures
-      - hybrid qkd
-      - qkd pqc
-      - hybrid qkd pqc
+      - automated code
       - development software engineering
       - workforce development software
-      - cybersecurity software engineering
-      - software engineering post-quantum
-      - engineering post-quantum cryptography
-      - post-quantum cryptography nist
-      - cryptography nist standards
-      - nist standards cryptographic
-      - cryptographic migration workforce
-      - cybersecurity software
       - migration workforce development
+      - cryptographic migration workforce
       - standards cryptographic migration
+      - nist standards cryptographic
+      - cryptography nist standards
+      - post-quantum cryptography nist
+      - engineering post-quantum cryptography
+      - software engineering post-quantum
+      - hybrid qkd
+      - qkd pqc
+      - cybersecurity software engineering
+      - hybrid qkd pqc
       - engineering post-quantum
       - cryptography nist
+      - nist standards
     catchwords:
       - migration
       - workforce
@@ -3703,14 +3754,14 @@ posts:
       - workforce readiness
       - software engineering
       - code migration
-      - automated code
       - automated code migration
       - network architectures
-      - hybrid qkd
-      - qkd pqc
-      - hybrid qkd pqc
+      - automated code
       - development software engineering
       - workforce development software
+      - migration workforce development
+      - cryptographic migration workforce
+      - standards cryptographic migration
     questions:
       - question: What Practitioners Should Do Now?
         answer: "- Use ccPASTpqc-style tools for initial translation drafts, then review and test manually - Invest in cryptographic dependency inventories before migration (you cannot migrate what you have not catalogued) - Prioritise asymmetric key operations (symmetric encryption requires only key-size increases)"
@@ -4458,9 +4509,9 @@ posts:
       - explanations
       - integrate
       - lessons
+      - literature
       - map
       - model
-      - papers
       - feature attribution
       - xai deployment
       - production machine learning
@@ -4567,6 +4618,702 @@ posts:
         answer: Proportional to the cost of an incorrect explanation. For a product recommendation system, lightweight SHAP or LIME may suffice. For a medical diagnostic aid, invest in stronger methods (FACE or Causal SHAP), multi-paradigm evaluation, and stakeholder-specific explanation formats.
       - question: What is the single most important thing a practitioner should do?
         answer: Triangulate. Do not rely on a single attribution method, a single evaluation metric, or a single validation dataset. The evidence in this series consistently shows that results are conditional on choices that are easy to overlook when using a single method.
+  xai-foundations-interpretable-machine-learning:
+    title: What Does It Mean for AI to Be Explainable? Foundations of Interpretable Machine Learning
+    url: "/foundations-interpretable-machine-learning"
+    keywords:
+      - interpretability
+      - evaluation
+      - xai
+      - conceptual
+      - learning
+      - machine
+      - challenges
+      - foundations
+      - interpretable
+      - explainable
+      - framework
+      - taxonomies
+      - three-tier
+      - doshi-velez
+      - watson
+      - kim
+      - artificial
+      - catalogue
+      - intelligence
+      - knowledge
+      - molnar
+      - post-hoc
+      - arrieta
+      - barredo
+      - chazette
+      - comprehensive
+      - practical
+      - property
+      - synthesis
+      - definition
+      - asked
+      - author
+      - binary
+      - interpretable ml
+      - xai foundations
+      - explainable ai
+      - ml evaluation
+      - conceptual challenges
+      - artificial intelligence
+      - machine learning
+    key_phrases:
+      - machine learning
+      - conceptual challenges
+      - evaluation conceptual challenges
+      - evaluation conceptual
+      - kim three-tier
+      - doshi-velez kim
+      - xai foundations
+      - foundations interpretability
+      - doshi-velez kim three-tier
+      - xai foundations interpretability
+      - explainable evaluation conceptual
+      - evaluation framework
+      - three-tier evaluation
+      - interpretability explainable evaluation
+      - foundations interpretability explainable
+      - knowledge catalogue
+      - interpretable xai foundations
+      - machine learning artificial
+      - learning artificial intelligence
+      - explainable evaluation
+      - interpretability explainable
+      - interpretable xai
+      - intelligence machine learning
+      - intelligence machine
+    catchwords:
+      - interpretability
+      - evaluation
+      - conceptual
+      - learning
+      - machine
+      - challenges
+      - foundations
+      - interpretable
+      - explainable
+      - framework
+      - taxonomies
+      - three-tier
+      - doshi-velez
+      - watson
+      - artificial
+      - catalogue
+      - intelligence
+      - knowledge
+      - molnar
+      - post-hoc
+      - arrieta
+      - barredo
+      - chazette
+      - comprehensive
+      - practical
+      - property
+      - synthesis
+      - definition
+    search_words:
+      - interpretability
+      - evaluation
+      - xai
+      - conceptual
+      - learning
+      - machine
+      - challenges
+      - foundations
+      - interpretable
+      - explainable
+      - framework
+      - taxonomies
+      - three-tier
+      - doshi-velez
+      - watson
+      - kim
+      - artificial
+      - machine learning
+      - conceptual challenges
+      - evaluation conceptual challenges
+      - evaluation conceptual
+      - kim three-tier
+      - doshi-velez kim
+      - xai foundations
+      - foundations interpretability
+      - doshi-velez kim three-tier
+      - xai foundations interpretability
+      - explainable evaluation conceptual
+      - evaluation framework
+    questions:
+      - question: What distinguishes interpretability from explainability in machine learning?
+        answer: Interpretability refers to the degree to which a human can consistently predict a model's output, a property of the model itself (Doshi-Velez and Kim, 2017). Explainability refers to the broader field encompassing both inherently interpretable models and post-hoc methods that generate explanations after training (Barredo Arrieta et al., 2020). The distinction matters because interpretability is a design choice while explainability is a broader research programme.
+      - question: What are the main dimensions of interpretability taxonomies in the literature?
+        answer: "The literature converges on several recurring dimensions: intrinsic versus post-hoc methods, model-specific versus model-agnostic approaches, and local versus global explanations (Barredo Arrieta et al., 2020). These dimensions are not orthogonal and methods can combine aspects of multiple categories. The field has not yet settled on a single standardised taxonomy but the building blocks are widely agreed."
+      - question: How does Doshi-Velez and Kim's three-tier framework structure XAI evaluation?
+        answer: The framework distinguishes application-grounded evaluation (real task, real users), human-grounded evaluation (simplified task, lay users), and functionally-grounded evaluation (no humans, formal proxy for interpretability). Each tier trades off cost against ecological validity. Application-grounded provides the strongest evidence but is expensive; functionally-grounded is scalable but requires validation that the proxy actually measures interpretability.
+      - question: What conceptual challenges does Watson identify for post-hoc explanations?
+        answer: "Watson identifies three categories: ambiguity (the same explanation can support contradictory conclusions), inaccuracy (explanations can be systematically misleading), and product-process confusion (evaluating the explanation rather than the explanatory process). These challenges apply specifically to post-hoc methods and question whether such explanations can satisfy scientific standards of evidence."
+      - question: What role do taxonomies play in structuring XAI research and practice?
+        answer: 'Taxonomies serve three functions: they create shared vocabulary for cross-study comparison, they identify gaps where no methods exist for important categories, and they help practitioners select appropriate methods for their specific task. Chazette et al. (2021) demonstrate this through a knowledge catalogue that maps user needs to technical explainability requirements. <details markdown="1" class="appendix-callout group"> <summary>Appendix: Source Material</summary>'
+  xai-methods-techniques-explaining-ml-models:
+    title: Methods and Techniques for Explaining Machine Learning Models
+    url: "/methods-techniques-explaining-ml-models"
+    keywords:
+      - methods
+      - explanation
+      - xai
+      - concept-based
+      - learning
+      - model
+      - attribution
+      - post-hoc
+      - techniques
+      - foundations
+      - interpretability
+      - machine
+      - axiomatic
+      - lrp
+      - deep
+      - gradient
+      - samek
+      - tools
+      - validation
+      - artificial
+      - intelligence
+      - choice
+      - evaluation
+      - lapuschkin
+      - poeta
+      - shapes
+      - survey
+      - taxonomy
+      - explaining
+      - gradient-based
+      - interpretable
+      - algorithms
+      - analysis
+      - xai methods
+      - post-hoc explanations
+      - model interpretability
+      - concept-based xai
+      - deep learning
+      - explanation techniques
+      - gradient attribution
+    key_phrases:
+      - explanation methods
+      - concept-based xai
+      - machine learning
+      - axiomatic foundations
+      - methods post-hoc
+      - xai methods post-hoc
+      - attribution lrp
+      - gradient attribution
+      - techniques gradient
+      - explanation techniques
+      - deep learning
+      - gradient attribution lrp
+      - techniques gradient attribution
+      - validation tools
+      - xai methods
+      - artificial intelligence machine
+      - methods post-hoc explanations
+      - post-hoc explanations model
+      - intelligence machine learning
+      - explanations model interpretability
+      - model interpretability concept-based
+      - interpretability concept-based xai
+      - concept-based xai deep
+      - xai deep learning
+    catchwords:
+      - methods
+      - explanation
+      - concept-based
+      - learning
+      - model
+      - attribution
+      - post-hoc
+      - techniques
+      - foundations
+      - interpretability
+      - machine
+      - axiomatic
+      - gradient
+      - samek
+      - tools
+      - validation
+      - artificial
+      - intelligence
+      - choice
+      - evaluation
+      - lapuschkin
+      - poeta
+      - shapes
+      - survey
+      - taxonomy
+      - explaining
+      - gradient-based
+      - interpretable
+    search_words:
+      - methods
+      - explanation
+      - xai
+      - concept-based
+      - learning
+      - model
+      - attribution
+      - post-hoc
+      - techniques
+      - foundations
+      - interpretability
+      - machine
+      - axiomatic
+      - lrp
+      - deep
+      - gradient
+      - explanation methods
+      - concept-based xai
+      - machine learning
+      - axiomatic foundations
+      - methods post-hoc
+      - xai methods post-hoc
+      - attribution lrp
+      - gradient attribution
+      - techniques gradient
+      - explanation techniques
+      - deep learning
+      - gradient attribution lrp
+    questions:
+      - question: How are explanation methods categorised in the XAI literature?
+        answer: "The dominant taxonomy groups methods into four categories based on their operational mechanism: backpropagation-based (gradients, Integrated Gradients, LRP), perturbation-based (LIME, occlusion, Shapley values), representation-based (activation maximisation, concept activation vectors), and example-based (counterfactuals, prototypes). Each category has different computational requirements and reveals different aspects of model behaviour."
+      - question: What distinguishes backpropagation-based methods from perturbation-based methods?
+        answer: Backpropagation-based methods compute attributions through a single forward-backward pass and are computationally efficient but sensitive to gradient properties such as saturation and shattering. Perturbation-based methods observe output changes when inputs are modified and are more robust but require many forward passes, creating a computational cost that scales with the number of features.
+      - question: Why does Samek et al. argue for axiomatic foundations in XAI evaluation?
+        answer: Samek et al. argue that without axiomatic grounding, evaluation becomes circular or arbitrary because there is no objective ground truth for explanations. They propose that explanation methods should satisfy axioms such as sensitivity and implementation invariance, which provide a principled basis for comparing methods and detecting failures that empirical evaluation alone would miss.
+      - question: How can explanation methods serve as model validation tools?
+        answer: Lapuschkin et al. (2019) demonstrate that explanation methods can detect Clever Hans behaviour where models exploit spurious correlations invisible to accuracy metrics. Their spectral relevance analysis reveals that models trained on medical images may rely on watermarks or hospital markers rather than actual pathology, making explanation methods a diagnostic tool rather than just a transparency device.
+      - question: What is concept-based XAI and how does it differ from feature attribution?
+        answer: 'Concept-based XAI explains model decisions in terms of human-understandable concepts rather than raw features (Poeta et al., 2025). While feature attribution assigns importance scores to individual input dimensions such as pixels or words, concept-based methods identify whether the model recognises higher-level abstractions such as stripes, colour patterns, or medical indicators. This aligns explanations with how humans naturally reason. <details markdown="1" class="appendix-callout group"> <summary>Appendix: Source Material</summary>'
+  xai-critical-perspectives-limits:
+    title: Critical Perspectives and Limits of Current Explainability Methods
+    url: "/critical-perspectives-limits-xai"
+    keywords:
+      - xai
+      - limits
+      - deployment
+      - explainability
+      - black-box
+      - critique
+      - auditing
+      - conceptual
+      - limitations
+      - current
+      - healthcare
+      - methods
+      - metrics
+      - bhatt
+      - casper
+      - evaluation
+      - ghassemi
+      - pawlicki
+      - clinical
+      - gap
+      - technical
+      - artificial
+      - confusion
+      - intelligence
+      - learning
+      - machine
+      - watson
+      - argue
+      - crisis
+      - critiques
+      - deliver
+      - "false"
+      - hope
+      - identify
+      - xai critique
+      - explainability limits
+      - healthcare ai
+      - ai auditing
+      - xai deployment
+      - evaluation metrics
+    key_phrases:
+      - auditing xai
+      - current explainability
+      - explainability methods
+      - current explainability methods
+      - deployment gap
+      - xai critique
+      - critique explainability
+      - evaluation metrics
+      - metrics black-box
+      - black-box auditing
+      - artificial intelligence machine
+      - metrics black-box auditing
+      - evaluation metrics black-box
+      - deployment evaluation metrics
+      - intelligence machine learning
+      - xai deployment evaluation
+      - auditing xai deployment
+      - healthcare auditing xai
+      - limits healthcare auditing
+      - explainability limits healthcare
+      - deployment evaluation
+      - xai deployment
+      - healthcare auditing
+      - limits healthcare
+    catchwords:
+      - limits
+      - deployment
+      - explainability
+      - black-box
+      - critique
+      - auditing
+      - conceptual
+      - limitations
+      - current
+      - healthcare
+      - methods
+      - metrics
+      - bhatt
+      - casper
+      - evaluation
+      - ghassemi
+      - pawlicki
+      - clinical
+      - technical
+      - artificial
+      - confusion
+      - intelligence
+      - learning
+      - machine
+      - watson
+      - argue
+      - crisis
+      - critiques
+    search_words:
+      - xai
+      - limits
+      - deployment
+      - explainability
+      - black-box
+      - critique
+      - auditing
+      - conceptual
+      - limitations
+      - current
+      - healthcare
+      - methods
+      - metrics
+      - bhatt
+      - casper
+      - evaluation
+      - ghassemi
+      - pawlicki
+      - auditing xai
+      - current explainability
+      - explainability methods
+      - current explainability methods
+      - deployment gap
+      - xai critique
+      - critique explainability
+      - evaluation metrics
+      - metrics black-box
+      - black-box auditing
+      - artificial intelligence machine
+      - metrics black-box auditing
+    questions:
+      - question: What are the main limitations of current XAI methods identified in the literature?
+        answer: "The literature identifies five interconnected limitations: explanation ambiguity across methods, systematic inaccuracy through gradient manipulation, a gap between research and deployment practice, structural limits on black-box auditability, and a metrics crisis where evaluation tools fail to distinguish meaningful differences between methods. These limitations are not merely technical but also conceptual and organisational."
+      - question: Why do Ghassemi et al. argue that explainability requirements may harm clinical AI?
+        answer: Ghassemi et al. argue that mandating explainability for clinical AI could divert resources from rigorous validation through prospective trials and deployment monitoring. They contend that a thoroughly validated model whose outputs clinicians understand through training may be safer than an explainable model whose behaviour has been less rigorously tested. This argument challenges the assumption that explainability is always a net benefit.
+      - question: What is the deployment gap that Bhatt et al. identify in XAI practice?
+        answer: Bhatt et al. surveyed ML practitioners and found that XAI methods are rarely deployed in production because they lack clear integration paths, standardised evaluation criteria, and actionable outputs. Practitioners reported using explanation methods for debugging during development but not for external accountability purposes. This gap between research capability and deployment reality limits the practical impact of XAI.
+      - question: How does Casper et al. characterise the limits of black-box audits?
+        answer: Casper et al. demonstrate that black-box access alone is insufficient for reliable auditing because adversarial inputs can be designed to produce misleading explanations, model editing can change behaviour without detection from explanation outputs, and the inherent ambiguity of post-hoc explanations means that multiple contradictory narratives can be supported by the same audit data.
+      - question: What does Pawlicki et al. identify as the metrics crisis in XAI evaluation?
+        answer: 'Pawlicki et al. identify three problems: metric duplication where multiple metrics measure the same underlying property and create false diversity, metric inefficacy where some metrics fail to distinguish between random and meaningful explanations, and metric confusion where contradictory results across metrics make it impossible to determine which method is better for a given task. <details markdown="1" class="appendix-callout group"> <summary>Appendix: Source Material</summary>'
+  xai-practice-evaluation-governance:
+    title: "Explainability in Practice: Domains, Evaluation, and Governance"
+    url: "/explainability-practice-domains-evaluation-governance"
+    keywords:
+      - xai
+      - governance
+      - practice
+      - evaluation
+      - frameworks
+      - medical
+      - applications
+      - cybersecurity
+      - domain
+      - structures
+      - uncertainty
+      - explainability
+      - regulatory
+      - requirements
+      - domain-specific
+      - imaging
+      - salvi
+      - compliance
+      - deployment
+      - quantification
+      - artificial
+      - engineering
+      - intelligence
+      - learning
+      - machine
+      - software
+      - access
+      - accountability
+      - clinical
+      - dwivedi
+      - exist
+      - foundations
+      - methods
+      - needed
+      - organisational
+      - xai practice
+      - domain applications
+      - evaluation frameworks
+      - medical ai
+      - cybersecurity xai
+    key_phrases:
+      - evaluation frameworks
+      - governance structures
+      - domain applications
+      - applications evaluation
+      - applications evaluation frameworks
+      - evaluation frameworks governance
+      - frameworks governance
+      - xai practice
+      - medical imaging
+      - cybersecurity xai
+      - xai uncertainty
+      - uncertainty quantification
+      - regulatory compliance
+      - xai uncertainty quantification
+      - cybersecurity xai uncertainty
+      - xai practice domain
+      - domain applications evaluation
+      - practice domain applications
+      - practice domain
+      - explainability uncertainty
+      - xai deployment
+      - frameworks governance medical
+      - governance medical cybersecurity
+    catchwords:
+      - governance
+      - practice
+      - evaluation
+      - frameworks
+      - medical
+      - applications
+      - cybersecurity
+      - domain
+      - structures
+      - uncertainty
+      - explainability
+      - regulatory
+      - requirements
+      - domain-specific
+      - imaging
+      - salvi
+      - compliance
+      - deployment
+      - quantification
+      - artificial
+      - engineering
+      - intelligence
+      - learning
+      - machine
+      - software
+      - access
+      - accountability
+      - clinical
+    search_words:
+      - xai
+      - governance
+      - practice
+      - evaluation
+      - frameworks
+      - medical
+      - applications
+      - cybersecurity
+      - domain
+      - structures
+      - uncertainty
+      - explainability
+      - regulatory
+      - requirements
+      - domain-specific
+      - imaging
+      - salvi
+      - compliance
+      - evaluation frameworks
+      - governance structures
+      - domain applications
+      - applications evaluation
+      - applications evaluation frameworks
+      - evaluation frameworks governance
+      - frameworks governance
+      - xai practice
+      - medical imaging
+      - cybersecurity xai
+      - xai uncertainty
+      - uncertainty quantification
+    questions:
+      - question: What domain-specific requirements exist for XAI in medical imaging and clinical settings?
+        answer: Medical imaging requires explanation methods that are robust to Clever Hans artifacts, produce spatially coherent attribution maps, and provide uncertainty quantification alongside explanations. Clinical deployment additionally demands explanations that align with medical reasoning workflows, regulatory compliance under frameworks such as the EU AI Act, and validation against established diagnostic standards rather than purely technical metrics.
+      - question: How does the EU AI Act affect XAI deployment and governance requirements?
+        answer: The EU AI Act classifies AI systems by risk level and imposes transparency obligations that include documentation of training data, model architecture, and intended use. For high-risk systems, it requires human oversight mechanisms and technical documentation of explainability properties. The Act creates legal accountability for explanation quality without prescribing specific technical standards, creating both pressure and flexibility.
+      - question: What evaluation frameworks exist for assessing explanation quality in practice?
+        answer: "Three main frameworks have emerged: functionally-grounded evaluation using formal proxies such as faithfulness and completeness (Samek et al., 2021), human-grounded evaluation through user studies that measure how explanations affect human decision-making, and application-grounded evaluation in real deployment contexts. Dwivedi et al. (2023) provide a practical synthesis linking method selection to evaluation criteria."
+      - question: How does Salvi et al. connect explainability and uncertainty in their framework?
+        answer: Salvi et al. (2025) argue that explanations without uncertainty quantification are fundamentally incomplete because users cannot distinguish between confident model predictions and those near decision boundaries. Their framework integrates uncertainty estimates into explanation outputs by modifying attribution methods to propagate epistemic and aleatoric uncertainty through the explanation computation.
+      - question: What governance structures are needed for responsible XAI deployment?
+        answer: 'Effective governance requires organisational accountability mechanisms including designated explainability officers, access governance that matches explanation detail to stakeholder roles, documented decision frameworks for method selection, and regular audit cycles that verify explanations remain faithful after model updates. These structures bridge the gap between technical capability and responsible practice. <details markdown="1" class="appendix-callout group"> <summary>Appendix: Source Material</summary>'
+  xai20-open-challenges-future-directions:
+    title: "XAI 2.0 and the Road Ahead: Open Challenges and Future Directions"
+    url: "/xai20-open-challenges-future-directions"
+    keywords:
+      - challenges
+      - xai
+      - open
+      - human-centred
+      - regulatory
+      - directions
+      - interdisciplinary
+      - evaluation
+      - manifesto
+      - future
+      - alignment
+      - standards
+      - cognitive
+      - science
+      - series
+      - technical
+      - ahead
+      - artificial
+      - explainability
+      - intelligence
+      - learning
+      - machine
+      - road
+      - discipline
+      - findings
+      - first-class
+      - focused
+      - identifies
+      - infrastructure
+      - method-centric
+      - methodological
+      - problem
+      - understanding
+      - agenda
+      - asked
+      - author
+      - xai 2.0
+      - open challenges
+      - future directions
+      - human-centred ai
+    key_phrases:
+      - open challenges
+      - xai manifesto
+      - xai open challenges
+      - regulatory alignment
+      - xai open
+      - open challenges future
+      - interdisciplinary human-centred
+      - challenges future
+      - challenges future directions
+      - future directions
+      - challenges xai
+      - directions interdisciplinary human-centred
+      - directions interdisciplinary
+      - human-centred regulatory
+      - evaluation standards
+      - regulatory alignment evaluation
+      - alignment evaluation standards
+      - science xai
+      - alignment evaluation
+      - cognitive science xai
+      - cognitive science
+      - future directions interdisciplinary
+      - interdisciplinary human-centred regulatory
+      - standards cognitive science
+    catchwords:
+      - challenges
+      - human-centred
+      - regulatory
+      - directions
+      - interdisciplinary
+      - evaluation
+      - manifesto
+      - future
+      - alignment
+      - standards
+      - cognitive
+      - science
+      - series
+      - technical
+      - ahead
+      - artificial
+      - explainability
+      - intelligence
+      - learning
+      - machine
+      - discipline
+      - findings
+      - first-class
+      - focused
+      - identifies
+      - infrastructure
+      - method-centric
+      - methodological
+    search_words:
+      - challenges
+      - xai
+      - open
+      - human-centred
+      - regulatory
+      - directions
+      - interdisciplinary
+      - evaluation
+      - manifesto
+      - future
+      - alignment
+      - standards
+      - cognitive
+      - science
+      - series
+      - technical
+      - ahead
+      - artificial
+      - open challenges
+      - xai manifesto
+      - xai open challenges
+      - regulatory alignment
+      - xai open
+      - open challenges future
+      - interdisciplinary human-centred
+      - challenges future
+      - challenges future directions
+      - future directions
+      - challenges xai
+      - directions interdisciplinary human-centred
+    questions:
+      - question: What are the main categories of open challenges in the XAI 2.0 manifesto?
+        answer: "Longo et al. (2024) organise 22 challenges into five categories: technical challenges including formal definitions and evaluation metrics, human-centred challenges including cognitive load and trust calibration, interdisciplinary challenges spanning HCI and philosophy, regulatory challenges concerning auditing frameworks and standardisation, and methodological challenges involving longitudinal and field studies. Technical challenges are most mature while interdisciplinary challenges require structural changes."
+      - question: What distinguishes human-centred challenges from technical challenges in XAI?
+        answer: Technical challenges focus on formal properties of explanations such as completeness, robustness, and reproducibility of attribution methods. Human-centred challenges address how explanations interact with human cognition including how much detail users can process, how explanations affect trust, and whether explanations personalise to different user expertise levels. Solving technical challenges does not automatically resolve human-centred ones.
+      - question: Why does the XAI 2.0 manifesto call for interdisciplinary infrastructure?
+        answer: The manifesto argues that no single discipline can address all 22 challenges because explanation is simultaneously a mathematical, psychological, and sociological phenomenon. Interdisciplinary infrastructure means shared experimental platforms, standardised evaluation protocols that work across disciplines, funding mechanisms that reward collaboration, and publication venues that accept hybrid contributions spanning computer science, cognitive science, and law.
+      - question: How can evaluation become a first-class problem in XAI research?
+        answer: The manifesto argues that evaluation should shift from a post-hoc activity to a design-stage requirement. This means developing community-standard benchmarks, establishing ground-truth datasets for explanation correctness, creating reproducible evaluation protocols that span research groups, and making evaluation quality a publication criterion equivalent to methodological novelty. Currently, evaluation quality varies widely and is rarely treated as a primary contribution.
+      - question: What regulatory challenges does the XAI 2.0 manifesto identify?
+        answer: 'Three regulatory challenges are identified: operationalising the right to explanation under GDPR and the EU AI Act into technically specific requirements, developing auditing frameworks that can verify explanation quality at scale, and creating standardisation mechanisms that allow different regulatory regimes to accept common evidence of explainability. These challenges are urgent because regulatory timelines are shortening while technical standards remain fluid. <details markdown="1" class="appendix-callout group"> <summary>Appendix: Source Material</summary>'
 pages:
   zenith-law:
     title: Zenith Law Profile | Engineering Strategy and AI Governance

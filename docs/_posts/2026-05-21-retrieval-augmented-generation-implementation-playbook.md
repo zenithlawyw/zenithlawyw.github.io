@@ -37,7 +37,7 @@ howto_steps:
   - name: "Set up document ingestion"
     text: "Use LlamaIndex or LangChain document loaders to ingest PDFs, web pages, and structured data into a normalised document format."
   - name: "Implement chunking strategy"
-    text: "Apply recursive character splitting with semantic overlap, targeting 256–512 token chunks for dense retrieval compatibility."
+    text: "Apply recursive character splitting with semantic overlap, targeting 256-512 token chunks for dense retrieval compatibility."
   - name: "Build embedding and vector store"
     text: "Generate embeddings with sentence-transformers and store in FAISS, Chroma, or Qdrant for similarity search."
   - name: "Implement hybrid retrieval"
@@ -109,8 +109,8 @@ Both frameworks support PDF, HTML, Markdown, CSV, and JSON out of the box. For s
 
 Get chunking wrong and everything downstream suffers. Retrieval quality is dictated here, not at the embedding stage, not at the re-ranker. Production data supports these guidelines:
 
-- **Target chunk size**: 256–512 tokens for dense retrieval compatibility. Larger chunks dilute embedding context; smaller chunks drop relational data.
-- **Overlap**: A 10–20% token overlap between adjacent chunks preserves continuity across boundaries.
+- **Target chunk size**: 256-512 tokens for dense retrieval compatibility. Larger chunks dilute embedding context; smaller chunks drop relational data.
+- **Overlap**: A 10-20% token overlap between adjacent chunks preserves continuity across boundaries.
 - **Semantic boundaries**: Prioritise splitting text at paragraph (`\n\n`) or section breaks over fixed character splits.
 
 ```python
@@ -556,7 +556,7 @@ Choose **FAISS** for ultra-fast performance during local prototyping. Use **Chro
 
 ### What chunk size should I use for RAG document processing?
 
-Target 256–512 tokens per chunk. Smaller chunks (128 tokens) improve retrieval precision but lose surrounding context. Larger chunks (1024+ tokens) preserve context but reduce retrieval accuracy because irrelevant content dilutes the embedding signal. Use sentence-level splitting with paragraph awareness for the best balance.
+Target 256-512 tokens per chunk. Smaller chunks (128 tokens) improve retrieval precision but lose surrounding context. Larger chunks (1024+ tokens) preserve context but reduce retrieval accuracy because irrelevant content dilutes the embedding signal. Use sentence-level splitting with paragraph awareness for the best balance.
 
 ### How do I handle documents that update frequently in a RAG system?
 
@@ -564,7 +564,7 @@ Implement incremental indexing: detect changed documents, re-chunk and re-embed 
 
 ### Is cross-encoder re-ranking worth the additional latency?
 
-Yes. While cross-encoders introduce a minor latency cost (50–200ms depending on hardware), they eliminate high-scoring semantic distractors. Given that distractor contamination can degrade generation accuracy by over 25% {% include references/cite.html key="10.1145/3626772.3657834" %}, a re-ranking layer is a required safety gate for production RAG, not an optional enhancement.
+Yes. While cross-encoders introduce a minor latency cost (50-200ms depending on hardware), they eliminate high-scoring semantic distractors. Given that distractor contamination can degrade generation accuracy by over 25% {% include references/cite.html key="10.1145/3626772.3657834" %}, a re-ranking layer is a required safety gate for production RAG, not an optional enhancement.
 
 ### Can I use RAG without a GPU?
 
@@ -623,7 +623,7 @@ This playbook is authored by [Zenith Law](/authors/zenith-law/) and grounded in 
 
 ### B. Deployment Readiness Checklist
 
-- [ ] Enforce paragraph-aware recursive semantic chunk boundaries (256–512 tokens)
+- [ ] Enforce paragraph-aware recursive semantic chunk boundaries (256-512 tokens)
 - [ ] Embedding model selected and benchmarked on domain data
 - [ ] Implement Reciprocal Rank Fusion combining BM25 and dense indexes
 - [ ] Deploy cross-encoder filtering thresholds to eliminate close-proximity distractors

@@ -4,7 +4,8 @@
 Checks:
 1. No duplicate hero image path usage across posts.
 2. Referenced hero image files exist.
-3. For posts on/after enforcement date, bottom-right badge is present.
+3. For posts on/after enforcement date, favicon badge is present in at least one corner.
+   Compatible with process-hero-images.py (24px configurable-position favicon stamp).
 """
 
 from __future__ import annotations
@@ -23,6 +24,13 @@ POSTS = DOCS / "_posts"
 IMAGES = DOCS / "assets" / "images"
 
 BRAND_BADGE_ENFORCEMENT_START = date(2026, 4, 28)
+
+# Detection window: favicon is 24x24 with 12px margin (offset 36 from edges).
+# 50x50 captures the 24px favicon fully (331/2500≈13% bright pixels) and catches
+# enough of the old 64px stamp (offset 84, overlap 30x30≈900px → ~20% of window).
+FAVICON_CROP_SIZE = 50
+FAVICON_BRIGHT_THRESHOLD = 200
+FAVICON_BRIGHT_RATIO = 0.08  # well below real favicon (13-20%); above natural noise (~2-3%)
 
 
 def _parse_frontmatter(post_path: Path) -> dict[str, str]:
@@ -54,31 +62,49 @@ def _post_date_from_filename(path: Path) -> date | None:
         return None
 
 
-def _has_bottom_right_badge(image_path: Path) -> bool:
-    image = Image.open(image_path).convert("RGB")
-    width, height = image.size
+def _corner_bright_ratio(image: Image.Image, corner: str, crop: int) -> float:
+    """Return fraction of bright pixels in a *crop*x*crop* corner region."""
+    w, h = image.size
+    cw = min(crop, w)
+    ch = min(crop, h)
 
-    # Check 100x100 corner region for bright rounded-plate signal.
-    region_w = min(100, width)
-    region_h = min(100, height)
-    left = width - region_w
-    top = height - region_h
+    if corner == "top-left":
+        left, top = 0, 0
+    elif corner == "top-right":
+        left, top = w - cw, 0
+    elif corner == "bottom-left":
+        left, top = 0, h - ch
+    elif corner == "bottom-right":
+        left, top = w - cw, h - ch
+    else:
+        return 0.0
 
-    region = image.crop((left, top, width, height))
+    region = image.crop((left, top, left + cw, top + ch))
     with warnings.catch_warnings():
         warnings.filterwarnings("ignore", category=DeprecationWarning, message=".*getdata.*")
         pixels = list(region.getdata())
 
     if not pixels:
-        return False
+        return 0.0
 
-    bright = 0
-    for r, g, b in pixels:
-        if (r + g + b) / 3 >= 220:
-            bright += 1
+    bright = sum(1 for r, g, b in pixels if (r + g + b) / 3 >= FAVICON_BRIGHT_THRESHOLD)
+    return bright / len(pixels)
 
-    bright_ratio = bright / len(pixels)
-    return bright_ratio >= 0.12
+
+def _has_favicon_signal(image_path: Path) -> bool:
+    """Check for favicon bright-pixel signal in any corner.
+
+    Compatible with process-hero-images.py which stamps a 24x24 favicon at
+    any configurable position (top-left, top-right, bottom-left, bottom-right).
+    """
+    image = Image.open(image_path).convert("RGB")
+
+    for corner in ("top-left", "top-right", "bottom-left", "bottom-right"):
+        ratio = _corner_bright_ratio(image, corner, FAVICON_CROP_SIZE)
+        if ratio >= FAVICON_BRIGHT_RATIO:
+            return True
+
+    return False
 
 
 @dataclass
@@ -119,9 +145,9 @@ def main() -> int:
             continue
 
         if rec.published_on and rec.published_on >= BRAND_BADGE_ENFORCEMENT_START:
-            if not _has_bottom_right_badge(rec.image_path):
+            if not _has_favicon_signal(rec.image_path):
                 failures.append(
-                    f"Missing bottom-right favicon badge signal for {rec.post.name} ({rec.image_rel})"
+                    f"Missing favicon badge signal (no corner passes bright-pixel check) for {rec.post.name} ({rec.image_rel})"
                 )
 
     if failures:

@@ -65,7 +65,7 @@ This has stopped being a cryptographic problem. It is a people problem and a sof
 
 ### What NIST Resolved
 
-The NIST PQC competition (2016–2024) resolved the primary algorithm selection question through an open, multi-round evaluation process:
+The NIST PQC competition (2016-2024) resolved the primary algorithm selection question through an open, multi-round evaluation process:
 
 <figure markdown="1">
 
@@ -87,7 +87,7 @@ Post-quantum zero-knowledge proofs account for roughly 13% of recent PQC publica
 
 Interoperability testing across implementations (liboqs, BouncyCastle, AWS-LC, wolfSSL) is still ad-hoc. No systematic cross-implementation validation programme exists.
 
-### Research Landscape Mapping
+### Research Mapping
 
 Song and Kim applied LDA topic modelling to 189 PQC papers published in the year following NIST's 2022 announcement {% include references/cite.html key="10392726" %}. The distribution reveals where research effort concentrates:
 
@@ -295,7 +295,7 @@ No, and the confusion is not academic. Borrelli et al. found that students consi
 
 ### Source Attribution and Review Context
 
-This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings on PQC standards, migration, and education from six papers spanning SIGCSE, IEEE, and ACM venues. Borrelli et al. (2024) is published at SIGCSE, the premier CS education venue. Steinfeld et al. (2026) bring hands-on professional training experience from Monash University and industry partnerships. Wahlang and Vidhani (2026) present the first dedicated PQC code migration tool using language models. Song and Kim (2023) provide quantitative research landscape mapping via topic modelling. Shim et al. (2024) present a hybrid network architecture aligned with South Korea's KISTI infrastructure.
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings on PQC standards, migration, and education from six papers spanning SIGCSE, IEEE, and ACM venues. Borrelli et al. (2024) is published at SIGCSE, the premier CS education venue. Steinfeld et al. (2026) bring hands-on professional training experience from Monash University and industry partnerships. Wahlang and Vidhani (2026) present the first dedicated PQC code migration tool using language models. Song and Kim (2023) provide quantitative research mapping via topic modelling. Shim et al. (2024) present a hybrid network architecture aligned with South Korea's KISTI infrastructure.
 
 ### A. Evidence Boundary Notes
 
@@ -326,7 +326,7 @@ The ccPASTpqc results use BLEU and CodeBLEU, metrics that measure textual simila
 | Borrelli et al.     | 2024 | Experience report | Full PQC course design + outcomes       | Strong venue (SIGCSE), iterative refinement |
 | Borrelli et al.     | 2026 | Poster            | Modular PQC education framework         | 2-page abstract only, no assessment data    |
 | Steinfeld et al.    | 2026 | Experience report | Professional PQC training + custom tool | SIGCSE venue but no quantitative outcomes   |
-| Song and Kim        | 2023 | Quantitative      | Research landscape via LDA              | Single-year snapshot, bag-of-words method   |
+| Song and Kim        | 2023 | Quantitative      | Research mapping via LDA                | Single-year snapshot, bag-of-words method   |
 | Wahlang and Vidhani | 2026 | Experimental      | LLM-based PQC code migration            | BLEU metrics only; no execution testing     |
 | Shim et al.         | 2024 | Architecture      | Hybrid QKD/PQC network design           | Design only, no performance benchmarks      |
 
