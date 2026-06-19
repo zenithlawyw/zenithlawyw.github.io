@@ -35,7 +35,7 @@ Where did the training data come from? Who transformed it, and when, and into wh
 
 Karuna et al. wire financial transactions into a graph (entities as nodes, transfers as edges) and pit GNN-based traceability against logistic regression and random forest baselines {% include references/cite.html key="prov-2026-ref1" %}. Pina et al. build a stitching layer: separate tools capture provenance at separate lifecycle stages, and their prototype forces those fragments to talk {% include references/cite.html key="prov-2026-ref2" %}. Souza et al. go formal: PROV-ML extends W3C PROV with ML Schema vocabulary, pressure-tested through ProvLake on a 48-GPU oil-and-gas pipeline {% include references/cite.html key="prov-2026-ref3" %}.
 
-Three papers. Not a field survey — not even close. This review is deliberately narrow, and that narrowness is the point. Claims anchored to reported results say so; inferences drawn beyond any single paper's evidence are marked at the boundary. Several details resist independent corroboration. Rather than silently absorbing them, I flag them.
+Three papers. Not a field survey. Not even close. This review is deliberately narrow, and that narrowness is the point. Claims anchored to reported results say so; inferences drawn beyond any single paper's evidence are marked at the boundary. Several details resist independent corroboration. Rather than silently absorbing them, I flag them.
 
 This article is designed for technical and governance learning. It does not provide legal, regulatory, or procurement advice. It is not legal advice. Readers should validate applicability against their own jurisdiction, risk model, and production constraints.
 
@@ -62,17 +62,17 @@ This article is designed for technical and governance learning. It does not prov
 
 ## Thematic Analysis
 
-The three papers circle the same territory from different altitudes. What follows groups their overlapping concerns — with hard boundaries on how far the evidence actually stretches.
+The three papers circle the same territory from different altitudes. What follows groups their overlapping concerns. With hard boundaries on how far the evidence actually stretches.
 
 ### Graph-Structured Representations and Relational Provenance
 
-Karuna et al. wire financial transaction data into a graph and report their GCN hitting 91.3% accuracy on traceability classification — a meaningful jump over logistic regression at 78.4% and random forests at 82.1% on the same dataset {% include references/cite.html key="prov-2026-ref1" %}. This is a **verified finding** within the study's conditions. It suggests graph representations can preserve relational structure that tabular models discard, though this conclusion is bounded by a single dataset in one domain. The paper does not compare against other graph-based approaches (e.g., graph attention networks), which limits the claim that GCN is the right architecture rather than merely a sufficient one.
+Karuna et al. wire financial transaction data into a graph and report their GCN hitting 91.3% accuracy on traceability classification. A meaningful jump over logistic regression at 78.4% and random forests at 82.1% on the same dataset {% include references/cite.html key="prov-2026-ref1" %}. This is a **verified finding** within the study's conditions. It suggests graph representations can preserve relational structure that tabular models discard, though this conclusion is bounded by a single dataset in one domain. The paper does not compare against other graph-based approaches (e.g., graph attention networks), which limits the claim that GCN is the right architecture rather than merely a sufficient one.
 
-Souza et al. also lean on graphs — but differently. Their W3C PROV model represents provenance as relationships between entities, activities, and agents {% include references/cite.html key="prov-2026-ref3" %}; no neural networks involved. Both teams chose graph primitives, yet for fundamentally different jobs: classification versus representation. Don't conflate the two. Structural similarity is not functional equivalence (**inferred synthesis**).
+Souza et al. also lean on graphs. But differently. Their W3C PROV model represents provenance as relationships between entities, activities, and agents {% include references/cite.html key="prov-2026-ref3" %}; no neural networks involved. Both teams chose graph primitives, yet for fundamentally different jobs: classification versus representation. Don't conflate the two. Structural similarity is not functional equivalence (**inferred synthesis**).
 
 ### Preprocessing Decisions and Downstream Effects
 
-Can you join preprocessing provenance with training metrics in a single query? Pina et al. say yes — their prototype does it {% include references/cite.html key="prov-2026-ref2" %}. That much is verified. But here's the gap: neither they nor anyone else in this source set runs a controlled experiment quantifying how much preprocessing choices actually bend model accuracy. Souza et al. call data curation the most complex lifecycle phase {% include references/cite.html key="prov-2026-ref3" %}. Both papers' rationale supports the intuition that preprocessing decisions propagate into model quality; neither nails it down with isolated evidence (**inferred synthesis**).
+Can you join preprocessing provenance with training metrics in a single query? Pina et al. say yes. Their prototype does it {% include references/cite.html key="prov-2026-ref2" %}. That much is verified. But here's the gap: neither they nor anyone else in this source set runs a controlled experiment quantifying how much preprocessing choices actually bend model accuracy. Souza et al. call data curation the most complex lifecycle phase {% include references/cite.html key="prov-2026-ref3" %}. Both papers' rationale supports the intuition that preprocessing decisions propagate into model quality; neither nails it down with isolated evidence (**inferred synthesis**).
 
 ### Interoperability
 
@@ -94,17 +94,17 @@ Some sections of the paper read as polished restatements of standard GNN and blo
 
 ### Pina et al.
 
-The prototype stitches provenance from different capture tools into a queryable whole {% include references/cite.html key="prov-2026-ref2" %}. Scope boundary: structured data preprocessing and DNN training/evaluation only. Image augmentation, text tokenization — untouched. And overhead benchmarks? Absent entirely. So the feasibility claim is about correctness, not speed. Read it as architectural proof-of-concept; don't mistake it for a production-readiness verdict.
+The prototype stitches provenance from different capture tools into a queryable whole {% include references/cite.html key="prov-2026-ref2" %}. Scope boundary: structured data preprocessing and DNN training/evaluation only. Image augmentation, text tokenization. Untouched. And overhead benchmarks? Absent entirely. So the feasibility claim is about correctness, not speed. Read it as architectural proof-of-concept; don't mistake it for a production-readiness verdict.
 
 ### Souza et al.
 
-Forty-eight GPUs on an oil-and-gas seismic pipeline — that's the strongest practical evidence in this source set {% include references/cite.html key="prov-2026-ref3" %}. Impressive? Sure. But PROV-ML remains a proposed research representation, evaluated in exactly one domain. The paper itself calls it "proposed," not "standard." Consider what that means: whether PROV-ML transfers to a team fine-tuning a pretrained model on a single commodity GPU is entirely untested. One successful deployment pattern; not field-level validation.
+Forty-eight GPUs on an oil-and-gas seismic pipeline. That's the strongest practical evidence in this source set {% include references/cite.html key="prov-2026-ref3" %}. Impressive? Sure. But PROV-ML remains a proposed research representation, evaluated in exactly one domain. The paper itself calls it "proposed," not "standard." Consider what that means: whether PROV-ML transfers to a team fine-tuning a pretrained model on a single commodity GPU is entirely untested. One successful deployment pattern; not field-level validation.
 
 ---
 
 ## Lessons for Practice (Scoped to This Source Set)
 
-What follows is practitioner-facing. Evidence-informed, yes — but deliberately scoped. Three papers yield useful guidance; they do not yield universal truths.
+What follows is practitioner-facing. Evidence-informed, yes. But deliberately scoped. Three papers yield useful guidance; they do not yield universal truths.
 
 ### 1. Treat Provenance as Part of System Architecture
 
@@ -144,7 +144,7 @@ This source set does not define a universal overhead threshold. Use your latency
 
 ### 10. Keep a Contradiction-Seeking Loop in the Reading Process
 
-Accumulating supportive findings is easy. Too easy. A strong synthesis hunts for failure cases and negative evidence — reports where provenance integration backfired, where lineage capture added complexity without improving governance outcomes. That's the next-pass reading priority.
+Accumulating supportive findings is easy. Too easy. A strong synthesis hunts for failure cases and negative evidence. Reports where provenance integration backfired, where lineage capture added complexity without improving governance outcomes. That's the next-pass reading priority.
 
 ---
 
@@ -211,7 +211,7 @@ A second priority is contradiction-seeking: identify studies where provenance in
 
 ### Author and Source Credibility
 
-This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from peer-reviewed conference papers published at IEEE ICICAT, ACM WWW, and the WORKS workshop at SC. The sources report experimental results on graph neural network–based provenance tracking, provenance integration prototypes, and the PROV-ML standardisation effort for ML pipeline metadata.
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from peer-reviewed conference papers published at IEEE ICICAT, ACM WWW, and the WORKS workshop at SC. The sources report experimental results on graph neural network-based provenance tracking, provenance integration prototypes, and the PROV-ML standardisation effort for ML pipeline metadata.
 
 ### Appendix Table of Contents
 

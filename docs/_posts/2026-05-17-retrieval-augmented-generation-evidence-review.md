@@ -189,20 +189,20 @@ This SIGIR 2024 paper provides the most surprising and critical empirical findin
 
 So much for the naive assumption that higher retrieval recall automatically correlates with better RAG performance. The practical implication is blunt: **post-retrieval filtering to remove high-scoring distractors matters significantly more than maximising initial retrieval recall.**
 
-**Study limitations:** Experiments used the NQ-open dataset only; generalisation to other QA benchmarks and non-QA tasks (summarisation, dialogue, multi-hop reasoning) is unverified. All models tested at 7B scale or smaller (2.7B–7B) with 4-bit quantisation; behaviour at larger scales or different quantisation levels may differ. The hypothesis that random noise acts as an attention regulariser is plausible but not mechanistically proven.
+**Study limitations:** Experiments used the NQ-open dataset only; generalisation to other QA benchmarks and non-QA tasks (summarisation, dialogue, multi-hop reasoning) is unverified. All models tested at 7B scale or smaller (2.7B-7B) with 4-bit quantisation; behaviour at larger scales or different quantisation levels may differ. The hypothesis that random noise acts as an attention regulariser is plausible but not mechanistically proven.
 
 This paper provides the strongest empirical warrant in the entire corpus for one specific engineering decision: implement cross-encoder distractor filtering before you optimise anything else in the pipeline.
 
 ### Amugongo et al. (2025): The Healthcare Reality Check
 
-This PRISMA-compliant systematic review maps the RAG landscape in clinical healthcare and identifies four severe industry-wide blind spots {% include references/cite.html key="10.1371/journal.pdig.0000877" %}:
+This PRISMA-compliant systematic review maps RAG applications in clinical healthcare and identifies four severe industry-wide blind spots {% include references/cite.html key="10.1371/journal.pdig.0000877" %}:
 
 - **Language Bias:** **78.9%** of healthcare RAG studies rely exclusively on English datasets, while **21.1%** use Chinese. No other languages are significantly represented.
-- **Proprietary Dependency:** GPT-3.5 and GPT-4 dominate the research landscape, raising massive data privacy, compliance (HIPAA), and reproducibility concerns in clinical settings.
+- **Proprietary Dependency:** GPT-3.5 and GPT-4 dominate research, raising massive data privacy, compliance (HIPAA), and reproducibility concerns in clinical settings.
 - **Evaluation Fragmentation:** There is zero standardization for healthcare RAG evaluation frameworks, making cross-study safety comparison nearly impossible.
 - **Ethics Deficit:** The majority of reviewed clinical studies completely omit ethical considerations or bias audits.
 
-**Study limitations:** This is a descriptive systematic review, not an empirical benchmark. The review period (January 2020–February 2025) may miss recent advances. The English-language-only inclusion criterion creates a meta-level bias that mirrors the very language-gap finding. The majority of reviewed studies do not themselves assess ethical considerations, so the ethics gap finding is observational rather than experimentally measured.
+**Study limitations:** This is a descriptive systematic review, not an empirical benchmark. The review period (January 2020-February 2025) may miss recent advances. The English-language-only inclusion criterion creates a meta-level bias that mirrors the very language-gap finding. The majority of reviewed studies do not themselves assess ethical considerations, so the ethics gap finding is observational rather than experimentally measured.
 
 What does this mean for teams deploying RAG in regulated domains (medical, legal, financial)? General-purpose metrics like RAGAS are necessary but insufficient. You need domain-specific safety, equity, and alignment evaluations built alongside, not bolted on later.
 

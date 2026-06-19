@@ -77,7 +77,7 @@ Dense retrieval models optimise for semantic similarity, not answer containment.
 
 - A single distractor reduces accuracy by up to **25%** {% include references/cite.html key="10.1145/3626772.3657834" %}.
 - With 18 distractors in the context window, accuracy degrades by up to **67%** {% include references/cite.html key="10.1145/3626772.3657834" %}.
-- This effect was consistent across all four tested LLMs (Llama2, MPT, Phi-2, Falcon) at the 2.7B–7B parameter scale with 4-bit quantisation.
+- This effect was consistent across all four tested LLMs (Llama2, MPT, Phi-2, Falcon) at the 2.7B-7B parameter scale with 4-bit quantisation.
 
 ### Evidence Boundaries
 
@@ -306,7 +306,7 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and grounded in t
 
 ### B. Evidence Boundary Notes
 
-The empirical evidence in this article is concentrated in Cuconasu et al.'s experiments on the NQ-open dataset with models at the 2.7B–7B parameter scale under 4-bit quantisation. The following boundaries should be noted:
+The empirical evidence in this article is concentrated in Cuconasu et al.'s experiments on the NQ-open dataset with models at the 2.7B-7B parameter scale under 4-bit quantisation. The following boundaries should be noted:
 
 - **Task generalisation:** Distractor degradation is measured on factoid QA. Effects on summarisation, dialogue, multi-hop reasoning, and domain-specific tasks are not empirically established.
 - **Scale generalisation:** Model behaviour at 70B+ parameters or with different quantisation levels may produce different distractor sensitivity profiles.

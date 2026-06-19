@@ -120,7 +120,7 @@ Three findings emerge. First, no universal best method exists: SHAP excels for c
 
 ### Domain fragmentation: a caveat on synthesis
 
-The four papers in this review come from different domains (time series, tabular, NLP text), each with task-specific evaluation assumptions. A practitioner working on NLP attribution will not directly benefit from the time-series-specific findings of WAE or RExQUAL, and vice versa. The synthesis below treats them as a shared landscape, but the field lacks studies that apply multiple evaluation paradigms to the same datasets and methods. Until such convergent validity work is done, cross-domain generalisation of evaluation findings remains speculative.
+The four papers in this review come from different domains (time series, tabular, NLP text), each with task-specific evaluation assumptions. A practitioner working on NLP attribution will not directly benefit from the time-series-specific findings of WAE or RExQUAL, and vice versa. The synthesis below treats them as a shared research space, but the field lacks studies that apply multiple evaluation paradigms to the same datasets and methods. Until such convergent validity work is done, cross-domain generalisation of evaluation findings remains speculative.
 
 ### The evaluation crisis is real and structural
 
