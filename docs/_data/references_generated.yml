@@ -2173,12 +2173,14 @@ DEHDARIRAD2025100101:
   source_format: bibtex
 doshivelez2017rigorousscienceinterpretablemachine:
   entry_type: misc
-  short_author: Finale Doshi-Velez et al.
+  short_author: Doshi-Velez et al.
   year: "2017"
-  authors: Finale Doshi-Velez and Been Kim
+  authors: Doshi-Velez, Finale and Kim, Been
   title: Towards A Rigorous Science of Interpretable Machine Learning
   url: https://arxiv.org/abs/1702.08608
   arxiv: "1702.08608"
+  published_iso: "2017-01-01"
+  published_date: 1 January 2017
   ieee_base: F. Doshi-Velez and B. Kim, Towards A Rigorous Science of Interpretable Machine Learning, 2017.
   harvard_base: Doshi-Velez, F. and Kim, B. (2017). Towards A Rigorous Science of Interpretable Machine Learning.
   source_format: bibtex
@@ -2186,7 +2188,7 @@ barredoarrieta2020xai:
   entry_type: article
   short_author: Barredo Arrieta et al.
   year: "2020"
-  authors: Barredo Arrieta, Alejandro and D{\'i}az-Rodr{\'i}guez, Natalia and Del Ser, Javier and Bennetot, Adrien and Tabik, Siham and Barbado, Alberto and Garcia, Salvador and Gil-Lopez, Sergio and Molina, Daniel and Benjamins, Richard and Chatila, Raja and Herrera, Francisco
+  authors: Barredo Arrieta, Alejandro and Díaz-Rodríguez, Natalia and Del Ser, Javier and Bennetot, Adrien and Tabik, Siham and Barbado, Alberto and Garcia, Salvador and Gil-Lopez, Sergio and Molina, Daniel and Benjamins, Richard and Chatila, Raja and Herrera, Francisco
   title: "Explainable Artificial Intelligence (XAI): Concepts, Taxonomies, Opportunities and Challenges Toward Responsible {AI}"
   volume: "58"
   pages: 82--115
@@ -2199,16 +2201,15 @@ barredoarrieta2020xai:
 "9369420":
   entry_type: article
   short_author: Samek et al.
-  year: "2021"
+  year: n.d.
   authors: Samek, Wojciech and Montavon, Grégoire and Lapuschkin, Sebastian and Anders, Christopher J. and Müller, Klaus-Robert
   title: "Explaining Deep Neural Networks and Beyond: A Review of Methods and Applications"
-  journal: Proceedings of the IEEE
   volume: "109"
   number: "3"
-  pages: 247-278
+  pages: 247--278
   doi: 10.1109/JPROC.2021.3060483
-  ieee_base: "W. Samek, G. Montavon, S. Lapuschkin, C. J. Anders and K. R. Müller, Explaining Deep Neural Networks and Beyond: A Review of Methods and Applications, Proceedings of the IEEE, vol. 109, no. 3, pp. 247-278, 2021."
-  harvard_base: "Samek, W. et al. (2021). Explaining Deep Neural Networks and Beyond: A Review of Methods and Applications. Proceedings of the IEEE. vol. 109, no. 3, pp. 247-278."
+  ieee_base: "W. Samek, G. Montavon, S. Lapuschkin, C. J. Anders and K. R. Müller, Explaining Deep Neural Networks and Beyond: A Review of Methods and Applications, vol. 109, no. 3, pp. 247--278, n.d."
+  harvard_base: "Samek, W. et al. (n.d.). Explaining Deep Neural Networks and Beyond: A Review of Methods and Applications. vol. 109, no. 3, pp. 247--278."
   source_format: bibtex
 molnar2021interpretable:
   entry_type: book
@@ -2225,17 +2226,18 @@ molnar2021interpretable:
   source_format: bibtex
 LONGO2024102301:
   entry_type: article
-  short_author: Luca Longo et al.
+  short_author: Longo et al.
   year: "2024"
-  authors: Luca Longo and Mario Brcic and Federico Cabitza and Jaesik Choi and Roberto Confalonieri and Javier Del Ser and Riccardo Guidotti and Yoichi Hayashi and Francisco Herrera and Andreas Holzinger and Richard Jiang and Hassan Khosravi and Freddy Lecue and Gianclaudio Malgieri and Andrés Páez and Wojciech Samek and Johannes Schneider and Timo Speith and Simone Stumpf
+  authors: Longo, Luca and Brcic, Mario and Cabitza, Federico and Choi, Jaesik and Confalonieri, Roberto and Ser, Javier Del and Guidotti, Riccardo and Hayashi, Yoichi and Herrera, Francisco and Holzinger, Andreas and Jiang, Richard and Khosravi, Hassan and Lecue, Freddy and Malgieri, Gianclaudio and Páez, Andrés and Samek, Wojciech and Schneider, Johannes and Speith, Timo and Stumpf, Simone
   title: "Explainable Artificial Intelligence (XAI) 2.0: A manifesto of open challenges and interdisciplinary research directions"
-  journal: Information Fusion
   volume: "106"
   pages: "102301"
   url: https://www.sciencedirect.com/science/article/pii/S1566253524000794
   doi: 10.1016/j.inffus.2024.102301
-  ieee_base: "L. Longo et al., Explainable Artificial Intelligence (XAI) 2.0: A manifesto of open challenges and interdisciplinary research directions, Information Fusion, vol. 106, pp. 102301, 2024."
-  harvard_base: "Longo, L. et al. (2024). Explainable Artificial Intelligence (XAI) 2.0: A manifesto of open challenges and interdisciplinary research directions. Information Fusion. vol. 106, pp. 102301."
+  published_iso: "2024-01-01"
+  published_date: 1 January 2024
+  ieee_base: "L. Longo et al., Explainable Artificial Intelligence (XAI) 2.0: A manifesto of open challenges and interdisciplinary research directions, vol. 106, pp. 102301, 2024."
+  harvard_base: "Longo, L. et al. (2024). Explainable Artificial Intelligence (XAI) 2.0: A manifesto of open challenges and interdisciplinary research directions. vol. 106, pp. 102301."
   source_format: bibtex
 ghassemi2021falsehope:
   entry_type: article
@@ -2273,21 +2275,21 @@ lapuschkin2019cleverhans:
   entry_type: article
   short_author: Lapuschkin et al.
   year: "2019"
-  authors: Lapuschkin, Sebastian and W{\"a}ldchen, Stephan and Binder, Alexander and Montavon, Gr{\'e}goire and Samek, Wojciech and M{\"u}ller, Klaus-Robert
+  authors: Lapuschkin, Sebastian and Wäldchen, Stephan and Binder, Alexander and Montavon, Grégoire and Samek, Wojciech and Müller, Klaus-Robert
   title: Unmasking Clever {H}ans Predictors and Assessing What Machines Really Learn
   volume: "10"
   pages: "1096"
   doi: 10.1038/s41467-019-08987-4
   published_iso: "2019-01-01"
   published_date: 1 January 2019
-  ieee_base: S. Lapuschkin, S. W{\"a}ldchen, A. Binder, G. Montavon, W. Samek and K. R. M{\"u}ller, Unmasking Clever {H}ans Predictors and Assessing What Machines Really Learn, vol. 10, pp. 1096, 2019.
+  ieee_base: S. Lapuschkin, S. Wäldchen, A. Binder, G. Montavon, W. Samek and K. R. Müller, Unmasking Clever {H}ans Predictors and Assessing What Machines Really Learn, vol. 10, pp. 1096, 2019.
   harvard_base: Lapuschkin, S. et al. (2019). Unmasking Clever {H}ans Predictors and Assessing What Machines Really Learn. vol. 10, pp. 1096.
   source_format: bibtex
 bhatt2020deployment:
   entry_type: inproceedings
   short_author: Bhatt et al.
   year: "2020"
-  authors: Bhatt, Umang and Xiang, Alice and Sharma, Shubham and Weller, Adrian and Taly, Ankur and Jia, Yunhan and Ghosh, Joydeep and Puri, Ruchir and Moura, Jos{\'e} M. F. and Eckersley, Peter
+  authors: Bhatt, Umang and Xiang, Alice and Sharma, Shubham and Weller, Adrian and Taly, Ankur and Jia, Yunhan and Ghosh, Joydeep and Puri, Ruchir and Moura, José M. F. and Eckersley, Peter
   title: Explainable Machine Learning in Deployment
   book: Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency (FAT* '20)
   pages: 648--657
@@ -2301,7 +2303,7 @@ casper2024blackbox:
   entry_type: inproceedings
   short_author: Casper et al.
   year: "2024"
-  authors: Casper, Stephen and Ezell, Carson and Siegmann, Charlotte and Kolt, Noam and Curtis, Taylor Lynn and Bucknall, Benjamin and Haupt, Andreas and Wei, Kevin and Scheurer, J{\'e}r{\'e}my and Hobbhahn, Marius and Sharkey, Lee and Krishna, Satyapriya and Von Hagen, Marvin and Alberti, Silas and Chan, Alan and Sun, Qinyi and Gerovitch, Michael and Bau, David and Tegmark, Max and Krueger, David and Hadfield-Menell, Dylan
+  authors: Casper, Stephen and Ezell, Carson and Siegmann, Charlotte and Kolt, Noam and Curtis, Taylor Lynn and Bucknall, Benjamin and Haupt, Andreas and Wei, Kevin and Scheurer, Jérémy and Hobbhahn, Marius and Sharkey, Lee and Krishna, Satyapriya and Von Hagen, Marvin and Alberti, Silas and Chan, Alan and Sun, Qinyi and Gerovitch, Michael and Bau, David and Tegmark, Max and Krueger, David and Hadfield-Menell, Dylan
   title: Black-Box Access is Insufficient for Rigorous {AI} Audits
   book: Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT '24)
   doi: 10.1145/3630106.3659037
@@ -2314,7 +2316,7 @@ pawlicki2024metrics:
   entry_type: article
   short_author: Pawlicki et al.
   year: "2024"
-  authors: Pawlicki, Marek and Pawlicka, Aleksandra and Uccello, Federica and Szelest, Sebastian and D'Antonio, Salvatore and Kozik, Rafa{\l} and Chora{\'s}, Micha{\l}
+  authors: Pawlicki, Marek and Pawlicka, Aleksandra and Uccello, Federica and Szelest, Sebastian and D'Antonio, Salvatore and Kozik, Rafa{ł} and Choraś, Micha{ł}
   title: "Evaluating the Necessity of the Multiple Metrics for Assessing Explainable {AI}: A Critical Examination"
   volume: "602"
   pages: "128282"
