@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-06-22T19:40:27Z"
-total_candidates: 1029
+generated_at: "2026-06-22T20:11:42Z"
+total_candidates: 1030
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -10645,6 +10645,20 @@ candidates:
           "Lightning Network for Cross-Border Micropayments: A Systematic Exploratory
           Literature Review for Agentic Commerce"
         url: "/lightning-network-cross-border-micropayments-systematic-exploratory-literature-review"
+    related_pages: []
+  - term: Governance Structures
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Explainability in Practice: Domains, Evaluation, and Governance"
+        url: "/explainability-practice-domains-evaluation-governance"
     related_pages: []
   - term: Guidance
     status: candidate
