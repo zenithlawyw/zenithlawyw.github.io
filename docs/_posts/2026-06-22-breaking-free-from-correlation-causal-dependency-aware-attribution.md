@@ -68,7 +68,7 @@ This article is not legal advice.
   <dt><dfn>Few-shot learning (FSL)</dfn></dt>
   <dd>A learning paradigm where models must generalise from very few labelled examples per class, typically relying on episodic training and metric-based classification in embedding space.</dd>
 
-  <dt><dt><dfn>Feature compression (in FSL)</dfn></dt>
+  <dt><dfn>Feature compression (in FSL)</dfn></dt>
   <dd>The tendency of FSL backbones to learn compact, highly entangled feature representations that compress discriminative detail, making standard attribution methods produce over-smoothed explanations.</dd>
 </dl>
 
@@ -213,7 +213,7 @@ All three papers appear in peer-reviewed venues: IJCNN (IEEE, Ng), AAIML (IEEE, 
   <dt><dfn>IDA (Intervention calculus when DAG is Absent)</dfn></dt>
   <dd>A method that bounds causal effects from observational data given a partially known causal graph, used by Causal SHAP to quantify feature-to-target causal strengths.</dd>
 
-  <dt><dt><dfn>Mid-mean centring</dfn></dt>
+  <dt><dfn>Mid-mean centring</dfn></dt>
   <dd>A robust centring method that removes the top and bottom quartiles before computing the mean, used by ExCIR to reduce the influence of outliers on the correlation measure.</dd>
 
   <dt><dfn>Support set</dfn></dt>
