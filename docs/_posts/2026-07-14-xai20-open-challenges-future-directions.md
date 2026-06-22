@@ -55,7 +55,7 @@ This article is not legal advice.
   <dt><dfn>Method-centric XAI</dfn></dt>
   <dd>The dominant paradigm in XAI 1.0: develop an explanation method, demonstrate it on benchmark datasets, evaluate with proxy metrics. The focus is on the method, not the user.</dd>
 
-  <dt><dfn>Human-centred XAI</dt></dt>
+  <dt><dfn>Human-centred XAI</dfn></dt>
   <dd>The paradigm proposed for XAI 2.0: start with what humans need to understand, design explanations to meet those needs, evaluate by measuring whether understanding improves.</dd>
 
   <dt><dfn>Explanation personalisation</dfn></dt>
