@@ -228,6 +228,7 @@ input:where([type="button"]),
 input:where([type="reset"]),
 input:where([type="submit"]) {
   -webkit-appearance: button;
+  appearance: button;
   background-color: transparent;
   background-image: none;
 }
@@ -246,13 +247,16 @@ progress {
 }
 [type="search"] {
   -webkit-appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px;
 }
 ::-webkit-search-decoration {
   -webkit-appearance: none;
+  appearance: none;
 }
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
+  appearance: button;
   font: inherit;
 }
 summary {
@@ -2312,9 +2316,6 @@ video {
 .inline-block {
   display: inline-block;
 }
-.inline {
-  display: inline;
-}
 .flex {
   display: flex;
 }
@@ -2459,7 +2460,12 @@ video {
 .flex-shrink {
   flex-shrink: 1;
 }
-.flex-shrink-0,
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+.shrink {
+  flex-shrink: 1;
+}
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -2640,8 +2646,11 @@ video {
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.truncate,
+.whitespace-normal {
+  white-space: normal;
+}
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -3232,7 +3241,11 @@ video {
 .drop-shadow-sm {
   --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.05));
 }
-.filter {
+.invert {
+  --tw-invert: invert(100%);
+}
+.filter,
+.invert {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
     var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
     var(--tw-sepia) var(--tw-drop-shadow);
