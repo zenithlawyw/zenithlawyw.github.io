@@ -4,12 +4,12 @@ qsc-2026-ref1:
   short_author: Andreou et al.
   year: "2025"
   authors: Andreou, Andreas and Mavromoustakis, Constandinos X. and Mastorakis, George and Bourdena, Athina and Markakis, Evangelos
-  title: "Quantum Computing in Semantic Communications: Overcoming Optimization Challenges with High-Dimensional {Hilbert} Spaces"
+  title: "Quantum Computing in Semantic Communications: Overcoming Optimization Challenges with High-Dimensional Hilbert Spaces"
   doi: 10.1109/ACCESS.2024.0429000
   published_iso: "2025-01-01"
   published_date: 1 January 2025
-  ieee_base: "A. Andreou, C. X. Mavromoustakis, G. Mastorakis, A. Bourdena and E. Markakis, Quantum Computing in Semantic Communications: Overcoming Optimization Challenges with High-Dimensional {Hilbert} Spaces, 2025, Accepted for publication."
-  harvard_base: "Andreou, A. et al. (2025). Quantum Computing in Semantic Communications: Overcoming Optimization Challenges with High-Dimensional {Hilbert} Spaces. Accepted for publication."
+  ieee_base: "A. Andreou, C. X. Mavromoustakis, G. Mastorakis, A. Bourdena and E. Markakis, Quantum Computing in Semantic Communications: Overcoming Optimization Challenges with High-Dimensional Hilbert Spaces, 2025, Accepted for publication."
+  harvard_base: "Andreou, A. et al. (2025). Quantum Computing in Semantic Communications: Overcoming Optimization Challenges with High-Dimensional Hilbert Spaces. Accepted for publication."
   note: Accepted for publication
   source_format: bibtex
 qsc-2026-ref2:
@@ -56,13 +56,13 @@ qsc-2026-ref5:
   short_author: Sreedhar et al.
   year: "2025"
   authors: Sreedhar, Anjali and others
-  title: "Towards Scalable and Accurate {QNLP} Models: A {ZX}-Calculus and {Hilbert} Space Approach"
+  title: "Towards Scalable and Accurate QNLP Models: A ZX-Calculus and Hilbert Space Approach"
   book: Proceedings of the 3rd International Conference on Sustainable Computing and Data Communication Systems (ICSCDS-2025)
   doi: 10.1109/ICSCDS65426.2025.11167678
   published_iso: "2025-01-01"
   published_date: 1 January 2025
-  ieee_base: "A. Sreedhar and others, Towards Scalable and Accurate {QNLP} Models: A {ZX}-Calculus and {Hilbert} Space Approach, in Proceedings of the 3rd International Conference on Sustainable Computing and Data Communication Systems (ICSCDS-2025), 2025."
-  harvard_base: "Sreedhar, A. and others. (2025). Towards Scalable and Accurate {QNLP} Models: A {ZX}-Calculus and {Hilbert} Space Approach. In Proceedings of the 3rd International Conference on Sustainable Computing and Data Communication Systems (ICSCDS-2025)."
+  ieee_base: "A. Sreedhar and others, Towards Scalable and Accurate QNLP Models: A ZX-Calculus and Hilbert Space Approach, in Proceedings of the 3rd International Conference on Sustainable Computing and Data Communication Systems (ICSCDS-2025), 2025."
+  harvard_base: "Sreedhar, A. and others. (2025). Towards Scalable and Accurate QNLP Models: A ZX-Calculus and Hilbert Space Approach. In Proceedings of the 3rd International Conference on Sustainable Computing and Data Communication Systems (ICSCDS-2025)."
   source_format: bibtex
 axios-2026-ref1:
   entry_type: misc
@@ -557,9 +557,9 @@ llm-2026-ref11:
   source_format: bibtex
 llm-2026-ref12:
   entry_type: article
-  short_author: et al.
+  short_author: Ferdaus et al.
   year: n.d.
-  authors: et al., Ferdaus
+  authors: Ferdaus, Md Meftahul and Abdelguerfi, Mahdi and Loup, Elias and N. Niles, Kendall and Pathak, Ken and Sloan, Steven
   title: "Towards Trustworthy AI: A Review of Ethical and Robust Large Language Models"
   volume: "58"
   number: "7"
@@ -568,8 +568,8 @@ llm-2026-ref12:
   doi: 10.1145/3777382
   accessed_iso: "2026-04-12"
   accessed_date: 12 April 2026
-  ieee_base: "F. et al., Towards Trustworthy AI: A Review of Ethical and Robust Large Language Models, vol. 58, no. 7, pp. 1--43, n.d."
-  harvard_base: "et al., F. (n.d.). Towards Trustworthy AI: A Review of Ethical and Robust Large Language Models. vol. 58, no. 7, pp. 1--43."
+  ieee_base: "M. M. Ferdaus, M. Abdelguerfi, E. Loup, K. N. Niles, K. Pathak and S. Sloan, Towards Trustworthy AI: A Review of Ethical and Robust Large Language Models, vol. 58, no. 7, pp. 1--43, n.d."
+  harvard_base: "Ferdaus, M.M. et al. (n.d.). Towards Trustworthy AI: A Review of Ethical and Robust Large Language Models. vol. 58, no. 7, pp. 1--43."
   source_format: bibtex
 llm-2026-ref13:
   entry_type: inproceedings
@@ -604,9 +604,9 @@ llm-2026-ref14:
   source_format: bibtex
 llm-2026-ref15:
   entry_type: article
-  short_author: et al.
+  short_author: Yang et al.
   year: "2025"
-  authors: et al., Yang
+  authors: Yang, Chuanpeng and Zhu, Yao and Lu, Wang and Wang, Yidong and Chen, Qian and Gao, Chenlong and Yan, Bingjie and Chen, Yiqiang
   title: "Survey on Knowledge Distillation for Large Language Models: Methods, Evaluation, and Application"
   volume: "16"
   number: "6"
@@ -617,8 +617,8 @@ llm-2026-ref15:
   accessed_iso: "2026-04-12"
   published_date: 1 January 2025
   accessed_date: 12 April 2026
-  ieee_base: "Y. et al., Survey on Knowledge Distillation for Large Language Models: Methods, Evaluation, and Application, vol. 16, no. 6, pp. 1--27, 2025."
-  harvard_base: "et al., Y. (2025). Survey on Knowledge Distillation for Large Language Models: Methods, Evaluation, and Application. vol. 16, no. 6, pp. 1--27."
+  ieee_base: "C. Yang et al., Survey on Knowledge Distillation for Large Language Models: Methods, Evaluation, and Application, vol. 16, no. 6, pp. 1--27, 2025."
+  harvard_base: "Yang, C. et al. (2025). Survey on Knowledge Distillation for Large Language Models: Methods, Evaluation, and Application. vol. 16, no. 6, pp. 1--27."
   source_format: bibtex
 llm-2026-ref16:
   entry_type: article
@@ -640,9 +640,9 @@ llm-2026-ref16:
   source_format: bibtex
 llm-2026-ref17:
   entry_type: article
-  short_author: et al.
+  short_author: Wu et al.
   year: "2025"
-  authors: et al., Wu
+  authors: Wu, Fei and Shen, Tao and Bäck, Thomas and Chen, Jingyuan and Huang, Gang and Jin, Yaochu and Kuang, Kun and Li, Mengze and Lu, Cewu and Miao, Jiaxu and Wang, Yongwei and Wei, Ying and Wu, Fan and Yan, Junchi and Yang, Hongxia and Yang, Yi and Zhang, Shengyu and Zhao, Zhou and Zhuang, Yueting and Pan, Yunhe
   title: "Knowledge-Empowered, Collaborative, and Co-Evolving AI Models: The Post-LLM Roadmap"
   volume: "44"
   pages: 87--100
@@ -652,8 +652,8 @@ llm-2026-ref17:
   accessed_iso: "2026-04-12"
   published_date: 1 January 2025
   accessed_date: 12 April 2026
-  ieee_base: "W. et al., Knowledge-Empowered, Collaborative, and Co-Evolving AI Models: The Post-LLM Roadmap, vol. 44, pp. 87--100, 2025."
-  harvard_base: "et al., W. (2025). Knowledge-Empowered, Collaborative, and Co-Evolving AI Models: The Post-LLM Roadmap. vol. 44, pp. 87--100."
+  ieee_base: "F. Wu et al., Knowledge-Empowered, Collaborative, and Co-Evolving AI Models: The Post-LLM Roadmap, vol. 44, pp. 87--100, 2025."
+  harvard_base: "Wu, F. et al. (2025). Knowledge-Empowered, Collaborative, and Co-Evolving AI Models: The Post-LLM Roadmap. vol. 44, pp. 87--100."
   source_format: bibtex
 llm-2026-ref18:
   entry_type: inproceedings
@@ -1778,21 +1778,118 @@ zhao2026:
   ieee_base: D. Monroe, Post-Quantum Cryptography, vol. 66, no. 2, pp. 15--17, n.d.
   harvard_base: Monroe, D. (n.d.). Post-Quantum Cryptography. vol. 66, no. 2, pp. 15--17.
   source_format: bibtex
+mitchell2019modelcards:
+  entry_type: inproceedings
+  short_author: Mitchell et al.
+  year: "2019"
+  authors: Mitchell, Margaret and Wu, Simone and Zaldivar, Andrew and Barnes, Parker and Vasserman, Lucy and Hutchinson, Ben and Spitzer, Elena and Raji, Inioluwa Deborah and Gebru, Timnit
+  title: Model Cards for Model Reporting
+  book: Proceedings of the Conference on Fairness, Accountability, and Transparency (FAT* '19)
+  pages: 220--229
+  doi: 10.1145/3287560.3287596
+  published_iso: "2019-01-01"
+  published_date: 1 January 2019
+  ieee_base: M. Mitchell et al., Model Cards for Model Reporting, in Proceedings of the Conference on Fairness, Accountability, and Transparency (FAT* '19), pp. 220--229, 2019.
+  harvard_base: Mitchell, M. et al. (2019). Model Cards for Model Reporting. In Proceedings of the Conference on Fairness, Accountability, and Transparency (FAT* '19). pp. 220--229.
+  source_format: bibtex
+ullah2024explainable:
+  entry_type: article
+  short_author: Ullah et al.
+  year: "2025"
+  authors: Ullah, Naeem and Khan, Javed Ali and De Falco, Ivanoe and Sannino, Giovanna
+  title: "Explainable Artificial Intelligence: Importance, Use Domains, Stages, Output Shapes, and Challenges"
+  volume: "57"
+  number: "4"
+  pages: 1--36
+  doi: 10.1145/3705724
+  published_iso: "2025-01-01"
+  published_date: 1 January 2025
+  ieee_base: "N. Ullah, J. A. Khan, I. De Falco and G. Sannino, Explainable Artificial Intelligence: Importance, Use Domains, Stages, Output Shapes, and Challenges, vol. 57, no. 4, pp. 1--36, 2025."
+  harvard_base: "Ullah, N. et al. (2025). Explainable Artificial Intelligence: Importance, Use Domains, Stages, Output Shapes, and Challenges. vol. 57, no. 4, pp. 1--36."
+  source_format: bibtex
+laato2022explain:
+  entry_type: article
+  short_author: Laato et al.
+  year: "2022"
+  authors: Laato, Samuli and Tiainen, Miika and Najmul Islam, A.K.M. and Mäntymäki, Matti
+  title: "How to explain AI systems to end users: a systematic literature review and research agenda"
+  volume: "32"
+  number: "7"
+  pages: 1--31
+  doi: 10.1108/INTR-08-2021-0600
+  published_iso: "2022-01-01"
+  published_date: 1 January 2022
+  ieee_base: "S. Laato, M. Tiainen, A. K. M. Najmul Islam and M. Mäntymäki, How to explain AI systems to end users: a systematic literature review and research agenda, vol. 32, no. 7, pp. 1--31, 2022."
+  harvard_base: "Laato, S. et al. (2022). How to explain AI systems to end users: a systematic literature review and research agenda. vol. 32, no. 7, pp. 1--31."
+  source_format: bibtex
+preet2025exploring:
+  entry_type: inproceedings
+  short_author: Preet et al.
+  year: "2025"
+  authors: Preet, Shiv and Chhabra, Gunjan
+  title: "Exploring SHAP: A Deep Dive into Feature Attribution for Explainable AI"
+  book: "2025 5th International Conference on Internet of Things: Smart Innovation and Usages (IoT-SIU)"
+  doi: 10.1109/IOT-SIU65919.2025.11402705
+  published_iso: "2025-01-01"
+  published_date: 1 January 2025
+  ieee_base: "S. Preet and G. Chhabra, Exploring SHAP: A Deep Dive into Feature Attribution for Explainable AI, in 2025 5th International Conference on Internet of Things: Smart Innovation and Usages (IoT-SIU), 2025."
+  harvard_base: "Preet, S. and Chhabra, G. (2025). Exploring SHAP: A Deep Dive into Feature Attribution for Explainable AI. In 2025 5th International Conference on Internet of Things: Smart Innovation and Usages (IoT-SIU)."
+  source_format: bibtex
+hina2025shap:
+  entry_type: inproceedings
+  short_author: Hina et al.
+  year: "2025"
+  authors: Hina, Manolo Dulva and Lamouchi, Olfa and Soukane, Assia and Ramdane-Cherif, Amar
+  title: "SHAP-Based Explanations for Chronic Kidney Disease Risk Prediction: Toward Trustworthy Clinical AI"
+  book: 2025 9th International Conference on Computer Science and Artificial Intelligence (CSAI 2025)
+  pages: 660--671
+  doi: 10.1145/3788149.3788251
+  published_iso: "2025-01-01"
+  published_date: 1 January 2025
+  ieee_base: "M. D. Hina, O. Lamouchi, A. Soukane and A. Ramdane-Cherif, SHAP-Based Explanations for Chronic Kidney Disease Risk Prediction: Toward Trustworthy Clinical AI, in 2025 9th International Conference on Computer Science and Artificial Intelligence (CSAI 2025), pp. 660--671, 2025."
+  harvard_base: "Hina, M.D. et al. (2025). SHAP-Based Explanations for Chronic Kidney Disease Risk Prediction: Toward Trustworthy Clinical AI. In 2025 9th International Conference on Computer Science and Artificial Intelligence (CSAI 2025). pp. 660--671."
+  source_format: bibtex
+vu2026contrastive:
+  entry_type: inproceedings
+  short_author: Vu et al.
+  year: "2026"
+  authors: Vu, Anh Mai and Vo, Tuan L. and Bui, Ngoc Lam Quang and Le, Nam N. B. and Awasthi, Akash and Vo, Huy Q. and Nguyen, Thanh-Huy and Han, Zhu and Mohan, Chandra and Nguyen, Hien Van
+  title: "Contrastive Integrated Gradients: A Feature Attribution-Based Method for Explaining Whole Slide Image Classification"
+  book: 2026 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)
+  pages: 1105--1115
+  doi: 10.1109/WACV61042.2026.00123
+  published_iso: "2026-01-01"
+  published_date: 1 January 2026
+  ieee_base: "A. M. Vu et al., Contrastive Integrated Gradients: A Feature Attribution-Based Method for Explaining Whole Slide Image Classification, in 2026 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), pp. 1105--1115, 2026."
+  harvard_base: "Vu, A.M. et al. (2026). Contrastive Integrated Gradients: A Feature Attribution-Based Method for Explaining Whole Slide Image Classification. In 2026 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV). pp. 1105--1115."
+  source_format: bibtex
+vandervalk2025explainable:
+  entry_type: article
+  short_author: van der Valk et al.
+  year: "2025"
+  authors: van der Valk, Viktor and Atsma, Douwe and Scherptong, Roderick and Staring, Marius
+  title: Explainable ECG analysis by explicit information disentanglement with VAEs
+  doi: 10.1109/TBME.2025.3631143
+  published_iso: "2025-01-01"
+  published_date: 1 January 2025
+  ieee_base: V. van der Valk, D. Atsma, R. Scherptong and M. Staring, Explainable ECG analysis by explicit information disentanglement with VAEs, 2025.
+  harvard_base: van der Valk, V. et al. (2025). Explainable ECG analysis by explicit information disentanglement with VAEs.
+  source_format: bibtex
 10.1145/3626252.3630823:
   entry_type: inproceedings
   short_author: Borrelli et al.
   year: "2024"
   authors: Borrelli, Thomas J. and Polak, Monika and Radziszowski, Stanisław
   title: Designing and Delivering a Post-Quantum Cryptography Course
-  book: Proceedings of the 55th {{ACM}} Technical Symposium on Computer Science Education V. 1
+  book: Proceedings of the 55th ACM Technical Symposium on Computer Science Education V. 1
   publisher: Association for Computing Machinery
   pages: 137--143
   url: https://doi.org/10.1145/3626252.3630823
   doi: 10.1145/3626252.3630823
   published_iso: "2024-01-01"
   published_date: 1 January 2024
-  ieee_base: T. J. Borrelli, M. Polak and S. Radziszowski, Designing and Delivering a Post-Quantum Cryptography Course, in Proceedings of the 55th {{ACM}} Technical Symposium on Computer Science Education V. 1, pp. 137--143, Association for Computing Machinery, 2024.
-  harvard_base: Borrelli, T.J., Polak, M. and Radziszowski, S. (2024). Designing and Delivering a Post-Quantum Cryptography Course. In Proceedings of the 55th {{ACM}} Technical Symposium on Computer Science Education V. 1. pp. 137--143. Association for Computing Machinery.
+  ieee_base: T. J. Borrelli, M. Polak and S. Radziszowski, Designing and Delivering a Post-Quantum Cryptography Course, in Proceedings of the 55th ACM Technical Symposium on Computer Science Education V. 1, pp. 137--143, Association for Computing Machinery, 2024.
+  harvard_base: Borrelli, T.J., Polak, M. and Radziszowski, S. (2024). Designing and Delivering a Post-Quantum Cryptography Course. In Proceedings of the 55th ACM Technical Symposium on Computer Science Education V. 1. pp. 137--143. Association for Computing Machinery.
   source_format: bibtex
 10.1145/3770761.3777201:
   entry_type: inproceedings
@@ -2189,14 +2286,14 @@ barredoarrieta2020xai:
   short_author: Barredo Arrieta et al.
   year: "2020"
   authors: Barredo Arrieta, Alejandro and Díaz-Rodríguez, Natalia and Del Ser, Javier and Bennetot, Adrien and Tabik, Siham and Barbado, Alberto and Garcia, Salvador and Gil-Lopez, Sergio and Molina, Daniel and Benjamins, Richard and Chatila, Raja and Herrera, Francisco
-  title: "Explainable Artificial Intelligence (XAI): Concepts, Taxonomies, Opportunities and Challenges Toward Responsible {AI}"
+  title: "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI"
   volume: "58"
   pages: 82--115
   doi: 10.1016/j.inffus.2019.12.012
   published_iso: "2020-01-01"
   published_date: 1 January 2020
-  ieee_base: "A. Barredo Arrieta et al., Explainable Artificial Intelligence (XAI): Concepts, Taxonomies, Opportunities and Challenges Toward Responsible {AI}, vol. 58, pp. 82--115, 2020."
-  harvard_base: "Barredo Arrieta, A. et al. (2020). Explainable Artificial Intelligence (XAI): Concepts, Taxonomies, Opportunities and Challenges Toward Responsible {AI}. vol. 58, pp. 82--115."
+  ieee_base: "A. Barredo Arrieta et al., Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI, vol. 58, pp. 82--115, 2020."
+  harvard_base: "Barredo Arrieta, A. et al. (2020). Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI. vol. 58, pp. 82--115."
   source_format: bibtex
 "9369420":
   entry_type: article
@@ -2276,14 +2373,14 @@ lapuschkin2019cleverhans:
   short_author: Lapuschkin et al.
   year: "2019"
   authors: Lapuschkin, Sebastian and Wäldchen, Stephan and Binder, Alexander and Montavon, Grégoire and Samek, Wojciech and Müller, Klaus-Robert
-  title: Unmasking Clever {H}ans Predictors and Assessing What Machines Really Learn
+  title: Unmasking Clever Hans Predictors and Assessing What Machines Really Learn
   volume: "10"
   pages: "1096"
   doi: 10.1038/s41467-019-08987-4
   published_iso: "2019-01-01"
   published_date: 1 January 2019
-  ieee_base: S. Lapuschkin, S. Wäldchen, A. Binder, G. Montavon, W. Samek and K. R. Müller, Unmasking Clever {H}ans Predictors and Assessing What Machines Really Learn, vol. 10, pp. 1096, 2019.
-  harvard_base: Lapuschkin, S. et al. (2019). Unmasking Clever {H}ans Predictors and Assessing What Machines Really Learn. vol. 10, pp. 1096.
+  ieee_base: S. Lapuschkin, S. Wäldchen, A. Binder, G. Montavon, W. Samek and K. R. Müller, Unmasking Clever Hans Predictors and Assessing What Machines Really Learn, vol. 10, pp. 1096, 2019.
+  harvard_base: Lapuschkin, S. et al. (2019). Unmasking Clever Hans Predictors and Assessing What Machines Really Learn. vol. 10, pp. 1096.
   source_format: bibtex
 bhatt2020deployment:
   entry_type: inproceedings
@@ -2304,27 +2401,27 @@ casper2024blackbox:
   short_author: Casper et al.
   year: "2024"
   authors: Casper, Stephen and Ezell, Carson and Siegmann, Charlotte and Kolt, Noam and Curtis, Taylor Lynn and Bucknall, Benjamin and Haupt, Andreas and Wei, Kevin and Scheurer, Jérémy and Hobbhahn, Marius and Sharkey, Lee and Krishna, Satyapriya and Von Hagen, Marvin and Alberti, Silas and Chan, Alan and Sun, Qinyi and Gerovitch, Michael and Bau, David and Tegmark, Max and Krueger, David and Hadfield-Menell, Dylan
-  title: Black-Box Access is Insufficient for Rigorous {AI} Audits
+  title: Black-Box Access is Insufficient for Rigorous AI Audits
   book: Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT '24)
   doi: 10.1145/3630106.3659037
   published_iso: "2024-01-01"
   published_date: 1 January 2024
-  ieee_base: S. Casper et al., Black-Box Access is Insufficient for Rigorous {AI} Audits, in Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT '24), 2024.
-  harvard_base: Casper, S. et al. (2024). Black-Box Access is Insufficient for Rigorous {AI} Audits. In Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT '24).
+  ieee_base: S. Casper et al., Black-Box Access is Insufficient for Rigorous AI Audits, in Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT '24), 2024.
+  harvard_base: Casper, S. et al. (2024). Black-Box Access is Insufficient for Rigorous AI Audits. In Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT '24).
   source_format: bibtex
 pawlicki2024metrics:
   entry_type: article
   short_author: Pawlicki et al.
   year: "2024"
   authors: Pawlicki, Marek and Pawlicka, Aleksandra and Uccello, Federica and Szelest, Sebastian and D'Antonio, Salvatore and Kozik, Rafa{ł} and Choraś, Micha{ł}
-  title: "Evaluating the Necessity of the Multiple Metrics for Assessing Explainable {AI}: A Critical Examination"
+  title: "Evaluating the Necessity of the Multiple Metrics for Assessing Explainable AI: A Critical Examination"
   volume: "602"
   pages: "128282"
   doi: 10.1016/j.neucom.2024.128282
   published_iso: "2024-01-01"
   published_date: 1 January 2024
-  ieee_base: "M. Pawlicki et al., Evaluating the Necessity of the Multiple Metrics for Assessing Explainable {AI}: A Critical Examination, vol. 602, pp. 128282, 2024."
-  harvard_base: "Pawlicki, M. et al. (2024). Evaluating the Necessity of the Multiple Metrics for Assessing Explainable {AI}: A Critical Examination. vol. 602, pp. 128282."
+  ieee_base: "M. Pawlicki et al., Evaluating the Necessity of the Multiple Metrics for Assessing Explainable AI: A Critical Examination, vol. 602, pp. 128282, 2024."
+  harvard_base: "Pawlicki, M. et al. (2024). Evaluating the Necessity of the Multiple Metrics for Assessing Explainable AI: A Critical Examination. vol. 602, pp. 128282."
   source_format: bibtex
 li2022interpretable:
   entry_type: misc
@@ -2371,15 +2468,15 @@ dwivedi2023xai:
   short_author: Dwivedi et al.
   year: "2023"
   authors: Dwivedi, Rudresh and Dave, Devam and Naik, Het and Singhal, Smith and Omer, Rana and Patel, Pankesh and Qian, Bin and Wen, Zhenyu and Shah, Tejal and Morgan, Graham and Ranjan, Rajiv
-  title: "Explainable {AI} (XAI): Core Ideas, Techniques, and Solutions"
+  title: "Explainable AI (XAI): Core Ideas, Techniques, and Solutions"
   volume: "55"
   number: "9"
   pages: Article 194
   doi: 10.1145/3561048
   published_iso: "2023-01-01"
   published_date: 1 January 2023
-  ieee_base: "R. Dwivedi et al., Explainable {AI} (XAI): Core Ideas, Techniques, and Solutions, vol. 55, no. 9, pp. Article 194, 2023."
-  harvard_base: "Dwivedi, R. et al. (2023). Explainable {AI} (XAI): Core Ideas, Techniques, and Solutions. vol. 55, no. 9, pp. Article 194."
+  ieee_base: "R. Dwivedi et al., Explainable AI (XAI): Core Ideas, Techniques, and Solutions, vol. 55, no. 9, pp. Article 194, 2023."
+  harvard_base: "Dwivedi, R. et al. (2023). Explainable AI (XAI): Core Ideas, Techniques, and Solutions. vol. 55, no. 9, pp. Article 194."
   source_format: bibtex
 salvi2025uncertainty:
   entry_type: article

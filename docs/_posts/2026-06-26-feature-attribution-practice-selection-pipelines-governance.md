@@ -16,6 +16,27 @@ references_style: ieee
 references_data_file: references
 references:
   - KOST2025100648
+  - mitchell2019modelcards
+  - hina2025shap
+  - vu2026contrastive
+  - vandervalk2025explainable
+  - ullah2024explainable
+  - laato2022explain
+  - preet2025exploring
+  - pmlr-v108-janzing20a
+  - DEHDARIRAD2025100101
+  - 10.1145/3672553
+  - 11228295
+  - 10879535
+  - bhalla2023verifiable
+  - NEURIPS2023_89beb2a3
+  - CARLESBOU2026108277
+  - 11461829
+  - 10021127
+  - 10.1145/3617380
+  - CHEN2025129379
+  - 11498186
+  - 11449430
 related_posts:
   - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
     url: /feature-attribution-foundations-limits-verifiability
@@ -60,7 +81,7 @@ This article is not legal advice.
   <dd>A Herfindahl-Hirschman-based measure of how concentrated feature importance is, where high dominance indicates that a single feature drives most of the model's predictive power.</dd>
 
   <dt><dfn>Model documentation</dfn></dt>
-  <dd>The practice of producing structured metadata about a model's intended use, training data, evaluation results, and limitations, formalised by Mitchell et al. (2019) as Model Cards.</dd>
+  <dd>The practice of producing structured metadata about a model's intended use, training data, evaluation results, and limitations, formalised by Mitchell et al. (2019) {% include references/cite.html key="mitchell2019modelcards" %} as Model Cards.</dd>
 
   <dt><dfn>Stakeholder-appropriate explanation</dfn></dt>
   <dd>An explanation whose complexity, format, and content match the intended audience's technical expertise and decision-making needs, as opposed to a single explanation format for all audiences.</dd>
@@ -95,7 +116,7 @@ The answer, from Kost et al., is that the value is in quantification, not discov
 
 ### Healthcare and medical imaging (most sensitive)
 
-Four healthcare applications appear, ranging from chronic kidney disease risk prediction (Hina et al., using SHAP) to whole-slide image analysis (Vu et al., using Contrastive Integrated Gradients) and ECG interpretation (van der Valk et al., using VAE disentanglement). The healthcare context imposes requirements that the energy papers do not face: regulatory oversight, the need for causal (not just correlational) explanations, and the requirement that explanations be interpretable by clinicians, not data scientists.
+Four healthcare applications appear, ranging from chronic kidney disease risk prediction (Hina et al. {% include references/cite.html key="hina2025shap" %}, using SHAP) to whole-slide image analysis (Vu et al. {% include references/cite.html key="vu2026contrastive" %}, using Contrastive Integrated Gradients) and ECG interpretation (van der Valk et al. {% include references/cite.html key="vandervalk2025explainable" %}, using VAE disentanglement). The healthcare context imposes requirements that the energy papers do not face: regulatory oversight, the need for causal (not just correlational) explanations, and the requirement that explanations be interpretable by clinicians, not data scientists.
 
 The healthcare papers also reveal a gap. None evaluates whether the provided explanations actually improve clinical decision-making. The assumption that more explainable models lead to better clinician decisions remains untested in the reviewed literature. This is not merely a gap in the papers reviewed here; it reflects a structural limitation of the attribution evaluation field as a whole. User studies are expensive, domain-specific, and difficult to publish in ML venues. Until the research community incentivises deployment-stage evaluation, claims that attribution methods improve decision-making will remain unsupported by direct evidence.
 
@@ -124,11 +145,11 @@ Two papers apply SHAP at scale to spatiotemporal Earth observation data: Europea
 
 Four surveys in the selection provide the broader context within which the methodological papers sit.
 
-Ullah et al. (2025) review 155 XAI papers and establish taxonomy dimensions useful for any practitioner designing an XAI strategy. Their key finding: the field skews toward image domains and gradient-based methods, while tabular and time series (the most common production formats) are underserved. A practitioner building a tabular model cannot rely on the field's default recommendations.
+Ullah et al. (2025) {% include references/cite.html key="ullah2024explainable" %} review 155 XAI papers and establish taxonomy dimensions useful for any practitioner designing an XAI strategy. Their key finding: the field skews toward image domains and gradient-based methods, while tabular and time series (the most common production formats) are underserved. A practitioner building a tabular model cannot rely on the field's default recommendations.
 
-Laato et al. (2022) systematically review how to explain AI systems to end users and find that most XAI research assumes a technically literate audience. The explanation formats studied rarely match non-expert stakeholder needs. Deploying an attribution method is not the same as providing an explanation: the output must be translated into a stakeholder-appropriate format, and that translation is itself a design problem.
+Laato et al. (2022) {% include references/cite.html key="laato2022explain" %} systematically review how to explain AI systems to end users and find that most XAI research assumes a technically literate audience. The explanation formats studied rarely match non-expert stakeholder needs. Deploying an attribution method is not the same as providing an explanation: the output must be translated into a stakeholder-appropriate format, and that translation is itself a design problem.
 
-Preet et al. (2025) provide a pedagogical survey of SHAP useful for team onboarding, covering foundations, implementation variants, and the common pitfall Janzing et al. identified: users do not realise they are choosing between interventional and conditional Shapley values.
+Preet et al. (2025) {% include references/cite.html key="preet2025exploring" %} provide a pedagogical survey of SHAP useful for team onboarding, covering foundations, implementation variants, and the common pitfall Janzing et al. {% include references/cite.html key="pmlr-v108-janzing20a" %} identified: users do not realise they are choosing between interventional and conditional Shapley values.
 
 Mitchell et al. (2019) introduce Model Cards as a documentation standard. Model Cards are complementary to feature attribution: attribution explains individual decisions, while Model Cards explain the model as a whole.
 
@@ -160,8 +181,8 @@ If I were advising a team starting their XAI journey today, I would tell them to
 
 ### Question 3: What evaluation standard applies?
 
-- **Research publication**: Use at least two evaluation paradigms (e.g., model-centric + data-centric). Report results across multiple datasets. Follow Dehdarirad's multi-factorial approach by stratifying results by evidence type or class.
-- **Production deployment**: Supplement automated metrics with human evaluation on a representative sample. Use Moreira et al.'s decision-path inspection for any tree-based model.
+- **Research publication**: Use at least two evaluation paradigms (e.g., model-centric + data-centric). Report results across multiple datasets. Follow Dehdarirad {% include references/cite.html key="DEHDARIRAD2025100101" %} 's multi-factorial approach by stratifying results by evidence type or class.
+- **Production deployment**: Supplement automated metrics with human evaluation on a representative sample. Use Moreira et al. {% include references/cite.html key="10.1145/3672553" %} 's decision-path inspection for any tree-based model.
 - **Regulatory compliance**: The verification impossibility is a live compliance risk. Consider Model Cards for model-level documentation and accept that individual prediction explanations from black-box models cannot be independently verified.
 
 ---
@@ -172,13 +193,13 @@ If I were advising a team starting their XAI journey today, I would tell them to
 
 2. **Know your Shapley variant.** If you use SHAP, you must know whether your implementation uses interventional or conditional expectations. The difference is not an implementation detail; it changes what the scores mean.
 
-3. **Exact attribution is not a luxury; it is a standard.** For feedforward networks, FACE shows that exact attribution is computationally cheaper than approximation. If your architecture supports it, use it.
+3. **Exact attribution is not a luxury; it is a standard.** For feedforward networks, FACE {% include references/cite.html key="CARLESBOU2026108277" %} shows that exact attribution is computationally cheaper than approximation. If your architecture supports it, use it.
 
 4. **Feature interactions will be invisible unless you look for them.** First-order attribution methods miss interactions by construction. For high-stakes settings, supplement first-order with higher-order or interaction-aware analysis.
 
 5. **Evaluation metrics are not interchangeable.** Each metric captures a different aspect of explanation quality. Triangulate across paradigms and acknowledge what each metric misses.
 
-6. **Correlation is not causation, even in attribution.** Causal SHAP and ExCIR offer different responses to this problem. Choose based on whether your use case requires causal claims or can tolerate correlational awareness.
+6. **Correlation is not causation, even in attribution.** Causal SHAP {% include references/cite.html key="11228295" %} and ExCIR {% include references/cite.html key="11498186" %} offer different responses to this problem. Choose based on whether your use case requires causal claims or can tolerate correlational awareness.
 
 7. **Attribution is a design-stage tool, not just a post-hoc one.** Kost et al.'s XAI-FS shows that attribution can guide feature selection, monitor dominance, and manage acquisition costs well before a model reaches production.
 
@@ -194,7 +215,7 @@ If I were advising a team starting their XAI journey today, I would tell them to
 
 ### Should I use SHAP or LIME as my default?
 
-The evidence in this series shows both have known failure modes. SHAP conflates correlation with causation (Janzing, Ng). LIME underperforms on time series (Troncoso-García). Use the decision framework above to select based on your specific constraints, and always validate with at least one metric from a different paradigm.
+The evidence in this series shows both have known failure modes. SHAP conflates correlation with causation (Janzing, Ng {% include references/cite.html key="11228295" %}). LIME underperforms on time series (Troncoso-García {% include references/cite.html key="10879535" %}). Use the decision framework above to select based on your specific constraints, and always validate with at least one metric from a different paradigm.
 
 ### How should attribution be integrated into an ML pipeline?
 
@@ -202,7 +223,7 @@ At three points: (1) feature selection stage (Kost's XAI-FS approach), (2) model
 
 ### What should I tell a regulator about my explanations?
 
-Be honest about what they cannot do. Standard post-hoc explanations from black-box models cannot be verified for individual cases (Bhalla). They are aggregate statistical summaries, not guarantees of model behaviour. If a regulator requires verifiable explanations, you need either an inherently interpretable model or a VerT-adapted model.
+Be honest about what they cannot do. Standard post-hoc explanations from black-box models cannot be verified for individual cases (Bhalla {% include references/cite.html key="bhalla2023verifiable" %}). They are aggregate statistical summaries, not guarantees of model behaviour. If a regulator requires verifiable explanations, you need either an inherently interpretable model or a VerT-adapted model.
 
 ### How much should I invest in attribution infrastructure?
 
@@ -238,25 +259,25 @@ _Concludes a series on feature attribution, explainability, and interpretability
 
 ### Author and Source Credibility
 
-The primary paper for this article (Kost et al.) appears in Energy and AI (Elsevier), a reputable domain-specific journal. The four surveys appear in diverse venues: a general XAI journal (Ullah), a human-computer interaction review (Laato), a pedagogical outlet (Preet), and a famous workshop paper at ACM FAT\* (Mitchell). Mitchell et al.'s Model Cards paper, while not archival, is one of the most influential works in the broader AI governance literature.
+The primary paper for this article (Kost et al.) appears in Energy and AI (Elsevier), a reputable domain-specific journal. The four surveys appear in diverse venues: a top-tier computing survey journal (Ullah, ACM Computing Surveys), an information systems journal (Laato, Internet Research), an IoT applications conference (Preet, IEEE IoT-SIU), and a famous workshop paper at ACM FAT\* (Mitchell). Mitchell et al.'s Model Cards paper, while not archival, is one of the most influential works in the broader AI governance literature.
 
 ### Corpus Reviewed
 
 1. Kost, L., Lier, S.K. and Breitner, M.H. (2025) 'An explainable artificial intelligence feature selection framework for transparent, trustworthy, and cost-efficient energy forecasting', _Energy and AI_, 22, 100648. doi:10.1016/j.egyai.2025.100648.
-2. Ullah, A.A. et al. (2025) 'Explainable artificial intelligence: importance, use domains, stages, output shapes, and challenges', _Journal of XAI Research_.
-3. Laato, S. et al. (2022) 'How to explain AI systems to end users: a systematic literature review and research agenda', _Journal of XAI Research_.
-4. Preet, R. et al. (2025) 'Exploring SHAP: a deep dive into feature attribution for explainable AI', _XAI Journal_.
+2. Ullah, N. et al. (2025) 'Explainable artificial intelligence: importance, use domains, stages, output shapes, and challenges', _ACM Computing Surveys_, 57(4), pp. 1–36. doi:10.1145/3705724.
+3. Laato, S. et al. (2022) 'How to explain AI systems to end users: a systematic literature review and research agenda', _Internet Research_, 32(7), pp. 1–31. doi:10.1108/INTR-08-2021-0600.
+4. Preet, S. and Chhabra, G. (2025) 'Exploring SHAP: a deep dive into feature attribution for explainable AI', in _2025 5th International Conference on Internet of Things: Smart Innovation and Usages (IoT-SIU)_. IEEE. doi:10.1109/IOT-SIU65919.2025.11402705.
 5. Mitchell, M. et al. (2019) 'Model cards for model reporting', in _Proceedings of the Conference on Fairness, Accountability, and Transparency (FAT_ 2019)\*. ACM.
 
 ### Full Series Reference Map
 
-| Article        | Date   | Papers covered                                            | Focus                 |
-| -------------- | ------ | --------------------------------------------------------- | --------------------- |
-| 1: Foundations | 10 Jun | Causal critique (2020), Verifiability (2023), DiET (2023) | Theoretical limits    |
-| 2: Methods     | 14 Jun | FACE, Higher-Order IG, GAPS, MOFAE                        | New computation       |
-| 3: Evaluation  | 18 Jun | WAE, RExQUAL, Counterfactual, Dehdarirad                  | Metrics               |
-| 4: Dependency  | 22 Jun | Causal SHAP, ExCIR, C3A                                   | Correlation-causation |
-| 5: Practice    | 26 Jun | Kost XAI-FS, surveys, domain apps                         | Deployment            |
+| Article        | Date   | Papers covered                                                                                                                                                                                                                                                            | Focus                 |
+| -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| 1: Foundations | 10 Jun | Causal critique (2020) {% include references/cite.html key="pmlr-v108-janzing20a" %}, Verifiability (2023) {% include references/cite.html key="bhalla2023verifiable" %}, DiET (2023) {% include references/cite.html key="NEURIPS2023_89beb2a3" %}                       | Theoretical limits    |
+| 2: Methods     | 14 Jun | FACE {% include references/cite.html key="CARLESBOU2026108277" %}, Higher-Order IG {% include references/cite.html key="11461829" %}, GAPS {% include references/cite.html key="10021127" %}, MOFAE {% include references/cite.html key="10.1145/3617380" %}              | New computation       |
+| 3: Evaluation  | 18 Jun | WAE {% include references/cite.html key="CHEN2025129379" %}, RExQUAL {% include references/cite.html key="10879535" %}, Counterfactual {% include references/cite.html key="10.1145/3672553" %}, Dehdarirad {% include references/cite.html key="DEHDARIRAD2025100101" %} | Metrics               |
+| 4: Dependency  | 22 Jun | Causal SHAP {% include references/cite.html key="11228295" %}, ExCIR {% include references/cite.html key="11498186" %}, C3A {% include references/cite.html key="11449430" %}                                                                                             | Correlation-causation |
+| 5: Practice    | 26 Jun | Kost XAI-FS {% include references/cite.html key="KOST2025100648" %}, surveys, domain apps                                                                                                                                                                                 | Deployment            |
 
 ### Technical Term Definitions
 
