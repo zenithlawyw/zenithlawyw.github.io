@@ -2646,11 +2646,8 @@ video {
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
-.whitespace-normal {
-  white-space: normal;
-}
+.truncate,
 .whitespace-nowrap {
   white-space: nowrap;
 }
