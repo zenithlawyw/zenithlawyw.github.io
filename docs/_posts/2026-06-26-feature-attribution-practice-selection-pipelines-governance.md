@@ -65,7 +65,7 @@ tags:
 
 ## Introduction
 
-Four articles established what feature attribution can and cannot deliver: individual attributions from black-box models cannot be verified; exact computation is possible for specific architectures; no single evaluation metric is sufficient; standard methods conflate association with causation. The practitioner's question follows: what should you actually do?
+Four articles established what feature attribution can and cannot deliver. Individual attributions from black-box models cannot be verified. Exact computation is possible for specific architectures. No single metric suffices for evaluation. Standard methods conflate association with causation. The practitioner's question follows: what should you actually do?
 
 The answer is not a single recommendation. It is a decision framework organised around the variables that matter: model access, domain stakes, regulatory requirements, computational budget, and stakeholder needs. The synthesis draws on Kost et al.'s XAI-guided feature selection framework as a worked example, a distillation of domain applications, and the major XAI surveys that establish context.
 
@@ -112,17 +112,17 @@ The tier 3 papers in the selection analysis apply attribution methods to specifi
 
 The largest domain cluster is energy and climate forecasting, with five papers applying SHAP to wind, solar, heating load, and monsoon prediction. The pattern across all five is consistent: SHAP identifies a small number of dominant physical features that match domain expert intuition. Temporal features (hour of day, day of year) and lagged values of the target variable consistently receive high importance. This alignment with domain knowledge is treated as validation of the attribution method, but it raises a question the papers do not fully address: if attributions merely confirm what domain experts already know, what value do they add?
 
-The answer, from Kost et al., is that the value is in quantification, not discovery. Knowing that GHI is important is not new; knowing that its dominance index is 0.365 and removing it costs only 0.009 in R² is actionable.
+The answer, from Kost et al., is that the value is in quantification, not discovery. Knowing that GHI is important is not new. Knowing that its dominance index is 0.365 and removing it costs only 0.009 in R² is actionable.
 
 ### Healthcare and medical imaging (most sensitive)
 
 Four healthcare applications appear, ranging from chronic kidney disease risk prediction (Hina et al. {% include references/cite.html key="hina2025shap" %}, using SHAP) to whole-slide image analysis (Vu et al. {% include references/cite.html key="vu2026contrastive" %}, using Contrastive Integrated Gradients) and ECG interpretation (van der Valk et al. {% include references/cite.html key="vandervalk2025explainable" %}, using VAE disentanglement). The healthcare context imposes requirements that the energy papers do not face: regulatory oversight, the need for causal (not just correlational) explanations, and the requirement that explanations be interpretable by clinicians, not data scientists.
 
-The healthcare papers also reveal a gap. None evaluates whether the provided explanations actually improve clinical decision-making. The assumption that more explainable models lead to better clinician decisions remains untested in the reviewed literature. This is not merely a gap in the papers reviewed here; it reflects a structural limitation of the attribution evaluation field as a whole. User studies are expensive, domain-specific, and difficult to publish in ML venues. Until the research community incentivises deployment-stage evaluation, claims that attribution methods improve decision-making will remain unsupported by direct evidence.
+The healthcare papers also reveal a gap. None evaluates whether the provided explanations actually improve clinical decision-making. The assumption that more explainable models lead to better clinician decisions remains untested in the reviewed literature. This is not merely a gap in the papers reviewed here. It reflects a structural limitation of the attribution evaluation field as a whole. User studies are expensive, domain specific, and difficult to publish in ML venues. Until the research community incentivises deployment-stage evaluation, claims that attribution methods improve decision-making will remain unsupported by direct evidence.
 
 ### Finance and cryptocurrency (most challenging)
 
-Two papers apply SHAP to financial time series (cryptocurrency and stock price forecasting). The short-term, high-noise nature of financial data makes attribution fundamentally harder than in physical domains. Feature importance rankings are less stable; small changes in input can produce large changes in attributions; and the non-stationary nature of financial markets means that feature importance itself is time-dependent. These papers validate SHAP's ability to produce _some_ attribution, but do not establish its reliability for financial decision-making.
+Two papers apply SHAP to financial time series (cryptocurrency and stock price forecasting). The short-term, high-noise nature of financial data makes attribution fundamentally harder than in physical domains. Feature importance rankings are less stable. Small changes in input can produce large changes in attributions. The non-stationary nature of financial markets means that feature importance itself is time-dependent. These papers validate SHAP's ability to produce _some_ attribution, but do not establish its reliability for financial decision-making.
 
 A deeper issue is that financial attribution faces a ground-truth problem that even synthetic benchmarks cannot fully address. In energy forecasting, the physical relationship between irradiance and solar power output provides a natural validation signal. In finance, the data-generating process is itself shaped by human behaviour, which is not decomposable into independent feature contributions. An attribution method that assigns importance to a technical indicator in a price prediction may be correct relative to the model but meaningless relative to the actual market dynamics the model approximates. This does not make financial XAI useless, but it means practitioners must be correspondingly more cautious about interpreting attributions as explanations of real-world phenomena.
 
@@ -151,7 +151,7 @@ Laato et al. (2022) {% include references/cite.html key="laato2022explain" %} sy
 
 Preet et al. (2025) {% include references/cite.html key="preet2025exploring" %} provide a pedagogical survey of SHAP useful for team onboarding, covering foundations, implementation variants, and the common pitfall Janzing et al. {% include references/cite.html key="pmlr-v108-janzing20a" %} identified: users do not realise they are choosing between interventional and conditional Shapley values.
 
-Mitchell et al. (2019) introduce Model Cards as a documentation standard. Model Cards are complementary to feature attribution: attribution explains individual decisions, while Model Cards explain the model as a whole.
+Mitchell et al. (2019) {% include references/cite.html key="mitchell2019modelcards" %} introduce Model Cards as a documentation standard. Model Cards are complementary to feature attribution: attribution explains individual decisions, while Model Cards explain the model as a whole.
 
 ---
 
@@ -181,7 +181,7 @@ If I were advising a team starting their XAI journey today, I would tell them to
 
 ### Question 3: What evaluation standard applies?
 
-- **Research publication**: Use at least two evaluation paradigms (e.g., model-centric + data-centric). Report results across multiple datasets. Follow Dehdarirad {% include references/cite.html key="DEHDARIRAD2025100101" %} 's multi-factorial approach by stratifying results by evidence type or class.
+- **Research publication**: Use at least two evaluation paradigms. The choice of paradigm shapes what claims can be drawn from the results. A **model-centric** paradigm varies the model architecture while holding data fixed, asking how explanation faithfulness or stability differs across model classes (e.g., classical LR/RF vs. transformer-based DistilBERT/RoBERTa as in Dehdarirad {% include references/cite.html key="DEHDARIRAD2025100101" %}). A **data-centric** paradigm varies dataset characteristics (domain, text length, class balance, evidence type) while holding the model fixed, revealing how context moderates explanation quality. A **hybrid** paradigm crosses both dimensions to detect interaction effects. For example, SHAP fails for negative evidence under LR but succeeds under RF {% include references/cite.html key="DEHDARIRAD2025100101" %}. This finding is invisible to either single-dimension design. Dehdarirad's multi-factorial framework stratifies results by model architecture, dataset, evidence type (positive/negative/all), and scoring metric simultaneously. Follow this approach rather than reporting aggregate rankings that mask conditional failures.
 - **Production deployment**: Supplement automated metrics with human evaluation on a representative sample. Use Moreira et al. {% include references/cite.html key="10.1145/3672553" %} 's decision-path inspection for any tree-based model.
 - **Regulatory compliance**: The verification impossibility is a live compliance risk. Consider Model Cards for model-level documentation and accept that individual prediction explanations from black-box models cannot be independently verified.
 
@@ -191,9 +191,9 @@ If I were advising a team starting their XAI journey today, I would tell them to
 
 1. **Do not trust a single attribution you cannot cross-validate.** The impossibility result applies to individual explanations. Aggregate statistics across many predictions are more reliable.
 
-2. **Know your Shapley variant.** If you use SHAP, you must know whether your implementation uses interventional or conditional expectations. The difference is not an implementation detail; it changes what the scores mean.
+2. **Know your Shapley variant.** If you use SHAP, you must know whether your implementation uses interventional or conditional expectations. The difference is not an implementation detail. It changes what the scores mean.
 
-3. **Exact attribution is not a luxury; it is a standard.** For feedforward networks, FACE {% include references/cite.html key="CARLESBOU2026108277" %} shows that exact attribution is computationally cheaper than approximation. If your architecture supports it, use it.
+3. **Exact attribution is not a luxury. It is a standard.** For feedforward networks, FACE {% include references/cite.html key="CARLESBOU2026108277" %} shows that exact attribution is computationally cheaper than approximation. If your architecture supports it, use it.
 
 4. **Feature interactions will be invisible unless you look for them.** First-order attribution methods miss interactions by construction. For high-stakes settings, supplement first-order with higher-order or interaction-aware analysis.
 
