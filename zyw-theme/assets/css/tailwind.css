@@ -2549,9 +2549,6 @@ video {
 .flex-wrap {
   flex-wrap: wrap;
 }
-.place-items-center {
-  place-items: center;
-}
 .items-center {
   align-items: center;
 }
@@ -2653,6 +2650,9 @@ video {
 .truncate,
 .whitespace-nowrap {
   white-space: nowrap;
+}
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
 }
 .break-words {
   overflow-wrap: break-word;
