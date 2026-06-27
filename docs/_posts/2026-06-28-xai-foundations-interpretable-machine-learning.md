@@ -5,7 +5,7 @@ title: "What Does It Mean for AI to Be Explainable? Foundations of Interpretable
 author: Zenith Law
 description: "A rigorous examination of what interpretability means in machine learning, the taxonomies that organise the XAI field, and the evaluation frameworks that separate genuine understanding from post-hoc rationalisation."
 permalink: /foundations-interpretable-machine-learning
-intro: "Five papers, spanning 2017 to 2024, collectively establish what interpretability means, how to evaluate it, and where the conceptual boundaries lie. Doshi-Velez and Kim's three-tier evaluation framework, Barredo Arrieta et al.'s comprehensive taxonomy, Molnar's practical guide, Watson's philosophical critique, and Chazette et al.'s knowledge catalogue each contribute a distinct piece of the puzzle. Together they reveal that interpretability is neither a single property nor a binary condition. It depends on who is asking, what they need to understand, and at what cost."
+intro: "Five papers, spanning 2017 to 2024, collectively establish what interpretability means, how to evaluate it, and where the conceptual boundaries lie. Doshi-Velez and Kim's three-tier evaluation framework, the comprehensive taxonomy of Barredo Arrieta et al., Molnar's practical guide, Watson's philosophical critique, and the knowledge catalogue of Chazette et al. each contribute a distinct piece of the puzzle. Together they reveal that interpretability is neither a single property nor a binary condition. It depends on who is asking, what they need to understand, and at what cost."
 image: /assets/images/foundations-interpretable-ml.png
 hero:
   image: /assets/images/foundations-interpretable-ml.png
@@ -53,7 +53,7 @@ This article is not legal advice.
 
 <dl>
   <dt><dfn>Interpretability</dfn></dt>
-  <dd>The degree to which a human can consistently predict a model's output. A model is more interpretable than another if its decisions are easier for a human to anticipate. This definition, adapted from Doshi-Velez and Kim, emphasises that interpretability is fundamentally about human understanding, not model architecture.</dd>
+  <dd>The degree to which a human can consistently predict the output of a model. A model is more interpretable than another if its decisions are easier for a human to anticipate. This definition, adapted from Doshi-Velez and Kim, emphasises that interpretability is fundamentally about human understanding, not model architecture.</dd>
 
   <dt><dfn>Explainability</dfn></dt>
   <dd>A broader concept encompassing both intrinsic interpretability (models that are transparent by design) and post-hoc explanations (methods applied after training to explain individual predictions). Barredo Arrieta et al. define explainable ML as "ML that produces models that are inherently interpretable and/or produces explanations for their predictions."</dd>
@@ -68,7 +68,7 @@ This article is not legal advice.
   <dd>The highest-validity evaluation tier: measuring interpretability through human performance on the actual task the model is designed to support (e.g., do doctors make better diagnoses with an explainable model?).</dd>
 
   <dt><dfn>Human-grounded evaluation</dfn></dt>
-  <dd>The intermediate evaluation tier: simplified tasks with lay users that test whether explanations support human decision-making in general, without requiring domain expertise (e.g., can people predict a model's output from its explanation?).</dd>
+  <dd>The intermediate evaluation tier: simplified tasks with lay users that test whether explanations support human decision-making in general, without requiring domain expertise (e.g., can people predict the output of a model from its explanation?).</dd>
 
   <dt><dfn>Functionally-grounded evaluation</dfn></dt>
   <dd>The cheapest evaluation tier: using formal proxy metrics (sparsity, faithfulness, stability) as stand-ins for human understanding. Valid only when the proxy has been empirically validated against human judgement.</dd>
@@ -84,15 +84,15 @@ The most cited work on interpretability evaluation is not a technical paper but 
 
 **Application-grounded evaluation** measures interpretability through human performance on the real task. If a radiologist makes more accurate diagnoses with an interpretable model than without, the model is interpretable. This has the highest validity but is expensive and domain-specific.
 
-**Human-grounded evaluation** tests whether explanations support human decision-making in simplified settings. A typical experiment asks lay participants to predict a model's output given its explanation. These experiments are cheaper and more reproducible than application-grounded studies, but they test generic interpretability, not task-specific utility.
+**Human-grounded evaluation** tests whether explanations support human decision-making in simplified settings. A typical experiment asks lay participants to predict the output of a model given its explanation. These experiments are cheaper and more reproducible than application-grounded studies, but they test generic interpretability, not task-specific utility.
 
 **Functionally-grounded evaluation** replaces humans entirely with formal proxy metrics. Sparsity, faithfulness, stability, and complexity are examples. These metrics enable automated comparison at scale, but their validity depends entirely on whether they correlate with human judgement. That dependence requires independent verification through human-grounded experiments.
 
-The paper's central insight is that these three tiers trade validity for cost. The appropriate tier depends on the evaluation goal. For comparing two similar methods, functionally-grounded evaluation suffices. For regulatory approval, application-grounded evaluation is necessary.
+The central insight of the paper is that these three tiers trade validity for cost. The appropriate tier depends on the evaluation goal. For comparing two similar methods, functionally-grounded evaluation suffices. For regulatory approval, application-grounded evaluation is necessary.
 
 ### Barredo Arrieta et al. (2020): The Comprehensive Taxonomy
 
-Barredo Arrieta et al. produced the most comprehensive taxonomy of the XAI field, surveying over 400 references {% include references/cite.html key="barredoarrieta2020xai" %}. The taxonomy's primary partition, intrinsic vs. post-hoc interpretability, has been widely adopted as the field's organising principle.
+Barredo Arrieta et al. produced the most comprehensive taxonomy of the XAI field, surveying over 400 references {% include references/cite.html key="barredoarrieta2020xai" %}. The primary partition of the taxonomy, intrinsic vs. post-hoc interpretability, has been widely adopted as the organising principle of the field.
 
 **Intrinsic interpretability** covers models that are transparent by design: linear regression, logistic regression, decision trees, decision rules, rule-based classifiers, generalised additive models, and Bayesian models. These models have limited expressiveness but offer direct insight into their decision logic.
 
@@ -114,7 +114,7 @@ Watson's philosophical critique cuts deeper than technical limitations {% includ
 
 **Ambiguity of target:** IML methods do not clearly distinguish between explaining the model, the data-generating process, or the domain phenomenon. SHAP values explain the model but are routinely interpreted as explaining reality. This category error is built into the method, not a misuse.
 
-**Disregard for error rates:** No standard IML method reports confidence intervals or performs severe testing. LIME's local linear fit has no uncertainty quantification. SHAP values lack standard errors. This makes it impossible to distinguish signal from noise in explanations.
+**Disregard for error rates:** No standard IML method reports confidence intervals or performs severe testing. The local linear fit of LIME has no uncertainty quantification. SHAP values lack standard errors. This makes it impossible to distinguish signal from noise in explanations.
 
 **Product over process:** IML emphasises the final explanation product (a saliency map, a Shapley value) rather than the process by which the model arrived at its decision. Describing which features were important is different from explaining how the model used them.
 
@@ -122,7 +122,7 @@ These challenges are particularly troubling because they are not fixable by bett
 
 ### Molnar (2021): The Practical Synthesis
 
-Molnar's _Interpretable Machine Learning_ provides the most accessible practical guide to interpretability methods {% include references/cite.html key="molnar2021interpretable" %}. The book covers both intrinsic interpretable models and model-agnostic methods, with critical analysis of each method's strengths and weaknesses. Its structure mirrors the Barredo Arrieta taxonomy, presenting intrinsic methods first and then post-hoc. The practical emphasis makes it a valuable companion to the theoretical and conceptual works discussed above.
+Molnar's _Interpretable Machine Learning_ provides the most accessible practical guide to interpretability methods {% include references/cite.html key="molnar2021interpretable" %}. The book covers both intrinsic interpretable models and model-agnostic methods, with critical analysis of the strengths and weaknesses of each method. Its structure mirrors the Barredo Arrieta taxonomy, presenting intrinsic methods first and then post-hoc. The practical emphasis makes it a valuable companion to the theoretical and conceptual works discussed above.
 
 ---
 
@@ -148,7 +148,7 @@ The next article in this series examines the specific explanation methods and te
 
 ### What distinguishes interpretability from explainability in machine learning?
 
-Interpretability refers to the degree to which a human can consistently predict a model's output, a property of the model itself (Doshi-Velez and Kim, 2017). Explainability refers to the broader field encompassing both inherently interpretable models and post-hoc methods that generate explanations after training (Barredo Arrieta et al., 2020). The distinction matters because interpretability is a design choice while explainability is a broader research programme.
+Interpretability refers to the degree to which a human can consistently predict the output of a model, a property of the model itself (Doshi-Velez and Kim, 2017). Explainability refers to the broader field encompassing both inherently interpretable models and post-hoc methods that generate explanations after training (Barredo Arrieta et al., 2020). The distinction matters because interpretability is a design choice while explainability is a broader research programme.
 
 ### What are the main dimensions of interpretability taxonomies in the literature?
 

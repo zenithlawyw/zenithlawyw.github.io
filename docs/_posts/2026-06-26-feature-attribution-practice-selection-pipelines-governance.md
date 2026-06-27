@@ -5,7 +5,7 @@ title: "Feature Attribution in Practice: Selection, Pipelines, and Governance"
 author: Zenith Law
 description: "A synthesis of 15 core papers and domain applications into practical guidance: how to select attribution methods, integrate them into ML pipelines, and govern their use in production systems."
 permalink: /feature-attribution-practice-selection-pipelines-governance
-intro: "Four articles. Fifteen core papers. Diverse domains. This final article in the series translates the research into practice: how to select an attribution method given your model type, domain, and accountability requirements; how to integrate attribution into ML pipelines; and what governance structures are needed to ensure explanations serve their intended purpose. The synthesis draws on Kost et al.'s XAI-guided feature selection framework, domain applications from energy forecasting to medical imaging, and four major surveys that establish the broader XAI literature. The message is pragmatic: feature attribution is too immature for universal standards, too important to ignore, and too domain-dependent for one-size-fits-all guidance."
+intro: "Four articles. Fifteen core papers. Diverse domains. This final article in the series translates the research into practice: how to select an attribution method given your model type, domain, and accountability requirements; how to integrate attribution into ML pipelines; and what governance structures are needed to ensure explanations serve their intended purpose. The synthesis draws on the XAI-guided feature selection framework of Kost et al., domain applications from energy forecasting to medical imaging, and four major surveys that establish the broader XAI literature. The message is pragmatic: feature attribution is too immature for universal standards, too important to ignore, and too domain-dependent for one-size-fits-all guidance."
 image: /assets/images/feature-attribution-practice-selection-pipelines-governance.png
 hero:
   image: /assets/images/feature-attribution-practice-selection-pipelines-governance.png
@@ -67,7 +67,7 @@ tags:
 
 Four articles established what feature attribution can and cannot deliver. Individual attributions from black-box models cannot be verified. Exact computation is possible for specific architectures. No single metric suffices for evaluation. Standard methods conflate association with causation. The practitioner's question follows: what should you actually do?
 
-The answer is not a single recommendation. It is a decision framework organised around the variables that matter: model access, domain stakes, regulatory requirements, computational budget, and stakeholder needs. The synthesis draws on Kost et al.'s XAI-guided feature selection framework as a worked example, a distillation of domain applications, and the major XAI surveys that establish context.
+The answer is not a single recommendation. It is a decision framework organised around the variables that matter: model access, domain stakes, regulatory requirements, computational budget, and stakeholder needs. The synthesis draws on the XAI-guided feature selection framework of Kost et al. as a worked example, a distillation of domain applications, and the major XAI surveys that establish context.
 
 This article is not legal advice.
 
@@ -78,10 +78,10 @@ This article is not legal advice.
   <dd>The organisational practice of documenting, monitoring, and controlling which features are used in ML models, including periodic review of feature relevance, data quality, and drift.</dd>
 
   <dt><dfn>Dominance index</dfn></dt>
-  <dd>A Herfindahl-Hirschman-based measure of how concentrated feature importance is, where high dominance indicates that a single feature drives most of the model's predictive power.</dd>
+  <dd>A Herfindahl-Hirschman-based measure of how concentrated feature importance is, where high dominance indicates that a single feature drives most of the predictive power of the model.</dd>
 
   <dt><dfn>Model documentation</dfn></dt>
-  <dd>The practice of producing structured metadata about a model's intended use, training data, evaluation results, and limitations, formalised by Mitchell et al. (2019) {% include references/cite.html key="mitchell2019modelcards" %} as Model Cards.</dd>
+  <dd>The practice of producing structured metadata about the intended use of a model, training data, evaluation results, and limitations, formalised by Mitchell et al. (2019) {% include references/cite.html key="mitchell2019modelcards" %} as Model Cards.</dd>
 
   <dt><dfn>Stakeholder-appropriate explanation</dfn></dt>
   <dd>An explanation whose complexity, format, and content match the intended audience's technical expertise and decision-making needs, as opposed to a single explanation format for all audiences.</dd>
@@ -98,9 +98,9 @@ The XAI-FS framework by Kost et al. is the only paper in the selected set that d
 
 The scenario is a photovoltaic energy forecasting task with 15 features where Global Horizontal Irradiance dominates. The practitioner has two concerns: whether overdependence on GHI creates brittleness, and whether features can be removed to reduce data acquisition costs. The XAI-FS pipeline trains the model and computes attributions (SHAP, ELI5), computes a Herfindahl-Hirschman-based dominance index (GHI scores 0.365, indicating high concentration), tags each feature with acquisition cost, applies a multi-objective decision function balancing accuracy, dominance, and cost, and recommends feature removal. Removing GHI reduces R² from 0.943 to 0.934 while cutting dominance to 0.169 and improving noise robustness.
 
-The framework turns attribution into a design-stage governance tool: the question becomes not "did the model predict correctly?" but "is the model's feature reliance healthy?"
+The framework turns attribution into a design-stage governance tool: the question becomes not "did the model predict correctly?" but "is the feature reliance of the model healthy?"
 
-> **Scope:** Validated on a single dataset with gradient boosting only. Uses SHAP and ELI5 but not the newer methods reviewed in this series. The dominance index does not capture interaction effects or dynamic importance under distribution shift. The framework also does not address how attribution-based feature selection interacts with regulatory requirements such as the EU AI Act's transparency obligations, which may mandate retention of specific features for explainability regardless of predictive importance.
+> **Scope:** Validated on a single photovoltaic forecasting dataset with gradient boosting only. Uses SHAP and ELI5 but not the newer methods reviewed in this series. The dominance index does not capture interaction effects or dynamic importance under distribution shift. It has not been validated on other model types, domains, or with attribution methods beyond SHAP and ELI5. The framework also does not address how attribution-based feature selection interacts with regulatory requirements such as the transparency obligations of the EU AI Act, which may mandate retention of specific features for explainability regardless of predictive importance.
 
 ---
 
@@ -122,7 +122,7 @@ The healthcare papers also reveal a gap. None evaluates whether the provided exp
 
 ### Finance and cryptocurrency (most challenging)
 
-Two papers apply SHAP to financial time series (cryptocurrency and stock price forecasting). The short-term, high-noise nature of financial data makes attribution fundamentally harder than in physical domains. Feature importance rankings are less stable. Small changes in input can produce large changes in attributions. The non-stationary nature of financial markets means that feature importance itself is time-dependent. These papers validate SHAP's ability to produce _some_ attribution, but do not establish its reliability for financial decision-making.
+Two papers apply SHAP to financial time series (cryptocurrency and stock price forecasting). The short-term, high-noise nature of financial data makes attribution fundamentally harder than in physical domains. Feature importance rankings are less stable. Small changes in input can produce large changes in attributions. The non-stationary nature of financial markets means that feature importance itself is time-dependent. These papers validate the ability of SHAP to produce _some_ attribution, but do not establish its reliability for financial decision-making.
 
 A deeper issue is that financial attribution faces a ground-truth problem that even synthetic benchmarks cannot fully address. In energy forecasting, the physical relationship between irradiance and solar power output provides a natural validation signal. In finance, the data-generating process is itself shaped by human behaviour, which is not decomposable into independent feature contributions. An attribution method that assigns importance to a technical indicator in a price prediction may be correct relative to the model but meaningless relative to the actual market dynamics the model approximates. This does not make financial XAI useless, but it means practitioners must be correspondingly more cautious about interpreting attributions as explanations of real-world phenomena.
 
@@ -145,7 +145,7 @@ Two papers apply SHAP at scale to spatiotemporal Earth observation data: Europea
 
 Four surveys in the selection provide the broader context within which the methodological papers sit.
 
-Ullah et al. (2025) {% include references/cite.html key="ullah2024explainable" %} review 155 XAI papers and establish taxonomy dimensions useful for any practitioner designing an XAI strategy. Their key finding: the field skews toward image domains and gradient-based methods, while tabular and time series (the most common production formats) are underserved. A practitioner building a tabular model cannot rely on the field's default recommendations.
+Ullah et al. (2025) {% include references/cite.html key="ullah2024explainable" %} review 155 XAI papers and establish taxonomy dimensions useful for any practitioner designing an XAI strategy. Their key finding: the field skews toward image domains and gradient-based methods, while tabular and time series (the most common production formats) are underserved. A practitioner building a tabular model cannot rely on the default recommendations of the field.
 
 Laato et al. (2022) {% include references/cite.html key="laato2022explain" %} systematically review how to explain AI systems to end users and find that most XAI research assumes a technically literate audience. The explanation formats studied rarely match non-expert stakeholder needs. Deploying an attribution method is not the same as providing an explanation: the output must be translated into a stakeholder-appropriate format, and that translation is itself a design problem.
 
@@ -182,14 +182,14 @@ If I were advising a team starting their XAI journey today, I would tell them to
 ### Question 3: What evaluation standard applies?
 
 - **Research publication**: Use at least two evaluation paradigms. Dehdarirad {% include references/cite.html key="DEHDARIRAD2025100101" %} demonstrates one approach: cross model architectures (classical LR/RF vs. transformer-based DistilBERT/RoBERTa) with dataset characteristics (domain, text length, class balance) and evidence types (positive, negative, all). This triply crossed design reveals that SHAP fails for negative evidence under LR but succeeds under RF. This finding is invisible to single-dimension comparisons. Follow this multi-factorial approach rather than reporting aggregate rankings that mask conditional failures.
-- **Production deployment**: Supplement automated metrics with human evaluation on a representative sample. Use Moreira et al. {% include references/cite.html key="10.1145/3672553" %} 's decision-path inspection for any tree-based model. Monitor attribution drift over time using rank correlation between current and baseline feature importance distributions. Design stakeholder-specific explanation formats. The field's default outputs (heatmaps, bar charts) do not serve non-technical audiences. Log method choice, implementation variant (e.g., interventional vs. conditional SHAP), and known limitations for each production prediction.
-- **Regulatory compliance**: The verification impossibility is a live compliance risk under frameworks such as the EU AI Act's transparency obligations. Use Model Cards {% include references/cite.html key="mitchell2019modelcards" %} for model-level documentation alongside per-explanation metadata recording which method was used, what it assumes, and what it cannot guarantee. Document the rationale for method selection against domain stakes. Accept that individual prediction explanations from black-box models cannot be independently verified and communicate this limitation to auditors and regulators.
+- **Production deployment**: Supplement automated metrics with human evaluation on a representative sample. Use the decision-path inspection of Moreira et al. {% include references/cite.html key="10.1145/3672553" %} for any tree-based model. Monitor attribution drift over time using rank correlation between current and baseline feature importance distributions. Design stakeholder-specific explanation formats. The default outputs of the field (heatmaps, bar charts) do not serve non-technical audiences. Log method choice, implementation variant (e.g., interventional vs. conditional SHAP), and known limitations for each production prediction.
+- **Regulatory compliance**: The verification impossibility is a live compliance risk under the EU AI Act. High-risk AI systems (Annex III categories such as biometric identification, critical infrastructure, and access to essential services) must provide transparency under Article 13, including meaningful information about the decision logic. Standard black-box attributions cannot meet this standard for individual predictions. Use Model Cards {% include references/cite.html key="mitchell2019modelcards" %} for model-level documentation alongside per-explanation metadata recording which method was used, what it assumes, and what it cannot guarantee. The developing EN ISO/IEC 42001 AI management system standard may provide a structured audit framework, but it is not yet finalised. Document the rationale for method selection against domain stakes. Accept that individual prediction explanations from black-box models cannot be independently verified and communicate this limitation to auditors and regulators.
 
 ---
 
 ## Ten Practical Lessons from This Series
 
-1. **Do not trust a single attribution you cannot cross-validate.** The impossibility result applies to individual explanations. Aggregate statistics across many predictions are more reliable.
+1. **Do not trust a single attribution you cannot cross-validate.** The impossibility result applies to individual explanations. Aggregate statistics across many predictions are more reliable. This recommendation follows from the formal proof in Bhalla et al. Independent replication would strengthen the empirical basis for the aggregate reliability claim.
 
 2. **Know your Shapley variant.** If you use SHAP, you must know whether your implementation uses interventional or conditional expectations. The difference is not an implementation detail. It changes what the scores mean.
 
@@ -201,11 +201,11 @@ If I were advising a team starting their XAI journey today, I would tell them to
 
 6. **Correlation is not causation, even in attribution.** Causal SHAP {% include references/cite.html key="11228295" %} and ExCIR {% include references/cite.html key="11498186" %} offer different responses to this problem. Choose based on whether your use case requires causal claims or can tolerate correlational awareness.
 
-7. **Attribution is a design-stage tool, not just a post-hoc one.** Kost et al.'s XAI-FS shows that attribution can guide feature selection, monitor dominance, and manage acquisition costs well before a model reaches production.
+7. **Attribution is a design-stage tool, not just a post-hoc one.** The XAI-FS of Kost et al. shows that attribution can guide feature selection, monitor dominance, and manage acquisition costs well before a model reaches production.
 
 8. **Domain alignment validates but does not substitute for rigour.** Alignment with domain expert intuition is reassuring but not sufficient. Systematic evaluation remains necessary even when attributions look right.
 
-9. **Explainability does not equal a good explanation.** The attribution output must be translated into a format appropriate for the stakeholder. The field's default outputs (heatmaps, bar charts) are poorly suited for non-technical audiences.
+9. **Explainability does not equal a good explanation.** The attribution output must be translated into a format appropriate for the stakeholder. The default outputs of the field (heatmaps, bar charts) are poorly suited for non-technical audiences.
 
 10. **The field is converging on conditional guidance.** There is no universal best attribution method. The papers in this series converge on a framework of conditional recommendations: the right method depends on model architecture, domain stakes, evaluation standard, and stakeholder needs.
 
@@ -237,13 +237,13 @@ Triangulate. Do not rely on a single attribution method, a single evaluation met
 
 ## Conclusion
 
-The series supports a convergent conclusion: responsible attribution requires accepting that the field's ambition exceeded its foundations. The response is not abandonment but specialisation. Practitioners who understand the specific constraints of their domain, model, and regulatory context will produce more reliable attributions than those who deploy a general-purpose method and trust its output.
+The series supports a convergent conclusion: responsible attribution requires accepting that the ambition of the field exceeded its foundations. The response is not abandonment but specialisation. Practitioners who understand the specific constraints of their domain, model, and regulatory context will produce more reliable attributions than those who deploy a general-purpose method and trust its output.
 
 Each new method comes with sharper applicability conditions: exactness for FNNs only, causal discovery under sufficiency assumptions, correlation awareness at the cost of causal claims. This is a sign of a field maturing. The practitioner's best strategy is to be informed about the limits, rigorous in evaluation, and honest with stakeholders about what attribution can and cannot guarantee.
 
 ---
 
-_Concludes a series on feature attribution, explainability, and interpretability. Technical and educational content. Not legal, regulatory, or procurement advice. Claims bounded to the cited papers' own reported results unless explicitly stated otherwise. Organisational deployment decisions should be reviewed under applicable professional and regulatory obligations._
+_Concludes a series on feature attribution, explainability, and interpretability. Technical and educational content. Not legal, regulatory, or procurement advice. Claims bounded to the results reported in the cited papers unless explicitly stated otherwise. Organisational deployment decisions should be reviewed under applicable professional and regulatory obligations._
 
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Technical Appendix" %}
@@ -259,7 +259,7 @@ _Concludes a series on feature attribution, explainability, and interpretability
 
 ### Author and Source Credibility
 
-The primary paper for this article (Kost et al.) appears in Energy and AI (Elsevier), a reputable domain-specific journal. The four surveys appear in diverse venues: a top-tier computing survey journal (Ullah, ACM Computing Surveys), an information systems journal (Laato, Internet Research), an IoT applications conference (Preet, IEEE IoT-SIU), and a famous workshop paper at ACM FAT\* (Mitchell). Mitchell et al.'s Model Cards paper, while not archival, is one of the most influential works in the broader AI governance literature.
+The primary paper for this article (Kost et al.) appears in Energy and AI (Elsevier), a reputable domain-specific journal. The four surveys appear in diverse venues: a top-tier computing survey journal (Ullah, ACM Computing Surveys), an information systems journal (Laato, Internet Research), an IoT applications conference (Preet, IEEE IoT-SIU), and a famous workshop paper at ACM FAT\* (Mitchell). The Model Cards paper of Mitchell et al., while not archival, is one of the most influential works in the broader AI governance literature.
 
 ### Corpus Reviewed
 

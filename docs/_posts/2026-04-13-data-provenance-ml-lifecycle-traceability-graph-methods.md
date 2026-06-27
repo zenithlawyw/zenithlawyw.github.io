@@ -35,7 +35,7 @@ Where did the training data come from? Who transformed it, and when, and into wh
 
 Karuna et al. wire financial transactions into a graph (entities as nodes, transfers as edges) and pit GNN-based traceability against logistic regression and random forest baselines {% include references/cite.html key="prov-2026-ref1" %}. Pina et al. build a stitching layer: separate tools capture provenance at separate lifecycle stages, and their prototype forces those fragments to talk {% include references/cite.html key="prov-2026-ref2" %}. Souza et al. go formal: PROV-ML extends W3C PROV with ML Schema vocabulary, pressure-tested through ProvLake on a 48-GPU oil-and-gas pipeline {% include references/cite.html key="prov-2026-ref3" %}.
 
-Three papers. Not a field survey. Not even close. This review is deliberately narrow, and that narrowness is the point. Claims anchored to reported results say so; inferences drawn beyond any single paper's evidence are marked at the boundary. Several details resist independent corroboration. Rather than silently absorbing them, I flag them.
+Three papers. Not a field survey. Not even close. This review is deliberately narrow, and that narrowness is the point. Claims anchored to reported results say so; inferences drawn beyond the evidence of any single paper are marked at the boundary. Several details resist independent corroboration. Rather than silently absorbing them, I flag them.
 
 This article is designed for technical and governance learning. It does not provide legal, regulatory, or procurement advice. It is not legal advice. Readers should validate applicability against their own jurisdiction, risk model, and production constraints.
 
@@ -66,13 +66,13 @@ The three papers circle the same territory from different altitudes. What follow
 
 ### Graph-Structured Representations and Relational Provenance
 
-Karuna et al. wire financial transaction data into a graph and report their GCN hitting 91.3% accuracy on traceability classification. A meaningful jump over logistic regression at 78.4% and random forests at 82.1% on the same dataset {% include references/cite.html key="prov-2026-ref1" %}. This is a **verified finding** within the study's conditions. It suggests graph representations can preserve relational structure that tabular models discard, though this conclusion is bounded by a single dataset in one domain. The paper does not compare against other graph-based approaches (e.g., graph attention networks), which limits the claim that GCN is the right architecture rather than merely a sufficient one.
+Karuna et al. wire financial transaction data into a graph and report their GCN hitting 91.3% accuracy on traceability classification. A meaningful jump over logistic regression at 78.4% and random forests at 82.1% on the same dataset {% include references/cite.html key="prov-2026-ref1" %}. This is a **verified finding** within the conditions of the study. It suggests graph representations can preserve relational structure that tabular models discard, though this conclusion is bounded by a single dataset in one domain. The paper does not compare against other graph-based approaches (e.g., graph attention networks), which limits the claim that GCN is the right architecture rather than merely a sufficient one.
 
 Souza et al. also lean on graphs. But differently. Their W3C PROV model represents provenance as relationships between entities, activities, and agents {% include references/cite.html key="prov-2026-ref3" %}; no neural networks involved. Both teams chose graph primitives, yet for fundamentally different jobs: classification versus representation. Don't conflate the two. Structural similarity is not functional equivalence (**inferred synthesis**).
 
 ### Preprocessing Decisions and Downstream Effects
 
-Can you join preprocessing provenance with training metrics in a single query? Pina et al. say yes. Their prototype does it {% include references/cite.html key="prov-2026-ref2" %}. That much is verified. But here's the gap: neither they nor anyone else in this source set runs a controlled experiment quantifying how much preprocessing choices actually bend model accuracy. Souza et al. call data curation the most complex lifecycle phase {% include references/cite.html key="prov-2026-ref3" %}. Both papers' rationale supports the intuition that preprocessing decisions propagate into model quality; neither nails it down with isolated evidence (**inferred synthesis**).
+Can you join preprocessing provenance with training metrics in a single query? Pina et al. say yes. Their prototype does it {% include references/cite.html key="prov-2026-ref2" %}. That much is verified. But here's the gap: neither they nor anyone else in this source set runs a controlled experiment quantifying how much preprocessing choices actually bend model accuracy. Souza et al. call data curation the most complex lifecycle phase {% include references/cite.html key="prov-2026-ref3" %}. The rationale of both papers supports the intuition that preprocessing decisions propagate into model quality; neither nails it down with isolated evidence (**inferred synthesis**).
 
 ### Interoperability
 
@@ -128,7 +128,7 @@ Karuna et al. provide point metrics and scaling behavior {% include references/c
 
 ### 6. Adopt Shared Vocabulary Early, But Stay Honest About Maturity
 
-PROV-ML is useful as a proposed representation in Souza et al.'s evaluated setting {% include references/cite.html key="prov-2026-ref3" %}. Teams can borrow vocabulary discipline now, while avoiding premature claims of ecosystem-level standardization.
+PROV-ML is useful as a proposed representation in the evaluated setting of Souza et al. {% include references/cite.html key="prov-2026-ref3" %}. Teams can borrow vocabulary discipline now, while avoiding premature claims of ecosystem-level standardization.
 
 ### 7. Let Requirements Drive Tooling, Not the Other Way Around
 
@@ -170,7 +170,7 @@ Data provenance and data lineage both trace data through a pipeline, but they di
 
 ### Which tooling patterns are most relevant for ML provenance implementation today for data provenance?
 
-Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier {% include references/cite.html key="prov-2026-ref1" %}, Pina et al. integrate separate lifecycle tools using DNNProv and Chapman et al.'s preprocessing capture {% include references/cite.html key="prov-2026-ref2" %}, and Souza et al. extend ProvLake with the PROV-ML vocabulary {% include references/cite.html key="prov-2026-ref3" %}. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem.
+Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier {% include references/cite.html key="prov-2026-ref1" %}, Pina et al. integrate separate lifecycle tools using DNNProv and the preprocessing capture of Chapman et al. {% include references/cite.html key="prov-2026-ref2" %}, and Souza et al. extend ProvLake with the PROV-ML vocabulary {% include references/cite.html key="prov-2026-ref3" %}. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem.
 
 ### How does PROV-ML extend W3C PROV for machine-learning-specific traceability for data provenance?
 
@@ -270,7 +270,7 @@ The paper reports the following metrics:
 
 The paper also reports traceability completeness improving from 75.6% to 92.4% {% include references/cite.html key="prov-2026-ref1" %}.
 
-**Evidence grade:** The numerical claims above are verified findings taken directly from the paper's reported results. These metrics are internal to the study's evaluation framework and reflect the authors' experimental setup rather than a community-accepted benchmark protocol. The paper excerpt reviewed here does not provide uncertainty statistics (for example, variance across runs or confidence intervals), and it does not make the task formulation behind "traceability completeness" fully transparent in this review context. Whether the dataset or code has been publicly released could not be confirmed (**unverified detail**).
+**Evidence grade:** The numerical claims above are verified findings taken directly from the reported results of the paper. These metrics are internal to the evaluation framework of the study and reflect the authors' experimental setup rather than a community-accepted benchmark protocol. The paper excerpt reviewed here does not provide uncertainty statistics (for example, variance across runs or confidence intervals), and it does not make the task formulation behind "traceability completeness" fully transparent in this review context. Whether the dataset or code has been publicly released could not be confirmed (**unverified detail**).
 
 ### Pina et al. (2023)
 
@@ -280,11 +280,11 @@ This paper appeared in the Companion Proceedings of the ACM Web Conference 2023 
 
 ### Souza et al. (2019)
 
-The paper is described on its title page as an author preprint accepted at the 14th WORKS Workshop, co-located with SC 2019 {% include references/cite.html key="prov-2026-ref3" %}. The publication venue claim is taken at face value from the paper's own statement; it was not independently verified against the proceedings record (**unverified detail**). The paper introduces PROV-ML as a proposed data representation (not an industry-adopted standard) that combines W3C PROV with W3C ML Schema. It provides extensions to the ProvLake system and reports evaluation in an oil and gas seismic classification application using 48 GPUs in parallel.
+The paper is described on its title page as an author preprint accepted at the 14th WORKS Workshop, co-located with SC 2019 {% include references/cite.html key="prov-2026-ref3" %}. The publication venue claim is taken at face value from the statement of the paper itself; it was not independently verified against the proceedings record (**unverified detail**). The paper introduces PROV-ML as a proposed data representation (not an industry-adopted standard) that combines W3C PROV with W3C ML Schema. It provides extensions to the ProvLake system and reports evaluation in an oil and gas seismic classification application using 48 GPUs in parallel.
 
 The paper identifies four persona types whose provenance needs motivated the PROV-ML design: domain scientists, computational scientists and engineers, ML scientists and engineers, and provenance specialists {% include references/cite.html key="prov-2026-ref3" %}.
 
-**Evidence grade:** The PROV-ML representation, ProvLake extensions, 48-GPU evaluation, and persona characterization are verified findings, well-supported by the paper's abstract and body text. The generalizability to domains beyond the reported oil and gas case is an open claim the paper itself does not demonstrate. The "48 GPUs" detail is treated here as a study-specific context indicator, not as standalone proof of broad operational maturity.
+**Evidence grade:** The PROV-ML representation, ProvLake extensions, 48-GPU evaluation, and persona characterization are verified findings, well-supported by the abstract and body text of the paper. The generalizability to domains beyond the reported oil and gas case is an open claim the paper itself does not demonstrate. The "48 GPUs" detail is treated here as a study-specific context indicator, not as standalone proof of broad operational maturity.
 
 | Source        | Venue                 | Year | Method                           | Domain                 | Evidence Grade                                                               |
 | ------------- | --------------------- | ---- | -------------------------------- | ---------------------- | ---------------------------------------------------------------------------- |

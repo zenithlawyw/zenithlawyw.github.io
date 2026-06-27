@@ -42,7 +42,7 @@ tags:
 
 ## Introduction
 
-If individual attributions cannot be verified without model adaptation, how do we know which method to use? The field's answer is aggregate benchmarking: evaluate across many examples and compute summary metrics. But which metrics should we trust? All of them measure proxies for ground truth, and each proxy has blind spots.
+If individual attributions cannot be verified without model adaptation, how do we know which method to use? The answer that the field offers is aggregate benchmarking: evaluate across many examples and compute summary metrics. But which metrics should we trust? All of them measure proxies for ground truth, and each proxy has blind spots.
 
 The four papers in this review approach the evaluation problem from different directions. Chen and Zhang argue for data-centric evaluation that avoids the circularity of perturbation-based metrics. Troncoso-García et al. propose association rules as a model-independent quality measure for time series. Moreira et al. run the largest counterfactual benchmark to date and conclude quantitative metrics alone are broken. Dehdarirad demonstrates that attribution faithfulness is conditional on model type, dataset, and evidence polarity, with no universal best method.
 
@@ -54,16 +54,16 @@ This article is not legal advice.
 
 <dl>
   <dt><dfn>Faithfulness metric</dfn></dt>
-  <dd>A quantitative measure of how accurately an attribution reflects the model's actual decision process, typically computed by perturbing features and measuring the correlation between attribution scores and prediction changes.</dd>
+  <dd>A quantitative measure of how accurately an attribution reflects the actual decision process of the model, typically computed by perturbing features and measuring the correlation between attribution scores and prediction changes.</dd>
 
   <dt><dfn>Counterfactual explanation</dfn></dt>
-  <dd>A minimal change to the input that would change the model's prediction, answering the question "what would need to be different for this outcome to change?" rather than "which features were important for this outcome?"</dd>
+  <dd>A minimal change to the input that would change the prediction of the model, answering the question "what would need to be different for this outcome to change?" rather than "which features were important for this outcome?"</dd>
 
   <dt><dfn>Decision-path inspection</dfn></dt>
   <dd>A qualitative evaluation method that examines the actual decision rules a model uses (e.g., tree paths) and compares them against the features highlighted by attribution methods, revealing mismatches that quantitative metrics miss.</dd>
 
   <dt><dfn>AOPC (Area Over the Perturbation Curve)</dfn></dt>
-  <dd>A faithfulness metric that measures how quickly the model's prediction changes when features are removed in order of decreasing attribution importance, with steeper drops indicating more faithful attributions.</dd>
+  <dd>A faithfulness metric that measures how quickly the prediction of the model changes when features are removed in order of decreasing attribution importance, with steeper drops indicating more faithful attributions.</dd>
 
   <dt><dfn>Association rule</dfn></dt>
   <dd>A discovered pattern of the form "if features A and B have certain values, then the prediction is C" with associated metrics for support (frequency) and confidence (reliability), used by RExQUAL to evaluate explanation quality.</dd>
@@ -78,25 +78,25 @@ This article is not legal advice.
 
 ### Chen and Zhang (2025): Data-Centric Evaluation with WAE
 
-Perturbation-based faithfulness metrics are circular: they evaluate an attribution method using the same model it is trying to explain. {% include references/cite.html key="CHEN2025129379" %} WAE (Window-based Attribution RMSE) breaks this circle by comparing attributions against a data-inherent property: the predictability of each time window, measured via real entropy. The intuition is that more predictable windows are driven by stronger signals, and an attribution method should assign higher importance to features in those windows. The RMSE between the attribution ranking and the predictability ranking is the WAE score. The circularity critique is valid, but WAE's alternative replaces one proxy (model behaviour) with another (predictability as ground truth), and the relationship between data predictability and feature importance is itself an untested assumption. A feature that drives predictability may not be the same as a feature the model actually uses. WAE is a step forward in independence from the model, but it does not eliminate the proxy problem.
+Perturbation-based faithfulness metrics are circular: they evaluate an attribution method using the same model it is trying to explain. {% include references/cite.html key="CHEN2025129379" %} WAE (Window-based Attribution RMSE) breaks this circle by comparing attributions against a data-inherent property: the predictability of each time window, measured via real entropy. The intuition is that more predictable windows are driven by stronger signals, and an attribution method should assign higher importance to features in those windows. The RMSE between the attribution ranking and the predictability ranking is the WAE score. The circularity critique is valid, but the alternative that WAE proposes replaces one proxy (model behaviour) with another (predictability as ground truth), and the relationship between data predictability and feature importance is itself an untested assumption. A feature that drives predictability may not be the same as a feature the model actually uses. WAE is a step forward in independence from the model, but it does not eliminate the proxy problem.
 
 Two validation hypotheses are confirmed: more advanced methods (SHAP, LEMNA) achieve lower WAE than simpler ones (LIME), and more interpretable datasets yield lower WAE. WAE remains valid even when the model has known OOD sensitivity, which is the critique that undermines perturbation-based metrics.
 
 > **Core trade-off:** WAE assumes a specific relationship between data predictability and feature importance that may not hold for all domains or tasks.
 
-**Study limitations:** The data-centric framing addresses a real vulnerability in existing metrics. The two validation hypotheses are confirmed on the paper's experimental setup. The core assumption, that predictability is a valid proxy for importance, lacks independent evidence linking it to human-judged feature relevance.
+**Study limitations:** The data-centric framing addresses a real vulnerability in existing metrics. The two validation hypotheses are confirmed on the experimental setup of the paper. The core assumption, that predictability is a valid proxy for importance, lacks independent evidence linking it to human-judged feature relevance.
 
 ### Troncoso-García et al. (2025): Model-Independent Evaluation with RExQUAL
 
-RExQUAL evaluates attribution quality against discovered association rules rather than against the model or the data directly. {% include references/cite.html key="10879535" %} The metric works in four stages: train the model and generate attributions, extract key features via the elbow method, run Apriori association rule mining, and compute RExQUAL as confidence × support × (feature coverage fraction). It measures how well the features identified by an attribution method support the generation of high-quality rules matching the model's behaviour.
+RExQUAL evaluates attribution quality against discovered association rules rather than against the model or the data directly. {% include references/cite.html key="10879535" %} The metric works in four stages: train the model and generate attributions, extract key features via the elbow method, run Apriori association rule mining, and compute RExQUAL as confidence × support × (feature coverage fraction). It measures how well the features identified by an attribution method support the generation of high-quality rules matching the behaviour of the model.
 
-On Spanish electric demand and SAGRA evapotranspiration datasets, RULEx achieves the highest RExQUAL (0.876), followed by SHAP. LIME performs worse than random, suggesting its linear-surrogate approach is fundamentally unsuited to time series. A striking anomaly: on multivariate SAGRA, SHAP underperforms random feature selection (0.251 vs 0.482). This suggests SHAP's attributions may be actively misleading for multivariate time series.
+On Spanish electric demand and SAGRA evapotranspiration datasets, RULEx achieves the highest RExQUAL (0.876), followed by SHAP. LIME performs worse than random, suggesting its linear-surrogate approach is fundamentally unsuited to time series. A striking anomaly: on multivariate SAGRA, SHAP underperforms random feature selection (0.251 vs 0.482). This suggests the attributions of SHAP may be actively misleading for multivariate time series.
 
-**Study limitations:** The RExQUAL framework provides a genuinely novel paradigm. The finding that LIME underperforms random selection on time series is a strong empirical result. The metric's independence from model-specific validation requires further confirmation: the association rule quality metrics (support, confidence) need validation against human judgement.
+**Study limitations:** The RExQUAL framework provides a genuinely novel paradigm. The finding that LIME underperforms random selection on time series is a strong empirical result. The independence of the metric from model-specific validation requires further confirmation: the association rule quality metrics (support, confidence) need validation against human judgement.
 
 ### Moreira et al. (2025): The Counterfactual Benchmark and Its Broken Metrics
 
-One of the largest counterfactual benchmarks to date evaluates four algorithms across three model types on 25 tabular datasets (the authors describe it as the most extensive in the field). {% include references/cite.html key="10.1145/3672553" %} Three findings stand out. First, model type has no significant impact on counterfactual quality: counterfactual algorithms adapt to whatever boundary the model has learned, making architecture irrelevant. This finding challenges the common assumption that simpler models yield better explanations. Second, quantitative metrics alone cannot distinguish plausible from implausible explanations. WatcherCF optimises for minimum proximity but can produce absurd counterfactuals (Age changing from 34 to 81); the quantitative metric says high quality, decision-path inspection reveals implausibility. Third, DiCE achieves the best practical balance through explicit diversity and plausibility constraints.
+One of the largest counterfactual benchmarks to date evaluates four algorithms across three model types on 25 tabular datasets (the authors describe it as the most extensive in the field). {% include references/cite.html key="10.1145/3672553" %} Three findings stand out. First, model type has no significant impact on counterfactual quality: counterfactual algorithms adapt to whatever boundary the model has learned. This finding challenges the common assumption that simpler models yield better explanations, but only for counterfactuals. It has not been tested whether attribution methods show the same model-type independence. Second, quantitative metrics alone cannot distinguish plausible from implausible explanations. WatcherCF optimises for minimum proximity but can produce absurd counterfactuals (Age changing from 34 to 81); the quantitative metric says high quality, decision-path inspection reveals implausibility. Third, DiCE achieves the best practical balance through explicit diversity and plausibility constraints.
 
 The authors also observe that the counterfactual XAI field faces an incipient replication crisis: no standardised evaluation framework, no common benchmark datasets, and no consensus on which metrics matter. This diagnosis applies beyond counterfactuals to the broader attribution evaluation literature.
 
@@ -126,7 +126,7 @@ The four papers in this review come from different domains (time series, tabular
 
 All four papers converge on a sobering conclusion: current evaluation methodology is insufficient. Chen and Zhang show that model-centric metrics have a circular dependency problem. Troncoso-García et al. offer an alternative but acknowledge it requires further validation. Moreira et al. prove that quantitative metrics alone are broken. Dehdarirad shows that evaluation results are highly conditional on experimental choices.
 
-The structural problem is that attribution evaluation requires a ground truth that is definitionally unavailable for real-world tasks. Bhalla et al.'s impossibility result for unmodified black-box models is not just a theoretical curiosity. It cascades into the evaluation literature, which must resort to proxies, perturbations, or human judgement, each with its own limitations.
+The structural problem is that attribution evaluation requires a ground truth that is definitionally unavailable for real-world tasks. The impossibility result established by Bhalla et al. for unmodified black-box models is not just a theoretical curiosity. It cascades into the evaluation literature, which must resort to proxies, perturbations, or human judgement, each with its own limitations.
 
 ### Three families of evaluation metrics
 
@@ -149,7 +149,7 @@ An open question across all four papers is whether the different evaluation para
 
 1. **Triangulate**: No single metric is sufficient. Practitioners should use at least two metrics from different paradigms.
 2. **Domain matters**: Dehdarirad's findings suggest evaluation results may not transfer across domains or architectures.
-3. **Inspecting > scoring**: Moreira et al.'s decision-path inspection should be a standard complement to quantitative evaluation, especially in high-stakes settings.
+3. **Inspecting > scoring**: the decision-path inspection of Moreira et al. should be a standard complement to quantitative evaluation, especially in high-stakes settings.
 4. **Time series needs dedicated treatment**: Both WAE and RExQUAL were developed specifically for time series, and LIME specifically underperforms in this domain.
 
 ---
@@ -160,7 +160,7 @@ An open question across all four papers is whether the different evaluation para
 
 Yes, they measure different things. WAE evaluates against data properties; RExQUAL evaluates against discovered rules. A method that scores well on both provides convergent evidence of quality.
 
-### Does Moreira et al.'s finding about model type generalise beyond counterfactuals?
+### Does the finding of Moreira et al. about model type generalise beyond counterfactuals?
 
 It has not been tested for attribution methods. The finding that different architectures learn similar patterns on well-represented data is plausible for attribution as well, but the counterfactual-specific nature of the benchmark means direct extrapolation is speculative.
 
@@ -186,7 +186,7 @@ The most productive direction is not a new metric. It is a systematic understand
 
 ---
 
-_Part 3 of a series on feature attribution, explainability, and interpretability. Technical and educational content. Not legal, regulatory, or procurement advice. Claims bounded to the cited papers' own reported results unless explicitly stated otherwise._
+_Part 3 of a series on feature attribution, explainability, and interpretability. Technical and educational content. Not legal, regulatory, or procurement advice. Claims bounded to the results reported in the cited papers unless explicitly stated otherwise._
 
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Technical Appendix" %}
@@ -228,7 +228,7 @@ All four papers appear in established venues: Neurocomputing (Chen & Zhang), TPA
   <dd>A measure of the inherent unpredictability of a time series, with lower entropy indicating more predictable windows that are argued to be driven by stronger underlying signals.</dd>
 
   <dt><dfn>Elbow method</dfn></dt>
-  <dd>A heuristic for selecting the number of key features from an attribution ranking by identifying the point where the cumulative importance curve's slope changes most sharply.</dd>
+  <dd>A heuristic for selecting the number of key features from an attribution ranking by identifying the point where the slope of the cumulative importance curve changes most sharply.</dd>
 
   <dt><dfn>Apriori algorithm</dfn></dt>
   <dd>A classic association rule mining algorithm that identifies frequent itemsets and generates rules with confidence above a threshold, used by RExQUAL to extract rule-based explanations from attribution results.</dd>
@@ -237,7 +237,7 @@ All four papers appear in established venues: Neurocomputing (Chen & Zhang), TPA
   <dd>A faithfulness metric that measures the change in log-odds of the predicted class as features are removed in order of decreasing importance, quantifying how much each feature contributes to the prediction confidence.</dd>
 
   <dt><dfn>Plausibility (in counterfactuals)</dfn></dt>
-  <dd>The degree to which a counterfactual example could occur in the real world, as opposed to merely satisfying the mathematical constraint of changing the model's prediction.</dd>
+  <dd>The degree to which a counterfactual example could occur in the real world, as opposed to merely satisfying the mathematical constraint of changing the prediction of the model.</dd>
 </dl>
 
 ### Metric Comparison Matrix

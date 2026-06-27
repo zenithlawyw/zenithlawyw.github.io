@@ -19,6 +19,8 @@ references:
   - CARLESBOU2026108277
   - 10021127
   - 10.1145/3617380
+  - lundberg2017unified
+  - ribeiro2016why
 related_posts:
   - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
     url: /feature-attribution-foundations-limits-verifiability
@@ -42,7 +44,7 @@ tags:
 
 Standard attribution methods approximate. They sample, perturb, and linearise because they treat the model as a black box. The four papers reviewed here abandon different dimensions of that approximation: Carles-Bou and Carmona replace model agnosticism with exact computation for known architectures. Butler et al. extend Integrated Gradients beyond first-order effects to capture feature interactions. Daley et al. replace passive Shapley calculation with direct optimisation for evaluation criteria. Wang et al. treat explanation quality as a multi-objective problem, acknowledging that no single explanation balances all desiderata.
 
-None of these methods is a drop-in replacement for standard SHAP or LIME. Each makes deliberate trade-offs in architectural specificity, computational cost, and output interpretability. The sections below examine each method's core mechanism and evidentiary basis so you can assess which trade-offs fit your use case.
+None of these methods is a drop-in replacement for standard SHAP {% include references/cite.html key="lundberg2017unified" %} or LIME {% include references/cite.html key="ribeiro2016why" %}. Each makes deliberate trade-offs in architectural specificity, computational cost, and output interpretability. The sections below examine the core mechanism and evidentiary basis of each method so you can assess which trade-offs fit your use case.
 
 This article is not legal advice.
 
@@ -76,11 +78,11 @@ This article is not legal advice.
 
 FACE (Feature Attribution Computed Exactly) exploits the piecewise-linear structure of feedforward ReLU networks to compute attributions exactly {% include references/cite.html key="CARLESBOU2026108277" %}. For any input, the activation pattern of each neuron determines which linear region the point falls into. Within that region, the network reduces to a single linear transformation of the composite weight matrices. Attribution is the Hadamard product of the composite weight matrix with the input. No sampling. No perturbation. No approximation.
 
-The most striking result is that exact computation is cheaper than approximation. FACE requires only a single forward pass plus matrix operations to build the composite weight matrix, making it 1 to 2 orders of magnitude faster than LIME and kernelSHAP. Perfect fidelity (ICC2/kappa = 1.000) follows necessarily from the exact computation. It is a mathematical property of the method, not an empirical achievement, and holds by construction for any input within a linear region.
+The most striking result is that exact computation is cheaper than approximation. FACE requires only a single forward pass plus matrix operations to build the composite weight matrix, making it 1 to 2 orders of magnitude faster than LIME and kernelSHAP. Perfect fidelity (ICC2 = 1.000) follows necessarily from the exact computation. It is a mathematical property of the method, not an empirical achievement, and holds by construction for any input within a linear region.
 
 > **Core trade-off:** This is architecture-specific. It works for feedforward ReLU networks only. Convolutional networks, transformers, and recurrent architectures are not covered. White-box weight access is required.
 
-**Study limitations:** The mathematical derivation of exact FNN attribution is sound. The fidelity and speed advantages are verified within the paper's experimental scope. But three architectural constraints bound the method's applicability: FACE requires (a) feedforward architecture, excluding convolutional, recurrent, attention, and residual networks, (b) piecewise-linear activations (sigmoid or tanh require approximation that undermines the exactness guarantee), and (c) white-box weight access. Two precision-related caveats also apply: at ReLU boundaries the attribution is exact only for the chosen linear region, and finite-precision arithmetic introduces numerical error for very deep networks, though this is negligible at tested depths. Scalability to very deep networks and generalisation beyond piecewise-linear activations remain unconfirmed as of the published results.
+**Study limitations:** The mathematical derivation of exact FNN attribution is sound. The fidelity and speed advantages are verified within the experimental scope of the paper. But three architectural constraints bound the applicability of the method: FACE requires (a) feedforward architecture, excluding convolutional, recurrent, attention, and residual networks, (b) piecewise-linear activations (sigmoid or tanh require approximation that undermines the exactness guarantee), and (c) white-box weight access. Two precision-related caveats also apply: at ReLU boundaries the attribution is exact only for the chosen linear region, and finite-precision arithmetic introduces numerical error for very deep networks, though this is negligible at tested depths. Scalability to very deep networks and generalisation beyond piecewise-linear activations remain unconfirmed as of the published results.
 
 ### Butler, Feng and Djurić (2026): Higher-Order Attribution Through Operator Theory
 
@@ -100,7 +102,7 @@ If we know the evaluation criteria, why not optimise for them directly? That is 
 
 On the UNSW-NB15 cybersecurity dataset, GAPS outperforms both LIME and SHAP on generality and precision. On the ICS Power System dataset, GAPS outperforms LIME but does not consistently outperform SHAP. The benefit is domain-dependent.
 
-**Study limitations:** GAPS requires defining what generality and precision mean for the specific task, introduces three hyperparameters, and has been evaluated only on binary classification with Random Forest classifiers. The paper lacks theoretical guarantees about convergence or uniqueness. The comparative advantage over LIME and SHAP is partial: it holds on one of two datasets. Generalisation to multi-class, deep learning, and regression settings is unconfirmed.
+**Study limitations:** GAPS requires defining what generality and precision mean for the specific task, introduces three hyperparameters, and has been evaluated only on binary classification with Random Forest classifiers. The architecture-agnostic reward function of the method makes it potentially applicable beyond RF, but this has not been demonstrated. The paper lacks theoretical guarantees about convergence or uniqueness. The comparative advantage over LIME and SHAP is partial: it holds on one of two datasets. Generalisation to multi-class, deep learning, and regression settings is unconfirmed.
 
 ### Wang et al. (2024): MOFAE: Attribution as Multi-Objective Optimisation
 
@@ -118,7 +120,7 @@ Notable limitation: on German Credit, MOFAE solutions dominate Integrated Gradie
 
 ## Cross-Paper Synthesis: Four Strategies for Better Attribution
 
-In my reading, FACE's result that exact computation is cheaper than approximation is the most underappreciated finding in this set. The usual assumption is that exactness costs more. FACE shows it can cost less, provided you are willing to commit to a specific architecture.
+In my reading, the result of FACE that exact computation is cheaper than approximation is the most underappreciated finding in this set. The usual assumption is that exactness costs more. FACE shows it can cost less, provided you are willing to commit to a specific architecture.
 
 ### The approximation spectrum
 
@@ -155,13 +157,13 @@ A deeper distinction separates FACE and Higher-Order IG (which compute attributi
 
 Not directly. Transformers use attention mechanisms and layer normalisation, which do not produce piecewise-linear regions in the same way as ReLU-activated feedforward networks. A transformer-specific exact method would require a different mathematical approach.
 
-### How does MOFAE's Pareto front help a practitioner?
+### How does the Pareto front of MOFAE help a practitioner?
 
 It forces explicit trade-off decisions. A healthcare deployment might prioritise faithfulness (the explanation must accurately reflect the model) over complexity (the explanation can be long). A consumer-facing product might invert those priorities. MOFAE generates both options and lets the domain expert choose, rather than hiding the trade-off inside a single score.
 
-### Is GAPS's reward function architecture-dependent?
+### Is the reward function of GAPS architecture-dependent?
 
-The reward function operates on model predictions, which are available for any architecture. The paper's restriction to Random Forest is a choice about experimental scope, not a limitation of the method.
+The reward function operates on model predictions, which are available for any architecture. The restriction of the paper to Random Forest is a choice about experimental scope, not a limitation of the method.
 
 ### Does higher-order attribution always improve explanation quality?
 
@@ -177,11 +179,11 @@ FACE is the most mature for its target architecture (FNNs) and offers a clear ad
 
 The four papers share a common shift: away from universal applicability and toward stronger, scoped guarantees. FACE offers exactness for feedforward networks. Higher-order IG captures interactions at a cost. GAPS optimises for known criteria. MOFAE makes trade-offs explicit. This is a maturing field, not a fragmenting one.
 
-The open question, covered in a forthcoming article on metrics and benchmarks, is whether these methods actually produce better explanations than the approximate alternatives they seek to replace. The answer depends on evaluation, and evaluation is where the field's unresolved problems concentrate.
+The open question, covered in a forthcoming article on metrics and benchmarks, is whether these methods actually produce better explanations than the approximate alternatives they seek to replace. The answer depends on evaluation, and evaluation is where the unresolved problems of the field concentrate.
 
 ---
 
-_Part 2 of a series on feature attribution, explainability, and interpretability. Technical and educational content. Not legal, regulatory, or procurement advice. Claims bounded to the cited papers' own reported results unless explicitly stated otherwise._
+_Part 2 of a series on feature attribution, explainability, and interpretability. Technical and educational content. Not legal, regulatory, or procurement advice. Claims bounded to the results reported in the cited papers unless explicitly stated otherwise._
 
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Technical Appendix" %}

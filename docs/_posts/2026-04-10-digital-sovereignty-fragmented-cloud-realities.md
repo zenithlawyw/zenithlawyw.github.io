@@ -1,7 +1,7 @@
 ---
 layout: post
 last_modified_at: 2026-06-03
-title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
+title: "Digital Sovereignty in Practice: Ten Engineering Lessons from Cloud Access Fragmentation in China, 2014 to 2026"
 author: Zenith Law
 description: "Cloud localization in China: how SaaS platforms bifurcate, AI services get blocked, and compliance forces platform fragmentation. Ten engineering lessons."
 permalink: /digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons
@@ -156,7 +156,7 @@ The engine still runs. The asset store does not. Asset-store restrictions show e
 
 ### 6. Communication Infrastructure Carries Hidden Regulatory Friction
 
-Your SMS alert will not arrive. Opsgenie's support matrices and China-specific SMS caveats show that alert pathways degrade under telecom and policy constraints that no application-level retry logic can overcome {% include references/cite.html key="ds-2026-ref6" %}. Incident response trustworthiness depends on tested channel diversity, not contractual entitlement.
+Your SMS alert will not arrive. The support matrices of Opsgenie and China-specific SMS caveats show that alert pathways degrade under telecom and policy constraints that no application-level retry logic can overcome {% include references/cite.html key="ds-2026-ref6" %}. Incident response trustworthiness depends on tested channel diversity, not contractual entitlement.
 
 **Practical step**: design alerting with jurisdiction-scoped channel redundancy and quarterly failover drills that simulate provider-level SMS or voice interruption.
 
@@ -188,7 +188,7 @@ The corpus shows persistent fragmentation pressure across cloud, collaboration, 
 
 ### How does Azure China under 21Vianet differ operationally from global Azure for digital sovereignty China?
 
-Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within China's borders and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014 {% include references/cite.html key="ds-2026-ref2" %}.
+Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within the borders of China and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014 {% include references/cite.html key="ds-2026-ref2" %}.
 
 ### Why are ChatGPT and related AI services restricted in mainland China contexts for digital sovereignty China?
 
@@ -229,7 +229,7 @@ Success appears when regional legal constraints, technical controls, communicati
 
 ### Author and Source Credibility
 
-This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from regulatory texts, industry analyst reports, and cloud-provider documentation spanning the period from 2014 to 2026. Sources include China's Cybersecurity Law and Data Security Law, provider-specific compliance disclosures, and cross-border data-transfer analyses from established technology policy outlets. The evidence base prioritises primary regulatory instruments and first-party operational disclosures over secondary commentary.
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from regulatory texts, industry analyst reports, and cloud-provider documentation spanning the period from 2014 to 2026. Sources include the Cybersecurity Law and Data Security Law of China, provider-specific compliance disclosures, and cross-border data-transfer analyses from established technology policy outlets. The evidence base prioritises primary regulatory instruments and first-party operational disclosures over secondary commentary.
 
 ### Appendix Table of Contents
 
