@@ -96,7 +96,7 @@ A [semaphore](<https://en.wikipedia.org/wiki/Semaphore_(programming)>) generaliz
 
 Tanenbaum and Bos (2015) stress that modern operating systems coordinate locks, schedulers, and memory managers across multicore processors and virtualized workloads. The deadlock model remains the same, but the operational impact grows because one blocked path can cascade across all dependent execution contexts.
 
-Think of maintainer credentials as semaphores with N=1. When the axios maintainer's credential was compromised in 2026, normal package publication became a blocked operation for every downstream consumer. Thousands of builds, stalled. In cloud regions, semaphores represent compute capacity; exhaust a region's data-processing quota with one runaway application and every other application starves. LLM inference pipelines work the same way. Token-slot semaphores gate parallelism, and if higher-priority requests monopolize every slot, lower-priority jobs wait. Indefinitely.
+Think of maintainer credentials as semaphores with N=1. When the axios maintainer's credential was compromised in 2026, normal package publication became a blocked operation for every downstream consumer. Thousands of builds, stalled. In cloud regions, semaphores represent compute capacity; exhaust the data-processing quota of a region with one runaway application and every other application starves. LLM inference pipelines work the same way. Token-slot semaphores gate parallelism, and if higher-priority requests monopolize every slot, lower-priority jobs wait. Indefinitely.
 
 ### The Four Coffman Conditions: Structure of Deadlock
 
@@ -173,7 +173,7 @@ Defenses exist, borrowed directly from OS schedulers. Priority aging: as a threa
 
 ### Ordering and Deadlock Avoidance
 
-A deadlock could emerge in an LLM system serving multiple models. Request A holds a slot on Model-X and waits for Model-Y. Request B holds a slot on Model-Y and waits for Model-X (for example, in a multi-step reasoning pipeline where one model's output feeds into another). If both models have bounded concurrent-access limits, a deadlock can form. Mitigation requires either (1) allowing preemption (kill one request to free slots), (2) enforcing a resource-acquisition order globally (always acquire Model-X before Model-Y), or (3) breaking the wait cycle through admission control (reject Request B if it would create a cycle).
+A deadlock could emerge in an LLM system serving multiple models. Request A holds a slot on Model-X and waits for Model-Y. Request B holds a slot on Model-Y and waits for Model-X (for example, in a multi-step reasoning pipeline where the output of one model feeds into another). If both models have bounded concurrent-access limits, a deadlock can form. Mitigation requires either (1) allowing preemption (kill one request to free slots), (2) enforcing a resource-acquisition order globally (always acquire Model-X before Model-Y), or (3) breaking the wait cycle through admission control (reject Request B if it would create a cycle).
 
 ## Actionable Lessons: Breaking the Cycle
 
@@ -211,7 +211,7 @@ The third Coffman condition is no preemption. Breaking it means authorizing the 
 
 Supply chains: Implement certificate-revocation mechanisms that can immediately invalidate a compromised maintainer credential. Tools like the [SLSA framework](https://slsa.dev/spec/v1.0/about) enable this by decoupling maintainer identity from deployment authority. The relationship between provenance attestation and supply-chain trust is explored further in the article on [data provenance in the ML lifecycle](/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons). A compromised credential does not automatically grant package publication rights; the revocation system can preempt the right in real time.
 
-Cloud platforms: Build fallback mechanisms for region-specific service delivery. If a region's operational partner becomes unavailable, preempt the regional partnership and fail over to a global-federated model. Data residency constraints are real, but preemption of stalled operational models is essential.
+Cloud platforms: Build fallback mechanisms for region-specific service delivery. If the operational partner of a region becomes unavailable, preempt the regional partnership and fail over to a global-federated model. Data residency constraints are real, but preemption of stalled operational models is essential.
 
 LLM systems: Implement priority interruption. When a latency-critical request arrives and no slots are free, preempt a lower-priority batch job, save its state, and resume it later. This breaks the starvation cycle.
 
@@ -223,11 +223,11 @@ LLM systems: Implement priority interruption. When a latency-critical request ar
 
 Priority-flat scheduling (round-robin, FCFS) ensures no process starves, but can sacrifice latency for high-priority work. Pure priority scheduling maximizes responsiveness but can starve low-priority jobs indefinitely. Priority aging blends both: as a request waits, its effective priority increases over time, ensuring eventual access.
 
-Supply chains: Implement tiered patch-release schedules. Critical security fixes (high initial priority) deploy immediately. Routine updates (lower initial priority) deploy with a time-window limit. After 48 hours, a routine update's priority increases, ensuring rollout completion even if newer criticals arrive.
+Supply chains: Implement tiered patch-release schedules. Critical security fixes (high initial priority) deploy immediately. Routine updates (lower initial priority) deploy with a time-window limit. After 48 hours, the priority of a routine update increases, ensuring rollout completion even if newer criticals arrive.
 
 Cloud platforms: For user-access restoration in regions experiencing connectivity issues, implement aging: a user-restore request blocked for time T has its priority increased, eventually surpassing normal requests if still pending.
 
-LLM systems: Track request wait time in the inference queue. After waiting for time T, a batch request's priority is increased by a fixed increment. This ensures batch requests eventually execute even if interactive requests arrive continuously.
+LLM systems: Track request wait time in the inference queue. After waiting for time T, the priority of a batch request is increased by a fixed increment. This ensures batch requests eventually execute even if interactive requests arrive continuously.
 
 **Actionable control:** Implement wait-time tracking. Define priority-aging policies. Measure and alert when low-priority requests exceed maximum-wait thresholds without aging applied.
 
@@ -239,7 +239,7 @@ A mutex enforces exactly-one access. A semaphore with N permits up to N concurre
 
 Supply chains: Treat package-version credentials as semaphores, not mutexes. Multiple build systems should be able to read the same package version concurrently. Only publication requires mutual exclusion. Current npm design satisfies this. Problems arise when the semaphore count is set too low (e.g., publishing is rejected if any older version is still in resolution).
 
-Cloud platforms: Treat regional compute capacity as semaphores. A region's semaphore count represents concurrently-serviceable workloads. If regional capacity is 100 concurrent sessions and your application uses 101, the 101st starves indefinitely. Adding capacity (increasing the semaphore count) or implementing round-robin admission reduces starvation.
+Cloud platforms: Treat regional compute capacity as semaphores. The semaphore count of a region represents concurrently-serviceable workloads. If regional capacity is 100 concurrent sessions and your application uses 101, the 101st starves indefinitely. Adding capacity (increasing the semaphore count) or implementing round-robin admission reduces starvation.
 
 LLM systems: Token slots are semaphores. If you set the token-slot count to 1 (serializing all inference), you bottleneck throughput. If you set it to N without load-balancing, you overcommit memory. Calibrate the semaphore count to system capacity with headroom for safety.
 
@@ -267,7 +267,7 @@ If breaking all four Coffman conditions is infeasible (which it often is in real
 
 Supply chains: Monitor package-publication queues. If a maintainer's credential has been held for longer than a policy-defined timeout without completing a publication event, flag the credential as potentially compromised and initiate credential revocation. This is deadlock detection (timeout) plus recovery (revocation).
 
-Cloud platforms: Monitor regional partnerships. If a region's operational partner has not acknowledged a heartbeat for time T, trigger fallback mechanisms. This detects the circular-wait deadlock (region waiting for partner, partner waiting for policy clearance) and recovers by breaking the circle.
+Cloud platforms: Monitor regional partnerships. If the operational partner of a region has not acknowledged a heartbeat for time T, trigger fallback mechanisms. This detects the circular-wait deadlock (region waiting for partner, partner waiting for policy clearance) and recovers by breaking the circle.
 
 LLM systems: Monitor request queues. If a request has not completed within a timeout and all token slots are occupied by requests that also cannot progress, deadlock is detected. Recovery is to preempt one request and retry.
 
@@ -281,7 +281,7 @@ Spooling is an operating-systems technique where producers write to a temporary 
 
 Supply chains: Implement package mirrors and caches. Developers do not directly publish to npm; they publish to a private mirror that decouples their credential from the public registry. The mirror runs a scheduled sync with npm, decoupling the timing of publication from the timing of dependency resolution.
 
-Cloud platforms: Use message queues (e.g., Azure Service Bus) to decouple application requests from regional compute resources. Applications write requests to a queue. Regional processors consume from the queue. If a region is unavailable, requests spool; they do not block the application or hold the application's credentials.
+Cloud platforms: Use message queues (e.g., Azure Service Bus) to decouple application requests from regional compute resources. Applications write requests to a queue. Regional processors consume from the queue. If a region is unavailable, requests spool; they do not block the application or hold the credentials of the application.
 
 LLM systems: Buffer inference requests in a queue rather than directly allocating tokens. The queue acts as a spool. This decouples request submission (which does not hold tokens) from token allocation (which does). Requests can be prioritized, rerouted, or reimplemented later without held resources.
 
@@ -311,7 +311,7 @@ Supply chains: Maintain a canonical registry of package-maintainer identities an
 
 Cloud platforms: Publish responsibility matrices that show which entity (global vendor, regional partner, customer) owns each resource dimension: data, operations, compliance, escalation. Ambiguity breeds deadlock.
 
-LLM systems: Document which system component owns each token-slot allocation. If slots are managed by a scheduler, ensure the scheduler's design is auditable and its decisions are logged. If slots are held by an inference worker, ensure the worker's lifecycle (startup, failure, preemption) is well-defined.
+LLM systems: Document which system component owns each token-slot allocation. If slots are managed by a scheduler, ensure the design of the scheduler is auditable and its decisions are logged. If slots are held by an inference worker, ensure the lifecycle of the worker (startup, failure, preemption) is well-defined.
 
 **Actionable control:** Generate resource-ownership matrices. Audit them quarterly. Update them when responsibilities change.
 
@@ -367,7 +367,7 @@ Four primary strategies correspond directly to breaking the four Coffman conditi
 
 ### What is priority aging, and how does it apply to LLM inference scheduling for deadlock?
 
-Priority aging is a scheduling technique in which a waiting thread's effective priority increases incrementally over time, ensuring low-priority requests are eventually scheduled even when higher-priority requests arrive continuously. It prevents indefinite starvation while preserving responsiveness for high-priority work. Applied to LLM inference queues, priority aging ensures that batch offline jobs are not permanently blocked by interactive user requests, which is the scenario described in the [LLM Inference and Token Schedulers](#llm-inference-and-token-schedulers-priority-starvation) section.
+Priority aging is a scheduling technique in which the effective priority of a waiting thread increases incrementally over time, ensuring low-priority requests are eventually scheduled even when higher-priority requests arrive continuously. It prevents indefinite starvation while preserving responsiveness for high-priority work. Applied to LLM inference queues, priority aging ensures that batch offline jobs are not permanently blocked by interactive user requests, which is the scenario described in the [LLM Inference and Token Schedulers](#llm-inference-and-token-schedulers-priority-starvation) section.
 
 ### How can Coffman-condition analysis improve LLM inference and token-slot design for deadlock?
 
@@ -382,7 +382,7 @@ Token slots in LLM inference are mutual-exclusion resources: exactly one inferen
 
 ### Author and Source Credibility
 
-This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from foundational academic literature on concurrency theory, including Dijkstra's seminal work on mutual exclusion, Coffman et al.'s deadlock conditions taxonomy in ACM Computing Surveys, and established OS textbooks by Silberschatz and Tanenbaum. The cross-domain mappings to supply-chain security, cloud platforms, and LLM inference scheduling draw on the SLSA v1.0 framework specification alongside these classical computer science sources.
+This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises findings from foundational academic literature on concurrency theory, including Dijkstra's seminal work on mutual exclusion, the deadlock conditions taxonomy of Coffman et al. in ACM Computing Surveys, and established OS textbooks by Silberschatz and Tanenbaum. The cross-domain mappings to supply-chain security, cloud platforms, and LLM inference scheduling draw on the SLSA v1.0 framework specification alongside these classical computer science sources.
 
 ### Appendix Table of Contents
 
@@ -431,7 +431,7 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 
 **Preemption**: The act of forcibly interrupting a thread and reclaiming resources it holds, typically to allocate them to a higher-priority thread.
 
-**Priority Aging**: A scheduling technique in which a thread's priority increases over time as it waits, eventually ensuring it will be scheduled even if higher-priority threads continue to arrive.
+**Priority Aging**: A scheduling technique in which the priority of a thread increases over time as it waits, eventually ensuring it will be scheduled even if higher-priority threads continue to arrive.
 
 **Round-Robin Scheduling**: A scheduling algorithm that allocates a fixed time slice or token budget to each thread in turn, regardless of priority, ensuring no thread is starved indefinitely.
 

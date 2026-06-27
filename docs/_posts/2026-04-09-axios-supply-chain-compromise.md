@@ -56,7 +56,7 @@ This article distinguishes incident-confirmed observations, cross-source inferen
   <dd>An attack that targets upstream dependencies, build tools, or distribution channels rather than the victim's own code, exploiting inherited trust relationships to reach downstream consumers.</dd>
 
   <dt><dfn>Dependency injection</dfn></dt>
-  <dd>The insertion of a malicious or counterfeit package into a project's dependency tree, typically through a compromised maintainer account or registry manipulation.</dd>
+  <dd>The insertion of a malicious or counterfeit package into the dependency tree of a project, typically through a compromised maintainer account or registry manipulation.</dd>
 
   <dt><dfn>Postinstall script</dfn></dt>
   <dd>A script that runs automatically after a package is installed by a package manager such as npm, often exploited as an execution vector in supply chain attacks.</dd>
@@ -284,7 +284,7 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
 - [Technical Term Definitions](#technical-term-definitions)
 
 <blockquote>
-<strong>Synthesis note:</strong> This article's control-first approach is consistent with the SSDF emphasis on repeatable secure software engineering practices.
+<strong>Synthesis note:</strong> The control-first approach of this article is consistent with the SSDF emphasis on repeatable secure software engineering practices.
 </blockquote>
 
 <figure markdown="1">

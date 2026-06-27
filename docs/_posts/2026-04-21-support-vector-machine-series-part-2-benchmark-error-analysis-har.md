@@ -152,9 +152,9 @@ Before promoting this benchmark pattern into production policy, add four checks:
 
 ## Hyperparameter Stability Signal
 
-SVM reached its best CV region around $\gamma=0.001$ and $C=50$, then softened at higher $C$. The performance surface has a ridge: useful but narrow. RF's response across tested mtry values was flatter; a plateau rather than a ridge.
+SVM reached its best CV region around $\gamma=0.001$ and $C=50$, then softened at higher $C$. The performance surface has a ridge: useful but narrow. The response of RF across tested mtry values was flatter; a plateau rather than a ridge.
 
-What this means in practice: SVM can match RF's territory with careful tuning, but the stable region is smaller. RF offers broader tolerance. For teams retraining weekly against shifting sensor populations, that plateau is worth something tangible. Narrow ridges amplify drift risk every time hyperparameters are re-selected.
+What this means in practice: SVM can match the territory of RF with careful tuning, but the stable region is smaller. RF offers broader tolerance. For teams retraining weekly against shifting sensor populations, that plateau is worth something tangible. Narrow ridges amplify drift risk every time hyperparameters are re-selected.
 
 ## PCA Geometry Reading
 
@@ -173,7 +173,7 @@ For a broader model-governance continuity perspective, connect this with [data p
 ## Practical Conclusions from the Benchmark
 
 1. SVM remains strong and defensible in this task class, but not best-in-run here.
-2. RF is empirically superior for this dataset's overlap-heavy boundary regions.
+2. RF is empirically superior for the overlap-heavy boundary regions of this dataset.
 3. Class-level diagnostics change model selection decisions more than headline metrics.
 4. Tuning stability should be treated as a first-class operational criterion.
 

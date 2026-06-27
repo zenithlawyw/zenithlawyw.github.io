@@ -63,11 +63,11 @@ Production is a different animal entirely. Contradictory evidence in the corpus.
 
 The [evidence review](/retrieval-augmented-generation-evidence-review) synthesised findings and noted their limits; the [implementation playbook](/retrieval-augmented-generation-implementation-playbook) translated those findings into code. This article occupies the territory both pieces deliberately flagged but did not resolve. Where do RAG systems break? How do you catch those breaks before users encounter them? What governance structures make silence-on-failure impossible?
 
-> **Scope note:** The failure modes discussed here are grounded in the same corpus of reviewed literature. Where evidence is empirical, that is stated with the study's constraints. Where the discussion extends beyond what the papers directly measure (particularly governance, confidence calibration, and organisational controls), this is framed as engineering practice derived from the evidence rather than independently validated finding.
+> **Scope note:** The failure modes discussed here are grounded in the same corpus of reviewed literature. Where evidence is empirical, that is stated with the constraints of the study. Where the discussion extends beyond what the papers directly measure (particularly governance, confidence calibration, and organisational controls), this is framed as engineering practice derived from the evidence rather than independently validated finding.
 
 ## Failure Mode 1: Distractor Contamination
 
-The most empirically documented RAG failure mode comes from Cuconasu et al.'s SIGIR 2024 experiments {% include references/cite.html key="10.1145/3626772.3657834" %}. A **distracting document**, one that scores highly in vector similarity but does not contain the correct answer, is more harmful to LLM accuracy than a completely random, unrelated document.
+The most empirically documented RAG failure mode comes from the SIGIR 2024 experiments of Cuconasu et al. {% include references/cite.html key="10.1145/3626772.3657834" %}. A **distracting document**, one that scores highly in vector similarity but does not contain the correct answer, is more harmful to LLM accuracy than a completely random, unrelated document.
 
 ### Why This Happens
 
@@ -102,7 +102,7 @@ None of the reviewed papers provide a production-ready mechanism for detecting t
 
 ### What This Means in Practice
 
-Users of RAG systems tend to trust cited outputs more than uncited ones. This trust is rational but can be exploited by the system's own failure modes. Production systems should:
+Users of RAG systems tend to trust cited outputs more than uncited ones. This trust is rational but can be exploited by the failure modes of the system itself. Production systems should:
 
 - Never present citations as proof of correctness. Present them as evidence sources that the user can verify.
 - Implement citation verification checks that compare the generated claim against the retrieved passage, not just confirm that the passage was retrieved.
@@ -110,7 +110,7 @@ Users of RAG systems tend to trust cited outputs more than uncited ones. This tr
 
 ## Failure Mode 3: Corpus Decay and Authority Drift
 
-A RAG system's knowledge is only as current and authoritative as its corpus. This sounds obvious until you realise nobody is watching. Unlike model parameter updates, corpus decay happens silently:
+The knowledge of a RAG system is only as current and authoritative as its corpus. This sounds obvious until you realise nobody is watching. Unlike model parameter updates, corpus decay happens silently:
 
 - **Stale documents** remain in the vector store after the underlying source has been updated or superseded.
 - **Authority drift** occurs when the corpus accumulates documents of declining quality over time: user-generated content, outdated blog posts, or superseded versions of official documentation.
@@ -143,7 +143,7 @@ Production systems should detect contradictions before they reach the generator:
 
 ## Failure Mode 5: Domain-Safety Gaps
 
-Amugongo et al.'s systematic review of healthcare RAG demonstrates that domain-specific safety requirements are systematically under-addressed in the literature {% include references/cite.html key="10.1371/journal.pdig.0000877" %}:
+The systematic review of healthcare RAG by Amugongo et al. demonstrates that domain-specific safety requirements are systematically under-addressed in the literature {% include references/cite.html key="10.1371/journal.pdig.0000877" %}:
 
 - **78.9%** of healthcare RAG studies use English-only datasets. Deploying these systems for non-English clinical populations introduces unmeasured risk.
 - The majority of reviewed studies omit ethical considerations: bias auditing, consent mechanisms, explainability requirements, and human oversight are absent.
@@ -155,7 +155,7 @@ These findings are specific to healthcare, but the structural pattern generalise
 
 ## Confidence Calibration in Practice
 
-Picture this: a RAG system that answers every query with identical assertive tone, regardless of whether it retrieved one highly relevant document or five ambiguous ones. That uniformity is the problem. Confidence calibration means communicating to the user how much the system's retrieval actually supports the generated answer; it is the difference between a system that informs and one that misleads through consistent false certainty.
+Picture this: a RAG system that answers every query with identical assertive tone, regardless of whether it retrieved one highly relevant document or five ambiguous ones. That uniformity is the problem. Confidence calibration means communicating to the user how much the retrieval of the system actually supports the generated answer; it is the difference between a system that informs and one that misleads through consistent false certainty.
 
 ### Calibration Signals
 
@@ -200,7 +200,7 @@ Standard evaluation pipelines measure average-case performance. Averages lie. Re
 2. **Staleness probes:** Queries about topics where the corpus contains outdated information alongside current data. Does the system prefer the current version?
 3. **Scope-boundary probes:** Queries that fall outside the corpus domain. Does the system acknowledge its boundary or hallucinate an answer?
 4. **Prompt injection probes:** Adversarial content injected into corpus documents that attempts to override system instructions through the retrieved context.
-5. **Distractor saturation:** Deliberately populate the retrieval results with high-scoring distractors (per Cuconasu et al.'s taxonomy {% include references/cite.html key="10.1145/3626772.3657834" %}) and measure accuracy degradation.
+5. **Distractor saturation:** Deliberately populate the retrieval results with high-scoring distractors (per the taxonomy of Cuconasu et al. {% include references/cite.html key="10.1145/3626772.3657834" %}) and measure accuracy degradation.
 
 ### Frequency
 
@@ -226,7 +226,7 @@ The reviewed corpus provides strong architectural foundations (Kimothi {% includ
 - **Longitudinal production data** on how RAG system quality evolves over months of operation with changing corpora.
 - **Standardised evaluation frameworks** for domain-specific RAG deployments beyond general-purpose metrics.
 - **Empirical confidence calibration methods** validated against user trust and decision quality outcomes.
-- **Cross-domain failure-mode taxonomies** extending Cuconasu et al.'s distractor findings beyond factoid QA.
+- **Cross-domain failure-mode taxonomies** extending the distractor findings of Cuconasu et al. beyond factoid QA.
 - **Organisational governance patterns** for corpus management, approval workflows, and audit compliance at enterprise scale.
 
 These gaps are not criticisms of the reviewed papers; each addresses its declared scope effectively. They are areas where production engineering practice must extend beyond what the literature currently validates, and teams should treat their own solutions to these problems as provisional until independent evidence accumulates.
@@ -271,7 +271,7 @@ Retrieval failure means the correct document was not retrieved or was ranked bel
 
 ### How do I handle queries that fall outside my RAG corpus scope?
 
-Implement scope-boundary detection: when all retrieved documents score below a confidence threshold, return an explicit "this question is outside the system's knowledge scope" response rather than generating an answer. Systems that generate answers for out-of-scope queries are more dangerous than systems that refuse, because the user has no signal that the response is ungrounded.
+Implement scope-boundary detection: when all retrieved documents score below a confidence threshold, return an explicit "this question is outside the knowledge scope of the system" response rather than generating an answer. Systems that generate answers for out-of-scope queries are more dangerous than systems that refuse, because the user has no signal that the response is ungrounded.
 
 ## Technical Appendix
 
@@ -306,11 +306,11 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and grounded in t
 
 ### B. Evidence Boundary Notes
 
-The empirical evidence in this article is concentrated in Cuconasu et al.'s experiments on the NQ-open dataset with models at the 2.7B-7B parameter scale under 4-bit quantisation. The following boundaries should be noted:
+The empirical evidence in this article is concentrated in the experiments of Cuconasu et al. on the NQ-open dataset with models at the 2.7B-7B parameter scale under 4-bit quantisation. The following boundaries should be noted:
 
 - **Task generalisation:** Distractor degradation is measured on factoid QA. Effects on summarisation, dialogue, multi-hop reasoning, and domain-specific tasks are not empirically established.
 - **Scale generalisation:** Model behaviour at 70B+ parameters or with different quantisation levels may produce different distractor sensitivity profiles.
-- **Corpus governance patterns** discussed in this article are derived from engineering practice and the reviewed papers' gap analyses, not from controlled experiments measuring governance effectiveness.
+- **Corpus governance patterns** discussed in this article are derived from engineering practice and the gap analyses of the reviewed papers, not from controlled experiments measuring governance effectiveness.
 - **Confidence calibration** methods described here are heuristic starting points, not statistically validated calibration models.
 
 ### C. Technical Term Definitions
@@ -323,7 +323,7 @@ The empirical evidence in this article is concentrated in Cuconasu et al.'s expe
   <dd>The gradual decline in knowledge-base quality as documents of decreasing authority, currency, or accuracy accumulate over time without systematic governance.</dd>
 
   <dt><dfn>Confidence calibration</dfn></dt>
-  <dd>The practice of mapping retrieval signals (re-ranker scores, source count, contradiction detection) to user-facing confidence tiers that communicate how well the system's evidence supports its answer.</dd>
+  <dd>The practice of mapping retrieval signals (re-ranker scores, source count, contradiction detection) to user-facing confidence tiers that communicate how well the evidence of the system supports its answer.</dd>
 
   <dt><dfn>Provenance logging</dfn></dt>
   <dd>Recording the complete retrieval-to-generation chain for each query (documents retrieved, filtering decisions, prompt construction, and model output) to enable post-hoc auditing and root-cause analysis.</dd>

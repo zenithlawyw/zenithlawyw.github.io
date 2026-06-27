@@ -2491,6 +2491,65 @@ salvi2025uncertainty:
   ieee_base: "M. Salvi and others, Explainability and Uncertainty: Two Sides of the Same Coin for Enhancing the Interpretability of Deep Learning, vol. 115, pp. 102780, 2025."
   harvard_base: "Salvi, M. and others. (2025). Explainability and Uncertainty: Two Sides of the Same Coin for Enhancing the Interpretability of Deep Learning. vol. 115, pp. 102780."
   source_format: bibtex
+rudin2019stop:
+  entry_type: article
+  short_author: Rudin
+  year: "2019"
+  authors: Rudin, Cynthia
+  title: Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead
+  volume: "1"
+  number: "5"
+  pages: 206--215
+  doi: 10.1038/s42256-019-0048-x
+  published_iso: "2019-01-01"
+  published_date: 1 January 2019
+  ieee_base: C. Rudin, Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead, vol. 1, no. 5, pp. 206--215, 2019.
+  harvard_base: Rudin, C. (2019). Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead. vol. 1, no. 5, pp. 206--215.
+  source_format: bibtex
+ribeiro2016why:
+  entry_type: inproceedings
+  short_author: Ribeiro et al.
+  year: "2016"
+  authors: Ribeiro, Marco Tulio and Singh, Sameer and Guestrin, Carlos
+  title: '"Why Should I Trust You?": Explaining the Predictions of Any Classifier'
+  book: Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '16)
+  pages: 1135--1144
+  doi: 10.1145/2939672.2939778
+  published_iso: "2016-01-01"
+  published_date: 1 January 2016
+  ieee_base: 'M. T. Ribeiro, S. Singh and C. Guestrin, "Why Should I Trust You?": Explaining the Predictions of Any Classifier, in Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD ''16), pp. 1135--1144, 2016.'
+  harvard_base: 'Ribeiro, M.T., Singh, S. and Guestrin, C. (2016). "Why Should I Trust You?": Explaining the Predictions of Any Classifier. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD ''16). pp. 1135--1144.'
+  source_format: bibtex
+lundberg2017unified:
+  entry_type: inproceedings
+  short_author: Lundberg et al.
+  year: "2017"
+  authors: Lundberg, Scott M. and Lee, Su-In
+  title: A Unified Approach to Interpreting Model Predictions
+  book: Advances in Neural Information Processing Systems 30 (NeurIPS 2017)
+  volume: "30"
+  pages: 4765--4774
+  published_iso: "2017-01-01"
+  published_date: 1 January 2017
+  ieee_base: S. M. Lundberg and S. I. Lee, A Unified Approach to Interpreting Model Predictions, in Advances in Neural Information Processing Systems 30 (NeurIPS 2017), vol. 30, pp. 4765--4774, 2017.
+  harvard_base: Lundberg, S.M. and Lee, S.I. (2017). A Unified Approach to Interpreting Model Predictions. In Advances in Neural Information Processing Systems 30 (NeurIPS 2017). vol. 30, pp. 4765--4774.
+  source_format: bibtex
+sundararajan2017axiomatic:
+  entry_type: inproceedings
+  short_author: Sundararajan et al.
+  year: "2017"
+  authors: Sundararajan, Mukund and Taly, Ankur and Yan, Qiqi
+  editor: Precup, Doina and Teh, Yee Whye
+  title: Axiomatic Attribution for Deep Networks
+  book: Proceedings of the 34th International Conference on Machine Learning
+  publisher: PMLR
+  volume: "70"
+  pages: 3319--3328
+  published_iso: "2017-01-01"
+  published_date: 1 January 2017
+  ieee_base: M. Sundararajan, A. Taly and Q. Yan, Axiomatic Attribution for Deep Networks, in Proceedings of the 34th International Conference on Machine Learning, vol. 70, pp. 3319--3328, PMLR, 2017.
+  harvard_base: Sundararajan, M., Taly, A. and Yan, Q. (2017). Axiomatic Attribution for Deep Networks. In Proceedings of the 34th International Conference on Machine Learning. vol. 70, pp. 3319--3328. PMLR.
+  source_format: bibtex
 chazette2021exploring:
   entry_type: inproceedings
   short_author: Chazette et al.

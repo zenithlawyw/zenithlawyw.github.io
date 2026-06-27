@@ -39,7 +39,7 @@ howto_steps:
   - name: "Implement hybrid retrieval"
     text: "Combine sparse (BM25) and dense retrieval to maximise recall while preserving semantic matching quality."
   - name: "Apply distractor filtering"
-    text: "Filter high-scoring but non-answer-containing documents before prompt construction, guided by Cuconasu et al.'s noise sensitivity findings."
+    text: "Filter high-scoring but non-answer-containing documents before prompt construction, guided by the noise sensitivity findings of Cuconasu et al."
   - name: "Position relevant context near the query"
     text: "Place retrieved documents closest to the query in the prompt to avoid lost-in-the-middle accuracy degradation."
   - name: "Evaluate separately across retrieval and generation"
@@ -96,7 +96,7 @@ Papers were then compared along shared axes: retrieval method, augmentation stra
 
 <dl>
   <dt><dfn>Retrieval-Augmented Generation (RAG)</dfn></dt>
-  <dd>A system architecture that supplements a language model's parametric knowledge with information retrieved from an external knowledge base at inference time, reducing hallucination and improving factual accuracy.</dd>
+  <dd>A system architecture that supplements the parametric knowledge of a language model with information retrieved from an external knowledge base at inference time, reducing hallucination and improving factual accuracy.</dd>
 
   <dt><dfn>Dense Retrieval</dfn></dt>
   <dd>A retrieval method that uses neural network encoders (e.g., embedding models) to map queries and documents into a shared vector space, enabling semantic similarity matching beyond literal keyword overlap.</dd>
@@ -153,7 +153,7 @@ Zhao et al. deliver a comprehensive RAG survey covering text, code, audio, image
 
 **Study limitations:** This is a taxonomic survey, not an experimental study. The breadth across modalities (text, code, audio, images, video, 3D) comes at the cost of depth: individual techniques receive brief treatment. Text-specific nuances such as distractor sensitivity are not explored. Some cited works are recent preprints with limited independent validation.
 
-The taxonomy is most useful during architectural review: classifying your existing system's paradigm helps identify whether alternative augmentation approaches are worth prototyping.
+The taxonomy is most useful during architectural review: classifying the paradigm of your existing system helps identify whether alternative augmentation approaches are worth prototyping.
 
 ### Huang and Huang (2026): The IR-Centric Pipeline Guide
 
@@ -231,7 +231,7 @@ Generative retrieval is worth monitoring. But today? Its inability to scale or u
 
 ### Meng et al. (2025): The Fusion Strategy Pattern
 
-Meng et al. demonstrate that combining RAG with parameter-efficient fine-tuning (PEFT) produces far superior domain-specific generation than relying on either technique in isolation {% include references/cite.html key="11009349" %}. Their core architectural pattern establishes a clear division of labor: **Retrieval provides dynamic, up-to-date context; fine-tuning adapts the model's tone, syntax, and structural constraints.**
+Meng et al. demonstrate that combining RAG with parameter-efficient fine-tuning (PEFT) produces far superior domain-specific generation than relying on either technique in isolation {% include references/cite.html key="11009349" %}. Their core architectural pattern establishes a clear division of labor: **Retrieval provides dynamic, up-to-date context; fine-tuning adapts the tone, syntax, and structural constraints of the model.**
 
 <figure markdown="1">
 
@@ -252,7 +252,7 @@ The practical conclusion is straightforward: RAG and fine-tuning are not competi
 ## Cross-Paper Patterns: Five Recurring Themes
 
 1. **Retrieval quality is the primary bottleneck.** Not generation. Not prompt engineering. Retrieval. Downstream generation quality is bounded by retrieval precision, and optimising prompt templates while ignoring retrieval noise, distractor contamination, and context positioning produces systems that look functional in demos and shatter under real workloads. I have personally watched teams spend weeks tuning generation temperature and system prompts when their real problem was that 40% of retrieved chunks were irrelevant. The fix was not a better prompt. It was better retrieval.
-2. **Not all retrieved context is helpful; some is actively harmful.** This is the counter-intuitive finding that matters most. Cuconasu et al.'s experiments on NQ-open show that distracting documents (semantically similar, high-scoring, but answer-free) degrade accuracy more than purely random noise. More retrieval is not automatically better retrieval, though generalisation to non-QA tasks and larger models remains untested.
+2. **Not all retrieved context is helpful; some is actively harmful.** This is the counter-intuitive finding that matters most. The experiments of Cuconasu et al. on NQ-open show that distracting documents (semantically similar, high-scoring, but answer-free) degrade accuracy more than purely random noise. More retrieval is not automatically better retrieval, though generalisation to non-QA tasks and larger models remains untested.
 3. **Evaluation must separate retrieval from generation.** Retrieval performance (MRR, NDCG, Recall) and generation performance (faithfulness, correctness) measure independent failure modes. Conflating them produces a dashboard that says "good" while one subsystem quietly degrades. The hardest part is not building separated metrics; it is convincing stakeholders that a correct final answer does not prove retrieval worked correctly. It might have worked despite bad retrieval, by luck.
 4. **Domain-specific deployment requires domain-specific safety.** General-purpose RAG benchmarks will not catch clinical misdiagnosis, financial mispricing, or legal liability. Amugongo et al. document this gap for healthcare with uncomfortable specificity: 78.9% English-only datasets, zero standardised evaluation frameworks, and majority ethics omissions. Analogous evidence for legal and financial domains is absent from this corpus, which is itself a gap worth noting.
 5. **RAG and fine-tuning appear complementary, with caveats.** Meng et al. report that retrieval plus parameter-efficient fine-tuning outperforms either technique alone in their Chinese medicine Q&A system. The fusion pattern is architecturally sound. But the empirical evidence is limited to a single domain with sparse methodological detail, and the 90%+ accuracy claim has not been independently replicated. Treat this as a plausible design direction, not a settled best practice.
@@ -299,7 +299,7 @@ When the system underperforms, this separation tells you whether retrieval or ge
 
 ### 5. Combine RAG with Fine-Tuning for Domain-Specific Applications
 
-For vertical deployments (healthcare, legal, finance), RAG alone may not adapt the model's generation style sufficiently. Add LoRA or QLoRA fine-tuning on domain-specific data to bridge the gap between generic generation and domain-appropriate responses {% include references/cite.html key="11009349" %}.
+For vertical deployments (healthcare, legal, finance), RAG alone may not adapt the generation style of the model sufficiently. Add LoRA or QLoRA fine-tuning on domain-specific data to bridge the gap between generic generation and domain-appropriate responses {% include references/cite.html key="11009349" %}.
 
 ### 6. Add Domain-Specific Safety Gates for Critical Applications
 
@@ -307,7 +307,7 @@ For healthcare and similarly critical domains, add human oversight, bias auditin
 
 ## New Knowledge and Skills from the Combined Corpus
 
-A maturity shift is visible in the evidence. Early RAG adoption chased recall: retrieve more documents, provide more context, hope the model sorts it out. That approach fails. Badly. The evidence now points toward retrieval precision and context quality as the performance drivers that actually matter, though this conclusion rests primarily on Cuconasu et al.'s single-dataset experiments, corroborated by survey-level recommendations rather than broad independent replication.
+A maturity shift is visible in the evidence. Early RAG adoption chased recall: retrieve more documents, provide more context, hope the model sorts it out. That approach fails. Badly. The evidence now points toward retrieval precision and context quality as the performance drivers that actually matter, though this conclusion rests primarily on the single-dataset experiments of Cuconasu et al., corroborated by survey-level recommendations rather than broad independent replication.
 
 Teams that build reliable RAG systems tend to converge on five capabilities early: hybrid retrieval engineering combining sparse and dense methods with cross-encoder re-ranking; distractor detection and filtering using answer-presence verification and confidence thresholds; context positioning discipline placing highest-confidence documents nearest the query boundary; separated evaluation pipelines measuring retrieval quality (MRR, Recall@K) independently from generation quality (faithfulness, correctness); and domain safety integration adding ethics, equity, explainability, and compliance checks for critical applications. Skip any one of these and the others compensate poorly. All five interact.
 
@@ -321,7 +321,7 @@ The distractor effect. Cuconasu et al. discovered that semantically similar docu
 
 Both. Neither alone is sufficient. Huang and Huang's survey finds that hybrid retrieval (sparse BM25 combined with dense methods like DPR or Contriever) consistently outperforms either in isolation {% include references/cite.html key="10.1145/3805774" %}. The reason is straightforward: BM25 catches exact terminology that embedding models miss; dense retrieval captures semantic relationships that keyword matching cannot.
 
-### How should I evaluate my RAG system's quality?
+### How should I evaluate the quality of my RAG system?
 
 Never evaluate retrieval and generation together. Measure retrieval with precision, recall, and MRR. Measure generation separately with accuracy, faithfulness, and relevance. Why insist on this separation? Because a correct final answer can mask broken retrieval. The model might have guessed correctly despite receiving irrelevant context. Without separated metrics, you cannot distinguish luck from engineering {% include references/cite.html key="rag-2026-ref1" %} {% include references/cite.html key="10.1145/3805774" %}.
 

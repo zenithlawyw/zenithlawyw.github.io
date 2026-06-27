@@ -173,7 +173,7 @@ Deploy stateless APIs on a container orchestrator such as Kubernetes, run statef
 
 ## Testing and Reliability Signals That Matter
 
-What does a useful test strategy actually look like here? Unit tests, integration tests, fault-injection tests, and end-to-end observability assertions, layered in that order. Standard software reliability practice, applied to Lightning's particular failure modes.
+What does a useful test strategy actually look like here? Unit tests, integration tests, fault-injection tests, and end-to-end observability assertions, layered in that order. Standard software reliability practice, applied to the particular failure modes of Lightning.
 
 The following metrics serve as operational indicators. They originate from general payment-system operations practice rather than Lightning-specific research, but they expose the exact failure surfaces that matter during pilot evaluation.
 

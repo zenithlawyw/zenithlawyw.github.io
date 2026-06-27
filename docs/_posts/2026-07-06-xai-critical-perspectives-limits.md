@@ -5,7 +5,7 @@ title: "Critical Perspectives and Limits of Current Explainability Methods"
 author: Zenith Law
 description: "A rigorous examination of what current explainability methods cannot deliver: false hope in healthcare, conceptual confusion, deployment gaps, audit limitations, and metric proliferation problems."
 permalink: /critical-perspectives-limits-xai
-intro: "Five papers converge on an uncomfortable finding: current explainability methods are less reliable than their advocates claim. Ghassemi et al. argue that explainable AI cannot deliver trust, transparency, or bias mitigation for clinical decisions. Watson identifies three conceptual problems that no amount of technical refinement can fix. Bhatt et al. show that deployment primarily serves engineers, not affected stakeholders. Casper et al. demonstrate that black-box access limits what auditors can discover. Pawlicki et al. document metric duplication and confusion. Together, these critiques establish that the field's limitations are not only technical but conceptual, organisational, and structural."
+intro: "Five papers converge on an uncomfortable finding: current explainability methods are less reliable than their advocates claim. Ghassemi et al. argue that explainable AI cannot deliver trust, transparency, or bias mitigation for clinical decisions. Watson identifies three conceptual problems that no amount of technical refinement can fix. Bhatt et al. show that deployment primarily serves engineers, not affected stakeholders. Casper et al. demonstrate that black-box access limits what auditors can discover. Pawlicki et al. document metric duplication and confusion. Together, these critiques establish that the limitations of the field are not only technical but conceptual, organisational, and structural."
 image: /assets/images/critical-perspectives-xai.png
 hero:
   image: /assets/images/critical-perspectives-xai.png
@@ -65,7 +65,7 @@ This article is not legal advice.
   <dd>The mismatch between the research narrative that explanations serve affected stakeholders and the practice where explanations primarily serve internal ML engineers for debugging.</dd>
 
   <dt><dfn>Outside-the-box access</dfn></dt>
-  <dd>Access to information about a model's development process: training methodology, data provenance, documentation, deployment details, and internal evaluation results. Casper et al. argue this access level is necessary for rigorous auditing alongside white-box access.</dd>
+  <dd>Access to information about the development process of a model: training methodology, data provenance, documentation, deployment details, and internal evaluation results. Casper et al. argue this access level is necessary for rigorous auditing alongside white-box access.</dd>
 
   <dt><dfn>Metric duplication</dfn></dt>
   <dd>The phenomenon where multiple XAI evaluation metrics measure the same construct under different names, creating the illusion of comprehensive evaluation while actually measuring the same thing repeatedly.</dd>
@@ -83,19 +83,19 @@ Ghassemi, Oakden-Rayner, and Beam published a pointed critique from within the m
 
 **Inaccuracy.** Explanations can be systematically misleading. Gradient saturation produces attribution maps that highlight irrelevant features. Clever Hans phenomena (documented in Article 2) show that models can be correct for the wrong reasons, and explanations faithfully reflecting model behaviour will therefore be wrong about reality.
 
-**Inscrutability.** Even if explanations were accurate, clinicians lack training to critically evaluate them. The cognitive load of assessing an explanation's validity while making a clinical decision creates a situation where explanations may decrease rather than improve decision quality.
+**Inscrutability.** Even if explanations were accurate, clinicians lack training to critically evaluate them. The cognitive load of assessing the validity of an explanation while making a clinical decision creates a situation where explanations may decrease rather than improve decision quality.
 
-The paper does not argue that explainability is impossible. It argues that the current enthusiasm for explainability as a solution to clinical AI's trust problems is premature, and that rigorous internal and external validation of AI models is a more reliable path to safe deployment.
+The paper does not argue that explainability is impossible. It argues that the current enthusiasm for explainability as a solution to the trust problems of clinical AI is premature, and that rigorous internal and external validation of AI models is a more reliable path to safe deployment.
 
 ### Watson (2022): The Conceptual Critique
 
 Watson's critique targets the conceptual foundations rather than empirical performance {% include references/cite.html key="watson2022conceptual" %}. The three challenges are worth restating because they are immune to technical fixes.
 
-**Ambiguity of target.** When SHAP reports that feature x contributed 0.3 to a prediction, what exactly is being explained? The model's behaviour (the function SHAP is approximating)? The data-generating process (the correlations in the training distribution)? The domain phenomenon (the real-world relationship the model is meant to capture)? Each is a legitimate target, but SHAP only addresses the first, while being interpreted as addressing the third.
+**Ambiguity of target.** When SHAP reports that feature x contributed 0.3 to a prediction, what exactly is being explained? The behaviour of the model (the function SHAP is approximating)? The data-generating process (the correlations in the training distribution)? The domain phenomenon (the real-world relationship the model is meant to capture)? Each is a legitimate target, but SHAP only addresses the first, while being interpreted as addressing the third.
 
 **Absent error quantification.** LIME fits a local linear model without reporting confidence intervals. SHAP values are point estimates without standard errors. Neither method subjects its explanations to severe testing: constructing tests that the explanation is likely to fail if it is incorrect. In any scientific context, making claims without error quantification is unacceptable.
 
-**Product over process.** A list of feature attributions describes what the model used but not how it used it. Was the model's decision process linear (features combine additively) or interactive (features modulate each other's contributions)? Current methods do not distinguish these fundamentally different modes.
+**Product over process.** A list of feature attributions describes what the model used but not how it used it. Was the decision process of the model linear (features combine additively) or interactive (features modulate each other's contributions)? Current methods do not distinguish these fundamentally different modes.
 
 Watson's prescription is not to abandon IML but to adopt the methodological standards of the sciences it seeks to support: clear explanatory targets, error quantification, and process-level understanding.
 
@@ -115,7 +115,7 @@ Casper et al. examine a structural constraint on AI auditing {% include referenc
 
 Black-box access cannot reliably detect model editing or fine-tuning. Adversarial robustness evaluations are weaker without gradient access. Mechanistic interpretability. Understanding how circuits within the model implement behaviours. Requires white-box access to weights and activations. Data contamination detection is limited when the training data cannot be inspected.
 
-The paper's three-level framework (black-box, white-box, outside-the-box) maps specific audit tasks to required access levels. The central recommendation: auditors must disclose their access level for audit results to be interpretable, and regulators should mandate minimum access for high-risk systems.
+The three-level framework of the paper (black-box, white-box, outside-the-box) maps specific audit tasks to required access levels. The central recommendation: auditors must disclose their access level for audit results to be interpretable, and regulators should mandate minimum access for high-risk systems.
 
 This critique has direct implications for explainability. Many explanation methods require white-box access (gradients, activations). When auditors only have black-box access, the set of available explanation methods is restricted, and the conclusions that can be drawn from explanations are correspondingly limited.
 

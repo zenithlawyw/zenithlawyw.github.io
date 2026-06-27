@@ -52,7 +52,7 @@ This article is not legal advice.
 
 <dl>
   <dt><dfn>Uncertainty-aware explanation</dfn></dt>
-  <dd>An explanation that quantifies the confidence in its own attribution scores, following Salvi et al.'s thesis that explainability and uncertainty are "two sides of the same coin."</dd>
+  <dd>An explanation that quantifies the confidence in its own attribution scores, following the thesis of Salvi et al. that explainability and uncertainty are "two sides of the same coin."</dd>
 
   <dt><dfn>Model documentation</dfn></dt>
   <dd>Structured records of model purpose, development data, performance characteristics, and known limitations. Model Cards and Datasheets are prominent examples. Documentation is a governance mechanism that does not require explanation methods.</dd>
@@ -74,11 +74,11 @@ Medical XAI surveys (Hossain et al. 2025; Tjoa & Guan 2021; Nazir et al. 2023) r
 
 The dominant approach in medical imaging combines Grad-CAM or LRP visualisations with clinician evaluation. This approach has documented vulnerabilities: Clever Hans artifacts (hospital markers, imaging equipment watermarks) produce compelling but misleading explanations. Clinicians who trust these visualisations may develop overconfidence in models that rely on spurious correlations.
 
-Ghassemi et al.'s critique (discussed in Article 3) poses a challenge that the medical XAI community has not fully answered: if explanations can be systematically misleading and clinicians cannot evaluate their reliability, do explanations in their current form improve or degrade clinical decision-making?
+The critique of Ghassemi et al. (discussed in Article 3) poses a challenge that the medical XAI community has not fully answered: if explanations can be systematically misleading and clinicians cannot evaluate their reliability, do explanations in their current form improve or degrade clinical decision-making?
 
 ### Cybersecurity
 
-Cybersecurity presents a different set of challenges. Pawlicki et al.'s evaluation of XAI metrics in a cybersecurity context found that explanation speed matters more than in other domains. Threat detection requires real-time or near-real-time explanations. The evaluation metrics that work for offline medical imaging analysis are inappropriate for streaming security data.
+Cybersecurity presents a different set of challenges. The evaluation of XAI metrics in a cybersecurity context by Pawlicki et al. found that explanation speed matters more than in other domains. Threat detection requires real-time or near-real-time explanations. The evaluation metrics that work for offline medical imaging analysis are inappropriate for streaming security data.
 
 Feature attribution methods (SHAP, LIME) dominate security XAI, but the evaluation literature reveals that metric proliferation is particularly acute in this domain. Multiple metrics claiming to measure "faithfulness" produce systematically different rankings of the same methods applied to the same security data.
 
@@ -88,7 +88,7 @@ IoT XAI (Kök et al. 2023) operates under severe resource constraints. Deep neur
 
 ### Geospatial and Environmental XAI
 
-Roussel et al. (2025) propose a quality-aware XAI framework for geospatial analysis that connects explanation quality to downstream decision quality. The framework evaluates whether improving explanation quality actually improves decision outcomes, a direct answer to Ghassemi et al.'s challenge.
+Roussel et al. (2025) propose a quality-aware XAI framework for geospatial analysis that connects explanation quality to downstream decision quality. The framework evaluates whether improving explanation quality actually improves decision outcomes, a direct answer to the challenge of Ghassemi et al.
 
 ## Evaluation Frameworks
 
@@ -110,13 +110,13 @@ Hassija et al. focus specifically on interpreting black-box models {% include re
 
 ### Organisational Accountability
 
-Bhatt et al.'s deployment study (Article 3) established that most XAI serves internal stakeholders. The constructive response is not to abandon XAI but to build organisational structures that redirect explanations toward the stakeholders who need them.
+The deployment study of Bhatt et al. (Article 3) established that most XAI serves internal stakeholders. The constructive response is not to abandon XAI but to build organisational structures that redirect explanations toward the stakeholders who need them.
 
-The paper's stakeholder-centred framework is a governance mechanism: establish clear goals for what the explanation should achieve for a specific stakeholder; design for that stakeholder's cognitive and domain context; evaluate whether the goals are met. This framework translates technical explainability into organisational accountability.
+The stakeholder-centred framework of the paper is a governance mechanism: establish clear goals for what the explanation should achieve for a specific stakeholder; design for that stakeholder's cognitive and domain context; evaluate whether the goals are met. This framework translates technical explainability into organisational accountability.
 
 ### Access Governance
 
-Casper et al.'s three-level access framework (black-box, white-box, outside-the-box) provides a governance structure for model auditing. Organisations deploying high-risk AI systems should establish policies determining what level of access external auditors require, with the default presumption that black-box access alone is insufficient for rigorous evaluation.
+The three-level access framework of Casper et al. (black-box, white-box, outside-the-box) provides a governance structure for model auditing. Organisations deploying high-risk AI systems should establish policies determining what level of access external auditors require, with the default presumption that black-box access alone is insufficient for rigorous evaluation.
 
 ### Regulatory Context
 
@@ -136,7 +136,7 @@ No single method, metric, or governance structure suffices. Domain determines me
 
 Explainability in practice is a situated, multi-dimensional challenge. Domain applications demonstrate that general-purpose XAI guidance is insufficient. Evaluation frameworks show that metrics must be chosen for the specific context. Governance structures reveal that organisational commitment is as important as technical capability.
 
-The final article in this series examines where XAI is heading: the open challenges identified by Longo et al.'s XAI 2.0 manifesto and the emerging directions that will shape the field.
+The final article in this series examines where XAI is heading: the open challenges identified by the XAI 2.0 manifesto of Longo et al. and the emerging directions that will shape the field.
 
 ---
 

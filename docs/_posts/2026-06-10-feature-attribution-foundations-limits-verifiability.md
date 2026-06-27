@@ -5,7 +5,7 @@ title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiabi
 author: Zenith Law
 description: "Three foundational papers reshape how we think about faithfulness, verifiability, and the causal grounding of feature attributions, with hard limits on what post-hoc methods can guarantee."
 permalink: /feature-attribution-foundations-limits-verifiability
-intro: "Three papers, published between 2020 and 2023, independently arrived at the same uncomfortable conclusion: standard feature attributions cannot be trusted as reliable explanations of model behaviour. The first uses causal reasoning to expose a fundamental flaw in Shapley-value-based attribution. The second proves that verifiability (the ability to check whether an attribution is correct) is mathematically impossible for standard black-box models, but proposes Verifiability Tuning as a constructive path around this limitation. The third, a companion paper to the second, shows that the path to faithful attribution requires changing the model itself, not just improving the explanation method. Together, these papers reshape the theoretical foundations of feature attribution and establish hard limits that any practitioner or researcher must understand before deploying attribution methods in high-stakes settings."
+intro: "Three papers, published between 2020 and 2023, each proved a different piece of the same problem from complementary angles: the first uses causal reasoning to expose a fundamental flaw in Shapley-value-based attribution. The second proves that verifiability (the ability to check whether an attribution is correct) is mathematically impossible for standard black-box models, but proposes Verifiability Tuning as a constructive path around this limitation. The third, a companion paper to the second, shows that the path to faithful attribution requires changing the model itself, not just improving the explanation method. Together, these papers reshape the theoretical foundations of feature attribution and establish hard limits that any practitioner or researcher must understand before deploying attribution methods in high-stakes settings."
 image: /assets/images/feature-attribution-foundations-limits-verifiability.png
 hero:
   image: /assets/images/feature-attribution-foundations-limits-verifiability.png
@@ -18,6 +18,10 @@ references:
   - NEURIPS2023_89beb2a3
   - bhalla2023verifiable
   - pmlr-v108-janzing20a
+  - rudin2019stop
+  - ribeiro2016why
+  - lundberg2017unified
+  - sundararajan2017axiomatic
 related_posts:
   - title: "Attribution Methods for Exact Computation and Higher-Order Interactions"
     url: /feature-attribution-exact-computation-higher-order-methods
@@ -39,9 +43,9 @@ tags:
 
 ## Introduction
 
-Standard feature attributions carry a guarantee they cannot honour. Three papers, published between 2020 and 2023, each proved a different piece of the problem from complementary angles: Janzing et al. (2020) showed that Shapley-value attributions conflate correlation with causation unless the value function is chosen correctly; Bhalla et al. (2023b) proved that black-box attributions cannot be verified for individual cases without model adaptation; and Bhalla et al. (2023a) demonstrated that the only reliable path to faithful attribution requires changing the model itself, not swapping explanation methods.
+Standard feature attributions face a limitation most users do not recognize. Three papers, published between 2020 and 2023, each proved a different piece of the problem from complementary angles: Janzing et al. (2020) showed that Shapley-value attributions conflate correlation with causation unless the value function is chosen correctly; Bhalla et al. (2023b) proved that black-box attributions cannot be verified for individual cases without model adaptation; and Bhalla et al. (2023a) demonstrated that the only reliable path to faithful attribution requires changing the model itself, not swapping explanation methods.
 
-Each paper's core argument, formal mechanism, and evidentiary support are examined below. Together they establish hard limits that any practitioner deploying attribution methods in high-stakes settings must confront.
+The core argument, formal mechanism, and evidentiary support of each paper are examined below. Together they establish hard limits that any practitioner deploying attribution methods in high-stakes settings must confront.
 
 This article is not legal advice.
 
@@ -49,22 +53,22 @@ This article is not legal advice.
 
 <dl>
   <dt><dfn>Feature attribution</dfn></dt>
-  <dd>A scalar score assigned to each input feature indicating its contribution to a model's output for a given prediction, forming the basis of most post-hoc explanation methods.</dd>
+  <dd>A scalar score assigned to each input feature indicating its contribution to the output of a model for a given prediction, forming the basis of most post-hoc explanation methods.</dd>
 
   <dt><dfn>Faithfulness</dfn></dt>
-  <dd>The degree to which an attribution accurately reflects the model's actual decision process, as opposed to artefacts of the explanation method or the model's sensitivity to out-of-distribution inputs.</dd>
+  <dd>The degree to which an attribution accurately reflects the actual decision process of the model, as opposed to artefacts of the explanation method or the sensitivity of the model to out-of-distribution inputs.</dd>
 
   <dt><dfn>Verifiability</dfn></dt>
    <dd>The ability to systematically determine whether a given attribution is correct by comparing predicted model behaviour under feature removal against actual model output, introduced as a formal criterion in the verifiability impossibility paper.</dd>
 
   <dt><dfn>Post-hoc explainability</dfn></dt>
-  <dd>The class of explanation methods applied to an already-trained model without modifying its architecture or training procedure, encompassing methods such as LIME, SHAP, and Integrated Gradients.</dd>
+  <dd>The class of explanation methods applied to an already-trained model without modifying its architecture or training procedure, encompassing methods such as LIME {% include references/cite.html key="ribeiro2016why" %}, SHAP {% include references/cite.html key="lundberg2017unified" %}, and Integrated Gradients {% include references/cite.html key="sundararajan2017axiomatic" %}.</dd>
 
   <dt><dfn>Inherent interpretability</dfn></dt>
   <dd>Models designed from the outset to be interpretable through their structure (e.g., sparse linear models, decision trees with few leaves), as opposed to requiring external explanation.</dd>
 
   <dt><dfn>Interventional vs observational conditioning</dfn></dt>
-  <dd>A distinction from causal inference: interventional conditioning sets a variable's value by intervention (<em>do</em>-operator), while observational conditioning selects only instances where the variable already takes that value, carrying implicit confounding bias.</dd>
+  <dd>A distinction from causal inference: interventional conditioning sets the value of a variable by intervention (<em>do</em>-operator), while observational conditioning selects only instances where the variable already takes that value, carrying implicit confounding bias.</dd>
 </dl>
 
 ---
@@ -73,33 +77,33 @@ This article is not legal advice.
 
 ### Janzing, Minorics and Blöbaum (2020): The Causal Critique of Shapley-Value Attribution
 
-The choice between conditional and interventional expectations when removing features is the single most consequential decision in Shapley-value attribution, and most users never inspect it. {% include references/cite.html key="pmlr-v108-janzing20a" %} The paper's central claim is that the interventional approach is the correct one, a position that remains actively debated in the literature. The paper argues that the widespread adoption of conditional expectations in the SHAP literature rests on a misunderstanding of the causal structure of the problem. The core demonstration, presented as a formal argument, shows that conditional expectations violate the Sensitivity axiom of Shapley-value attributions: consider a two-feature system where f(x₁, x₂) = x₁ and x₂ is causally irrelevant but correlated with x₁. Under conditional expectations, x₂ receives non-zero attribution. Under interventional (marginal) expectations, x₂ receives zero. The proof is mathematically straightforward once you commit to a causal framing, but it exposes a choice most users never inspect.
+The choice between conditional and interventional expectations when removing features is the single most consequential decision in Shapley-value attribution, and most users never inspect it. {% include references/cite.html key="pmlr-v108-janzing20a" %} The central claim of the paper is that the interventional approach is the correct one, a position that remains actively debated in the literature. The paper argues that the widespread adoption of conditional expectations in the SHAP literature rests on a misunderstanding of the causal structure of the problem. The core demonstration, presented as a formal argument, shows that conditional expectations violate the Sensitivity axiom of Shapley-value attributions: consider a two-feature system where f(x₁, x₂) = x₁ and x₂ is causally irrelevant but correlated with x₁. Under conditional expectations, x₂ receives non-zero attribution. Under interventional (marginal) expectations, x₂ receives zero. The proof is mathematically straightforward once you commit to a causal framing, but it exposes a choice most users never inspect.
 
 > **Core claim:** The choice between conditional and interventional expectations is not a tuning parameter. It is a decision about what "attribution" means.
 
-On synthetic multivariate Gaussian data with known coefficients, interventional expectations yield substantially lower attribution error. On human activity recognition data, the distinction affects feature rankings materially. The paper does not say SHAP is useless. It says SHAP's theoretical justification depends on an unexamined design choice, and attempts to "improve" SHAP by better approximating conditional expectations are moving in the wrong direction.
+On synthetic multivariate Gaussian data with known coefficients, interventional expectations yield substantially lower attribution error. On human activity recognition data, the distinction affects feature rankings materially. The paper does not say SHAP is useless. It says the theoretical justification of SHAP depends on an unexamined design choice, and attempts to "improve" SHAP by better approximating conditional expectations are moving in the wrong direction.
 
 **Study limitations:** The empirical demonstration covers only two datasets (Gaussian synthetic and HAR). Generalisability beyond these settings is unconfirmed. The causal formalisation of the dropped-features sampling problem is rigorous, and the sensitivity violation proof is mathematically sound and replicable, but the empirical breadth is narrow.
 
 ### Bhalla, Srinivas and Lakkaraju (2023b): The Verifiability Impossibility and a Constructive Path
 
-Can an attribution be checked? For standard black-box models, the paper answers with an unambiguous no. {% include references/cite.html key="bhalla2023verifiable" %} Verification is a weaker requirement than faithfulness: you do not need the attribution to perfectly reflect the model's reasoning, only the ability to detect when it does not. The paper proves even that weaker requirement is impossible for unmodified models. The root cause: masking features produces out-of-distribution (OOD) inputs, and the model's response to OOD inputs need not correspond to its behaviour on the training distribution. You cannot distinguish between an incorrect attribution and a correct one evaluated on an unreliable input.
+Can an attribution be checked? For standard black-box models, the paper answers with an unambiguous no. {% include references/cite.html key="bhalla2023verifiable" %} Verification is a weaker requirement than faithfulness: you do not need the attribution to perfectly reflect the reasoning of the model, only the ability to detect when it does not. The paper proves even that weaker requirement is impossible for unmodified models. The root cause: masking features produces out-of-distribution (OOD) inputs, and the response of the model to OOD inputs need not correspond to its behaviour on the training distribution. You cannot distinguish between an incorrect attribution and a correct one evaluated on an unreliable input.
 
 A key conceptual contribution is disentangling **attribution correctness** (does the attribution identify discriminative features?) from **model verifiability** (does the model behave consistently when unimportant features are masked?). These are distinct dimensions that prior work conflated into a single faithfulness score.
 
-The paper does not stop at the negative result. It proposes Verifiability Tuning (VerT), which transforms the model so that masking unimportant features does not change predictions. On MNIST, VerT achieves near-perfect verifiability (ℓ₁ prediction difference of 0.027). A surprising negative result emerges: input dropout training, a common robustness technique, actually reduces verifiability (scoring 0.167 versus the original model's 0.107). Random masking teaches the model to ignore any feature, not specifically the non-discriminative ones.
+The paper does not stop at the negative result. It proposes Verifiability Tuning (VerT), which transforms the model so that masking unimportant features does not change predictions. On MNIST, VerT achieves near-perfect verifiability (ℓ₁ prediction difference of 0.027). A surprising negative result emerges: input dropout training, a common robustness technique, actually reduces verifiability (scoring 0.167 versus 0.107 for the original model). Random masking teaches the model to ignore any feature, not specifically the non-discriminative ones.
 
 > **Practical implication:** The impossibility result is permanent for any model not specifically adapted for verifiability. Practitioners cannot check whether a LIME or SHAP explanation on a standard model is correct. Input dropout, which might seem like a lightweight alternative, is counterproductive.
 
-**Study limitations:** The formal proof that standard black-box attributions are unverifiable is rigorous. The VerT demonstration on MNIST is replicable. Generalisability to complex architectures (Transformers, large vision models) is unconfirmed; the paper's experiments focus on smaller-scale settings.
+**Study limitations:** The formal proof that standard black-box attributions are unverifiable is rigorous. The VerT demonstration on MNIST is replicable. Generalisability to complex architectures (Transformers, large vision models) is unconfirmed; the experiments of the paper focus on smaller-scale settings.
 
 ### Bhalla, Srinivas and Lakkaraju (2023a): Discriminative Attributions as a Bridge
 
-The verifiability paper was about checking attributions. This companion paper asks what makes an attribution faithful in the first place. {% include references/cite.html key="NEURIPS2023_89beb2a3" %} The authors identify the **distractor hypothesis**: standard methods fail because the model itself is not robust to erasure of non-discriminative features. A discriminative attribution assigns high scores only to features that are both necessary and sufficient for the model's decision, ignoring correlated but irrelevant distractors. The paper formalises a signal-distractor decomposition as a ground-truth framework: features are partitioned into those carrying discriminative signal and those that are noise or accidental correlates.
+The verifiability paper was about checking attributions. This companion paper asks what makes an attribution faithful in the first place. {% include references/cite.html key="NEURIPS2023_89beb2a3" %} The authors identify the **distractor hypothesis**: standard methods fail because the model itself is not robust to erasure of non-discriminative features. A discriminative attribution assigns high scores only to features that are both necessary and sufficient for the decision of the model, ignoring correlated but irrelevant distractors. The paper formalises a signal-distractor decomposition as a ground-truth framework: features are partitioned into those carrying discriminative signal and those that are noise or accidental correlates.
 
 Distractor Erasure Tuning (DiET) adapts pre-trained black-box models to become robust against distractor removal. The training objective alternates between mask learning (which features are distractors for this input?) and model distillation (how to preserve predictions while achieving erasure robustness?). After DiET adaptation, gradient-based methods such as GradCAM and Integrated Gradients achieve significantly higher Intersection over Union with ground-truth masks. Prediction agreement between adapted and original models remains above 0.975. The model remains a black box in deployment, but its behaviour under perturbation has been shaped so that standard methods now produce faithful explanations. The paper does not require new explanation methods. It changes the model to make existing methods work.
 
-An additional finding worth highlighting: DiET resists adversarial gradient manipulation even though it does not directly optimise for gradient robustness. Methods such as SmoothGrad and GradCAM degrade severely under adversarial attribution attacks (Heo et al., 2019); DiET's attributions remain stable. Q-robustness, the property of maintaining predictions under feature removal, incidentally confers protection against a different threat model entirely.
+An additional finding worth highlighting: DiET resists adversarial gradient manipulation even though it does not directly optimise for gradient robustness. Methods such as SmoothGrad and GradCAM degrade severely under adversarial attribution attacks (Heo et al., 2019); the attributions of DiET remain stable. Q-robustness, the property of maintaining predictions under feature removal, incidentally confers protection against a different threat model entirely.
 
 > **Design principle:** The problem is not the attribution method. The problem is the model. You cannot fix explanation quality without modifying what is being explained.
 
@@ -135,7 +139,7 @@ The three papers share a deeper mathematical connection than is immediately appa
 
 ### A live debate, not a settled one
 
-The three papers present a coherent critique, but they represent one side of an active academic debate. A dissenting position holds that the impossibility result, while formally correct, applies most forcefully to toy settings with extreme OOD sensitivity, and that practitioners using SHAP in well-engineered pipelines with domain-validated features often obtain stable, practically useful attributions. Work by Rudin (2019) and others argues for inherent interpretability as the primary path, suggesting that post-hoc methods should be avoided entirely in high-stakes settings rather than patched through model adaptation. The Bhalla papers' model-centric turn offers a third way, but neither side has yet produced the large-scale, multi-domain evidence needed to resolve the debate. This series aims to inform, not adjudicate.
+The three papers present a coherent critique, but they represent one side of an active academic debate. A dissenting position holds that the impossibility result, while formally correct, applies most forcefully to toy settings with extreme OOD sensitivity, and that practitioners using SHAP in well-engineered pipelines with domain-validated features often obtain stable, practically useful attributions. Rudin (2019) {% include references/cite.html key="rudin2019stop" %} argues for inherent interpretability as the primary path, suggesting that post-hoc methods should be avoided entirely in high-stakes settings rather than patched through model adaptation. The model-centric turn in the Bhalla papers (Bhalla et al., 2023a {% include references/cite.html key="NEURIPS2023_89beb2a3" %}; 2023b {% include references/cite.html key="bhalla2023verifiable" %}) offers a third way, but neither side has yet produced the large-scale, multi-domain evidence needed to resolve the debate. This series aims to inform, not adjudicate.
 
 ### Remaining open questions
 
@@ -159,7 +163,7 @@ Because the impossibility result applies to checking any individual attribution,
 
 ### Does the Janzing critique apply to TreeSHAP?
 
-TreeSHAP uses conditional expectations by exploiting the tree structure to compute them exactly. Janzing's critique applies: conditional SHAP assigns non-zero attribution to features that are correlated with the target but causally irrelevant. Whether this is acceptable depends on whether the user wants a causal or predictive decomposition of the model's output. This is a distinction the paper argues many practitioners do not recognise.
+TreeSHAP uses conditional expectations by exploiting the tree structure to compute them exactly. Janzing's critique applies: conditional SHAP assigns non-zero attribution to features that are correlated with the target but causally irrelevant. Whether this is acceptable depends on whether the user wants a causal or predictive decomposition of the output of the model. This is a distinction the paper argues many practitioners do not recognise.
 
 ### Is VerT compatible with DiET?
 
@@ -169,9 +173,9 @@ The two methods are complementary. DiET makes models robust to distractor remova
 
 No. The proof assumes a black-box model where the internal decision boundary cannot be inspected. Decision trees with few leaves, sparse linear models, and rule-based systems are verifiable by construction because their decision logic is transparent. This is a direct argument for inherent interpretability in high-stakes applications.
 
-### How do these foundational critiques relate to the EU AI Act's explainability requirements?
+### How do these foundational critiques relate to the explainability requirements of the EU AI Act?
 
-The EU AI Act requires that high-risk AI systems provide meaningful explanations of their decisions. The impossibility result raises a compliance question: if a standard black-box model's attributions cannot be verified, can they constitute a "meaningful explanation" under the regulation? This tension is unresolved in the legal literature and is likely to be tested as enforcement begins.
+The EU AI Act requires that high-risk AI systems provide meaningful explanations of their decisions. The impossibility result raises a compliance question: if the attributions of a standard black-box model cannot be verified, can they constitute a "meaningful explanation" under the regulation? This tension is unresolved in the legal literature and is likely to be tested as enforcement begins.
 
 ---
 
@@ -183,7 +187,7 @@ The next question, covered in the [articles that follow](/measuring-feature-attr
 
 ---
 
-_Part 1 of a series on feature attribution, explainability, and interpretability. Technical and educational content. Not legal, regulatory, or procurement advice. Claims bounded to the cited papers' own reported results unless explicitly stated otherwise._
+_Part 1 of a series on feature attribution, explainability, and interpretability. Technical and educational content. Not legal, regulatory, or procurement advice. Claims bounded to the results reported in the cited papers unless explicitly stated otherwise._
 
 <details markdown="1" class="appendix-callout group">
 {% include appendix-summary.html title="Technical Appendix" %}
@@ -198,7 +202,7 @@ _Part 1 of a series on feature attribution, explainability, and interpretability
 
 ### Author and Source Credibility
 
-Two of the three papers appear in top-tier venues: NeurIPS (DiET) and AISTATS (Janzing). The VerT paper was presented at the ICML 2023 Workshop on Interpretable Machine Learning in Healthcare (IMLH), a more specialised venue. Bhalla et al. are from Harvard and the University of Chicago; Janzing et al. are from the Max Planck Institute for Intelligent Systems. All three papers have been cited as foundational works in subsequent XAI literature.
+Two of the three papers appear in top-tier venues: NeurIPS (DiET) and AISTATS (Janzing). The VerT paper was presented at the ICML 2023 Workshop on Interpretable Machine Learning in Healthcare (IMLH), a more specialised venue. Bhalla, Srinivas, and Lakkaraju are from Harvard University; Janzing et al. were at Amazon Research Tübingen. All three papers have been cited as foundational works in subsequent XAI literature.
 
 ### Corpus Reviewed
 
@@ -223,19 +227,19 @@ Two of the three papers appear in top-tier venues: NeurIPS (DiET) and AISTATS (J
 
 <dl>
   <dt><dfn>Shapley value</dfn></dt>
-  <dd>A solution concept from cooperative game theory that distributes the total value of a coalition among its members based on each member's marginal contribution, averaged over all possible coalitions.</dd>
+  <dd>A solution concept from cooperative game theory that distributes the total value of a coalition among its members based on the marginal contribution of each member, averaged over all possible coalitions.</dd>
 
   <dt><dfn>Sensitivity axiom</dfn></dt>
   <dd>The requirement that a feature that never appears in any optimal coalition (and thus never affects the prediction in any context) should receive zero attribution, analogous to the dummy player axiom in game theory.</dd>
 
   <dt><dfn>Distractor feature</dfn></dt>
-  <dd>A feature that is correlated with the target in the training data but is not part of the model's actual decision boundary, causing attribution methods to assign importance to it spuriously.</dd>
+  <dd>A feature that is correlated with the target in the training data but is not part of the actual decision boundary of the model, causing attribution methods to assign importance to it spuriously.</dd>
 
   <dt><dfn>Out-of-distribution (OOD) sensitivity</dfn></dt>
   <dd>The tendency of machine learning models to produce unreliable outputs on inputs that fall outside their training distribution, which is the root cause of the verifiability impossibility.</dd>
 
   <dt><dfn>Q-robustness</dfn></dt>
-  <dd>A property introduced by Bhalla et al. where a model's prediction remains unchanged when non-discriminative (distractor) features are removed, characterised by <em>Q</em> levels corresponding to the fraction of features a model can lose without changing its output.</dd>
+  <dd>A property introduced by Bhalla et al. where the prediction of a model remains unchanged when non-discriminative (distractor) features are removed, characterised by <em>Q</em> levels corresponding to the fraction of features a model can lose without changing its output.</dd>
 </dl>
 
 ### Evidence Maturity Map

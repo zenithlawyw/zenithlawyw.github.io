@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-06-27T14:15:45Z"
-total_candidates: 1030
+generated_at: "2026-06-27T15:51:17Z"
+total_candidates: 1031
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -3089,6 +3089,22 @@ candidates:
         url: "/foundations-interpretable-machine-learning"
       - title: "Explainability in Practice: Domains, Evaluation, and Governance"
         url: "/explainability-practice-domains-evaluation-governance"
+    related_pages: []
+  - term: Theoretical Foundations
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
+        url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
+      - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+        url: "/feature-attribution-foundations-limits-verifiability"
     related_pages: []
   - term: Uci Har
     status: candidate

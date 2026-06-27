@@ -172,7 +172,7 @@ The hybrid approach segments the network into zones:
 
 ### TLS 1.3 PQC Integration
 
-TLS 1.3's extensible design supports PQC integration through two mechanisms:
+The extensible design of TLS 1.3 supports PQC integration through two mechanisms:
 
 - **`key_share` extension:** Carries PQC KEM ciphertexts alongside or instead of classical ECDH shares
 - **`signature_algorithms` extension:** Advertises support for PQC digital signatures (ML-DSA, SLH-DSA)
@@ -269,7 +269,7 @@ There is no typical case yet. Migration timelines depend on codebase size, crypt
 
 ### Can TLS 1.3 support PQC without protocol changes?
 
-Yes. TLS 1.3 was designed with extensibility in mind; the `key_share` and `signature_algorithms` extensions can carry PQC KEM ciphertexts and digital signatures within the existing handshake. No protocol redesign is required. This is one of PQC's genuine practical advantages: the transport layer can evolve without breaking the protocol itself.
+Yes. TLS 1.3 was designed with extensibility in mind; the `key_share` and `signature_algorithms` extensions can carry PQC KEM ciphertexts and digital signatures within the existing handshake. No protocol redesign is required. This is one of the genuine practical advantages of PQC: the transport layer can evolve without breaking the protocol itself.
 
 ### What programming languages does automated PQC code migration cover?
 

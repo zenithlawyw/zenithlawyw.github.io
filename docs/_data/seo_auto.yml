@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-06-27T14:15:55Z"
+generated_at: "2026-06-27T15:51:36Z"
 signal_weights:
   title: 3
   categories: 5
@@ -24,9 +24,9 @@ keywords:
   - evaluation
   - deployment
   - rag
-  - model
   - artificial
   - intelligence
+  - model
   - technical
   - lightning
   - practical
@@ -106,11 +106,11 @@ keywords:
   - agentic
   - axios
   - series
-  - conclusion
   - protocol
   - scope
   - npm
   - sovereignty
+  - conclusion
   - deep
   - explainable
   - framework
@@ -128,17 +128,18 @@ keywords:
   - map
   - maturity
   - representation
-  - standard
   - attack
   - guidance
   - healthcare
   - operational
   - selection
+  - standards
   - access
   - blockchain
   - calibration
   - critical
   - inference
+  - problem
   - quality
   - context
   - frequently
@@ -149,7 +150,6 @@ keywords:
   - compliance
   - knowledge
   - monitoring
-  - problem
   - processing
   - readiness
   - asked
@@ -292,7 +292,6 @@ key_phrases:
   - theoretical foundations
   - uci har
   - adaptation deep
-  - attribution causal
   - concept-based xai
   - conceptual challenges
   - domain adaptation deep
@@ -316,6 +315,7 @@ key_phrases:
   - maturity map
   - processing retrieval
   - processing retrieval augmented
+  - reference set
 catchwords:
   - governance
   - attribution
@@ -324,9 +324,9 @@ catchwords:
   - learning
   - evaluation
   - deployment
-  - model
   - artificial
   - intelligence
+  - model
   - technical
   - lightning
   - practical
@@ -398,10 +398,10 @@ catchwords:
   - agentic
   - axios
   - series
-  - conclusion
   - protocol
   - scope
   - sovereignty
+  - conclusion
   - explainable
   - framework
   - trust
@@ -417,17 +417,18 @@ catchwords:
   - hybrid
   - maturity
   - representation
-  - standard
   - attack
   - guidance
   - healthcare
   - operational
   - selection
+  - standards
   - access
   - blockchain
   - calibration
   - critical
   - inference
+  - problem
   - quality
   - context
   - frequently
@@ -436,7 +437,6 @@ catchwords:
   - compliance
   - knowledge
   - monitoring
-  - problem
   - processing
   - readiness
   - asked
@@ -571,9 +571,9 @@ search_words:
   - evaluation
   - deployment
   - rag
-  - model
   - artificial
   - intelligence
+  - model
   - technical
   - lightning
   - practical
@@ -724,14 +724,14 @@ search_words:
   - open challenges
 global_questions:
   - question: How do I handle documents that update frequently in a RAG system?
-    answer: "Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. Li et al.'s survey of generative retrieval includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well."
+    answer: "Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. the survey of generative retrieval by Li et al. includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well."
   - question: How do I handle queries that fall outside my RAG corpus scope?
-    answer: 'Implement scope-boundary detection: when all retrieved documents score below a confidence threshold, return an explicit "this question is outside the system''s knowledge scope" response rather than generating an answer. Systems that generate answers for out-of-scope queries are more dangerous than systems that refuse, because the user has no signal that the response is ungrounded.'
+    answer: 'Implement scope-boundary detection: when all retrieved documents score below a confidence threshold, return an explicit "this question is outside the knowledge scope of the system" response rather than generating an answer. Systems that generate answers for out-of-scope queries are more dangerous than systems that refuse, because the user has no signal that the response is ungrounded.'
   - question: How does Casper et al. characterise the limits of black-box audits?
     answer: Casper et al. demonstrate that black-box access alone is insufficient for reliable auditing because adversarial inputs can be designed to produce misleading explanations, model editing can change behaviour without detection from explanation outputs, and the inherent ambiguity of post-hoc explanations means that multiple contradictory narratives can be supported by the same audit data.
   - question: How does Salvi et al. connect explainability and uncertainty in their framework?
     answer: Salvi et al. (2025) argue that explanations without uncertainty quantification are fundamentally incomplete because users cannot distinguish between confident model predictions and those near decision boundaries. Their framework integrates uncertainty estimates into explanation outputs by modifying attribution methods to propagate epistemic and aleatoric uncertainty through the explanation computation.
-  - question: How should I evaluate my RAG system's quality?
+  - question: How should I evaluate the quality of my RAG system?
     answer: Never evaluate retrieval and generation together. Measure retrieval with precision, recall, and MRR. Measure generation separately with accuracy, faithfulness, and relevance. Why insist on this separation? Because a correct final answer can mask broken retrieval. The model might have guessed correctly despite receiving irrelevant context. Without separated metrics, you cannot distinguish luck from engineering.
   - question: How should pilot success thresholds be defined for lightning network implementation guide?
     answer: Define pilot thresholds before go-live. Include settlement latency, recovery time, intervention rate, and audit completeness against a baseline window. Keep targets realistic and tied to business risk, not only technical preference. Review thresholds after each pilot cycle and adjust only with documented evidence.
@@ -779,14 +779,14 @@ global_questions:
     answer: Avoid lock-in by hiding node-specific logic behind internal adapters, versioning schemas explicitly, and keeping external APIs neutral. Do not expose implementation-specific payload fields to clients. This design lets teams swap runtimes or change routing logic later with less disruption and lower migration risk.
   - question: How do tenant-aware and cross-border controls reshape protocol design choices?
     answer: They require explicit policy partitioning, region-aware data handling, and identity federation choices that remain portable across clouds and partner ecosystems. In practice, teams should align MCP tool policy, A2A task authorization, and ACP-compatible gateway policy so tenant and jurisdiction controls remain consistent across every protocol boundary.
-  - question: How do these foundational critiques relate to the EU AI Act's explainability requirements?
-    answer: 'The EU AI Act requires that high-risk AI systems provide meaningful explanations of their decisions. The impossibility result raises a compliance question: if a standard black-box model''s attributions cannot be verified, can they constitute a "meaningful explanation" under the regulation? This tension is unresolved in the legal literature and is likely to be tested as enforcement begins.'
-  - question: How does MOFAE's Pareto front help a practitioner?
-    answer: It forces explicit trade-off decisions. A healthcare deployment might prioritise faithfulness (the explanation must accurately reflect the model) over complexity (the explanation can be long). A consumer-facing product might invert those priorities. MOFAE generates both options and lets the domain expert choose, rather than hiding the trade-off inside a single score.
+  - question: How do these foundational critiques relate to the explainability requirements of the EU AI Act?
+    answer: 'The EU AI Act requires that high-risk AI systems provide meaningful explanations of their decisions. The impossibility result raises a compliance question: if the attributions of a standard black-box model cannot be verified, can they constitute a "meaningful explanation" under the regulation? This tension is unresolved in the legal literature and is likely to be tested as enforcement begins.'
   - question: How does generative information retrieval (GenIR) relate to RAG?
     answer: "RAG and GenIR are complementary strategies. RAG augments generation with retrieved external knowledge using explicit indexes. GenIR replaces index-based retrieval with parametric memory: models directly generate document identifiers or responses from their parameters. Production systems may eventually combine both, but GenIR remains largely experimental."
   - question: How does multi-kernel deep clustering differ from standard deep clustering pipelines for representation learning?
     answer: DMKCN learns adaptive kernel mixes while co-optimizing clustering quality and representation structure. Standard pipelines typically rely on a single fixed kernel or reconstruction-dominated objectives. The payoff is stronger cluster separability; the cost is a heavier tuning burden.
+  - question: How does the Pareto front of MOFAE help a practitioner?
+    answer: It forces explicit trade-off decisions. A healthcare deployment might prioritise faithfulness (the explanation must accurately reflect the model) over complexity (the explanation can be long). A consumer-facing product might invert those priorities. MOFAE generates both options and lets the domain expert choose, rather than hiding the trade-off inside a single score.
   - question: How is one-class SVM different from unsupervised clustering objectives for support vector machine?
     answer: No. One-class SVM estimates support for a target distribution and is mainly used for novelty/outlier detection rather than multi-cluster partitioning.
   - question: How much should I invest in attribution infrastructure?
@@ -888,11 +888,11 @@ global_questions:
   - question: What Practitioners Should Do Now?
     answer: "- Use ccPASTpqc-style tools for initial translation drafts, then review and test manually - Invest in cryptographic dependency inventories before migration (you cannot migrate what you have not catalogued) - Prioritise asymmetric key operations (symmetric encryption requires only key-size increases)"
   - question: What This Means in Practice?
-    answer: "Users of RAG systems tend to trust cited outputs more than uncited ones. This trust is rational but can be exploited by the system's own failure modes. Production systems should: - Never present citations as proof of correctness. Present them as evidence sources that the user can verify. - Implement citation verification checks that compare the generated claim against the retrieved passage, not just confirm that the passage was retrieved."
+    answer: "Users of RAG systems tend to trust cited outputs more than uncited ones. This trust is rational but can be exploited by the failure modes of the system itself. Production systems should: - Never present citations as proof of correctness. Present them as evidence sources that the user can verify. - Implement citation verification checks that compare the generated claim against the retrieved passage, not just confirm that the passage was retrieved."
   - question: What architecture decisions should teams make first for China-compliant cloud services for digital sovereignty China?
     answer: Start by treating jurisdiction as a first-class architectural dimension rather than a deployment-time variable. Define data residency boundaries and key custody paths before selecting providers. Map every service to its legal operator (global vendor, regional partner, customer) and verify that contracts specify obligations for data export, incident escalation, and service-level restoration. Audit communication channels, because alert and notification infrastructure such as SMS can be subject to telecom-level blocking that bypasses application logic. The ten lessons in this article provide an ordered implementation guide, starting with jurisdiction-aware reference architectures in Lesson 1.
   - question: What distinguishes interpretability from explainability in machine learning?
-    answer: Interpretability refers to the degree to which a human can consistently predict a model's output, a property of the model itself (Doshi-Velez and Kim, 2017). Explainability refers to the broader field encompassing both inherently interpretable models and post-hoc methods that generate explanations after training (Barredo Arrieta et al., 2020). The distinction matters because interpretability is a design choice while explainability is a broader research programme.
+    answer: Interpretability refers to the degree to which a human can consistently predict the output of a model, a property of the model itself (Doshi-Velez and Kim, 2017). Explainability refers to the broader field encompassing both inherently interpretable models and post-hoc methods that generate explanations after training (Barredo Arrieta et al., 2020). The distinction matters because interpretability is a design choice while explainability is a broader research programme.
   - question: What do cross-border operational controls require at runtime for lightning network implementation guide?
     answer: Cross-border controls need policy-aware routing, auditable state transitions, clear operator visibility at runtime, and explicit AML/CFT and sanctions controls, including jurisdiction-aware screening, escalation paths, and evidence retention. Teams should be able to explain why a route was selected, which rules were applied, and how exceptions were resolved. Without this visibility, reconciliation cost and governance risk increase quickly under real traffic.
   - question: What does Pawlicki et al. identify as the metrics crisis in XAI evaluation?
@@ -942,7 +942,7 @@ global_questions:
   - question: Can MCP replace A2A for multi-agent collaboration scenarios for MCP vs A2A vs ACP?
     answer: Only in narrow cases. If the remote side is really a bounded capability, MCP can be sufficient. Once the remote side owns task state, asynchronous progress, artifact delivery, or agent discovery, A2A is usually the cleaner fit. If the integration boundary is HTTP-governed and partner-facing, ACP-style contracts may still be the practical edge pattern during A2A migration planning.
   - question: Can TLS 1.3 support PQC without protocol changes?
-    answer: "Yes. TLS 1.3 was designed with extensibility in mind; the `key_share` and `signature_algorithms` extensions can carry PQC KEM ciphertexts and digital signatures within the existing handshake. No protocol redesign is required. This is one of PQC's genuine practical advantages: the transport layer can evolve without breaking the protocol itself."
+    answer: "Yes. TLS 1.3 was designed with extensibility in mind; the `key_share` and `signature_algorithms` extensions can carry PQC KEM ciphertexts and digital signatures within the existing handshake. No protocol redesign is required. This is one of the genuine practical advantages of PQC: the transport layer can evolve without breaking the protocol itself."
   - question: Can general-purpose RAG evaluation metrics catch domain-specific failures?
     answer: No. Amugongo et al. document that general-purpose metrics do not capture clinical safety, language equity, ethical considerations, or regulatory compliance. The same gap applies to legal and financial domains. Domain-specific evaluation criteria must be added on top of general frameworks like RAGAS.
   - question: Can stablecoins replace identity and governance requirements for lightning network cross-border micropayments?
@@ -953,10 +953,6 @@ global_questions:
     answer: No. Privacy, transfer, residency, and sector-specific obligations vary by jurisdiction and industry. Use these practices as technical design guidance and validate legal and regulatory requirements for each operating context.
   - question: Does C3A require a labelled support set at explanation time?
     answer: The contrastive metric compares query descriptors against labelled support set descriptors for each candidate class. This is standard in FSL evaluation and is available whenever the model is deployed for FSL classification.
-  - question: Does Causal SHAP's PC algorithm fail with many features?
-    answer: PC has known scalability issues beyond approximately 50 features due to the exponential growth of conditional independence tests. For high-dimensional settings, alternative causal discovery methods (e.g., NOTEARS for continuous optimisation) would be needed.
-  - question: Does Moreira et al.'s finding about model type generalise beyond counterfactuals?
-    answer: It has not been tested for attribution methods. The finding that different architectures learn similar patterns on well-represented data is plausible for attribution as well, but the counterfactual-specific nature of the benchmark means direct extrapolation is speculative.
   - question: Does contrastive attribution generalise beyond few-shot learning?
     answer: The contrastive principle, attributing by comparing what the model sees in the target class versus competing classes, is general. Future work could apply it to standard classification by using class-conditional feature statistics as the contrast reference, though this has not been systematically tested.
   - question: Does higher random-forest accuracy mean SVM is the wrong model family for support vector machine benchmark?
@@ -967,6 +963,10 @@ global_questions:
     answer: Dehdarirad's results show modest correlation, suggesting that human and automated metrics capture partially overlapping but distinct constructs. Automated metrics are cheaper and more reproducible; human evaluation is necessary for deployment decisions that affect end users.
   - question: Does localization inherently reduce service quality, or expose architecture gaps for digital sovereignty China?
     answer: Localization does not automatically reduce quality. Breakdown appears when architecture, governance, and communication design remain globally uniform while constraints are region-specific. Quality depends on explicit regional control planes and migration safeguards.
+  - question: Does the PC algorithm of Causal SHAP fail with many features?
+    answer: PC has known scalability issues beyond approximately 20 to 30 features in dense settings due to the exponential growth of conditional independence tests. For high-dimensional settings, alternative causal discovery methods (e.g., NOTEARS for continuous optimisation) would be needed.
+  - question: Does the finding of Moreira et al. about model type generalise beyond counterfactuals?
+    answer: It has not been tested for attribution methods. The finding that different architectures learn similar patterns on well-represented data is plausible for attribution as well, but the counterfactual-specific nature of the benchmark means direct extrapolation is speculative.
   - question: Does using Lightning remove jurisdictional compliance obligations for lightning network cross-border micropayments?
     answer: No. Lightning changes how value moves, but it does not remove legal duties. Teams still need to check licensing scope, AML and CFT controls, sanctions screening, and consumer rules for each target market. Treat protocol choice as a technical decision, not a compliance waiver. Nothing in this guidance limits non-waivable statutory rights or mandatory local consumer and data-protection obligations.
   - question: How are explanation methods categorised in the XAI literature?
@@ -980,11 +980,11 @@ global_questions:
   - question: How do deadlock and starvation differ in distributed and AI-serving systems?
     answer: "Deadlock is a cycle in which no involved thread can make progress: every waiting thread holds a resource that another waiting thread needs, so the entire set is permanently blocked. Starvation is a state in which one specific thread is indefinitely denied access while other threads do make progress. Round-robin and first-come-first-serve scheduling prevent starvation; resource ordering, atomic acquisition, and the [Banker's algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm) prevent deadlock. Both pathologies appear in LLM inference queues and software supply chains."
   - question: How does Azure China under 21Vianet differ operationally from global Azure for digital sovereignty China?
-    answer: Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within China's borders and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014.
+    answer: Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within the borders of China and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014.
   - question: How does PROV-ML extend W3C PROV for machine-learning-specific traceability for data provenance?
     answer: "PROV-ML, proposed by Souza et al., extends the base [W3C PROV](https://www.w3.org/TR/prov-overview/) model with [W3C ML Schema](https://www.w3.org/TR/ml-schema/) vocabulary to capture ML-specific concepts: hyperparameters, training runs, dataset versions, and evaluation metrics. It maps four user personas (domain scientists, computational engineers, ML engineers, and provenance specialists) to provenance query patterns. The PROV-ML design was evaluated in an oil and gas seismic classification pipeline using 48 GPUs through the ProvLake system. Whether it generalizes beyond that domain is an open question the paper does not demonstrate. It claims scoped guidance from three papers. It does not claim field-wide representativeness or comparative superiority over the broader lineage tooling ecosystem."
   - question: How does Transformer self-attention work in production-relevant terms for large language models?
-    answer: "The [Transformer](<https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)>) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the model's dimensional space."
+    answer: "The [Transformer](<https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)>) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the dimensional space of the model."
   - question: How does deadlock theory map to software supply chain security failures?
     answer: Supply chain attacks exhibit all four Coffman conditions at the credential and dependency level. A maintainer credential enforces mutual exclusion over package publication; a compromised developer holds a build environment while waiting for npm packages (hold and wait); once a malicious version is downloaded it cannot be universally recalled (no preemption); and transitive dependency cycles create circular wait across build graphs. The [Axios npm supply chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience) article reconstructs a confirmed March 2026 incident through this exact framework.
   - question: How does hardware acceleration change PQC deployment decisions?
@@ -1003,8 +1003,6 @@ global_questions:
     answer: "Because the impossibility result applies to checking any individual attribution, not to evaluating aggregate performance across many examples. Practitioners can still compare methods on benchmarks, track consistency across similar inputs, and use domain expertise to spot implausible explanations. The result says: do not trust any single attribution you cannot cross-validate."
   - question: Is ACP obsolete, or still useful during A2A convergence and migration for MCP vs A2A vs ACP?
     answer: ACP remains important for architecture learning and for existing deployments. New strategy should account for announced convergence and migration direction toward A2A to reduce future integration churn.
-  - question: Is GAPS's reward function architecture-dependent?
-    answer: The reward function operates on model predictions, which are available for any architecture. The paper's restriction to Random Forest is a choice about experimental scope, not a limitation of the method.
   - question: Is RAG sufficient on its own, or should I also fine-tune my model?
     answer: For general knowledge tasks, RAG alone can be effective. For domain-specific applications (healthcare, legal, finance), combining RAG with parameter-efficient fine-tuning produces better results. Meng et al. show that the fusion pattern, where retrieval provides current context and fine-tuning adapts generation style, reaches 90%+ accuracy in domain-specific Q&A.
   - question: Is VerT compatible with DiET?
@@ -1015,6 +1013,8 @@ global_questions:
     answer: No. Circuit fidelity quantifies state accuracy; semantic adequacy quantifies whether task-relevant meaning survives. Conflating the two is a common mistake. Evaluate both, simultaneously.
   - question: Is the reported 91.3% GCN result generalizable beyond its study context for data provenance?
     answer: No. It is a paper-reported result in one evaluation context. This review does not treat it as a universal benchmark.
+  - question: Is the reward function of GAPS architecture-dependent?
+    answer: The reward function operates on model predictions, which are available for any architecture. The restriction of the paper to Random Forest is a choice about experimental scope, not a limitation of the method.
   - question: Is there a standardised benchmark suite for attribution evaluation?
     answer: "No. The papers reviewed here suggest why: domain, architecture, and task interact too strongly for a single benchmark to be universally informative. The field is moving toward task-specific evaluation suites rather than a single leaderboard."
   - question: Is this evidence review enough for final architecture lock-in for lightning network cross-border micropayments?
@@ -1048,11 +1048,11 @@ global_questions:
   - question: What is data provenance in the machine-learning lifecycle, beyond basic lineage?
     answer: Data provenance in machine learning is the record of where training data originated, how it was cleaned and transformed, which model versions it produced, and which individuals or systems were responsible at each stage. Provenance answers the question "why does this model behave this way?" by tracing outputs back to input data and pipeline decisions. All three papers in this review treat provenance as a lifecycle-design requirement rather than a logging afterthought.
   - question: What is priority aging, and how does it apply to LLM inference scheduling for deadlock?
-    answer: Priority aging is a scheduling technique in which a waiting thread's effective priority increases incrementally over time, ensuring low-priority requests are eventually scheduled even when higher-priority requests arrive continuously. It prevents indefinite starvation while preserving responsiveness for high-priority work. Applied to LLM inference queues, priority aging ensures that batch offline jobs are not permanently blocked by interactive user requests, which is the scenario described in the [LLM Inference and Token Schedulers](#llm-inference-and-token-schedulers-priority-starvation) section.
+    answer: Priority aging is a scheduling technique in which the effective priority of a waiting thread increases incrementally over time, ensuring low-priority requests are eventually scheduled even when higher-priority requests arrive continuously. It prevents indefinite starvation while preserving responsiveness for high-priority work. Applied to LLM inference queues, priority aging ensures that batch offline jobs are not permanently blocked by interactive user requests, which is the scenario described in the [LLM Inference and Token Schedulers](#llm-inference-and-token-schedulers-priority-starvation) section.
   - question: What makes post-quantum cryptography different from quantum cryptography?
     answer: They solve different problems with different tools. Post-quantum cryptography uses classical algorithms, running on ordinary hardware, designed to resist attacks from quantum computers. Quantum cryptography (typically QKD) uses the physical properties of photons to distribute keys, which requires specialised quantum hardware and fibre-optic channels. PQC is about upgrading the maths; QKD is about changing the physics. Most organisations will deploy PQC. Very few will deploy QKD.
   - question: What should teams prototype first when protocol boundaries are still unclear for MCP vs A2A vs ACP?
-    answer: Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. Start with ACP-style REST seams if the first integration must pass through existing API gateways or partner-facing HTTP contracts. If the boundary is still ambiguous, model the remote side's autonomy and integration constraints before choosing a primary protocol.
+    answer: Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. Start with ACP-style REST seams if the first integration must pass through existing API gateways or partner-facing HTTP contracts. If the boundary is still ambiguous, model the autonomy and integration constraints of the remote side before choosing a primary protocol.
   - question: When is it safe to scale beyond one pilot corridor for lightning network implementation guide?
     answer: "Scale only after reliability, intervention rate, and reconciliation time stay within agreed thresholds for sustained pilot windows. One good week proves nothing. Require repeated evidence under mixed conditions: peak periods, controlled faults, partial-liquidity scenarios. Only then should additional corridors or higher transaction volumes come into scope."
   - question: Where A2A Is the Better Fit?
@@ -1066,7 +1066,7 @@ global_questions:
   - question: Which governance data should be retained for expansion decisions for lightning network implementation guide?
     answer: Retain policy-change history, failure and recovery evidence, intervention trends by autonomy tier, and reconciliation variance across pilot windows. Keep this data queryable and time-stamped. Expansion decisions are safer when teams can prove control behavior over time instead of relying on anecdotal success.
   - question: Which references in this article best support deep technical LLM understanding for large language models?
-    answer: The strongest technical depth appears in Vaswani et al., Brown et al., and the Stanford, MIT, StatQuest, and Yannic Kilcher materials, because they explain objective functions, attention mechanics, and scaling behavior with explicit procedural detail. Yang et al.'s distillation survey and Ren et al.'s federated foundation model survey add the deployment and compression dimensions.
+    answer: The strongest technical depth appears in Vaswani et al., Brown et al., and the Stanford, MIT, StatQuest, and Yannic Kilcher materials, because they explain objective functions, attention mechanics, and scaling behavior with explicit procedural detail. the distillation survey of Yang et al. and the federated foundation model survey of Ren et al. add the deployment and compression dimensions.
   - question: Which role accelerates reliability fastest in early teams for lightning network implementation guide?
     answer: In my experience, a policy-and-reliability engineer often delivers outsized quality gains in early teams. This role connects payment logic, risk controls, and observability into one operating loop, which means quicker root-cause discovery, cleaner rollback design, and stronger evidence for go or no-go pilot decisions.
   - question: Why RF Wins Here Without Invalidating SVM Theory?
@@ -1098,7 +1098,7 @@ global_questions:
   - question: Which open-source vector database should I choose for RAG?
     answer: Choose **FAISS** for ultra-fast performance during local prototyping. Use **Chroma** for lightweight disk persistence with structured metadata filtering. Transition to **Qdrant** for true large-scale multi-node orchestration requiring advanced data storage, payload management, and horizontal scaling. Start with FAISS or Chroma for development; migrate to Qdrant when you need production persistence and filtering.
   - question: Which references are most useful for implementation-focused engineering teams for large language models?
-    answer: Google Cloud Tech and AI Search provide direct implementation value for teams that need prompt design guidance and user-facing framing for model behavior. Yang et al.'s practitioner survey on ChatGPT and beyond adds empirical guidance on when to use LLMs versus fine-tuned models for specific NLP tasks.
+    answer: Google Cloud Tech and AI Search provide direct implementation value for teams that need prompt design guidance and user-facing framing for model behavior. the practitioner survey of Yang et al. on ChatGPT and beyond adds empirical guidance on when to use LLMs versus fine-tuned models for specific NLP tasks.
   - question: Which sector faces the most urgent quantum threat?
     answer: Energy grid infrastructure. The combination of 30-year-plus operational lifetimes, cascading failure potential, and legacy SCADA authentication makes the case almost self-evident. Encrypted SCADA traffic captured today may well be decryptable within the operational lifespan of grid equipment being installed right now. Mosca's inequality is already in the red for this sector.
   - question: Which threat groups are linked to the axios compromise by major vendors for axios npm supply chain attack?
@@ -1118,7 +1118,7 @@ global_questions:
   - question: Do these protocol recommendations transfer uniformly across UK, EU, US, Canada, Hong Kong, China, and Australia for MCP vs A2A vs ACP?
     answer: No. Privacy, transfer, and sector-specific obligations vary by jurisdiction and industry. Treat protocol guidance as architecture input and confirm legal and regulatory requirements for the specific operating context.
   - question: Does the Janzing critique apply to TreeSHAP?
-    answer: "TreeSHAP uses conditional expectations by exploiting the tree structure to compute them exactly. Janzing's critique applies: conditional SHAP assigns non-zero attribution to features that are correlated with the target but causally irrelevant. Whether this is acceptable depends on whether the user wants a causal or predictive decomposition of the model's output. This is a distinction the paper argues many practitioners do not recognise."
+    answer: "TreeSHAP uses conditional expectations by exploiting the tree structure to compute them exactly. Janzing's critique applies: conditional SHAP assigns non-zero attribution to features that are correlated with the target but causally irrelevant. Whether this is acceptable depends on whether the user wants a causal or predictive decomposition of the output of the model. This is a distinction the paper argues many practitioners do not recognise."
   - question: Is "Post-Quantum Cryptography" the same as "quantum cryptography"?
     answer: No, and the confusion is not academic. Borrelli et al. found that students consistently misread "post-quantum" as meaning "cryptography that uses quantum computers" rather than "cryptography that resists quantum computers." PQC runs on classical hardware with algorithms designed to survive quantum attacks. Quantum cryptography (QKD) uses quantum physics for key distribution. The term "Quantum-Resistant Cryptography" has been suggested as a clearer alternative.
   - question: Is AES-256 safe against quantum computers?
@@ -1130,19 +1130,19 @@ global_questions:
   - question: "Question 2: What does your domain require?"
     answer: "| Domain requirement | Preferred approach | Methods to consider | Methods to avoid | | -------------------------- | --------------------------------------------------- | --------------------------------- | ------------------------------ | | Causal explanation | Causal SHAP (if < 30 features), ExCIR for awareness | Causal SHAP, ExCIR | Standard SHAP, LIME |"
   - question: "Question 3: What evaluation standard applies?"
-    answer: "- **Research publication**: Use at least two evaluation paradigms. Dehdarirad demonstrates one approach: cross model architectures (classical LR/RF vs. transformer-based DistilBERT/RoBERTa) with dataset characteristics (domain, text length, class balance) and evidence types (positive, negative, all). This triply crossed design reveals that SHAP fails for negative evidence under LR but succeeds under RF. This finding is invisible to single-dimension comparisons. Follow this multi-factorial approach rather than reporting aggregate rankings that mask conditional failures. - **Production deployment**: Supplement automated metrics with human evaluation on a representative sample. Use Moreira et al. 's decision-path inspection for any tree-based model. Monitor attribution drift over time using rank correlation between current and baseline feature importance distributions. Design stakeholder-specific explanation formats. The field's default outputs (heatmaps, bar charts) do not serve non-technical audiences. Log method choice, implementation variant (e.g., interventional vs. conditional SHAP), and known limitations for each production prediction. - **Regulatory compliance**: The verification impossibility is a live compliance risk under frameworks such as the EU AI Act's transparency obligations. Use Model Cards for model-level documentation alongside per-explanation metadata recording which method was used, what it assumes, and what it cannot guarantee. Document the rationale for method selection against domain stakes. Accept that individual prediction explanations from black-box models cannot be independently verified and communicate this limitation to auditors and regulators."
+    answer: "- **Research publication**: Use at least two evaluation paradigms. Dehdarirad demonstrates one approach: cross model architectures (classical LR/RF vs. transformer-based DistilBERT/RoBERTa) with dataset characteristics (domain, text length, class balance) and evidence types (positive, negative, all). This triply crossed design reveals that SHAP fails for negative evidence under LR but succeeds under RF. This finding is invisible to single-dimension comparisons. Follow this multi-factorial approach rather than reporting aggregate rankings that mask conditional failures. - **Production deployment**: Supplement automated metrics with human evaluation on a representative sample. Use the decision-path inspection of Moreira et al. for any tree-based model. Monitor attribution drift over time using rank correlation between current and baseline feature importance distributions. Design stakeholder-specific explanation formats. The default outputs of the field (heatmaps, bar charts) do not serve non-technical audiences. Log method choice, implementation variant (e.g., interventional vs. conditional SHAP), and known limitations for each production prediction. - **Regulatory compliance**: The verification impossibility is a live compliance risk under the EU AI Act. High-risk AI systems (Annex III categories such as biometric identification, critical infrastructure, and access to essential services) must provide transparency under Article 13, including meaningful information about the decision logic. Standard black-box attributions cannot meet this standard for individual predictions. Use Model Cards for model-level documentation alongside per-explanation metadata recording which method was used, what it assumes, and what it cannot guarantee. The developing EN ISO/IEC 42001 AI management system standard may provide a structured audit framework, but it is not yet finalised. Document the rationale for method selection against domain stakes. Accept that individual prediction explanations from black-box models cannot be independently verified and communicate this limitation to auditors and regulators."
   - question: Should I fine-tune my LLM in addition to using RAG?
     answer: Do not treat them as mutually exclusive choices. RAG provides an external, volatile memory bank, ideal for real-time, updatable data. Fine-tuning teaches the model domain-specific formatting, structural constraints, and industry vocabulary. For domain-specific deployments where the model needs to adopt specialised citation styles or conventions, add LoRA fine-tuning. Meng et al. show that the combination outperforms either technique alone.
   - question: When correlation awareness is enough?
-    answer: "ExCIR raises an important question that the field has not settled: for which decisions do we need causal attributions, and when is correlation awareness sufficient? The answer depends on the decision's stakes and reversibility. A low-stakes, high-volume decision (e.g., product recommendation) can tolerate correlation-aware explanations because the cost of a misattribution is low. A high-stakes decision (e.g., medical diagnosis, loan denial) demands causal attribution because regulatory and ethical accountability requires answering counterfactual questions about what would have happened if a feature had been different."
+    answer: "ExCIR raises an important question that the field has not settled: for which decisions do we need causal attributions, and when is correlation awareness sufficient? The answer depends on the stakes and reversibility of the decision. A low-stakes, high-volume decision (e.g., product recommendation) can tolerate correlation-aware explanations because the cost of a misattribution is low. A high-stakes decision (e.g., medical diagnosis, loan denial) demands causal attribution because regulatory and ethical accountability requires answering counterfactual questions about what would have happened if a feature had been different."
   - question: When should teams choose fine-tuning versus prompt engineering for LLM workloads for large language models?
-    answer: Fine-tuning updates model weights on a curated dataset, adapting the model's internal representations and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in Yang et al.'s practitioner survey.
+    answer: Fine-tuning updates model weights on a curated dataset, adapting the internal representations of the model and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in the practitioner survey of Yang et al.
   - question: "Hybrid QC/PQC: Defence in Depth, or Wishful Layering?"
     answer: 'Kavitha et al. propose combining quantum key distribution (QKD) with PQC encryption as a defence-in-depth strategy. The logic is appealing: QKD provides information-theoretic security grounded in physics, while PQC provides computational security on classical infrastructure. An attacker who needs to break _both_ faces a higher bar than either defence alone. Kavitha et al. propose combining quantum key distribution (QKD) with PQC encryption as a defence-in-depth strategy. The logic is appealing: QKD provides information-theoretic security grounded in physics, while PQC provides computational security on classical infrastructure. An attacker who needs to break _both_ faces a higher bar than either defence alone. A caveat is warranted here. The Kavitha et al. proposal is conceptual. No prototype was built, no simulation was run, no performance data was collected. The architecture is plausible but entirely unvalidated, and no formal security model exists to prove that the combination actually provides strictly greater security than either component in isolation. The argument that "two layers must be better than one" sounds intuitive, but intuition is not proof.'
   - question: Which controls most effectively prevent deadlock in distributed production systems?
     answer: Four primary strategies correspond directly to breaking the four Coffman conditions. First, enforce a total order on resource acquisition to eliminate circular wait. Second, require atomic multi-resource acquisition or full release before requesting new resources to eliminate hold and wait. Third, implement preemption authority so the system can forcibly reclaim a blocked resource. Fourth, run cycle-detection on the live resource-request graph and reject configurations that would complete a cycle before they execute. Lessons 1 through 3 in this article cover practical implementations for supply chains, cloud platforms, and LLM inference systems.
   - question: Which tooling patterns are most relevant for ML provenance implementation today for data provenance?
-    answer: "Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier, Pina et al. integrate separate lifecycle tools using DNNProv and Chapman et al.'s preprocessing capture, and Souza et al. extend ProvLake with the PROV-ML vocabulary. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem."
+    answer: "Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier, Pina et al. integrate separate lifecycle tools using DNNProv and the preprocessing capture of Chapman et al., and Souza et al. extend ProvLake with the PROV-ML vocabulary. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem."
 posts:
   axios-supply-chain-compromise:
     title: "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on Trust, Provenance, and Resilient Engineering"
@@ -1291,7 +1291,7 @@ posts:
       - question: How can npm teams detect compromised versions in lockfiles, CI logs, and telemetry for axios npm supply chain attack?
         answer: Review your lockfile (`package-lock.json` or `yarn.lock`) for axios version 1.14.1 or 0.30.4, or for `plain-crypto-js@4.2.1`. Check your CI run logs for installations during the 30-31 March 2026 exposure window. Hunt for IOC domains (`sfrclak[.]com`) and platform-specific payload paths (`/Library/Caches/com.apple.act.mond` on macOS, `C:\ProgramData\wt.exe` on Windows, `/tmp/ld.py` on Linux) in EDR telemetry. The full IOC list appears in the Indicators of Compromise table in this article.
   digital-sovereignty-fragmented-cloud-realities:
-    title: "Digital Sovereignty in Practice: Ten Engineering Lessons from China's Cloud Access Fragmentation, 2014 to 2026"
+    title: "Digital Sovereignty in Practice: Ten Engineering Lessons from Cloud Access Fragmentation in China, 2014 to 2026"
     url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     keywords:
       - china
@@ -1339,19 +1339,17 @@ posts:
       - digital sovereignty china
       - sovereignty china
       - data residency
-      - china cloud
       - engineering lessons
       - governance digital
-      - sovereignty cloud
       - digital sovereignty cloud
-      - governance data residency
-      - management governance data
+      - sovereignty cloud
       - risk management governance
       - engineering risk management
       - platform engineering risk
+      - management governance data
+      - governance data residency
       - compliance platform engineering
       - cloud compliance platform
-      - sovereignty cloud compliance
       - governance data
       - management governance
       - risk management
@@ -1359,6 +1357,8 @@ posts:
       - platform engineering
       - compliance platform
       - cloud compliance
+      - digital governance
+      - china cloud
     catchwords:
       - china
       - digital
@@ -1411,17 +1411,17 @@ posts:
       - digital sovereignty china
       - sovereignty china
       - data residency
-      - china cloud
       - engineering lessons
       - governance digital
-      - sovereignty cloud
       - digital sovereignty cloud
-      - governance data residency
-      - management governance data
+      - sovereignty cloud
       - risk management governance
+      - engineering risk management
+      - platform engineering risk
+      - management governance data
     questions:
       - question: How does Azure China under 21Vianet differ operationally from global Azure for digital sovereignty China?
-        answer: Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within China's borders and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014.
+        answer: Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within the borders of China and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014.
       - question: Why are ChatGPT and related AI services restricted in mainland China contexts for digital sovereignty China?
         answer: OpenAI has blocked API and web access for users in mainland China, Hong Kong, and Macau. The block was widely reported in July 2024. Anthropic has applied additional ownership-structure screening beyond geography. Both decisions reflect a combination of US export-control considerations, OpenAI's own usage policies, and the regulatory environment in China. Engineering teams cannot rely on direct OpenAI or Anthropic model access for China-deployed applications and must plan for approved domestic alternatives or allowlisted API routes.
       - question: What architecture decisions should teams make first for China-compliant cloud services for digital sovereignty China?
@@ -1566,19 +1566,19 @@ posts:
       - question: What is a large language model in practical engineering terms for large language models?
         answer: A large language model (LLM) is a neural network trained to predict the next token in a sequence of text. "Large" refers to the parameter count (hundreds of billions for frontier models) and the scale of training data (internet-scale corpora). The key architectural insight, introduced by [Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762) in "Attention Is All You Need," is that self-attention replaces sequential recurrence, allowing parallel computation across all positions in a sequence. This parallelism is what made billion-parameter pretraining tractable.
       - question: How does Transformer self-attention work in production-relevant terms for large language models?
-        answer: "The [Transformer](<https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)>) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the model's dimensional space."
+        answer: "The [Transformer](<https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)>) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the dimensional space of the model."
       - question: What is LLM hallucination, and which controls reduce it in real deployments for large language models?
         answer: Hallucination occurs when an LLM generates plausible-sounding text that is factually wrong, internally inconsistent, or unsupported by any source. The root cause is that LLMs are trained to predict likely next tokens, not to assert truth. Prevention strategies include retrieval-augmented generation (grounding responses in retrieved source documents), contradiction checks against known facts, citation gates that require the model to specify a source for each factual claim, and multi-resolution evaluation that tests factuality separately from fluency. Hallucination is identified as a primary failure mode in both Brown et al. and the synthesis in this article.
       - question: When should teams choose fine-tuning versus prompt engineering for LLM workloads for large language models?
-        answer: Fine-tuning updates model weights on a curated dataset, adapting the model's internal representations and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in Yang et al.'s practitioner survey.
+        answer: Fine-tuning updates model weights on a curated dataset, adapting the internal representations of the model and output distribution toward a specific task. It requires compute, GPU access, and labeled data. Prompt engineering leaves model weights unchanged and instead shapes behavior through the structure and content of the input. Prompts are cheaper to iterate, require no infrastructure beyond inference access, and can include few-shot examples to guide output format. For well-defined narrow tasks with abundant labels, fine-tuned models can outperform prompted ones. For broad or rapidly changing tasks, prompt engineering offers faster iteration. The practical tradeoff is discussed in the practitioner survey of Yang et al.
       - question: What does alignment mean in LLM systems, and what are its practical limits for large language models?
         answer: Alignment is the process of training or constraining an LLM so its outputs are helpful, honest, and harmless relative to intended use. The main techniques include supervised fine-tuning (SFT) on curated question-answer pairs, reinforcement learning from human feedback (RLHF) where human raters score responses and a reward model is trained on those preferences, and constitutional AI methods where the model critiques its own outputs against stated principles. Alignment does not eliminate all failure modes; recent aligned models report improved refusal behavior on specific benchmark suites, not universal reliability. Claims about alignment effectiveness should be evaluated within the reported evaluation setup rather than generalized.
       - question: What core operational message connects the full LLM source synthesis for large language models?
         answer: LLM reliability is an engineering and governance problem, not a presentation problem. Output quality begins with probabilistic sequence modeling and improves through architecture, training stages, and disciplined prompting. Reliable use requires governance controls that address error modes directly and that keep pace with the evolutionary arc from scaling to alignment to efficiency to federated deployment.
       - question: Which references in this article best support deep technical LLM understanding for large language models?
-        answer: The strongest technical depth appears in Vaswani et al., Brown et al., and the Stanford, MIT, StatQuest, and Yannic Kilcher materials, because they explain objective functions, attention mechanics, and scaling behavior with explicit procedural detail. Yang et al.'s distillation survey and Ren et al.'s federated foundation model survey add the deployment and compression dimensions.
+        answer: The strongest technical depth appears in Vaswani et al., Brown et al., and the Stanford, MIT, StatQuest, and Yannic Kilcher materials, because they explain objective functions, attention mechanics, and scaling behavior with explicit procedural detail. the distillation survey of Yang et al. and the federated foundation model survey of Ren et al. add the deployment and compression dimensions.
       - question: Which references are most useful for implementation-focused engineering teams for large language models?
-        answer: Google Cloud Tech and AI Search provide direct implementation value for teams that need prompt design guidance and user-facing framing for model behavior. Yang et al.'s practitioner survey on ChatGPT and beyond adds empirical guidance on when to use LLMs versus fine-tuned models for specific NLP tasks.
+        answer: Google Cloud Tech and AI Search provide direct implementation value for teams that need prompt design guidance and user-facing framing for model behavior. the practitioner survey of Yang et al. on ChatGPT and beyond adds empirical guidance on when to use LLMs versus fine-tuned models for specific NLP tasks.
       - question: What should enterprises implement first after this LLM practice review for large language models?
         answer: Start with a minimal governance baseline. Define approved use cases. Define prompt versioning rules. Define output verification requirements. Define escalation procedures for harmful or ungrounded responses. This sequence converts theory into immediate control coverage.
       - question: How should researchers and educators reuse these materials with legal and ethical care for large language models?
@@ -1716,7 +1716,7 @@ posts:
       - question: How is ML data provenance different from standard data lineage?
         answer: "Data provenance and data lineage both trace data through a pipeline, but they differ in focus. Lineage records where data moved, which inputs fed which outputs. Provenance adds agent information: who or what performed each transformation, under what conditions, for what purpose, and with what authorization. The [W3C PROV](https://www.w3.org/TR/prov-overview/) standard formalizes this distinction using the entity-activity-agent model that Souza et al. extend in PROV-ML."
       - question: Which tooling patterns are most relevant for ML provenance implementation today for data provenance?
-        answer: "Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier, Pina et al. integrate separate lifecycle tools using DNNProv and Chapman et al.'s preprocessing capture, and Souza et al. extend ProvLake with the PROV-ML vocabulary. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem."
+        answer: "Production teams commonly use [MLflow](https://mlflow.org/), [OpenLineage](https://openlineage.io/), [Pachyderm](https://www.pachyderm.com/), and [DVC](https://dvc.org/) for experiment tracking and lineage. The papers reviewed here test different approaches: Karuna et al. build a GNN-based traceability classifier, Pina et al. integrate separate lifecycle tools using DNNProv and the preprocessing capture of Chapman et al., and Souza et al. extend ProvLake with the PROV-ML vocabulary. This review assesses the three research approaches; it does not benchmark them against the production tooling ecosystem."
       - question: How does PROV-ML extend W3C PROV for machine-learning-specific traceability for data provenance?
         answer: "PROV-ML, proposed by Souza et al., extends the base [W3C PROV](https://www.w3.org/TR/prov-overview/) model with [W3C ML Schema](https://www.w3.org/TR/ml-schema/) vocabulary to capture ML-specific concepts: hyperparameters, training runs, dataset versions, and evaluation metrics. It maps four user personas (domain scientists, computational engineers, ML engineers, and provenance specialists) to provenance query patterns. The PROV-ML design was evaluated in an oil and gas seismic classification pipeline using 48 GPUs through the ProvLake system. Whether it generalizes beyond that domain is an open question the paper does not demonstrate. It claims scoped guidance from three papers. It does not claim field-wide representativeness or comparative superiority over the broader lineage tooling ecosystem."
       - question: Is the reported 91.3% GCN result generalizable beyond its study context for data provenance?
@@ -1868,7 +1868,7 @@ posts:
       - question: Which controls most effectively prevent deadlock in distributed production systems?
         answer: Four primary strategies correspond directly to breaking the four Coffman conditions. First, enforce a total order on resource acquisition to eliminate circular wait. Second, require atomic multi-resource acquisition or full release before requesting new resources to eliminate hold and wait. Third, implement preemption authority so the system can forcibly reclaim a blocked resource. Fourth, run cycle-detection on the live resource-request graph and reject configurations that would complete a cycle before they execute. Lessons 1 through 3 in this article cover practical implementations for supply chains, cloud platforms, and LLM inference systems.
       - question: What is priority aging, and how does it apply to LLM inference scheduling for deadlock?
-        answer: Priority aging is a scheduling technique in which a waiting thread's effective priority increases incrementally over time, ensuring low-priority requests are eventually scheduled even when higher-priority requests arrive continuously. It prevents indefinite starvation while preserving responsiveness for high-priority work. Applied to LLM inference queues, priority aging ensures that batch offline jobs are not permanently blocked by interactive user requests, which is the scenario described in the [LLM Inference and Token Schedulers](#llm-inference-and-token-schedulers-priority-starvation) section.
+        answer: Priority aging is a scheduling technique in which the effective priority of a waiting thread increases incrementally over time, ensuring low-priority requests are eventually scheduled even when higher-priority requests arrive continuously. It prevents indefinite starvation while preserving responsiveness for high-priority work. Applied to LLM inference queues, priority aging ensures that batch offline jobs are not permanently blocked by interactive user requests, which is the scenario described in the [LLM Inference and Token Schedulers](#llm-inference-and-token-schedulers-priority-starvation) section.
       - question: How can Coffman-condition analysis improve LLM inference and token-slot design for deadlock?
         answer: "Token slots in LLM inference are mutual-exclusion resources: exactly one inference request occupies a decoding slot during autoregressive generation. In a multi-model pipeline, if Request A holds a slot on Model-X while waiting for Model-Y, and Request B holds Model-Y while waiting for Model-X, all four Coffman conditions hold and a deadlock can form. Prevention requires either a global model-acquisition ordering (always acquire Model-X before Model-Y) or full-release semantics, where Request A must complete and release all slots before acquiring resources on a second model. Lessons 1 and 2 address both strategies."
   support-vector-machine-practical-guide-kernels-margin-tuning:
@@ -2443,7 +2443,7 @@ posts:
       - question: Do these protocol recommendations transfer uniformly across UK, EU, US, Canada, Hong Kong, China, and Australia for MCP vs A2A vs ACP?
         answer: No. Privacy, transfer, and sector-specific obligations vary by jurisdiction and industry. Treat protocol guidance as architecture input and confirm legal and regulatory requirements for the specific operating context.
       - question: What should teams prototype first when protocol boundaries are still unclear for MCP vs A2A vs ACP?
-        answer: Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. Start with ACP-style REST seams if the first integration must pass through existing API gateways or partner-facing HTTP contracts. If the boundary is still ambiguous, model the remote side's autonomy and integration constraints before choosing a primary protocol.
+        answer: Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. Start with ACP-style REST seams if the first integration must pass through existing API gateways or partner-facing HTTP contracts. If the boundary is still ambiguous, model the autonomy and integration constraints of the remote side before choosing a primary protocol.
   building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook:
     title: "Building Agentic Orchestration with MCP, A2A, ACP, LangGraph, and LangChain: A Practical Reference Architecture"
     url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
@@ -3089,28 +3089,28 @@ posts:
     key_phrases:
       - evidence review
       - retrieval-augmented generation
+      - retrieval augmented generation
       - augmented generation
       - retrieval augmented
-      - retrieval augmented generation
       - retrieval literature
       - literature review
       - review natural
       - natural language
       - language processing
-      - augmented generation large
-      - generation large language
-      - large language model
-      - language model retrieval
-      - model retrieval literature
-      - healthcare deployment
+      - artificial intelligence retrieval
       - natural language processing
       - review natural language
       - literature review natural
+      - healthcare deployment
       - retrieval literature review
+      - model retrieval literature
+      - language model retrieval
+      - large language model
+      - generation large language
+      - augmented generation large
       - model retrieval
       - language model
       - large language
-      - generation large
     catchwords:
       - retrieval
       - review
@@ -3161,22 +3161,22 @@ posts:
       - strategy
       - evidence review
       - retrieval-augmented generation
+      - retrieval augmented generation
       - augmented generation
       - retrieval augmented
-      - retrieval augmented generation
       - retrieval literature
       - literature review
       - review natural
       - natural language
       - language processing
-      - augmented generation large
-      - generation large language
+      - artificial intelligence retrieval
+      - natural language processing
     questions:
       - question: What is the most important finding from this RAG evidence review?
         answer: "The distractor effect. Cuconasu et al. discovered that semantically similar documents which do not contain the answer degrade LLM accuracy more than completely random documents. That finding inverts a widespread assumption: high retrieval scores do not guarantee helpful context. They can guarantee the opposite."
       - question: Should I use dense retrieval or sparse retrieval for my RAG system?
         answer: "Both. Neither alone is sufficient. Huang and Huang's survey finds that hybrid retrieval (sparse BM25 combined with dense methods like DPR or Contriever) consistently outperforms either in isolation. The reason is straightforward: BM25 catches exact terminology that embedding models miss; dense retrieval captures semantic relationships that keyword matching cannot."
-      - question: How should I evaluate my RAG system's quality?
+      - question: How should I evaluate the quality of my RAG system?
         answer: Never evaluate retrieval and generation together. Measure retrieval with precision, recall, and MRR. Measure generation separately with accuracy, faithfulness, and relevance. Why insist on this separation? Because a correct final answer can mask broken retrieval. The model might have guessed correctly despite receiving irrelevant context. Without separated metrics, you cannot distinguish luck from engineering.
       - question: Is RAG sufficient on its own, or should I also fine-tune my model?
         answer: For general knowledge tasks, RAG alone can be effective. For domain-specific applications (healthcare, legal, finance), combining RAG with parameter-efficient fine-tuning produces better results. Meng et al. show that the fusion pattern, where retrieval provides current context and fine-tuning adapts generation style, reaches 90%+ accuracy in domain-specific Q&A.
@@ -3327,7 +3327,7 @@ posts:
       - question: What chunk size should I use for RAG document processing?
         answer: Target 256-512 tokens per chunk. Smaller chunks (128 tokens) improve retrieval precision but lose surrounding context. Larger chunks (1024+ tokens) preserve context but reduce retrieval accuracy because irrelevant content dilutes the embedding signal. Use sentence-level splitting with paragraph awareness for the best balance.
       - question: How do I handle documents that update frequently in a RAG system?
-        answer: "Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. Li et al.'s survey of generative retrieval includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well."
+        answer: "Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. the survey of generative retrieval by Li et al. includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well."
       - question: Is cross-encoder re-ranking worth the additional latency?
         answer: Yes. While cross-encoders introduce a minor latency cost (50-200ms depending on hardware), they eliminate high-scoring semantic distractors. Given that distractor contamination can degrade generation accuracy by over 25%, a re-ranking layer is a required safety gate for production RAG, not an optional enhancement.
       - question: Can I use RAG without a GPU?
@@ -3470,7 +3470,7 @@ posts:
       - language processing
     questions:
       - question: What This Means in Practice?
-        answer: "Users of RAG systems tend to trust cited outputs more than uncited ones. This trust is rational but can be exploited by the system's own failure modes. Production systems should: - Never present citations as proof of correctness. Present them as evidence sources that the user can verify. - Implement citation verification checks that compare the generated claim against the retrieved passage, not just confirm that the passage was retrieved."
+        answer: "Users of RAG systems tend to trust cited outputs more than uncited ones. This trust is rational but can be exploited by the failure modes of the system itself. Production systems should: - Never present citations as proof of correctness. Present them as evidence sources that the user can verify. - Implement citation verification checks that compare the generated claim against the retrieved passage, not just confirm that the passage was retrieved."
       - question: What is the most dangerous RAG failure mode?
         answer: "Distractor contamination: retrieving documents that are semantically similar to the query but do not contain the correct answer. Cuconasu et al. show that a single distractor can reduce accuracy by 25%, and this is more harmful than completely random noise because the generator treats high-scoring but misleading documents as authoritative. This evidence comes from NQ-open at small model scales; the effect at larger scales is plausible but untested."
       - question: Does RAG eliminate hallucination?
@@ -3490,7 +3490,7 @@ posts:
       - question: What is the difference between retrieval failure and generation failure in RAG?
         answer: Retrieval failure means the correct document was not retrieved or was ranked below distractors. Generation failure means the correct document was retrieved and included in the prompt, but the model produced an incorrect or unfaithful response. Huang and Huang emphasise that these are independent failure modes requiring separate metrics and diagnostic pipelines.
       - question: How do I handle queries that fall outside my RAG corpus scope?
-        answer: 'Implement scope-boundary detection: when all retrieved documents score below a confidence threshold, return an explicit "this question is outside the system''s knowledge scope" response rather than generating an answer. Systems that generate answers for out-of-scope queries are more dangerous than systems that refuse, because the user has no signal that the response is ungrounded.'
+        answer: 'Implement scope-boundary detection: when all retrieved documents score below a confidence threshold, return an explicit "this question is outside the knowledge scope of the system" response rather than generating an answer. Systems that generate answers for out-of-scope queries are more dangerous than systems that refuse, because the user has no signal that the response is ungrounded.'
   post-quantum-cryptography-theoretical-foundations-reconceptualisation:
     title: "Post-Quantum Cryptography: Theoretical Foundations and Reconceptualisation"
     url: "/post-quantum-cryptography-theoretical-foundations-reconceptualisation"
@@ -3768,7 +3768,7 @@ posts:
       - question: How long does a typical PQC migration take for an enterprise?
         answer: There is no typical case yet. Migration timelines depend on codebase size, cryptographic dependency count, and how deeply classical algorithms are embedded in the architecture. Automated tooling can accelerate the Python fraction, but manual review is still necessary for every converted function. For large enterprises with heterogeneous stacks, expect a multi-year programme. The first step, inventorying cryptographic dependencies, can start immediately and is worth doing regardless of migration timeline.
       - question: Can TLS 1.3 support PQC without protocol changes?
-        answer: "Yes. TLS 1.3 was designed with extensibility in mind; the `key_share` and `signature_algorithms` extensions can carry PQC KEM ciphertexts and digital signatures within the existing handshake. No protocol redesign is required. This is one of PQC's genuine practical advantages: the transport layer can evolve without breaking the protocol itself."
+        answer: "Yes. TLS 1.3 was designed with extensibility in mind; the `key_share` and `signature_algorithms` extensions can carry PQC KEM ciphertexts and digital signatures within the existing handshake. No protocol redesign is required. This is one of the genuine practical advantages of PQC: the transport layer can evolve without breaking the protocol itself."
       - question: What programming languages does automated PQC code migration cover?
         answer: As of the papers reviewed here, only Python, through ccPASTpqc. Production cryptographic code in C, C++, Java, Go, and Rust requires manual migration or purpose-built tooling that does not yet exist. Given that most security-critical cryptographic implementations live in C and C++, the tooling gap is substantial.
       - question: Is "Post-Quantum Cryptography" the same as "quantum cryptography"?
@@ -3927,13 +3927,10 @@ posts:
       - interpretability
       - shapley
       - values
-      - conclusion
       - explainable
       - foundational
       - foundations
-      - model
       - path
-      - standard
       - artificial
       - inference
       - intelligence
@@ -3945,11 +3942,14 @@ posts:
       - apply
       - around
       - bhalla
+      - conclusion
       - constructive
       - hard
       - impossibility
       - janzing
       - lakkaraju
+      - methods
+      - model
       - feature attribution
       - explainable ai
       - shapley values
@@ -3959,27 +3959,27 @@ posts:
       - feature attribution
       - faithfulness verifiability
       - shapley values
-      - feature attribution explainable
-      - attribution explainable xai
+      - values causal
       - explainable xai
       - attribution explainable
-      - values causal
+      - feature attribution explainable
+      - attribution explainable xai
       - shapley values causal
-      - verifiability shapley
-      - causal inference
-      - inference interpretability
-      - faithfulness verifiability shapley
-      - xai faithfulness verifiability
       - explainable xai faithfulness
+      - xai faithfulness verifiability
       - intelligence machine learning
       - artificial intelligence machine
-      - xai faithfulness
+      - faithfulness verifiability shapley
       - verifiability shapley values
-      - machine learning
-      - intelligence machine
-      - artificial intelligence
+      - inference interpretability
+      - causal inference
       - values causal inference
       - causal inference interpretability
+      - intelligence machine
+      - machine learning
+      - artificial intelligence
+      - theoretical foundations
+      - verifiability shapley
     catchwords:
       - attribution
       - verifiability
@@ -3992,12 +3992,9 @@ posts:
       - interpretability
       - shapley
       - values
-      - conclusion
       - explainable
       - foundational
       - foundations
-      - model
-      - standard
       - artificial
       - inference
       - intelligence
@@ -4009,6 +4006,9 @@ posts:
       - apply
       - around
       - bhalla
+      - conclusion
+      - constructive
+      - impossibility
     search_words:
       - attribution
       - verifiability
@@ -4022,34 +4022,34 @@ posts:
       - interpretability
       - shapley
       - values
-      - conclusion
       - explainable
       - foundational
       - foundations
-      - model
+      - path
+      - artificial
       - feature attribution
       - faithfulness verifiability
       - shapley values
-      - feature attribution explainable
-      - attribution explainable xai
+      - values causal
       - explainable xai
       - attribution explainable
-      - values causal
+      - feature attribution explainable
+      - attribution explainable xai
       - shapley values causal
-      - verifiability shapley
-      - causal inference
-      - inference interpretability
+      - explainable xai faithfulness
+      - xai faithfulness verifiability
+      - intelligence machine learning
     questions:
       - question: If standard attributions cannot be verified, why do they remain widely used?
         answer: "Because the impossibility result applies to checking any individual attribution, not to evaluating aggregate performance across many examples. Practitioners can still compare methods on benchmarks, track consistency across similar inputs, and use domain expertise to spot implausible explanations. The result says: do not trust any single attribution you cannot cross-validate."
       - question: Does the Janzing critique apply to TreeSHAP?
-        answer: "TreeSHAP uses conditional expectations by exploiting the tree structure to compute them exactly. Janzing's critique applies: conditional SHAP assigns non-zero attribution to features that are correlated with the target but causally irrelevant. Whether this is acceptable depends on whether the user wants a causal or predictive decomposition of the model's output. This is a distinction the paper argues many practitioners do not recognise."
+        answer: "TreeSHAP uses conditional expectations by exploiting the tree structure to compute them exactly. Janzing's critique applies: conditional SHAP assigns non-zero attribution to features that are correlated with the target but causally irrelevant. Whether this is acceptable depends on whether the user wants a causal or predictive decomposition of the output of the model. This is a distinction the paper argues many practitioners do not recognise."
       - question: Is VerT compatible with DiET?
         answer: The two methods are complementary. DiET makes models robust to distractor removal, improving attribution correctness. VerT ensures that correctness can be checked. A model could be both discriminatively trained and verifiable. The papers were published independently from the same group and share training infrastructure, but the combined effect has not been empirically evaluated.
       - question: Does the impossibility result apply to inherently interpretable models?
         answer: No. The proof assumes a black-box model where the internal decision boundary cannot be inspected. Decision trees with few leaves, sparse linear models, and rule-based systems are verifiable by construction because their decision logic is transparent. This is a direct argument for inherent interpretability in high-stakes applications.
-      - question: How do these foundational critiques relate to the EU AI Act's explainability requirements?
-        answer: 'The EU AI Act requires that high-risk AI systems provide meaningful explanations of their decisions. The impossibility result raises a compliance question: if a standard black-box model''s attributions cannot be verified, can they constitute a "meaningful explanation" under the regulation? This tension is unresolved in the legal literature and is likely to be tested as enforcement begins.'
+      - question: How do these foundational critiques relate to the explainability requirements of the EU AI Act?
+        answer: 'The EU AI Act requires that high-risk AI systems provide meaningful explanations of their decisions. The impossibility result raises a compliance question: if the attributions of a standard black-box model cannot be verified, can they constitute a "meaningful explanation" under the regulation? This tension is unresolved in the legal literature and is likely to be tested as enforcement begins.'
   feature-attribution-exact-computation-higher-order-methods:
     title: Attribution Methods for Exact Computation and Higher-Order Interactions
     url: "/feature-attribution-exact-computation-higher-order-methods"
@@ -4096,29 +4096,29 @@ posts:
       - feedforward neural network
     key_phrases:
       - exact computation
-      - exact computation higher-order
       - computation higher-order
+      - exact computation higher-order
       - higher-order interactions
       - integrated gradients
       - attribution methods
       - computation higher-order interactions
       - multi-objective optimisation
-      - feedforward neural
-      - neural network
-      - feature attribution
       - feedforward neural network
-      - explainable exact computation
-      - attribution explainable exact
-      - higher-order interactions integrated
-      - interactions integrated gradients
-      - integrated gradients shapley
-      - feature attribution explainable
-      - gradients shapley multi-objective
+      - neural network
+      - feedforward neural
+      - feature attribution
+      - optimisation feedforward neural
+      - multi-objective optimisation feedforward
       - shapley multi-objective optimisation
-      - intelligence machine learning
+      - gradients shapley multi-objective
+      - integrated gradients shapley
       - artificial intelligence machine
-      - optimisation feedforward
-      - shapley multi-objective
+      - intelligence machine learning
+      - interactions integrated gradients
+      - higher-order interactions integrated
+      - feature attribution explainable
+      - attribution explainable exact
+      - artificial intelligence
     catchwords:
       - attribution
       - exact
@@ -4167,24 +4167,24 @@ posts:
       - mofae
       - network
       - exact computation
-      - exact computation higher-order
       - computation higher-order
+      - exact computation higher-order
       - higher-order interactions
       - integrated gradients
       - attribution methods
       - computation higher-order interactions
       - multi-objective optimisation
-      - feedforward neural
-      - neural network
-      - feature attribution
       - feedforward neural network
+      - neural network
+      - feedforward neural
+      - feature attribution
     questions:
       - question: Can FACE be extended to transformers?
         answer: Not directly. Transformers use attention mechanisms and layer normalisation, which do not produce piecewise-linear regions in the same way as ReLU-activated feedforward networks. A transformer-specific exact method would require a different mathematical approach.
-      - question: How does MOFAE's Pareto front help a practitioner?
+      - question: How does the Pareto front of MOFAE help a practitioner?
         answer: It forces explicit trade-off decisions. A healthcare deployment might prioritise faithfulness (the explanation must accurately reflect the model) over complexity (the explanation can be long). A consumer-facing product might invert those priorities. MOFAE generates both options and lets the domain expert choose, rather than hiding the trade-off inside a single score.
-      - question: Is GAPS's reward function architecture-dependent?
-        answer: The reward function operates on model predictions, which are available for any architecture. The paper's restriction to Random Forest is a choice about experimental scope, not a limitation of the method.
+      - question: Is the reward function of GAPS architecture-dependent?
+        answer: The reward function operates on model predictions, which are available for any architecture. The restriction of the paper to Random Forest is a choice about experimental scope, not a limitation of the method.
       - question: Does higher-order attribution always improve explanation quality?
         answer: "Not necessarily. Higher-order terms increase interpretability cost: a stakeholder who struggles to understand first-order attributions will be overwhelmed by second-order interaction maps. The value of higher-order attribution depends on whether feature interactions are materially important for the decision. This question can be answered empirically before deploying the explanation method."
       - question: Which of these methods is closest to production-ready?
@@ -4237,27 +4237,27 @@ posts:
       - evaluation metrics
       - attribution evaluation
       - feature attribution
+      - counterfactual benchmark
       - series counterfactual
       - xai evaluation
-      - counterfactual benchmark
       - feature attribution xai
-      - attribution xai
       - benchmarking faithfulness
-      - evaluation benchmarking faithfulness
-      - benchmarking faithfulness series
-      - faithfulness series counterfactual
-      - series counterfactual natural
-      - intelligence machine learning
-      - processing evaluation
-      - language processing
-      - xai evaluation benchmarking
+      - attribution xai
+      - attribution quality
       - natural language
-      - counterfactual natural
+      - language processing
+      - processing evaluation
+      - series counterfactual natural
+      - faithfulness series counterfactual
+      - benchmarking faithfulness series
+      - evaluation benchmarking faithfulness
+      - xai evaluation benchmarking
       - attribution xai evaluation
-      - faithfulness series
-      - evaluation benchmarking
-      - counterfactual natural language
+      - intelligence machine learning
       - artificial intelligence machine
+      - processing evaluation metrics
+      - language processing evaluation
+      - natural language processing
     catchwords:
       - evaluation
       - attribution
@@ -4308,19 +4308,19 @@ posts:
       - evaluation metrics
       - attribution evaluation
       - feature attribution
+      - counterfactual benchmark
       - series counterfactual
       - xai evaluation
-      - counterfactual benchmark
       - feature attribution xai
-      - attribution xai
       - benchmarking faithfulness
-      - evaluation benchmarking faithfulness
-      - benchmarking faithfulness series
-      - faithfulness series counterfactual
+      - attribution xai
+      - attribution quality
+      - natural language
+      - language processing
     questions:
       - question: Can WAE and RExQUAL be used together?
         answer: Yes, they measure different things. WAE evaluates against data properties; RExQUAL evaluates against discovered rules. A method that scores well on both provides convergent evidence of quality.
-      - question: Does Moreira et al.'s finding about model type generalise beyond counterfactuals?
+      - question: Does the finding of Moreira et al. about model type generalise beyond counterfactuals?
         answer: It has not been tested for attribution methods. The finding that different architectures learn similar patterns on well-represented data is plausible for attribution as well, but the counterfactual-specific nature of the benchmark means direct extrapolation is speculative.
       - question: Is there a standardised benchmark suite for attribution evaluation?
         answer: "No. The papers reviewed here suggest why: domain, architecture, and task interact too strongly for a single benchmark to be universally informative. The field is moving toward task-specific evaluation suites rather than a single leaderboard."
@@ -4374,29 +4374,29 @@ posts:
       - few-shot learning
     key_phrases:
       - causal shap
-      - attribution causal
       - few-shot learning
-      - causal discovery
       - feature attribution
+      - causal discovery
+      - attribution causal
       - contrastive attribution
       - correlation-aware attribution
-      - attribution causal shap
-      - attribution feature
-      - correlation-aware attribution causal
-      - discovery xai
       - correlation problem
+      - correlation-aware attribution causal
       - causal discovery xai
-      - contrastive cross-class
-      - xai explainable contrastive
-      - discovery xai explainable
-      - artificial intelligence machine
-      - intelligence machine learning
-      - learning causal discovery
-      - few-shot learning causal
-      - feature attribution causal
-      - shap few-shot learning
-      - causal shap few-shot
+      - attribution feature
+      - discovery xai
+      - causal inference correlation-aware
       - inference correlation-aware attribution
+      - intelligence machine learning
+      - attribution causal shap
+      - causal shap few-shot
+      - shap few-shot learning
+      - few-shot learning causal
+      - learning causal discovery
+      - artificial intelligence machine
+      - discovery xai explainable
+      - xai explainable contrastive
+      - attribution causal inference
     catchwords:
       - attribution
       - causal
@@ -4446,26 +4446,26 @@ posts:
       - cross-class
       - dependency
       - causal shap
-      - attribution causal
       - few-shot learning
-      - causal discovery
       - feature attribution
+      - causal discovery
+      - attribution causal
       - contrastive attribution
       - correlation-aware attribution
-      - attribution causal shap
-      - attribution feature
-      - correlation-aware attribution causal
-      - discovery xai
       - correlation problem
+      - correlation-aware attribution causal
+      - causal discovery xai
+      - attribution feature
+      - discovery xai
     questions:
       - question: What each paper assumes about the problem?
         answer: "| Method | Problem framed as | Solution approach | Causal claim | | ----------- | ------------------------------------------------- | ------------------------------ | ------------------------------ | | Causal SHAP | Need for causal graph → automation | PC algorithm + IDA | Yes: interventional |"
       - question: When correlation awareness is enough?
-        answer: "ExCIR raises an important question that the field has not settled: for which decisions do we need causal attributions, and when is correlation awareness sufficient? The answer depends on the decision's stakes and reversibility. A low-stakes, high-volume decision (e.g., product recommendation) can tolerate correlation-aware explanations because the cost of a misattribution is low. A high-stakes decision (e.g., medical diagnosis, loan denial) demands causal attribution because regulatory and ethical accountability requires answering counterfactual questions about what would have happened if a feature had been different."
+        answer: "ExCIR raises an important question that the field has not settled: for which decisions do we need causal attributions, and when is correlation awareness sufficient? The answer depends on the stakes and reversibility of the decision. A low-stakes, high-volume decision (e.g., product recommendation) can tolerate correlation-aware explanations because the cost of a misattribution is low. A high-stakes decision (e.g., medical diagnosis, loan denial) demands causal attribution because regulatory and ethical accountability requires answering counterfactual questions about what would have happened if a feature had been different."
       - question: Can ExCIR be extended to instance-level attribution?
         answer: "The paper focuses on global attribution: a single score per feature for the entire dataset. Instance-level attribution would require recomputing the co-movement measure per-instance, which would eliminate the computational advantage over SHAP."
-      - question: Does Causal SHAP's PC algorithm fail with many features?
-        answer: PC has known scalability issues beyond approximately 50 features due to the exponential growth of conditional independence tests. For high-dimensional settings, alternative causal discovery methods (e.g., NOTEARS for continuous optimisation) would be needed.
+      - question: Does the PC algorithm of Causal SHAP fail with many features?
+        answer: PC has known scalability issues beyond approximately 20 to 30 features in dense settings due to the exponential growth of conditional independence tests. For high-dimensional settings, alternative causal discovery methods (e.g., NOTEARS for continuous optimisation) would be needed.
       - question: Does C3A require a labelled support set at explanation time?
         answer: The contrastive metric compares query descriptors against labelled support set descriptors for each candidate class. This is standard in FSL evaluation and is available whenever the model is deployed for FSL classification.
       - question: How should a practitioner choose between Causal SHAP and ExCIR?
@@ -4524,23 +4524,23 @@ posts:
       - feature selection
       - energy forecasting
       - healthcare medical imaging
-      - healthcare medical
-      - governance feature
       - applications practical guidance
       - domain applications practical
+      - healthcare medical
       - practical guidance
       - applications practical
-      - attribution method
+      - governance feature
       - xai deployment
-      - forecasting healthcare medical
-      - artificial intelligence machine
-      - intelligence machine learning
-      - machine learning software
-      - energy forecasting healthcare
+      - attribution method
       - guidance energy forecasting
-      - learning software engineering
       - practical guidance energy
-      - feature attribution xai
+      - selection domain applications
+      - feature selection domain
+      - governance feature selection
+      - learning governance feature
+      - machine learning governance
+      - production machine learning
+      - deployment production machine
     catchwords:
       - attribution
       - feature
@@ -4596,18 +4596,18 @@ posts:
       - feature selection
       - energy forecasting
       - healthcare medical imaging
-      - healthcare medical
-      - governance feature
       - applications practical guidance
       - domain applications practical
+      - healthcare medical
       - practical guidance
+      - applications practical
     questions:
       - question: "Question 1: What model access do you have?"
         answer: "| Access level | Available methods | Limitation | | ------------------------------ | ------------------------------------------------------ | ------------------------------ | | Black-box (API only) | LIME, SHAP (KernelSHAP), GAPS, MOFAE | Cannot use FACE, ExCIR, or C3A |"
       - question: "Question 2: What does your domain require?"
         answer: "| Domain requirement | Preferred approach | Methods to consider | Methods to avoid | | -------------------------- | --------------------------------------------------- | --------------------------------- | ------------------------------ | | Causal explanation | Causal SHAP (if < 30 features), ExCIR for awareness | Causal SHAP, ExCIR | Standard SHAP, LIME |"
       - question: "Question 3: What evaluation standard applies?"
-        answer: "- **Research publication**: Use at least two evaluation paradigms. Dehdarirad demonstrates one approach: cross model architectures (classical LR/RF vs. transformer-based DistilBERT/RoBERTa) with dataset characteristics (domain, text length, class balance) and evidence types (positive, negative, all). This triply crossed design reveals that SHAP fails for negative evidence under LR but succeeds under RF. This finding is invisible to single-dimension comparisons. Follow this multi-factorial approach rather than reporting aggregate rankings that mask conditional failures. - **Production deployment**: Supplement automated metrics with human evaluation on a representative sample. Use Moreira et al. 's decision-path inspection for any tree-based model. Monitor attribution drift over time using rank correlation between current and baseline feature importance distributions. Design stakeholder-specific explanation formats. The field's default outputs (heatmaps, bar charts) do not serve non-technical audiences. Log method choice, implementation variant (e.g., interventional vs. conditional SHAP), and known limitations for each production prediction. - **Regulatory compliance**: The verification impossibility is a live compliance risk under frameworks such as the EU AI Act's transparency obligations. Use Model Cards for model-level documentation alongside per-explanation metadata recording which method was used, what it assumes, and what it cannot guarantee. Document the rationale for method selection against domain stakes. Accept that individual prediction explanations from black-box models cannot be independently verified and communicate this limitation to auditors and regulators."
+        answer: "- **Research publication**: Use at least two evaluation paradigms. Dehdarirad demonstrates one approach: cross model architectures (classical LR/RF vs. transformer-based DistilBERT/RoBERTa) with dataset characteristics (domain, text length, class balance) and evidence types (positive, negative, all). This triply crossed design reveals that SHAP fails for negative evidence under LR but succeeds under RF. This finding is invisible to single-dimension comparisons. Follow this multi-factorial approach rather than reporting aggregate rankings that mask conditional failures. - **Production deployment**: Supplement automated metrics with human evaluation on a representative sample. Use the decision-path inspection of Moreira et al. for any tree-based model. Monitor attribution drift over time using rank correlation between current and baseline feature importance distributions. Design stakeholder-specific explanation formats. The default outputs of the field (heatmaps, bar charts) do not serve non-technical audiences. Log method choice, implementation variant (e.g., interventional vs. conditional SHAP), and known limitations for each production prediction. - **Regulatory compliance**: The verification impossibility is a live compliance risk under the EU AI Act. High-risk AI systems (Annex III categories such as biometric identification, critical infrastructure, and access to essential services) must provide transparency under Article 13, including meaningful information about the decision logic. Standard black-box attributions cannot meet this standard for individual predictions. Use Model Cards for model-level documentation alongside per-explanation metadata recording which method was used, what it assumes, and what it cannot guarantee. The developing EN ISO/IEC 42001 AI management system standard may provide a structured audit framework, but it is not yet finalised. Document the rationale for method selection against domain stakes. Accept that individual prediction explanations from black-box models cannot be independently verified and communicate this limitation to auditors and regulators."
       - question: Should I use SHAP or LIME as my default?
         answer: The evidence in this series shows both have known failure modes. SHAP conflates correlation with causation (Janzing, Ng). LIME underperforms on time series (Troncoso-García). Use the decision framework above to select based on your specific constraints, and always validate with at least one metric from a different paradigm.
       - question: How should attribution be integrated into an ML pipeline?
@@ -4667,26 +4667,26 @@ posts:
       - conceptual challenges
       - evaluation conceptual challenges
       - evaluation conceptual
+      - xai foundations interpretability
+      - doshi-velez kim three-tier
       - kim three-tier
       - doshi-velez kim
       - xai foundations
       - foundations interpretability
-      - doshi-velez kim three-tier
-      - xai foundations interpretability
-      - explainable evaluation conceptual
-      - evaluation framework
-      - three-tier evaluation
-      - interpretability explainable evaluation
-      - foundations interpretability explainable
-      - knowledge catalogue
-      - interpretable xai foundations
-      - machine learning artificial
+      - intelligence machine learning
+      - artificial intelligence machine
       - learning artificial intelligence
+      - machine learning artificial
+      - explainable evaluation conceptual
+      - three-tier evaluation
+      - evaluation framework
+      - knowledge catalogue
       - explainable evaluation
       - interpretability explainable
       - interpretable xai
-      - intelligence machine learning
+      - interpretability explainable evaluation
       - intelligence machine
+      - artificial intelligence
     catchwords:
       - interpretability
       - evaluation
@@ -4738,17 +4738,17 @@ posts:
       - conceptual challenges
       - evaluation conceptual challenges
       - evaluation conceptual
+      - xai foundations interpretability
+      - doshi-velez kim three-tier
       - kim three-tier
       - doshi-velez kim
       - xai foundations
       - foundations interpretability
-      - doshi-velez kim three-tier
-      - xai foundations interpretability
-      - explainable evaluation conceptual
-      - evaluation framework
+      - intelligence machine learning
+      - artificial intelligence machine
     questions:
       - question: What distinguishes interpretability from explainability in machine learning?
-        answer: Interpretability refers to the degree to which a human can consistently predict a model's output, a property of the model itself (Doshi-Velez and Kim, 2017). Explainability refers to the broader field encompassing both inherently interpretable models and post-hoc methods that generate explanations after training (Barredo Arrieta et al., 2020). The distinction matters because interpretability is a design choice while explainability is a broader research programme.
+        answer: Interpretability refers to the degree to which a human can consistently predict the output of a model, a property of the model itself (Doshi-Velez and Kim, 2017). Explainability refers to the broader field encompassing both inherently interpretable models and post-hoc methods that generate explanations after training (Barredo Arrieta et al., 2020). The distinction matters because interpretability is a design choice while explainability is a broader research programme.
       - question: What are the main dimensions of interpretability taxonomies in the literature?
         answer: "The literature converges on several recurring dimensions: intrinsic versus post-hoc methods, model-specific versus model-agnostic approaches, and local versus global explanations (Barredo Arrieta et al., 2020). These dimensions are not orthogonal and methods can combine aspects of multiple categories. The field has not yet settled on a single standardised taxonomy but the building blocks are widely agreed."
       - question: How does Doshi-Velez and Kim's three-tier framework structure XAI evaluation?
@@ -4802,30 +4802,30 @@ posts:
       - explanation techniques
       - gradient attribution
     key_phrases:
-      - explanation methods
       - concept-based xai
+      - explanation methods
       - machine learning
       - axiomatic foundations
       - methods post-hoc
-      - xai methods post-hoc
-      - attribution lrp
-      - gradient attribution
       - techniques gradient
       - explanation techniques
+      - gradient attribution
       - deep learning
-      - gradient attribution lrp
-      - techniques gradient attribution
-      - validation tools
+      - attribution lrp
       - xai methods
-      - artificial intelligence machine
-      - methods post-hoc explanations
-      - post-hoc explanations model
-      - intelligence machine learning
-      - explanations model interpretability
-      - model interpretability concept-based
+      - validation tools
+      - techniques gradient attribution
+      - gradient attribution lrp
+      - xai methods post-hoc
       - interpretability concept-based xai
       - concept-based xai deep
+      - model interpretability concept-based
       - xai deep learning
+      - deep learning explanation
+      - explanations model interpretability
+      - post-hoc explanations model
+      - methods post-hoc explanations
+      - learning explanation
     catchwords:
       - methods
       - explanation
@@ -4872,18 +4872,18 @@ posts:
       - lrp
       - deep
       - gradient
-      - explanation methods
       - concept-based xai
+      - explanation methods
       - machine learning
       - axiomatic foundations
       - methods post-hoc
-      - xai methods post-hoc
-      - attribution lrp
-      - gradient attribution
       - techniques gradient
       - explanation techniques
+      - gradient attribution
       - deep learning
-      - gradient attribution lrp
+      - attribution lrp
+      - xai methods
+      - validation tools
     questions:
       - question: How are explanation methods categorised in the XAI literature?
         answer: "The dominant taxonomy groups methods into four categories based on their operational mechanism: backpropagation-based (gradients, Integrated Gradients, LRP), perturbation-based (LIME, occlusion, Shapley values), representation-based (activation maximisation, concept activation vectors), and example-based (counterfactuals, prototypes). Each category has different computational requirements and reveals different aspects of model behaviour."

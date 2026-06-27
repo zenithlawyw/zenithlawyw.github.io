@@ -5,7 +5,7 @@ title: "Representation Learning Across Hilbert Spaces: Quantum Semantics, Domain
 author: Zenith Law
 description: "A critical synthesis of recent papers on high-dimensional representation learning, covering quantum-enhanced semantic communications, unsupervised domain adaptation, and deep multi-kernel clustering, with evidence-graded lessons for researchers and practitioners."
 permalink: /representation-learning-hilbert-spaces-quantum-semantics-domain-adaptation-clustering
-intro: "Recent works drawn from quantum communications, natural language processing, domain adaptation, and deep clustering, share a common premise: the geometry of learned representations in high-dimensional spaces determines system performance. This synthesis critically assesses each paper's evidence, identifies cross-cutting patterns, states limitations, and derives scoped lessons for researchers and practitioners."
+intro: "Recent works drawn from quantum communications, natural language processing, domain adaptation, and deep clustering, share a common premise: the geometry of learned representations in high-dimensional spaces determines system performance. This synthesis critically assesses the evidence of each paper, identifies cross-cutting patterns, states limitations, and derives scoped lessons for researchers and practitioners."
 related_posts:
   - title: "Large Language Models in Practice: From the Transformer to the Present Frontier"
     url: /large-language-models-practice-from-transformer-to-present-frontier
@@ -292,7 +292,7 @@ This article is authored by [Zenith Law](/authors/zenith-law/) and synthesises f
   </table>
 </div>
 
-<p>All DOIs listed above are sourced from the respective papers' own metadata and are presented as reported by those sources, without independent DOI-resolution revalidation in this article.</p>
+<p>All DOIs listed above are sourced from the metadata of the respective papers themselves and are presented as reported by those sources, without independent DOI-resolution revalidation in this article.</p>
 
 ### Terminology Definitions
 

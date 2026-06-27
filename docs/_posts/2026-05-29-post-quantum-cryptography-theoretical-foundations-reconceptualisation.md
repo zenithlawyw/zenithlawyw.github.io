@@ -136,7 +136,7 @@ The Rainbow break deserves attention because of what it reveals about the maturi
 
 SIKE (Supersingular Isogeny Key Encapsulation) collapsed even more dramatically. Castryck and Decru broke it "in about one hour on a single core" {% include references/cite.html key="11325571" %} by exploiting torsion-point information in the SIDH protocol, building on a theorem by Kani from 1997. The technical mechanism (a genus-2 Richelot isogeny construction) is less important than the implication: a mathematical observation from over two decades earlier, sitting in the literature unnoticed, contained the seed of a complete break.
 
-What should practitioners take from this? PQC algorithms are young, and the mathematical problems they rely on have received far less adversarial scrutiny than RSA's integer factorisation. Building systems that can swap algorithms without a full redesign is not a nice-to-have. It is a survival requirement.
+What should practitioners take from this? PQC algorithms are young, and the mathematical problems they rely on have received far less adversarial scrutiny than the integer factorisation problem of RSA. Building systems that can swap algorithms without a full redesign is not a nice-to-have. It is a survival requirement.
 
 ## Hardware Acceleration for Code-Based PQC
 
@@ -202,7 +202,7 @@ So algorithm replacement needs to become ordinary. Not an emergency. Not a migra
 
 The old assumption that "one good algorithm is enough" does not hold when confidence in any single algorithm is lower than it was for RSA. Layered defence becomes rational: PQC for computational resistance, QKD where physics-based guarantees are justified by the threat model and budget, forward secrecy to contain the blast radius when a key is compromised, aggressive key rotation to limit exposure windows.
 
-But here is the part that gets less attention than it should. An algorithm's theoretical security means nothing if the implementation leaks timing information through a side channel, or the key management system stores secrets in a world-readable file, or the migration process itself introduces a compatibility gap that silently downgrades connections to classical algorithms. PQC algorithm research has outpaced deployment engineering by a wide margin {% include references/cite.html key="11325571" %}. The gap is understandable in a field this young. It is also the gap that will determine whether the transition succeeds or stalls at pilot stage.
+But here is the part that gets less attention than it should. The theoretical security of an algorithm means nothing if the implementation leaks timing information through a side channel, or the key management system stores secrets in a world-readable file, or the migration process itself introduces a compatibility gap that silently downgrades connections to classical algorithms. PQC algorithm research has outpaced deployment engineering by a wide margin {% include references/cite.html key="11325571" %}. The gap is understandable in a field this young. It is also the gap that will determine whether the transition succeeds or stalls at pilot stage.
 
 ## Research Gaps and Open Questions
 
@@ -285,7 +285,7 @@ The hardware acceleration results from He et al. are FPGA-specific with no ASIC 
 <dd>An adversarial strategy of collecting encrypted data today for decryption when quantum computers become available. Makes migration urgency independent of quantum computer timeline.</dd>
 
 <dt><dfn>Crypto-agility</dfn></dt>
-<dd>The architectural property enabling cryptographic algorithms to be replaced without redesigning or redeploying the system. Essential for PQC migration given the field's immaturity.</dd>
+<dd>The architectural property enabling cryptographic algorithms to be replaced without redesigning or redeploying the system. Essential for PQC migration given the immaturity of the field.</dd>
 </dl>
 
 ### C. Source-by-Source Assessment

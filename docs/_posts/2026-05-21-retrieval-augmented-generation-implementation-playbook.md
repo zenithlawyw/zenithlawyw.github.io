@@ -560,7 +560,7 @@ Target 256-512 tokens per chunk. Smaller chunks (128 tokens) improve retrieval p
 
 ### How do I handle documents that update frequently in a RAG system?
 
-Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. Li et al.'s survey of generative retrieval includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well {% include references/cite.html key="10.1145/3722552" %}.
+Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. the survey of generative retrieval by Li et al. includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well {% include references/cite.html key="10.1145/3722552" %}.
 
 ### Is cross-encoder re-ranking worth the additional latency?
 

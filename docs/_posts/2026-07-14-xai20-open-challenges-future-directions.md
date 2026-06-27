@@ -71,7 +71,7 @@ This article is not legal advice.
 
 ### Technical Challenges
 
-**1. Formal definitions.** The field still lacks a universally accepted formal definition of explainability. Barredo Arrieta et al.'s definition is the closest to consensus, but it is descriptive rather than formal. Without formal definitions, mathematical guarantees about explanation quality are impossible.
+**1. Formal definitions.** The field still lacks a universally accepted formal definition of explainability. The definition of Barredo Arrieta et al. is the closest to consensus, but it is descriptive rather than formal. Without formal definitions, mathematical guarantees about explanation quality are impossible.
 
 **2. Evaluation metrics.** The metrics crisis documented by Pawlicki et al. (Article 3) remains unresolved. Over 50 metrics exist, many are redundant, and no standardised evaluation framework has emerged. The XAI 2.0 manifesto calls for community-wide agreement on core evaluation constructs.
 
@@ -85,7 +85,7 @@ This article is not legal advice.
 
 ### Human-Centred Challenges
 
-**7. Cognitive load.** Explanations impose cognitive demands on users that may exceed their processing capacity, particularly in high-stakes environments like clinical decision-making (Ghassemi et al.'s inscrutability challenge).
+**7. Cognitive load.** Explanations impose cognitive demands on users that may exceed their processing capacity, particularly in high-stakes environments like clinical decision-making (the inscrutability challenge of Ghassemi et al.).
 
 **8. Trust calibration.** Explanations can produce both under-trust (users ignore reliable models) and over-trust (users accept unreliable explanations). The goal is calibrated trust: matching user confidence to actual model reliability.
 
@@ -103,7 +103,7 @@ This article is not legal advice.
 
 **14. Philosophy of explanation.** Watson's conceptual critique draws on philosophy of science. The field must engage more deeply with philosophical work on what constitutes a good explanation.
 
-**15. Social science perspectives.** Organisational adoption of XAI (Bhatt et al.'s deployment gap) is a social science question as much as a technical one.
+**15. Social science perspectives.** Organisational adoption of XAI (the deployment gap of Bhatt et al.) is a social science question as much as a technical one.
 
 **16. Legal and regulatory alignment.** The EU AI Act and emerging regulations create requirements that current XAI methods may not satisfy. Legal scholars must collaborate with XAI researchers to operationalise regulatory concepts.
 
@@ -111,7 +111,7 @@ This article is not legal advice.
 
 **17. Operationalising the right to explanation.** GDPR Article 22 and the EU AI Act establish rights to meaningful information about automated decisions. What counts as "meaningful" is undefined, creating legal uncertainty.
 
-**18. Auditing frameworks.** Casper et al.'s access-level framework provides a starting point, but auditing standards for explanation quality do not exist.
+**18. Auditing frameworks.** The access-level framework of Casper et al. provides a starting point, but auditing standards for explanation quality do not exist.
 
 **19. Standardisation.** Unlike software testing or security evaluation, there are no ISO standards for XAI evaluation.
 
@@ -119,7 +119,7 @@ This article is not legal advice.
 
 **20. Longitudinal studies.** Most XAI research evaluates explanations in single-session lab studies. Longitudinal studies tracking how understanding develops over time are almost absent.
 
-**21. Field studies.** Bhatt et al.'s deployment study remains the only empirical characterisation of XAI in practice. More field studies are needed.
+**21. Field studies.** The deployment study of Bhatt et al. remains the only empirical characterisation of XAI in practice. More field studies are needed.
 
 **22. Human-grounded evaluation validation.** Functionally-grounded metrics require validation against human judgement. This validation is almost never performed, meaning the field uses proxy metrics whose relationship to actual interpretability is unknown.
 
@@ -146,11 +146,11 @@ Several challenges require infrastructure that no single discipline can build. T
 
 ### Evaluation as a First-Class Problem
 
-The metrics crisis (challenge 2) connects multiple other challenges. Without reliable evaluation, progress on robustness (3), reproducibility (6), and trust calibration (8) cannot be measured. The XAI 2.0 manifesto's call for evaluation standardisation is the single most actionable recommendation for the field.
+The metrics crisis (challenge 2) connects multiple other challenges. Without reliable evaluation, progress on robustness (3), reproducibility (6), and trust calibration (8) cannot be measured. The call of the XAI 2.0 manifesto for evaluation standardisation is the single most actionable recommendation for the field.
 
 ### Regulatory Engagement
 
-The EU AI Act and emerging regulations in other jurisdictions create both requirements and opportunities. Regulatory engagement can motivate evaluation standards (requiring validated explanations), mandate adequate access levels (Casper et al.'s outside-the-box access), and create demand for field studies (as organisations document their XAI compliance). The risk of regulatory engagement is that it may codify premature standards, locking in methods that the field has not yet properly evaluated.
+The EU AI Act and emerging regulations in other jurisdictions create both requirements and opportunities. Regulatory engagement can motivate evaluation standards (requiring validated explanations), mandate adequate access levels (the outside-the-box access of Casper et al.), and create demand for field studies (as organisations document their XAI compliance). The risk of regulatory engagement is that it may codify premature standards, locking in methods that the field has not yet properly evaluated.
 
 ---
 
@@ -160,7 +160,7 @@ The XAI 2.0 manifesto identifies where the field needs to go. The previous four 
 
 The central challenge is the transition from method-centric to human-centred XAI. This transition requires not only new methods but new evaluation frameworks, new interdisciplinary collaborations, new organisational structures, and new regulatory engagement. It is a generational research programme, not a quick fix.
 
-The five articles in this series have examined what explainability means (Article 1), how current methods work (Article 2), where they fall short (Article 3), how they are applied in practice (Article 4), and where the field needs to go (this article). The unifying message is that explainability is neither solved nor hopeless. It is a young field whose most important questions remain open, and whose progress depends on the field's willingness to confront its limitations honestly.
+The five articles in this series have examined what explainability means (Article 1), how current methods work (Article 2), where they fall short (Article 3), how they are applied in practice (Article 4), and where the field needs to go (this article). The unifying message is that explainability is neither solved nor hopeless. It is a young field whose most important questions remain open, and whose progress depends on the willingness of the field to confront its limitations honestly.
 
 ---
 

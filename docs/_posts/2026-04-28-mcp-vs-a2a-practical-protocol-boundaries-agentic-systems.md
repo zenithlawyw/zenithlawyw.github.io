@@ -184,7 +184,7 @@ The opposite failure mode. If a remote action is basically "query this API" or "
 
 ### Mistake 3: Ignoring different trust boundaries
 
-MCP's safety model centers on user consent and careful exposure of capabilities to the model-facing host {% include references/cite.html key="mcpa2a-2026-ref2" %}. A2A's safety model centers on authenticated inter-agent communication, scoped data access, task authorization, and secure push delivery {% include references/cite.html key="mcpa2a-2026-ref5" %}. These are related, but they are not interchangeable. A system that merges them carelessly can end up weak in both places.
+The safety model of MCP centers on user consent and careful exposure of capabilities to the model-facing host {% include references/cite.html key="mcpa2a-2026-ref2" %}. The safety model of A2A centers on authenticated inter-agent communication, scoped data access, task authorization, and secure push delivery {% include references/cite.html key="mcpa2a-2026-ref5" %}. These are related, but they are not interchangeable. A system that merges them carelessly can end up weak in both places.
 
 ## Enterprise Architecture Considerations
 
@@ -287,7 +287,7 @@ No. Privacy, transfer, and sector-specific obligations vary by jurisdiction and 
 
 ### What should teams prototype first when protocol boundaries are still unclear for MCP vs A2A vs ACP?
 
-Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. Start with ACP-style REST seams if the first integration must pass through existing API gateways or partner-facing HTTP contracts. If the boundary is still ambiguous, model the remote side's autonomy and integration constraints before choosing a primary protocol.
+Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. Start with ACP-style REST seams if the first integration must pass through existing API gateways or partner-facing HTTP contracts. If the boundary is still ambiguous, model the autonomy and integration constraints of the remote side before choosing a primary protocol.
 
 ## Conclusion
 

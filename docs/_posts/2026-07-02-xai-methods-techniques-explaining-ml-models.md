@@ -5,7 +5,7 @@ title: "Methods and Techniques for Explaining Machine Learning Models"
 author: Zenith Law
 description: "A systematic examination of post-hoc explanation methods and inherently interpretable models, from gradient-based attribution to concept-based explanations, with critical analysis of their theoretical foundations and practical trade-offs."
 permalink: /methods-techniques-explaining-ml-models
-intro: "Four papers covering the full spectrum of explanation methods: Samek et al.'s authoritative review of post-hoc methods with axiomatic foundations, Lapuschkin et al.'s demonstration of explanation methods as model validation tools, Li et al.'s taxonomy of interpretation algorithms, and Poeta et al.'s comprehensive survey of concept-based XAI. Together they reveal that the choice of explanation method is not a technical detail but a substantive decision that shapes what can be learned about model behaviour."
+intro: "Four papers covering the full spectrum of explanation methods: the authoritative review of post-hoc methods with axiomatic foundations by Samek et al., the demonstration of explanation methods as model validation tools by Lapuschkin et al., the taxonomy of interpretation algorithms by Li et al., and the comprehensive survey of concept-based XAI by Poeta et al. Together they reveal that the choice of explanation method is not a technical detail but a substantive decision that shapes what can be learned about model behaviour."
 image: /assets/images/methods-techniques-xai.png
 hero:
   image: /assets/images/methods-techniques-xai.png
@@ -86,7 +86,7 @@ Sensitivity and implementation invariance are not merely theoretical niceties. S
 
 Lapuschkin et al. demonstrated that explanation methods are not just for understanding models but for validating them {% include references/cite.html key="lapuschkin2019cleverhans" %}. Their paper introduced the Clever Hans metaphor to XAI, showing that models can achieve high accuracy by exploiting spurious correlations invisible to standard metrics.
 
-The paper's key demonstrations:
+The key demonstrations of the paper:
 
 - **Shipping classification.** An ImageNet-trained VGG-16 classifying ships relied primarily on a watermark artifact present in shipping images, not the vessel itself. Removing the watermark changed predictions dramatically, but accuracy metrics gave no indication of this failure.
 
@@ -100,7 +100,7 @@ The paper also proposed Spectral Relevance Analysis (SRA), which clusters explan
 
 Li et al. address a conceptual confusion that pervades the XAI literature {% include references/cite.html key="li2022interpretable" %}. They distinguish between interpretations (the outputs of explanation algorithms) and interpretability (the intrinsic property of a model). The distinction matters because a model can produce interpretable outputs (attributions, saliency maps) without being interpretable in the sense that humans can reliably predict its behaviour.
 
-The paper's taxonomy organises interpretation algorithms by their underlying principle:
+The taxonomy of the paper organises interpretation algorithms by their underlying principle:
 
 1. **Backpropagation-based methods:** Gradients, Integrated Gradients, LRP, DeepLIFT. Propagate information from output to input.
 2. **Perturbation-based methods:** LIME, occlusion, Shapley values. Observe how output changes when input is perturbed.
@@ -122,11 +122,11 @@ Selection guidelines map application contexts to suitable C-XAI categories. For 
 
 ## Synthesis: Method Choice Shapes What Can Be Known
 
-Across these four papers, a clear pattern emerges. The choice of explanation method is not a technical detail. It determines what can be learned about the model's behaviour and, consequently, what conclusions can be drawn about its reliability.
+Across these four papers, a clear pattern emerges. The choice of explanation method is not a technical detail. It determines what can be learned about the behaviour of the model and, consequently, what conclusions can be drawn about its reliability.
 
 Gradient-based methods reveal which input features the model is sensitive to but not how it combines them. Perturbation methods reveal counterfactual behaviour (what would happen if this feature changed) but at high computational cost. Concept-based methods bridge the gap to human understanding but depend on the quality of the concept definitions.
 
-The practitioner's challenge is to match the method to the question. If the question is "which pixels matter?" gradient methods suffice. If the question is "does the model rely on spurious correlations?" Clever Hans-style validation with multiple methods is essential. If the question is "can the model's reasoning be communicated to a domain expert?" concept-based methods are necessary.
+The practitioner's challenge is to match the method to the question. If the question is "which pixels matter?" gradient methods suffice. If the question is "does the model rely on spurious correlations?" Clever Hans-style validation with multiple methods is essential. If the question is "can the reasoning of the model be communicated to a domain expert?" concept-based methods are necessary.
 
 ---
 
