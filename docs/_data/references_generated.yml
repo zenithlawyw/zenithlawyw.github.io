@@ -2283,17 +2283,18 @@ doshivelez2017rigorousscienceinterpretablemachine:
   source_format: bibtex
 barredoarrieta2020xai:
   entry_type: article
-  short_author: Alejandro Barredo Arrieta et al.
+  short_author: Arrieta et al.
   year: "2020"
-  authors: Alejandro Barredo Arrieta and Natalia Díaz-Rodríguez and Javier {Del Ser} and Adrien Bennetot and Siham Tabik and Alberto Barbado and Salvador Garcia and Sergio Gil-Lopez and Daniel Molina and Richard Benjamins and Raja Chatila and Francisco Herrera
+  authors: Arrieta, Alejandro Barredo and Díaz-Rodríguez, Natalia and {Del Ser}, Javier and Bennetot, Adrien and Tabik, Siham and Barbado, Alberto and Garcia, Salvador and Gil-Lopez, Sergio and Molina, Daniel and Benjamins, Richard and Chatila, Raja and Herrera, Francisco
   title: "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI"
-  journal: Information Fusion
   volume: "58"
-  pages: 82-115
+  pages: 82--115
   url: https://www.sciencedirect.com/science/article/pii/S1566253519308103
   doi: https://doi.org/10.1016/j.inffus.2019.12.012
-  ieee_base: "A. B. Arrieta et al., Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI, Information Fusion, vol. 58, pp. 82-115, 2020."
-  harvard_base: "Arrieta, A.B. et al. (2020). Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI. Information Fusion. vol. 58, pp. 82-115."
+  published_iso: "2020-01-01"
+  published_date: 1 January 2020
+  ieee_base: "A. B. Arrieta et al., Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI, vol. 58, pp. 82--115, 2020."
+  harvard_base: "Arrieta, A.B. et al. (2020). Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI. vol. 58, pp. 82--115."
   source_format: bibtex
 "9369420":
   entry_type: article

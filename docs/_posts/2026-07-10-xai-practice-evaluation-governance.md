@@ -74,7 +74,7 @@ Medical XAI surveys (Hossain et al. 2025; Tjoa & Guan 2021; Nazir et al. 2023) r
 
 The dominant approach in medical imaging combines Grad-CAM or LRP visualisations with clinician evaluation. This approach has documented vulnerabilities: Clever Hans artifacts (hospital markers, imaging equipment watermarks) produce compelling but misleading explanations. Clinicians who trust these visualisations may develop overconfidence in models that rely on spurious correlations.
 
-The critique of Ghassemi et al. (discussed in Article 3) poses a challenge that the medical XAI community has not fully answered: if explanations can be systematically misleading and clinicians cannot evaluate their reliability, do explanations in their current form improve or degrade clinical decision-making?
+The critique of Ghassemi et al. (discussed in [Critical Perspectives and Limits of Current Explainability Methods](/critical-perspectives-limits-xai)) poses a challenge that the medical XAI community has not fully answered: if explanations can be systematically misleading and clinicians cannot evaluate their reliability, do explanations in their current form improve or degrade clinical decision-making?
 
 ### Cybersecurity
 
@@ -110,7 +110,7 @@ Hassija et al. focus specifically on interpreting black-box models {% include re
 
 ### Organisational Accountability
 
-The deployment study of Bhatt et al. (Article 3) established that most XAI serves internal stakeholders. The constructive response is not to abandon XAI but to build organisational structures that redirect explanations toward the stakeholders who need them.
+The deployment study of Bhatt et al. ([Critical Perspectives and Limits of Current Explainability Methods](/critical-perspectives-limits-xai)) established that most XAI serves internal stakeholders. The constructive response is not to abandon XAI but to build organisational structures that redirect explanations toward the stakeholders who need them.
 
 The stakeholder-centred framework of the paper is a governance mechanism: establish clear goals for what the explanation should achieve for a specific stakeholder; design for that stakeholder's cognitive and domain context; evaluate whether the goals are met. This framework translates technical explainability into organisational accountability.
 

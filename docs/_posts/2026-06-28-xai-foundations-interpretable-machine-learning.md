@@ -21,14 +21,16 @@ references:
   - watson2022conceptual
   - chazette2021exploring
 related_posts:
-  - title: "Methods and Techniques for Explaining Machine Learning Models"
-    url: /methods-techniques-explaining-ml-models
-  - title: "Critical Perspectives and Limits of Current Explainability Methods"
-    url: /critical-perspectives-limits-xai
-  - title: "Explainability in Practice: Domains, Evaluation, and Governance"
-    url: /explainability-practice-domains-evaluation-governance
-  - title: "XAI 2.0 and the Road Ahead: Open Challenges and Future Directions"
-    url: /xai20-open-challenges-future-directions
+  - title: "Feature Attribution in Practice: Selection, Pipelines, and Governance"
+    url: /feature-attribution-practice-selection-pipelines-governance
+  - title: "Breaking Free from Correlation: Causal and Dependency-Aware Attribution"
+    url: /breaking-free-from-correlation-causal-dependency-aware-attribution
+  - title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
+    url: /measuring-feature-attribution-quality-metrics-benchmarks
+  - title: "Attribution Methods for Exact Computation and Higher-Order Interactions"
+    url: /feature-attribution-exact-computation-higher-order-methods
+  - title: "Feature Attribution: Theoretical Foundations and the Limits of Verifiability"
+    url: /feature-attribution-foundations-limits-verifiability
 categories:
   - Artificial Intelligence
   - Machine Learning

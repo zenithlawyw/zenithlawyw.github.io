@@ -132,7 +132,7 @@ The practitioner's challenge is to match the method to the question. If the ques
 
 ## Conclusion
 
-Explanation methods operationalise the concept of interpretability examined in Article 1. Samek et al. provide the technical foundations. Lapuschkin et al. show why these foundations matter for model validation. Li et al. organise the methodological literature and clarify what explanations can and cannot tell us. Poeta et al. point toward the future of concept-level explanations.
+Explanation methods operationalise the concept of interpretability examined in [What Does It Mean for AI to Be Explainable? Foundations of Interpretable ML](/foundations-interpretable-machine-learning). Samek et al. provide the technical foundations. Lapuschkin et al. show why these foundations matter for model validation. Li et al. organise the methodological literature and clarify what explanations can and cannot tell us. Poeta et al. point toward the future of concept-level explanations.
 
 But the existence of these methods does not guarantee their reliability. The next article examines the critical perspectives and documented limitations that every practitioner must understand.
 
