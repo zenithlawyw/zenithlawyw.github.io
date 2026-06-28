@@ -81,7 +81,7 @@ Ghassemi, Oakden-Rayner, and Beam published a pointed critique from within the m
 
 **Ambiguity.** Different explanation methods applied to the same prediction regularly produce conflicting explanations. Without ground truth, there is no principled way to adjudicate between them. A clinician presented with one explanation from LIME and a different explanation from SHAP has no basis for choosing which to trust.
 
-**Inaccuracy.** Explanations can be systematically misleading. Gradient saturation produces attribution maps that highlight irrelevant features. Clever Hans phenomena (documented in Article 2) show that models can be correct for the wrong reasons, and explanations faithfully reflecting model behaviour will therefore be wrong about reality.
+**Inaccuracy.** Explanations can be systematically misleading. Gradient saturation produces attribution maps that highlight irrelevant features. Clever Hans phenomena (documented in [Methods and Techniques for Explaining Machine Learning Models](/methods-techniques-explaining-ml-models)) show that models can be correct for the wrong reasons, and explanations faithfully reflecting model behaviour will therefore be wrong about reality.
 
 **Inscrutability.** Even if explanations were accurate, clinicians lack training to critically evaluate them. The cognitive load of assessing the validity of an explanation while making a clinical decision creates a situation where explanations may decrease rather than improve decision quality.
 

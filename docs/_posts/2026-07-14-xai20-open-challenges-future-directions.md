@@ -73,7 +73,7 @@ This article is not legal advice.
 
 **1. Formal definitions.** The field still lacks a universally accepted formal definition of explainability. The definition of Barredo Arrieta et al. is the closest to consensus, but it is descriptive rather than formal. Without formal definitions, mathematical guarantees about explanation quality are impossible.
 
-**2. Evaluation metrics.** The metrics crisis documented by Pawlicki et al. (Article 3) remains unresolved. Over 50 metrics exist, many are redundant, and no standardised evaluation framework has emerged. The XAI 2.0 manifesto calls for community-wide agreement on core evaluation constructs.
+**2. Evaluation metrics.** The metrics crisis documented by Pawlicki et al. ([Critical Perspectives and Limits of Current Explainability Methods](/critical-perspectives-limits-xai)) remains unresolved. Over 50 metrics exist, many are redundant, and no standardised evaluation framework has emerged. The XAI 2.0 manifesto calls for community-wide agreement on core evaluation constructs.
 
 **3. Robustness of explanations.** Explanations should be stable under small input perturbations that do not change the prediction. Current methods vary in their robustness, and there is no standard for acceptable stability.
 
@@ -160,7 +160,7 @@ The XAI 2.0 manifesto identifies where the field needs to go. The previous four 
 
 The central challenge is the transition from method-centric to human-centred XAI. This transition requires not only new methods but new evaluation frameworks, new interdisciplinary collaborations, new organisational structures, and new regulatory engagement. It is a generational research programme, not a quick fix.
 
-The five articles in this series have examined what explainability means (Article 1), how current methods work (Article 2), where they fall short (Article 3), how they are applied in practice (Article 4), and where the field needs to go (this article). The unifying message is that explainability is neither solved nor hopeless. It is a young field whose most important questions remain open, and whose progress depends on the willingness of the field to confront its limitations honestly.
+The five articles in this series have examined what explainability means ([What Does It Mean for AI to Be Explainable? Foundations of Interpretable ML](/foundations-interpretable-machine-learning)), how current methods work ([Methods and Techniques for Explaining Machine Learning Models](/methods-techniques-explaining-ml-models)), where they fall short ([Critical Perspectives and Limits of Current Explainability Methods](/critical-perspectives-limits-xai)), how they are applied in practice ([Explainability in Practice: Domains, Evaluation, and Governance](/explainability-practice-domains-evaluation-governance)), and where the field needs to go (this article). The unifying message is that explainability is neither solved nor hopeless. It is a young field whose most important questions remain open, and whose progress depends on the willingness of the field to confront its limitations honestly.
 
 ---
 
