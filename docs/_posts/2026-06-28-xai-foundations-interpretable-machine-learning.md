@@ -120,7 +120,7 @@ Watson's philosophical critique cuts deeper than technical limitations {% includ
 
 These challenges are particularly troubling because they are not fixable by better engineering. They require reconceptualising what interpretability means and what it can deliver.
 
-### Molnar (2021): The Practical Synthesis
+### Molnar (2020): The Practical Synthesis
 
 Molnar's _Interpretable Machine Learning_ provides the most accessible practical guide to interpretability methods {% include references/cite.html key="molnar2021interpretable" %}. The book covers both intrinsic interpretable models and model-agnostic methods, with critical analysis of the strengths and weaknesses of each method. Its structure mirrors the Barredo Arrieta taxonomy, presenting intrinsic methods first and then post-hoc. The practical emphasis makes it a valuable companion to the theoretical and conceptual works discussed above.
 
@@ -174,8 +174,8 @@ Taxonomies serve three functions: they create shared vocabulary for cross-study 
 | Source                        | Author profile                   | Venue                         | Citation count | Tier                   |
 | ----------------------------- | -------------------------------- | ----------------------------- | -------------- | ---------------------- |
 | Doshi-Velez & Kim (2017)      | Harvard/Google Brain researchers | arXiv (ML community)          | 4000+          | Foundational           |
-| Barredo Arrieta et al. (2020) | Multi-institution European team  | Information Fusion            | 9000+          | Authoritative          |
-| Molnar (2021)                 | Independent statistician         | Self-published (CC license)   | Widely used    | Practical reference    |
+| Barredo Arrieta et al. (2020) | Multi-institution European team  | Information Fusion            | 8000+          | Authoritative          |
+| Molnar (2020)                 | Independent statistician         | Self-published (CC license)   | Widely used    | Practical reference    |
 | Watson (2022)                 | UCL philosopher of science       | Synthese (philosophy journal) | Growing        | Conceptual critique    |
 | Chazette et al. (2021)        | LUH/Siemens researchers          | IEEE RE Conference            | Moderate       | Definitional synthesis |
 

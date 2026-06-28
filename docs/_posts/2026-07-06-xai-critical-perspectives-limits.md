@@ -113,7 +113,7 @@ The paper proposes a stakeholder-centred framework: establish clear goals for wh
 
 Casper et al. examine a structural constraint on AI auditing {% include references/cite.html key="casper2024blackbox" %}. External auditors typically receive only black-box access (query inputs, observe outputs). The paper demonstrates that this access level is insufficient for rigorous evaluation across multiple dimensions.
 
-Black-box access cannot reliably detect model editing or fine-tuning. Adversarial robustness evaluations are weaker without gradient access. Mechanistic interpretability. Understanding how circuits within the model implement behaviours. Requires white-box access to weights and activations. Data contamination detection is limited when the training data cannot be inspected.
+Black-box access cannot reliably detect model editing or fine-tuning. Adversarial robustness evaluations are weaker without gradient access. Mechanistic interpretability, understanding how circuits within the model implement behaviours, requires white-box access to weights and activations. Data contamination detection is limited when the training data cannot be inspected.
 
 The three-level framework of the paper (black-box, white-box, outside-the-box) maps specific audit tasks to required access levels. The central recommendation: auditors must disclose their access level for audit results to be interpretable, and regulators should mandate minimum access for high-risk systems.
 

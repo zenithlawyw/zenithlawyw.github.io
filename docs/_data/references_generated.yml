@@ -2283,17 +2283,17 @@ doshivelez2017rigorousscienceinterpretablemachine:
   source_format: bibtex
 barredoarrieta2020xai:
   entry_type: article
-  short_author: Barredo Arrieta et al.
+  short_author: Alejandro Barredo Arrieta et al.
   year: "2020"
-  authors: Barredo Arrieta, Alejandro and Díaz-Rodríguez, Natalia and Del Ser, Javier and Bennetot, Adrien and Tabik, Siham and Barbado, Alberto and Garcia, Salvador and Gil-Lopez, Sergio and Molina, Daniel and Benjamins, Richard and Chatila, Raja and Herrera, Francisco
+  authors: Alejandro Barredo Arrieta and Natalia Díaz-Rodríguez and Javier {Del Ser} and Adrien Bennetot and Siham Tabik and Alberto Barbado and Salvador Garcia and Sergio Gil-Lopez and Daniel Molina and Richard Benjamins and Raja Chatila and Francisco Herrera
   title: "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI"
+  journal: Information Fusion
   volume: "58"
-  pages: 82--115
-  doi: 10.1016/j.inffus.2019.12.012
-  published_iso: "2020-01-01"
-  published_date: 1 January 2020
-  ieee_base: "A. Barredo Arrieta et al., Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI, vol. 58, pp. 82--115, 2020."
-  harvard_base: "Barredo Arrieta, A. et al. (2020). Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI. vol. 58, pp. 82--115."
+  pages: 82-115
+  url: https://www.sciencedirect.com/science/article/pii/S1566253519308103
+  doi: https://doi.org/10.1016/j.inffus.2019.12.012
+  ieee_base: "A. B. Arrieta et al., Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI, Information Fusion, vol. 58, pp. 82-115, 2020."
+  harvard_base: "Arrieta, A.B. et al. (2020). Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI. Information Fusion. vol. 58, pp. 82-115."
   source_format: bibtex
 "9369420":
   entry_type: article
@@ -2482,14 +2482,15 @@ salvi2025uncertainty:
   entry_type: article
   short_author: Salvi et al.
   year: "2025"
-  authors: Salvi, Massimo and others
-  title: "Explainability and Uncertainty: Two Sides of the Same Coin for Enhancing the Interpretability of Deep Learning"
-  volume: "115"
-  pages: "102780"
+  authors: Salvi, Massimo and Seoni, Silvia and Campagner, Andrea and Gertych, Arkadiusz and Acharya, U. Rajendra and Molinari, Filippo and Cabitza, Federico
+  title: "Explainability and Uncertainty: Two Sides of the Same Coin for Enhancing the Interpretability of Deep Learning Models in Healthcare"
+  volume: "197"
+  pages: "105846"
+  doi: 10.1016/j.ijmedinf.2025.105846
   published_iso: "2025-01-01"
   published_date: 1 January 2025
-  ieee_base: "M. Salvi and others, Explainability and Uncertainty: Two Sides of the Same Coin for Enhancing the Interpretability of Deep Learning, vol. 115, pp. 102780, 2025."
-  harvard_base: "Salvi, M. and others. (2025). Explainability and Uncertainty: Two Sides of the Same Coin for Enhancing the Interpretability of Deep Learning. vol. 115, pp. 102780."
+  ieee_base: "M. Salvi et al., Explainability and Uncertainty: Two Sides of the Same Coin for Enhancing the Interpretability of Deep Learning Models in Healthcare, vol. 197, pp. 105846, 2025."
+  harvard_base: "Salvi, M. et al. (2025). Explainability and Uncertainty: Two Sides of the Same Coin for Enhancing the Interpretability of Deep Learning Models in Healthcare. vol. 197, pp. 105846."
   source_format: bibtex
 rudin2019stop:
   entry_type: article

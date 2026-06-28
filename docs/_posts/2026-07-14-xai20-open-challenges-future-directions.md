@@ -45,7 +45,7 @@ tags:
 
 The XAI 2.0 manifesto, authored by 27 leading XAI researchers and published in Information Fusion in 2024, identifies 22 open challenges across five themes {% include references/cite.html key="LONGO2024102301" %}. This final article in the series synthesises those challenges, connects them to the findings of the previous four articles, and maps the research directions that will define the next generation of explainability.
 
-The central thesis of the XAI 2.0 manifesto is that the field must transition from a method-centric discipline. Focused on producing explanations. To a human-centred discipline focused on supporting understanding. This framing recasts every technical challenge as a human-centred challenge, and every methodological question as an interdisciplinary question.
+The central thesis of the XAI 2.0 manifesto is that the field must transition from a method-centric discipline focused on producing explanations to a human-centred discipline focused on supporting understanding. This framing recasts every technical challenge as a human-centred challenge, and every methodological question as an interdisciplinary question.
 
 This article is not legal advice.
 
