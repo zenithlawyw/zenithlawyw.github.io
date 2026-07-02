@@ -46,7 +46,7 @@ tags:
 
 The first two articles in this series established what interpretability means and how current methods work. This article examines what those methods cannot deliver. Five papers, each from a different angle, document limitations that are not merely technical but conceptual, organisational, and structural.
 
-Ghassemi et al. argue that current explainability methods cannot achieve their stated goals of trust, transparency, and bias mitigation. Watson identifies three conceptual problems embedded in the very design of IML methods. Bhatt et al. show that even when explanations are deployed, they serve engineers rather than affected stakeholders. Casper et al. prove that black-box access, the most common audit mode, is structurally insufficient. Pawlicki et al. document a metrics crisis that makes it impossible to compare methods systematically.
+Ghassemi et al.{% include references/cite.html key="ghassemi2021falsehope" %} argue that current explainability methods cannot achieve their stated goals of trust, transparency, and bias mitigation. Watson{% include references/cite.html key="watson2022conceptual" %} identifies three conceptual problems embedded in the very design of IML methods. Bhatt et al.{% include references/cite.html key="bhatt2020deployment" %} show that even when explanations are deployed, they serve engineers rather than affected stakeholders. Casper et al.{% include references/cite.html key="casper2024blackbox" %} prove that black-box access, the most common audit mode, is structurally insufficient. Pawlicki et al.{% include references/cite.html key="pawlicki2024metrics" %} document a metrics crisis that makes it impossible to compare methods systematically.
 
 The picture is not that XAI is useless. It is that XAI is much less reliable than its advocates claim, and that the field must confront its limitations honestly to make genuine progress.
 
@@ -157,19 +157,19 @@ The literature identifies five interconnected limitations: explanation ambiguity
 
 ### Why do Ghassemi et al. argue that explainability requirements may harm clinical AI?
 
-Ghassemi et al. argue that mandating explainability for clinical AI could divert resources from rigorous validation through prospective trials and deployment monitoring. They contend that a thoroughly validated model whose outputs clinicians understand through training may be safer than an explainable model whose behaviour has been less rigorously tested. This argument challenges the assumption that explainability is always a net benefit.
+Ghassemi et al.{% include references/cite.html key="ghassemi2021falsehope" %} argue that mandating explainability for clinical AI could divert resources from rigorous validation through prospective trials and deployment monitoring. They contend that a thoroughly validated model whose outputs clinicians understand through training may be safer than an explainable model whose behaviour has been less rigorously tested. This argument challenges the assumption that explainability is always a net benefit.
 
 ### What is the deployment gap that Bhatt et al. identify in XAI practice?
 
-Bhatt et al. surveyed ML practitioners and found that XAI methods are rarely deployed in production because they lack clear integration paths, standardised evaluation criteria, and actionable outputs. Practitioners reported using explanation methods for debugging during development but not for external accountability purposes. This gap between research capability and deployment reality limits the practical impact of XAI.
+Bhatt et al.{% include references/cite.html key="bhatt2020deployment" %} surveyed ML practitioners and found that XAI methods are rarely deployed in production because they lack clear integration paths, standardised evaluation criteria, and actionable outputs. Practitioners reported using explanation methods for debugging during development but not for external accountability purposes. This gap between research capability and deployment reality limits the practical impact of XAI.
 
 ### How does Casper et al. characterise the limits of black-box audits?
 
-Casper et al. demonstrate that black-box access alone is insufficient for reliable auditing because adversarial inputs can be designed to produce misleading explanations, model editing can change behaviour without detection from explanation outputs, and the inherent ambiguity of post-hoc explanations means that multiple contradictory narratives can be supported by the same audit data.
+Casper et al.{% include references/cite.html key="casper2024blackbox" %} demonstrate that black-box access alone is insufficient for reliable auditing because adversarial inputs can be designed to produce misleading explanations, model editing can change behaviour without detection from explanation outputs, and the inherent ambiguity of post-hoc explanations means that multiple contradictory narratives can be supported by the same audit data.
 
 ### What does Pawlicki et al. identify as the metrics crisis in XAI evaluation?
 
-Pawlicki et al. identify three problems: metric duplication where multiple metrics measure the same underlying property and create false diversity, metric inefficacy where some metrics fail to distinguish between random and meaningful explanations, and metric confusion where contradictory results across metrics make it impossible to determine which method is better for a given task.
+Pawlicki et al.{% include references/cite.html key="pawlicki2024metrics" %} identify three problems: metric duplication where multiple metrics measure the same underlying property and create false diversity, metric inefficacy where some metrics fail to distinguish between random and meaningful explanations, and metric confusion where contradictory results across metrics make it impossible to determine which method is better for a given task.
 
 <details markdown="1" class="appendix-callout group">
 <summary>Appendix: Source Material</summary>

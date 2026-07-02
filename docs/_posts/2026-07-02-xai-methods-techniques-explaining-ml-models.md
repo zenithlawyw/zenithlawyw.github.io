@@ -40,7 +40,7 @@ tags:
 
 ## Introduction
 
-The previous article established what interpretability means. This article examines how it is achieved. Four papers survey the methodological literature from complementary angles: Samek et al. (2021) provide the authoritative technical review with axiomatic foundations; Lapuschkin et al. (2019) demonstrate explanation methods as model validation tools that reveal hidden failure modes; Li et al. (2022) organise interpretation algorithms into a coherent taxonomy and distinguish interpretations from interpretability as distinct concepts; and Poeta et al. (2025) survey the emerging field of concept-based XAI, which moves beyond raw feature attributions to human-meaningful concepts.
+The [previous article](/foundations-interpretable-machine-learning) established what interpretability means. This article examines how it is achieved. Four papers survey the methodological literature from complementary angles: Samek et al. (2021){% include references/cite.html key="9369420" %} provide the authoritative technical review with axiomatic foundations; Lapuschkin et al. (2019){% include references/cite.html key="lapuschkin2019cleverhans" %} demonstrate explanation methods as model validation tools that reveal hidden failure modes; Li et al. (2022){% include references/cite.html key="li2022interpretable" %} organise interpretation algorithms into a coherent taxonomy and distinguish interpretations from interpretability as distinct concepts; and Poeta et al. (2025){% include references/cite.html key="poeta2025concept" %} survey the emerging field of concept-based XAI, which moves beyond raw feature attributions to human-meaningful concepts.
 
 This article is not legal advice.
 
@@ -63,7 +63,7 @@ This article is not legal advice.
   <dd>A model that achieves high accuracy by exploiting spurious correlations in the training data rather than learning the intended decision strategy. Named after the horse that appeared to perform arithmetic but was actually responding to subtle human cues.</dd>
 
   <dt><dfn>Interpretation vs. interpretability</dfn></dt>
-  <dd>Following Li et al. (2022), interpretations are the outputs of explanation algorithms (attributions, saliency maps). Interpretability is the intrinsic property of a model that measures how predictable its inferences are to humans. They are related but distinct: a model can be interpreted (explanations exist) without being interpretable (humans cannot reliably predict its behaviour).</dd>
+  <dd>Following Li et al. (2022){% include references/cite.html key="li2022interpretable" %}, interpretations are the outputs of explanation algorithms (attributions, saliency maps). Interpretability is the intrinsic property of a model that measures how predictable its inferences are to humans. They are related but distinct: a model can be interpreted (explanations exist) without being interpretable (humans cannot reliably predict its behaviour).</dd>
 </dl>
 
 ---
@@ -150,15 +150,15 @@ Backpropagation-based methods compute attributions through a single forward-back
 
 ### Why does Samek et al. argue for axiomatic foundations in XAI evaluation?
 
-Samek et al. argue that without axiomatic grounding, evaluation becomes circular or arbitrary because there is no objective ground truth for explanations. They propose that explanation methods should satisfy axioms such as sensitivity and implementation invariance, which provide a principled basis for comparing methods and detecting failures that empirical evaluation alone would miss.
+Samek et al.{% include references/cite.html key="9369420" %} argue that without axiomatic grounding, evaluation becomes circular or arbitrary because there is no objective ground truth for explanations. They propose that explanation methods should satisfy axioms such as sensitivity and implementation invariance, which provide a principled basis for comparing methods and detecting failures that empirical evaluation alone would miss.
 
 ### How can explanation methods serve as model validation tools?
 
-Lapuschkin et al. (2019) demonstrate that explanation methods can detect Clever Hans behaviour where models exploit spurious correlations invisible to accuracy metrics. Their spectral relevance analysis reveals that models trained on medical images may rely on watermarks or hospital markers rather than actual pathology, making explanation methods a diagnostic tool rather than just a transparency device.
+Lapuschkin et al. (2019){% include references/cite.html key="lapuschkin2019cleverhans" %} demonstrate that explanation methods can detect Clever Hans behaviour where models exploit spurious correlations invisible to accuracy metrics. Their spectral relevance analysis reveals that models trained on medical images may rely on watermarks or hospital markers rather than actual pathology, making explanation methods a diagnostic tool rather than just a transparency device.
 
 ### What is concept-based XAI and how does it differ from feature attribution?
 
-Concept-based XAI explains model decisions in terms of human-understandable concepts rather than raw features (Poeta et al., 2025). While feature attribution assigns importance scores to individual input dimensions such as pixels or words, concept-based methods identify whether the model recognises higher-level abstractions such as stripes, colour patterns, or medical indicators. This aligns explanations with how humans naturally reason.
+Concept-based XAI explains model decisions in terms of human-understandable concepts rather than raw features{% include references/cite.html key="poeta2025concept" %}. While feature attribution assigns importance scores to individual input dimensions such as pixels or words, concept-based methods identify whether the model recognises higher-level abstractions such as stripes, colour patterns, or medical indicators. This aligns explanations with how humans naturally reason.
 
 <details markdown="1" class="appendix-callout group">
 <summary>Appendix: Source Material</summary>

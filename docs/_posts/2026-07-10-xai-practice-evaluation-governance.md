@@ -15,6 +15,7 @@ references_enabled: true
 references_style: ieee
 references_data_file: references
 references:
+  - 9369420
   - salvi2025uncertainty
   - dwivedi2023xai
   - bhatt2020deployment
@@ -152,11 +153,11 @@ The EU AI Act classifies AI systems by risk level and imposes transparency oblig
 
 ### What evaluation frameworks exist for assessing explanation quality in practice?
 
-Three main frameworks have emerged: functionally-grounded evaluation using formal proxies such as faithfulness and completeness (Samek et al., 2021), human-grounded evaluation through user studies that measure how explanations affect human decision-making, and application-grounded evaluation in real deployment contexts. Dwivedi et al. (2023) provide a practical synthesis linking method selection to evaluation criteria.
+Three main frameworks have emerged: functionally-grounded evaluation using formal proxies such as faithfulness and completeness{% include references/cite.html key="9369420" %}, human-grounded evaluation through user studies that measure how explanations affect human decision-making, and application-grounded evaluation in real deployment contexts. Dwivedi et al. (2023){% include references/cite.html key="dwivedi2023xai" %} provide a practical synthesis linking method selection to evaluation criteria.
 
 ### How does Salvi et al. connect explainability and uncertainty in their framework?
 
-Salvi et al. (2025) argue that explanations without uncertainty quantification are fundamentally incomplete because users cannot distinguish between confident model predictions and those near decision boundaries. Their framework integrates uncertainty estimates into explanation outputs by modifying attribution methods to propagate epistemic and aleatoric uncertainty through the explanation computation.
+Salvi et al. (2025){% include references/cite.html key="salvi2025uncertainty" %} argue that explanations without uncertainty quantification are fundamentally incomplete because users cannot distinguish between confident model predictions and those near decision boundaries. Their framework integrates uncertainty estimates into explanation outputs by modifying attribution methods to propagate epistemic and aleatoric uncertainty through the explanation computation.
 
 ### What governance structures are needed for responsible XAI deployment?
 

@@ -55,10 +55,10 @@ This article is not legal advice.
 
 <dl>
   <dt><dfn>Interpretability</dfn></dt>
-  <dd>The degree to which a human can consistently predict the output of a model. A model is more interpretable than another if its decisions are easier for a human to anticipate. This definition, adapted from Doshi-Velez and Kim, emphasises that interpretability is fundamentally about human understanding, not model architecture.</dd>
+  <dd>The degree to which a human can consistently predict the output of a model. A model is more interpretable than another if its decisions are easier for a human to anticipate. This definition, adapted from Doshi-Velez and Kim{% include references/cite.html key="doshivelez2017rigorousscienceinterpretablemachine" %}, emphasises that interpretability is fundamentally about human understanding, not model architecture.</dd>
 
   <dt><dfn>Explainability</dfn></dt>
-  <dd>A broader concept encompassing both intrinsic interpretability (models that are transparent by design) and post-hoc explanations (methods applied after training to explain individual predictions). Barredo Arrieta et al. define explainable ML as "ML that produces models that are inherently interpretable and/or produces explanations for their predictions."</dd>
+  <dd>A broader concept encompassing both intrinsic interpretability (models that are transparent by design) and post-hoc explanations (methods applied after training to explain individual predictions). Barredo Arrieta et al.{% include references/cite.html key="barredoarrieta2020xai" %} define explainable ML as "ML that produces models that are inherently interpretable and/or produces explanations for their predictions."</dd>
 
   <dt><dfn>Intrinsic interpretability</dfn></dt>
   <dd>Models designed from the outset to be interpretable through their structure: sparse linear models, decision trees with few leaves, rule lists, generalised additive models. The interpretability is a property of the model itself, not an external method.</dd>
@@ -150,11 +150,11 @@ The next article in this series examines the specific explanation methods and te
 
 ### What distinguishes interpretability from explainability in machine learning?
 
-Interpretability refers to the degree to which a human can consistently predict the output of a model, a property of the model itself (Doshi-Velez and Kim, 2017). Explainability refers to the broader field encompassing both inherently interpretable models and post-hoc methods that generate explanations after training (Barredo Arrieta et al., 2020). The distinction matters because interpretability is a design choice while explainability is a broader research programme.
+Interpretability refers to the degree to which a human can consistently predict the output of a model, a property of the model itself{% include references/cite.html key="doshivelez2017rigorousscienceinterpretablemachine" %}. Explainability refers to the broader field encompassing both inherently interpretable models and post-hoc methods that generate explanations after training{% include references/cite.html key="barredoarrieta2020xai" %}. The distinction matters because interpretability is a design choice while explainability is a broader research programme.
 
 ### What are the main dimensions of interpretability taxonomies in the literature?
 
-The literature converges on several recurring dimensions: intrinsic versus post-hoc methods, model-specific versus model-agnostic approaches, and local versus global explanations (Barredo Arrieta et al., 2020). These dimensions are not orthogonal and methods can combine aspects of multiple categories. The field has not yet settled on a single standardised taxonomy but the building blocks are widely agreed.
+The literature converges on several recurring dimensions: intrinsic versus post-hoc methods, model-specific versus model-agnostic approaches, and local versus global explanations{% include references/cite.html key="barredoarrieta2020xai" %}. These dimensions are not orthogonal and methods can combine aspects of multiple categories. The field has not yet settled on a single standardised taxonomy but the building blocks are widely agreed.
 
 ### How does Doshi-Velez and Kim's three-tier framework structure XAI evaluation?
 
@@ -166,7 +166,7 @@ Watson identifies three categories: ambiguity (the same explanation can support 
 
 ### What role do taxonomies play in structuring XAI research and practice?
 
-Taxonomies serve three functions: they create shared vocabulary for cross-study comparison, they identify gaps where no methods exist for important categories, and they help practitioners select appropriate methods for their specific task. Chazette et al. (2021) demonstrate this through a knowledge catalogue that maps user needs to technical explainability requirements.
+Taxonomies serve three functions: they create shared vocabulary for cross-study comparison, they identify gaps where no methods exist for important categories, and they help practitioners select appropriate methods for their specific task. Chazette et al. (2021){% include references/cite.html key="chazette2021exploring" %} demonstrate this through a knowledge catalogue that maps user needs to technical explainability requirements.
 
 <details markdown="1" class="appendix-callout group">
 <summary>Appendix: Source Material</summary>

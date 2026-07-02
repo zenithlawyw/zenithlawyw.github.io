@@ -85,7 +85,7 @@ This article is not legal advice.
 
 ### Human-Centred Challenges
 
-**7. Cognitive load.** Explanations impose cognitive demands on users that may exceed their processing capacity, particularly in high-stakes environments like clinical decision-making (the inscrutability challenge of Ghassemi et al.).
+**7. Cognitive load.** Explanations impose cognitive demands on users that may exceed their processing capacity, particularly in high-stakes environments like clinical decision-making (the inscrutability challenge of Ghassemi et al.{% include references/cite.html key="ghassemi2021falsehope" %}).
 
 **8. Trust calibration.** Explanations can produce both under-trust (users ignore reliable models) and over-trust (users accept unreliable explanations). The goal is calibrated trust: matching user confidence to actual model reliability.
 
@@ -103,7 +103,7 @@ This article is not legal advice.
 
 **14. Philosophy of explanation.** Watson's conceptual critique draws on philosophy of science. The field must engage more deeply with philosophical work on what constitutes a good explanation.
 
-**15. Social science perspectives.** Organisational adoption of XAI (the deployment gap of Bhatt et al.) is a social science question as much as a technical one.
+**15. Social science perspectives.** Organisational adoption of XAI (the deployment gap of Bhatt et al.{% include references/cite.html key="bhatt2020deployment" %}) is a social science question as much as a technical one.
 
 **16. Legal and regulatory alignment.** The EU AI Act and emerging regulations create requirements that current XAI methods may not satisfy. Legal scholars must collaborate with XAI researchers to operationalise regulatory concepts.
 
@@ -168,7 +168,7 @@ The five articles in this series have examined what explainability means ([What 
 
 ### What are the main categories of open challenges in the XAI 2.0 manifesto?
 
-Longo et al. (2024) organise 22 challenges into five categories: technical challenges including formal definitions and evaluation metrics, human-centred challenges including cognitive load and trust calibration, interdisciplinary challenges spanning HCI and philosophy, regulatory challenges concerning auditing frameworks and standardisation, and methodological challenges involving longitudinal and field studies. Technical challenges are most mature while interdisciplinary challenges require structural changes.
+Longo et al. (2024){% include references/cite.html key="LONGO2024102301" %} organise 22 challenges into five categories: technical challenges including formal definitions and evaluation metrics, human-centred challenges including cognitive load and trust calibration, interdisciplinary challenges spanning HCI and philosophy, regulatory challenges concerning auditing frameworks and standardisation, and methodological challenges involving longitudinal and field studies. Technical challenges are most mature while interdisciplinary challenges require structural changes.
 
 ### What distinguishes human-centred challenges from technical challenges in XAI?
 
