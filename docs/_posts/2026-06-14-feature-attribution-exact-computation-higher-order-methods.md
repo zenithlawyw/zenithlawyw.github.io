@@ -1,6 +1,6 @@
 ---
 layout: post
-last_modified_at: 2026-06-14
+last_modified_at: 2026-08-29
 title: "Attribution Methods for Exact Computation and Higher-Order Interactions"
 author: Zenith Law
 description: "Four papers push beyond standard post-hoc attribution: exact computation for feedforward networks, higher-order interaction terms, optimised Shapley rewards, and multi-objective trade-off frameworks."
@@ -92,7 +92,7 @@ The framework satisfies linearity, symmetry, marginalisation (summing second-ord
 
 The paper also draws an explicit connection between XAI and topological signal processing: first-order attributions correspond to node signals on a graph, second-order to edge signals, and higher-order terms to simplicial complexes. On a housing valuation dataset, second-order attribution graphs reveal clusters of jointly-acting features that would be invisible to first-order methods.
 
-> **Practical constraint:** Higher-order attributions multiply cost. Second-order requires O(d²) computations for d features.
+> **Practical constraint:** Higher-order attributions multiply cost. A full second-order attribution is a tensor with on the order of O(d²) entries for d features, and recording higher-order tensors scales as d to the order, so exhaustive higher-order explanations are storage- and compute-intensive as the feature count grows.
 
 **Study limitations:** The operator-theoretic unification is mathematically elegant and the axiomatic properties are proven. Empirical validation is limited to two small tabular experiments. Behaviour on high-dimensional data and computational tractability at scale remain unconfirmed.
 
@@ -199,7 +199,7 @@ _Part 2 of a series on feature attribution, explainability, and interpretability
 
 ### Author and Source Credibility
 
-All four papers appear in peer-reviewed venues: Neural Networks (Elsevier, Carles-Bou), ICASSP (IEEE, Butler), IEEE Big Data (Daley), and ACM TELO (Wang). Venue quality ranges from top journal (Neural Networks) to workshop-track conference (IEEE Big Data). None is a predatory or non-archival publication.
+All four papers appear in peer-reviewed venues: Neural Networks (Elsevier, Carles-Bou), ICASSP (IEEE, Butler), IEEE International Conference on Big Data (Daley), and ACM TELO (Wang). Venue quality ranges from a leading journal (Neural Networks) to peer-reviewed IEEE conferences (ICASSP, Big Data). None is a predatory or non-archival publication.
 
 ### Corpus Reviewed
 
@@ -236,13 +236,13 @@ All four papers appear in peer-reviewed venues: Neural Networks (Elsevier, Carle
 
 ### Method Comparison Matrix
 
-| Property               | FACE                  | Higher-Order IG         | GAPS                  | MOFAE                   |
-| ---------------------- | --------------------- | ----------------------- | --------------------- | ----------------------- |
-| Exact or approximate   | Exact                 | Approximate (per-order) | Approximate (Shapley) | Approximate (evolution) |
-| Handles interactions   | No (first-order only) | Yes (any order)         | Implicitly            | Via faithfulness        |
-| Model access needed    | Weights               | Gradients               | Predictions           | Predictions             |
-| Compute cost per point | O(d)                  | O(d²) per order         | Variable              | ~6 seconds              |
-| Hyperparameters        | 0                     | Order k                 | 3 reward weights      | NSGA-III parameters     |
+| Property               | FACE                        | Higher-Order IG         | GAPS                  | MOFAE                   |
+| ---------------------- | --------------------------- | ----------------------- | --------------------- | ----------------------- |
+| Exact or approximate   | Exact                       | Approximate (per-order) | Approximate (Shapley) | Approximate (evolution) |
+| Handles interactions   | No (first-order only)       | Yes (any order)         | Implicitly            | Via faithfulness        |
+| Model access needed    | Weights                     | Gradients               | Predictions           | Predictions             |
+| Compute cost per point | O(d³) (fastest in practice) | O(d²) per order         | Variable              | ~6 seconds              |
+| Hyperparameters        | 0                           | Order k                 | 3 reward weights      | NSGA-III parameters     |
 
 ### Evidence Maturity Map
 

@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-07-02T02:14:35Z"
-total_candidates: 1031
+generated_at: "2026-08-30T20:33:09Z"
+total_candidates: 1032
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -2367,6 +2367,22 @@ candidates:
           "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on
           Trust, Provenance, and Resilient Engineering"
         url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
+    related_pages: []
+  - term: Xai Methods
+    status: candidate
+    confidence: 9
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: Methods and Techniques for Explaining Machine Learning Models
+        url: "/methods-techniques-explaining-ml-models"
+      - title: "XAI 2.0 and the Road Ahead: Open Challenges and Future Directions"
+        url: "/xai20-open-challenges-future-directions"
     related_pages: []
   - term: AEO Context SEO
     status: candidate

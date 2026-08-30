@@ -1,11 +1,11 @@
 ---
 layout: post
-last_modified_at: 2026-06-28
+last_modified_at: 2026-08-29
 title: "What Does It Mean for AI to Be Explainable? Foundations of Interpretable Machine Learning"
 author: Zenith Law
 description: "A rigorous examination of what interpretability means in machine learning, the taxonomies that organise the XAI field, and the evaluation frameworks that separate genuine understanding from post-hoc rationalisation."
 permalink: /foundations-interpretable-machine-learning
-intro: "Five papers, spanning 2017 to 2024, collectively establish what interpretability means, how to evaluate it, and where the conceptual boundaries lie. Doshi-Velez and Kim's three-tier evaluation framework, the comprehensive taxonomy of Barredo Arrieta et al., Molnar's practical guide, Watson's philosophical critique, and the knowledge catalogue of Chazette et al. each contribute a distinct piece of the puzzle. Together they reveal that interpretability is neither a single property nor a binary condition. It depends on who is asking, what they need to understand, and at what cost."
+intro: "Five papers, spanning 2017 to 2022, collectively establish what interpretability means, how to evaluate it, and where the conceptual boundaries lie. Doshi-Velez and Kim's three-tier evaluation framework, the comprehensive taxonomy of Barredo Arrieta et al., Molnar's practical guide, Watson's philosophical critique, and the knowledge catalogue of Chazette et al. each contribute a distinct piece of the puzzle. Together they reveal that interpretability is neither a single property nor a binary condition. It depends on who is asking, what they need to understand, and at what cost."
 image: /assets/images/foundations-interpretable-ml.png
 hero:
   image: /assets/images/foundations-interpretable-ml.png
@@ -55,10 +55,10 @@ This article is not legal advice.
 
 <dl>
   <dt><dfn>Interpretability</dfn></dt>
-  <dd>The degree to which a human can consistently predict the output of a model. A model is more interpretable than another if its decisions are easier for a human to anticipate. This definition, adapted from Doshi-Velez and Kim{% include references/cite.html key="doshivelez2017rigorousscienceinterpretablemachine" %}, emphasises that interpretability is fundamentally about human understanding, not model architecture.</dd>
+  <dd>Doshi-Velez and Kim{% include references/cite.html key="doshivelez2017rigorousscienceinterpretablemachine" %} describe interpretability as the ability to explain or to present in understandable terms to a human. On this account interpretability is fundamentally about human understanding, not model architecture, and the degree of interpretability needed depends on the context and the decision at stake.</dd>
 
   <dt><dfn>Explainability</dfn></dt>
-  <dd>A broader concept encompassing both intrinsic interpretability (models that are transparent by design) and post-hoc explanations (methods applied after training to explain individual predictions). Barredo Arrieta et al.{% include references/cite.html key="barredoarrieta2020xai" %} define explainable ML as "ML that produces models that are inherently interpretable and/or produces explanations for their predictions."</dd>
+  <dd>A broader concept encompassing both intrinsic interpretability (models that are transparent by design) and post-hoc explanations (methods applied after training to explain individual predictions). Barredo Arrieta et al.{% include references/cite.html key="barredoarrieta2020xai" %} characterise explainable machine learning as machine learning that produces inherently interpretable models and/or produces explanations for the predictions of the models.</dd>
 
   <dt><dfn>Intrinsic interpretability</dfn></dt>
   <dd>Models designed from the outset to be interpretable through their structure: sparse linear models, decision trees with few leaves, rule lists, generalised additive models. The interpretability is a property of the model itself, not an external method.</dd>
@@ -104,11 +104,11 @@ Barredo Arrieta et al. produced the most comprehensive taxonomy of the XAI field
 - _By model dependence_: Model-specific (e.g., tree interpreters, LRP for neural networks) vs. model-agnostic (e.g., LIME, SHAP, partial dependence plots).
 - _By output type_: Text explanations, visual explanations, example-based explanations (e.g., counterfactuals, prototypes), and feature attribution explanations.
 
-The taxonomy connects technical explainability to broader responsible AI principles, situating XAI as one of four pillars alongside fairness, accountability, and transparency. This framing has been influential, but it assumes a coherence between these principles that is not always present in practice. An explainable model can be unfair; a fair model can be unintelligible.
+The taxonomy connects technical explainability to broader responsible AI principles, situating XAI alongside fairness, accountability, and privacy in the responsible AI landscape. This framing has been influential, but it assumes a coherence between these principles that is not always present in practice. An explainable model can be unfair; a fair model can be unintelligible.
 
 ### Chazette et al. (2021): The Knowledge Catalogue
 
-Chazette et al. addressed a complementary gap: how do different stakeholders define explainability, and how can these definitions be reconciled? {% include references/cite.html key="chazette2021exploring" %} Their knowledge catalogue maps explainability definitions to stakeholder types, usage contexts, and explanation goals. The key insight is that explainability is not a single requirement but a bundle of potentially conflicting requirements that must be prioritised based on the specific deployment context.
+Chazette et al. addressed a complementary gap from a requirements engineering perspective: how do different stakeholders understand and express their needs for explainability? {% include references/cite.html key="chazette2021exploring" %} Their work synthesises the factors that shape explainability requirements and organises them into a knowledge catalogue connecting these factors to usage context and explanation goals. The key insight is that explainability is not a single requirement but a bundle of potentially conflicting requirements that must be prioritised based on the specific deployment context.
 
 ### Watson (2022): Three Conceptual Challenges
 
@@ -118,11 +118,11 @@ Watson's philosophical critique cuts deeper than technical limitations {% includ
 
 **Disregard for error rates:** No standard IML method reports confidence intervals or performs severe testing. The local linear fit of LIME has no uncertainty quantification. SHAP values lack standard errors. This makes it impossible to distinguish signal from noise in explanations.
 
-**Product over process:** IML emphasises the final explanation product (a saliency map, a Shapley value) rather than the process by which the model arrived at its decision. Describing which features were important is different from explaining how the model used them.
+**Product over process:** IML emphasises the final explanation product (a saliency map, a Shapley value) rather than explanation as a process. Watson argues that successful explanations are better understood as an iterative exchange between at least two agents engaged in causal inquiry, not a static deliverable computed once and handed over. Current methods treat explanations as products.
 
 These challenges are particularly troubling because they are not fixable by better engineering. They require reconceptualising what interpretability means and what it can deliver.
 
-### Molnar (2020): The Practical Synthesis
+### Molnar (2021): The Practical Synthesis
 
 Molnar's _Interpretable Machine Learning_ provides the most accessible practical guide to interpretability methods {% include references/cite.html key="molnar2021interpretable" %}. The book covers both intrinsic interpretable models and model-agnostic methods, with critical analysis of the strengths and weaknesses of each method. Its structure mirrors the Barredo Arrieta taxonomy, presenting intrinsic methods first and then post-hoc. The practical emphasis makes it a valuable companion to the theoretical and conceptual works discussed above.
 
@@ -150,7 +150,7 @@ The next article in this series examines the specific explanation methods and te
 
 ### What distinguishes interpretability from explainability in machine learning?
 
-Interpretability refers to the degree to which a human can consistently predict the output of a model, a property of the model itself{% include references/cite.html key="doshivelez2017rigorousscienceinterpretablemachine" %}. Explainability refers to the broader field encompassing both inherently interpretable models and post-hoc methods that generate explanations after training{% include references/cite.html key="barredoarrieta2020xai" %}. The distinction matters because interpretability is a design choice while explainability is a broader research programme.
+Interpretability refers to the ability to explain or to present in understandable terms to a human, a property of the model itself{% include references/cite.html key="doshivelez2017rigorousscienceinterpretablemachine" %}. Explainability refers to the broader field encompassing both inherently interpretable models and post-hoc methods that generate explanations after training{% include references/cite.html key="barredoarrieta2020xai" %}. The distinction matters because interpretability is a design choice while explainability is a broader research programme.
 
 ### What are the main dimensions of interpretability taxonomies in the literature?
 
@@ -162,11 +162,11 @@ The framework distinguishes application-grounded evaluation (real task, real use
 
 ### What conceptual challenges does Watson identify for post-hoc explanations?
 
-Watson identifies three categories: ambiguity (the same explanation can support contradictory conclusions), inaccuracy (explanations can be systematically misleading), and product-process confusion (evaluating the explanation rather than the explanatory process). These challenges apply specifically to post-hoc methods and question whether such explanations can satisfy scientific standards of evidence.
+Watson identifies three challenges: ambiguity of target (methods do not distinguish whether they are explaining the model, the data-generating process, or the domain phenomenon), disregard for error rates (standard methods report no confidence intervals and perform no severe testing), and product over process (emphasising the final explanation product rather than explanation as an ongoing, interactive exchange between agents). These challenges apply specifically to post-hoc methods and question whether such explanations can satisfy scientific standards of evidence.
 
 ### What role do taxonomies play in structuring XAI research and practice?
 
-Taxonomies serve three functions: they create shared vocabulary for cross-study comparison, they identify gaps where no methods exist for important categories, and they help practitioners select appropriate methods for their specific task. Chazette et al. (2021){% include references/cite.html key="chazette2021exploring" %} demonstrate this through a knowledge catalogue that maps user needs to technical explainability requirements.
+Taxonomies serve three functions: they create shared vocabulary for cross-study comparison, they identify gaps where no methods exist for important categories, and they help practitioners select appropriate methods for their specific task. Chazette et al.{% include references/cite.html key="chazette2021exploring" %} demonstrate this through a knowledge catalogue that organises the factors shaping explainability requirements and connects them to usage context and explanation goals.
 
 <details markdown="1" class="appendix-callout group">
 <summary>Appendix: Source Material</summary>
@@ -177,7 +177,7 @@ Taxonomies serve three functions: they create shared vocabulary for cross-study 
 | ----------------------------- | -------------------------------- | ----------------------------- | -------------- | ---------------------- |
 | Doshi-Velez & Kim (2017)      | Harvard/Google Brain researchers | arXiv (ML community)          | 4000+          | Foundational           |
 | Barredo Arrieta et al. (2020) | Multi-institution European team  | Information Fusion            | 8000+          | Authoritative          |
-| Molnar (2020)                 | Independent statistician         | Self-published (CC license)   | Widely used    | Practical reference    |
+| Molnar (2021)                 | Independent statistician         | Self-published (CC license)   | Widely used    | Practical reference    |
 | Watson (2022)                 | UCL philosopher of science       | Synthese (philosophy journal) | Growing        | Conceptual critique    |
 | Chazette et al. (2021)        | LUH/Siemens researchers          | IEEE RE Conference            | Moderate       | Definitional synthesis |
 
@@ -199,12 +199,12 @@ Taxonomies serve three functions: they create shared vocabulary for cross-study 
 
 ### Technical Term Definitions
 
-| Term                 | Definition used in this article                              | Source                        |
-| -------------------- | ------------------------------------------------------------ | ----------------------------- |
-| Interpretability     | Degree to which human can consistently predict model output  | Doshi-Velez & Kim (2017)      |
-| Explainability       | ML producing inherently interpretable models or explanations | Barredo Arrieta et al. (2020) |
-| Post-hoc             | Explanations applied after training                          | Barredo Arrieta et al. (2020) |
-| Application-grounded | Evaluation on real task with real users                      | Doshi-Velez & Kim (2017)      |
+| Term                 | Definition used in this article                                  | Source                        |
+| -------------------- | ---------------------------------------------------------------- | ----------------------------- |
+| Interpretability     | Ability to explain or present in understandable terms to a human | Doshi-Velez & Kim (2017)      |
+| Explainability       | ML producing inherently interpretable models or explanations     | Barredo Arrieta et al. (2020) |
+| Post-hoc             | Explanations applied after training                              | Barredo Arrieta et al. (2020) |
+| Application-grounded | Evaluation on real task with real users                          | Doshi-Velez & Kim (2017)      |
 
 ### Evidence Maturity Map
 

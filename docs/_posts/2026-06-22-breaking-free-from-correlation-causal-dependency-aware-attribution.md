@@ -1,6 +1,6 @@
 ---
 layout: post
-last_modified_at: 2026-06-22
+last_modified_at: 2026-08-29
 title: "Breaking Free from Correlation: Causal and Dependency-Aware Feature Attribution"
 author: Zenith Law
 description: "Three papers tackle the correlation-causation tension in feature attribution: automated causal discovery for SHAP, correlation-aware global scoring, and contrastive cross-class attribution for few-shot learning."
@@ -78,7 +78,7 @@ This article is not legal advice.
 
 ### Ng et al. (2025): Causal SHAP: Removing the Domain-Expert Bottleneck
 
-Causal variants of SHAP exist, but they require a causal graph specified by a domain expert. That requirement is the main adoption barrier: specifying the complete causal structure among d features is prohibitively time-consuming beyond ten features. {% include references/cite.html key="11228295" %} Causal SHAP with PC discovery automates the causal discovery step, producing a three-stage pipeline: the PC algorithm learns a causal DAG from the data, IDA quantifies causal effect sizes adjusting for confounding, and a novel causal value function replaces standard conditional expectations with a do-operator formulation that breaks the correlation between intervened and non-intervened features.
+Causal variants of SHAP exist, but they require a causal graph specified by a domain expert. That requirement is the main adoption barrier: existing causal methods either need a complete causal graph for the algorithm to function or suffer computational complexity that grows rapidly with the number of features. {% include references/cite.html key="11228295" %} Causal SHAP with PC discovery automates the causal discovery step, producing a three-stage pipeline: the PC algorithm learns a causal DAG from the data, IDA quantifies causal effect sizes adjusting for confounding, and a novel causal value function replaces standard conditional expectations with a do-operator formulation that breaks the correlation between intervened and non-intervened features.
 
 On synthetic data with known ground truth, Causal SHAP achieves the lowest RMSE among all compared methods and correctly assigns near-zero scores to correlated-but-non-causal features. On real biomedical datasets, it achieves best or second-best insertion scores.
 
@@ -134,7 +134,7 @@ C3A introduces a dimension that neither Causal SHAP nor ExCIR addresses: contras
 
 ### The scalability challenge
 
-All three methods face scalability constraints that limit their applicability to large-scale models. Causal SHAP is tested only up to 31 features; the exponential growth of the PC algorithm in conditional independence tests makes higher dimensions intractable without alternative discovery methods such as GES or NOTEARS. ExCIR scales better but is limited to global (not instance-level) attribution. C3A requires backbone feature maps and a support set, and its per-pixel perturbation becomes computationally intensive at higher resolutions. None has been demonstrated on models with billions of parameters or on very high-dimensional inputs.
+All three methods face scalability constraints that limit their applicability to large-scale models. Causal SHAP is tested only up to 31 features. The authors note that when the PC algorithm becomes computationally expensive as the number of features scales, they would turn to greedy equivalence search (GES) or, where hidden variables are present, the FCI algorithm. ExCIR scales better but is limited to global (not instance-level) attribution. C3A requires backbone feature maps and a support set, and its per-pixel perturbation becomes computationally intensive at higher resolutions. None has been demonstrated on models with billions of parameters or on very high-dimensional inputs.
 
 ---
 
@@ -146,7 +146,7 @@ The paper focuses on global attribution: a single score per feature for the enti
 
 ### Does the PC algorithm of Causal SHAP fail with many features?
 
-PC has known scalability issues beyond approximately 20 to 30 features in dense settings due to the exponential growth of conditional independence tests. For high-dimensional settings, alternative causal discovery methods (e.g., NOTEARS for continuous optimisation) would be needed.
+PC runs conditional-independence tests whose cost grows quickly with the number of features, so in dense, high-dimensional settings the discovery step becomes expensive. The authors identify greedy equivalence search (GES) as the follow-up for scaling and the FCI algorithm for cases with hidden variables.
 
 ### Does C3A require a labelled support set at explanation time?
 
@@ -214,7 +214,7 @@ All three papers appear in peer-reviewed venues: IJCNN (IEEE, Ng), AAIML (IEEE, 
   <dd>A method that bounds causal effects from observational data given a partially known causal graph, used by Causal SHAP to quantify feature-to-target causal strengths.</dd>
 
   <dt><dfn>Mid-mean centring</dfn></dt>
-  <dd>A robust centring method that removes the top and bottom quartiles before computing the mean, used by ExCIR to reduce the influence of outliers on the correlation measure.</dd>
+  <dd>A robust location estimate defined as the average of the 25th and 75th percentile values of a variable (Tukey's mid-mean), used by ExCIR to reduce the influence of outliers on the correlation measure.</dd>
 
   <dt><dfn>Support set</dfn></dt>
   <dd>The set of labelled examples provided to a few-shot learner at inference time, used by C3A to compute the class-conditional descriptor statistics for contrastive comparison.</dd>
