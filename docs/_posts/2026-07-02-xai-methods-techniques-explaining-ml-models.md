@@ -1,6 +1,6 @@
 ---
 layout: post
-last_modified_at: 2026-07-02
+last_modified_at: 2026-08-29
 title: "Methods and Techniques for Explaining Machine Learning Models"
 author: Zenith Law
 description: "A systematic examination of post-hoc explanation methods and inherently interpretable models, from gradient-based attribution to concept-based explanations, with critical analysis of their theoretical foundations and practical trade-offs."
@@ -63,7 +63,7 @@ This article is not legal advice.
   <dd>A model that achieves high accuracy by exploiting spurious correlations in the training data rather than learning the intended decision strategy. Named after the horse that appeared to perform arithmetic but was actually responding to subtle human cues.</dd>
 
   <dt><dfn>Interpretation vs. interpretability</dfn></dt>
-  <dd>Following Li et al. (2022){% include references/cite.html key="li2022interpretable" %}, interpretations are the outputs of explanation algorithms (attributions, saliency maps). Interpretability is the intrinsic property of a model that measures how predictable its inferences are to humans. They are related but distinct: a model can be interpreted (explanations exist) without being interpretable (humans cannot reliably predict its behaviour).</dd>
+  <dd>Following Li et al. (2022){% include references/cite.html key="li2022interpretable" %}, interpretations are the outputs of explanation algorithms (attributions, explanations). Interpretability is the ability of a model to explain or to present its behaviour in understandable terms, an intrinsic property of the model. They are related but distinct: a model can be interpreted (explanations exist) without being highly interpretable in the sense that humans can readily understand its behaviour.</dd>
 </dl>
 
 ---
@@ -74,13 +74,13 @@ This article is not legal advice.
 
 Samek et al. provide the most systematic technical review of post-hoc explanation methods for deep neural networks {% include references/cite.html key="9369420" %}. Their contribution is threefold: establishing the theoretical foundations, conducting comparative evaluation, and distilling best practices.
 
-**Theoretical foundations.** The paper classifies explanation methods by the axioms they satisfy. Gradient-based methods (Integrated Gradients, DeepLIFT, LRP) satisfy sensitivity (features with zero gradient receive zero attribution) and, in the case of Integrated Gradients, implementation invariance (attributions are identical for functionally equivalent models). Perturbation-based methods (LIME, occlusion) satisfy neither axiom in general.
+**Theoretical foundations.** The survey consolidates the theoretical basis of common methods. Gradient-based techniques (saliency maps, Integrated Gradients, Gradient × Input) are understood through the axioms of sensitivity and implementation invariance established for Integrated Gradients, while Shapley-value methods inherit the game-theoretic axioms of efficiency, symmetry, and the dummy-player property. These axiom systems help distinguish method families even though most methods satisfy them only partially in practice.
 
-Sensitivity and implementation invariance are not merely theoretical niceties. Sensitivity ensures that features that demonstrably affect the output receive non-zero attribution. Implementation invariance ensures that two models computing the same function produce the same explanations, regardless of architectural differences. Both properties are essential for explanations to be reliable.
+Sensitivity and implementation invariance are not merely theoretical niceties. Sensitivity ensures that features that demonstrably affect the output receive non-zero attribution. Implementation invariance ensures that two models computing the same function produce the same attributions, regardless of architectural differences. Both properties make explanations more trustworthy, and their violation in some practical methods is a known limitation.
 
 **Comparative evaluation.** The paper compares methods using sensitivity analysis (how much does the explanation change when the input is perturbed?) and faithfulness metrics (how well does the explanation predict model behaviour under feature removal?). The key finding: different methods produce substantially different explanations for the same prediction, and no single method dominates across all quality metrics.
 
-**Best practices.** The paper recommends: (a) using multiple explanation methods and checking for consensus; (b) verifying explanations against simple baselines (e.g., constant input, random model); (c) combining explanations with uncertainty quantification. These recommendations have become standard practice.
+**Best practices.** Through worked examples, the paper distils four recommendations for using explanations in practice: try different parameters of the explanation techniques, since a single preset can misleadingly weaken or strengthen a conclusion; unmask Clever Hans examples so that spurious strategies are identified rather than trusted; iteratively validate and improve the model using the evidence from explanations; and look at interactions to get deeper insights into how features combine rather than stopping at individual attributions.
 
 ### Lapuschkin et al. (2019): Explanations as Validation Tools
 
@@ -88,25 +88,25 @@ Lapuschkin et al. demonstrated that explanation methods are not just for underst
 
 The key demonstrations of the paper:
 
-- **Shipping classification.** An ImageNet-trained VGG-16 classifying ships relied primarily on a watermark artifact present in shipping images, not the vessel itself. Removing the watermark changed predictions dramatically, but accuracy metrics gave no indication of this failure.
+- **Horse classification.** A Fisher vector classifier trained on PASCAL VOC 2007 relied primarily on a source tag present in about one-fifth of the horse images, not the horses themselves. Removing the tag weakened the decision, and inserting a source tag onto a car image changed the classification from car to horse. Accuracy metrics gave no indication of this failure.
 
-- **Pneumonia detection.** A model trained to classify pneumonia from chest X-rays relied on hospital-specific markers (metal tokens, patient positioning) rather than pathological features. The model would fail on data from different hospitals, but held-out test accuracy from the same hospital distribution appeared excellent.
+- **Atari Pinball.** A deep network that achieved excellent scores in the Atari game Pinball learned to abuse the in-game nudging mechanism: it moved the ball to a high-scoring switch and then nudged the table so the ball passed over the switch repeatedly, entirely ignoring the flippers. It was a rational strategy for the simulator but would fail on a real machine that tilts after strong movement.
 
-- **Breakout gameplay.** A deep Q-network playing Breakout learned to independently track the paddle and ball positions, even after the ball was removed. This strategy was invisible to reward-based evaluation but revealed by explanation heatmaps.
+- **Atari Breakout.** In the game Breakout, relevance heatmaps tracked by training epoch showed the network progressively focusing on ball control, the paddle, and finally learning to dig tunnels at the corners of the playing field, a genuinely strategic behaviour also used by human players. The heatmaps distinguished this valid strategy from the Clever Hans behaviours above.
 
-The paper also proposed Spectral Relevance Analysis (SRA), which clusters explanation heatmaps to identify recurring patterns of model behaviour. SRA enables semi-automated detection of Clever Hans strategies without requiring manual inspection of individual explanations.
+The paper also proposed spectral relevance analysis (SpRAy), which applies spectral clustering to explanation heatmaps to identify typical and atypical recurring patterns of model behaviour. SpRAy enables semi-automated detection of Clever Hans strategies on large datasets without requiring manual inspection of individual explanations, and revealed an additional padding artifact the researchers had missed by hand.
 
 ### Li et al. (2022): Distinguishing Interpretations from Interpretability
 
 Li et al. address a conceptual confusion that pervades the XAI literature {% include references/cite.html key="li2022interpretable" %}. They distinguish between interpretations (the outputs of explanation algorithms) and interpretability (the intrinsic property of a model). The distinction matters because a model can produce interpretable outputs (attributions, saliency maps) without being interpretable in the sense that humans can reliably predict its behaviour.
 
-The taxonomy of the paper organises interpretation algorithms by their underlying principle:
+The taxonomy of the paper is organised along three orthogonal dimensions rather than a single list of categories {% include references/cite.html key="li2022interpretable" %}:
 
-1. **Backpropagation-based methods:** Gradients, Integrated Gradients, LRP, DeepLIFT. Propagate information from output to input.
-2. **Perturbation-based methods:** LIME, occlusion, Shapley values. Observe how output changes when input is perturbed.
-3. **Representation-based methods:** Activation maximisation, feature visualisation, concept activation vectors. Examine internal representations.
-4. **Example-based methods:** Counterfactuals, prototypes, influential training samples. Use data points to explain decisions.
-5. **Surrogate methods:** Global surrogates (decision trees approximating black-box models) and local surrogates (LIME).
+1. **Representation of interpretations:** feature importance (attributions over input or intermediate features, e.g., LIME, saliency, SHAP-style scores), model response (examples generated or selected to probe model behaviour, e.g., counterfactuals), model rationale process (substituting an interpretable surrogate to reveal the decision path), and dataset (explaining how training samples influence the model).
+
+2. **Model type:** model-agnostic methods that treat the model as a black box; methods for differentiable models such as neural networks; and specific-model methods restricted to particular architectures (CNNs, GANs, GNNs).
+
+3. **Relation between algorithm and model:** closed-form (a formula is derived from the target model), composition (components obtained during training), dependence (operations built on the trained model), and proxy (a separately learned surrogate model).
 
 The paper also reviews evaluation metrics for interpretation algorithms and connects interpretability to other model properties including adversarial robustness and learning from interpretations.
 
@@ -114,9 +114,9 @@ The paper also reviews evaluation metrics for interpretation algorithms and conn
 
 Poeta et al. survey a paradigm shift in XAI: moving from raw feature attributions to concept-based explanations {% include references/cite.html key="poeta2025concept" %}. Raw feature attributions (SHAP values, saliency maps) indicate which pixels or tabular features drove a prediction, but they do not tell the user what those features mean. Concept-based methods (C-XAI) explain predictions in terms of human-interpretable concepts: "the model classified this image as a bird because it detected wings, a beak, and feathers."
 
-The paper proposes a nine-category taxonomy of C-XAI methods organised along two dimensions: how concepts are defined (pre-defined by humans, discovered from data, or learned jointly with the model) and how concepts are used (for explanation, for intervention, or for model design).
+The paper analyses C-XAI methods along 13 dimensions grouped into three families: concept and explanation characteristics (how concepts are integrated into models, whether they are annotated, their type, and the form and scope of the explanation), the applicability of the method (data type, task, and network architecture), and the resources and evaluation conducted (data release, code availability, new metrics, human evaluation). From these dimensions it derives a taxonomy of nine C-XAI categories, distinguished chiefly by whether concepts are used only to explain an existing model (post-hoc) or during training (explainable by design), the specific type of concept used, and the required explanation.
 
-Selection guidelines map application contexts to suitable C-XAI categories. For medical imaging, where concepts are well-defined (tumour margins, calcifications), pre-defined concept methods are appropriate. For novel scientific discovery, where concepts are unknown a priori, data-driven concept discovery is needed.
+Selection guidelines take the form of a small set of questions a practitioner answers in sequence: whether the model can be modified, whether annotated concepts are available, which task the explanation must serve, and what kind of unsupervised concepts are needed. This routes the practitioner to a suitable category based on their own constraints rather than on a fixed mapping from application domain.
 
 ---
 
@@ -142,7 +142,7 @@ But the existence of these methods does not guarantee their reliability. The nex
 
 ### How are explanation methods categorised in the XAI literature?
 
-The dominant taxonomy groups methods into four categories based on their operational mechanism: backpropagation-based (gradients, Integrated Gradients, LRP), perturbation-based (LIME, occlusion, Shapley values), representation-based (activation maximisation, concept activation vectors), and example-based (counterfactuals, prototypes). Each category has different computational requirements and reveals different aspects of model behaviour.
+The dominant taxonomy, proposed by Li et al. (2022){% include references/cite.html key="li2022interpretable" %}, is three-dimensional rather than a single list of categories. It organises interpretation algorithms by the representation of the interpretation (feature importance, model response, model rationale process, dataset), the type of model addressed (model-agnostic, differentiable, specific model), and the relation between the algorithm and the model (closed-form, composition, dependence, proxy). Each algorithm is characterised by its position on all three dimensions.
 
 ### What distinguishes backpropagation-based methods from perturbation-based methods?
 
@@ -150,11 +150,11 @@ Backpropagation-based methods compute attributions through a single forward-back
 
 ### Why does Samek et al. argue for axiomatic foundations in XAI evaluation?
 
-Samek et al.{% include references/cite.html key="9369420" %} argue that without axiomatic grounding, evaluation becomes circular or arbitrary because there is no objective ground truth for explanations. They propose that explanation methods should satisfy axioms such as sensitivity and implementation invariance, which provide a principled basis for comparing methods and detecting failures that empirical evaluation alone would miss.
+Samek et al.{% include references/cite.html key="9369420" %} argue that grounding explanation methods in axioms such as sensitivity, implementation invariance, and the Shapley properties provides a principled basis for comparing methods and reasoning about their behaviour that purely empirical evaluation on a single metric would miss. Axioms help detect failures and clarify what a method can and cannot be trusted to reveal, though no single axiom system fully characterises an explanation.
 
 ### How can explanation methods serve as model validation tools?
 
-Lapuschkin et al. (2019){% include references/cite.html key="lapuschkin2019cleverhans" %} demonstrate that explanation methods can detect Clever Hans behaviour where models exploit spurious correlations invisible to accuracy metrics. Their spectral relevance analysis reveals that models trained on medical images may rely on watermarks or hospital markers rather than actual pathology, making explanation methods a diagnostic tool rather than just a transparency device.
+Lapuschkin et al. (2019){% include references/cite.html key="lapuschkin2019cleverhans" %} demonstrate that explanation methods can detect Clever Hans behaviour where models exploit spurious correlations invisible to accuracy metrics. Their spectral relevance analysis (SpRAy) clusters explanation heatmaps to reveal, for example, that a horse classifier relied on a source tag present in the images and that a Pinball agent cheated by abusing the nudging mechanism, making explanation methods a diagnostic tool rather than just a transparency device.
 
 ### What is concept-based XAI and how does it differ from feature attribution?
 
@@ -176,8 +176,8 @@ Concept-based XAI explains model decisions in terms of human-understandable conc
 
 - Samek et al. (2021): 200+ references on post-hoc explanation methods
 - Lapuschkin et al. (2019): Focused empirical study with 40+ references
-- Li et al. (2022): 200+ references on interpretation algorithms
-- Poeta et al. (2025): 200+ references on concept-based XAI
+- Li et al. (2022): Nearly 200 references on interpretation algorithms
+- Poeta et al. (2025): Over 100 references on concept-based XAI
 
 ### Citability Snapshot
 

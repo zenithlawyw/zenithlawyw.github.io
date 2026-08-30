@@ -1,6 +1,6 @@
 ---
 layout: post
-last_modified_at: 2026-06-18
+last_modified_at: 2026-08-29
 title: "Measuring Attribution Quality: Metrics, Benchmarks, and Evaluation Frameworks"
 author: Zenith Law
 description: "Four papers on how to evaluate feature attribution quality: a time-series-specific metric, an association-rule approach, a comprehensive counterfactual benchmark, and a multi-factorial NLP evaluation framework."
@@ -80,7 +80,7 @@ This article is not legal advice.
 
 Perturbation-based faithfulness metrics are circular: they evaluate an attribution method using the same model it is trying to explain. {% include references/cite.html key="CHEN2025129379" %} WAE (Window-based Attribution RMSE) breaks this circle by comparing attributions against a data-inherent property: the predictability of each time window, measured via real entropy. The intuition is that more predictable windows are driven by stronger signals, and an attribution method should assign higher importance to features in those windows. The RMSE between the attribution ranking and the predictability ranking is the WAE score. The circularity critique is valid, but the alternative that WAE proposes replaces one proxy (model behaviour) with another (predictability as ground truth), and the relationship between data predictability and feature importance is itself an untested assumption. A feature that drives predictability may not be the same as a feature the model actually uses. WAE is a step forward in independence from the model, but it does not eliminate the proxy problem.
 
-Two validation hypotheses are confirmed: more advanced methods (SHAP, LEMNA) achieve lower WAE than simpler ones (LIME), and more interpretable datasets yield lower WAE. WAE remains valid even when the model has known OOD sensitivity, which is the critique that undermines perturbation-based metrics.
+Two validation hypotheses are confirmed: more advanced methods (SHAP, LEMNA) achieve lower WAE than simpler ones (LIME), and more interpretable datasets yield lower WAE. Because WAE assesses the explanation from the data perspective rather than by perturbing the model, it sidesteps the reliance on perturbation-based fidelity that circular metrics inherit.
 
 > **Core trade-off:** WAE assumes a specific relationship between data predictability and feature importance that may not hold for all domains or tasks.
 
@@ -90,15 +90,15 @@ Two validation hypotheses are confirmed: more advanced methods (SHAP, LEMNA) ach
 
 RExQUAL evaluates attribution quality against discovered association rules rather than against the model or the data directly. {% include references/cite.html key="10879535" %} The metric works in four stages: train the model and generate attributions, extract key features via the elbow method, run Apriori association rule mining, and compute RExQUAL as confidence × support × (feature coverage fraction). It measures how well the features identified by an attribution method support the generation of high-quality rules matching the behaviour of the model.
 
-On Spanish electric demand and SAGRA evapotranspiration datasets, RULEx achieves the highest RExQUAL (0.876), followed by SHAP. LIME performs worse than random, suggesting its linear-surrogate approach is fundamentally unsuited to time series. A striking anomaly: on multivariate SAGRA, SHAP underperforms random feature selection (0.251 vs 0.482). This suggests the attributions of SHAP may be actively misleading for multivariate time series.
+On Spanish electric demand and SAGRA evapotranspiration datasets, RULEx achieves the highest RExQUAL (0.876 on SAGRA; 0.191 on electric demand). On electric demand SHAP ranks second, but on multivariate SAGRA the ordering is RULEx, then random feature selection, then SHAP: LIME (0.040) and SHAP (0.251) both underperform random feature selection (0.482). The SAGRA results indicate that LIME and SHAP attributions can be actively misleading for multivariate time series.
 
-**Study limitations:** The RExQUAL framework provides a genuinely novel paradigm. The finding that LIME underperforms random selection on time series is a strong empirical result. The independence of the metric from model-specific validation requires further confirmation: the association rule quality metrics (support, confidence) need validation against human judgement.
+**Study limitations:** The RExQUAL framework provides a genuinely novel paradigm. The finding that LIME underperforms random selection on the multivariate SAGRA time series is a strong empirical result, though the effect does not hold on the univariate electric demand dataset. The independence of the metric from model-specific validation requires further confirmation: the association rule quality metrics (support, confidence) need validation against human judgement.
 
 ### Moreira et al. (2025): The Counterfactual Benchmark and Its Broken Metrics
 
-One of the largest counterfactual benchmarks to date evaluates four algorithms across three model types on 25 tabular datasets (the authors describe it as the most extensive in the field). {% include references/cite.html key="10.1145/3672553" %} Three findings stand out. First, model type has no significant impact on counterfactual quality: counterfactual algorithms adapt to whatever boundary the model has learned. This finding challenges the common assumption that simpler models yield better explanations, but only for counterfactuals. It has not been tested whether attribution methods show the same model-type independence. Second, quantitative metrics alone cannot distinguish plausible from implausible explanations. WatcherCF optimises for minimum proximity but can produce absurd counterfactuals (Age changing from 34 to 81); the quantitative metric says high quality, decision-path inspection reveals implausibility. Third, DiCE achieves the best practical balance through explicit diversity and plausibility constraints.
+One of the largest counterfactual benchmarks to date evaluates four algorithms across three model types on 25 tabular datasets (the authors describe it as the most extensive in the field). {% include references/cite.html key="10.1145/3672553" %} Three findings stand out. First, model type has no significant impact on counterfactual quality: counterfactual algorithms adapt to whatever boundary the model has learned. This finding challenges the common assumption that simpler models yield better explanations, but only for counterfactuals. It has not been tested whether attribution methods show the same model-type independence. Second, quantitative metrics alone cannot distinguish plausible from implausible explanations. WatcherCF, whose loss focuses on proximity, can produce domain-implausible counterfactuals (Age changing from 34 to 81); decision-path inspection reveals the implausibility that a quantitative score alone would not flag, and the paper generalises that non-plausible counterfactuals can still record good proximity scores. Third, DiCE achieves the best practical balance through explicit diversity and plausibility constraints.
 
-The authors also observe that the counterfactual XAI field faces an incipient replication crisis: no standardised evaluation framework, no common benchmark datasets, and no consensus on which metrics matter. This diagnosis applies beyond counterfactuals to the broader attribution evaluation literature.
+The authors also observe that the counterfactual XAI field faces a replication crisis: no standardised evaluation framework, no common benchmark datasets, and no consensus on which metrics matter. This diagnosis applies beyond counterfactuals to the broader attribution evaluation literature.
 
 > **Key insight:** Counterfactual algorithms are always faithful to their model. The question is whether the counterfactual is plausible, not whether it is valid.
 
@@ -108,7 +108,7 @@ The authors also observe that the counterfactual XAI field faces an incipient re
 
 Most evaluation studies compare methods on a single metric and a single task, generating claims that do not generalise. {% include references/cite.html key="DEHDARIRAD2025100101" %} This controlled multi-factorial experiment compares SHAP, LIME, and Integrated Gradients across classical models (Logistic Regression, Random Forest), transformer models (DistilBERT, RoBERTa), three binary text datasets, positive and negative evidence types, and both automated and human metrics.
 
-Three findings emerge. First, no universal best method exists: SHAP excels for classical models with positive evidence, while LIME matches or beats SHAP on complex transformers for negative evidence. Second, model scale does not monotonically improve explainability: DistilBERT produces more faithful attributions than RoBERTa despite being smaller and less accurate. Third, human evaluation reveals patterns automated metrics miss; the correlation between automated faithfulness scores and human relevance ratings is modest.
+Three findings emerge. First, no universal best method exists: SHAP excels for classical models with positive evidence, while LIME matches or beats SHAP on complex transformers for negative evidence. Second, faithfulness is conditional on architecture, evidence type, and dataset: for negative evidence DistilBERT is more faithful than RoBERTa, while for positive evidence RoBERTa is marginally more faithful, and for feature-interaction analysis (STI and Archipelago) RoBERTa is the more faithful across all datasets. Third, an independent human relevance evaluation (100 raters) runs alongside the automated metrics, and the STI-based transformer models achieve the higher relevance ratings when features are judged in full-text context, underscoring that context helps align model-identified features with human judgement.
 
 > **Implication:** Evaluation results are conditional on model architecture, dataset, and evidence type. Single-number rankings conceal more than they reveal.
 
@@ -143,14 +143,14 @@ This finding challenged my own assumption that simpler, more theoretically groun
 
 ### The convergent validity gap
 
-An open question across all four papers is whether the different evaluation paradigms converge on the same ranking of methods. Dehdarirad's finding of modest correlation between automated and human metrics suggests they may not. The papers do not compare WAE, RExQUAL, AOPC, and human ratings on the same datasets with the same methods. Without such a comparison, we cannot know whether a method that scores well on WAE also scores well on RExQUAL or human evaluation. Convergent validity studies, where multiple metrics from different paradigms are applied to the same experimental setup, are the most urgently needed work in attribution evaluation.
+An open question across all four papers is whether the different evaluation paradigms converge on the same ranking of methods. Dehdarirad's study runs automated faithfulness metrics and human relevance ratings on the same models, but the two kinds of evidence are reported separately and the paper does not establish that they rank methods identically, so convergent agreement remains unconfirmed. The papers do not compare WAE, RExQUAL, AOPC, and human ratings on the same datasets with the same methods. Without such a comparison, we cannot know whether a method that scores well on WAE also scores well on RExQUAL or human evaluation. Convergent validity studies, where multiple metrics from different paradigms are applied to the same experimental setup, are the most urgently needed work in attribution evaluation.
 
 ### Practical implications
 
 1. **Triangulate**: No single metric is sufficient. Practitioners should use at least two metrics from different paradigms.
 2. **Domain matters**: Dehdarirad's findings suggest evaluation results may not transfer across domains or architectures.
 3. **Inspecting > scoring**: the decision-path inspection of Moreira et al. should be a standard complement to quantitative evaluation, especially in high-stakes settings.
-4. **Time series needs dedicated treatment**: Both WAE and RExQUAL were developed specifically for time series, and LIME specifically underperforms in this domain.
+4. **Time series needs dedicated treatment**: Both WAE and RExQUAL were developed specifically for time series, and LIME underperforms random selection on the multivariate time series examined.
 
 ---
 
@@ -174,7 +174,7 @@ Start by asking: what kind of failure matters most? If false positive attributio
 
 ### Does human evaluation correlate with automated metrics?
 
-Dehdarirad's results show modest correlation, suggesting that human and automated metrics capture partially overlapping but distinct constructs. Automated metrics are cheaper and more reproducible; human evaluation is necessary for deployment decisions that affect end users.
+Dehdarirad's study couples automated faithfulness metrics with a 100-rater human relevance evaluation. The human results show that context matters: STI-based transformer models achieve higher relevance ratings when features are judged within full text, indicating that model-identified features align more closely with human judgement when context is preserved. Automated metrics remain cheaper and more reproducible; human evaluation adds the human-relevance dimension that faithfulness scores alone do not capture.
 
 ---
 
@@ -254,7 +254,7 @@ All four papers appear in established venues: Neurocomputing (Chen & Zhang), TPA
 
 1. **Strong empirical evidence (replicated across settings)**: (a) Model type has no significant effect on counterfactual quality (Moreira); (b) SHAP outperforms LIME on most tabular benchmarks (Dehdarirad, Moreira).
 2. **Demonstrated on limited settings**: (a) WAE validation on time series datasets; (b) RExQUAL on two energy datasets; (c) Dehdarirad's full multi-factorial results.
-3. **Partial or contradictory evidence**: LIME performing worse than random on time series (Troncoso-García) vs. acceptable performance on NLP (Dehdarirad).
+3. **Partial or contradictory evidence**: LIME performing worse than random on the multivariate SAGRA time series (Troncoso-García) vs. acceptable performance on NLP (Dehdarirad).
 4. **Inferred synthesis**: (a) Generalisability of Moreira's findings to attribution (not counterfactual) methods; (b) transferability of evaluation results across domains.
 
 </details>

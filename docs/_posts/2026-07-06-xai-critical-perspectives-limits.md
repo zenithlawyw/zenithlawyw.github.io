@@ -1,6 +1,6 @@
 ---
 layout: post
-last_modified_at: 2026-07-06
+last_modified_at: 2026-08-29
 title: "Critical Perspectives and Limits of Current Explainability Methods"
 author: Zenith Law
 description: "A rigorous examination of what current explainability methods cannot deliver: false hope in healthcare, conceptual confusion, deployment gaps, audit limitations, and metric proliferation problems."
@@ -46,7 +46,7 @@ tags:
 
 The first two articles in this series established what interpretability means and how current methods work. This article examines what those methods cannot deliver. Five papers, each from a different angle, document limitations that are not merely technical but conceptual, organisational, and structural.
 
-Ghassemi et al.{% include references/cite.html key="ghassemi2021falsehope" %} argue that current explainability methods cannot achieve their stated goals of trust, transparency, and bias mitigation. Watson{% include references/cite.html key="watson2022conceptual" %} identifies three conceptual problems embedded in the very design of IML methods. Bhatt et al.{% include references/cite.html key="bhatt2020deployment" %} show that even when explanations are deployed, they serve engineers rather than affected stakeholders. Casper et al.{% include references/cite.html key="casper2024blackbox" %} prove that black-box access, the most common audit mode, is structurally insufficient. Pawlicki et al.{% include references/cite.html key="pawlicki2024metrics" %} document a metrics crisis that makes it impossible to compare methods systematically.
+Ghassemi et al.{% include references/cite.html key="ghassemi2021falsehope" %} argue that current explainability methods cannot achieve their stated goals of trust, transparency, and bias mitigation. Watson{% include references/cite.html key="watson2022conceptual" %} identifies three conceptual problems embedded in the very design of IML methods. Bhatt et al.{% include references/cite.html key="bhatt2020deployment" %} show that even when explanations are deployed, they serve engineers rather than affected stakeholders. Casper et al.{% include references/cite.html key="casper2024blackbox" %} demonstrate that black-box access, the most common audit mode, is insufficient for rigorous evaluation. Pawlicki et al.{% include references/cite.html key="pawlicki2024metrics" %} document a metrics crisis that makes it impossible to compare methods systematically.
 
 The picture is not that XAI is useless. It is that XAI is much less reliable than its advocates claim, and that the field must confront its limitations honestly to make genuine progress.
 
@@ -59,7 +59,7 @@ This article is not legal advice.
   <dd>A framework from the philosophy of science (Mayo, 1996) requiring that a hypothesis must be subjected to tests that it is likely to fail if false. Watson argues that IML methods do not subject their explanations to severe testing.</dd>
 
   <dt><dfn>Product vs. process explanation</dfn></dt>
-  <dd>A product explanation states which features were important for a prediction. A process explanation describes how the model used those features to arrive at its decision. Current IML methods almost exclusively provide product explanations.</dd>
+  <dd>Watson distinguishes between explanations treated as a static deliverable computed once (a product) and explanations treated as an iterative exchange between agents engaged in causal inquiry (a process). He argues that current IML methods overwhelmingly treat explanations as products rather than processes.</dd>
 
   <dt><dfn>Deployment gap</dfn></dt>
   <dd>The mismatch between the research narrative that explanations serve affected stakeholders and the practice where explanations primarily serve internal ML engineers for debugging.</dd>
@@ -77,11 +77,11 @@ This article is not legal advice.
 
 ### Ghassemi et al. (2021): The Clinical Critique
 
-Ghassemi, Oakden-Rayner, and Beam published a pointed critique from within the medical AI community {% include references/cite.html key="ghassemi2021falsehope" %}. Their core argument is that current explainability methods cannot deliver on the promises made on their behalf: engendering trust, providing transparency, and mitigating bias. The argument rests on three documented failure modes.
+Ghassemi, Oakden-Rayner, and Beam published a pointed critique from within the medical AI community {% include references/cite.html key="ghassemi2021falsehope" %}. Their core argument is that current explainability methods cannot deliver on the promises made on their behalf: engendering trust, providing transparency, and mitigating bias. They highlight a series of ways in which explanations can fail to support clinical practice.
 
 **Ambiguity.** Different explanation methods applied to the same prediction regularly produce conflicting explanations. Without ground truth, there is no principled way to adjudicate between them. A clinician presented with one explanation from LIME and a different explanation from SHAP has no basis for choosing which to trust.
 
-**Inaccuracy.** Explanations can be systematically misleading. Gradient saturation produces attribution maps that highlight irrelevant features. Clever Hans phenomena (documented in [Methods and Techniques for Explaining Machine Learning Models](/methods-techniques-explaining-ml-models)) show that models can be correct for the wrong reasons, and explanations faithfully reflecting model behaviour will therefore be wrong about reality.
+**Inaccuracy.** Explanations can be systematically misleading. Saliency-based methods can produce attribution maps that appear reassuring even for untrained networks, so misleading saliency is a genuine risk. Clever Hans phenomena (documented in [Methods and Techniques for Explaining Machine Learning Models](/methods-techniques-explaining-ml-models)) show that models can be correct for the wrong reasons, and explanations faithfully reflecting model behaviour will therefore be wrong about reality.
 
 **Inscrutability.** Even if explanations were accurate, clinicians lack training to critically evaluate them. The cognitive load of assessing the validity of an explanation while making a clinical decision creates a situation where explanations may decrease rather than improve decision quality.
 
@@ -95,15 +95,15 @@ Watson's critique targets the conceptual foundations rather than empirical perfo
 
 **Absent error quantification.** LIME fits a local linear model without reporting confidence intervals. SHAP values are point estimates without standard errors. Neither method subjects its explanations to severe testing: constructing tests that the explanation is likely to fail if it is incorrect. In any scientific context, making claims without error quantification is unacceptable.
 
-**Product over process.** A list of feature attributions describes what the model used but not how it used it. Was the decision process of the model linear (features combine additively) or interactive (features modulate each other's contributions)? Current methods do not distinguish these fundamentally different modes.
+**Product over process.** Current methods overwhelmingly treat explanations as static deliverables, computed once and for all. Watson argues that successful explanations are more of a process than a product: an iterative exchange between at least two agents engaged in a certain sort of causal inquiry, requiring dynamic refinements and user interaction. A list of feature attributions, computed once and handed over, does not support this process.
 
-Watson's prescription is not to abandon IML but to adopt the methodological standards of the sciences it seeks to support: clear explanatory targets, error quantification, and process-level understanding.
+Watson's prescription is not to abandon IML but to adopt the methodological standards of the sciences it seeks to support: clarifying the target of explanation, quantifying error rates to allow severe testing, and treating explanation as an interactive process rather than a static deliverable.
 
 ### Bhatt et al. (2020): The Deployment Gap
 
 Bhatt et al. conducted the first empirical study of how organisations actually use explainability in production {% include references/cite.html key="bhatt2020deployment" %}. The results reveal a fundamental mismatch between research narratives and practice.
 
-The study of 11 organisations found that the majority of explainability deployments serve ML engineers debugging models, not end users affected by model decisions. Explanations were used for: model debugging and feature engineering (most common), regulatory compliance documentation, and building internal stakeholder trust. End-user-facing explanations were rare.
+The study, spanning roughly thirty people across approximately twenty organisations, found that the majority of explainability deployments serve ML engineers debugging models, not end users affected by model decisions. Explanations were used for: model debugging and feature engineering (most common), regulatory compliance documentation, and building internal stakeholder trust. End-user-facing explanations were rare.
 
 The gap matters because the research community motivates explainability as a tool for transparency and accountability to affected stakeholders. If explanations never reach those stakeholders, the normative goals of XAI remain unfulfilled regardless of technical quality.
 
@@ -115,7 +115,7 @@ Casper et al. examine a structural constraint on AI auditing {% include referenc
 
 Black-box access cannot reliably detect model editing or fine-tuning. Adversarial robustness evaluations are weaker without gradient access. Mechanistic interpretability, understanding how circuits within the model implement behaviours, requires white-box access to weights and activations. Data contamination detection is limited when the training data cannot be inspected.
 
-The three-level framework of the paper (black-box, white-box, outside-the-box) maps specific audit tasks to required access levels. The central recommendation: auditors must disclose their access level for audit results to be interpretable, and regulators should mandate minimum access for high-risk systems.
+The access framework of the paper distinguishes black-, grey-, and white-box access, introduces two further categories (de facto white-box and outside-the-box), and maps specific audit tasks to the access levels they require. The central recommendation: auditors must disclose their access level for audit results to be interpretable, and audits of higher-risk systems should be conducted with higher levels of access where this is feasible.
 
 This critique has direct implications for explainability. Many explanation methods require white-box access (gradients, activations). When auditors only have black-box access, the set of available explanation methods is restricted, and the conclusions that can be drawn from explanations are correspondingly limited.
 
@@ -123,13 +123,13 @@ This critique has direct implications for explainability. Many explanation metho
 
 Pawlicki et al. document a problem that makes XAI evaluation unreliable even when the methods work correctly {% include references/cite.html key="pawlicki2024metrics" %}. The proliferation of evaluation metrics has created three pathologies:
 
-**Metric duplication.** Over 50 distinct XAI evaluation metrics exist, many measuring the same construct under different names. Faithfulness metrics, for example, come in dozens of variants with different mathematical formulations but identical conceptual targets.
+**Metric duplication.** Nearly ninety distinct XAI evaluation metrics exist, many measuring the same construct under different names. Faithfulness metrics, for example, appear in multiple variants with different mathematical formulations but overlapping conceptual targets.
 
 **Metric inefficacy.** Some metrics fail to distinguish between high- and low-quality explanations. When all methods receive similar scores, the metric provides no information for method selection.
 
 **Metric confusion.** Different metrics applied to the same explanation method produce diverging assessments. One metric may rank SHAP highest while another ranks LIME highest, leaving the practitioner with no basis for choice.
 
-The paper recommends domain-specific metric selection. The set of metrics appropriate for validating explanations in medical imaging (where pixel-level faithfulness matters) differs from the set for tabular credit scoring (where feature-level stability matters). No universal metric set exists.
+The paper argues for context-specific metric selection, ensuring that practitioners choose the most appropriate metrics for their specific needs, while also calling for a more unified evaluation framework. There is no single metric set that suits every application, and metric results are often inconsistent across frameworks even when the metrics seem theoretically sound.
 
 ---
 
@@ -153,7 +153,7 @@ The critical perspectives examined in this article do not refute the value of XA
 
 ### What are the main limitations of current XAI methods identified in the literature?
 
-The literature identifies five interconnected limitations: explanation ambiguity across methods, systematic inaccuracy through gradient manipulation, a gap between research and deployment practice, structural limits on black-box auditability, and a metrics crisis where evaluation tools fail to distinguish meaningful differences between methods. These limitations are not merely technical but also conceptual and organisational.
+The literature identifies five interconnected limitations: explanation ambiguity across methods, systematic inaccuracy in explanation methods, a gap between research and deployment practice, structural limits on black-box auditability, and a metrics crisis where evaluation tools fail to distinguish meaningful differences between methods. These limitations are not merely technical but also conceptual and organisational.
 
 ### Why do Ghassemi et al. argue that explainability requirements may harm clinical AI?
 
@@ -161,7 +161,7 @@ Ghassemi et al.{% include references/cite.html key="ghassemi2021falsehope" %} ar
 
 ### What is the deployment gap that Bhatt et al. identify in XAI practice?
 
-Bhatt et al.{% include references/cite.html key="bhatt2020deployment" %} surveyed ML practitioners and found that XAI methods are rarely deployed in production because they lack clear integration paths, standardised evaluation criteria, and actionable outputs. Practitioners reported using explanation methods for debugging during development but not for external accountability purposes. This gap between research capability and deployment reality limits the practical impact of XAI.
+Bhatt et al.{% include references/cite.html key="bhatt2020deployment" %} interviewed practitioners across organisations that do deploy explainability and found that the majority of deployments primarily serve internal ML engineers debugging models, rather than affected stakeholders. Their conclusion lists specific limitations of current explanations for end-user use, including the need for domain experts to evaluate them, the risk of spurious correlations, and the latency of computing explanations in real time. This gap between research narratives and deployment practice limits the practical impact of XAI.
 
 ### How does Casper et al. characterise the limits of black-box audits?
 

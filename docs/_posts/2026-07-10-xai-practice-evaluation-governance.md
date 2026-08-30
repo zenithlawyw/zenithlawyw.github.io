@@ -1,11 +1,11 @@
 ---
 layout: post
-last_modified_at: 2026-07-10
+last_modified_at: 2026-08-29
 title: "Explainability in Practice: Domains, Evaluation, and Governance"
 author: Zenith Law
 description: "A synthesis of domain-specific XAI applications, evaluation frameworks, and governance structures that translate theoretical foundations into operational practice."
 permalink: /explainability-practice-domains-evaluation-governance
-intro: "The previous articles established foundations, methods, and limits. This article examines how XAI is applied in practice across domains, how it is evaluated, and what governance structures are needed. Domain applications from medical imaging to cybersecurity demonstrate that XAI requirements are fundamentally domain-dependent. Evaluation frameworks from Salvi et al. and Dwivedi et al. reveal that no universal metric set exists. Governance structures from Casper et al. and Bhatt et al. establish that transparency, access, and accountability require organisational commitment beyond any technical solution."
+intro: "The previous articles established foundations, methods, and limits. This article examines how XAI is applied in practice across domains, how it is evaluated, and what governance structures are needed. Domain applications from medical imaging to cybersecurity demonstrate that XAI requirements are fundamentally domain-dependent. Evaluation work (including Salvi et al. on uncertainty and the metrics analysis of Pawlicki et al.) shows that no universal metric set exists and that metrics must be chosen for the specific use case. Governance structures from Casper et al. and Bhatt et al. establish that transparency, access, and accountability require organisational commitment beyond any technical solution."
 image: /assets/images/xai-practice-domains.png
 hero:
   image: /assets/images/xai-practice-domains.png
@@ -73,35 +73,35 @@ This article is not legal advice.
 
 Medical XAI surveys (Hossain et al. 2025; Tjoa & Guan 2021; Nazir et al. 2023) reveal that healthcare presents uniquely demanding XAI requirements. Explanations must be faithful enough to support clinical decisions, interpretable enough for clinicians with limited ML training, and robust enough to withstand regulatory scrutiny under frameworks like the EU Medical Device Regulation.
 
-The dominant approach in medical imaging combines Grad-CAM or LRP visualisations with clinician evaluation. This approach has documented vulnerabilities: Clever Hans artifacts (hospital markers, imaging equipment watermarks) produce compelling but misleading explanations. Clinicians who trust these visualisations may develop overconfidence in models that rely on spurious correlations.
+The dominant approach in medical imaging combines Grad-CAM or LRP visualisations with clinician evaluation. This approach faces the Clever Hans problem documented by Lapuschkin et al.: models can learn to base decisions on spurious, task-irrelevant artefacts (in the original demonstrations, a source tag overlaid in horse images and shortcut strategies in Atari games) rather than the content the practitioner intends, while scoring well on standard metrics. Clinicians who trust these visualisations may develop overconfidence in models that rely on such spurious correlations.
 
 The critique of Ghassemi et al. (discussed in [Critical Perspectives and Limits of Current Explainability Methods](/critical-perspectives-limits-xai)) poses a challenge that the medical XAI community has not fully answered: if explanations can be systematically misleading and clinicians cannot evaluate their reliability, do explanations in their current form improve or degrade clinical decision-making?
 
 ### Cybersecurity
 
-Cybersecurity presents a different set of challenges. The evaluation of XAI metrics in a cybersecurity context by Pawlicki et al. found that explanation speed matters more than in other domains. Threat detection requires real-time or near-real-time explanations. The evaluation metrics that work for offline medical imaging analysis are inappropriate for streaming security data.
+Cybersecurity presents a different set of challenges. Pawlicki et al. evaluate XAI evaluation metrics in a cybersecurity context and find that metric selection matters acutely in this high-stakes domain. The evaluation metrics that work in one setting may be inappropriate for the tabular intrusion-detection data common in security, and several metrics yield no meaningful results on such data. The central findings of the paper are metric duplication, metric inefficacy, and metric confusion, not a single speed requirement.
 
 Feature attribution methods (SHAP, LIME) dominate security XAI, but the evaluation literature reveals that metric proliferation is particularly acute in this domain. Multiple metrics claiming to measure "faithfulness" produce systematically different rankings of the same methods applied to the same security data.
 
 ### Internet of Things
 
-IoT XAI (Kök et al. 2023) operates under severe resource constraints. Deep neural network explanations that require gradient computation may be infeasible on edge devices. This has led to interest in intrinsically interpretable models (decision trees, rule lists) that provide explanations as a byproduct of their architecture rather than requiring post-hoc computation.
+IoT XAI (Kök et al. 2023) operates under severe resource constraints. Post-hoc explanation methods that require substantial compute can be hard to run on memory- and energy-limited edge devices. This has led to interest in intrinsically interpretable models (decision trees, rule lists) that provide explanations as a byproduct of their architecture rather than requiring separate post-hoc computation.
 
 ### Geospatial and Environmental XAI
 
-Roussel et al. (2025) propose a quality-aware XAI framework for geospatial analysis that connects explanation quality to downstream decision quality. The framework evaluates whether improving explanation quality actually improves decision outcomes, a direct answer to the challenge of Ghassemi et al.
+Roussel et al. (2025) propose a quality-aware XAI framework for geospatial analysis that incorporates machine learning quality metrics into the explanation process, so that explanations reflect not only model predictions but also their reliability, with case studies visualised using glyphs. This is a step toward linking explanation quality to the reliability of downstream decisions, which addresses part of the challenge Ghassemi et al. raise.
 
 ## Evaluation Frameworks
 
 ### Salvi et al. (2025): Explainability and Uncertainty as Two Sides of the Same Coin
 
-Salvi et al. propose a framework unifying explainability with uncertainty quantification {% include references/cite.html key="salvi2025uncertainty" %}. The thesis is that explanations without uncertainty bounds are fundamentally incomplete. A SHAP value of 0.3 for feature x means something different when the confidence interval is ±0.02 than when it is ±0.25.
+Salvi et al. propose a framework unifying explainability with uncertainty quantification {% include references/cite.html key="salvi2025uncertainty" %}. The thesis is that explanations without uncertainty bounds are fundamentally incomplete. As an illustration, a SHAP value of 0.3 for a feature carries a different meaning when the accompanying uncertainty is small than when it is large, which is why the authors argue reliability cannot be guaranteed by relying on explanations alone.
 
-The framework maps explanation types to corresponding uncertainty types. Feature attributions require attribution uncertainty. Counterfactual explanations require counterfactual uncertainty. Concept-based explanations require concept uncertainty. This mapping provides a principled basis for selecting evaluation metrics.
+The framework operationalises this thesis for attribution-style explanations, which its authors demonstrate in detail. Test-time augmentation propagates aleatoric uncertainty into saliency maps, while ensembles and Monte Carlo dropout propagate epistemic uncertainty into multiple Grad-CAM maps, so the output shows which regions are certain and which are uncertain. The authors explicitly defer extending the approach to other explanation families, such as counterfactual explanations, to future work.
 
 ### Dwivedi et al. (2023): Core Ideas, Techniques, and Solutions
 
-Dwivedi et al. provide a broad survey emphasising practical solutions {% include references/cite.html key="dwivedi2023xai" %}. The paper organises methods by their deployment readiness and provides selection guidelines matching methods to use cases. The practical emphasis makes it a valuable complement to the conceptual and critical analyses discussed in previous articles.
+Dwivedi et al. provide a broad survey emphasising practical solutions {% include references/cite.html key="dwivedi2023xai" %}. The paper organises the field around data explainability and model explainability, with feature-based and example-based technique families, and surveys the software toolkits and design considerations practitioners need to select and implement approaches for their use cases. This practical emphasis makes it a valuable complement to the conceptual and critical analyses discussed in previous articles.
 
 ### Hassija et al. (2024): Model-Agnostic Methods for Black-Box Models
 
@@ -153,7 +153,7 @@ The EU AI Act classifies AI systems by risk level and imposes transparency oblig
 
 ### What evaluation frameworks exist for assessing explanation quality in practice?
 
-Three main frameworks have emerged: functionally-grounded evaluation using formal proxies such as faithfulness and completeness{% include references/cite.html key="9369420" %}, human-grounded evaluation through user studies that measure how explanations affect human decision-making, and application-grounded evaluation in real deployment contexts. Dwivedi et al. (2023){% include references/cite.html key="dwivedi2023xai" %} provide a practical synthesis linking method selection to evaluation criteria.
+Three main frameworks have emerged: functionally-grounded evaluation using formal proxies such as faithfulness and completeness{% include references/cite.html key="9369420" %}, human-grounded evaluation through user studies that measure how explanations affect human decision-making, and application-grounded evaluation in real deployment contexts. Surveys such as Dwivedi et al. (2023){% include references/cite.html key="dwivedi2023xai" %} support practitioners in selecting and implementing these approaches for their use cases.
 
 ### How does Salvi et al. connect explainability and uncertainty in their framework?
 
@@ -168,22 +168,22 @@ Effective governance requires organisational accountability mechanisms including
 
 ### Author and Source Credibility
 
-| Source                | Profile                   | Venue                 | Focus                       |
-| --------------------- | ------------------------- | --------------------- | --------------------------- |
-| Salvi et al. (2025)   | Multi-institution Italian | Information Fusion    | Uncertainty-XAI integration |
-| Dwivedi et al. (2023) | Multi-institution         | ACM Computing Surveys | Practical XAI solutions     |
-| Hassija et al. (2024) | Multi-institution Indian  | Cognitive Computation | Black-box interpretation    |
-| Bhatt et al. (2020)   | CMU/Cambridge/PAI         | FAT\* (FAccT)         | Deployment practice         |
-| Casper et al. (2024)  | MIT/Harvard               | FAccT 2024            | Audit governance            |
+| Source                | Profile                  | Venue                       | Focus                       |
+| --------------------- | ------------------------ | --------------------------- | --------------------------- |
+| Salvi et al. (2025)   | Multi-institution        | Int. J. Medical Informatics | Uncertainty-XAI integration |
+| Dwivedi et al. (2023) | Multi-institution        | ACM Computing Surveys       | Practical XAI solutions     |
+| Hassija et al. (2024) | Multi-institution Indian | Cognitive Computation       | Black-box interpretation    |
+| Bhatt et al. (2020)   | CMU/Cambridge/PAI        | FAT\* (FAccT)               | Deployment practice         |
+| Casper et al. (2024)  | MIT/Harvard              | FAccT 2024                  | Audit governance            |
 
 ### Domain Coverage
 
-| Domain          | Primary methods documented   | Key challenge                            | Source examples                     |
-| --------------- | ---------------------------- | ---------------------------------------- | ----------------------------------- |
-| Medical imaging | Grad-CAM, LRP, saliency maps | Clever Hans artifacts, clinician trust   | Hossain 2025, Tjoa 2021, Nazir 2023 |
-| Cybersecurity   | SHAP, LIME, Anchors          | Real-time requirements, metric confusion | Pawlicki 2024                       |
-| IoT             | Decision trees, rule lists   | Resource constraints                     | Kök 2023                            |
-| Geospatial      | Quality-aware frameworks     | Decision-outcome evaluation              | Roussel 2025                        |
+| Domain          | Primary methods documented   | Key challenge                          | Source examples                     |
+| --------------- | ---------------------------- | -------------------------------------- | ----------------------------------- |
+| Medical imaging | Grad-CAM, LRP, saliency maps | Clever Hans artifacts, clinician trust | Hossain 2025, Tjoa 2021, Nazir 2023 |
+| Cybersecurity   | SHAP, LIME, Anchors          | Metric proliferation and confusion     | Pawlicki 2024                       |
+| IoT             | Decision trees, rule lists   | Resource constraints                   | Kök 2023                            |
+| Geospatial      | Quality-aware frameworks     | Decision-outcome evaluation            | Roussel 2025                        |
 
 ### Citability Snapshot
 

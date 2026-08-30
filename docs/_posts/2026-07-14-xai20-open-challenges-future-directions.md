@@ -1,11 +1,11 @@
 ---
 layout: post
-last_modified_at: 2026-07-14
+last_modified_at: 2026-08-29
 title: "XAI 2.0 and the Road Ahead: Open Challenges and Future Directions"
 author: Zenith Law
 description: "A synthesis of the open challenges facing explainable AI, from the XAI 2.0 manifesto to emerging directions in interdisciplinary research, human-centred evaluation, and regulatory alignment."
 permalink: /xai20-open-challenges-future-directions
-intro: "The XAI 2.0 manifesto identifies 22 open challenges spanning technical, human-centred, regulatory, and methodological dimensions. This final article in the series synthesises those challenges, connects them to the findings of the previous four articles, and identifies the research directions that will define the next generation of explainability. The central message is that XAI must transition from a method-centric discipline focused on producing explanations to a human-centred discipline focused on supporting understanding."
+intro: "The XAI 2.0 manifesto identifies 28 open problems across nine categories, spanning new types of AI, evaluation, human-centred explanation, and societal impact. This final article in the series synthesises those problems, connects them to the findings of the previous four articles, and identifies the research directions that will define the next generation of explainability. The central message is that XAI must transition from a method-centric discipline focused on producing explanations to a human-centred discipline focused on supporting understanding."
 image: /assets/images/xai20-open-challenges.png
 hero:
   image: /assets/images/xai20-open-challenges.png
@@ -43,7 +43,7 @@ tags:
 
 ## Introduction
 
-The XAI 2.0 manifesto, authored by 27 leading XAI researchers and published in Information Fusion in 2024, identifies 22 open challenges across five themes {% include references/cite.html key="LONGO2024102301" %}. This final article in the series synthesises those challenges, connects them to the findings of the previous four articles, and maps the research directions that will define the next generation of explainability.
+The XAI 2.0 manifesto, authored by 19 leading XAI researchers and published in Information Fusion in 2024, identifies 28 open problems across nine categories {% include references/cite.html key="LONGO2024102301" %}. This final article in the series synthesises those problems, connects them to the findings of the previous four articles, and maps the research directions that will define the next generation of explainability.
 
 The central thesis of the XAI 2.0 manifesto is that the field must transition from a method-centric discipline focused on producing explanations to a human-centred discipline focused on supporting understanding. This framing recasts every technical challenge as a human-centred challenge, and every methodological question as an interdisciplinary question.
 
@@ -67,72 +67,94 @@ This article is not legal advice.
 
 ---
 
-## The 22 Open Challenges
+## The 28 Open Problems in Nine Categories
 
-### Technical Challenges
+The manifesto groups 28 open problems into nine categories. The categories move from technical and conceptual problems (creating explanations for new forms of AI, improving current methods, clarifying concepts) through evaluation, human-centredness and multi-dimensionality, to adaptation, mitigation and societal impact. The following synthesis groups the problems into the nine categories and connects each to the findings of the previous articles in the series.
 
-**1. Formal definitions.** The field still lacks a universally accepted formal definition of explainability. The definition of Barredo Arrieta et al. is the closest to consensus, but it is descriptive rather than formal. Without formal definitions, mathematical guarantees about explanation quality are impossible.
+### 1. Creating Explanations for New Types of AI
 
-**2. Evaluation metrics.** The metrics crisis documented by Pawlicki et al. ([Critical Perspectives and Limits of Current Explainability Methods](/critical-perspectives-limits-xai)) remains unresolved. Over 50 metrics exist, many are redundant, and no standardised evaluation framework has emerged. The XAI 2.0 manifesto calls for community-wide agreement on core evaluation constructs.
+**Problem 1. Creating explanations for generative models and large language models.** Existing XAI methods were built for classification and regression. Generative models and large language models with billions or trillions of parameters pose new challenges: the polysemantic nature of their neurons, the difficulty of synthesising explanations, and unresolved questions about whether neural scaling laws can be used to infer the quality of learned concepts. Mechanistic interpretability and information geometry are proposed as starting points.
 
-**3. Robustness of explanations.** Explanations should be stable under small input perturbations that do not change the prediction. Current methods vary in their robustness, and there is no standard for acceptable stability.
+**Problem 2. Creating explanations for distributed and collaborative learning.** Federated and other distributed learning settings train models across nodes that never share raw data. Explanation methods that assume centralised access to training data need rethinking for this setting, which is increasingly common in privacy and security-critical applications.
 
-**4. Completeness vs. selectivity trade-off.** Comprehensive explanations (showing all contributing features) may be too complex for human understanding. Selective explanations (showing only the most important features) risk omitting essential information. There is no principled framework for navigating this trade-off.
+### 2. Improving and Augmenting Current XAI Methods
 
-**5. Ground truth for explanations.** Unlike classification, there is no ground truth for explanations. Even for simple models, what counts as the "correct" explanation depends on the explanatory target (model, data, or phenomenon. Watson's first challenge).
+**Problem 3. Augmenting and improving attribution methods.** Attribution methods, including the feature attributions examined in the earlier series articles, remain dependent on the choice and quality of the underlying method. The call is to strengthen their faithfulness, stability and interpretability rather than treat any single method as final.
 
-**6. Reproducibility and generalisation.** Explanation methods often produce different results across random seeds, data splits, or software implementations. Reproducibility standards for XAI research are underdeveloped.
+**Problem 4. Augmenting and improving concept-based learning algorithms.** Concept-based explanations operate at the level of human-interpretable concepts rather than raw features. The problems concern how concepts are discovered, how their grounding is verified, and how they generalise beyond the training distribution.
 
-### Human-Centred Challenges
+**Problem 5. Removing artefacts in synthesis-based explanations.** Synthesis-based explanations (for example, prototype and counterfactual generation) can inherit artefacts, so the image or instance shown does not faithfully represent the pattern that activates the model. Removing these artefacts is required before such explanations can be trusted.
 
-**7. Cognitive load.** Explanations impose cognitive demands on users that may exceed their processing capacity, particularly in high-stakes environments like clinical decision-making (the inscrutability challenge of Ghassemi et al.{% include references/cite.html key="ghassemi2021falsehope" %}).
+**Problem 6. Creating robust explanations.** Explanation methods should be stable under small input perturbations that do not change the prediction. There is no agreed standard for acceptable stability, and robustness varies considerably across current methods.
 
-**8. Trust calibration.** Explanations can produce both under-trust (users ignore reliable models) and over-trust (users accept unreliable explanations). The goal is calibrated trust: matching user confidence to actual model reliability.
+### 3. Clarifying the Use of Concepts in XAI
 
-**9. Explanation personalisation.** Different stakeholders (regulators, clinicians, patients, engineers) need different explanations. Current methods produce one-size-fits-all outputs.
+**Problem 7. Elucidating the main concepts of XAI.** The field still lacks a universally accepted formal definition of explainability. The definition of Barredo Arrieta et al. is the closest to consensus, but it is descriptive rather than formal. Without formal definitions, mathematical guarantees about explanation quality are impossible (the formal-definitions concern from earlier analysis).
 
-**10. Mental models.** Explanations should help users build accurate mental models of system behaviour. Current methods provide attribution scores that support shallow understanding.
+**Problem 8. Clarifying the relationship between XAI and trustworthiness.** XAI is frequently assumed to produce trustworthy or responsible AI, but the relationship between explanation and trustworthiness is not straightforward. The problem asks whether explanations genuinely support trustworthy behaviour or merely signal it, echoing the trust-calibration debate from the series.
 
-**11. Longitudinal effects.** Most XAI research studies one-shot explanation consumption. Real-world use involves repeated, cumulative engagement with explanations over time.
+**Problem 9. Finding a useful account of understanding.** If the goal of XAI is understanding rather than explanation, the field needs a workable account of what it means for a human to understand a model. This connects directly to the cognitive-science questions raised in the earlier articles about how explanations are processed.
 
-### Interdisciplinary Challenges
+### 4. Evaluating XAI Methods and Explanations
 
-**12. Bridging XAI and HCI.** Explanation method design is currently driven by ML researchers, not HCI experts. The result is methods optimised for technical properties (axioms, completeness) rather than usability.
+**Problem 10. Facilitating human evaluation of explanations.** Reliable evaluation ultimately depends on human judgement, but human studies are costly, hard to standardise and difficult to compare across labs. The problem is to make human evaluation of explanations more tractable.
 
-**13. Cognitive science integration.** Understanding how humans process explanations requires integrating cognitive science findings on causal reasoning, counterfactual thinking, and explanation evaluation.
+**Problem 11. Creating an evaluation framework for XAI methods.** There is still no standardised, validated evaluation framework. The metrics crisis documented by Pawlicki et al., in which nearly ninety distinct metrics exist with substantial duplication and no consensus taxonomy ([Critical Perspectives and Limits of Current Explainability Methods](/critical-perspectives-limits-xai)), remains unresolved. The manifesto calls for community-wide agreement on core evaluation constructs.
 
-**14. Philosophy of explanation.** Watson's conceptual critique draws on philosophy of science. The field must engage more deeply with philosophical work on what constitutes a good explanation.
+**Problem 12. Overcoming limitations of studies with humans.** Human-subject studies in XAI suffer from limited sample sizes, single-session designs and weak reporting. The problem is to overcome these limitations so that evidence about explanation effectiveness is credible.
 
-**15. Social science perspectives.** Organisational adoption of XAI (the deployment gap of Bhatt et al.{% include references/cite.html key="bhatt2020deployment" %}) is a social science question as much as a technical one.
+### 5. Supporting the Human-Centredness of Explanations
 
-**16. Legal and regulatory alignment.** The EU AI Act and emerging regulations create requirements that current XAI methods may not satisfy. Legal scholars must collaborate with XAI researchers to operationalise regulatory concepts.
+**Problem 13. Creating human-understandable explanations.** Explanations must be comprehensible to the people who use them, not merely technically correct. This reframes evaluation around whether understanding improves, consistent with the human-centred shift that is the central thesis of the manifesto.
 
-### Regulatory Challenges
+**Problem 14. Facilitating explainability with concept-based explanations.** Because humans reason in terms of concepts rather than raw features, concept-based explanations may support human understanding more effectively than low-level attributions. The problem is to make this route practical and verifiable.
 
-**17. Operationalising the right to explanation.** GDPR Article 22 and the EU AI Act establish rights to meaningful information about automated decisions. What counts as "meaningful" is undefined, creating legal uncertainty.
+**Problem 15. Addressing explanations divorced from reality.** Explanations can be internally faithful to a model while remaining detached from the real-world context in which decisions are used. The problem is to keep explanations grounded in the application they are meant to support.
 
-**18. Auditing frameworks.** The access-level framework of Casper et al. provides a starting point, but auditing standards for explanation quality do not exist.
+**Problem 16. Uncovering causality for actionable explanations.** Actionable explanation requires causal information, not only correlation. Understanding the causal relationships behind a decision is needed if users are to identify what could be changed, a theme that connects to the causal critique of correlation-based attribution in the earlier articles.
 
-**19. Standardisation.** Unlike software testing or security evaluation, there are no ISO standards for XAI evaluation.
+### 6. Supporting the Multi-Dimensionality of Explainability
 
-### Methodological Challenges
+**Problem 17. Creating multi-faceted explanations.** A single explanation format rarely serves all purposes. Multi-faceted explanations combine attribution, counterfactual, concept and textual accounts, each suited to a different question a user might ask.
 
-**20. Longitudinal studies.** Most XAI research evaluates explanations in single-session lab studies. Longitudinal studies tracking how understanding develops over time are almost absent.
+**Problem 18. Enabling interdisciplinary work in XAI.** Explanation is simultaneously a mathematical, psychological, philosophical and sociological phenomenon. The manifesto argues that no single discipline can address all 28 problems, and that sustained collaboration between ML researchers, cognitive scientists, philosophers, legal scholars and social scientists is required.
 
-**21. Field studies.** The deployment study of Bhatt et al. remains the only empirical characterisation of XAI in practice. More field studies are needed.
+### 7. Adjusting XAI Methods and Explanations
 
-**22. Human-grounded evaluation validation.** Functionally-grounded metrics require validation against human judgement. This validation is almost never performed, meaning the field uses proxy metrics whose relationship to actual interpretability is unknown.
+**Problem 19. Adjusting explanations to different stakeholders.** Regulators, clinicians, patients and engineers need different explanations. Current methods produce one-size-fits-all outputs that fit none of these groups well.
+
+**Problem 20. Adjusting explanations to different domains.** Explanation requirements differ across domains, from clinical decision-making to finance to security. Methods need to be tailored to the conventions, risks and decision contexts of each domain.
+
+**Problem 21. Adjusting explanations to different goals.** The purpose of an explanation (justification, debugging, compliance, learning) changes what a good explanation looks like. The problem is to adapt explanation generation and evaluation to the goal at hand.
+
+### 8. Mitigating the Negative Impact of XAI
+
+**Problem 22. Mitigating failed support by XAI.** Explanations intended to support decisions can instead mislead, confuse or give false confidence (the inscrutability and over-trust concerns of Ghassemi et al.{% include references/cite.html key="ghassemi2021falsehope" %}). The problem is to prevent explanations from causing harm when they fail.
+
+**Problem 23. Devising criteria for the falsifiability of explanations.** If explanation claims cannot be tested and potentially refuted, they are not scientifically credible. The problem is to develop criteria under which an explanation can be shown to be wrong.
+
+**Problem 24. Securing explanations from abuse by malicious human agents.** Explanations can be manipulated by humans to justify or conceal harmful automated decisions. The problem is to detect and resist such abuse.
+
+**Problem 25. Securing explanations from abuse by malicious superintelligent agents.** At the outer edge of the research agenda, the manifesto raises the possibility of highly capable systems that could exploit explanations for their own ends, and asks how explanations should be designed to remain safe in such settings.
+
+### 9. Improving the Societal Impact of XAI
+
+**Problem 26. Facilitating originality attribution of AI-generated data and plagiarism detection.** As generative models produce content at scale, reliable attribution of authorship and detection of AI-generated material become necessary for academic and creative integrity.
+
+**Problem 27. Facilitating the right to be forgotten.** Regulatory rights to erasure (notably under data protection law) interact with models that may have encoded personal data in their parameters. The problem is to reconcile explainable, auditable systems with the right to be forgotten.
+
+**Problem 28. Addressing the power imbalance between individuals and companies.** Automated decision-making concentrates power in organisations that hold the data and run the models. The manifesto argues that XAI has a role in redressing this imbalance by giving individuals meaningful insight into decisions that affect them, including through participative and human rights-based design.
 
 ## Connecting the Challenges to the Series Findings
 
-The 22 challenges are not independent. They form a coherent structure that connects directly to the findings of the previous four articles.
+The 28 problems are not independent. They form a coherent structure that connects directly to the findings of the previous four articles.
 
-| Article                  | Key finding                                        | Connected XAI 2.0 challenges                                                            |
-| ------------------------ | -------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| 1. Foundations           | Interpretability is a relationship, not a property | Challenges 1 (formal definitions), 7 (cognitive load), 11 (longitudinal effects)        |
-| 2. Methods               | Method choice shapes what can be known             | Challenges 4 (completeness vs. selectivity), 5 (ground truth), 8 (trust calibration)    |
-| 3. Critical perspectives | Limits are conceptual, not only technical          | Challenges 14 (philosophy), 13 (cognitive science), 9 (personalisation)                 |
-| 4. Practice              | Integration is the challenge                       | Challenges 15 (social science), 18 (auditing), 19 (standardisation), 21 (field studies) |
+| Article                  | Key finding                                        | Connected XAI 2.0 problems                                                                 |
+| ------------------------ | -------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| 1. Foundations           | Interpretability is a relationship, not a property | Problems 7 (formal definitions), 13 (human-understandable explanations), 9 (understanding) |
+| 2. Methods               | Method choice shapes what can be known             | Problems 5 (artefacts), 16 (causality), 17 (multi-faceted), 3 (attribution)                |
+| 3. Critical perspectives | Limits are conceptual, not only technical          | Problems 8 (trustworthiness), 23 (falsifiability), 22 (failed support)                     |
+| 4. Practice              | Integration is the challenge                       | Problems 19-21 (adjusting to stakeholders, domains, goals), 11 (evaluation framework)      |
 
 ## Research Directions
 
@@ -142,11 +164,11 @@ The paradigm shift that Longo et al. advocate requires reorienting XAI research.
 
 ### Interdisciplinary Infrastructure
 
-Several challenges require infrastructure that no single discipline can build. The integration of cognitive science findings into XAI design requires sustained collaboration between ML researchers and cognitive scientists. The development of auditing standards requires collaboration between technical researchers, legal scholars, and regulators. The longitudinal and field studies required for challenges 20-21 need organisational access that is currently rare.
+Several challenges require infrastructure that no single discipline can build. The integration of cognitive science findings into XAI design requires sustained collaboration between ML researchers and cognitive scientists (problem 18). The development of evaluation and auditing standards requires collaboration between technical researchers, legal scholars, and regulators (problems 11 and 28). Real-world deployment studies that track explanations in context need organisational access that is currently rare (problems 22 and 27).
 
 ### Evaluation as a First-Class Problem
 
-The metrics crisis (challenge 2) connects multiple other challenges. Without reliable evaluation, progress on robustness (3), reproducibility (6), and trust calibration (8) cannot be measured. The call of the XAI 2.0 manifesto for evaluation standardisation is the single most actionable recommendation for the field.
+The evaluation gap (problem 11) connects multiple other problems. Without reliable evaluation, progress on robustness (6), human-centredness (13) and trustworthiness (8) cannot be measured. The call of the XAI 2.0 manifesto for a community evaluation framework is the single most actionable recommendation for the field.
 
 ### Regulatory Engagement
 
@@ -168,7 +190,7 @@ The five articles in this series have examined what explainability means ([What 
 
 ### What are the main categories of open challenges in the XAI 2.0 manifesto?
 
-Longo et al. (2024){% include references/cite.html key="LONGO2024102301" %} organise 22 challenges into five categories: technical challenges including formal definitions and evaluation metrics, human-centred challenges including cognitive load and trust calibration, interdisciplinary challenges spanning HCI and philosophy, regulatory challenges concerning auditing frameworks and standardisation, and methodological challenges involving longitudinal and field studies. Technical challenges are most mature while interdisciplinary challenges require structural changes.
+Longo et al. (2024){% include references/cite.html key="LONGO2024102301" %} organise 28 open problems into nine categories: creating explanations for new types of AI, improving current XAI methods, clarifying the use of concepts, evaluating XAI methods and explanations, supporting the human-centredness of explanations, supporting the multi-dimensionality of explainability, adjusting XAI methods and explanations, mitigating the negative impact of XAI, and improving the societal impact of XAI. The categories move from technical and conceptual problems towards evaluation, human-centred and societal problems.
 
 ### What distinguishes human-centred challenges from technical challenges in XAI?
 
@@ -176,7 +198,7 @@ Technical challenges focus on formal properties of explanations such as complete
 
 ### Why does the XAI 2.0 manifesto call for interdisciplinary infrastructure?
 
-The manifesto argues that no single discipline can address all 22 challenges because explanation is simultaneously a mathematical, psychological, and sociological phenomenon. Interdisciplinary infrastructure means shared experimental platforms, standardised evaluation protocols that work across disciplines, funding mechanisms that reward collaboration, and publication venues that accept hybrid contributions spanning computer science, cognitive science, and law.
+The manifesto argues that no single discipline can address all 28 problems because explanation is simultaneously a mathematical, psychological, and sociological phenomenon. Interdisciplinary infrastructure means shared experimental platforms, standardised evaluation protocols that work across disciplines, funding mechanisms that reward collaboration, and publication venues that accept hybrid contributions spanning computer science, cognitive science, and law.
 
 ### How can evaluation become a first-class problem in XAI research?
 
@@ -184,7 +206,7 @@ The manifesto argues that evaluation should shift from a post-hoc activity to a 
 
 ### What regulatory challenges does the XAI 2.0 manifesto identify?
 
-Three regulatory challenges are identified: operationalising the right to explanation under GDPR and the EU AI Act into technically specific requirements, developing auditing frameworks that can verify explanation quality at scale, and creating standardisation mechanisms that allow different regulatory regimes to accept common evidence of explainability. These challenges are urgent because regulatory timelines are shortening while technical standards remain fluid.
+The regulatory dimension runs through several of the nine categories rather than forming a single cluster. The right to be forgotten (problem 27) questions how explainable and auditable systems can also honour data erasure. The evaluation framework (problem 11) is what would make explanations auditable at scale. The power imbalance between individuals and companies (problem 28) raises human rights and participative design arguments that connect XAI to regulation. These problems are urgent because regulatory timelines are shortening while technical standards remain fluid.
 
 <details markdown="1" class="appendix-callout group">
 <summary>Appendix: Source Material</summary>
@@ -193,7 +215,7 @@ Three regulatory challenges are identified: operationalising the right to explan
 
 | Source                 | Profile                    | Venue                     | Focus                 |
 | ---------------------- | -------------------------- | ------------------------- | --------------------- |
-| Longo et al. (2024)    | 27 leading XAI researchers | Information Fusion        | XAI 2.0 manifesto     |
+| Longo et al. (2024)    | 19 leading XAI researchers | Information Fusion        | XAI 2.0 manifesto     |
 | Watson (2022)          | UCL philosophy of science  | Synthese                  | Conceptual challenges |
 | Ghassemi et al. (2021) | MIT/Harvard Medical        | The Lancet Digital Health | Clinical XAI critique |
 | Bhatt et al. (2020)    | CMU/Cambridge/PAI          | FAT\* (FAccT)             | Deployment study      |
@@ -201,21 +223,25 @@ Three regulatory challenges are identified: operationalising the right to explan
 
 ### Open Challenges Summary
 
-| Theme             | Count | Key challenges                                                                                  |
-| ----------------- | ----- | ----------------------------------------------------------------------------------------------- |
-| Technical         | 6     | Formal definitions, evaluation metrics, robustness, completeness, ground truth, reproducibility |
-| Human-centred     | 5     | Cognitive load, trust calibration, personalisation, mental models, longitudinal effects         |
-| Interdisciplinary | 5     | HCI, cognitive science, philosophy, social science, legal                                       |
-| Regulatory        | 3     | Right to explanation, auditing frameworks, standardisation                                      |
-| Methodological    | 3     | Longitudinal studies, field studies, human-grounded validation                                  |
+| Category                                              | Count | Problems                                                                                  |
+| ----------------------------------------------------- | ----- | ----------------------------------------------------------------------------------------- |
+| Creating explanations for new types of AI             | 2     | Generative models and LLMs, distributed and collaborative learning                        |
+| Improving and augmenting current XAI methods          | 4     | Attribution, concept-based learning, artefacts, robust explanations                       |
+| Clarifying the use of concepts in XAI                 | 3     | Main concepts, XAI and trustworthiness, account of understanding                          |
+| Evaluating XAI methods and explanations               | 3     | Human evaluation, evaluation framework, human-study limitations                           |
+| Supporting the human-centredness of explanations      | 4     | Human-understandable, concept-based, grounded in reality, causal                          |
+| Supporting the multi-dimensionality of explainability | 2     | Multi-faceted explanations, interdisciplinary work                                        |
+| Adjusting XAI methods and explanations                | 3     | Stakeholders, domains, goals                                                              |
+| Mitigating the negative impact of XAI                 | 4     | Failed support, falsifiability, malicious human agents, malicious superintelligent agents |
+| Improving the societal impact of XAI                  | 3     | Originality attribution, right to be forgotten, power imbalance                           |
 
 ### Citability Snapshot
 
-| Claim category       | Count | Examples                                                                                                                                     |
-| -------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Verified (consensus) | 4     | 22 challenges represent field-wide identification; human-centred paradigm needed; metrics crisis; interdisciplinary infrastructure essential |
-| Inferred             | 3     | Regulatory engagement creates both opportunity and risk; transition is generational; evaluation is the most actionable priority              |
-| Speculative          | 2     | Human-centred paradigm will succeed (widespread agreement but unproven); field is willing to confront limitations honestly                   |
+| Claim category       | Count | Examples                                                                                                                            |
+| -------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Verified (consensus) | 4     | 28 problems grouped into nine categories; human-centred paradigm needed; metrics crisis; interdisciplinary infrastructure essential |
+| Inferred             | 3     | Regulatory engagement creates both opportunity and risk; transition is generational; evaluation is the most actionable priority     |
+| Speculative          | 2     | Human-centred paradigm will succeed (widespread agreement but unproven); field is willing to confront limitations honestly          |
 
 ### Full Series Reference Map
 

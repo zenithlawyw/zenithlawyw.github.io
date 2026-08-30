@@ -1,6 +1,6 @@
 ---
 layout: post
-last_modified_at: 2026-06-26
+last_modified_at: 2026-08-29
 title: "Feature Attribution in Practice: Selection, Pipelines, and Governance"
 author: Zenith Law
 description: "A synthesis of 15 core papers and domain applications into practical guidance: how to select attribution methods, integrate them into ML pipelines, and govern their use in production systems."
@@ -100,7 +100,7 @@ The scenario is a photovoltaic energy forecasting task with 15 features where Gl
 
 The framework turns attribution into a design-stage governance tool: the question becomes not "did the model predict correctly?" but "is the feature reliance of the model healthy?"
 
-> **Scope:** Validated on a single photovoltaic forecasting dataset with gradient boosting only. Uses SHAP and ELI5 but not the newer methods reviewed in this series. The dominance index does not capture interaction effects or dynamic importance under distribution shift. It has not been validated on other model types, domains, or with attribution methods beyond SHAP and ELI5. The framework also does not address how attribution-based feature selection interacts with regulatory requirements such as the transparency obligations of the EU AI Act, which may mandate retention of specific features for explainability regardless of predictive importance.
+> **Scope:** The primary case is a single Polish photovoltaic dataset with XGBoost, and the framework was also applied to two additional wind-energy datasets for validation. Uses SHAP and ELI5 but not the newer methods reviewed in this series. The dominance index does not capture interaction effects or dynamic importance under distribution shift. Broader model types, domains, and attribution methods beyond SHAP and ELI5 remain untested. The framework also does not address how attribution-based feature selection interacts with regulatory requirements such as the transparency obligations of the EU AI Act, which may mandate retention of specific features for explainability regardless of predictive importance.
 
 ---
 
@@ -110,25 +110,25 @@ The tier 3 papers in the selection analysis apply attribution methods to specifi
 
 ### Energy and climate (most represented)
 
-The largest domain cluster is energy and climate forecasting, with five papers applying SHAP to wind, solar, heating load, and monsoon prediction. The pattern across all five is consistent: SHAP identifies a small number of dominant physical features that match domain expert intuition. Temporal features (hour of day, day of year) and lagged values of the target variable consistently receive high importance. This alignment with domain knowledge is treated as validation of the attribution method, but it raises a question the papers do not fully address: if attributions merely confirm what domain experts already know, what value do they add?
+The largest domain cluster is energy and climate forecasting, with at least five papers applying SHAP to wind, solar, heating load, and monsoon prediction (and other energy-climate applications beyond these). The papers consistently identify a small number of dominant physical features that match domain expert intuition, for example wind speed in wind forecasting and global horizontal irradiance in solar forecasting. Temporal and lagged features receive high importance in the heating load and monsoon studies, though physical and meteorological features dominate in the wind and solar work. This alignment with domain knowledge is treated as validation of the attribution method, but it raises a question the papers do not fully address: if attributions merely confirm what domain experts already know, what value do they add?
 
 The answer, from Kost et al., is that the value is in quantification, not discovery. Knowing that GHI is important is not new. Knowing that its dominance index is 0.365 and removing it costs only 0.009 in R² is actionable.
 
 ### Healthcare and medical imaging (most sensitive)
 
-Four healthcare applications appear, ranging from chronic kidney disease risk prediction (Hina et al. {% include references/cite.html key="hina2025shap" %}, using SHAP) to whole-slide image analysis (Vu et al. {% include references/cite.html key="vu2026contrastive" %}, using Contrastive Integrated Gradients) and ECG interpretation (van der Valk et al. {% include references/cite.html key="vandervalk2025explainable" %}, using VAE disentanglement). The healthcare context imposes requirements that the energy papers do not face: regulatory oversight, the need for causal (not just correlational) explanations, and the requirement that explanations be interpretable by clinicians, not data scientists.
+Several healthcare applications appear, including chronic kidney disease risk prediction (Hina et al. {% include references/cite.html key="hina2025shap" %}, using SHAP), whole-slide image analysis (Vu et al. {% include references/cite.html key="vu2026contrastive" %}, using Contrastive Integrated Gradients), and ECG interpretation (van der Valk et al. {% include references/cite.html key="vandervalk2025explainable" %}, using VAE disentanglement), among other clinical and medical-imaging studies. The healthcare context imposes requirements that the energy papers do not face: regulatory oversight, the need for causal (not just correlational) explanations, and the requirement that explanations be interpretable by clinicians, not data scientists.
 
 The healthcare papers also reveal a gap. None evaluates whether the provided explanations actually improve clinical decision-making. The assumption that more explainable models lead to better clinician decisions remains untested in the reviewed literature. This is not merely a gap in the papers reviewed here. It reflects a structural limitation of the attribution evaluation field as a whole. User studies are expensive, domain specific, and difficult to publish in ML venues. Until the research community incentivises deployment-stage evaluation, claims that attribution methods improve decision-making will remain unsupported by direct evidence.
 
 ### Finance and cryptocurrency (most challenging)
 
-Two papers apply SHAP to financial time series (cryptocurrency and stock price forecasting). The short-term, high-noise nature of financial data makes attribution fundamentally harder than in physical domains. Feature importance rankings are less stable. Small changes in input can produce large changes in attributions. The non-stationary nature of financial markets means that feature importance itself is time-dependent. These papers validate the ability of SHAP to produce _some_ attribution, but do not establish its reliability for financial decision-making.
+Two papers apply SHAP to financial time series (both concerned with cryptocurrency forecasting; the related stock-index study in the corpus uses the TAFT model rather than SHAP). The short-term, high-noise nature of financial data makes attribution fundamentally harder than in physical domains. Feature importance rankings are less stable. Small changes in input can produce large changes in attributions. The non-stationary nature of financial markets means that feature importance itself is time-dependent. These papers validate the ability of SHAP to produce _some_ attribution, but do not establish its reliability for financial decision-making.
 
 A deeper issue is that financial attribution faces a ground-truth problem that even synthetic benchmarks cannot fully address. In energy forecasting, the physical relationship between irradiance and solar power output provides a natural validation signal. In finance, the data-generating process is itself shaped by human behaviour, which is not decomposable into independent feature contributions. An attribution method that assigns importance to a technical indicator in a price prediction may be correct relative to the model but meaningless relative to the actual market dynamics the model approximates. This does not make financial XAI useless, but it means practitioners must be correspondingly more cautious about interpreting attributions as explanations of real-world phenomena.
 
 ### Geoscience and remote sensing (scalability test)
 
-Two papers apply SHAP at scale to spatiotemporal Earth observation data: European summer wildfires (24 features, continental scale) and coastal land subsidence (InSAR data). These demonstrate that SHAP can be deployed on realistic spatial scales, but the computational cost of Shapley-value approximation becomes a practical concern at this scale.
+Two papers apply SHAP at scale to spatiotemporal Earth observation data: European summer wildfires (19 features, continental scale) and coastal land subsidence (InSAR data). These demonstrate that SHAP can be deployed on realistic spatial scales, but the computational cost of Shapley-value approximation becomes a practical concern at this scale.
 
 ### Cross-domain patterns
 
@@ -145,7 +145,7 @@ Two papers apply SHAP at scale to spatiotemporal Earth observation data: Europea
 
 Four surveys in the selection provide the broader context within which the methodological papers sit.
 
-Ullah et al. (2025) {% include references/cite.html key="ullah2024explainable" %} review 155 XAI papers and establish taxonomy dimensions useful for any practitioner designing an XAI strategy. Their key finding: the field skews toward image domains and gradient-based methods, while tabular and time series (the most common production formats) are underserved. A practitioner building a tabular model cannot rely on the default recommendations of the field.
+Ullah et al. (2025) {% include references/cite.html key="ullah2024explainable" %} review 155 XAI papers and establish taxonomy dimensions useful for any practitioner designing an XAI strategy. The review notes that post hoc methods were most often used to produce visual explanations, and it identifies the interpretability of time series data as an open challenge. A practitioner building a tabular or time series model should therefore not assume that the image-focused defaults of the field transfer directly.
 
 Laato et al. (2022) {% include references/cite.html key="laato2022explain" %} systematically review how to explain AI systems to end users and find that most XAI research assumes a technically literate audience. The explanation formats studied rarely match non-expert stakeholder needs. Deploying an attribution method is not the same as providing an explanation: the output must be translated into a stakeholder-appropriate format, and that translation is itself a design problem.
 
@@ -298,7 +298,7 @@ The primary paper for this article (Kost et al.) appears in Energy and AI (Elsev
 ### Evidence Maturity Map
 
 1. **Established practice (replicated across settings)**: (a) SHAP as the dominant attribution method in domain applications; (b) alignment between SHAP-identified important features and domain expert intuition.
-2. **Emerging practice (validated in limited settings)**: (a) XAI-guided feature selection (Kost, single dataset); (b) causal SHAP for correlation-causation separation (synthetic + biomedical); (c) attribution for cost-aware feature governance.
+2. **Emerging practice (validated in limited settings)**: (a) XAI-guided feature selection (Kost, primary PV case plus two wind-energy validation datasets); (b) causal SHAP for correlation-causation separation (synthetic + biomedical); (c) attribution for cost-aware feature governance.
 3. **Gap (no empirical evidence in reviewed literature)**: (a) whether explanations improve end-user decision-making; (b) attribution stability monitoring in production; (c) stakeholder-appropriate explanation formats for non-technical audiences.
 
 </details>
