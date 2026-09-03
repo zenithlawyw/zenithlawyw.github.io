@@ -659,7 +659,13 @@ hidden: []
 
     function printArticle() {
       sanitisePrintUrls();
-      window.print();
+      /* Generate a compact PDF client-side (embedded fonts, ~0.5 MB)
+         instead of relying on browser print-to-PDF (outlined fonts, ~6 MB). */
+      if (window.__zywGenerateArticlePdf) {
+        window.__zywGenerateArticlePdf();
+      } else {
+        window.print();
+      }
     }
 
     /* Expose to onclick handler. */
@@ -1148,3 +1154,4 @@ hidden: []
     });
   })();
 </script>
+<script src="{{ '/assets/js/print-article.js' | relative_url }}" defer></script>
