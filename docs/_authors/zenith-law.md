@@ -1,7 +1,7 @@
 ---
 short_name: zenith-law
 title: "Zenith Law Profile | Engineering Strategy and AI Governance"
-heading: "Zenith Law: Engineering and Governance Profile"
+heading: "Zenith Law: Engineering and Governance"
 name: Zenith Law
 avatar: /assets/images/zenithlaw.png
 position: Strategist | Engineer | Researcher | Trainer
@@ -15,20 +15,7 @@ author: Zenith Law
 description: >-
   Engineering strategist Zenith Law publishes practical guidance on cybersecurity, AI governance, and resilient cloud architecture with evidence-based controls.
 profile_description: >-
-  Zenith Law is a technologist, technical leader, accredited trainer, and
-  doctoral researcher whose career spans telecommunications, financial technology,
-  entrepreneurship, HealthTech SaaS, industrial IoT, and academic research across
-  3 continents and 8 countries over 25+ years. He holds a B.Eng. in Computer
-  Engineering and an M.Sc. in Telecommunications from the Hong Kong University
-  of Science and Technology, alongside a Graduate Diploma in Law (GDL) and an
-  LL.M. in International Corporate and Financial Law. He architects and builds
-  platforms that process hundreds of millions of sensor events, owns
-  UI frameworks from research to public launch, and publishes
-  analysis on cybersecurity, digital sovereignty, AI governance,
-  and platform resilience. His perspective is shaped by legal training,
-  doctoral research in data science, and professional certifications
-  in security, project management, agile, IT service management,
-  risk, and coaching disciplines.
+  Zenith Law is a polyglot engineer, technology leader, and doctoral researcher who architects high-throughput platforms and industrial IoT systems handling hundreds of millions of sensor events across telecommunications, FinTech, and HealthTech SaaS in eight countries. Holding dual degrees in Computer Engineering and Telecommunications alongside a GDL and LL.M. in International Corporate and Financial Law, he bridges scale platform engineering with published analysis on cybersecurity, digital sovereignty, AI governance, and platform resilience. His multidisciplinary perspective integrates doctoral data science research with extensive professional certifications in security, risk, project management, agile transformation and coaching, IT service management, project and programme management.
 meta_description: >-
   Engineering strategist Zenith Law publishes practical guidance on cybersecurity, AI governance, and resilient cloud architecture with evidence-based controls.
 keywords: >-
