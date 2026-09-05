@@ -2579,3 +2579,248 @@ hassija2024interpreting:
   ieee_base: "V. Hassija et al., Interpreting Black-Box Models: A Review on Explainable Artificial Intelligence, vol. 16, pp. 45--74, 2024."
   harvard_base: "Hassija, V. et al. (2024). Interpreting Black-Box Models: A Review on Explainable Artificial Intelligence. vol. 16, pp. 45--74."
   source_format: bibtex
+sc-2026-ref1:
+  entry_type: techreport
+  short_author: Adrian et al.
+  year: "2025"
+  authors: Adrian, Tobias and Bains, Parma and Bechara, Marianne and Cerutti, Eugenio and Forte, Stephanie and Grinberg, Federico and Gullo, Alessandro and Hengge, Martina and Jekabsone, Agnija and Kao, Kathleen and Mancini Griffoli, Tommaso and Martinez Peria, Soledad and Miccoli, Marcello and Reuter, Marco and Sugimoto, Nobuyasu
+  title: Understanding Stablecoins
+  institution: International Monetary Fund
+  number: 2025/009
+  doi: 10.5089/9798229024075.087.A001
+  published_iso: "2025-12-01"
+  published_date: 1 December 2025
+  ieee_base: T. Adrian et al., Understanding Stablecoins, International Monetary Fund, Tech. Rep. 2025/009, 2025.
+  harvard_base: Adrian, T. et al. (2025). Understanding Stablecoins. International Monetary Fund. Tech. Rep. 2025/009.
+  source_format: bibtex
+sc-2026-ref13:
+  entry_type: misc
+  short_author: Anderson et al.
+  year: "2026"
+  authors: Anderson, Matthew J. and Brooks, Sophia L. and Hayes, Tyler R. and Morgan, Olivia K. and James, Charles
+  title: "Settlement Speed: Stablecoins versus SWIFT Transactions"
+  journal: ResearchGate
+  url: https://www.researchgate.net/publication/400307077_Settlement_Speed_Stablecoins_versus_SWIFT_Transactions
+  published_iso: "2026-08-01"
+  accessed_iso: "2026-09-04"
+  published_date: 1 August 2026
+  accessed_date: 4 September 2026
+  ieee_base: "M. J. Anderson, S. L. Brooks, T. R. Hayes, O. K. Morgan and C. James, Settlement Speed: Stablecoins versus SWIFT Transactions, ResearchGate, 2026."
+  harvard_base: "Anderson, M.J. et al. (2026). Settlement Speed: Stablecoins versus SWIFT Transactions. ResearchGate."
+  source_format: bibtex
+sc-2026-ref3:
+  entry_type: misc
+  short_author: Bank of England
+  year: "2023"
+  title: Regulatory Regime for Systemic Payment Systems Using Stablecoins and Related Service Providers
+  publisher: Bank of England
+  url: https://www.bankofengland.co.uk/paper/2023/dp/regulatory-regime-for-systemic-payment-systems-using-stablecoins-and-related-service-providers
+  published_iso: "2023-11-01"
+  accessed_iso: "2026-09-04"
+  published_date: 1 November 2023
+  accessed_date: 4 September 2026
+  ieee_base: Regulatory Regime for Systemic Payment Systems Using Stablecoins and Related Service Providers, Bank of England, 2023.
+  harvard_base: "(2023). Regulatory Regime for Systemic Payment Systems Using Stablecoins and Related Service Providers. Bank of England."
+  source_format: bibtex
+sc-2026-ref6:
+  entry_type: article
+  short_author: Barbereau et al.
+  year: "2026"
+  authors: Barbereau, Tom and Montalto, Ruggero and Beyer, Christian
+  title: "From Transactions to Records: Reconceptualizing Blockchain Systems through a Lifecycle Lens"
+  journal: arXiv preprint
+  doi: 10.48550/arXiv.2606.10631
+  published_iso: "2026-06-09"
+  published_date: 9 June 2026
+  ieee_base: "T. Barbereau, R. Montalto and C. Beyer, From Transactions to Records: Reconceptualizing Blockchain Systems through a Lifecycle Lens, arXiv preprint, 2026."
+  harvard_base: "Barbereau, T., Montalto, R. and Beyer, C. (2026). From Transactions to Records: Reconceptualizing Blockchain Systems through a Lifecycle Lens. arXiv preprint."
+  source_format: bibtex
+sc-2026-ref11:
+  entry_type: misc
+  short_author: Batishchev et al.
+  year: "2026"
+  authors: Batishchev, Pavel and Shengelia, Ilia
+  title: "Digital Assets 2026: Nine Trends That Shape Web3 - A Legal Practitioner's View (EU and UK)"
+  publisher: Aurum
+  url: https://aurum.law/newsroom/digital-assets-2026-nine-trends-that-shape-web3-a-legal-practitioners-view
+  published_iso: "2026-02-18"
+  accessed_iso: "2026-09-04"
+  published_date: 18 February 2026
+  accessed_date: 4 September 2026
+  ieee_base: "P. Batishchev and I. Shengelia, Digital Assets 2026: Nine Trends That Shape Web3 - A Legal Practitioner's View (EU and UK), Aurum, 2026, Aurum insights report."
+  harvard_base: "Batishchev, P. and Shengelia, I. (2026). Digital Assets 2026: Nine Trends That Shape Web3 - A Legal Practitioner's View (EU and UK). Aurum. Aurum insights report."
+  note: Aurum insights report
+  source_format: bibtex
+sc-2026-ref9:
+  entry_type: misc
+  short_author: Deloitte
+  year: "2026"
+  title: Digital assets and payments
+  publisher: Deloitte
+  url: https://www.deloitte.com/uk/en/Industries/financial-services/research/regulatory-outlook/digital-assets-and-payments.html
+  published_iso: "2026-01-19"
+  accessed_iso: "2026-09-04"
+  published_date: 19 January 2026
+  accessed_date: 4 September 2026
+  ieee_base: Digital assets and payments, Deloitte, 2026, Regulatory Outlook 2026.
+  harvard_base: "(2026). Digital assets and payments. Deloitte. Regulatory Outlook 2026."
+  note: Regulatory Outlook 2026
+  source_format: bibtex
+sc-2026-ref2:
+  entry_type: misc
+  short_author: Financial Conduct Authority
+  year: "2025"
+  title: "CP25/14: Stablecoin issuance and cryptoasset custody"
+  publisher: Financial Conduct Authority
+  url: https://www.fca.org.uk/publications/consultation-papers/cp25-14-stablecoin-issuance-cryptoasset-custody
+  published_iso: "2025-05-28"
+  accessed_iso: "2026-09-04"
+  published_date: 28 May 2025
+  accessed_date: 4 September 2026
+  ieee_base: "CP25/14: Stablecoin issuance and cryptoasset custody, Financial Conduct Authority, 2025, Consultation paper CP25/14; final rules published as PS26/10 on 30 June 2026."
+  harvard_base: "(2025). CP25/14: Stablecoin issuance and cryptoasset custody. Financial Conduct Authority. Consultation paper CP25/14; final rules published as PS26/10 on 30 June 2026."
+  note: Consultation paper CP25/14; final rules published as PS26/10 on 30 June 2026
+  source_format: bibtex
+sc-2026-ref10:
+  entry_type: misc
+  short_author: FS Vector
+  year: "2026"
+  title: A Practical Guide to Stablecoin Payments
+  publisher: FS Vector
+  url: https://www.fsvector.com/insights/a-practical-guide-to-stablecoin-payments
+  published_iso: "2026-03-01"
+  accessed_iso: "2026-09-04"
+  published_date: 1 March 2026
+  accessed_date: 4 September 2026
+  ieee_base: A Practical Guide to Stablecoin Payments, FS Vector, 2026.
+  harvard_base: "(2026). A Practical Guide to Stablecoin Payments. FS Vector."
+  source_format: bibtex
+sc-2026-ref4:
+  entry_type: article
+  short_author: Li et al.
+  year: "2026"
+  authors: Li, Yuquan and Xiang, Yuexin and Wang, Qin and Yuen, Tsz Hon and Deppeler, Andreas and Yu, Jiangshan
+  title: "SoK: Stablecoins in Retail Payments"
+  journal: 2026 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)
+  doi: 10.1109/ICBC67748.2026.11575527
+  published_iso: "2026-06-01"
+  published_date: 1 June 2026
+  ieee_base: "Y. Li, Y. Xiang, Q. Wang, T. H. Yuen, A. Deppeler and J. Yu, SoK: Stablecoins in Retail Payments, 2026 IEEE International Conference on Blockchain and Cryptocurrency (ICBC), 2026."
+  harvard_base: "Li, Y. et al. (2026). SoK: Stablecoins in Retail Payments. 2026 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)."
+  source_format: bibtex
+sc-2026-ref5:
+  entry_type: techreport
+  short_author: Schär et al.
+  year: "2026"
+  authors: Schär, Fabian and Kosse, Anneke and Rice, Tara and Shirakami, Takeshi and Siridhasanakul, Jirapat
+  title: The anatomy of stablecoin transactions
+  institution: Bank for International Settlements
+  number: "1359"
+  url: https://www.bis.org/publications/working-paper-1359-anatomy-stablecoin-transactions
+  published_iso: "2026-06-01"
+  accessed_iso: "2026-09-04"
+  published_date: 1 June 2026
+  accessed_date: 4 September 2026
+  ieee_base: F. Schär, A. Kosse, T. Rice, T. Shirakami and J. Siridhasanakul, The anatomy of stablecoin transactions, Bank for International Settlements, Tech. Rep. 1359, 2026.
+  harvard_base: Schär, F. et al. (2026). The anatomy of stablecoin transactions. Bank for International Settlements. Tech. Rep. 1359.
+  source_format: bibtex
+sc-2026-ref12:
+  entry_type: misc
+  short_author: Schonken
+  year: "2026"
+  authors: Schonken, Francois
+  title: Stablecoin Issuance Infrastructure for Banks
+  publisher: Fireblocks
+  url: https://www.fireblocks.com/blog/stablecoin-issuance-infrastructure-for-banks
+  published_iso: "2026-02-24"
+  accessed_iso: "2026-09-04"
+  published_date: 24 February 2026
+  accessed_date: 4 September 2026
+  ieee_base: F. Schonken, Stablecoin Issuance Infrastructure for Banks, Fireblocks, 2026.
+  harvard_base: Schonken, F. (2026). Stablecoin Issuance Infrastructure for Banks. Fireblocks.
+  source_format: bibtex
+sc-2026-ref7:
+  entry_type: misc
+  short_author: Tan
+  year: "2026"
+  authors: Tan, Albert Sin Hon
+  title: "Final, but not yours: protocol finality, private law and the allocation of digital-asset loss"
+  howpublished: SSRN preprint
+  url: https://www.ssrn.com/abstract=7174379
+  doi: 10.2139/ssrn.7174379
+  published_iso: "2026-07-24"
+  accessed_iso: "2026-09-04"
+  published_date: 24 July 2026
+  accessed_date: 4 September 2026
+  ieee_base: "A. S. H. Tan, Final, but not yours: protocol finality, private law and the allocation of digital-asset loss, SSRN preprint, 2026."
+  harvard_base: "Tan, A.S.H. (2026). Final, but not yours: protocol finality, private law and the allocation of digital-asset loss. SSRN preprint."
+  source_format: bibtex
+sc-2026-ref8:
+  entry_type: misc
+  short_author: Visa
+  year: "2026"
+  title: How stablecoins are reinventing cross-border payments
+  publisher: Visa
+  url: https://www.visa.com/en-us/thought-leadership/global-money-movement/stablecoins-are-reinventing-cross-border-payments
+  published_iso: "2026-07-14"
+  accessed_iso: "2026-09-04"
+  published_date: 14 July 2026
+  accessed_date: 4 September 2026
+  ieee_base: How stablecoins are reinventing cross-border payments, Visa, 2026.
+  harvard_base: "(2026). How stablecoins are reinventing cross-border payments. Visa."
+  source_format: bibtex
+sc-2026-ref14:
+  entry_type: article
+  short_author: Goldby et al.
+  year: "2026"
+  authors: Goldby, Miriam and Ioannou, Ilias
+  title: Case comment Ping Fai Yuen v Fun Yung Li and Lai Yung Li [2026] EWHC 532 (KB)
+  journal: Computer Law and Security Review
+  volume: "62"
+  doi: 10.1016/j.clsr.2026.106378
+  ieee_base: M. Goldby and I. Ioannou, Case comment Ping Fai Yuen v Fun Yung Li and Lai Yung Li [2026] EWHC 532 (KB), Computer Law and Security Review, vol. 62, 2026.
+  harvard_base: Goldby, M. and Ioannou, I. (2026). Case comment Ping Fai Yuen v Fun Yung Li and Lai Yung Li [2026] EWHC 532 (KB). Computer Law and Security Review. vol. 62.
+  source_format: bibtex
+sc-2026-ref15:
+  entry_type: misc
+  short_author: Financial Conduct Authority
+  year: "2026"
+  title: Overview of our cryptoassets regime policy statements
+  publisher: Financial Conduct Authority
+  url: https://www.fca.org.uk/publications/policy-statements/cryptoasset-regime
+  published_iso: "2026-06-30"
+  accessed_iso: "2026-09-04"
+  published_date: 30 June 2026
+  accessed_date: 4 September 2026
+  ieee_base: Overview of our cryptoassets regime policy statements, Financial Conduct Authority, 2026.
+  harvard_base: "(2026). Overview of our cryptoassets regime policy statements. Financial Conduct Authority."
+  source_format: bibtex
+sc-2026-ref16:
+  entry_type: misc
+  short_author: Bank of England
+  year: "2026"
+  title: Sterling-denominated systemic stablecoins
+  publisher: Bank of England
+  url: https://www.bankofengland.co.uk/paper/2026/ps/sterling-denominated-systemic-stablecoin
+  published_iso: "2026-06-22"
+  accessed_iso: "2026-09-04"
+  published_date: 22 June 2026
+  accessed_date: 4 September 2026
+  ieee_base: Sterling-denominated systemic stablecoins, Bank of England, 2026, Policy statement.
+  harvard_base: "(2026). Sterling-denominated systemic stablecoins. Bank of England. Policy statement."
+  note: Policy statement
+  source_format: bibtex
+sc-2026-ref17:
+  entry_type: article
+  short_author: Loke
+  year: "2020"
+  authors: Loke, Alexander F. H.
+  title: Mistakes in Algorithmic Trading of Cryptocurrencies
+  journal: Modern Law Review
+  volume: "83"
+  number: "6"
+  pages: 1343--1353
+  doi: 10.1111/1468-2230.12574
+  ieee_base: A. F. H. Loke, Mistakes in Algorithmic Trading of Cryptocurrencies, Modern Law Review, vol. 83, no. 6, pp. 1343--1353, 2020.
+  harvard_base: Loke, A.F.H. (2020). Mistakes in Algorithmic Trading of Cryptocurrencies. Modern Law Review. vol. 83, no. 6, pp. 1343--1353.
+  source_format: bibtex

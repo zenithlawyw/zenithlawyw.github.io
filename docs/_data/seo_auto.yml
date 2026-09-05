@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-09-03T19:09:33Z"
+generated_at: "2026-09-05T09:21:54Z"
 signal_weights:
   title: 3
   categories: 5
@@ -27,21 +27,22 @@ keywords:
   - artificial
   - intelligence
   - model
-  - lightning
-  - technical
   - practical
+  - technical
+  - lightning
   - network
-  - data
   - questions
+  - data
   - production
   - appendix
-  - architecture
   - evidence
+  - architecture
   - implementation
   - feature
   - methods
   - support
   - provenance
+  - review
   - language
   - practice
   - retrieval
@@ -50,18 +51,18 @@ keywords:
   - svm
   - mcp
   - supply
+  - definitions
   - chain
+  - cross-border
   - teams
   - cryptography
-  - definitions
   - systems
   - acp
   - author
-  - review
   - domain
   - metrics
   - credibility
-  - cross-border
+  - literature
   - causal
   - cloud
   - controls
@@ -69,7 +70,6 @@ keywords:
   - papers
   - table
   - guide
-  - literature
   - contents
   - lessons
   - snapshot
@@ -77,36 +77,39 @@ keywords:
   - open
   - security
   - benchmark
+  - corpus
   - micropayments
   - design
   - explainability
   - limits
   - post-quantum
   - quantum
-  - corpus
   - software
   - china
   - citability
   - deadlock
   - introduction
+  - synthesis
   - failure
   - foundations
   - interpretability
+  - boundaries
   - cybersecurity
   - explanation
-  - synthesis
+  - trust
   - orchestration
   - reference
   - agent
-  - boundaries
   - digital
+  - protocol
   - challenges
   - generation
   - llm
   - agentic
   - axios
+  - blockchain
+  - legal
   - series
-  - protocol
   - scope
   - npm
   - sovereignty
@@ -114,48 +117,45 @@ keywords:
   - deep
   - explainable
   - framework
-  - trust
   - first
-  - legal
+  - maturity
   - migration
   - platform
   - applications
   - glossary
+  - guidance
+  - regulatory
   - theory
   - tuning
   - hybrid
   - map
-  - maturity
   - representation
   - attack
-  - guidance
   - healthcare
   - operational
   - selection
   - standards
   - access
   - analysis
-  - blockchain
   - calibration
   - critical
   - inference
+  - knowledge
   - problem
   - quality
   - context
   - frequently
   - gap
+  - infrastructure
   - patterns
-  - regulatory
   - shap
   - compliance
-  - knowledge
   - monitoring
   - processing
   - readiness
   - asked
   - conceptual
   - decision
-  - infrastructure
   - requirements
   - alignment
   - beyond
@@ -164,6 +164,7 @@ keywords:
   - iot
   - medical
   - natural
+  - payments
   - playbook
   - reliability
   - resource
@@ -174,7 +175,6 @@ keywords:
   - exact
   - fragmentation
   - hub
-  - limitations
 key_phrases:
   - artificial intelligence
   - machine learning
@@ -197,8 +197,8 @@ key_phrases:
   - appendix table contents
   - citability snapshot
   - implementation guide
-  - post-quantum cryptography
   - technical appendix
+  - post-quantum cryptography
   - learning artificial
   - learning artificial intelligence
   - machine learning artificial
@@ -250,6 +250,8 @@ key_phrases:
   - domain adaptation
   - sovereignty china
   - corpus reviewed
+  - evidence maturity
+  - literature review
   - orchestration mcp
   - orchestration mcp a2a
   - xai evaluation
@@ -265,7 +267,6 @@ key_phrases:
   - contents citability
   - contents citability snapshot
   - deep clustering
-  - evidence maturity
   - failure mode
   - machine benchmark
   - medical imaging
@@ -299,8 +300,8 @@ key_phrases:
   - exact computation
   - explanation methods
   - governance structures
-  - literature review
   - machine deployment
+  - practical guidance
   - vector machine deployment
   - xai practice
   - attribution xai
@@ -315,7 +316,6 @@ key_phrases:
   - language processing retrieval
   - maturity map
   - processing retrieval
-  - processing retrieval augmented
 catchwords:
   - governance
   - attribution
@@ -327,122 +327,122 @@ catchwords:
   - artificial
   - intelligence
   - model
-  - lightning
-  - technical
   - practical
+  - technical
+  - lightning
   - network
   - questions
   - production
   - appendix
-  - architecture
   - evidence
+  - architecture
   - implementation
   - feature
   - methods
   - support
   - provenance
+  - review
   - language
   - practice
   - retrieval
   - vector
   - supply
+  - definitions
   - chain
+  - cross-border
   - teams
   - cryptography
-  - definitions
   - systems
   - author
-  - review
   - domain
   - metrics
   - credibility
-  - cross-border
+  - literature
   - causal
   - cloud
   - controls
   - papers
   - table
   - guide
-  - literature
   - contents
   - lessons
   - snapshot
   - large
   - security
   - benchmark
+  - corpus
   - micropayments
   - design
   - explainability
   - limits
   - post-quantum
   - quantum
-  - corpus
   - software
   - china
   - citability
   - deadlock
   - introduction
+  - synthesis
   - failure
   - foundations
   - interpretability
+  - boundaries
   - cybersecurity
   - explanation
-  - synthesis
+  - trust
   - orchestration
   - reference
   - agent
-  - boundaries
   - digital
+  - protocol
   - challenges
   - generation
   - agentic
   - axios
+  - blockchain
+  - legal
   - series
-  - protocol
   - scope
   - sovereignty
   - conclusion
   - explainable
   - framework
-  - trust
   - first
-  - legal
+  - maturity
   - migration
   - platform
   - applications
   - glossary
+  - guidance
+  - regulatory
   - theory
   - tuning
   - hybrid
-  - maturity
   - representation
   - attack
-  - guidance
   - healthcare
   - operational
   - selection
   - standards
   - access
   - analysis
-  - blockchain
   - calibration
   - critical
   - inference
+  - knowledge
   - problem
   - quality
   - context
   - frequently
+  - infrastructure
   - patterns
-  - regulatory
   - compliance
-  - knowledge
   - monitoring
   - processing
   - readiness
   - asked
   - conceptual
   - decision
-  - infrastructure
   - requirements
   - alignment
   - beyond
@@ -450,6 +450,7 @@ catchwords:
   - integration
   - medical
   - natural
+  - payments
   - playbook
   - reliability
   - resource
@@ -459,7 +460,6 @@ catchwords:
   - enterprise
   - exact
   - fragmentation
-  - limitations
 catchphrases:
   - technical appendix
   - citability snapshot
@@ -574,21 +574,22 @@ search_words:
   - artificial
   - intelligence
   - model
-  - lightning
-  - technical
   - practical
+  - technical
+  - lightning
   - network
-  - data
   - questions
+  - data
   - production
   - appendix
-  - architecture
   - evidence
+  - architecture
   - implementation
   - feature
   - methods
   - support
   - provenance
+  - review
   - language
   - practice
   - retrieval
@@ -597,18 +598,18 @@ search_words:
   - svm
   - mcp
   - supply
+  - definitions
   - chain
+  - cross-border
   - teams
   - cryptography
-  - definitions
   - systems
   - acp
   - author
-  - review
   - domain
   - metrics
   - credibility
-  - cross-border
+  - literature
   - causal
   - cloud
   - controls
@@ -616,7 +617,6 @@ search_words:
   - papers
   - table
   - guide
-  - literature
   - contents
   - lessons
   - snapshot
@@ -624,34 +624,34 @@ search_words:
   - open
   - security
   - benchmark
+  - corpus
   - micropayments
   - design
   - explainability
   - limits
   - post-quantum
   - quantum
-  - corpus
   - software
   - china
   - citability
   - deadlock
   - introduction
+  - synthesis
   - failure
   - foundations
   - interpretability
+  - boundaries
   - cybersecurity
   - explanation
-  - synthesis
+  - trust
   - orchestration
   - reference
   - agent
-  - boundaries
   - digital
+  - protocol
   - challenges
   - generation
   - llm
-  - agentic
-  - axios
   - artificial intelligence
   - machine learning
   - lightning network
@@ -673,8 +673,8 @@ search_words:
   - appendix table contents
   - citability snapshot
   - implementation guide
-  - post-quantum cryptography
   - technical appendix
+  - post-quantum cryptography
   - learning artificial
   - learning artificial intelligence
   - machine learning artificial
@@ -885,6 +885,8 @@ global_questions:
     answer: The evidence in this series shows both have known failure modes. SHAP conflates correlation with causation (Janzing, Ng). LIME underperforms on time series (Troncoso-García). Use the decision framework above to select based on your specific constraints, and always validate with at least one metric from a different paradigm.
   - question: What Practitioners Should Do Now?
     answer: "- Use ccPASTpqc-style tools for initial translation drafts, then review and test manually - Invest in cryptographic dependency inventories before migration (you cannot migrate what you have not catalogued) - Prioritise asymmetric key operations (symmetric encryption requires only key-size increases)"
+  - question: What Settles on the Ledger, and What Does Not?
+    answer: "A recurring error in stablecoin commentary is to treat an on-chain transfer as if it settled the whole transaction. The corpus is explicit that it does not. The BIS working paper quantifies the gap between transaction-level and transfer-level views. Using 593 million event logs from 141 million Ethereum transactions involving three major US dollar stablecoins, the authors classify a transaction as a simple transfer if it contains exactly one stablecoin transfer event and no additional event logs. Under that definition 68.4 percent of transactions are simple transfers. But the transfer-level picture differs sharply: 59.96 percent of all stablecoin transfers occur within complex transactions, which combine trading, lending, arbitrage, liquidity provision, and settlement, rather than as standalone value transfers. Analyses that read each transfer as a standalone payment therefore risk misclassifying almost six in ten transfer events, since those events occur inside complex transactions rather than as standalone value transfers, and such analyses overstate the share of simple person-to-person payments. The operational reading of that finding is direct. Fast, atomic ledger settlement describes only the token leg. Where a stablecoin payment begins or ends in fiat, the institution must also organise the corresponding fiat funding or redemption leg: money entering the system when stablecoins are bought, and money leaving when they are redeemed. Purely on-chain transactions that never touch fiat have no separate fiat leg at the point of transfer, although the surrounding custody and compliance layers still operate on banking timelines. The FCA regime makes this visible. The final rules require issuers to hold backing assets in a statutory trust, generally with a third-party custodian outside the group, to offer redemption at par to all holders, and to place payment orders for redeemed funds by the end of the next business day once the redeemed stablecoin is received and the required checks are complete. The token moves in seconds; the money behind it moves on banking timelines."
   - question: What This Means in Practice?
     answer: "Users of RAG systems tend to trust cited outputs more than uncited ones. This trust is rational but can be exploited by the failure modes of the system itself. Production systems should: - Never present citations as proof of correctness. Present them as evidence sources that the user can verify. - Implement citation verification checks that compare the generated claim against the retrieved passage, not just confirm that the passage was retrieved."
   - question: What architecture decisions should teams make first for China-compliant cloud services for digital sovereignty China?
@@ -5314,6 +5316,137 @@ posts:
         answer: The manifesto argues that evaluation should shift from a post-hoc activity to a design-stage requirement. This means developing community-standard benchmarks, establishing ground-truth datasets for explanation correctness, creating reproducible evaluation protocols that span research groups, and making evaluation quality a publication criterion equivalent to methodological novelty. Currently, evaluation quality varies widely and is rarely treated as a primary contribution.
       - question: What regulatory challenges does the XAI 2.0 manifesto identify?
         answer: 'The regulatory dimension runs through several of the nine categories rather than forming a single cluster. The right to be forgotten (problem 27) questions how explainable and auditable systems can also honour data erasure. The evaluation framework (problem 11) is what would make explanations auditable at scale. The power imbalance between individuals and companies (problem 28) raises human rights and participative design arguments that connect XAI to regulation. These problems are urgent because regulatory timelines are shortening while technical standards remain fluid. <details markdown="1" class="appendix-callout group"> <summary>Appendix: Source Material</summary>'
+  stablecoin-custody-settlement-transaction-lifecycle-evidence-review:
+    title: "Stablecoin Custody, Settlement, and the Transaction Lifecycle: An Evidence-Grounded Review"
+    url: "/stablecoin-custody-settlement-transaction-lifecycle-evidence-review"
+    keywords:
+      - custody
+      - review
+      - settlement
+      - stablecoin
+      - payments
+      - finality
+      - lifecycle
+      - blockchain
+      - redemption
+      - statutory
+      - trust
+      - act
+      - backing
+      - cross-border
+      - genius
+      - legal
+      - mica
+      - minting
+      - tokenisation
+      - fintech
+      - literature
+      - transaction
+      - corpus
+      - evidence
+      - identified
+      - mechanics
+      - paper
+      - practical
+      - protocol
+      - regulatory
+      - evidence-grounded
+      - advantage
+      - allocation
+      - anatomy
+      - appendix
+      - statutory trust
+      - cross-border payments
+      - genius act
+      - literature review
+      - emt
+    key_phrases:
+      - statutory trust
+      - custody backing
+      - finality legal
+      - stablecoins settlement custody
+      - settlement custody statutory
+      - genius act
+      - mica genius
+      - payments mica
+      - cross-border payments
+      - custody statutory trust
+      - trust redemption
+      - custody statutory
+      - settlement custody
+      - stablecoins settlement
+      - statutory trust redemption
+      - cross-border payments mica
+      - payments mica genius
+      - mica genius act
+      - trust redemption cross-border
+      - redemption cross-border payments
+      - genius act tokenisation
+      - act tokenisation blockchain
+      - tokenisation blockchain literature
+      - stablecoin custody settlement
+    catchwords:
+      - custody
+      - review
+      - settlement
+      - stablecoin
+      - payments
+      - finality
+      - lifecycle
+      - blockchain
+      - redemption
+      - statutory
+      - trust
+      - backing
+      - cross-border
+      - genius
+      - legal
+      - minting
+      - tokenisation
+      - fintech
+      - literature
+      - transaction
+      - corpus
+      - evidence
+      - identified
+      - mechanics
+      - paper
+      - practical
+      - protocol
+      - regulatory
+    search_words:
+      - custody
+      - review
+      - settlement
+      - stablecoin
+      - payments
+      - finality
+      - lifecycle
+      - blockchain
+      - redemption
+      - statutory
+      - trust
+      - act
+      - backing
+      - cross-border
+      - genius
+      - legal
+      - mica
+      - statutory trust
+      - custody backing
+      - finality legal
+      - stablecoins settlement custody
+      - settlement custody statutory
+      - genius act
+      - mica genius
+      - payments mica
+      - cross-border payments
+      - custody statutory trust
+      - trust redemption
+      - custody statutory
+    questions:
+      - question: What Settles on the Ledger, and What Does Not?
+        answer: "A recurring error in stablecoin commentary is to treat an on-chain transfer as if it settled the whole transaction. The corpus is explicit that it does not. The BIS working paper quantifies the gap between transaction-level and transfer-level views. Using 593 million event logs from 141 million Ethereum transactions involving three major US dollar stablecoins, the authors classify a transaction as a simple transfer if it contains exactly one stablecoin transfer event and no additional event logs. Under that definition 68.4 percent of transactions are simple transfers. But the transfer-level picture differs sharply: 59.96 percent of all stablecoin transfers occur within complex transactions, which combine trading, lending, arbitrage, liquidity provision, and settlement, rather than as standalone value transfers. Analyses that read each transfer as a standalone payment therefore risk misclassifying almost six in ten transfer events, since those events occur inside complex transactions rather than as standalone value transfers, and such analyses overstate the share of simple person-to-person payments. The operational reading of that finding is direct. Fast, atomic ledger settlement describes only the token leg. Where a stablecoin payment begins or ends in fiat, the institution must also organise the corresponding fiat funding or redemption leg: money entering the system when stablecoins are bought, and money leaving when they are redeemed. Purely on-chain transactions that never touch fiat have no separate fiat leg at the point of transfer, although the surrounding custody and compliance layers still operate on banking timelines. The FCA regime makes this visible. The final rules require issuers to hold backing assets in a statutory trust, generally with a third-party custodian outside the group, to offer redemption at par to all holders, and to place payment orders for redeemed funds by the end of the next business day once the redeemed stablecoin is received and the required checks are complete. The token moves in seconds; the money behind it moves on banking timelines."
 pages:
   zenith-law:
     title: Zenith Law Profile | Engineering Strategy and AI Governance
