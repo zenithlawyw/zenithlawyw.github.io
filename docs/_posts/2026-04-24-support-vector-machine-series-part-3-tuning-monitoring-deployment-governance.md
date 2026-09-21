@@ -170,7 +170,7 @@ Before release, define non-negotiable gates that tie model behavior to operation
 3. Calibration reliability bounds for threshold-driven actions.
 4. Drift budget limits that trigger rollback or constrained rollout.
 
-Skip these gates and you will eventually ship a model that looks fine in aggregate while silently failing in the exact classes that drive user harm or support cost. I have seen it happen with a single overlooked minority class.
+Skip these gates and you will eventually ship a model that looks fine in aggregate while silently failing in the exact classes that drive user harm or support cost. This failure can happen with a single overlooked minority class.
 
 ## Comparator Retention and Model-Risk Management
 

@@ -86,7 +86,7 @@ So where does this leave the quantum semantic track? Still early. Still simulati
 
 ### Domain adaptation quality depends on preserving class structure, not only global alignment
 
-Qiang et al. make the sharpest argument in this set: global domain alignment, pursued without explicit target-domain discriminability constraints, can still fail spectacularly on actual predictions {% include references/cite.html key="qsc-2026-ref3" %}. I have seen this exact failure mode in practice. Teams treat alignment metrics as proxies for transfer quality, then discover that feature distributions overlap neatly on paper while class boundaries remain operationally useless.
+Qiang et al. make the sharpest argument in this set: global domain alignment, pursued without explicit target-domain discriminability constraints, can still fail spectacularly on actual predictions {% include references/cite.html key="qsc-2026-ref3" %}. This exact failure mode appears in practice. Teams treat alignment metrics as proxies for transfer quality, then discover that feature distributions overlap neatly on paper while class boundaries remain operationally useless.
 
 The contribution is not just a warning. Qiang et al. introduce a mechanism combining global consistency with local discriminability and evaluate it across several benchmark families using statistical testing. For anyone building adaptation pipelines: if your objective function lacks class-level separability pressure, you are optimizing the wrong target. Confidently.
 

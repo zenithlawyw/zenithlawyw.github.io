@@ -87,9 +87,9 @@ This is a directional review, not legal advice and not a formal meta-analysis. R
 
 ## Review Approach and Evidence Grading
 
-Each paper was read as an engineering input, not a theoretical endpoint. I pulled four things from every source: the claim, the mechanism, the evidence quality, and the implementation implication.
+Each paper was read as an engineering input, not a theoretical endpoint. Four things were pulled from every source: the claim, the mechanism, the evidence quality, and the implementation implication.
 
-Then I compared papers along shared dimensions: settlement model, identity model, trust boundary, and deployability under real operational constraints. Contradictions were the interesting part. Where performance claims ran strong but field validation stayed thin, that gap told me more than the headline numbers did.
+Then papers were compared along shared dimensions: settlement model, identity model, trust boundary, and deployability under real operational constraints. Contradictions were the interesting part. Where performance claims ran strong but field validation stayed thin, that gap said more than the headline numbers did.
 
 ## Terms Used in This Review
 
