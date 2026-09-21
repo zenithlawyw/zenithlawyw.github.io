@@ -120,7 +120,7 @@ Notable limitation: on German Credit, MOFAE solutions dominate Integrated Gradie
 
 ## Cross-Paper Synthesis: Four Strategies for Better Attribution
 
-In my reading, the result of FACE that exact computation is cheaper than approximation is the most underappreciated finding in this set. The usual assumption is that exactness costs more. FACE shows it can cost less, provided you are willing to commit to a specific architecture.
+The result of FACE that exact computation is cheaper than approximation is the most underappreciated finding in this set. The usual assumption is that exactness costs more. FACE shows it can cost less, provided you are willing to commit to a specific architecture.
 
 ### The approximation spectrum
 

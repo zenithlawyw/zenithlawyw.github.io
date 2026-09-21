@@ -157,7 +157,7 @@ Mitchell et al. (2019) {% include references/cite.html key="mitchell2019modelcar
 
 ## A Decision Framework for Attribution Method Selection
 
-If I were advising a team starting their XAI journey today, I would tell them to start with the decision framework below and budget at least as much for evaluation as for explanation generation. Drawing on all 15 core papers, the domain applications, and the surveys, I propose a structured decision framework organised by three questions.
+A team starting an XAI journey should start with the decision framework below and budget at least as much for evaluation as for explanation generation. Drawing on all 15 core papers, the domain applications, and the surveys, the structured decision framework below is organised by three questions.
 
 ### Question 1: What model access do you have?
 

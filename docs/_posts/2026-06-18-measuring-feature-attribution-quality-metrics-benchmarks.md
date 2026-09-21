@@ -139,7 +139,7 @@ The papers define three distinct evaluation paradigms, each with different guara
 | Discovery-centric | RExQUAL                            | Association rules                  | Requires validation of rule quality  |
 | Human-centric     | User studies, relevance ratings    | Human judgement                    | Expensive; hard to replicate         |
 
-This finding challenged my own assumption that simpler, more theoretically grounded methods always produce better explanations. The truth is messier: method performance depends on what you are explaining, with what model, and for whom. There is no shortcut around conditional testing.
+This finding challenges the common assumption that simpler, more theoretically grounded methods always produce better explanations. The truth is messier: method performance depends on what you are explaining, with what model, and for whom. There is no shortcut around conditional testing.
 
 ### The convergent validity gap
 

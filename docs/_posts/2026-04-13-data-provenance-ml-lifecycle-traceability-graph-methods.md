@@ -35,7 +35,7 @@ Where did the training data come from? Who transformed it, and when, and into wh
 
 Karuna et al. wire financial transactions into a graph (entities as nodes, transfers as edges) and pit GNN-based traceability against logistic regression and random forest baselines {% include references/cite.html key="prov-2026-ref1" %}. Pina et al. build a stitching layer: separate tools capture provenance at separate lifecycle stages, and their prototype forces those fragments to talk {% include references/cite.html key="prov-2026-ref2" %}. Souza et al. go formal: PROV-ML extends W3C PROV with ML Schema vocabulary, pressure-tested through ProvLake on a 48-GPU oil-and-gas pipeline {% include references/cite.html key="prov-2026-ref3" %}.
 
-Three papers. Not a field survey. Not even close. This review is deliberately narrow, and that narrowness is the point. Claims anchored to reported results say so; inferences drawn beyond the evidence of any single paper are marked at the boundary. Several details resist independent corroboration. Rather than silently absorbing them, I flag them.
+Three papers. Not a field survey. Not even close. This review is deliberately narrow, and that narrowness is the point. Claims anchored to reported results say so; inferences drawn beyond the evidence of any single paper are marked at the boundary. Several details resist independent corroboration. Rather than silently absorbing them, the review flags them.
 
 This article is designed for technical and governance learning. It does not provide legal, regulatory, or procurement advice. It is not legal advice. Readers should validate applicability against their own jurisdiction, risk model, and production constraints.
 

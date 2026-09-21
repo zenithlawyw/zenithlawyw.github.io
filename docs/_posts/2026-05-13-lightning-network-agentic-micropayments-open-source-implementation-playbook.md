@@ -183,7 +183,7 @@ The following metrics serve as operational indicators. They originate from gener
 4. Manual intervention rate by autonomy tier.
 5. Reconciliation time for mismatched state.
 
-Headline throughput numbers look good in slide decks. These operational metrics expose what throughput hides: failure cost, operator burden, recovery quality. In my experience, they are far more informative during pilot go or no-go decisions.
+Headline throughput numbers look good in slide decks. These operational metrics expose what throughput hides: failure cost, operator burden, recovery quality. In practice, they are far more informative during pilot go or no-go decisions.
 
 ## Deployment Blueprint for Early-Stage Production
 
@@ -249,7 +249,7 @@ Scale only after reliability, intervention rate, and reconciliation time stay wi
 
 ### Which role accelerates reliability fastest in early teams for lightning network implementation guide?
 
-In my experience, a policy-and-reliability engineer often delivers outsized quality gains in early teams. This role connects payment logic, risk controls, and observability into one operating loop, which means quicker root-cause discovery, cleaner rollback design, and stronger evidence for go or no-go pilot decisions.
+In practice, a policy-and-reliability engineer often delivers outsized quality gains in early teams. This role connects payment logic, risk controls, and observability into one operating loop, which means quicker root-cause discovery, cleaner rollback design, and stronger evidence for go or no-go pilot decisions.
 
 ### How should pilot success thresholds be defined for lightning network implementation guide?
 

@@ -129,7 +129,7 @@ Each layer depends on the one below. Without verifiability, correctness claims c
 
 ### The model-centric turn
 
-I find this implication both compelling and unsettling. Compelling because the theoretical case is clear: you cannot explain a model that is not designed to be explainable. Unsettling because standard practice treats the model as fixed and the explanation method as the thing to improve, which the Bhalla papers show is backwards.
+This implication is both compelling and unsettling. Compelling because the theoretical case is clear: you cannot explain a model that is not designed to be explainable. Unsettling because standard practice treats the model as fixed and the explanation method as the thing to improve, which the Bhalla papers show is backwards.
 
 A radical implication runs through both Bhalla papers: the problem is not the attribution method. The problem is the model. You cannot fix explanation quality without modifying what is being explained. This stance is fundamentally different from the mainstream XAI literature, which treats the model as fixed and searches for better explanation techniques.
 

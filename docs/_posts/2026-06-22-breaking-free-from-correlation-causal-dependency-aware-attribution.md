@@ -122,7 +122,7 @@ C3A achieves absolute gains of 19.72% in iAUC and 25.88% in dAAC over leading FS
 
 The three papers do not compete. They address distinct facets of the dependency problem, and their different starting assumptions lead to different solution properties.
 
-The C3A approach strikes me as the one most likely to generalise beyond its stated domain. The contrastive principle, attributing by comparing what the model sees in one class versus another, matches how humans naturally reason about decisions. Nothing about it is specific to few-shot image classification.
+The C3A approach is the one most likely to generalise beyond its stated domain. The contrastive principle, attributing by comparing what the model sees in one class versus another, matches how humans naturally reason about decisions. Nothing about it is specific to few-shot image classification.
 
 ### When correlation awareness is enough
 
