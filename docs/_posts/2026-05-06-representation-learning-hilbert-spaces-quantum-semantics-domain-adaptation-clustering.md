@@ -32,6 +32,7 @@ references:
 categories:
   - Artificial Intelligence
   - Machine Learning
+  - Applied Mathematics
 tags:
   - representation learning
   - quantum computing

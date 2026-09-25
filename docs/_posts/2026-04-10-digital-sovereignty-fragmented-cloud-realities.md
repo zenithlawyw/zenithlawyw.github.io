@@ -30,7 +30,9 @@ references:
   - ds-2026-ref13
   - ds-2026-ref14
   - ds-2026-ref15
-categories: [Digital Governance]
+categories:
+  - Digital Governance
+  - Platform Engineering
 tags:
   [
     digital sovereignty,

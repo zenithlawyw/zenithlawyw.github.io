@@ -1,6 +1,6 @@
 ---
-generated_at: "2026-09-21T09:48:00Z"
-total_candidates: 1033
+generated_at: "2026-09-25T17:02:29Z"
+total_candidates: 1053
 candidates:
   - term: Caveats Relevance Repository
     status: candidate
@@ -684,6 +684,28 @@ candidates:
           Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
     related_pages: []
+  - term: Software Supply Chain
+    status: candidate
+    confidence: 16
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on
+          Trust, Provenance, and Resilient Engineering"
+        url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
+      - title: Software Supply Chain Attack Vectors and How Keyless Signing Counters Them
+        url: "/software-supply-chain-attack-vectors-keyless-signing"
+      - title:
+          SBOM Graphs for Attack Chain Prediction and Workload Identity for Continuous
+          Compliance
+        url: "/sbom-graphs-attack-chains-continuous-compliance"
+    related_pages: []
   - term: Artificial Intelligence Machine
     status: candidate
     confidence: 15
@@ -896,6 +918,34 @@ candidates:
         url: "/literature-reviews/brown-et-al-2020-language-models-are-few-shot-learners.html"
       - title: ""
         url: "/literature-reviews/chang-and-lin-2011-libsvm-a-library-for-support-vector-machines.html"
+  - term: Large Language Model
+    status: candidate
+    confidence: 12
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Large Language Models in Practice: From the Transformer to the Present
+          Frontier"
+        url: "/large-language-models-practice-from-transformer-to-present-frontier"
+      - title:
+          "Retrieval-Augmented Generation: An Evidence Review of Architecture, Retrieval
+          Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+      - title:
+          "Retrieval-Augmented Generation: Failure Modes, Confidence Calibration,
+          and Production Governance"
+        url: "/retrieval-augmented-generation-failure-modes-production-governance"
+    related_pages: []
   - term: SEO GEO
     status: candidate
     confidence: 12
@@ -931,6 +981,28 @@ candidates:
           "Deadlock and Resource Contention: Operating Systems Theory Applied to
           Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: Supply Chain Attack
+    status: candidate
+    confidence: 12
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "axios npm Supply Chain Compromise 2026: Ten Evidence-Based Lessons on
+          Trust, Provenance, and Resilient Engineering"
+        url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
+      - title: Software Supply Chain Attack Vectors and How Keyless Signing Counters Them
+        url: "/software-supply-chain-attack-vectors-keyless-signing"
+      - title:
+          SBOM Graphs for Attack Chain Prediction and Workload Identity for Continuous
+          Compliance
+        url: "/sbom-graphs-attack-chains-continuous-compliance"
     related_pages: []
   - term: Supply Chain Security
     status: candidate
@@ -1009,6 +1081,38 @@ candidates:
           "Large Language Models in Practice: From the Transformer to the Present
           Frontier"
         url: "/large-language-models-practice-from-transformer-to-present-frontier"
+    related_pages: []
+  - term: Data Provenance
+    status: candidate
+    confidence: 11
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Data Provenance in Machine Learning: Traceability, Graph Methods, and
+          Governance Lessons"
+        url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
+    related_pages: []
+  - term: Digital Sovereignty
+    status: candidate
+    confidence: 11
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Digital Sovereignty in Practice: Ten Engineering Lessons from Cloud Access
+          Fragmentation in China, 2014 to 2026"
+        url: "/digital-sovereignty-practice-china-cloud-access-fragmentation-ten-engineering-lessons"
     related_pages: []
   - term: Improves Svm
     status: candidate
@@ -1247,6 +1351,28 @@ candidates:
           "Deadlock and Resource Contention: Operating Systems Theory Applied to
           Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: Cybersecurity Software Engineering
+    status: candidate
+    confidence: 10
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce
+          Readiness"
+        url: "/post-quantum-cryptography-standards-migration-workforce-readiness"
+      - title: Software Supply Chain Attack Vectors and How Keyless Signing Counters Them
+        url: "/software-supply-chain-attack-vectors-keyless-signing"
+      - title:
+          SBOM Graphs for Attack Chain Prediction and Workload Identity for Continuous
+          Compliance
+        url: "/sbom-graphs-attack-chains-continuous-compliance"
     related_pages: []
   - term: Data Provenance Machine
     status: candidate
@@ -2056,6 +2182,20 @@ candidates:
           UCI HAR"
         url: "/support-vector-machine-series-part-2-benchmark-error-analysis-har"
     related_pages: []
+  - term: LLM Supply Chain
+    status: candidate
+    confidence: 9
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Software Supply Chain Security Series Part 3: AI and LLM Supply Chains"
+        url: "/software-supply-chain-security-series-part-3-ai-llm-supply-chains"
+    related_pages: []
   - term: Learning Traceability Graph
     status: candidate
     confidence: 9
@@ -2526,6 +2666,22 @@ candidates:
         url: "/legal/privacy-cookies-data-protection/"
       - title: Legal Notices
         url: "/legal/"
+  - term: Deadlock
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Deadlock and Resource Contention: Operating Systems Theory Applied to
+          Supply Chains, Cloud Platforms, and LLM Systems"
+        url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
   - term: Definitions SEO
     status: candidate
     confidence: 8
@@ -2684,6 +2840,22 @@ candidates:
           Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
     related_pages: []
+  - term: Graph Neural Network
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Data Provenance in Machine Learning: Traceability, Graph Methods, and
+          Governance Lessons"
+        url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
+    related_pages: []
   - term: Intelligence
     status: candidate
     confidence: 8
@@ -2707,6 +2879,20 @@ candidates:
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
       - title: "Support Vector Machine: Practical Guide to Margins, Kernels, and Tuning"
         url: "/support-vector-machine-practical-guide-kernels-margin-tuning"
+    related_pages: []
+  - term: LLM Supply
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Software Supply Chain Security Series Part 3: AI and LLM Supply Chains"
+        url: "/software-supply-chain-security-series-part-3-ai-llm-supply-chains"
     related_pages: []
   - term: Language Processing
     status: candidate
@@ -2975,6 +3161,22 @@ candidates:
           "Deadlock and Resource Contention: Operating Systems Theory Applied to
           Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: SBOM Graph
+    status: candidate
+    confidence: 8
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Software Supply Chain Security Series Part 2: SBOM Graphs and Continuous
+          Compliance"
+        url: "/software-supply-chain-security-series-part-2-sbom-continuous-compliance"
     related_pages: []
   - term: Searchable Answers AEO
     status: candidate
@@ -7090,6 +7292,20 @@ candidates:
     related_pages:
       - title: Zenith Law Profile | Engineering Strategy and AI Governance
         url: "/authors/zenith-law/"
+  - term: Supply Chain Aibom
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title: "Software Supply Chain Security Series Part 3: AI and LLM Supply Chains"
+        url: "/software-supply-chain-security-series-part-3-ai-llm-supply-chains"
+    related_pages: []
   - term: Supply Chain Attacks
     status: candidate
     confidence: 7
@@ -7105,6 +7321,38 @@ candidates:
           "Deadlock and Resource Contention: Operating Systems Theory Applied to
           Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: Supply Chain Code
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Software Supply Chain Security Series Part 1: Attack Vectors and Signing
+          Foundations"
+        url: "/software-supply-chain-security-series-part-1-attack-vectors-signing-foundations"
+    related_pages: []
+  - term: Supply Chain Workload
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Software Supply Chain Security Series Part 2: SBOM Graphs and Continuous
+          Compliance"
+        url: "/software-supply-chain-security-series-part-2-sbom-continuous-compliance"
     related_pages: []
   - term: Supply Chains
     status: candidate
@@ -7216,6 +7464,22 @@ candidates:
           Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
     related_pages: []
+  - term: Thread Management Deadlock
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Deadlock and Resource Contention: Operating Systems Theory Applied to
+          Supply Chains, Cloud Platforms, and LLM Systems"
+        url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
   - term: Thread Waits
     status: candidate
     confidence: 7
@@ -7279,6 +7543,22 @@ candidates:
           "Data Provenance in Machine Learning: Traceability, Graph Methods, and
           Governance Lessons"
         url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
+    related_pages: []
+  - term: Transparency Log
+    status: candidate
+    confidence: 7
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Software Supply Chain Security Series Part 1: Attack Vectors and Signing
+          Foundations"
+        url: "/software-supply-chain-security-series-part-1-attack-vectors-signing-foundations"
     related_pages: []
   - term: Trust Provenance Resilient
     status: candidate
@@ -8282,6 +8562,26 @@ candidates:
           A Deployable Open-Source Playbook"
         url: "/building-agentic-orchestration-mcp-a2a-langgraph-langchain-playbook"
     related_pages: []
+  - term: Artificial Intelligence Retrieval
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Retrieval-Augmented Generation: An Evidence Review of Architecture, Retrieval
+          Strategy, and Production Readiness"
+        url: "/retrieval-augmented-generation-evidence-review"
+      - title:
+          "Retrieval-Augmented Generation: Open-Source Implementation Playbook for
+          Production RAG Systems"
+        url: "/retrieval-augmented-generation-implementation-playbook"
+    related_pages: []
   - term: Artificial Intelligence Software
     status: candidate
     confidence: 6
@@ -8328,6 +8628,22 @@ candidates:
         url: "/faq/"
       - title: "Glossary: A-Z Definitions Across Engineering, Governance, Law, and AI"
         url: "/glossary/"
+  - term: Attack Vectors
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Software Supply Chain Security Series Part 1: Attack Vectors and Signing
+          Foundations"
+        url: "/software-supply-chain-security-series-part-1-attack-vectors-signing-foundations"
+    related_pages: []
   - term: Attribution Causal
     status: candidate
     confidence: 6
@@ -9404,6 +9720,22 @@ candidates:
         url: "/authors/zenith-law/"
       - title: Engineering, Governance, and Resilience Articles | Practical Playbooks
         url: "/articles/"
+  - term: Continuous Compliance
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          SBOM Graphs for Attack Chain Prediction and Workload Identity for Continuous
+          Compliance
+        url: "/software-supply-chain-security-series-part-2-sbom-continuous-compliance"
+    related_pages: []
   - term: Control Region-aware Enterprise
     status: candidate
     confidence: 6
@@ -9567,6 +9899,28 @@ candidates:
           "Deadlock and Resource Contention: Operating Systems Theory Applied to
           Supply Chains, Cloud Platforms, and LLM Systems"
         url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+    related_pages: []
+  - term: Cybersecurity Software
+    status: candidate
+    confidence: 6
+    suggested_definition:
+      Auto-extracted terminology candidate derived from site content
+      signals. Editorial review is required before promotion to glossary_terms.yml.
+    source:
+      label: Auto extraction from site corpus
+      url: "/faq/"
+      tier: Internal synthesis (automated candidate)
+    related_posts:
+      - title:
+          "Post-Quantum Cryptography: Standards, Migration Pathways, and Workforce
+          Readiness"
+        url: "/post-quantum-cryptography-standards-migration-workforce-readiness"
+      - title: Software Supply Chain Attack Vectors and How Keyless Signing Counters Them
+        url: "/software-supply-chain-attack-vectors-keyless-signing"
+      - title:
+          SBOM Graphs for Attack Chain Prediction and Workload Identity for Continuous
+          Compliance
+        url: "/sbom-graphs-attack-chains-continuous-compliance"
     related_pages: []
   - term: Data Control Region-aware
     status: candidate

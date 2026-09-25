@@ -48,7 +48,6 @@ catchwords: "Lightning Network, cross-border micropayments, agentic commerce, Io
 categories:
   - FinTech
   - Blockchain
-  - Artificial Intelligence
 tags:
   - lightning network
   - cross-border payments

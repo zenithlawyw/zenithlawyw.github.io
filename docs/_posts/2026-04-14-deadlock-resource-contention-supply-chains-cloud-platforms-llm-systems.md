@@ -35,8 +35,6 @@ references:
 categories:
   - Operating System
   - System Design
-  - Cybersecurity
-  - Platform Engineering
 tags:
   - deadlock
   - resource contention

@@ -39,6 +39,7 @@ references:
   - svm-2026-ref20
 categories:
   - Artificial Intelligence
+  - Machine Learning
 tags:
   - support vector machine
   - benchmark
