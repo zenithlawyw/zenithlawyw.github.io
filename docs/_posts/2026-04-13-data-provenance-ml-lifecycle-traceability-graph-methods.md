@@ -20,6 +20,7 @@ references:
   - prov-2026-ref3
 categories:
   - Artificial Intelligence
+  - Machine Learning
 tags:
   - data provenance
   - machine learning

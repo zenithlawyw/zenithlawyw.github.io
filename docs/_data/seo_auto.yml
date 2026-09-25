@@ -1,5 +1,5 @@
 ---
-generated_at: "2026-09-21T09:48:09Z"
+generated_at: "2026-09-25T17:03:09Z"
 signal_weights:
   title: 3
   categories: 5
@@ -15,216 +15,223 @@ signal_weight_rationale:
   intro_description_headings: Medium weight for context enrichment without dominating keyword extraction.
   keywords_catchwords: Low weight to avoid over-amplifying manually supplied or potentially noisy token lists.
 keywords:
+  - engineering
   - xai
+  - machine
   - governance
   - attribution
-  - engineering
-  - machine
   - learning
   - evaluation
   - deployment
+  - model
   - rag
+  - software
+  - supply
   - artificial
   - intelligence
-  - model
   - technical
+  - chain
+  - evidence
   - practical
   - lightning
-  - network
-  - questions
-  - data
   - production
   - appendix
-  - evidence
-  - implementation
+  - questions
+  - data
+  - network
   - architecture
+  - implementation
   - feature
   - methods
+  - practice
+  - retrieval
+  - security
   - support
   - provenance
   - review
   - language
-  - practice
-  - retrieval
-  - vector
   - a2a
-  - svm
-  - mcp
-  - supply
+  - vector
   - systems
+  - mcp
+  - cryptography
+  - svm
   - definitions
-  - chain
   - cross-border
   - teams
-  - cryptography
   - acp
   - author
   - domain
+  - post-quantum
+  - llm
   - metrics
+  - controls
   - credibility
   - literature
-  - causal
-  - controls
-  - pqc
+  - attack
+  - open
   - papers
+  - causal
+  - pqc
+  - agentic
+  - lessons
   - table
   - cloud
+  - design
   - guide
   - contents
-  - lessons
+  - cybersecurity
+  - foundations
   - snapshot
   - large
-  - open
-  - security
+  - trust
   - benchmark
   - corpus
+  - introduction
   - micropayments
-  - design
+  - compliance
   - explainability
   - limits
-  - software
-  - post-quantum
+  - signing
   - quantum
   - china
   - citability
   - deadlock
-  - introduction
   - synthesis
   - failure
-  - foundations
   - interpretability
+  - series
   - boundaries
-  - cybersecurity
   - explanation
-  - trust
   - orchestration
   - reference
   - agent
+  - conclusion
   - digital
   - protocol
   - challenges
   - generation
-  - llm
-  - agentic
   - axios
   - blockchain
+  - hybrid
   - legal
-  - series
+  - lifecycle
+  - framework
+  - first
   - scope
   - deep
   - npm
   - sovereignty
-  - conclusion
   - explainable
-  - framework
-  - first
+  - gap
+  - inference
   - maturity
   - migration
   - platform
+  - analysis
   - applications
+  - applied
   - glossary
   - guidance
+  - operational
   - regulatory
   - theory
   - tuning
-  - hybrid
+  - conditions
   - map
+  - problem
   - representation
-  - attack
-  - gap
+  - sbom
+  - frequently
   - healthcare
-  - operational
+  - pipeline
   - selection
   - standards
   - access
-  - analysis
   - calibration
   - critical
-  - inference
-  - knowledge
-  - problem
-  - quality
-  - context
-  - frequently
   - infrastructure
+  - knowledge
+  - quality
+  - asked
+  - context
+  - graph
   - patterns
   - shap
   - strategy
-  - compliance
   - monitoring
   - processing
   - readiness
-  - asked
   - conceptual
   - decision
+  - enterprise
+  - management
   - requirements
+  - risk
   - alignment
   - beyond
   - clustering
+  - code
   - integration
   - iot
   - medical
-  - natural
-  - payments
-  - playbook
-  - reliability
-  - resource
-  - adaptation
-  - critique
-  - current
-  - enterprise
-  - exact
-  - fragmentation
 key_phrases:
-  - artificial intelligence
   - machine learning
-  - lightning network
-  - support vector
-  - support vector machine
-  - vector machine
+  - artificial intelligence
   - supply chain
   - artificial intelligence machine
   - intelligence machine
   - intelligence machine learning
+  - lightning network
+  - support vector
+  - support vector machine
+  - vector machine
+  - software engineering
   - author credibility
-  - a2a acp
   - mcp a2a
+  - a2a acp
   - feature attribution
   - mcp a2a acp
   - table contents
   - large language
-  - appendix table
-  - appendix table contents
-  - citability snapshot
-  - implementation guide
-  - technical appendix
-  - post-quantum cryptography
   - learning artificial
   - learning artificial intelligence
   - machine learning artificial
+  - appendix table
+  - appendix table contents
+  - technical appendix
+  - post-quantum cryptography
+  - citability snapshot
+  - implementation guide
   - engineering governance
+  - software supply
   - data provenance
   - lightning network implementation
   - network implementation
+  - software supply chain
   - digital sovereignty
   - network cross-border
   - network implementation guide
   - lightning network cross-border
-  - software engineering
+  - chain attack
+  - supply chain attack
   - cross-border micropayments
   - axios npm
+  - chain security
   - language models
   - large language models
-  - network cross-border micropayments
-  - representation learning
-  - technical definitions
+  - supply chain security
   - asked questions
-  - chain attack
+  - engineering cybersecurity
   - frequently asked
   - frequently asked questions
+  - network cross-border micropayments
+  - engineering artificial
+  - engineering artificial intelligence
+  - representation learning
+  - technical definitions
   - npm supply
   - npm supply chain
-  - supply chain attack
   - appendix author
   - appendix author credibility
   - author credibility appendix
@@ -237,14 +244,13 @@ key_phrases:
   - technical appendix author
   - domain applications
   - evaluation metrics
-  - artificial intelligence artificial
   - contents author
   - contents author credibility
-  - engineering artificial
-  - engineering artificial intelligence
+  - cybersecurity software
+  - cybersecurity software engineering
   - evaluation frameworks
-  - intelligence artificial
-  - intelligence artificial intelligence
+  - software engineering artificial
+  - software engineering cybersecurity
   - table contents author
   - digital sovereignty china
   - domain adaptation
@@ -256,12 +262,12 @@ key_phrases:
   - orchestration mcp a2a
   - xai evaluation
   - augmented generation
-  - chain security
+  - engineering cybersecurity software
   - engineering lessons
   - evidence review
+  - keyless signing
   - retrieval augmented
   - retrieval augmented generation
-  - supply chain security
   - appendix appendix
   - appendix appendix table
   - contents citability
@@ -272,19 +278,24 @@ key_phrases:
   - medical imaging
   - open challenges
   - platform engineering
-  - software engineering artificial
   - table contents citability
   - technical appendix appendix
   - vector machine benchmark
   - xai deployment
+  - attack vectors
   - augmented generation large
   - causal shap
   - generation large
   - generation large language
+  - learning software
+  - learning software engineering
+  - machine learning software
   - agentic orchestration
   - attribution methods
   - author credibility corpus
   - coffman conditions
+  - conclusion technical
+  - conclusion technical appendix
   - credibility corpus
   - credibility corpus reviewed
   - governance controls
@@ -296,171 +307,157 @@ key_phrases:
   - adaptation deep
   - concept-based xai
   - conceptual challenges
+  - continuous compliance
   - domain adaptation deep
   - exact computation
   - explanation methods
   - governance structures
   - machine deployment
   - practical guidance
+  - transparency log
   - vector machine deployment
-  - xai practice
-  - attribution xai
-  - authoritative reference
-  - authoritative reference set
-  - corpus reviewed citability
-  - evidence maturity map
-  - few-shot learning
-  - governance data
-  - implementation playbook
-  - introduction vocabulary
-  - language processing retrieval
-  - maturity map
-  - processing retrieval
 catchwords:
-  - governance
-  - attribution
   - engineering
   - machine
+  - governance
+  - attribution
   - learning
   - evaluation
   - deployment
+  - model
+  - software
+  - supply
   - artificial
   - intelligence
-  - model
   - technical
+  - chain
+  - evidence
   - practical
   - lightning
-  - network
-  - questions
   - production
   - appendix
-  - evidence
-  - implementation
+  - questions
+  - network
   - architecture
+  - implementation
   - feature
   - methods
+  - practice
+  - retrieval
+  - security
   - support
   - provenance
   - review
   - language
-  - practice
-  - retrieval
   - vector
-  - supply
   - systems
+  - cryptography
   - definitions
-  - chain
   - cross-border
   - teams
-  - cryptography
   - author
   - domain
+  - post-quantum
   - metrics
+  - controls
   - credibility
   - literature
-  - causal
-  - controls
+  - attack
   - papers
+  - causal
+  - agentic
+  - lessons
   - table
   - cloud
+  - design
   - guide
   - contents
-  - lessons
+  - cybersecurity
+  - foundations
   - snapshot
   - large
-  - security
+  - trust
   - benchmark
   - corpus
+  - introduction
   - micropayments
-  - design
+  - compliance
   - explainability
   - limits
-  - software
-  - post-quantum
+  - signing
   - quantum
   - china
   - citability
   - deadlock
-  - introduction
   - synthesis
   - failure
-  - foundations
   - interpretability
+  - series
   - boundaries
-  - cybersecurity
   - explanation
-  - trust
   - orchestration
   - reference
   - agent
+  - conclusion
   - digital
   - protocol
   - challenges
   - generation
-  - agentic
   - axios
   - blockchain
+  - hybrid
   - legal
-  - series
-  - scope
-  - sovereignty
-  - conclusion
-  - explainable
+  - lifecycle
   - framework
   - first
+  - scope
+  - sovereignty
+  - explainable
+  - inference
   - maturity
   - migration
   - platform
+  - analysis
   - applications
+  - applied
   - glossary
   - guidance
+  - operational
   - regulatory
   - theory
   - tuning
-  - hybrid
+  - conditions
+  - problem
   - representation
-  - attack
+  - frequently
   - healthcare
-  - operational
+  - pipeline
   - selection
   - standards
   - access
-  - analysis
   - calibration
   - critical
-  - inference
-  - knowledge
-  - problem
-  - quality
-  - context
-  - frequently
   - infrastructure
+  - knowledge
+  - quality
+  - asked
+  - context
+  - graph
   - patterns
   - strategy
-  - compliance
   - monitoring
   - processing
   - readiness
-  - asked
   - conceptual
   - decision
+  - enterprise
+  - management
   - requirements
   - alignment
   - beyond
   - clustering
   - integration
   - medical
-  - natural
-  - payments
-  - playbook
-  - reliability
-  - resource
-  - adaptation
-  - critique
-  - current
-  - enterprise
-  - exact
-  - fragmentation
 catchphrases:
   - technical appendix
   - citability snapshot
@@ -469,6 +466,8 @@ catchphrases:
   - authoritative reference set
   - evidence maturity map
   - common questions
+  - discipline note
+  - status notes
   - terminology definitions
   - agent card
   - agent manifest
@@ -560,148 +559,153 @@ catchphrases:
   - interpretation limits
   - jurisdiction map
   - jurisdiction note
-  - lattice-based cryptography
-  - layer 1 orchestrator service
 search_words:
+  - engineering
   - xai
+  - machine
   - governance
   - attribution
-  - engineering
-  - machine
   - learning
   - evaluation
   - deployment
+  - model
   - rag
+  - software
+  - supply
   - artificial
   - intelligence
-  - model
   - technical
+  - chain
+  - evidence
   - practical
   - lightning
-  - network
-  - questions
-  - data
   - production
   - appendix
-  - evidence
-  - implementation
+  - questions
+  - data
+  - network
   - architecture
+  - implementation
   - feature
   - methods
+  - practice
+  - retrieval
+  - security
   - support
   - provenance
   - review
   - language
-  - practice
-  - retrieval
-  - vector
   - a2a
-  - svm
-  - mcp
-  - supply
+  - vector
   - systems
+  - mcp
+  - cryptography
+  - svm
   - definitions
-  - chain
   - cross-border
   - teams
-  - cryptography
   - acp
   - author
   - domain
+  - post-quantum
+  - llm
   - metrics
+  - controls
   - credibility
   - literature
-  - causal
-  - controls
-  - pqc
+  - attack
+  - open
   - papers
+  - causal
+  - pqc
+  - agentic
+  - lessons
   - table
   - cloud
+  - design
   - guide
   - contents
-  - lessons
+  - cybersecurity
+  - foundations
   - snapshot
   - large
-  - open
-  - security
+  - trust
   - benchmark
   - corpus
+  - introduction
   - micropayments
-  - design
+  - compliance
   - explainability
   - limits
-  - software
-  - post-quantum
+  - signing
   - quantum
   - china
   - citability
   - deadlock
-  - introduction
   - synthesis
   - failure
-  - foundations
   - interpretability
+  - series
   - boundaries
-  - cybersecurity
   - explanation
-  - trust
   - orchestration
   - reference
-  - agent
-  - digital
-  - protocol
-  - challenges
-  - generation
-  - llm
-  - artificial intelligence
   - machine learning
-  - lightning network
-  - support vector
-  - support vector machine
-  - vector machine
+  - artificial intelligence
   - supply chain
   - artificial intelligence machine
   - intelligence machine
   - intelligence machine learning
+  - lightning network
+  - support vector
+  - support vector machine
+  - vector machine
+  - software engineering
   - author credibility
-  - a2a acp
   - mcp a2a
+  - a2a acp
   - feature attribution
   - mcp a2a acp
   - table contents
   - large language
-  - appendix table
-  - appendix table contents
-  - citability snapshot
-  - implementation guide
-  - technical appendix
-  - post-quantum cryptography
   - learning artificial
   - learning artificial intelligence
   - machine learning artificial
+  - appendix table
+  - appendix table contents
+  - technical appendix
+  - post-quantum cryptography
+  - citability snapshot
+  - implementation guide
   - engineering governance
+  - software supply
   - data provenance
   - lightning network implementation
   - network implementation
+  - software supply chain
   - digital sovereignty
   - network cross-border
   - network implementation guide
   - lightning network cross-border
-  - software engineering
+  - chain attack
+  - supply chain attack
   - cross-border micropayments
   - axios npm
+  - chain security
   - language models
   - large language models
-  - network cross-border micropayments
-  - representation learning
-  - technical definitions
+  - supply chain security
   - asked questions
-  - chain attack
+  - engineering cybersecurity
   - frequently asked
   - frequently asked questions
+  - network cross-border micropayments
+  - engineering artificial
+  - engineering artificial intelligence
+  - representation learning
+  - technical definitions
   - npm supply
   - npm supply chain
-  - supply chain attack
   - appendix author
   - appendix author credibility
   - author credibility appendix
@@ -714,15 +718,8 @@ search_words:
   - technical appendix author
   - domain applications
   - evaluation metrics
-  - artificial intelligence artificial
   - contents author
   - contents author credibility
-  - engineering artificial
-  - engineering artificial intelligence
-  - evaluation frameworks
-  - intelligence artificial
-  - intelligence artificial intelligence
-  - table contents author
 global_questions:
   - question: How do I handle documents that update frequently in a RAG system?
     answer: "Implement incremental indexing: detect changed documents, re-chunk and re-embed only the modified portions, and update the vector store. the survey of generative retrieval by Li et al. includes useful patterns for continual learning on dynamic corpora that apply to traditional RAG indexing as well."
@@ -912,6 +909,8 @@ global_questions:
     answer: "Distractor contamination: retrieving documents that are semantically similar to the query but do not contain the correct answer. Cuconasu et al. show that a single distractor can reduce accuracy by 25%, and this is more harmful than completely random noise because the generator treats high-scoring but misleading documents as authoritative. This evidence comes from NQ-open at small model scales; the effect at larger scales is plausible but untested."
   - question: What regulatory challenges does the XAI 2.0 manifesto identify?
     answer: 'The regulatory dimension runs through several of the nine categories rather than forming a single cluster. The right to be forgotten (problem 27) questions how explainable and auditable systems can also honour data erasure. The evaluation framework (problem 11) is what would make explanations auditable at scale. The power imbalance between individuals and companies (problem 28) raises human rights and participative design arguments that connect XAI to regulation. These problems are urgent because regulatory timelines are shortening while technical standards remain fluid. <details markdown="1" class="appendix-callout group"> <summary>Appendix: Source Material</summary>'
+  - question: What role do risk indicators play in a zero-trust compliance policy?
+    answer: Risk indicators stop the policy from being a single blunt switch. A never-trust-always-verify architecture is still a decision procedure, and grace periods plus criticality scoring turn that procedure into a graded response rather than an all-or-nothing block. This is what keeps continuous compliance deployable in production, because it prices the trade-off between availability and security instead of pretending it does not exist.
   - question: What role do taxonomies play in structuring XAI research and practice?
     answer: 'Taxonomies serve three functions: they create shared vocabulary for cross-study comparison, they identify gaps where no methods exist for important categories, and they help practitioners select appropriate methods for their specific task. Chazette et al. demonstrate this through a knowledge catalogue that organises the factors shaping explainability requirements and connects them to usage context and explanation goals. <details markdown="1" class="appendix-callout group"> <summary>Appendix: Source Material</summary>'
   - question: Why do AI access restrictions often change faster than other SaaS restrictions for digital sovereignty China?
@@ -982,6 +981,8 @@ global_questions:
     answer: "PROV-ML, proposed by Souza et al., extends the base [W3C PROV](https://www.w3.org/TR/prov-overview/) model with [W3C ML Schema](https://www.w3.org/TR/ml-schema/) vocabulary to capture ML-specific concepts: hyperparameters, training runs, dataset versions, and evaluation metrics. It maps four user personas (domain scientists, computational engineers, ML engineers, and provenance specialists) to provenance query patterns. The PROV-ML design was evaluated in an oil and gas seismic classification pipeline using 48 GPUs through the ProvLake system. Whether it generalizes beyond that domain is an open question the paper does not demonstrate. It claims scoped guidance from three papers. It does not claim field-wide representativeness or comparative superiority over the broader lineage tooling ecosystem."
   - question: How does Transformer self-attention work in production-relevant terms for large language models?
     answer: "The [Transformer](<https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)>) computes attention by mapping each position to three vectors: query (Q), key (K), and value (V). Attention scores are computed as softmax(QKᵀ/√d), where d is the dimension of the key vectors. This produces a weighted combination of value vectors, effectively letting each position attend to every other position simultaneously. Multi-head attention runs this operation in parallel across several representation subspaces, letting the model capture different relationship types at the same time. The result is summed and projected back to the dimensional space of the model."
+  - question: How does continuous compliance differ from pipeline-time compliance?
+    answer: Pipeline-time compliance checks an artifact once at build and then stops, which leaves the deployed workload inside the gap the moment the runtime state drifts. Continuous compliance places the identity-based verification onto the running workload itself, using SPIRE to issue and refresh workload identity so that posture can be rechecked after deployment. The Gama 2026 extension adds grace periods and risk indicators so that a non-conforming workload is given a bounded time window or a criticality-based tolerance instead of an immediate binary decision.
   - question: How does deadlock theory map to software supply chain security failures?
     answer: Supply chain attacks exhibit all four Coffman conditions at the credential and dependency level. A maintainer credential enforces mutual exclusion over package publication; a compromised developer holds a build environment while waiting for npm packages (hold and wait); once a malicious version is downloaded it cannot be universally recalled (no preemption); and transitive dependency cycles create circular wait across build graphs. The [Axios npm supply chain compromise](/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience) article reconstructs a confirmed March 2026 incident through this exact framework.
   - question: How does hardware acceleration change PQC deployment decisions?
@@ -1048,10 +1049,14 @@ global_questions:
     answer: Priority aging is a scheduling technique in which the effective priority of a waiting thread increases incrementally over time, ensuring low-priority requests are eventually scheduled even when higher-priority requests arrive continuously. It prevents indefinite starvation while preserving responsiveness for high-priority work. Applied to LLM inference queues, priority aging ensures that batch offline jobs are not permanently blocked by interactive user requests, which is the scenario described in the [LLM Inference and Token Schedulers](#llm-inference-and-token-schedulers-priority-starvation) section.
   - question: What is the deployment gap that Bhatt et al. identify in XAI practice?
     answer: Bhatt et al. interviewed practitioners across organisations that do deploy explainability and found that the majority of deployments primarily serve internal ML engineers debugging models, rather than affected stakeholders. Their conclusion lists specific limitations of current explanations for end-user use, including the need for domain experts to evaluate them, the risk of spurious correlations, and the latency of computing explanations in real time. This gap between research narratives and deployment practice limits the practical impact of XAI.
+  - question: What is the difference between an SBOM and an SBOM graph?
+    answer: An SBOM is a flat nested inventory of components with identity and version data. An SBOM graph converts that inventory into a heterogeneous graph in which components, dependencies, and vulnerabilities are typed nodes that can carry multiple relationship kinds. The graph formulation is what allows attack chains to be predicted as link prediction over the heterogeneous graph, which is the concrete contribution of the Baird and Moin approach.
   - question: What makes post-quantum cryptography different from quantum cryptography?
     answer: They solve different problems with different tools. Post-quantum cryptography uses classical algorithms, running on ordinary hardware, designed to resist attacks from quantum computers. Quantum cryptography (typically QKD) uses the physical properties of photons to distribute keys, which requires specialised quantum hardware and fibre-optic channels. PQC is about upgrading the maths; QKD is about changing the physics. Most organisations will deploy PQC. Very few will deploy QKD.
   - question: What should teams prototype first when protocol boundaries are still unclear for MCP vs A2A vs ACP?
     answer: Prototype the smallest honest boundary. Start with MCP if you are exposing a concrete capability. Start with A2A if you are delegating work to another service that owns its own lifecycle. Start with ACP-style REST seams if the first integration must pass through existing API gateways or partner-facing HTTP contracts. If the boundary is still ambiguous, model the autonomy and integration constraints of the remote side before choosing a primary protocol.
+  - question: What the Evaluation Measured?
+    answer: The evaluation used approximately 10,000 component entries across synthetic agentic AI workloads ranging from 50 to 5,000 components, incorporating OSV, GitHub Advisory, KEV, and EPSS datasets. The headline results are bounded but specific. The combined AIBOM-and-telemetry pipeline achieved an F1-score of 0.93, with precision 0.96 and recall 0.92, and reduced false positives by up to 42 percent relative to static SBOM-CVE matching without runtime validation. Extending the bill of materials to AI-specific artifacts altered exploitability outcomes in 31 percent of AI-specific artifact cases. The execution-bound reasoning also changed prioritisation. A hybrid risk tiering rule combining observed activation with EPSS probability and KEV presence reduced the set of high-priority alerts to a focused subset of approximately 18 percent of matched vulnerabilities, and an expert triage panel found the high-priority items materially more actionable than low-priority ones in 86 percent of sampled cases.
   - question: When is it safe to scale beyond one pilot corridor for lightning network implementation guide?
     answer: "Scale only after reliability, intervention rate, and reconciliation time stay within agreed thresholds for sustained pilot windows. One good week proves nothing. Require repeated evidence under mixed conditions: peak periods, controlled faults, partial-liquidity scenarios. Only then should additional corridors or higher transaction volumes come into scope."
   - question: Where A2A Is the Better Fit?
@@ -1068,8 +1073,12 @@ global_questions:
     answer: The strongest technical depth appears in Vaswani et al., Brown et al., and the Stanford, MIT, StatQuest, and Yannic Kilcher materials, because they explain objective functions, attention mechanics, and scaling behavior with explicit procedural detail. the distillation survey of Yang et al. and the federated foundation model survey of Ren et al. add the deployment and compression dimensions.
   - question: Which role accelerates reliability fastest in early teams for lightning network implementation guide?
     answer: In practice, a policy-and-reliability engineer often delivers outsized quality gains in early teams. This role connects payment logic, risk controls, and observability into one operating loop, which means quicker root-cause discovery, cleaner rollback design, and stronger evidence for go or no-go pilot decisions.
+  - question: Why Classical Supply Chain Tooling Is Not Enough for Models?
+    answer: The layered framework paper starts from a precise boundary claim. Established mechanisms such as Sigstore, in-toto, SLSA, and TUF provide strong guarantees for artifact integrity and provenance, but they were designed for conventional software artifacts and do not fully capture AI-specific lifecycle threats such as data poisoning, training pipeline compromise, and retrieval-augmented prompt manipulation. The failure is structural, not incidental. Unlike traditional packages, an LLM system is not produced from source code alone. Sigstore does not natively address dataset provenance, fine-tuning semantics, inference abuse, or prompt injection. In-toto provides a strong provenance model for expressing which steps were performed, by whom, and in what order, which is highly relevant to the training layer, but it remains a general framework. The guarantee stops at the artifact boundary, and in an LLM lifecycle the threats begin before artifacts exist and continue after they are deployed. There is also a cryptographic horizon. Most artifact signing infrastructure relies on classical algorithms such as RSA or ECDSA. These are secure today, but they may be threatened by future large-scale quantum computers, which is why NIST standardised ML-DSA as a post-quantum signature scheme.
   - question: Why RF Wins Here Without Invalidating SVM Theory?
     answer: Nothing here contradicts large-margin theory. Tree ensembles absorb overlap-heavy feature neighbourhoods more readily in this dataset; that is an empirical observation about data geometry, not a theoretical refutation. SVM remains coherent and operationally useful. Just not the strongest fit for these corridors in this run. Model selection is therefore conditional, which is the boring-but-correct conclusion that benchmarking should produce. Reach for SVM when you need explicit boundary control and disciplined regularisation. Reach for RF when local overlap persists despite careful kernel tuning. Keep both in the candidate pool until class-level risk criteria are satisfied.
+  - question: Why does single-CVE thinking fail to capture real supply chain risk?
+    answer: "The evidence graph view treats dependency relationships as the carrier of risk, so a single vulnerability is understood through the attack chains it can contribute to. The ProxyLogon chain in the Baird and Moin study shows how four Microsoft Exchange vulnerabilities were chained into a pre-authentication path that cascaded across components. The ablation result makes the point measurable: removing the dependency edges collapses recall on has-any-CVE prediction to zero, which means the structure of the graph is doing the predictive work, not the individual component inventories."
   - question: Why does the XAI 2.0 manifesto call for interdisciplinary infrastructure?
     answer: The manifesto argues that no single discipline can address all 28 problems because explanation is simultaneously a mathematical, psychological, and sociological phenomenon. Interdisciplinary infrastructure means shared experimental platforms, standardised evaluation protocols that work across disciplines, funding mechanisms that reward collaboration, and publication venues that accept hybrid contributions spanning computer science, cognitive science, and law.
   - question: Do quantum semantic communication methods currently outperform classical systems in production for representation learning?
@@ -1102,6 +1111,8 @@ global_questions:
     answer: Energy grid infrastructure. The combination of 30-year-plus operational lifetimes, cascading failure potential, and legacy SCADA authentication makes the case almost self-evident. Encrypted SCADA traffic captured today may well be decryptable within the operational lifespan of grid equipment being installed right now. Mosca's inequality is already in the red for this sector.
   - question: Which threat groups are linked to the axios compromise by major vendors for axios npm supply chain attack?
     answer: Microsoft attributes the activity to Sapphire Sleet, Sophos maps related activity to NICKEL GLADSTONE, and Mandiant tracks overlapping tradecraft under UNC1069.
+  - question: Why Signing Is the Integrity Backstop?
+    answer: If a component can be replaced or tampered with at any stage, then a mechanism is needed to bind a software artifact to a verifiable identity. That mechanism is signing. The research agenda integrates signing into its account of security frameworks and technologies along with SLSA provenance levels and SBOM practice. The historical obstacle to signing was not technical capability but usability and key management. Traditional code signing requires signers to create, store, protect, and rotate a long-lived private key. The consequence is visible in adoption figures. A 2020 analysis of RubyGems found that only 1.6 percent of the latest package versions were signed, and a 2016 analysis of PyPI found that only 4 percent of projects even listed a signature and only 0.07 percent of users downloaded those signatures for verification. Sigstore was designed to remove that barrier. Its stated motivation is to bring the security guarantees of signing to a wide user base by eliminating the key management burden that caused earlier systems to fail adoption.
   - question: Why Start with Theory Before Benchmarks?
     answer: "Benchmarks tell you who won. Theory tells you why. More importantly, theory tells you whether the victory transfers to your data, your constraints, your deployment window. A leaderboard number is an endpoint; margin control, loss penalties, and kernel-induced geometry are the mechanism. The core idea is deceptively compact: SVM is structural risk minimization with the margin as capacity knob. Soft-margin optimization quantifies the tension between fitting training noise and preserving a boundary that survives perturbation. Skip this framing and you get lottery-ticket tuning, grid search without a thesis, parameter sweeps that find something but explain nothing. Convexity changes everything. Classical SVM training converges to a global optimum, which means score differences reflect data geometry and model assumptions, never optimizer initialization luck. Compare that with deep networks, where path dependence can dominate results and two identical training runs on identical data may disagree."
   - question: Why are ChatGPT and related AI services restricted in mainland China contexts for digital sovereignty China?
@@ -1114,6 +1125,8 @@ global_questions:
     answer: SIKE fell to a classical mathematical attack that exploited torsion-point information in the SIDH protocol, building on a theorem published by Kani in 1997. Rainbow was broken by Beullens' key-recovery attack, also entirely classical. Both had survived multiple rounds of NIST evaluation. The lesson is not that NIST's process failed; it is that PQC algorithms sit on mathematical foundations that have received far less adversarial attention than RSA or ECC. Expect more surprises. Design for algorithm replacement.
   - question: Can I use this evidence review as the sole basis for my RAG architecture?
     answer: No. This review is strong for identifying retrieval pipeline priorities, evaluation strategies, and failure modes, but its empirical depth is concentrated in a single study (Cuconasu et al.) using one dataset at small model scales. Final architecture decisions should follow measured outcomes from your own domain-specific evaluation, including retrieval quality, generation faithfulness, and domain safety requirements. Use this synthesis as a starting map, not a destination.
+  - question: Can continuous compliance be operated without unacceptable latency?
+    answer: "The measured enforcement architecture re-verified identity and rechecked posture on a twice-per-hour cadence within a dependency check pipeline running on a 16 GiB and 4 vCPU envelope, with per-attestation latency under six seconds. The figures describe the authors experimental context, so the claim here is bounded: the demonstrated envelope is operationally plausible, not a guarantee for other identity providers or monitoring tools."
   - question: Can fully autonomous micropayments be deployed in regulated contexts for lightning network implementation guide?
     answer: Possibly, but this remains an open question with significant jurisdiction-dependent constraints. Any such deployment would require tightly scoped controls, endpoint hardening, delegated-signing safeguards, accountable oversight, and clear incident escalation paths. Before scaling, confirm licensing and perimeter analysis plus mandatory-law constraints in each target jurisdiction, including payment-services and virtual-asset treatment, AML/CFT controls such as KYC, transaction monitoring, and suspicious activity reporting where required, and sanctions or export-control screening obligations. Full autonomy without these guardrails risks producing fast failure loops and weak audit outcomes. No broadly validated production precedent exists at the time of writing.
   - question: Do these protocol recommendations transfer uniformly across UK, EU, US, Canada, Hong Kong, China, and Australia for MCP vs A2A vs ACP?
@@ -1155,13 +1168,14 @@ posts:
       - supply
       - axios
       - npm
-      - attack
       - engineering
+      - attack
       - compromise
       - incident
       - trust
       - security
       - social
+      - software
       - lessons
       - provenance
       - credential
@@ -1171,7 +1185,6 @@ posts:
       - cybersecurity
       - malicious
       - resilient
-      - software
       - unc1069
       - appendix
       - attribution
@@ -1190,43 +1203,44 @@ posts:
       - supply chain security
       - social engineering
       - incident response
-      - axios npm supply chain attack
+      - software engineering
     key_phrases:
       - supply chain
       - axios npm
       - npm supply
       - npm supply chain
-      - axios npm supply
-      - chain attack
       - supply chain attack
+      - chain attack
+      - axios npm supply
       - social engineering
       - trust provenance
       - incident response
-      - supply chain security
       - chain security
-      - engineering lessons
+      - supply chain security
       - supply chain compromise
       - chain compromise
-      - chain security social
-      - security social engineering
-      - social engineering incident
-      - engineering incident response
-      - incident response trust
+      - engineering lessons
       - response trust provenance
+      - incident response trust
+      - engineering incident response
+      - social engineering incident
+      - security social engineering
+      - chain security social
       - software supply
-      - software supply chain
       - response trust
+      - engineering incident
     catchwords:
       - chain
       - supply
       - axios
-      - attack
       - engineering
+      - attack
       - compromise
       - incident
       - trust
       - security
       - social
+      - software
       - lessons
       - provenance
       - credential
@@ -1236,7 +1250,6 @@ posts:
       - cybersecurity
       - malicious
       - resilient
-      - software
       - unc1069
       - appendix
       - attribution
@@ -1250,32 +1263,32 @@ posts:
       - supply
       - axios
       - npm
-      - attack
       - engineering
+      - attack
       - compromise
       - incident
       - trust
       - security
       - social
+      - software
       - lessons
       - provenance
       - credential
       - response
       - dependency
       - versions
-      - cybersecurity
       - supply chain
       - axios npm
       - npm supply
       - npm supply chain
-      - axios npm supply
-      - chain attack
       - supply chain attack
+      - chain attack
+      - axios npm supply
       - social engineering
       - trust provenance
       - incident response
-      - supply chain security
       - chain security
+      - supply chain security
     questions:
       - question: What happened in the 2026 axios npm supply chain compromise for axios npm supply chain attack?
         answer: Attackers published malicious axios versions on npm that introduced `plain-crypto-js@4.2.1`, which executed install-time malware delivery across multiple operating systems.
@@ -1303,8 +1316,8 @@ posts:
       - cloud
       - governance
       - engineering
-      - access
       - platform
+      - access
       - data
       - compliance
       - lessons
@@ -1341,27 +1354,27 @@ posts:
       - digital sovereignty
       - digital sovereignty china
       - sovereignty china
+      - platform engineering
       - data residency
       - engineering lessons
-      - governance digital
-      - digital sovereignty cloud
       - sovereignty cloud
-      - risk management governance
+      - digital sovereignty cloud
+      - governance data residency
       - engineering risk management
       - platform engineering risk
-      - management governance data
-      - governance data residency
       - compliance platform engineering
       - cloud compliance platform
+      - management governance data
+      - risk management governance
+      - sovereignty cloud compliance
       - governance data
       - management governance
       - risk management
       - engineering risk
-      - platform engineering
       - compliance platform
       - cloud compliance
-      - digital governance
-      - china cloud
+      - engineering digital
+      - governance platform
     catchwords:
       - china
       - digital
@@ -1369,8 +1382,8 @@ posts:
       - cloud
       - governance
       - engineering
-      - access
       - platform
+      - access
       - compliance
       - lessons
       - residency
@@ -1398,8 +1411,8 @@ posts:
       - cloud
       - governance
       - engineering
-      - access
       - platform
+      - access
       - data
       - compliance
       - lessons
@@ -1413,15 +1426,15 @@ posts:
       - digital sovereignty
       - digital sovereignty china
       - sovereignty china
+      - platform engineering
       - data residency
       - engineering lessons
-      - governance digital
-      - digital sovereignty cloud
       - sovereignty cloud
-      - risk management governance
+      - digital sovereignty cloud
+      - governance data residency
       - engineering risk management
       - platform engineering risk
-      - management governance data
+      - compliance platform engineering
     questions:
       - question: How does Azure China under 21Vianet differ operationally from global Azure for digital sovereignty China?
         answer: Azure is available in China but operated by [21Vianet](https://www.21vianet.com/) under a licensing arrangement with Microsoft, not by Microsoft directly. Data stays within the borders of China and the legal operator is a Chinese entity, satisfying data-residency requirements. This means feature parity, support pathways, billing structures, and service-level agreements can differ from global Azure. The operating model has been in place since Microsoft announced general availability through 21Vianet in March 2014.
@@ -1452,6 +1465,7 @@ posts:
       - llm
       - transformer
       - governance
+      - learning
       - alignment
       - frontier
       - practice
@@ -1461,11 +1475,11 @@ posts:
       - gpt-3
       - federated
       - hallucination
-      - learning
       - lessons
       - artificial
       - attention
       - intelligence
+      - machine
       - technical
       - appendix
       - boundary
@@ -1479,12 +1493,11 @@ posts:
       - practical
       - recurring
       - synthesis
-      - teams
       - large language model
       - prompt engineering
       - ai governance
       - artificial intelligence
-      - llms explained
+      - machine learning
     key_phrases:
       - large language
       - language models
@@ -1492,22 +1505,22 @@ posts:
       - engineering governance
       - prompt engineering
       - knowledge distillation
-      - artificial intelligence
       - language model transformer
-      - model transformer
-      - transformer prompt
-      - model transformer prompt
-      - transformer prompt engineering
+      - intelligence machine learning
+      - artificial intelligence machine
       - prompt engineering governance
-      - intelligence artificial intelligence
-      - artificial intelligence artificial
-      - governance trustworthy
+      - model transformer prompt
+      - transformer prompt
+      - model transformer
+      - artificial intelligence
+      - transformer prompt engineering
+      - machine learning
+      - intelligence machine
       - lessons engineering
       - recurring themes
       - engineering governance large
       - governance large language
-      - federated learning
-      - lessons engineering governance
+      - learning artificial intelligence
     catchwords:
       - language
       - large
@@ -1515,6 +1528,7 @@ posts:
       - engineering
       - transformer
       - governance
+      - learning
       - alignment
       - frontier
       - practice
@@ -1524,11 +1538,11 @@ posts:
       - gpt-3
       - federated
       - hallucination
-      - learning
       - lessons
       - artificial
       - attention
       - intelligence
+      - machine
       - technical
       - appendix
       - boundary
@@ -1536,7 +1550,6 @@ posts:
       - definitions
       - design
       - evaluation
-      - limits
     search_words:
       - language
       - large
@@ -1545,6 +1558,7 @@ posts:
       - llm
       - transformer
       - governance
+      - learning
       - alignment
       - frontier
       - practice
@@ -1554,17 +1568,16 @@ posts:
       - gpt-3
       - federated
       - hallucination
-      - learning
       - large language
       - language models
       - large language models
       - engineering governance
       - prompt engineering
       - knowledge distillation
-      - artificial intelligence
       - language model transformer
-      - model transformer
-      - transformer prompt
+      - intelligence machine learning
+      - artificial intelligence machine
+      - prompt engineering governance
     questions:
       - question: What is a large language model in practical engineering terms for large language models?
         answer: A large language model (LLM) is a neural network trained to predict the next token in a sequence of text. "Large" refers to the parameter count (hundreds of billions for frontier models) and the scale of training data (internet-scale corpora). The key architectural insight, introduced by [Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762) in "Attention Is All You Need," is that self-attention replaces sequential recurrence, allowing parallel computation across all positions in a sequence. This parallelism is what made billion-parameter pretraining tractable.
@@ -1592,10 +1605,10 @@ posts:
     keywords:
       - provenance
       - data
-      - traceability
-      - graph
       - learning
       - machine
+      - traceability
+      - graph
       - governance
       - lineage
       - neural
@@ -1633,32 +1646,33 @@ posts:
     key_phrases:
       - data provenance
       - machine learning
+      - provenance machine
       - data provenance machine
       - provenance machine learning
-      - provenance machine
       - graph neural
       - traceability graph
-      - learning traceability graph
-      - machine learning traceability
       - learning traceability
-      - graph methods
+      - machine learning traceability
+      - learning traceability graph
       - data lineage
+      - graph methods
+      - artificial intelligence machine
+      - intelligence machine learning
       - traceability graph neural
       - graph neural network
       - neural network reproducibility
       - network reproducibility governance
       - reproducibility governance data
-      - neural networks
       - governance data provenance
-      - governance data
-      - reproducibility governance
-      - network reproducibility
+      - neural networks
+      - governance lessons
+      - artificial intelligence
     catchwords:
       - provenance
-      - traceability
-      - graph
       - learning
       - machine
+      - traceability
+      - graph
       - governance
       - lineage
       - neural
@@ -1685,10 +1699,10 @@ posts:
     search_words:
       - provenance
       - data
-      - traceability
-      - graph
       - learning
       - machine
+      - traceability
+      - graph
       - governance
       - lineage
       - neural
@@ -1703,16 +1717,16 @@ posts:
       - standard
       - data provenance
       - machine learning
+      - provenance machine
       - data provenance machine
       - provenance machine learning
-      - provenance machine
       - graph neural
       - traceability graph
-      - learning traceability graph
-      - machine learning traceability
       - learning traceability
-      - graph methods
+      - machine learning traceability
+      - learning traceability graph
       - data lineage
+      - graph methods
     questions:
       - question: What is data provenance in the machine-learning lifecycle, beyond basic lineage?
         answer: Data provenance in machine learning is the record of where training data originated, how it was cleaned and transformed, which model versions it produced, and which individuals or systems were responsible at each stage. Provenance answers the question "why does this model behave this way?" by tracing outputs back to input data and pipeline decisions. All three papers in this review treat provenance as a lifecycle-design requirement rather than a logging afterthought.
@@ -1754,12 +1768,10 @@ posts:
       - operating
       - theory
       - inference
-      - platform
       - priority
       - design
       - concurrency
       - security
-      - engineering
       - resilience
       - aging
       - distributed
@@ -1768,9 +1780,11 @@ posts:
       - recovery
       - semaphore
       - applied
-      - cybersecurity
       - management
+      - platform
       - thread
+      - appendix
+      - apply
       - resource contention
       - supply chain security
       - cloud fragmentation
@@ -1783,24 +1797,24 @@ posts:
       - llm inference
       - deadlock resource
       - deadlock resource contention
-      - supply chain security
       - chain security
+      - supply chain security
       - cloud fragmentation
-      - mutex semaphore
-      - priority aging
       - deadlock theory
-      - starvation resilience
-      - resilience thread
-      - thread management
-      - management deadlock
-      - contention concurrency supply
-      - concurrency supply chain
-      - theory applied
-      - chain security cloud
-      - deadlock deadlock
-      - security cloud fragmentation
-      - cloud fragmentation scheduling
+      - priority aging
+      - mutex semaphore
+      - thread management deadlock
+      - resilience thread management
+      - starvation resilience thread
+      - scheduling starvation resilience
       - fragmentation scheduling starvation
+      - cloud fragmentation scheduling
+      - security cloud fragmentation
+      - chain security cloud
+      - management deadlock
+      - thread management
+      - resilience thread
+      - starvation resilience
     catchwords:
       - deadlock
       - lesson
@@ -1819,17 +1833,17 @@ posts:
       - operating
       - theory
       - inference
-      - platform
       - priority
       - design
       - concurrency
       - security
-      - engineering
       - resilience
       - aging
       - distributed
       - mutex
       - prevention
+      - recovery
+      - semaphore
     search_words:
       - deadlock
       - lesson
@@ -1855,12 +1869,12 @@ posts:
       - llm inference
       - deadlock resource
       - deadlock resource contention
-      - supply chain security
       - chain security
+      - supply chain security
       - cloud fragmentation
-      - mutex semaphore
-      - priority aging
       - deadlock theory
+      - priority aging
+      - mutex semaphore
     questions:
       - question: What are the four Coffman conditions, and why do they still matter for modern systems for deadlock?
         answer: "Deadlock occurs when, and only when, all four of the following hold simultaneously: mutual exclusion (a resource is held exclusively by one thread), hold and wait (a thread holds one resource while requesting another), no preemption (held resources cannot be forcibly reclaimed), and circular wait (a cycle exists where each thread waits for a resource held by the next). Eliminating any single condition prevents deadlock entirely. The full theoretical foundation and formal definition appear in the [Understanding Deadlock](#understanding-deadlock-mutex-semaphore-and-the-coffman-conditions) section above."
@@ -1882,10 +1896,10 @@ posts:
       - svm
       - support
       - vector
+      - learning
       - kernel
       - practical
       - classification
-      - learning
       - model
       - algorithm
       - tuning
@@ -1923,34 +1937,34 @@ posts:
       - vector machine
       - support vector machine
       - machine learning
-      - kernel support vector
-      - tuning kernel support
-      - model tuning kernel
-      - classification model tuning
-      - learning classification model
-      - machine learning classification
-      - machine machine learning
-      - vector machine machine
-      - kernel support
-      - tuning kernel
       - model tuning
-      - classification model
-      - learning classification
-      - machine machine
-      - margins kernels
+      - tuning kernel
+      - kernel support
+      - artificial intelligence machine
+      - intelligence machine learning
+      - vector machine machine
+      - machine machine learning
+      - machine learning classification
+      - learning classification model
+      - classification model tuning
+      - model tuning kernel
+      - tuning kernel support
+      - kernel support vector
+      - intelligence machine
       - artificial intelligence
+      - margins kernels
+      - machine machine
+      - learning classification
+      - classification model
       - svm strong
-      - strong fit
-      - svm strong fit
-      - algorithm variants
     catchwords:
       - machine
       - support
       - vector
+      - learning
       - kernel
       - practical
       - classification
-      - learning
       - model
       - algorithm
       - tuning
@@ -1977,10 +1991,10 @@ posts:
       - svm
       - support
       - vector
+      - learning
       - kernel
       - practical
       - classification
-      - learning
       - model
       - algorithm
       - tuning
@@ -1994,14 +2008,14 @@ posts:
       - vector machine
       - support vector machine
       - machine learning
-      - kernel support vector
-      - tuning kernel support
-      - model tuning kernel
-      - classification model tuning
-      - learning classification model
-      - machine learning classification
-      - machine machine learning
+      - model tuning
+      - tuning kernel
+      - kernel support
+      - artificial intelligence machine
+      - intelligence machine learning
       - vector machine machine
+      - machine machine learning
+      - machine learning classification
     questions:
       - question: Why Start with Theory Before Benchmarks?
         answer: "Benchmarks tell you who won. Theory tells you why. More importantly, theory tells you whether the victory transfers to your data, your constraints, your deployment window. A leaderboard number is an endpoint; margin control, loss penalties, and kernel-induced geometry are the mechanism. The core idea is deceptively compact: SVM is structural risk minimization with the margin as capacity knob. Soft-margin optimization quantifies the tension between fitting training noise and preserving a boundary that survives perturbation. Skip this framing and you get lottery-ticket tuning, grid search without a thesis, parameter sweeps that find something but explain nothing. Convexity changes everything. Classical SVM training converges to a global optimum, which means score differences reflect data geometry and model assumptions, never optimizer initialization luck. Compare that with deep networks, where path dependence can dominate results and two identical training runs on identical data may disagree."
@@ -2040,6 +2054,7 @@ posts:
       - artificial
       - class-level
       - intelligence
+      - learning
       - accuracy
       - appendix
       - forensics
@@ -2054,7 +2069,6 @@ posts:
       - metrics
       - aggregate
       - alone
-      - analyzes
       - support vector machine
       - confusion matrix
       - model evaluation
@@ -2066,24 +2080,24 @@ posts:
       - machine benchmark
       - vector machine benchmark
       - uci har
-      - confusion matrix
-      - benchmark confusion
-      - uci har support
-      - har support vector
-      - machine benchmark confusion
       - har support
+      - machine benchmark confusion
+      - har support vector
+      - uci har support
+      - benchmark confusion
+      - confusion matrix
       - model evaluation
-      - benchmark confusion matrix
       - confusion matrix model
+      - benchmark confusion matrix
       - matrix model evaluation
+      - intelligence machine learning
+      - artificial intelligence machine
       - model evaluation uci
       - evaluation uci har
       - evaluation uci
-      - artificial intelligence
+      - machine learning
       - matrix model
-      - confusion corridors
-      - pca geometry
-      - error forensics
+      - intelligence machine
     catchwords:
       - benchmark
       - machine
@@ -2102,6 +2116,7 @@ posts:
       - artificial
       - class-level
       - intelligence
+      - learning
       - accuracy
       - appendix
       - forensics
@@ -2112,7 +2127,6 @@ posts:
       - class
       - diagnostics
       - implementation
-      - level
     search_words:
       - benchmark
       - machine
@@ -2138,12 +2152,12 @@ posts:
       - machine benchmark
       - vector machine benchmark
       - uci har
-      - confusion matrix
-      - benchmark confusion
-      - uci har support
-      - har support vector
-      - machine benchmark confusion
       - har support
+      - machine benchmark confusion
+      - har support vector
+      - uci har support
+      - benchmark confusion
+      - confusion matrix
     questions:
       - question: Why RF Wins Here Without Invalidating SVM Theory?
         answer: Nothing here contradicts large-margin theory. Tree ensembles absorb overlap-heavy feature neighbourhoods more readily in this dataset; that is an empirical observation about data geometry, not a theoretical refutation. SVM remains coherent and operationally useful. Just not the strongest fit for these corridors in this run. Model selection is therefore conditional, which is the boring-but-correct conclusion that benchmarking should produce. Reach for SVM when you need explicit boundary control and disciplined regularisation. Reach for RF when local overlap persists despite careful kernel tuning. Keep both in the candidate pool until class-level risk criteria are satisfied.
@@ -2176,8 +2190,11 @@ posts:
       - workflow
       - artificial
       - drift
+      - engineering
       - intelligence
+      - learning
       - quality
+      - software
       - appendix
       - benchmark
       - cadence
@@ -2192,9 +2209,6 @@ posts:
       - author
       - baseline
       - behavior
-      - best
-      - beyond
-      - blueprint
       - support vector machine
       - model tuning
       - model governance
@@ -2208,9 +2222,13 @@ posts:
       - model governance
       - deployment model
       - deployment model governance
-      - monitoring support
+      - artificial intelligence
       - tuning workflow
       - deployment svm
+      - artificial intelligence machine
+      - intelligence machine learning
+      - machine learning software
+      - learning software engineering
       - vector machine model
       - machine model tuning
       - model tuning deployment
@@ -2219,11 +2237,7 @@ posts:
       - governance monitoring support
       - monitoring support vector
       - machine deployment svm
-      - governance monitoring
-      - artificial intelligence
-      - deployment governance
-      - machine model
-      - model tuning
+      - intelligence machine
     catchwords:
       - deployment
       - machine
@@ -2241,8 +2255,11 @@ posts:
       - workflow
       - artificial
       - drift
+      - engineering
       - intelligence
+      - learning
       - quality
+      - software
       - appendix
       - benchmark
       - cadence
@@ -2250,9 +2267,6 @@ posts:
       - definitions
       - playbook
       - retraining
-      - selection
-      - snapshot
-      - series
     search_words:
       - deployment
       - machine
@@ -2271,7 +2285,7 @@ posts:
       - workflow
       - artificial
       - drift
-      - intelligence
+      - engineering
       - support vector
       - vector machine
       - support vector machine
@@ -2280,10 +2294,10 @@ posts:
       - model governance
       - deployment model
       - deployment model governance
-      - monitoring support
+      - artificial intelligence
       - tuning workflow
       - deployment svm
-      - vector machine model
+      - artificial intelligence machine
     questions:
       - question: What is the highest-impact control in SVM deployment governance for support vector machine deployment?
         answer: Class-level monitoring with confusion-corridor tracking, because it reveals high-impact degradation earlier than aggregate accuracy.
@@ -2618,10 +2632,12 @@ posts:
       - papers
       - space
       - unsupervised
+      - applied
       - artificial
       - computing
       - discriminability
       - intelligence
+      - mathematics
       - method
       - multi-kernel
       - alignment
@@ -2631,8 +2647,6 @@ posts:
       - evidence
       - geometry
       - lessons
-      - performance
-      - practitioners
       - representation learning
       - quantum computing
       - semantic communication
@@ -2658,12 +2672,12 @@ posts:
       - qnlp kernel method
       - artificial intelligence machine
       - intelligence machine learning
-      - representation learning quantum
+      - machine learning applied
       - space qnlp kernel
-      - learning quantum computing
-      - quantum computing semantic
+      - learning applied mathematics
+      - representation learning quantum
       - hilbert space qnlp
-      - computing semantic communication
+      - learning quantum computing
     catchwords:
       - learning
       - representation
@@ -2682,17 +2696,17 @@ posts:
       - papers
       - space
       - unsupervised
+      - applied
       - artificial
       - computing
       - discriminability
       - intelligence
+      - mathematics
       - method
       - multi-kernel
       - alignment
       - appendix
       - common
-      - critical
-      - evidence
     search_words:
       - learning
       - representation
@@ -2761,10 +2775,8 @@ posts:
       - identity
       - iot
       - technical
-      - artificial
       - commerce
       - fintech
-      - intelligence
       - appendix
       - controls
       - corpus
@@ -2774,12 +2786,14 @@ posts:
       - graduated
       - guidance
       - infrastructure
+      - priorities
+      - production
       - lightning network
       - cross-border payments
       - agentic ai
       - literature review
-      - artificial intelligence
       - lightning network cross-border micropayments
+      - agentic commerce payments
     key_phrases:
       - lightning network
       - network cross-border
@@ -2788,23 +2802,23 @@ posts:
       - network cross-border micropayments
       - literature review
       - micropayments agentic
-      - blockchain artificial intelligence
-      - network cross-border payments
-      - cross-border payments micropayments
-      - payments micropayments agentic
       - micropayments agentic blockchain
       - agentic blockchain literature
       - blockchain literature review
+      - payments micropayments agentic
+      - cross-border payments micropayments
       - blockchain literature
       - agentic blockchain
-      - fintech blockchain artificial
       - payments micropayments
       - cross-border payments
-      - artificial intelligence
-      - blockchain artificial
+      - network cross-border payments
       - fintech blockchain
       - agentic commerce
+      - evidence review
       - micropayments evidence
+      - blockchain fintech blockchain
+      - fintech blockchain fintech
+      - risk controls
     catchwords:
       - lightning
       - micropayments
@@ -2826,14 +2840,14 @@ posts:
       - governance
       - identity
       - technical
-      - artificial
       - commerce
       - fintech
-      - intelligence
       - appendix
       - controls
       - corpus
       - decisions
+      - definitions
+      - early
     search_words:
       - lightning
       - micropayments
@@ -2859,11 +2873,11 @@ posts:
       - network cross-border micropayments
       - literature review
       - micropayments agentic
-      - blockchain artificial intelligence
-      - network cross-border payments
-      - cross-border payments micropayments
-      - payments micropayments agentic
       - micropayments agentic blockchain
+      - agentic blockchain literature
+      - blockchain literature review
+      - payments micropayments agentic
+      - cross-border payments micropayments
     questions:
       - question: What is a realistic first milestone for a Lightning micropayment pilot for lightning network cross-border micropayments?
         answer: Start with one corridor, one policy set, one reconciliation flow, and one rollback plan. This scope is small enough to run fast and large enough to test the core risks. You can validate identity mapping, route behavior, and failure recovery without mixing many variables in one pilot.
@@ -2897,7 +2911,9 @@ posts:
       - micropayments
       - pilot
       - teams
+      - engineering
       - architecture
+      - software
       - deployment
       - reliability
       - testing
@@ -2905,13 +2921,11 @@ posts:
       - playbook
       - corridor
       - early
-      - engineering
       - first
       - open
       - phase
       - autonomous
       - fintech
-      - software
       - agentic
       - appendix
       - author
@@ -2925,35 +2939,35 @@ posts:
       - lightning network
       - open source
       - software architecture
+      - software engineering
       - lightning network implementation guide
       - open source micropayment stack
       - bitcoin lightning production deployment
-      - autonomous agent payments architecture
     key_phrases:
       - lightning network
       - network implementation
       - lightning network implementation
-      - implementation guide
       - network implementation guide
+      - implementation guide
       - implementation playbook
-      - lightning network micropayments
-      - fintech engineering
-      - network micropayments open
-      - micropayments open deployment
-      - network micropayments
-      - micropayments open
-      - open deployment
       - deployment software
       - software architecture
       - architecture testing
-      - open deployment software
-      - deployment software architecture
       - software architecture testing
-      - testing lightning network
-      - architecture testing lightning
-      - engineering fintech engineering
-      - fintech engineering fintech
-      - corridor lightning
+      - deployment software architecture
+      - open deployment software
+      - micropayments open deployment
+      - network micropayments open
+      - lightning network micropayments
+      - engineering software engineering
+      - fintech engineering software
+      - fintech engineering
+      - engineering software
+      - software engineering
+      - open deployment
+      - micropayments open
+      - network micropayments
+      - software engineering fintech
     catchwords:
       - lightning
       - implementation
@@ -2963,7 +2977,9 @@ posts:
       - micropayments
       - pilot
       - teams
+      - engineering
       - architecture
+      - software
       - deployment
       - reliability
       - testing
@@ -2971,12 +2987,10 @@ posts:
       - playbook
       - corridor
       - early
-      - engineering
       - first
       - phase
       - autonomous
       - fintech
-      - software
       - agentic
       - appendix
       - author
@@ -2992,7 +3006,9 @@ posts:
       - micropayments
       - pilot
       - teams
+      - engineering
       - architecture
+      - software
       - deployment
       - reliability
       - testing
@@ -3000,20 +3016,18 @@ posts:
       - playbook
       - corridor
       - early
-      - engineering
-      - first
       - lightning network
       - network implementation
       - lightning network implementation
-      - implementation guide
       - network implementation guide
+      - implementation guide
       - implementation playbook
-      - lightning network micropayments
-      - fintech engineering
-      - network micropayments open
-      - micropayments open deployment
-      - network micropayments
-      - micropayments open
+      - deployment software
+      - software architecture
+      - architecture testing
+      - software architecture testing
+      - deployment software architecture
+      - open deployment software
     questions:
       - question: Which Lightning runtime should teams choose first for lightning network implementation guide?
         answer: Choose the runtime that best fits your team skills, operations model, and support plan. LND, Core Lightning, Eclair, and LDK all work when wrapped with clean boundaries. Keep node access behind adapters. Why? Because migration risk stays low if reliability requirements, ecosystem support, or governance needs shift later.
@@ -3250,20 +3264,20 @@ posts:
       - guide natural
       - natural language
       - language processing
-      - artificial intelligence software
+      - artificial intelligence retrieval
+      - intelligence retrieval software
       - natural language processing
       - guide natural language
       - implementation guide natural
       - open implementation guide
       - model open implementation
       - language model open
-      - intelligence software engineering
+      - retrieval software engineering
       - retrieval augmented generation
       - augmented generation large
       - large language model
       - generation large language
-      - generation open-source
-      - vector store
+      - cross-encoder re-ranking
     catchwords:
       - retrieval
       - production
@@ -3322,8 +3336,8 @@ posts:
       - guide natural
       - natural language
       - language processing
-      - artificial intelligence software
-      - natural language processing
+      - artificial intelligence retrieval
+      - intelligence retrieval software
     questions:
       - question: Which open-source vector database should I choose for RAG?
         answer: Choose **FAISS** for ultra-fast performance during local prototyping. Use **Chroma** for lightweight disk persistence with structured metadata filtering. Transition to **Qdrant** for true large-scale multi-node orchestration requiring advanced data storage, payload management, and horizontal scaling. Start with FAISS or Chroma for development; migrate to Qdrant when you need production persistence and filtering.
@@ -5448,6 +5462,407 @@ posts:
     questions:
       - question: What Settles on the Ledger, and What Does Not?
         answer: "A recurring error in stablecoin commentary is to treat an on-chain transfer as if it settled the whole transaction. The corpus is explicit that it does not. The BIS working paper quantifies the gap between transaction-level and transfer-level views. Using 593 million event logs from 141 million Ethereum transactions involving three major US dollar stablecoins, the authors classify a transaction as a simple transfer if it contains exactly one stablecoin transfer event and no additional event logs. Under that definition 68.4 percent of transactions are simple transfers. But the transfer-level picture differs sharply: 59.96 percent of all stablecoin transfers occur within complex transactions, which combine trading, lending, arbitrage, liquidity provision, and settlement, rather than as standalone value transfers. Analyses that read each transfer as a standalone payment therefore risk misclassifying almost six in ten transfer events, since those events occur inside complex transactions rather than as standalone value transfers, and such analyses overstate the share of simple person-to-person payments. The operational reading of that finding is direct. Fast, atomic ledger settlement describes only the token leg. Where a stablecoin payment begins or ends in fiat, the institution must also organise the corresponding fiat funding or redemption leg: money entering the system when stablecoins are bought, and money leaving when they are redeemed. Purely on-chain transactions that never touch fiat have no separate fiat leg at the point of transfer, although the surrounding custody and compliance layers still operate on banking timelines. The FCA regime makes this visible. The final rules require issuers to hold backing assets in a statutory trust, generally with a third-party custodian outside the group, to offer redemption at par to all holders, and to place payment orders for redeemed funds by the end of the next business day once the redeemed stablecoin is received and the required checks are complete. The token moves in seconds; the money behind it moves on banking timelines."
+  software-supply-chain-attack-vectors-keyless-signing:
+    title: Software Supply Chain Attack Vectors and How Keyless Signing Counters Them
+    url: "/software-supply-chain-attack-vectors-keyless-signing"
+    keywords:
+      - signing
+      - software
+      - chain
+      - supply
+      - attack
+      - keyless
+      - log
+      - security
+      - transparency
+      - vectors
+      - sigstore
+      - sbom
+      - agenda
+      - code
+      - engineering
+      - open
+      - counters
+      - cybersecurity
+      - foundations
+      - base
+      - built
+      - certificates
+      - design
+      - ephemeral
+      - evidence
+      - keys
+      - maps
+      - national
+      - oidc-bound
+      - operation
+      - persistent
+      - practice
+      - scale
+      - science
+      - abstractions
+      - software supply chain
+      - code signing
+      - transparency log
+      - open source security
+      - software engineering
+    key_phrases:
+      - software supply chain
+      - software supply
+      - supply chain
+      - keyless signing
+      - transparency log
+      - attack vectors
+      - signing transparency log
+      - signing transparency
+      - open security
+      - code signing
+      - supply chain attack
+      - chain attack vectors
+      - keyless signing counters
+      - cybersecurity software engineering
+      - supply chain code
+      - chain code signing
+      - code signing transparency
+      - transparency log open
+      - log open security
+      - open security sbom
+      - security sbom software
+      - chain code
+      - security sbom
+      - sbom software
+    catchwords:
+      - signing
+      - software
+      - chain
+      - supply
+      - attack
+      - keyless
+      - security
+      - transparency
+      - vectors
+      - sigstore
+      - agenda
+      - engineering
+      - counters
+      - cybersecurity
+      - foundations
+      - built
+      - certificates
+      - design
+      - ephemeral
+      - evidence
+      - national
+      - oidc-bound
+      - operation
+      - persistent
+      - practice
+      - scale
+      - science
+      - abstractions
+    search_words:
+      - signing
+      - software
+      - chain
+      - supply
+      - attack
+      - keyless
+      - log
+      - security
+      - transparency
+      - vectors
+      - sigstore
+      - sbom
+      - agenda
+      - code
+      - engineering
+      - open
+      - counters
+      - cybersecurity
+      - software supply chain
+      - software supply
+      - supply chain
+      - keyless signing
+      - transparency log
+      - attack vectors
+      - signing transparency log
+      - signing transparency
+      - open security
+      - code signing
+      - supply chain attack
+      - chain attack vectors
+    questions:
+      - question: Why Signing Is the Integrity Backstop?
+        answer: If a component can be replaced or tampered with at any stage, then a mechanism is needed to bind a software artifact to a verifiable identity. That mechanism is signing. The research agenda integrates signing into its account of security frameworks and technologies along with SLSA provenance levels and SBOM practice. The historical obstacle to signing was not technical capability but usability and key management. Traditional code signing requires signers to create, store, protect, and rotate a long-lived private key. The consequence is visible in adoption figures. A 2020 analysis of RubyGems found that only 1.6 percent of the latest package versions were signed, and a 2016 analysis of PyPI found that only 4 percent of projects even listed a signature and only 0.07 percent of users downloaded those signatures for verification. Sigstore was designed to remove that barrier. Its stated motivation is to bring the security guarantees of signing to a wide user base by eliminating the key management burden that caused earlier systems to fail adoption.
+  sbom-graphs-attack-chains-continuous-compliance:
+    title: SBOM Graphs for Attack Chain Prediction and Workload Identity for Continuous Compliance
+    url: "/sbom-graphs-attack-chains-continuous-compliance"
+    keywords:
+      - compliance
+      - software
+      - sbom
+      - workload
+      - attack
+      - chain
+      - continuous
+      - vulnerability
+      - supply
+      - trust
+      - graphs
+      - engineering
+      - identity
+      - attestation
+      - deployment
+      - evidence
+      - management
+      - prediction
+      - risk
+      - security
+      - zero-trust
+      - cybersecurity
+      - heterogeneous
+      - architecture
+      - base
+      - cascaded
+      - continuously
+      - enforcement
+      - feasibility
+      - gap
+      - indicators
+      - inventory
+      - peer-reviewed
+      - zero trust
+      - vulnerability management
+      - software supply chain
+      - workload attestation
+      - software engineering
+      - software bill of materials
+      - software composition analysis
+    key_phrases:
+      - supply chain
+      - continuous compliance
+      - attack chains
+      - software supply
+      - software supply chain
+      - workload identity
+      - software engineering
+      - workload attestation
+      - vulnerability management
+      - supply chain workload
+      - cybersecurity software
+      - chain workload attestation
+      - management software supply
+      - vulnerability management software
+      - sbom trust
+      - trust vulnerability
+      - trust vulnerability management
+      - management software
+      - sbom trust vulnerability
+      - cybersecurity software engineering
+      - chain workload
+      - sboms heterogeneous
+      - sbom graphs
+      - heterogeneous graphs
+    catchwords:
+      - compliance
+      - software
+      - workload
+      - attack
+      - chain
+      - continuous
+      - vulnerability
+      - supply
+      - trust
+      - graphs
+      - engineering
+      - identity
+      - attestation
+      - deployment
+      - evidence
+      - management
+      - prediction
+      - sboms
+      - security
+      - zero-trust
+      - cybersecurity
+      - heterogeneous
+      - architecture
+      - cascaded
+      - continuously
+      - enforcement
+      - feasibility
+      - indicators
+    search_words:
+      - compliance
+      - software
+      - sbom
+      - workload
+      - attack
+      - chain
+      - continuous
+      - vulnerability
+      - supply
+      - trust
+      - graphs
+      - engineering
+      - identity
+      - attestation
+      - deployment
+      - evidence
+      - supply chain
+      - continuous compliance
+      - attack chains
+      - software supply
+      - software supply chain
+      - workload identity
+      - software engineering
+      - workload attestation
+      - vulnerability management
+      - supply chain workload
+      - cybersecurity software
+      - chain workload attestation
+    questions:
+      - question: Why does single-CVE thinking fail to capture real supply chain risk?
+        answer: "The evidence graph view treats dependency relationships as the carrier of risk, so a single vulnerability is understood through the attack chains it can contribute to. The ProxyLogon chain in the Baird and Moin study shows how four Microsoft Exchange vulnerabilities were chained into a pre-authentication path that cascaded across components. The ablation result makes the point measurable: removing the dependency edges collapses recall on has-any-CVE prediction to zero, which means the structure of the graph is doing the predictive work, not the individual component inventories."
+      - question: What is the difference between an SBOM and an SBOM graph?
+        answer: An SBOM is a flat nested inventory of components with identity and version data. An SBOM graph converts that inventory into a heterogeneous graph in which components, dependencies, and vulnerabilities are typed nodes that can carry multiple relationship kinds. The graph formulation is what allows attack chains to be predicted as link prediction over the heterogeneous graph, which is the concrete contribution of the Baird and Moin approach.
+      - question: How does continuous compliance differ from pipeline-time compliance?
+        answer: Pipeline-time compliance checks an artifact once at build and then stops, which leaves the deployed workload inside the gap the moment the runtime state drifts. Continuous compliance places the identity-based verification onto the running workload itself, using SPIRE to issue and refresh workload identity so that posture can be rechecked after deployment. The Gama 2026 extension adds grace periods and risk indicators so that a non-conforming workload is given a bounded time window or a criticality-based tolerance instead of an immediate binary decision.
+      - question: Can continuous compliance be operated without unacceptable latency?
+        answer: "The measured enforcement architecture re-verified identity and rechecked posture on a twice-per-hour cadence within a dependency check pipeline running on a 16 GiB and 4 vCPU envelope, with per-attestation latency under six seconds. The figures describe the authors experimental context, so the claim here is bounded: the demonstrated envelope is operationally plausible, not a guarantee for other identity providers or monitoring tools."
+      - question: What role do risk indicators play in a zero-trust compliance policy?
+        answer: Risk indicators stop the policy from being a single blunt switch. A never-trust-always-verify architecture is still a decision procedure, and grace periods plus criticality scoring turn that procedure into a graded response rather than an all-or-nothing block. This is what keeps continuous compliance deployable in production, because it prices the trade-off between availability and security instead of pretending it does not exist.
+  llm-agentic-supply-chains-lifecycle-execution-advisory:
+    title: "Securing LLM and Agentic AI Supply Chains: Lifecycle Frameworks and Execution-Bound Advisory"
+    url: "/llm-agentic-supply-chains-lifecycle-execution-advisory"
+    keywords:
+      - supply
+      - lifecycle
+      - llm
+      - chain
+      - agentic
+      - post-quantum
+      - execution-bound
+      - signing
+      - model
+      - advisory
+      - software
+      - exploitability
+      - hybrid
+      - security
+      - aibom
+      - conditions
+      - cryptography
+      - csaf-vex
+      - five-layer
+      - presence
+      - production
+      - artificial
+      - cybersecurity
+      - engineering
+      - frameworks
+      - intelligence
+      - runtime
+      - telemetry
+      - aibom-driven
+      - artifacts
+      - boundary
+      - checkpoints
+      - classical
+      - classifies
+      - datasets
+      - llm supply chain
+      - post-quantum cryptography
+      - agentic ai
+      - model lifecycle
+      - artificial intelligence
+    key_phrases:
+      - supply chain
+      - llm supply chain
+      - llm supply
+      - supply chain aibom
+      - chain aibom
+      - execution-bound advisory
+      - post-quantum cryptography
+      - hybrid post-quantum
+      - runtime telemetry
+      - csaf-vex agentic
+      - agentic model
+      - model lifecycle
+      - agentic model lifecycle
+      - csaf-vex agentic model
+      - cryptography csaf-vex agentic
+      - post-quantum cryptography csaf-vex
+      - cybersecurity artificial intelligence
+      - aibom post-quantum cryptography
+      - chain aibom post-quantum
+      - artificial intelligence software
+      - intelligence software engineering
+      - exploitability runtime telemetry
+      - exploitability runtime
+    catchwords:
+      - supply
+      - lifecycle
+      - chain
+      - agentic
+      - post-quantum
+      - execution-bound
+      - signing
+      - model
+      - advisory
+      - software
+      - exploitability
+      - hybrid
+      - security
+      - aibom
+      - conditions
+      - cryptography
+      - csaf-vex
+      - five-layer
+      - presence
+      - production
+      - artificial
+      - cybersecurity
+      - engineering
+      - frameworks
+      - intelligence
+      - runtime
+      - telemetry
+      - aibom-driven
+    search_words:
+      - supply
+      - lifecycle
+      - llm
+      - chain
+      - agentic
+      - post-quantum
+      - execution-bound
+      - signing
+      - model
+      - advisory
+      - software
+      - exploitability
+      - hybrid
+      - security
+      - aibom
+      - conditions
+      - cryptography
+      - supply chain
+      - llm supply chain
+      - llm supply
+      - supply chain aibom
+      - chain aibom
+      - execution-bound advisory
+      - post-quantum cryptography
+      - hybrid post-quantum
+      - runtime telemetry
+      - csaf-vex agentic
+      - agentic model
+    questions:
+      - question: Why Classical Supply Chain Tooling Is Not Enough for Models?
+        answer: The layered framework paper starts from a precise boundary claim. Established mechanisms such as Sigstore, in-toto, SLSA, and TUF provide strong guarantees for artifact integrity and provenance, but they were designed for conventional software artifacts and do not fully capture AI-specific lifecycle threats such as data poisoning, training pipeline compromise, and retrieval-augmented prompt manipulation. The failure is structural, not incidental. Unlike traditional packages, an LLM system is not produced from source code alone. Sigstore does not natively address dataset provenance, fine-tuning semantics, inference abuse, or prompt injection. In-toto provides a strong provenance model for expressing which steps were performed, by whom, and in what order, which is highly relevant to the training layer, but it remains a general framework. The guarantee stops at the artifact boundary, and in an LLM lifecycle the threats begin before artifacts exist and continue after they are deployed. There is also a cryptographic horizon. Most artifact signing infrastructure relies on classical algorithms such as RSA or ECDSA. These are secure today, but they may be threatened by future large-scale quantum computers, which is why NIST standardised ML-DSA as a post-quantum signature scheme.
+      - question: What the Evaluation Measured?
+        answer: The evaluation used approximately 10,000 component entries across synthetic agentic AI workloads ranging from 50 to 5,000 components, incorporating OSV, GitHub Advisory, KEV, and EPSS datasets. The headline results are bounded but specific. The combined AIBOM-and-telemetry pipeline achieved an F1-score of 0.93, with precision 0.96 and recall 0.92, and reduced false positives by up to 42 percent relative to static SBOM-CVE matching without runtime validation. Extending the bill of materials to AI-specific artifacts altered exploitability outcomes in 31 percent of AI-specific artifact cases. The execution-bound reasoning also changed prioritisation. A hybrid risk tiering rule combining observed activation with EPSS probability and KEV presence reduced the set of high-priority alerts to a focused subset of approximately 18 percent of matched vulnerabilities, and an expert triage panel found the high-priority items materially more actionable than low-priority ones in 86 percent of sampled cases.
 pages:
   zenith-law:
     title: Zenith Law Profile | Engineering Strategy and AI Governance

@@ -40,6 +40,7 @@ references:
   - llm-2026-ref23
 categories:
   - Artificial Intelligence
+  - Machine Learning
 tags:
   - large language model
   - transformer

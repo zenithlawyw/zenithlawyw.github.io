@@ -21,6 +21,19 @@
   related_posts:
     - title: Large Language Models in Practice
       url: "/large-language-models-practice-from-transformer-to-present-frontier"
+- term: AIBOM
+  definition:
+    An Artificial Intelligence Bill of Materials (AIBOM) extends the software
+    bill of materials concept to AI-specific artifacts, including models, datasets,
+    and their lineage, to support supply chain transparency for machine learning and
+    agentic systems.
+  source:
+    label: Execution-Bound Advisory Automation for Agentic AI (2026)
+    url: https://doi.org/10.3389/frai.2026.1826384
+    tier: Tier 1
+  related_posts:
+    - title: "Securing LLM and Agentic AI Supply Chains: Lifecycle Frameworks and Execution-Bound Advisory"
+      url: "/llm-agentic-supply-chains-lifecycle-execution-advisory"
 - term: Banker's Algorithm
   definition:
     Banker's algorithm is a deadlock-avoidance method that grants resource
@@ -77,6 +90,19 @@
   related_posts:
     - title: Deadlock and Resource Contention
       url: "/deadlock-resource-contention-operating-systems-supply-chains-cloud-llm"
+- term: CSAF and VEX
+  definition:
+    The Common Security Advisory Framework (CSAF) standardises machine-readable
+    security advisory distribution, and the Vulnerability Exploitability eXchange
+    (VEX) within it flags whether a vulnerability is exploitable in a given product
+    context.
+  source:
+    label: Execution-Bound Advisory Automation for Agentic AI (2026)
+    url: https://doi.org/10.3389/frai.2026.1826384
+    tier: Tier 1
+  related_posts:
+    - title: "Securing LLM and Agentic AI Supply Chains: Lifecycle Frameworks and Execution-Bound Advisory"
+      url: "/llm-agentic-supply-chains-lifecycle-execution-advisory"
 - term: Data Lineage
   definition:
     Data lineage records how data moves and transforms across systems, while
@@ -133,6 +159,18 @@
   related_posts:
     - title: Large Language Models in Practice
       url: "/large-language-models-practice-from-transformer-to-present-frontier"
+- term: Fulcio
+  definition:
+    Fulcio is the certificate authority of the Sigstore ecosystem. It issues
+    short-lived certificates that bind an ephemeral signing public key to an OpenID
+    Connect identity, such as an email or workload identity.
+  source:
+    label: Sigstore, Software Signing for Everybody (CCS 2022)
+    url: https://doi.org/10.1145/3548606.3560596
+    tier: Tier 1
+  related_posts:
+    - title: Software Supply Chain Attack Vectors and How Keyless Signing Counters Them
+      url: "/software-supply-chain-attack-vectors-keyless-signing"
 - term: Generative Engine Optimisation
   definition:
     Generative Engine Optimisation structures content so AI answer systems
@@ -221,6 +259,19 @@
   related_posts:
     - title: Large Language Models in Practice
       url: "/large-language-models-practice-from-transformer-to-present-frontier"
+- term: ML-DSA
+  definition:
+    ML-DSA is the NIST-standardized post-quantum digital signature scheme,
+    derived from Dilithium, designed to remain secure against future large-scale quantum
+    computers. In hybrid signing it is combined with a classical algorithm to preserve
+    interoperability.
+  source:
+    label: Securing LLM Software Supply Chains (IDS 2026)
+    url: https://doi.org/10.1109/IDS69480.2026.00011
+    tier: Tier 1
+  related_posts:
+    - title: "Securing LLM and Agentic AI Supply Chains: Lifecycle Frameworks and Execution-Bound Advisory"
+      url: "/llm-agentic-supply-chains-lifecycle-execution-advisory"
 - term: Mutual Exclusion
   definition:
     Mutual exclusion is a concurrency rule that allows only one process
@@ -276,6 +327,18 @@
   related_posts:
     - title: Data Provenance in Machine Learning
       url: "/data-provenance-ml-lifecycle-traceability-graph-methods-ten-lessons"
+- term: Rekor
+  definition:
+    Rekor is the transparency log of the Sigstore ecosystem. It records
+    signatures and their certificates in an append-only public log so any party can
+    audit signed artifacts and detect tampering or compromise.
+  source:
+    label: Sigstore, Software Signing for Everybody (CCS 2022)
+    url: https://doi.org/10.1145/3548606.3560596
+    tier: Tier 1
+  related_posts:
+    - title: Software Supply Chain Attack Vectors and How Keyless Signing Counters Them
+      url: "/software-supply-chain-attack-vectors-keyless-signing"
 - term: Resource Starvation
   definition:
     Resource starvation occurs when a process waits indefinitely because
@@ -320,6 +383,18 @@
   related_posts:
     - title: Large Language Models in Practice
       url: "/large-language-models-practice-from-transformer-to-present-frontier"
+- term: Sigstore
+  definition:
+    Sigstore is a keyless code-signing infrastructure that binds artifacts
+    to OpenID Connect identities via ephemeral keys, a certificate authority, and
+    a public transparency log, removing persistent key management.
+  source:
+    label: Sigstore, Software Signing for Everybody (CCS 2022)
+    url: https://doi.org/10.1145/3548606.3560596
+    tier: Tier 1
+  related_posts:
+    - title: Software Supply Chain Attack Vectors and How Keyless Signing Counters Them
+      url: "/software-supply-chain-attack-vectors-keyless-signing"
 - term: Software Supply Chain
   definition:
     The software supply chain is the end-to-end dependency and delivery
@@ -331,6 +406,18 @@
   related_posts:
     - title: axios npm Supply Chain Compromise 2026
       url: "/axios-npm-supply-chain-compromise-2026-ten-lessons-provenance-trust-resilience"
+- term: SPIRE
+  definition:
+    SPIRE is an open-source workload identity provider that uses workload
+    attestation to issue identities to running workloads, so that policy and compliance
+    checks can be anchored to verified workload identity.
+  source:
+    label: Leveraging Zero Trust and Risk Indicators (2026)
+    url: https://doi.org/10.5753/jisa.2026.5922
+    tier: Tier 1
+  related_posts:
+    - title: SBOM Graphs for Attack Chain Prediction and Workload Identity for Continuous Compliance
+      url: "/sbom-graphs-attack-chains-continuous-compliance"
 - term: Supply Chain Attack
   definition:
     A supply chain attack compromises a trusted upstream component or channel

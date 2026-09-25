@@ -48,6 +48,7 @@ catchwords: "Lightning Network, LND, Core Lightning, Eclair, LDK, FastAPI, Kuber
 categories:
   - FinTech
   - Engineering
+  - Software Engineering
 tags:
   - lightning network
   - micropayments

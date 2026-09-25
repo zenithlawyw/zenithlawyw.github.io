@@ -35,6 +35,8 @@ references:
   - svm-2026-ref20
 categories:
   - Artificial Intelligence
+  - Machine Learning
+  - Software Engineering
 tags:
   - support vector machine
   - model tuning

@@ -2823,3 +2823,113 @@ sc-2026-ref17:
   ieee_base: A. F. H. Loke, Mistakes in Algorithmic Trading of Cryptocurrencies, vol. 83, no. 6, pp. 1343--1353, 2020.
   harvard_base: Loke, A.F.H. (2020). Mistakes in Algorithmic Trading of Cryptocurrencies. vol. 83, no. 6, pp. 1343--1353.
   source_format: bibtex
+williams2025research:
+  entry_type: article
+  short_author: Williams et al.
+  year: "2025"
+  authors: Williams, Laurie and Benedetti, Giacomo and Hamer, Sivana and Paramitha, Ranindya and Rahman, Imranur and Tamanna, Mahzabin and Tystahl, Greg and Zahan, Nusrat and Morrison, Patrick and Acar, Yasemin and Cukier, Michel and Kästner, Christian and Kapravelos, Alexandros and Wermke, Dominik and Enck, William
+  title: Research Directions in Software Supply Chain Security
+  volume: "34"
+  number: "5"
+  pages: Article 146
+  url: https://doi.org/10.1145/3714464
+  doi: 10.1145/3714464
+  published_iso: "2025-01-01"
+  published_date: 1 January 2025
+  ieee_base: L. Williams et al., Research Directions in Software Supply Chain Security, vol. 34, no. 5, pp. Article 146, 2025.
+  harvard_base: Williams, L. et al. (2025). Research Directions in Software Supply Chain Security. vol. 34, no. 5, pp. Article 146.
+  source_format: bibtex
+newman2022sigstore:
+  entry_type: inproceedings
+  short_author: Newman et al.
+  year: "2022"
+  authors: Newman, Zachary and Meyers, John Speed and Torres-Arias, Santiago
+  title: "Sigstore: Software Signing for Everybody"
+  book: Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security (CCS '22)
+  publisher: Association for Computing Machinery
+  pages: 1--15
+  url: https://doi.org/10.1145/3548606.3560596
+  doi: 10.1145/3548606.3560596
+  published_iso: "2022-01-01"
+  published_date: 1 January 2022
+  ieee_base: "Z. Newman, J. S. Meyers and S. Torres-Arias, Sigstore: Software Signing for Everybody, in Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security (CCS '22), pp. 1--15, Association for Computing Machinery, 2022."
+  harvard_base: "Newman, Z., Meyers, J.S. and Torres-Arias, S. (2022). Sigstore: Software Signing for Everybody. In Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security (CCS '22). pp. 1--15. Association for Computing Machinery."
+  source_format: bibtex
+gama2024supporting:
+  entry_type: inproceedings
+  short_author: Gama et al.
+  year: "2024"
+  authors: Gama, Diego and Brito, Andrey and Martin, André and Fetzer, Christof
+  title: Supporting Continuous Vulnerability Compliance through Automated Identity Provisioning
+  book: Proceedings of the 2024 Latin-American Symposium on Dependable Computing (LADC 2024)
+  publisher: Association for Computing Machinery
+  pages: 1--10
+  url: https://doi.org/10.1145/3697090.3697098
+  doi: 10.1145/3697090.3697098
+  published_iso: "2024-01-01"
+  published_date: 1 January 2024
+  ieee_base: D. Gama, A. Brito, A. Martin and C. Fetzer, Supporting Continuous Vulnerability Compliance through Automated Identity Provisioning, in Proceedings of the 2024 Latin-American Symposium on Dependable Computing (LADC 2024), pp. 1--10, Association for Computing Machinery, 2024.
+  harvard_base: Gama, D. et al. (2024). Supporting Continuous Vulnerability Compliance through Automated Identity Provisioning. In Proceedings of the 2024 Latin-American Symposium on Dependable Computing (LADC 2024). pp. 1--10. Association for Computing Machinery.
+  source_format: bibtex
+gama2026leveraging:
+  entry_type: article
+  short_author: Gama et al.
+  year: "2026"
+  authors: Gama, Diego and Fuch, Carlos and Brito, Andrey and Martin, André and Fetzer, Christof
+  title: Leveraging Zero Trust and Risk Indicators to Support Continuous Vulnerability Compliance
+  volume: "17"
+  number: "1"
+  pages: 36--54
+  url: https://doi.org/10.5753/jisa.2026.5922
+  doi: 10.5753/jisa.2026.5922
+  published_iso: "2026-01-01"
+  published_date: 1 January 2026
+  ieee_base: D. Gama, C. Fuch, A. Brito, A. Martin and C. Fetzer, Leveraging Zero Trust and Risk Indicators to Support Continuous Vulnerability Compliance, vol. 17, no. 1, pp. 36--54, 2026.
+  harvard_base: Gama, D. et al. (2026). Leveraging Zero Trust and Risk Indicators to Support Continuous Vulnerability Compliance. vol. 17, no. 1, pp. 36--54.
+  source_format: bibtex
+baird2026towards:
+  entry_type: inproceedings
+  short_author: Baird et al.
+  year: "2026"
+  authors: Baird, Laura and Moin, Armin
+  title: Towards Predicting Multi-Vulnerability Attack Chains in Software Supply Chains from Software Bill of Materials Graphs
+  book: Companion Proceedings of the 2026 ACM Symposium on the Foundations of Software Engineering (FSE Companion '26)
+  publisher: Association for Computing Machinery
+  pages: 1--5
+  url: https://doi.org/10.1145/3803437.3805583
+  doi: 10.1145/3803437.3805583
+  published_iso: "2026-01-01"
+  published_date: 1 January 2026
+  ieee_base: L. Baird and A. Moin, Towards Predicting Multi-Vulnerability Attack Chains in Software Supply Chains from Software Bill of Materials Graphs, in Companion Proceedings of the 2026 ACM Symposium on the Foundations of Software Engineering (FSE Companion '26), pp. 1--5, Association for Computing Machinery, 2026.
+  harvard_base: Baird, L. and Moin, A. (2026). Towards Predicting Multi-Vulnerability Attack Chains in Software Supply Chains from Software Bill of Materials Graphs. In Companion Proceedings of the 2026 ACM Symposium on the Foundations of Software Engineering (FSE Companion '26). pp. 1--5. Association for Computing Machinery.
+  source_format: bibtex
+silva2026securing:
+  entry_type: inproceedings
+  short_author: Silva et al.
+  year: "2026"
+  authors: Silva, Rafael and Duarte, Luiz
+  title: "Securing LLM Software Supply Chains: A Layered Lifecycle Framework with Hybrid Post-Quantum Artifact Signing"
+  book: 2026 IEEE 12th International Conference on Intelligent Data and Security (IDS)
+  organization: IEEE
+  url: https://doi.org/10.1109/IDS69480.2026.00011
+  doi: 10.1109/IDS69480.2026.00011
+  published_iso: "2026-01-01"
+  published_date: 1 January 2026
+  ieee_base: "R. Silva and L. Duarte, Securing LLM Software Supply Chains: A Layered Lifecycle Framework with Hybrid Post-Quantum Artifact Signing, in 2026 IEEE 12th International Conference on Intelligent Data and Security (IDS), IEEE, 2026."
+  harvard_base: "Silva, R. and Duarte, L. (2026). Securing LLM Software Supply Chains: A Layered Lifecycle Framework with Hybrid Post-Quantum Artifact Signing. In 2026 IEEE 12th International Conference on Intelligent Data and Security (IDS). IEEE."
+  source_format: bibtex
+radanliev2026execution:
+  entry_type: article
+  short_author: Radanliev et al.
+  year: "2026"
+  authors: Radanliev, Petar and Santos, Omar and Maple, Carsten and Shamsujjoha, Md and Atefi, Kayvan
+  title: "Execution-Bound Advisory Automation for Agentic AI: A Reproducible AIBOM-Driven CSAF-VEX Framework"
+  volume: "9"
+  pages: Article 1826384
+  url: https://doi.org/10.3389/frai.2026.1826384
+  doi: 10.3389/frai.2026.1826384
+  published_iso: "2026-01-01"
+  published_date: 1 January 2026
+  ieee_base: "P. Radanliev, O. Santos, C. Maple, M. Shamsujjoha and K. Atefi, Execution-Bound Advisory Automation for Agentic AI: A Reproducible AIBOM-Driven CSAF-VEX Framework, vol. 9, pp. Article 1826384, 2026."
+  harvard_base: "Radanliev, P. et al. (2026). Execution-Bound Advisory Automation for Agentic AI: A Reproducible AIBOM-Driven CSAF-VEX Framework. vol. 9, pp. Article 1826384."
+  source_format: bibtex

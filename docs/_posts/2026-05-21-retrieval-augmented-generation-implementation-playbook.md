@@ -54,6 +54,7 @@ keywords: "RAG implementation guide, RAG open source libraries, RAG production d
 catchwords: "RAG implementation, open-source RAG, production deployment, LangChain, LlamaIndex, FAISS, hybrid retrieval, RAGAS evaluation, chunking strategy, cross-encoder re-ranking"
 categories:
   - Artificial Intelligence
+  - Information Retrieval
   - Software Engineering
 tags:
   - retrieval augmented generation

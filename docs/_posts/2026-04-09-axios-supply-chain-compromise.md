@@ -25,6 +25,7 @@ references:
   - axios-2026-ref7
 categories:
   - Cybersecurity
+  - Software Engineering
 tags:
   - supply chain security
   - social engineering
